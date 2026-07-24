@@ -204,10 +204,11 @@
         {n:"Thu 6", color:"#16293B", stops:[
           [44.3292,-68.1820,"Sand Beach, Acadia"],
           [44.3206,-68.1886,"Thunder Hole"],
-          [44.3205,-68.2536,"Jordan Pond"],
-          [44.3528,-68.2247,"Cadillac Mountain"],
           [44.3776,-68.2503,"Eagle Lake carriage roads (Thu Option B ride)"],
-          [44.4287,-69.0068,"Young's Lobster Pound, Belfast"],
+          [44.3205,-68.2536,"Jordan Pond"],
+          [44.2221,-68.3374,"Bass Harbor Head Light (Thu Option C)"],
+          [44.2410,-68.3554,"Thurston's Lobster Pound, Bernard — lunch"],
+          [44.3528,-68.2247,"Cadillac Mountain"],
           [43.8570,-70.1030,"Harraseeket Inn, Freeport — tonight"]]},
         {n:"Fri 7", color:"#C9452D", stops:[
           [43.5637,-70.2000,"Breakfast, Cape Elizabeth"],
