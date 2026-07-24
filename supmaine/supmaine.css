@@ -252,3 +252,11 @@
   .pk input:checked::after{content:"\2713";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700}
   .pk.done .pk-text{opacity:.45;text-decoration:line-through}
   .pk small{display:block;color:var(--ink-soft);font-size:12px}
+  .trail-link{display:inline-block;background:rgba(94,143,126,.14);border:1px solid rgba(94,143,126,.4);border-radius:7px;padding:1px 8px 2px;margin:1px 1px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;line-height:1.5;letter-spacing:.01em;color:#4A7566;text-decoration:none}
+  .trail-link::before{content:"🥾 ";font-family:"Instrument Sans",system-ui,sans-serif}
+  .trail-link:hover{background:rgba(94,143,126,.26);border-color:var(--seaglass);color:var(--ink)}
+  .opt-index{margin:0 0 16px;padding:11px 13px 6px;border:1px solid var(--line);border-radius:12px;background:var(--fog)}
+  .opt-index b{display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:9px}
+  .opt-index a{display:inline-block;margin:0 6px 6px 0;padding:5px 11px;border-radius:999px;background:var(--paper);border:1px solid var(--line);color:var(--ink);text-decoration:none;font-size:12.5px;font-weight:600}
+  .opt-index a:hover{border-color:var(--seaglass);color:var(--seaglass);background:rgba(94,143,126,.1)}
+  .alt-head{scroll-margin-top:78px}
