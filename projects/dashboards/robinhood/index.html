@@ -100,6 +100,16 @@
   .ocard .up:before{content:"\25B2";position:absolute;left:0;color:var(--green);font-size:9px;top:3px}
   .ocard .dn:before{content:"\25BC";position:absolute;left:0;color:var(--red);font-size:9px;top:3px}
   .ocard .vd{font-size:12px;color:var(--faint);margin:7px 0 0;padding-top:7px;border-top:1px solid var(--line)}
+  .opp{border:1px solid rgba(63,214,138,.4);border-left:3px solid var(--green);background:linear-gradient(180deg,rgba(63,214,138,.05),transparent)}
+  .obadge{display:inline-block;font-size:11px;padding:3px 10px;border-radius:999px;background:rgba(63,214,138,.14);
+    border:1px solid rgba(63,214,138,.35);color:#8ff0bf;margin-left:10px;vertical-align:middle;text-transform:none;letter-spacing:0;font-weight:600}
+  .oh{font-size:12px;font-weight:700;color:#8ff0bf;text-transform:uppercase;letter-spacing:.04em;margin:22px 0 10px}
+  .otag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;padding:2px 7px;border-radius:5px;white-space:nowrap;margin-left:8px;vertical-align:middle;
+    background:rgba(110,168,254,.14);color:var(--accent);border:1px solid rgba(110,168,254,.3)}
+  .ocard h4 .px{float:right;font-weight:600;color:var(--muted);font-size:12px}
+  .lead-caveat{background:linear-gradient(90deg,rgba(245,196,81,.12),transparent);border:1px solid rgba(245,196,81,.3);
+    border-left:3px solid var(--gold);border-radius:12px;padding:12px 15px;margin:0 0 16px;font-size:13px;line-height:1.55;color:#f3e2bd}
+  .lead-caveat b{color:#fff}
 </style></head><body>
 <div id="app">
   <div class="topbar">
@@ -126,8 +136,8 @@
   <div class="card today" style="margin-top:16px">
     <h2>Suggested Moves &mdash; Today (Jul 24)</h2>
     <div class="step"><div class="n">1</div><div class="body"><h3>Do the cleanup sells first</h3><p>Sell the decaying ETFs and dead-money positions in the cut-loss list below &mdash; about <b>$5,850</b> of stock. This is the lowest-regret cash in the account: nothing there is coming back, the proceeds pay straight down your margin, and you book tax losses to offset gains from anything you trim next. Start here before touching a single winner.</p></div></div>
-    <div class="step"><div class="n">2</div><div class="body"><h3>Trim winners to rebuild a cushion</h3><p>Even after the cleanup you're still near maxed. Trimming roughly <b>$8&ndash;10k</b> off your biggest gainers &mdash; a slice of RKLB (+55%, $13k), PL (+324%), TSM (+161%), HOOD (+99%) &mdash; takes margin from ~$62k toward ~$47k and restores real buying power. Take some off the table; keep the position and the thesis.</p></div></div>
-    <div class="step"><div class="n">3</div><div class="body"><h3>Leave PLTR and your core alone</h3><p>PLTR is down 24% (~$3,870) but it's your #2 holding and a name you clearly have conviction in &mdash; that's a temporary drawdown, not a loss to cut. Selling it now just locks the loss on a stock you'd want to own. Cut the dead weight, not the core.</p></div></div>
+    <div class="step"><div class="n">2</div><div class="body"><h3>Trim winners to rebuild a cushion</h3><p>Even after the cleanup you're still near maxed. Trimming roughly <b>$8&ndash;10k</b> off your biggest gainers &mdash; a slice of RKLB (+59%, $13k), PL (+324%), TSM (+163%), HOOD (+99%) &mdash; takes margin from ~$62k toward ~$47k and restores real buying power. Take some off the table; keep the position and the thesis.</p></div></div>
+    <div class="step"><div class="n">3</div><div class="body"><h3>Leave PLTR and your core alone</h3><p>PLTR is down 24% (~$3,950) but it's your #2 holding and a name you clearly have conviction in &mdash; that's a temporary drawdown, not a loss to cut. Selling it now just locks the loss on a stock you'd want to own. Cut the dead weight, not the core.</p></div></div>
     <p style="font-size:11px;color:var(--faint);margin:12px 0 0">Order matters: dead weight before winners &mdash; same cash raised, far less regret, cleaner tax outcome. Live intraday prices as of Jul 24, 2026 ~3:35pm ET; figures move during the session.</p>
   </div>
 
@@ -143,9 +153,52 @@
 
   <div class="card" style="margin-top:16px">
     <h2>Suggested Moves &mdash; considerations for your review</h2>
-    <div class="move"><div class="move-h"><span class="prio p-high">High</span><h3>Reduce margin &mdash; you have no cushion</h3></div><p>You're borrowing about $62,185 against roughly $102k of assets, and buying power is -$185.02 &mdash; essentially maxed. Leverage cuts both ways; with zero headroom a market dip could trigger a margin call and forced selling at the worst time. Trimming some positions to pay down the balance is the single highest-impact risk move here.</p></div><div class="move"><div class="move-h"><span class="prio p-high">High</span><h3>Two themes are ~70% of your stocks</h3></div><p>AI &amp; Semis (43%) and Space &amp; Satellite (27%) together are ~70% of your equity, and your top 4 names (RKLB, PLTR, NVDA, NOW) are 50%. Fitting for a growth tilt, but the account now lives and dies on AI + space sentiment. Locking in some of the big winners below would both diversify and fund paying down margin.</p></div><div class="move"><div class="move-h"><span class="prio p-med">Medium</span><h3>Harvest some outsized winners</h3></div><p>PL is +324%, TSM +161%, HOOD +99%, RKLB +55%. Trimming a portion (not all) of these takes risk off the table, raises cash to cut margin, and keeps your thesis intact. Winners this size rarely stay this size.</p></div><div class="move"><div class="move-h"><span class="prio p-med">Medium</span><h3>23 positions are under $100</h3></div><p>One-share lots of META, TSLA, CVX, SHEL, RKT and ~18 others add tax and tracking complexity without meaningfully affecting returns. Consolidating or clearing these simplifies the account.</p></div><div class="move"><div class="move-h"><span class="prio p-med">Medium</span><h3>Leveraged / income ETFs decay</h3></div><p>NVDY, TSLY, MSTY, PLTY (YieldMax-style), NVDL (2x NVDA) and BITO carry high fees and erode in NAV over time. Fine to hold intentionally for income &mdash; just make sure you're not treating them as long-term growth compounders.</p></div><div class="move"><div class="move-h"><span class="prio p-low">Low</span><h3>Deep losers worth a fresh look</h3></div><p>VCX -81%, SPCE -74%, OKLO -69%, BITO -59%. Not a sell signal by itself &mdash; but revisit whether each thesis still holds. If any no longer do, harvesting the tax loss could offset gains from trimming winners.</p></div>
+    <div class="move"><div class="move-h"><span class="prio p-high">High</span><h3>Reduce margin &mdash; you have no cushion</h3></div><p>You're borrowing about $62,185 against roughly $102k of assets, and buying power is -$185.02 &mdash; essentially maxed. Leverage cuts both ways; with zero headroom a market dip could trigger a margin call and forced selling at the worst time. Trimming some positions to pay down the balance is the single highest-impact risk move here.</p></div><div class="move"><div class="move-h"><span class="prio p-high">High</span><h3>Two themes are ~70% of your stocks</h3></div><p>AI &amp; Semis (43%) and Space &amp; Satellite (27%) together are ~70% of your equity, and your top 4 names (RKLB, PLTR, NVDA, NOW) are 50%. Fitting for a growth tilt, but the account now lives and dies on AI + space sentiment. Locking in some of the big winners below would both diversify and fund paying down margin.</p></div><div class="move"><div class="move-h"><span class="prio p-med">Medium</span><h3>Harvest some outsized winners</h3></div><p>PL is +324%, TSM +163%, HOOD +99%, RKLB +59%. Trimming a portion (not all) of these takes risk off the table, raises cash to cut margin, and keeps your thesis intact. Winners this size rarely stay this size.</p></div><div class="move"><div class="move-h"><span class="prio p-med">Medium</span><h3>23 positions are under $100</h3></div><p>One-share lots of META, TSLA, CVX, SHEL, RKT and ~18 others add tax and tracking complexity without meaningfully affecting returns. Consolidating or clearing these simplifies the account.</p></div><div class="move"><div class="move-h"><span class="prio p-med">Medium</span><h3>Leveraged / income ETFs decay</h3></div><p>NVDY, TSLY, MSTY, PLTY (YieldMax-style), NVDL (2x NVDA) and BITO carry high fees and erode in NAV over time. Fine to hold intentionally for income &mdash; just make sure you're not treating them as long-term growth compounders.</p></div><div class="move"><div class="move-h"><span class="prio p-low">Low</span><h3>Deep losers worth a fresh look</h3></div><p>VCX -80%, SPCE -74%, OKLO -69%, BITO -59%. Not a sell signal by itself &mdash; but revisit whether each thesis still holds. If any no longer do, harvesting the tax loss could offset gains from trimming winners.</p></div>
     <p style="font-size:11px;color:var(--faint);margin:12px 0 0">These are analytical observations, not personalized investment advice or buy/sell instructions. Run any significant move past a licensed financial advisor.</p>
   </div>
+
+  <div class="card opp" style="margin-top:16px">
+    <h2 style="display:flex;align-items:center;flex-wrap:wrap;gap:2px">Market Opportunities &mdash; where I'd look right now <span class="obadge">My analysis &middot; a watchlist, not advice</span></h2>
+    <p style="font-size:12px;color:var(--muted);margin:0 0 14px;line-height:1.55">My own grounded read on the most promising buys in this tape &mdash; chosen to <b>fit your specific situation</b>, not just chase what's hot. Straight talk, upside <i>and</i> risk on each. Compiled Jul 24, 2026 with live prices.</p>
+
+    <div class="lead-caveat"><b>Read this first.</b> Your buying power is roughly <b>-$185</b> and your margin is near maxed. So treat everything below as a <b>watchlist to fund from the cleanup sells and winner-trims above</b> &mdash; not a reason to borrow more. Buying additional high-beta names on leverage is the one move here that could genuinely hurt you. Free the cash first; then deploy.</p></div>
+
+    <h3 class="oh" style="margin-top:0">The one that fixes your biggest risk</h3>
+    <div class="out" style="grid-template-columns:1fr">
+      <div class="ocard"><h4>VOO &mdash; Vanguard S&amp;P 500 <span class="otag">Diversify</span><span class="px">~$680</span></h4>
+        <p class="ln up">Instantly dilutes your ~70% AI + Space concentration. You stop living and dying on two themes, still own the market's best compounders, and collect ~1% while you do it. For your account specifically, this is the highest risk-adjusted &ldquo;buy&rdquo; on the page.</p>
+        <p class="ln dn">It won't 10x, and in a risk-off tape it still falls &mdash; just far less than your book does. Boring by design.</p>
+        <p class="vd">Straight read: if you buy one thing with freed-up cash, I'd weight this first. It's the un-sexy move that actually de-risks you.</p></div>
+    </div>
+
+    <h3 class="oh">Quality on sale &mdash; growth that fits your appetite</h3>
+    <div class="out">
+      <div class="ocard"><h4>GOOGL &mdash; Alphabet <span class="otag">Growth</span><span class="px">~$320</span></h4>
+        <p class="ln up">Sold off ~22% from its high on the <i>same</i> AI-capex fear hammering your book &mdash; but Google Cloud grew 82% with a record ~$514B backlog, and the core ad business trades at only ~13x earnings, a discount to the S&amp;P. BofA carries a ~$430 target (~+30%).</p>
+        <p class="ln dn">It's spending ~$205B on AI with the payoff still unproven; if the &ldquo;capex with no return&rdquo; narrative wins, it de-rates further before it recovers.</p>
+        <p class="vd">Straight read: the best risk/reward among the mega-caps right now &mdash; and unlike most of your tech, it's wildly profitable and cash-generative. An AI winner you don't have to hope into.</p></div>
+      <div class="ocard"><h4>UNH &mdash; UnitedHealth <span class="otag">Defensive</span><span class="px">~$424</span></h4>
+        <p class="ln up">Non-cyclical earnings, ~2.1% yield, ~27x &mdash; healthcare demand doesn't care about tariffs or an AI-capex cycle. Zero overlap with anything you own, so it's pure diversification into a cash machine.</p>
+        <p class="ln dn">Regulatory and political headline risk is real, and it's been volatile (52-week range ~$235&ndash;$462). Not a name you buy and ignore.</p>
+        <p class="vd">Straight read: a genuine defensive sleeve. Adds ballast your all-growth book completely lacks.</p></div>
+    </div>
+
+    <h3 class="oh">Hedges against the exact risk in the sentiment section</h3>
+    <div class="out">
+      <div class="ocard"><h4>XOM &mdash; ExxonMobil <span class="otag">Income + inflation hedge</span><span class="px">~$157</span></h4>
+        <p class="ln up">Oil near $100 and energy is <i>exempt</i> from the new tariffs. ~2.8% dividend, heavy free cash flow, ~25x. When inflation fears crush your growth names, this is what tends to hold or rise &mdash; a direct counterweight.</p>
+        <p class="ln dn">It's a commodity play: if oil rolls over, so does the stock and its buyback firepower. You already have some energy (CVX, SHEL, BP, SLB), so size for that.</p>
+        <p class="vd">Straight read: the cleanest inflation hedge for a book like yours. Adding here is as much risk management as it is a &ldquo;buy.&rdquo;</p></div>
+      <div class="ocard"><h4>NEM &mdash; Newmont (gold) <span class="otag">Ballast</span><span class="px">~$93</span></h4>
+        <p class="ln up">Largest gold miner at only ~12x earnings, ~1% yield &mdash; a classic hedge against the tariff / inflation / debasement backdrop, and uncorrelated to your tech beta.</p>
+        <p class="ln dn">Miners are operationally messy and gold can stall for years; this is insurance, not a compounder. Keep it small.</p>
+        <p class="vd">Straight read: a modest hedge sleeve that occasionally pays when everything else in your book is red. Sized right, it earns its place.</p></div>
+    </div>
+
+    <p style="font-size:12px;color:#cdd6e2;line-height:1.55;margin:16px 0 0"><b style="color:var(--gold)">Also on the radar, with a warning:</b> if you want to stay in AI chips, <b>AMD</b> (~$530) is the obvious add &mdash; but at ~160x trailing earnings it's priced for flawless execution and carries far more valuation risk than GOOGL for similar theme exposure. I'd take the profitable, cheaper AI winner over the expensive one.</p>
+    <p style="font-size:11px;color:var(--faint);margin:14px 0 0;line-height:1.6">My own analysis and a starting watchlist &mdash; not personalized investment advice or a recommendation to buy any security. Prices are approximate, midday Jul 24, 2026, and move continuously. Fund any purchase from freed-up cash, not additional margin, and run real buys past a licensed financial advisor first.</p>
+  </div>
+
 
   <div class="card context" style="margin-top:16px">
     <h2 style="display:flex;align-items:center;flex-wrap:wrap;gap:2px">Market Sentiment &amp; External Factors <span class="sbadge">Context &middot; not advice</span></h2>
@@ -233,7 +286,7 @@
   </div>
 
   <div class="disclaimer">
-    Live intraday snapshot as of Jul 24, 2026 ~3:35pm ET, from your Robinhood main individual account (read-only via Robinhood's official Agentic Trading MCP). Prices are last-trade during the open session and move continuously; they may differ slightly from your app. This dashboard does not place trades. Nothing here is personalized investment advice or a recommendation to buy or sell any security; for major allocation decisions consult a licensed financial advisor. Values exclude your crypto holdings ($13,529) except where "Net Account Value" is shown. To refresh, re-run the data pull.
+    Live intraday snapshot as of Jul 24, 2026 ~3:35pm ET, from your Robinhood main individual account (read-only via Robinhood's official Agentic Trading MCP). Prices are last-trade during the open session and move continuously; they may differ slightly from your app. This dashboard does not place trades. Nothing here is personalized investment advice or a recommendation to buy or sell any security; for major allocation decisions consult a licensed financial advisor. Values exclude your crypto holdings ($13,503) except where "Net Account Value" is shown. To refresh, re-run the data pull.
   </div>
 </div>
 
@@ -269,4 +322,5 @@
   arrows(4);
 })();
 </script>
+
 </body></html>
