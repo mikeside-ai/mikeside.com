@@ -1,283 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Vlad's Dashboard</title>
+<meta name="description" content="Live inbox and GitHub activity dashboard.">
+<title>Vlad&#x27;s Dashboard</title>
 <style>
-  :root {
-    color-scheme: light;
-    --page:           #f9f9f7;
-    --surface-1:      #fcfcfb;
-    --text-primary:   #0b0b0b;
-    --text-secondary: #52514e;
-    --text-muted:     #898781;
-    --grid:           #e1e0d9;
-    --baseline:       #c3c2b7;
-    --border:         rgba(11,11,11,0.10);
-    --series-1:       #2a78d6;
-    --series-2:       #eb6834;
-    --series-3:       #1baf7a;
-    --status-good:     #0ca30c;
-    --status-warning:  #fab219;
-    --status-serious:  #ec835a;
-    --status-critical: #d03b3b;
-    --good-text:      #006300;
+:root{
+  --bg:#f6f7f9; --card:#fff; --ink:#15181d; --muted:#5d646f; --line:#e3e6ea;
+  --accent:#1f6feb; --live:#12855b; --live-bg:#dcf5e9;
+  --c-promo:#c2603c; --c-upd:#3f7ac4; --c-soc:#8a6bbf; --c-pri:#12855b;
+  --c-commit:#3f7ac4; --warn:#8a5a00; --warn-bg:#fdf3dc;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0f1216; --card:#161a20; --ink:#e8ebef; --muted:#98a1ad; --line:#252b33;
+    --accent:#589bff; --live:#4ad6a0; --live-bg:#123328;
+    --c-promo:#e08d67; --c-upd:#79aef0; --c-soc:#b298e6; --c-pri:#4ad6a0;
+    --c-commit:#79aef0; --warn:#e8c06a; --warn-bg:#332a12;
   }
-  @media (prefers-color-scheme: dark) {
-    :root:where(:not([data-theme="light"])) {
-      color-scheme: dark;
-      --page:           #0d0d0d;
-      --surface-1:      #1a1a19;
-      --text-primary:   #ffffff;
-      --text-secondary: #c3c2b7;
-      --text-muted:     #898781;
-      --grid:           #2c2c2a;
-      --baseline:       #383835;
-      --border:         rgba(255,255,255,0.10);
-      --series-1:       #3987e5;
-      --series-2:       #d95926;
-      --series-3:       #199e70;
-      --good-text:      #0ca30c;
-    }
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    background: var(--page);
-    color: var(--text-primary);
-    padding: 24px 16px 48px;
-  }
-  .wrap { max-width: 960px; margin: 0 auto; }
-  header { margin-bottom: 20px; }
-  .masthead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 14px; }
-  h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.02em; }
-  .live-pill {
-    display: inline-flex; align-items: center; gap: 6px;
-    font-size: 12px; font-weight: 600; color: var(--good-text);
-    border: 1px solid var(--border); border-radius: 999px;
-    padding: 3px 10px; background: var(--surface-1);
-  }
-  .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--status-good); }
-  .updated { font-size: 13px; color: var(--text-muted); }
-  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  @media (max-width: 760px) { .grid2 { grid-template-columns: 1fr; } }
-  .card {
-    background: var(--surface-1); border: 1px solid var(--border);
-    border-radius: 12px; padding: 18px 18px 16px;
-  }
-  .card-head {
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 8px; margin-bottom: 14px;
-  }
-  .card-title { font-size: 15px; font-weight: 700; }
-  .card-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
-  .src-badge {
-    font-size: 11px; font-weight: 600; color: var(--text-secondary);
-    border: 1px solid var(--border); border-radius: 6px;
-    padding: 2px 8px; white-space: nowrap;
-  }
-  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px; }
-  .tile { border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; }
-  .tile .v { font-size: 24px; font-weight: 700; line-height: 1.2; }
-  .tile .l { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
-  .mix-label { font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; }
-  .mixbar { display: flex; height: 14px; border-radius: 4px; overflow: hidden; gap: 2px; background: var(--page); }
-  .mixbar div { height: 100%; }
-  .legend { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; font-size: 12px; color: var(--text-secondary); }
-  .legend span { display: inline-flex; align-items: center; gap: 5px; }
-  .swatch { width: 9px; height: 9px; border-radius: 2px; display: inline-block; }
-  .sect-label {
-    font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--text-muted); margin: 14px 0 8px;
-  }
-  ul.plain { list-style: none; }
-  .item {
-    display: flex; gap: 10px; padding: 9px 2px;
-    border-top: 1px solid var(--grid); align-items: flex-start;
-  }
-  .item:first-child { border-top: none; }
-  .tag {
-    flex: none; font-size: 10px; font-weight: 700; letter-spacing: 0.04em;
-    border-radius: 4px; padding: 3px 6px; margin-top: 1px;
-    color: var(--text-primary); border: 1px solid var(--border);
-    white-space: nowrap;
-  }
-  .tag.security { border-color: var(--status-critical); color: var(--status-critical); }
-  .tag.deadline { border-color: var(--status-serious); color: var(--status-serious); }
-  .tag.receipt  { border-color: var(--baseline); color: var(--text-secondary); }
-  .tag.setup    { border-color: var(--baseline); color: var(--text-secondary); }
-  .tag.pr       { border-color: var(--series-1); color: var(--series-1); }
-  .tag.new      { border-color: var(--status-good); color: var(--good-text); }
-  .tag.stale    { border-color: var(--status-warning); color: var(--text-secondary); }
-  .item .t { font-size: 13.5px; line-height: 1.35; }
-  .item .m { font-size: 12px; color: var(--text-muted); margin-top: 1px; }
-  .item a { color: inherit; }
-  .commit {
-    display: flex; gap: 10px; padding: 7px 2px; border-top: 1px solid var(--grid);
-    font-size: 13px; line-height: 1.4;
-  }
-  .commit:first-child { border-top: none; }
-  .commit .repo {
-    flex: none; font-size: 11px; font-weight: 600; color: var(--text-secondary);
-    font-variant-numeric: tabular-nums; padding-top: 2px; width: 92px;
-  }
-  .note {
-    margin-top: 14px; font-size: 12px; color: var(--text-muted);
-    border-top: 1px solid var(--grid); padding-top: 10px; line-height: 1.5;
-  }
-  footer { margin-top: 20px; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+}
+*{box-sizing:border-box}
+body{margin:0;padding:28px 18px 56px;background:var(--bg);color:var(--ink);
+  font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:8px;top:8px;position:fixed;background:var(--card);padding:8px 12px;
+  border-radius:8px;border:1px solid var(--line);z-index:9}
+header{margin-bottom:22px}
+.title{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+h1{font-size:25px;margin:0;letter-spacing:-.02em}
+.pill{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--live);background:var(--live-bg);padding:3px 9px;border-radius:999px;
+  display:inline-flex;align-items:center;gap:6px}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--live);animation:p 2.4s ease-in-out infinite}
+@keyframes p{0%,100%{opacity:1}50%{opacity:.32}}
+@media (prefers-reduced-motion:reduce){.dot{animation:none}}
+.stamp{color:var(--muted);font-size:13px;margin-top:6px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:760px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 20px}
+.card h2{font-size:16px;margin:0;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:12.5px;margin:2px 0 15px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:16px}
+.tile{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 11px}
+.tile .n{font-size:21px;font-weight:680;letter-spacing:-.02em;line-height:1.15}
+.tile .l{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:3px}
+.bar{display:flex;gap:2px;height:9px;margin:4px 0 9px}
+.bar span{border-radius:2px}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--muted);margin-bottom:6px}
+.legend i{width:8px;height:8px;border-radius:2px;display:inline-block;margin-right:5px}
+.note{font-size:11.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:9px;margin-top:12px}
+h3{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);
+  margin:18px 0 9px;font-weight:640}
+ul{list-style:none;margin:0;padding:0}
+li{padding:9px 0;border-top:1px solid var(--line)}
+li:first-child{border-top:0}
+.row{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.tag{font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  padding:2px 7px;border-radius:5px;background:var(--bg);border:1px solid var(--line);color:var(--muted)}
+.tag.sec{color:var(--c-promo);border-color:var(--c-promo)}
+.tag.dl{color:var(--warn);border-color:var(--warn)}
+.who{font-weight:620}
+.when{color:var(--muted);font-size:12px;margin-left:auto}
+.desc{color:var(--muted);font-size:13px;margin-top:2px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+code{font:12.5px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted)}
+.stale{background:var(--warn-bg);color:var(--warn);font-size:10px;font-weight:700;
+  padding:2px 6px;border-radius:5px;text-transform:uppercase;letter-spacing:.04em}
+footer{max-width:960px;margin:26px auto 0;color:var(--muted);font-size:12px;line-height:1.7}
+footer strong{color:var(--ink);font-weight:620}
+@media print{
+  body{background:#fff;padding:0}
+  .card{break-inside:avoid;border-color:#ccc}
+  .dot{display:none}
+}
 </style>
-</head>
-<body>
+</head><body>
+<a class="skip" href="#main">Skip to dashboard</a>
 <div class="wrap">
-  <header>
-    <div class="masthead">
-      <h1>Vlad's Dashboard</h1>
-      <span class="live-pill"><span class="live-dot"></span>LIVE</span>
-      <span class="updated">Updated Thu, Jul 23, 2026 · 11:50 PM CT</span>
-    </div>
-  </header>
-
-  <div class="grid2">
-
-    <!-- ============ INBOX (PUBLIC / REDACTED) ============ -->
-    <section class="card">
-      <div class="card-head">
-        <div>
-          <div class="card-title">Inbox</div>
-          <div class="card-sub">personal inbox</div>
-        </div>
-        <span class="src-badge">Gmail · live</span>
-      </div>
-
-      <div class="tiles">
-        <div class="tile"><div class="v">200+</div><div class="l">unread threads</div></div>
-        <div class="tile"><div class="v">11</div><div class="l">need attention</div></div>
-        <div class="tile"><div class="v">~98%</div><div class="l">promo / noise</div></div>
-      </div>
-
-      <div class="mix-label">7-day category mix (Gmail estimates, approximate)</div>
-      <div class="mixbar" role="img" aria-label="Inbox mix over 7 days: primary 7, promotions and updates 200-plus each, social 14">
-        <div style="flex: 7;   background: var(--series-1);"></div>
-        <div style="flex: 400; background: var(--series-2);"></div>
-        <div style="flex: 14;  background: var(--series-3);"></div>
-      </div>
-      <div class="legend">
-        <span><span class="swatch" style="background: var(--series-1);"></span>Primary (7)</span>
-        <span><span class="swatch" style="background: var(--series-2);"></span>Promotions &amp; updates (200+ each)</span>
-        <span><span class="swatch" style="background: var(--series-3);"></span>Social (14)</span>
-      </div>
-
-      <div class="sect-label">Needs attention (by type)</div>
-      <ul class="plain">
-        <li class="item">
-          <span class="tag security">Security</span>
-          <div>
-            <div class="t">4 sign-in / account-security alerts</div>
-            <div class="m">details in the private dashboard</div>
-          </div>
-        </li>
-        <li class="item">
-          <span class="tag deadline">Deadline</span>
-          <div>
-            <div class="t">3 time-sensitive items — a failed payment, an upcoming auto-charge, an account-expiry</div>
-            <div class="m">details in the private dashboard</div>
-          </div>
-        </li>
-        <li class="item">
-          <span class="tag receipt">Receipt</span>
-          <div>
-            <div class="t">2 booking &amp; shipping confirmations</div>
-            <div class="m">details in the private dashboard</div>
-          </div>
-        </li>
-        <li class="item">
-          <span class="tag setup">Setup</span>
-          <div>
-            <div class="t">2 account-setup notices</div>
-            <div class="m">details in the private dashboard</div>
-          </div>
-        </li>
-      </ul>
-      <div class="note">
-        Public view — email senders, subjects, amounts, and locations are shown only in the
-        private version of this dashboard. Counts are Gmail estimates, rounded.
-      </div>
-    </section>
-
-    <!-- ============ GITHUB ============ -->
-    <section class="card">
-      <div class="card-head">
-        <div>
-          <div class="card-title">GitHub Activity</div>
-          <div class="card-sub">github.com/vlad-hub86 · 5 repos</div>
-        </div>
-        <span class="src-badge">GitHub · live</span>
-      </div>
-
-      <div class="tiles">
-        <div class="tile"><div class="v">93</div><div class="l">commits today</div></div>
-        <div class="tile"><div class="v">4</div><div class="l">open PRs</div></div>
-        <div class="tile"><div class="v">3</div><div class="l">repos active today</div></div>
-      </div>
-
-      <div class="sect-label">Open pull requests</div>
-      <ul class="plain">
-        <li class="item">
-          <span class="tag new">Today</span>
-          <div>
-            <div class="t"><a href="https://github.com/vlad-hub86/miajune-site/pull/6">miajune-site #6</a> — Online membership signup with contract flow (Birmingham &amp; Pelham)</div>
-            <div class="m">Yours, opened today · needs a dedicated Formspree endpoint + Square contract template before go-live</div>
-          </div>
-        </li>
-        <li class="item">
-          <span class="tag stale">17 days</span>
-          <div>
-            <div class="t"><a href="https://github.com/vlad-hub86/miajune-site/pull/3">miajune-site #3</a> — Add image embedding support to blog post bodies</div>
-            <div class="m">Yours, open since Jul 6 · tested &amp; ready — merge or close?</div>
-          </div>
-        </li>
-        <li class="item">
-          <span class="tag pr">3 days</span>
-          <div>
-            <div class="t"><a href="https://github.com/vlad-hub86/miajune-site/pull/5">miajune-site #5</a> — Add Cloudflare Workers configuration</div>
-            <div class="m">Cloudflare bot · conflicts with your Porkbun-static setup — likely close</div>
-          </div>
-        </li>
-        <li class="item">
-          <span class="tag pr">Draft</span>
-          <div>
-            <div class="t"><a href="https://github.com/vlad-hub86/phish-setlist-bot/pull/1">phish-setlist-bot #1</a> — Fix test-post workflow on self-hosted runner</div>
-            <div class="m">Copilot draft · removes privileged Python setup · Jul 22</div>
-          </div>
-        </li>
-      </ul>
-
-      <div class="sect-label">Latest commits</div>
-      <ul class="plain">
-        <li class="commit"><span class="repo">mikeside.com</span><span>photos.js: iconic Google Place photo as each day's banner + cache-bust <span style="color: var(--text-muted);">· 11:45 PM</span></span></li>
-        <li class="commit"><span class="repo">mikeside.com</span><span>day-7 &amp; day-1: scheduled flight durations on status chips <span style="color: var(--text-muted);">· 11:43 PM</span></span></li>
-        <li class="commit"><span class="repo">mikeside.com</span><span>FlightAware live-status links under each flight <span style="color: var(--text-muted);">· 11:33 PM</span></span></li>
-        <li class="commit"><span class="repo">mikeside.com</span><span>photos: migrate to new Google Places API (searchByText) <span style="color: var(--text-muted);">· 9:37 PM</span></span></li>
-        <li class="commit"><span class="repo">mikeside.com</span><span>Add reservation.html: Alamo/Costco Jeep rental details page <span style="color: var(--text-muted);">· 6:52 PM</span></span></li>
-        <li class="commit"><span class="repo">miajune-site</span><span>Remove temporary deploy-check probe (Porkbun auto-deploy verified) <span style="color: var(--text-muted);">· 12:08 PM</span></span></li>
-        <li class="commit"><span class="repo">setlist-bot</span><span>verified-recap: persistent state on runner disk; fix 1am repost guard <span style="color: var(--text-muted);">· 12:41 AM</span></span></li>
-      </ul>
-      <div class="note">
-        Busy day on mikeside.com (Maine wedding-trip site): 78 of today's 93 commits. Automated
-        "setlist update" commits from the Phish bot are excluded from the highlights above.
-      </div>
-    </section>
-
+<header>
+  <div class="title"><h1>Vlad's Dashboard</h1>
+  <span class="pill"><span class="dot"></span>Live</span></div>
+  <div class="stamp">Updated July 25, 2026 &middot; 4:10 AM CT &middot; next scheduled refresh 7:00 AM CT</div>
+</header>
+<main id="main"><div class="grid">
+<section class="card" aria-labelledby="inbox-h">
+  <h2 id="inbox-h">Inbox</h2>
+  <div class="sub">personal inbox</div>
+  <div class="tiles">
+    <div class="tile"><div class="n">200+</div><div class="l">Unread</div></div>
+    <div class="tile"><div class="n">6</div><div class="l">Needs attention</div></div>
+    <div class="tile"><div class="n">100%</div><div class="l">Noise (24h)</div></div>
   </div>
-
-  <footer>
-    Sources: Gmail (aggregate counts only) and GitHub (vlad-hub86), pulled live. All data on this page is real — no sample data.
-    Unread and category counts are Gmail estimates, rounded. Commit counts cover the CT calendar day; times shown in CT.
-    Auto-refresh: twice daily (7 AM &amp; 3 PM CT) via a scheduled Claude task.
-  </footer>
-</div>
-</body>
-</html>
+  
+  <h3>Category mix &middot; last 24 hours</h3>
+  <div class="bar" role="img" aria-label="Promotions 98, Updates 49, Social 2, Primary 0 of 149 threads"><span style="flex:98;background:var(--c-promo)" title="Promotions: 98"></span><span style="flex:49;background:var(--c-upd)" title="Updates: 49"></span><span style="flex:2;background:var(--c-soc)" title="Social: 2"></span></div>
+  <div class="legend"><span><i style="background:var(--c-promo)"></i>Promotions 98</span><span><i style="background:var(--c-upd)"></i>Updates 49</span><span><i style="background:var(--c-soc)"></i>Social 2</span><span><i style="background:var(--c-pri)"></i>Primary 0</span></div>
+  <div class="note">Gmail's result estimate saturates near 201, so the unread tile is rounded and the
+  mix above is an exact count over a 24-hour window rather than an estimate over seven days.
+  149 of 149 threads in the last day were promotions, updates or social;
+  7 primary threads arrived across the last seven days.</div>
+  <h3>Needs attention (by type)</h3>
+  <ul><li><div class="row">
+      <span class="tag sec">Security</span>
+      <span class="who">2 sign-in alerts</span></div>
+      <div class="desc">Details in the private dashboard.</div></li><li><div class="row">
+      <span class="tag ">Setup</span>
+      <span class="who">2 account review items</span></div>
+      <div class="desc">Details in the private dashboard.</div></li><li><div class="row">
+      <span class="tag dl">Deadline</span>
+      <span class="who">1 account deadline</span></div>
+      <div class="desc">Details in the private dashboard.</div></li><li><div class="row">
+      <span class="tag ">Receipt</span>
+      <span class="who">1 purchase receipt</span></div>
+      <div class="desc">Details in the private dashboard.</div></li></ul>
+</section>
+<section class="card" aria-labelledby="gh-h">
+  <h2 id="gh-h">GitHub Activity</h2>
+  <div class="sub">vlad-hub86 &middot; live</div>
+  <div class="tiles">
+    <div class="tile"><div class="n">7</div><div class="l">Commits today</div></div>
+    <div class="tile"><div class="n">4</div><div class="l">Open PRs</div></div>
+    <div class="tile"><div class="n">1</div><div class="l">Repos active today</div></div>
+  </div>
+  <h3>Commits per hour &middot; last 48 hours</h3>
+  <svg viewBox="0 0 620 44" width="100%" height="44" role="img" aria-label="Commits per hour over the last 48 hours; peak hour 22 commits"><rect x="0.00" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Thu 4 AM CT — 0 commits</title></rect><rect x="12.92" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Thu 5 AM CT — 0 commits</title></rect><rect x="25.83" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Thu 6 AM CT — 0 commits</title></rect><rect x="38.75" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Thu 7 AM CT — 0 commits</title></rect><rect x="51.67" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Thu 8 AM CT — 0 commits</title></rect><rect x="64.58" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Thu 9 AM CT — 0 commits</title></rect><rect x="77.50" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Thu 10 AM CT — 0 commits</title></rect><rect x="90.42" y="40.55" width="11.72" height="3.45" rx="1" fill="var(--c-commit)"><title>Thu 11 AM CT — 2 commits</title></rect><rect x="103.33" y="33.64" width="11.72" height="10.36" rx="1" fill="var(--c-commit)"><title>Thu 12 PM CT — 6 commits</title></rect><rect x="116.25" y="38.82" width="11.72" height="5.18" rx="1" fill="var(--c-commit)"><title>Thu 1 PM CT — 3 commits</title></rect><rect x="129.17" y="23.27" width="11.72" height="20.73" rx="1" fill="var(--c-commit)"><title>Thu 2 PM CT — 12 commits</title></rect><rect x="142.08" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Thu 3 PM CT — 0 commits</title></rect><rect x="155.00" y="42.27" width="11.72" height="1.73" rx="1" fill="var(--c-commit)"><title>Thu 4 PM CT — 1 commit</title></rect><rect x="167.92" y="6.00" width="11.72" height="38.00" rx="1" fill="var(--c-commit)"><title>Thu 5 PM CT — 22 commits</title></rect><rect x="180.83" y="28.45" width="11.72" height="15.55" rx="1" fill="var(--c-commit)"><title>Thu 6 PM CT — 9 commits</title></rect><rect x="193.75" y="40.55" width="11.72" height="3.45" rx="1" fill="var(--c-commit)"><title>Thu 7 PM CT — 2 commits</title></rect><rect x="206.67" y="42.27" width="11.72" height="1.73" rx="1" fill="var(--c-commit)"><title>Thu 8 PM CT — 1 commit</title></rect><rect x="219.58" y="40.55" width="11.72" height="3.45" rx="1" fill="var(--c-commit)"><title>Thu 9 PM CT — 2 commits</title></rect><rect x="232.50" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Thu 10 PM CT — 0 commits</title></rect><rect x="245.42" y="16.36" width="11.72" height="27.64" rx="1" fill="var(--c-commit)"><title>Thu 11 PM CT — 16 commits</title></rect><rect x="258.33" y="40.55" width="11.72" height="3.45" rx="1" fill="var(--c-commit)"><title>Fri 12 AM CT — 2 commits</title></rect><rect x="271.25" y="35.36" width="11.72" height="8.64" rx="1" fill="var(--c-commit)"><title>Fri 1 AM CT — 5 commits</title></rect><rect x="284.17" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Fri 2 AM CT — 0 commits</title></rect><rect x="297.08" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Fri 3 AM CT — 0 commits</title></rect><rect x="310.00" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Fri 4 AM CT — 0 commits</title></rect><rect x="322.92" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Fri 5 AM CT — 0 commits</title></rect><rect x="335.83" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Fri 6 AM CT — 0 commits</title></rect><rect x="348.75" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Fri 7 AM CT — 0 commits</title></rect><rect x="361.67" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Fri 8 AM CT — 0 commits</title></rect><rect x="374.58" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Fri 9 AM CT — 0 commits</title></rect><rect x="387.50" y="38.82" width="11.72" height="5.18" rx="1" fill="var(--c-commit)"><title>Fri 10 AM CT — 3 commits</title></rect><rect x="400.42" y="42.27" width="11.72" height="1.73" rx="1" fill="var(--c-commit)"><title>Fri 11 AM CT — 1 commit</title></rect><rect x="413.33" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Fri 12 PM CT — 0 commits</title></rect><rect x="426.25" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Fri 1 PM CT — 0 commits</title></rect><rect x="439.17" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Fri 2 PM CT — 0 commits</title></rect><rect x="452.08" y="38.82" width="11.72" height="5.18" rx="1" fill="var(--c-commit)"><title>Fri 3 PM CT — 3 commits</title></rect><rect x="465.00" y="40.55" width="11.72" height="3.45" rx="1" fill="var(--c-commit)"><title>Fri 4 PM CT — 2 commits</title></rect><rect x="477.92" y="25.00" width="11.72" height="19.00" rx="1" fill="var(--c-commit)"><title>Fri 5 PM CT — 11 commits</title></rect><rect x="490.83" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Fri 6 PM CT — 0 commits</title></rect><rect x="503.75" y="33.64" width="11.72" height="10.36" rx="1" fill="var(--c-commit)"><title>Fri 7 PM CT — 6 commits</title></rect><rect x="516.67" y="33.64" width="11.72" height="10.36" rx="1" fill="var(--c-commit)"><title>Fri 8 PM CT — 6 commits</title></rect><rect x="529.58" y="33.64" width="11.72" height="10.36" rx="1" fill="var(--c-commit)"><title>Fri 9 PM CT — 6 commits</title></rect><rect x="542.50" y="33.64" width="11.72" height="10.36" rx="1" fill="var(--c-commit)"><title>Fri 10 PM CT — 6 commits</title></rect><rect x="555.42" y="38.82" width="11.72" height="5.18" rx="1" fill="var(--c-commit)"><title>Fri 11 PM CT — 3 commits</title></rect><rect x="568.33" y="40.55" width="11.72" height="3.45" rx="1" fill="var(--c-commit)"><title>Sat 12 AM CT — 2 commits</title></rect><rect x="581.25" y="37.09" width="11.72" height="6.91" rx="1" fill="var(--c-commit)"><title>Sat 1 AM CT — 4 commits</title></rect><rect x="594.17" y="44.00" width="11.72" height="1.00" rx="1" fill="var(--c-commit)"><title>Sat 2 AM CT — 0 commits</title></rect><rect x="607.08" y="42.27" width="11.72" height="1.73" rx="1" fill="var(--c-commit)"><title>Sat 3 AM CT — 1 commit</title></rect></svg>
+  <div class="note">137 commits across 3 repos in 48 hours:
+  <strong>105 authored by you</strong>, 7 by the setlist-bot inbox agent,
+  and 25 automated <code>setlist update</code> pushes during the show. Open issues
+  excluding pull requests: 0.</div>
+  <h3>Open pull requests</h3>
+  <ul><li><div class="row">
+      <span class="who"><a href="https://github.com/vlad-hub86/miajune-site/pull/6">miajune-site #6</a></span>
+      <span class="when">2 days old</span></div>
+      <div class="desc">Online membership signup with contract flow &mdash; Replaces in-person-only signup with an online form plus Square checkout. Needs a dedicated form endpoint and a contract template before it goes live.</div></li><li><div class="row">
+      <span class="who"><a href="https://github.com/vlad-hub86/phish-setlist-bot/pull/1">phish-setlist-bot #1</a></span>
+      <span class="when">3 days old</span></div>
+      <div class="desc">Fix test-post workflow failure on self-hosted runner &mdash; Draft from Copilot. Drops the privileged setup-python step so the self-hosted runner uses its own python3.</div></li><li><div class="row">
+      <span class="who"><a href="https://github.com/vlad-hub86/miajune-site/pull/5">miajune-site #5</a></span>
+      <span class="when">4 days old</span></div>
+      <div class="desc">Add Cloudflare Workers configuration &mdash; Automated PR adding wrangler.jsonc for a static-site Worker deploy.</div></li><li><div class="row">
+      <span class="who"><a href="https://github.com/vlad-hub86/miajune-site/pull/3">miajune-site #3</a></span> <span class="stale">stale</span>
+      <span class="when">19 days old</span></div>
+      <div class="desc">Add image embedding support to blog post bodies &mdash; Renders markdown images in the news builder. Oldest open PR — stale by a fair margin.</div></li></ul>
+  <h3>Latest commits</h3>
+  <ul><li><div class="row">
+      <span class="who">phish-setlist-bot</span><code>337ce52</code>
+      <span class="when">Sat 3:06 AM CT</span></div>
+      <div class="desc"><a href="https://github.com/vlad-hub86/phish-setlist-bot/commit/337ce52">transitions: render set recaps as a real setlist; stop the parser inventing a comma for absent transition codes</a></div></li><li><div class="row">
+      <span class="who">phish-setlist-bot</span><code>3fd97e5</code>
+      <span class="when">Sat 1:46 AM CT</span></div>
+      <div class="desc"><a href="https://github.com/vlad-hub86/phish-setlist-bot/commit/3fd97e5">show-night: go live on X — add X_* secrets, PLATFORMS=truthsocial,x, X_POST_KINDS allowlist</a></div></li><li><div class="row">
+      <span class="who">phish-setlist-bot</span><code>4d4893d</code>
+      <span class="when">Sat 1:44 AM CT</span></div>
+      <div class="desc"><a href="https://github.com/vlad-hub86/phish-setlist-bot/commit/4d4893d">staging pipeline (2b/3): kind-tagged fan-out in runner; show-start guarded + catch-up-burst guard</a></div></li><li><div class="row">
+      <span class="who">phish-setlist-bot</span><code>69bb31c</code>
+      <span class="when">Sat 12:56 AM CT</span></div>
+      <div class="desc"><a href="https://github.com/vlad-hub86/phish-setlist-bot/commit/69bb31c">composer: replace dagger footnote marker with numbered superscripts</a></div></li><li><div class="row">
+      <span class="who">phish-setlist-bot</span><code>ac5f454</code>
+      <span class="when">Sat 12:55 AM CT</span></div>
+      <div class="desc"><a href="https://github.com/vlad-hub86/phish-setlist-bot/commit/ac5f454">main.py: build_publishers constructs each publisher defensively — one bad credential no longer aborts the run</a></div></li><li><div class="row">
+      <span class="who">mikeside.com</span><code>af6e88b</code>
+      <span class="when">Fri 5:57 PM CT</span></div>
+      <div class="desc"><a href="https://github.com/vlad-hub86/mikeside.com/commit/af6e88b">Thursday: present both lobster pounds as co-equal lunch options</a></div></li><li><div class="row">
+      <span class="who">mikeside.com</span><code>3e839b2</code>
+      <span class="when">Fri 5:48 PM CT</span></div>
+      <div class="desc"><a href="https://github.com/vlad-hub86/mikeside.com/commit/3e839b2">supmaine: Saturday-morning option plus trail-link chips</a></div></li><li><div class="row">
+      <span class="who">mikeside.com</span><code>fa4f27f</code>
+      <span class="when">Fri 4:56 PM CT</span></div>
+      <div class="desc"><a href="https://github.com/vlad-hub86/mikeside.com/commit/fa4f27f">Load tides.js — NOAA high/low tide strip on every day card</a></div></li></ul>
+</section></div></main>
+<footer>Sources: Gmail (thread search over the inbox) and the GitHub API (commits, pull requests and issues for vlad-hub86). The inbox card on this public page is aggregate-only: no senders, subjects, amounts, locations or addresses are published.<br><strong>All data on this page is real &mdash; no sample data.</strong><br>Auto-refresh: twice daily (7 AM &amp; 3 PM CT) via a scheduled Claude task.</footer>
+</div></body></html>
