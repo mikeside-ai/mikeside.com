@@ -133,6 +133,36 @@
   .counter b { color: var(--text-primary); }
   .counter .exp { color: var(--text-muted); }
 
+  /* Setlist game */
+  .game { margin-top: 16px; border: 1px solid var(--accent); border-radius: 10px; overflow: hidden; }
+  .game-head {
+    background: var(--surface-2); padding: 8px 12px;
+    display: flex; align-items: baseline; justify-content: space-between; gap: 8px; flex-wrap: wrap;
+  }
+  .game-head .t { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+  .game-head .sc { font-size: 12px; font-weight: 600; color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+  .game-head .sc b { color: var(--text-primary); }
+  .grow { display: flex; align-items: flex-start; gap: 10px; padding: 9px 12px; border-top: 1px solid var(--grid); }
+  .grow:first-of-type { border-top: none; }
+  .grow input[type=checkbox] { width: 15px; height: 15px; flex: none; cursor: pointer; accent-color: var(--good); margin-top: 5px; }
+  .grow .pts {
+    flex: none; width: 30px; height: 24px; border-radius: 6px; margin-top: 1px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12.5px; font-weight: 700; font-variant-numeric: tabular-nums;
+    background: var(--accent); color: #fff;
+  }
+  .grow.lo .pts { background: var(--baseline); color: var(--text-primary); }
+  .grow .gb { flex: 1; min-width: 0; }
+  .grow .gn { font-size: 14px; font-weight: 600; }
+  .grow.hit .gn { text-decoration: line-through; color: var(--text-muted); }
+  .grow .gr { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; line-height: 1.45; max-width: 74ch; }
+  .grow .gr b { color: var(--text-secondary); font-weight: 600; }
+  .grow .p {
+    flex: none; font-size: 11px; font-weight: 700; color: var(--text-secondary);
+    font-variant-numeric: tabular-nums; margin-top: 4px; min-width: 34px; text-align: right;
+  }
+  .game-foot { padding: 9px 12px; border-top: 1px solid var(--grid); font-size: 11.5px; color: var(--text-muted); background: var(--surface-2); }
+
   .calls { margin-top: 16px; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
   .calls-head {
     font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
@@ -160,7 +190,6 @@
     white-space: nowrap; font-variant-numeric: tabular-nums; margin-top: 3px;
   }
 
-  /* Head-to-head */
   .h2h { margin-top: 14px; border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; background: var(--surface-2); }
   .h2h > summary {
     cursor: pointer; font-size: 12px; font-weight: 700; list-style: none;
@@ -232,7 +261,7 @@
       <h1>Phish @ MSG — Setlist Predictions</h1>
       <span class="pill">5 NIGHTS · #92–96</span>
     </div>
-    <p class="sub">Five-night Madison Square Garden run celebrating Phish's 92nd through 96th shows at the Garden — each night themed to a year, <b>1992 → 1996</b>. Four called shots plus twenty predicted songs per night, each with the reason it was picked. Check them off as they're played. Everything is editable — click a song to rename it, ✕ to remove, <b>+ add</b> for your own. Predictions <b>never reuse a song played earlier in the run</b> — Phish doesn't repeat across a residency, and the two played nights share exactly zero songs.</p>
+    <p class="sub">Five-night Madison Square Garden run celebrating Phish's 92nd through 96th shows at the Garden — each night themed to a year, <b>1992 → 1996</b>. A weighted ten-pick ladder for the setlist game, four called shots, and twenty predicted songs per night. Check them off as they're played. Everything is editable — click a song to rename it, ✕ to remove, <b>+ add</b> for your own. Predictions <b>never reuse a song played earlier in the run</b> — Phish doesn't repeat across a residency, and the two played nights share exactly zero songs.</p>
     <div class="toolbar">
       <button class="btn" id="exportBtn">Copy all predictions</button>
       <button class="btn warn" id="resetAllBtn">Reset all nights to Claude's picks</button>
@@ -259,14 +288,29 @@
           <tr class="bad"><th scope="row">Random 20 from the same pool</th><td class="n">4.3</td><td class="n">3.4</td><td class="n">7.7 / 40</td></tr>
         </tbody>
       </table>
-      <p><b>Correction to what this page said earlier:</b> the random baseline was previously quoted as 5.8 for #93. That used an unfiltered 233-song pool. With side-project shows and placeholder rows removed the real pool is 141, and random expects <b>3.4</b>. v7's edge is therefore <em>larger</em> than advertised — roughly double random, not a whisker above it.</p>
+      <p><b>Correction to what this page said earlier:</b> the random baseline was previously quoted as 5.8 for #93. That used an unfiltered 233-song pool. With side-project shows and placeholder rows removed the real pool is 141, and random expects <b>3.4</b>. v7's edge is therefore <em>larger</em> than advertised — roughly double random.</p>
+
+      <h4>The probabilities are calibrated, which was not guaranteed</h4>
+      <p>Before building the weighted ten-pick ladder, the raw play rate — a song's theme-year count divided by that year's show count — was checked against reality. Summing those rates across the top 20 predicts an expected number of hits, which can be compared to what actually happened:</p>
+      <table>
+        <thead><tr><th scope="col">Night</th><th scope="col" class="n">Predicted</th><th scope="col" class="n">Actual</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">#92 (1992)</th><td class="n">8.77</td><td class="n">9</td></tr>
+          <tr><th scope="row">#93 (1993)</th><td class="n">8.41</td><td class="n">7</td></tr>
+          <tr class="win"><th scope="row">Combined ratio</th><td class="n">—</td><td class="n">0.93</td></tr>
+        </tbody>
+      </table>
+      <p>A ratio of 0.93 means raw play rate is <b>already a well-calibrated probability</b> — no fudge factor needed. That matters far more for the ten-pick ladder than for the slate, because the ladder needs the probabilities to be right in <em>magnitude</em>, not just in rank order.</p>
+
+      <h4>Why the ladder is ranked strictly by probability</h4>
+      <p>The setlist game scores <code>Σ points × P(played)</code>. By the rearrangement inequality, that sum is maximised by pairing the largest point value with the largest probability, the second largest with the second, and so on. There is no cleverness available: <b>the ranking is the entire strategy, and it is strictly by probability.</b> Any deviation — saving a favourite for a high slot, hedging a risky pick low — provably loses expected points.</p>
+      <p>One consequence worth internalising: 10 + 9 + 8 = 27 of the 55 available points sit in the top three slots. <b>Half the game is decided by three songs.</b></p>
 
       <h4>Secret Language: real, and already baked in</h4>
-      <p>1994 setlist footnotes mention signals 591 times. Ranked, the Secret-Language-heavy songs are Sample in a Jar (16), Down with Disease (15), Run Like an Antelope (14), Poor Heart (13), Sparkle (12), Hold Your Head Up (12), David Bowie (12) — <b>the same songs frequency ranking already picks.</b> Signals happen <em>inside</em> the band's biggest vehicles, so Secret Language is collinear with play count. Filtering on it returns an identical slate and an identical score. It's an excellent lens for watching a show; it is not a selection signal.</p>
+      <p>1994 setlist footnotes mention signals 591 times. Ranked, the Secret-Language-heavy songs are Sample in a Jar (16), Down with Disease (15), Run Like an Antelope (14), Poor Heart (13), Sparkle (12), Hold Your Head Up (12), David Bowie (12) — <b>the same songs frequency ranking already picks.</b> Signals happen <em>inside</em> the band's biggest vehicles, so Secret Language is collinear with play count. Filtering on it returns an identical slate and an identical score. An excellent lens for watching a show; not a selection signal.</p>
 
       <h4>&ldquo;Not too on-the-nose&rdquo;: right about the calls, wrong about the slate</h4>
-      <p>Turned into a rule — skip the most obvious picks — it loses hits every way it's cut: skip-top-3 costs three, mid-depth costs two, skip-top-5 costs one. <b>The band does play its most-played songs.</b></p>
-      <p>Where the instinct is correct is the four called shots, and Jul 24 is the evidence. The obvious vacuum call didn't come, plausibly because Fish's novelty slot was already spent on Hold Your Head Up on night 1; and the obvious a cappella gave way to a less predictable one. Being clever pays on <em>specific</em> novelty picks and costs on the bulk slate.</p>
+      <p>Turned into a rule — skip the most obvious picks — it loses hits every way it's cut: skip-top-3 costs three, mid-depth costs two, skip-top-5 costs one. <b>The band does play its most-played songs.</b> Where the instinct is correct is the four called shots, and Jul 24 is the evidence: the obvious vacuum call didn't come, plausibly because Fish's novelty slot was already spent on Hold Your Head Up on night 1, and the obvious a cappella gave way to a less predictable one. Being clever pays on <em>specific</em> novelty picks and costs on the bulk slate.</p>
 
       <h4>Dormancy: do not filter on it</h4>
       <p>Measured leak-free — using each song's gap <em>at the moment it was played</em>, taken from the 2026 rows themselves rather than its current gap, which resets for every song this run has already burned and would have made a dormancy filter look fraudulently good:</p>
@@ -277,18 +321,16 @@
           <tr><th scope="row">#93 — 25 songs</th><td class="n">11</td><td class="n">88</td><td class="n">1,170</td><td class="n">4</td></tr>
         </tbody>
       </table>
-      <p>Both nights are built identically: a current-rotation core plus <b>3–4 genuine deep bustouts</b>. The median song was played about ten shows ago, but roughly a fifth of each night is vault material. So a dormancy penalty would be actively wrong — it would throw away 20% of the show. Equally, the bustouts are unpickable: 3–4 land out of ~50 plausible candidates, which puts any <em>specific</em> vault call under 10%. Both halves of that intuition are confirmed as descriptions of what the band does, and neither improves a 20-song slate.</p>
-      <p>The consequence for the called shots is blunt: <b>Bustout is close to an unwinnable category as currently defined.</b> Better framings for the next version are to predict the <em>number</em> of 300-plus-gap songs — 3–4 is a tight range hit twice now — or to call the <em>category</em> (a cappella, bluegrass, vacuum bit) rather than the title.</p>
+      <p>Both nights are built identically: a current-rotation core plus <b>3–4 genuine deep bustouts</b>. So a dormancy penalty would be actively wrong — it would throw away 20% of the show. Equally, the bustouts are unpickable: 3–4 land out of ~50 plausible candidates, putting any <em>specific</em> vault call under 10%. Both halves of that intuition are confirmed as descriptions of what the band does, and neither improves a slate. The consequence for the called shots is blunt: <b>Bustout is close to an unwinnable category as defined.</b> Better framings are to predict the <em>number</em> of 300-plus-gap songs — 3–4 is a tight range hit twice now — or to call the <em>category</em> rather than the title.</p>
 
       <h4>The model, in full</h4>
-      <p><b>1.</b> Count plays in the theme year. <b>2.</b> Strike every song already played in this run. <b>3.</b> Take the top 20. The no-repeat rule in step 2 is the only real insight, and it's free — 7/22 and 7/24 share zero songs, and 50 are off the board tonight.</p>
+      <p><b>1.</b> Count plays in the theme year. <b>2.</b> Strike every song already played in this run. <b>3.</b> Take the top 20 for the slate; take the top 10 in strict probability order for the ladder. The no-repeat rule in step 2 is the only real insight, and it's free — 50 songs are off the board tonight.</p>
 
       <h4>One idea deliberately not acted on</h4>
-      <p><b>Category no-repeat.</b> If song <em>types</em> spread across a run the way individual songs do, then night 2 spending the a cappella slot argues against Amazing Grace tonight. The evidence is one occurrence across two nights — far too thin. It is queued for testing after #94 rather than applied now, because acting on untested hunches is exactly what produced the model this one replaced.</p>
+      <p><b>Category no-repeat.</b> If song <em>types</em> spread across a run the way individual songs do, then night 2 spending the a cappella slot argues against Amazing Grace tonight. The evidence is one occurrence across two nights — far too thin. Queued for testing after #94 rather than applied now, because acting on untested hunches is exactly what produced the model this one replaced.</p>
 
       <h4>The honest caveat</h4>
       <p>Two scored nights is still a tiny sample, and 16/40 against a 7.7 baseline is encouraging rather than established. Expect scores to drift upward through the run regardless, because the eligible pool shrinks every night whether or not the model is any good.</p>
-      <p>Set placement is cosmetic. The slate predicts <em>which twenty songs</em>, not the running order. The four called shots are scored separately and strictly.</p>
     </details>
   </header>
 
@@ -306,6 +348,9 @@
   function s(arr, hit) { return arr.map(function (n) { return song(n, hit); }); }
   function P(arr) { return arr.map(function (p) { return song(p[0], false, p[1] + "×", p[2]); }); }
   function C(k, pick, odds, basis, alts) { return { k: k, pick: pick, odds: odds, basis: basis, alts: alts, hit: false }; }
+  function G(arr) {
+    return arr.map(function (g, i) { return { pts: 10 - i, name: g[0], p: g[1], why: g[2], hit: false }; });
+  }
 
   var DEFAULTS = {
     nights: [
@@ -320,7 +365,7 @@
       },
       {
         n: 2, year: "1993", show: 93, date: "Fri · Jul 24", status: "done", score: 6,
-        note: "The published slate scored 6 of 20. v7 applied to the same night scores 7, against a corrected random baseline of 3.4 — so both beat chance, but v7 by roughly double. Hits shown are the published slate's: Chalk Dust Torture, Guelah Papyrus, Maze, The Divided Sky, The Wedge, Lengthwise. Ranking this night's 24 songs against the eligible pool is what exposed the depth-band error carried since v4.",
+        note: "The published slate scored 6 of 20. v7 applied to the same night scores 7, against a corrected random baseline of 3.4. Hits shown are the published slate's: Chalk Dust Torture, Guelah Papyrus, Maze, The Divided Sky, The Wedge, Lengthwise. Ranking this night's 24 songs against the eligible pool is what exposed the depth-band error carried since v4.",
         sets: [
           { name: "Set 1", songs: [song("Chalk Dust Torture", true), song("Rift"), song("Guelah Papyrus", true), song("It's Ice"), song("Fast Enough for You"), song("Maze", true), song("The Curtain"), song("The Divided Sky", true), song("Cavern")] },
           { name: "Set 2", songs: [song("Tweezer"), song("The Wedge", true), song("All Things Reconsidered"), song("Harpua"), song("The Man Who Stepped Into Yesterday"), song("Avenu Malkenu"), song("Purple Rain"), song("You Enjoy Myself")] },
@@ -330,6 +375,22 @@
       {
         n: 3, year: "1994", show: 94, date: "Sat · Jul 25", status: "tonight", exp: "16/40 on #92+#93",
         note: "The top 20 of 1994 by measured play count across 124 Phish shows, minus the 50 songs burned on Jul 22 and Jul 24. Unchanged after backtesting — every proposed modification scored worse against the two nights already played.",
+        game: {
+          expected: "24.8",
+          note: "Ranked strictly by probability, because that provably maximises expected points. Percentages are 1994 plays ÷ 124 shows, verified calibrated against the two played nights (ratio 0.93).",
+          picks: G([
+            ["Sample in a Jar", "59%", "The most-played song of all of 1994 — 73 times in 124 shows — and unburned. Nothing else in the pool is close, so it takes the 10 without argument. It also carries the year's heaviest Secret Language footprint at 16 flagged performances."],
+            ["Julius", "52%", "65 plays after an April 1994 debut, meaning it hit that rate in only nine months of the year. The <b>Hoist</b> record is the single most 1994 thing available, and Julius is its most-played track."],
+            ["Down with Disease", "47%", "58 plays and the second-heaviest Secret Language song of the year. Debuted 31 Dec 1993, so 1994 is its breakout — the definitive 'this is the 1994 night' song that is also genuinely likely, which is rare."],
+            ["Rift", "40%", "49 plays. Not glamorous and not era-specific — a 1990 song that simply peaked in 1994 — but the ladder rewards probability, not storytelling. Played 8 shows ago, so it is live in the current rotation too."],
+            ["You Enjoy Myself", "39%", "48 plays, 626 all-time, and conspicuously unplayed across both nights so far. The biggest name left on the board and the longest-jam call. Slots fifth on raw rate; the 'they must be saving it' argument is real but unmeasurable, so it doesn't move."],
+            ["Poor Heart", "37%", "46 plays — the bluegrass sprint 1994 reached for constantly. <b>The riskiest pick in the top half:</b> 76 shows since it was last played. The dormancy analysis says not to penalise that, but this is where that decision is most exposed."],
+            ["Cavern", "36%", "45 plays, 484 all-time, and available only because both earlier nights happened to skip it. A pure set-closing workhorse — no era story, just volume."],
+            ["Scent of a Mule", "36%", "44 plays, and it debuted the same April 1994 night as Julius. Essentially tied with Cavern; it sits lower because its 95-show gap makes it marginally the shakier of the two."],
+            ["It's Ice", "34%", "42 plays, its live peak. Seventeen jamchart entries that year means it stretched out far more than its reputation suggests, so it's a better bet than it feels."],
+            ["Fee", "32%", "39 plays. Short, era-correct connective tissue — exactly the kind of song a themed night reaches for, and exactly the kind a highlight-reel mindset forgets. <b>It edges out Tweezer, 32% to 29%, and that is the call most likely to look wrong.</b>"]
+          ])
+        },
         h2h: {
           intro: "Three model configurations are live tonight. v5 was on this page this morning, v6 replaced it this afternoon, v7 replaced that after the phish.net data came in. All three are recorded here so tonight scores them head-to-head on the same show — and so there's a rollback record if v7 underperforms. Songs marked ◂ are unique to that version; everything unmarked is common ground.",
           versions: [
@@ -353,7 +414,7 @@
             "Led all 1994 encores at eleven. <b>Absent from the 20-song slate</b> — it ranks 27th by overall play count, so frequency cuts it while positional data likes it. If this hits, the slate is leaving signal behind.",
             "Amazing Grace (7) · Ginseng Sullivan (5) · Fire (5)"),
           C("Bustout", "Poor Heart", "gap 76",
-            "Highest 1994 play count (46) among songs past a 50-show gap. <b>Read this call as a long shot by construction:</b> the backtest shows 3–4 deep bustouts land per night out of ~50 candidates, so no specific title clears 10%. Amazing Grace at a 900-show gap is the swing.",
+            "Highest 1994 play count (46) among songs past a 50-show gap. <b>Read this as a long shot by construction:</b> 3–4 deep bustouts land per night out of ~50 candidates, so no specific title clears 10%. Amazing Grace at a 900-show gap is the swing.",
             "Scent of a Mule (g95) · Amazing Grace (g900) · Nellie Kane (g54)"),
           C("Longest jam", "You Enjoy Myself", "27 jamcharts",
             "Leads all unburned 1994 songs in phish.net jamchart entries, ahead of Tweezer's 23, and it's the biggest name still unplayed this run. Tweezer is the close second and the more era-romantic answer, but the jamchart data favours YEM.",
@@ -374,7 +435,7 @@
           { name: "Set 2", songs: P([
             ["Down with Disease",58,"Debuted 31 Dec 1993 and defined 1994 with 58 plays, second only to Sample in Secret-Language flags at 15. 325 all-time, played 10 shows ago."],
             ["You Enjoy Myself",48,"48 plays in 1994, 626 all-time, and 27 jamchart entries — more than any other unburned song. Tonight's longest-jam call."],
-            ["Tweezer",36,"1994 is its defining year — the Bomb Factory version, Tweezerfest — at 36 plays and 23 jamchart entries. Unplayed this run, played 9 shows ago. <b>A v7 pick that v5 missed entirely.</b>"],
+            ["Tweezer",36,"1994 is its defining year — the Bomb Factory version, Tweezerfest — at 36 plays and 23 jamchart entries. Unplayed this run, played 9 shows ago. <b>A v7 pick that v5 missed entirely</b>, though it just misses the ten-pick ladder."],
             ["If I Could",34,"34 plays in 1994 out of only 69 all-time. <b>Over half its entire life happened that year</b> — the sharpest 1994 marker on the slate."],
             ["Simple",34,"Broke out in 1994 with 34 plays after a Dec 1993 debut. 211 all-time, played 8 shows ago."],
             ["Wilson",27,"27 plays in 1994, 305 all-time — and the year's most common opener at nine. Tonight's opener call."],
@@ -391,6 +452,22 @@
       {
         n: 4, year: "1995", show: 95, date: "Mon · Jul 27", status: "up",
         note: "Top 20 of 1995 across 83 Phish shows, minus everything burned through Jul 25 — which assumes tonight's slate lands, so treat it as provisional and expect a rebuild from the real setlist. 1995 is a flatter year than 1994: the leader has 32 plays where Sample in a Jar had 73, so the top of this list is less separated from the pack.",
+        game: {
+          expected: "17.4",
+          note: "Provisional — rebuilt once Jul 25 actually happens. Note how much flatter this ladder is than the 1994 one: the top pick sits at 39% where Sample in a Jar was 59%, so expected points drop by nearly a third even though the method is identical.",
+          picks: G([
+            ["Free", "39%", "32 plays, the most of any 1995 song, after a May 1995 debut. Played 4 shows ago, so it's era-correct and current at once."],
+            ["Strange Design", "35%", "29 plays in 1995 out of 68 all-time — overwhelmingly a 1995 song, and rare enough since to double as that night's bustout call."],
+            ["Theme from the Bottom", "33%", "27 plays after a May 1995 debut, with eight jamchart entries — the year's leading jam vehicle among unburned songs."],
+            ["Acoustic Army", "33%", "Every one of its 27 all-time plays falls in 1995 — the most era-locked song on any night here. Tied on rate with Theme, ranked below it because a 1,096-show gap makes it the more fragile of the two."],
+            ["A Day in the Life", "28%", "23 plays and the year's most common encore at nine — the clearest positional signal anywhere in this run."],
+            ["Cars Trucks Buses", "24%", "20 plays after a Sep 1995 debut, so it earned that rate in a third of a year."],
+            ["Ya Mar", "22%", "18 plays, 238 all-time, current at a 17-show gap, and the year's most frequent opener."],
+            ["I'm Blue, I'm Lonesome", "22%", "18 plays out of 30 all-time. Tied with Ya Mar on rate but ranked under it — a 791-show gap makes this deep-vault material."],
+            ["Prince Caspian", "20%", "17 plays after a Jun 1995 debut, 187 all-time, and played just 2 shows ago."],
+            ["Uncle Pen", "19%", "16 plays, 212 all-time. The bluegrass slot, though a 337-show gap keeps it at the bottom of the ladder."]
+          ])
+        },
         calls: [
           C("Opener", "Ya Mar", "6/83 · 7%",
             "The most frequent 1995 set-one opener among unburned songs, and still in rotation at a 17-show gap.",
@@ -399,7 +476,7 @@
             "The clearest positional signal on any night here — 1995 closed with this Beatles cover nine times, well ahead of the field.",
             "Fire (6) · Bold As Love (5, g59)"),
           C("Bustout", "Strange Design", "gap 60",
-            "29 of its 68 all-time plays fall in 1995, and it's been rare since. <b>Same caveat as every bustout call</b> — 3–4 land per night from a large field, so treat this as a lottery ticket. Acoustic Army, whose every play happened in 1995 and which is 1,096 shows dormant, is the wilder swing.",
+            "29 of its 68 all-time plays fall in 1995, rare since. <b>Same caveat as every bustout call</b> — 3–4 land per night from a large field, so treat it as a lottery ticket. Acoustic Army, 1,096 shows dormant, is the wilder swing.",
             "Acoustic Army (g1096) · I'm Blue I'm Lonesome (g791)"),
           C("Longest jam", "Theme from the Bottom", "8 jamcharts",
             "Leads unburned 1995 songs in jamchart entries. Thinner than 1994's signal — most of that year's heaviest vehicles are burned upstream.",
@@ -436,7 +513,23 @@
       },
       {
         n: 5, year: "1996", show: 96, date: "Wed · Jul 29", status: "up",
-        note: "Top 20 of 1996 across 73 Phish shows, minus everything burned through Jul 27. The most provisional slate of the five — it compounds two nights of assumed predictions, and every upstream miss leaves a song wrongly marked eligible here. Worth regenerating after each of the next two shows rather than trusting as-is.",
+        note: "Top 20 of 1996 across 73 Phish shows, minus everything burned through Jul 27. The most provisional slate of the five — it compounds two nights of assumed predictions, and every upstream miss leaves a song wrongly marked eligible here.",
+        game: {
+          expected: "17.9",
+          note: "The most provisional ladder of the three — it assumes both Jul 25 and Jul 27 land close to plan. Rebuild after each.",
+          picks: G([
+            ["Character Zero", "41%", "30 plays after a Jun 1996 debut, making it the year's most-played song in barely half a year. 265 all-time and played 5 shows ago."],
+            ["Waste", "36%", "26 plays, also a Jun 1996 debut, and the year's most common encore at four. Current at an 11-show gap."],
+            ["Punch You in the Eye", "30%", "22 plays. A 1989 song, 172 all-time, still in regular rotation — no era story, just volume."],
+            ["Train Song", "27%", "20 plays out of 59 all-time, so 1996 is a third of its entire life. Also that night's bustout call at a 92-show gap."],
+            ["Funky Bitch", "26%", "19 plays. Son Seals cover, 236 all-time — a durable blues staple rather than an era marker."],
+            ["Wolfman's Brother", "25%", "18 plays. Debuted Apr 1994 but only became a real vehicle later, which is precisely why it was cut from the 1994 night."],
+            ["Swept Away", "25%", "18 plays after an Oct 1996 debut. Inseparable from Steep — they land together or not at all, which makes this pair a correlated bet rather than two independent ones."],
+            ["Steep", "25%", "The other half of that pair, same 18 plays and same debut. Ranked adjacent deliberately: splitting them across the ladder would be pretending they're independent."],
+            ["Life on Mars?", "23%", "17 of its 23 all-time plays are 1996 — Page's showcase that year. A 539-show gap makes it fragile."],
+            ["The Star-Spangled Banner", "23%", "17 plays — 1996 was the year they opened with it repeatedly, which is why it doubles as that night's opener call."]
+          ])
+        },
         calls: [
           C("Opener", "The Star-Spangled Banner", "3/73 · 4%",
             "1996 was the year they repeatedly opened with it. <b>The weakest call on the entire page</b> — three occurrences is barely a signal, and 1996 openers were unusually scattered.",
@@ -483,7 +576,7 @@
     ]
   };
 
-  var KEY = "phish-msg-96-predictions-v7d";
+  var KEY = "phish-msg-96-predictions-v7e";
   var state, active = 0;
 
   function clone(o) { return JSON.parse(JSON.stringify(o)); }
@@ -521,13 +614,20 @@
     night.calls.forEach(function (c) { if (c.hit) hit++; });
     return { total: night.calls.length, hit: hit };
   }
+  function gamePoints(night) {
+    if (!night.game) return null;
+    var p = 0;
+    night.game.picks.forEach(function (g) { if (g.hit) p += g.pts; });
+    return p;
+  }
 
   function counterHTML(night) {
     var t = nightTotals(night);
     var h = '<b>' + t.hit + '</b> / ' + t.total + ' played';
     var c = callTotals(night);
     if (c) h += ' · <b>' + c.hit + '</b> / ' + c.total + ' called shots';
-    if (night.exp) h += ' <span class="exp">· v7 backtest ' + night.exp + '</span>';
+    var g = gamePoints(night);
+    if (g !== null) h += ' · <b>' + g + '</b> / 55 game points';
     return h;
   }
 
@@ -551,6 +651,67 @@
     return st === "done" ? "Played" : (st === "tonight" ? "Tonight" : "Upcoming");
   }
 
+  function renderGame(night, panel) {
+    if (!night.game) return;
+    var box = document.createElement("div");
+    box.className = "game";
+    var head = document.createElement("div");
+    head.className = "game-head";
+    head.innerHTML = '<span class="t">Setlist game — 10 picks, 10 down to 1</span>' +
+      '<span class="sc" id="gameScore"><b>' + gamePoints(night) + '</b> / 55 · expected ' + night.game.expected + '</span>';
+    box.appendChild(head);
+
+    night.game.picks.forEach(function (g) {
+      var row = document.createElement("div");
+      row.className = "grow" + (g.hit ? " hit" : "") + (g.pts <= 4 ? " lo" : "");
+
+      var cb = document.createElement("input");
+      cb.type = "checkbox";
+      cb.checked = g.hit;
+      cb.title = "Mark as played";
+      cb.addEventListener("change", function () {
+        g.hit = cb.checked;
+        row.classList.toggle("hit", g.hit);
+        var sc = document.getElementById("gameScore");
+        if (sc) sc.innerHTML = '<b>' + gamePoints(night) + '</b> / 55 · expected ' + night.game.expected;
+        var ct = document.querySelector(".counter");
+        if (ct) ct.innerHTML = counterHTML(night);
+        save();
+      });
+
+      var pts = document.createElement("div");
+      pts.className = "pts";
+      pts.textContent = g.pts;
+
+      var gb = document.createElement("div");
+      gb.className = "gb";
+      var gn = document.createElement("div");
+      gn.className = "gn";
+      gn.contentEditable = "true";
+      gn.spellcheck = false;
+      gn.textContent = g.name;
+      gn.addEventListener("blur", function () { g.name = gn.textContent.replace(/\s+/g," ").trim(); save(); });
+      gn.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); gn.blur(); } });
+      var gr = document.createElement("div");
+      gr.className = "gr";
+      gr.innerHTML = g.why;
+      gb.appendChild(gn); gb.appendChild(gr);
+
+      var p = document.createElement("div");
+      p.className = "p";
+      p.textContent = g.p;
+
+      row.appendChild(cb); row.appendChild(pts); row.appendChild(gb); row.appendChild(p);
+      box.appendChild(row);
+    });
+
+    var foot = document.createElement("div");
+    foot.className = "game-foot";
+    foot.textContent = night.game.note;
+    box.appendChild(foot);
+    panel.appendChild(box);
+  }
+
   function renderH2H(night, panel) {
     if (!night.h2h) return;
     var d = document.createElement("details");
@@ -558,11 +719,9 @@
     var sum = document.createElement("summary");
     sum.textContent = "Three model versions on trial tonight — v5 vs v6 vs v7";
     d.appendChild(sum);
-
     var intro = document.createElement("p");
     intro.textContent = night.h2h.intro;
     d.appendChild(intro);
-
     var vers = document.createElement("div");
     vers.className = "vers";
     night.h2h.versions.forEach(function (v) {
@@ -582,7 +741,6 @@
       vers.appendChild(col);
     });
     d.appendChild(vers);
-
     var vd = document.createElement("p");
     vd.textContent = night.h2h.verdict;
     d.appendChild(vd);
@@ -601,7 +759,6 @@
     night.calls.forEach(function (c) {
       var row = document.createElement("div");
       row.className = "call" + (c.hit ? " hit" : "");
-
       var cb = document.createElement("input");
       cb.type = "checkbox";
       cb.checked = c.hit;
@@ -613,11 +770,9 @@
         if (ct) ct.innerHTML = counterHTML(night);
         save();
       });
-
       var k = document.createElement("div");
       k.className = "k";
       k.textContent = c.k;
-
       var v = document.createElement("div");
       v.className = "v";
       var pick = document.createElement("div");
@@ -625,12 +780,8 @@
       pick.contentEditable = "true";
       pick.spellcheck = false;
       pick.textContent = c.pick;
-      pick.addEventListener("blur", function () {
-        c.pick = pick.textContent.replace(/\s+/g, " ").trim(); save();
-      });
-      pick.addEventListener("keydown", function (e) {
-        if (e.key === "Enter") { e.preventDefault(); pick.blur(); }
-      });
+      pick.addEventListener("blur", function () { c.pick = pick.textContent.replace(/\s+/g," ").trim(); save(); });
+      pick.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); pick.blur(); } });
       v.appendChild(pick);
       var basis = document.createElement("div");
       basis.className = "basis";
@@ -642,11 +793,9 @@
         alts.innerHTML = "Next best: <span>" + c.alts + "</span>";
         v.appendChild(alts);
       }
-
       var odds = document.createElement("span");
       odds.className = "odds";
       odds.textContent = c.odds;
-
       row.appendChild(cb); row.appendChild(k); row.appendChild(v); row.appendChild(odds);
       box.appendChild(row);
     });
@@ -676,6 +825,7 @@
     cnt.innerHTML = counterHTML(night);
     panel.appendChild(cnt);
 
+    renderGame(night, panel);
     renderH2H(night, panel);
     renderCalls(night, panel);
 
@@ -686,14 +836,10 @@
       lbl.className = "set-label";
       lbl.innerHTML = set.name + ' <span class="set-count">' + set.songs.length + ' songs</span>';
       block.appendChild(lbl);
-
       var ul = document.createElement("ul");
       ul.className = "songs";
-      set.songs.forEach(function (sg, gi) {
-        ul.appendChild(songRow(night, si, gi, sg));
-      });
+      set.songs.forEach(function (sg, gi) { ul.appendChild(songRow(night, si, gi, sg)); });
       block.appendChild(ul);
-
       var addRow = document.createElement("div");
       addRow.className = "addrow";
       var addBtn = document.createElement("button");
@@ -708,7 +854,6 @@
       });
       addRow.appendChild(addBtn);
       block.appendChild(addRow);
-
       panel.appendChild(block);
     });
 
@@ -729,6 +874,7 @@
     clearHits.addEventListener("click", function () {
       night.sets.forEach(function (set) { set.songs.forEach(function (sg) { sg.hit = false; }); });
       if (night.calls) night.calls.forEach(function (c) { c.hit = false; });
+      if (night.game) night.game.picks.forEach(function (g) { g.hit = false; });
       save(); render();
     });
     foot.appendChild(clearHits);
@@ -739,7 +885,6 @@
   function songRow(night, si, gi, sg) {
     var li = document.createElement("li");
     li.className = "song" + (sg.hit ? " hit" : "");
-
     var cb = document.createElement("input");
     cb.type = "checkbox";
     cb.checked = sg.hit;
@@ -751,41 +896,28 @@
       if (c) c.innerHTML = counterHTML(night);
       save();
     });
-
     var body = document.createElement("div");
     body.className = "body";
-
     var nm = document.createElement("div");
     nm.className = "name";
     nm.contentEditable = "true";
     nm.spellcheck = false;
     nm.textContent = sg.name;
     nm.setAttribute("role", "textbox");
-    nm.addEventListener("blur", function () {
-      sg.name = nm.textContent.replace(/\s+/g, " ").trim();
-      save();
-    });
-    nm.addEventListener("keydown", function (e) {
-      if (e.key === "Enter") { e.preventDefault(); nm.blur(); }
-    });
+    nm.addEventListener("blur", function () { sg.name = nm.textContent.replace(/\s+/g," ").trim(); save(); });
+    nm.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); nm.blur(); } });
     body.appendChild(nm);
-
     if (sg.why) {
       var why = document.createElement("div");
       why.className = "why";
       why.innerHTML = sg.why;
       body.appendChild(why);
     }
-
     var del = document.createElement("button");
     del.className = "del";
     del.innerHTML = "×";
     del.title = "Remove song";
-    del.addEventListener("click", function () {
-      night.sets[si].songs.splice(gi, 1);
-      save(); render();
-    });
-
+    del.addEventListener("click", function () { night.sets[si].songs.splice(gi, 1); save(); render(); });
     li.appendChild(cb);
     li.appendChild(body);
     if (sg.tag) {
@@ -812,6 +944,14 @@
     var lines = ["PHISH @ MSG 2026 — SETLIST PREDICTIONS (Shows #92–96) — model v7", ""];
     state.nights.forEach(function (night) {
       lines.push("=== " + night.year + " · Night " + night.n + " · Show #" + night.show + " · " + night.date + " ===");
+      if (night.game) {
+        lines.push("SETLIST GAME — 10 PICKS (expected " + night.game.expected + " / 55):");
+        night.game.picks.forEach(function (g) {
+          lines.push("  " + (g.hit ? "[x] " : "[ ] ") + g.pts + " pts — " + g.name + "  (" + g.p + ")");
+          lines.push("      " + strip(g.why));
+        });
+        lines.push("");
+      }
       if (night.calls) {
         lines.push("CALLED SHOTS:");
         night.calls.forEach(function (c) {
@@ -854,7 +994,7 @@
 
   document.getElementById("foot").innerHTML =
     "Predictions by Claude — starting points to edit, not insider info. Play counts, debut dates, gaps, jamchart entries and Secret-Language footnotes come from the phish.net API, filtered to Phish shows only. Night 1 (1992) is the actual setlist; night 2 (1993) was a genuine blind guess that scored 6 of 20. " +
-    "Nights 3–5 pair four called shots with the top 20 of each theme year by measured play count, minus every song already played in the run. That rule scores 16/40 across the two played nights against a random baseline of 7.7, and no tested variant beat it — see &ldquo;How the picks are made&rdquo; for the full backtest, including the three ideas that were tried and rejected. " +
+    "Nights 3–5 pair a weighted ten-pick ladder, four called shots, and the top 20 of each theme year by measured play count, minus every song already played in the run. That rule scores 16/40 across the two played nights against a random baseline of 7.7, and no tested variant beat it — see &ldquo;How the picks are made&rdquo; for the full backtest, including the three ideas tried and rejected. " +
     "Your edits and checkmarks save in this browser. Run: MSG shows #92–96, Jul 22 / 24 / 25 / 27 / 29, 2026.";
 
   var restored = load();
