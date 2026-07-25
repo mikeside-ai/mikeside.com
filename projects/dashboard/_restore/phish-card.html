@@ -1,0 +1,51 @@
+<!-- CANONICAL RESTORE SNAPSHOT - not a page.
+     Last-known-good markup for the Phish Setlist Predictor card in
+     projects/dashboard/index.html. If a scheduled refresh ever drops the
+     card (index.html no longer contains id="phish-h"), paste this block
+     back in between the grid2 closing </div> and </main>. -->
+<!-- ============ PHISH SETLIST PREDICTOR ============ -->
+  <section class="card full" aria-labelledby="phish-h">
+    <div class="card-head">
+      <div>
+        <div class="card-title" id="phish-h">Phish Setlist Predictor</div>
+        <div class="card-sub">MSG summer residency &middot; each night recreates the year matching its show number</div>
+      </div>
+      <span class="src-badge">phish.net &middot; public setlists</span>
+    </div>
+
+    <div class="tiles">
+      <div class="tile" title="Correct picks on the most recent blind backtest.">
+        <div class="v">10 / 20</div><div class="l">last backtest</div>
+        <div class="d up">&uarr; 3 over model v1</div>
+      </div>
+      <div class="tile" title="Shows predicted blind, then scored against the published setlist.">
+        <div class="v">2</div><div class="l">shows backtested</div>
+        <div class="d">Jul 22 and Jul 24</div>
+      </div>
+      <div class="tile" title="The year this show's setlist is expected to recreate.">
+        <div class="v">1994</div><div class="l">tonight's theme</div>
+        <div class="d">show #94 &rarr; 1994</div>
+      </div>
+    </div>
+
+    
+      <div class="mix-label">Backtest accuracy &middot; blind, scored against published setlists</div>
+      <div class="acc"><div class="accrow"><span>Jul 22 &middot; #92 &middot; '92 theme <span style="color:var(--text-muted)">&middot; model v1</span></span><span class="accbar" role="img" aria-label="7 of 20 correct"><i class="" style="width:35%"></i></span><span class="n">7 / 20</span></div><div class="accrow"><span>Jul 24 &middot; #93 &middot; '93 theme <span style="color:var(--text-muted)">&middot; model v2</span></span><span class="accbar" role="img" aria-label="10 of 20 correct"><i class="pass" style="width:50%"></i></span><span class="n">10 / 20</span></div></div>
+      <div class="note" style="margin-top:10px">
+        Model v1 keyed on tour recency and scored 7/20. v2 threw recency out and mapped the MSG show
+        number to a year &mdash; #92 played a 1992 setlist, #93 a 1993 one &mdash; then spent every slot on that
+        year's rotation minus songs already used in the run. That scored 10/20. v3 adds two fixes from
+        the 7/24 misses: rank within the theme year's album by <em>live</em> frequency rather than album
+        prominence, and reserve a quarter of the slots for era covers and set-pieces (eight of the 24
+        songs on 7/24 were era covers, and v2 predicted none of them).
+      </div>
+      <div class="sect-label">Tonight's 20 &middot; Sat, Jul 25 &middot; Madison Square Garden &middot; MSG show #94 &middot; expected theme 1994</div>
+      <div class="mix-label" style="margin-top:12px">Hoist &mdash; the 1994 album, ranked by 1994 live frequency</div><div class="picks"><div class="pick"><b>1</b><span>Down with Disease</span></div><div class="pick"><b>2</b><span>Sample in a Jar</span></div><div class="pick"><b>3</b><span>Julius</span></div><div class="pick"><b>4</b><span>Wolfman's Brother</span></div><div class="pick"><b>5</b><span>If I Could</span></div><div class="pick"><b>6</b><span>Scent of a Mule</span></div><div class="pick"><b>7</b><span>Axilla (Part II)</span></div></div><div class="mix-label" style="margin-top:12px">1994 workhorses not yet burned in this run</div><div class="picks"><div class="pick lock"><b>8</b><span>Tweezer</span><span class="why">lock</span></div><div class="pick"><b>9</b><span>Tweezer Reprise</span></div><div class="pick lock"><b>10</b><span>You Enjoy Myself</span><span class="why">lock</span></div><div class="pick"><b>11</b><span>Cavern</span></div><div class="pick"><b>12</b><span>Poor Heart</span></div><div class="pick"><b>13</b><span>Bouncing Around the Room</span></div><div class="pick"><b>14</b><span>My Friend, My Friend</span></div><div class="pick"><b>15</b><span>It's Ice</span></div></div><div class="mix-label" style="margin-top:12px">Era covers &amp; rituals &mdash; the v3 correction</div><div class="picks"><div class="pick"><b>16</b><span>Purple Rain</span></div><div class="pick"><b>17</b><span>Frankenstein</span></div><div class="pick"><b>18</b><span>Uncle Pen</span></div><div class="pick"><b>19</b><span>Halley's Comet</span></div><div class="pick"><b>20</b><span>Harpua</span><span class="why">flyer</span></div></div>
+      <details class="tableview">
+        <summary>View as table</summary>
+        <table>
+          <thead><tr><th scope="col">#</th><th scope="col">Song</th><th scope="col">Bucket</th></tr></thead>
+          <tbody><tr><th scope="row">1</th><td>Down with Disease</td><td>Hoist</td></tr><tr><th scope="row">2</th><td>Sample in a Jar</td><td>Hoist</td></tr><tr><th scope="row">3</th><td>Julius</td><td>Hoist</td></tr><tr><th scope="row">4</th><td>Wolfman's Brother</td><td>Hoist</td></tr><tr><th scope="row">5</th><td>If I Could</td><td>Hoist</td></tr><tr><th scope="row">6</th><td>Scent of a Mule</td><td>Hoist</td></tr><tr><th scope="row">7</th><td>Axilla (Part II)</td><td>Hoist</td></tr><tr><th scope="row">8</th><td>Tweezer</td><td>1994 rotation</td></tr><tr><th scope="row">9</th><td>Tweezer Reprise</td><td>1994 rotation</td></tr><tr><th scope="row">10</th><td>You Enjoy Myself</td><td>1994 rotation</td></tr><tr><th scope="row">11</th><td>Cavern</td><td>1994 rotation</td></tr><tr><th scope="row">12</th><td>Poor Heart</td><td>1994 rotation</td></tr><tr><th scope="row">13</th><td>Bouncing Around the Room</td><td>1994 rotation</td></tr><tr><th scope="row">14</th><td>My Friend, My Friend</td><td>1994 rotation</td></tr><tr><th scope="row">15</th><td>It's Ice</td><td>1994 rotation</td></tr><tr><th scope="row">16</th><td>Purple Rain</td><td>Cover / ritual</td></tr><tr><th scope="row">17</th><td>Frankenstein</td><td>Cover / ritual</td></tr><tr><th scope="row">18</th><td>Uncle Pen</td><td>Cover / ritual</td></tr><tr><th scope="row">19</th><td>Halley's Comet</td><td>Cover / ritual</td></tr><tr><th scope="row">20</th><td>Harpua</td><td>Cover / ritual</td></tr></tbody>
+        </table>
+      </details>
+  </section>
