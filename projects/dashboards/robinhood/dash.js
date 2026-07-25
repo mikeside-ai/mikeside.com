@@ -134,3 +134,38 @@ function simCalc(){
   else {note.innerHTML='The tax bill exceeds the first-year interest saving by <b>'+fmt(-net)+'</b>. That can still be the right trade if it is buying you risk reduction, but it is not free &mdash; check whether harvesting losses alongside it changes the answer.';note.className='sim-note warn';}
 }
 simCalc();
+
+/* ---- block 4 ---- */
+/* ---- tab switching (runs after the partials are injected) ---- */
+(function(){
+  var bar = document.querySelector('.tabbar');
+  if(!bar) return;
+  var btns  = [].slice.call(bar.querySelectorAll('.tabbtn'));
+  var panes = [].slice.call(document.querySelectorAll('[data-tab]'));
+  if(!btns.length || !panes.length) return;
+  var valid = {};
+  btns.forEach(function(b){ valid[b.getAttribute('data-go')] = 1; });
+
+  function show(t, fromClick){
+    if(!valid[t]) t = 'overview';
+    for(var i=0;i<panes.length;i++){
+      panes[i].style.display = (panes[i].getAttribute('data-tab') === t) ? '' : 'none';
+    }
+    btns.forEach(function(b){
+      var on = b.getAttribute('data-go') === t;
+      b.className = on ? 'tabbtn active' : 'tabbtn';
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    if(fromClick){
+      try{ history.replaceState(null, '', '#' + t); }catch(e){ location.hash = t; }
+      window.scrollTo(0, 0);
+    }
+  }
+  function fromHash(){ return (location.hash || '').replace(/^#/, ''); }
+
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){ show(b.getAttribute('data-go'), 1); });
+  });
+  window.addEventListener('hashchange', function(){ show(fromHash(), 0); });
+  show(fromHash(), 0);
+})();
