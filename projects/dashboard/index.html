@@ -474,38 +474,66 @@
     </div>
 
     <div class="tiles">
-      <div class="tile" title="Correct picks on the most recent blind backtest.">
-        <div class="v">10 / 20</div><div class="l">last backtest</div>
-        <div class="d up">&uarr; 3 over model v1</div>
+      <div class="tile" title="Held-out score of tonight's method across both scored nights, out of 40.">
+        <div class="v">19 / 40</div><div class="l">held-out accuracy</div>
+        <div class="d up">&uarr; 5 over top-20 by play count</div>
       </div>
-      <div class="tile" title="Shows predicted blind, then scored against the published setlist.">
-        <div class="v">2</div><div class="l">shows backtested</div>
-        <div class="d">Jul 22 and Jul 24</div>
+      <div class="tile" title="Simulated shows drawn to compare candidate slates.">
+        <div class="v">100k</div><div class="l">shows simulated</div>
+        <div class="d">3 scored slates &middot; 3 worlds</div>
       </div>
       <div class="tile" title="The year this show's setlist is expected to recreate.">
         <div class="v">1994</div><div class="l">tonight's theme</div>
-        <div class="d">show #94 &rarr; 1994</div>
+        <div class="d">69 songs still unplayed</div>
       </div>
     </div>
 
     
       <div class="mix-label">Backtest accuracy &middot; blind, scored against published setlists</div>
-      <div class="acc"><div class="accrow"><span>Jul 22 &middot; #92 &middot; '92 theme <span style="color:var(--text-muted)">&middot; model v1</span></span><span class="accbar" role="img" aria-label="7 of 20 correct"><i class="" style="width:35%"></i></span><span class="n">7 / 20</span></div><div class="accrow"><span>Jul 24 &middot; #93 &middot; '93 theme <span style="color:var(--text-muted)">&middot; model v2</span></span><span class="accbar" role="img" aria-label="10 of 20 correct"><i class="pass" style="width:50%"></i></span><span class="n">10 / 20</span></div></div>
+      <div class="acc"><div class="accrow"><span>Jul 22 &middot; #92 &middot; '92 theme <span style="color:var(--text-muted)">&middot; model v1</span></span><span class="accbar" role="img" aria-label="7 of 20 correct"><i class="" style="width:35%"></i></span><span class="n">7 / 20</span></div><div class="accrow"><span>Jul 24 &middot; #93 &middot; '93 theme <span style="color:var(--text-muted)">&middot; model v2</span></span><span class="accbar" role="img" aria-label="10 of 20 correct"><i class="pass" style="width:50%"></i></span><span class="n">10 / 20</span></div><div class="accrow"><span>Jul 24 &middot; #93 &middot; tracker page <span style="color:var(--text-muted)">&middot; model v2b</span></span><span class="accbar" role="img" aria-label="6 of 20 correct"><i class="" style="width:30%"></i></span><span class="n">6 / 20</span></div></div>
       <div class="note" style="margin-top:10px">
-        Model v1 keyed on tour recency and scored 7/20. v2 threw recency out and mapped the MSG show
-        number to a year &mdash; #92 played a 1992 setlist, #93 a 1993 one &mdash; then spent every slot on that
-        year's rotation minus songs already used in the run. That scored 10/20. v3 adds two fixes from
-        the 7/24 misses: rank within the theme year's album by <em>live</em> frequency rather than album
-        prominence, and reserve a quarter of the slots for era covers and set-pieces (eight of the 24
-        songs on 7/24 were era covers, and v2 predicted none of them).
+        v1 keyed on tour recency: 7/20. v2 dropped recency and mapped the MSG show number to a year
+        &mdash; #92 played a 1992 setlist, #93 a 1993 one &mdash; spending every slot on that year's
+        rotation minus songs already burned in the run: 10/20. A separate blind slate on the public
+        tracker page scored 6/20 the same night, which is the useful reminder that 10/20 was partly luck.
       </div>
+
+      <div class="sect-label" style="margin-top:16px">What 100,000 simulated shows changed</div>
+      <div class="mix-label">Rules scored held out &middot; each fully specified before it saw either night</div>
+      <div class="acc"><div class="accrow"><span>Consensus barbell &mdash; v5, tonight's method</span><span class="accbar" role="img" aria-label="19 / 40 correct"><i class="pass" style="width:48%"></i></span><span class="n">19 / 40</span></div><div class="accrow"><span>What was actually published &mdash; v1 + v2, hand-picked</span><span class="accbar" role="img" aria-label="17 / 40 correct"><i class="" style="width:42%"></i></span><span class="n">17 / 40</span></div><div class="accrow"><span>Top 20 by that year's play count</span><span class="accbar" role="img" aria-label="14 / 40 correct"><i class="" style="width:35%"></i></span><span class="n">14 / 40</span></div><div class="accrow"><span>Frequency &times; distinctiveness &mdash; v4, rejected</span><span class="accbar" role="img" aria-label="12 / 40 correct"><i class="" style="width:30%"></i></span><span class="n">12 / 40</span></div><div class="accrow"><span>Random 20 from the same pool</span><span class="accbar" role="img" aria-label="10.8 / 40 correct"><i class="" style="width:27%"></i></span><span class="n">10.8 / 40</span></div></div>
+      <div class="note" style="margin-top:10px">
+        Two results overturned the plan. First, the v3 idea of reserving a quarter of the slots for era
+        covers is <em>negative value</em>: a cover slot is worth 0.10 expected hits against 0.32 for a
+        rotation slot, because the cover pool is huge and flat &mdash; covers get played, but no
+        individual cover is a good bet. Second, v4's distinctiveness term looked strong until it was
+        tested properly; fitted on one real night and scored on the other it managed 12/40, worse than
+        just ranking by play count. Both were cut.
+        <br><br>
+        What survived is duller and works better. Both real setlists drew from the <em>middle</em> of
+        the theme year's ranking &mdash; median rank 29 of 101 on 7/22 and 41 of 83 on 7/24, with only
+        7 of ~25 songs coming from the top 20 either night. Sweeping the head/mid-depth split across all
+        21 settings, every one from 0 to 17 head picks beat a straight top-20. So tonight's slate votes
+        across the whole family rather than trusting the single best split, which on two shows is noise.
+        Held out, that construction scores 19/40 &mdash; and 11/20 on 7/22, the best any method has
+        managed on that night. Expected tonight: <b>9.3 of 20</b>, averaged over three different
+        assumptions about how a setlist gets built.
+        <br><br>
+        The honest caveat: three scored shows is a small sample, the depth kernel failed its own
+        cross-validation, and the pool shrinks every night, so accuracy should rise through the run
+        for reasons that have nothing to do with the model getting smarter.
+      </div>
+
       <div class="sect-label">Tonight's 20 &middot; Sat, Jul 25 &middot; Madison Square Garden &middot; MSG show #94 &middot; expected theme 1994</div>
-      <div class="mix-label" style="margin-top:12px">Hoist &mdash; the 1994 album, ranked by 1994 live frequency</div><div class="picks"><div class="pick"><b>1</b><span>Down with Disease</span></div><div class="pick"><b>2</b><span>Sample in a Jar</span></div><div class="pick"><b>3</b><span>Julius</span></div><div class="pick"><b>4</b><span>Wolfman's Brother</span></div><div class="pick"><b>5</b><span>If I Could</span></div><div class="pick"><b>6</b><span>Scent of a Mule</span></div><div class="pick"><b>7</b><span>Axilla (Part II)</span></div></div><div class="mix-label" style="margin-top:12px">1994 workhorses not yet burned in this run</div><div class="picks"><div class="pick lock"><b>8</b><span>Tweezer</span><span class="why">lock</span></div><div class="pick"><b>9</b><span>Tweezer Reprise</span></div><div class="pick lock"><b>10</b><span>You Enjoy Myself</span><span class="why">lock</span></div><div class="pick"><b>11</b><span>Cavern</span></div><div class="pick"><b>12</b><span>Poor Heart</span></div><div class="pick"><b>13</b><span>Bouncing Around the Room</span></div><div class="pick"><b>14</b><span>My Friend, My Friend</span></div><div class="pick"><b>15</b><span>It's Ice</span></div></div><div class="mix-label" style="margin-top:12px">Era covers &amp; rituals &mdash; the v3 correction</div><div class="picks"><div class="pick"><b>16</b><span>Purple Rain</span></div><div class="pick"><b>17</b><span>Frankenstein</span></div><div class="pick"><b>18</b><span>Uncle Pen</span></div><div class="pick"><b>19</b><span>Halley's Comet</span></div><div class="pick"><b>20</b><span>Harpua</span><span class="why">flyer</span></div></div>
+      <div class="mix-label" style="margin-top:12px">Head of the rotation &mdash; top 10 of the 69 &rsquo;94 songs still unplayed</div><div class="picks"><div class="pick lock"><b>1</b><span>Sample in a Jar</span><span class="why">72 plays</span></div><div class="pick lock"><b>2</b><span>Julius</span><span class="why">65 plays</span></div><div class="pick"><b>3</b><span>Down with Disease</span></div><div class="pick"><b>4</b><span>Rift</span></div><div class="pick"><b>5</b><span>Poor Heart</span></div><div class="pick"><b>6</b><span>Cavern</span></div><div class="pick"><b>7</b><span>Scent of a Mule</span></div><div class="pick"><b>8</b><span>It's Ice</span></div><div class="pick"><b>9</b><span>You Enjoy Myself</span></div><div class="pick"><b>10</b><span>Fee</span></div></div><div class="mix-label" style="margin-top:12px">Mid-depth &mdash; ranks 14&ndash;22, where both scored nights actually drew from</div><div class="picks"><div class="pick"><b>11</b><span>Amazing Grace</span></div><div class="pick"><b>12</b><span>Simple</span></div><div class="pick"><b>13</b><span>Wilson</span></div><div class="pick"><b>14</b><span>Nellie Kane</span></div><div class="pick"><b>15</b><span>The Squirming Coil</span></div><div class="pick"><b>16</b><span>Lifeboy</span></div><div class="pick"><b>17</b><span>Ginseng Sullivan</span></div></div><div class="mix-label" style="margin-top:12px">Deep cuts with a 1994 fingerprint &mdash; ranks 24&ndash;28</div><div class="picks"><div class="pick"><b>18</b><span>Mound</span></div><div class="pick"><b>19</b><span>Sleeping Monkey</span></div><div class="pick"><b>20</b><span>Foreplay/Long Time</span><span class="why">flyer</span></div></div>
       <details class="tableview">
         <summary>View as table</summary>
         <table>
           <thead><tr><th scope="col">#</th><th scope="col">Song</th><th scope="col">Bucket</th></tr></thead>
-          <tbody><tr><th scope="row">1</th><td>Down with Disease</td><td>Hoist</td></tr><tr><th scope="row">2</th><td>Sample in a Jar</td><td>Hoist</td></tr><tr><th scope="row">3</th><td>Julius</td><td>Hoist</td></tr><tr><th scope="row">4</th><td>Wolfman's Brother</td><td>Hoist</td></tr><tr><th scope="row">5</th><td>If I Could</td><td>Hoist</td></tr><tr><th scope="row">6</th><td>Scent of a Mule</td><td>Hoist</td></tr><tr><th scope="row">7</th><td>Axilla (Part II)</td><td>Hoist</td></tr><tr><th scope="row">8</th><td>Tweezer</td><td>1994 rotation</td></tr><tr><th scope="row">9</th><td>Tweezer Reprise</td><td>1994 rotation</td></tr><tr><th scope="row">10</th><td>You Enjoy Myself</td><td>1994 rotation</td></tr><tr><th scope="row">11</th><td>Cavern</td><td>1994 rotation</td></tr><tr><th scope="row">12</th><td>Poor Heart</td><td>1994 rotation</td></tr><tr><th scope="row">13</th><td>Bouncing Around the Room</td><td>1994 rotation</td></tr><tr><th scope="row">14</th><td>My Friend, My Friend</td><td>1994 rotation</td></tr><tr><th scope="row">15</th><td>It's Ice</td><td>1994 rotation</td></tr><tr><th scope="row">16</th><td>Purple Rain</td><td>Cover / ritual</td></tr><tr><th scope="row">17</th><td>Frankenstein</td><td>Cover / ritual</td></tr><tr><th scope="row">18</th><td>Uncle Pen</td><td>Cover / ritual</td></tr><tr><th scope="row">19</th><td>Halley's Comet</td><td>Cover / ritual</td></tr><tr><th scope="row">20</th><td>Harpua</td><td>Cover / ritual</td></tr></tbody>
+          <tbody><tr><th scope="row">1</th><td>Sample in a Jar</td><td>Head</td></tr><tr><th scope="row">2</th><td>Julius</td><td>Head</td></tr><tr><th scope="row">3</th><td>Down with Disease</td><td>Head</td></tr><tr><th scope="row">4</th><td>Rift</td><td>Head</td></tr><tr><th scope="row">5</th><td>Poor Heart</td><td>Head</td></tr><tr><th scope="row">6</th><td>Cavern</td><td>Head</td></tr><tr><th scope="row">7</th><td>Scent of a Mule</td><td>Head</td></tr><tr><th scope="row">8</th><td>It's Ice</td><td>Head</td></tr><tr><th scope="row">9</th><td>You Enjoy Myself</td><td>Head</td></tr><tr><th scope="row">10</th><td>Fee</td><td>Head</td></tr><tr><th scope="row">11</th><td>Amazing Grace</td><td>Mid-depth</td></tr><tr><th scope="row">12</th><td>Simple</td><td>Mid-depth</td></tr><tr><th scope="row">13</th><td>Wilson</td><td>Mid-depth</td></tr><tr><th scope="row">14</th><td>Nellie Kane</td><td>Mid-depth</td></tr><tr><th scope="row">15</th><td>The Squirming Coil</td><td>Mid-depth</td></tr><tr><th scope="row">16</th><td>Lifeboy</td><td>Mid-depth</td></tr><tr><th scope="row">17</th><td>Ginseng Sullivan</td><td>Mid-depth</td></tr><tr><th scope="row">18</th><td>Mound</td><td>Deep cut</td></tr><tr><th scope="row">19</th><td>Sleeping Monkey</td><td>Deep cut</td></tr><tr><th scope="row">20</th><td>Foreplay/Long Time</td><td>Deep cut</td></tr></tbody>
+        </table>
+        <table>
+          <thead><tr><th scope="col">Rule</th><th scope="col">Held-out score</th></tr></thead>
+          <tbody><tr><th scope="row">Consensus barbell - v5, tonight's method</th><td class="n">19 / 40</td></tr><tr><th scope="row">What was actually published - v1 + v2, hand-picked</th><td class="n">17 / 40</td></tr><tr><th scope="row">Top 20 by that year's play count</th><td class="n">14 / 40</td></tr><tr><th scope="row">Frequency x distinctiveness - v4, rejected</th><td class="n">12 / 40</td></tr><tr><th scope="row">Random 20 from the same pool</th><td class="n">10.8 / 40</td></tr></tbody>
         </table>
       </details>
   </section>
