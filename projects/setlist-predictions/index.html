@@ -141,23 +141,31 @@
   .set-count { font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--baseline); }
   ul.songs { list-style: none; }
   .song {
-    display: flex; align-items: center; gap: 10px; padding: 6px 4px;
+    display: flex; align-items: flex-start; gap: 10px; padding: 9px 4px;
     border-top: 1px solid var(--grid);
   }
   .song:first-child { border-top: none; }
-  .song input[type=checkbox] { width: 16px; height: 16px; flex: none; cursor: pointer; accent-color: var(--good); }
+  .song input[type=checkbox] { width: 16px; height: 16px; flex: none; cursor: pointer; accent-color: var(--good); margin-top: 4px; }
+  .song .body { flex: 1; min-width: 0; }
   .song .name {
-    flex: 1; font-size: 14px; padding: 3px 6px; border-radius: 6px;
-    border: 1px solid transparent; outline: none; min-width: 0;
+    font-size: 14px; padding: 2px 6px; border-radius: 6px;
+    border: 1px solid transparent; outline: none;
   }
   .song .name:hover { background: var(--surface-2); }
   .song .name:focus { border-color: var(--accent); background: var(--surface-2); }
   .song.hit .name { text-decoration: line-through; color: var(--text-muted); }
+  .song .why {
+    font-size: 11.5px; color: var(--text-muted); line-height: 1.45;
+    padding: 2px 6px 0; max-width: 72ch;
+  }
+  .song.hit .why { opacity: 0.55; }
+  .song .why b { color: var(--text-secondary); font-weight: 600; }
+  .song .why .risk { color: var(--accent-2); font-weight: 600; }
   .song .tagchip {
     flex: none; font-size: 10px; font-weight: 600; letter-spacing: 0.03em;
     color: var(--text-muted); border: 1px solid var(--border);
     border-radius: 999px; padding: 1px 7px; white-space: nowrap;
-    font-variant-numeric: tabular-nums;
+    font-variant-numeric: tabular-nums; margin-top: 3px;
   }
   .song .del {
     flex: none; font: inherit; cursor: pointer; color: var(--text-muted);
@@ -179,7 +187,7 @@
       <h1>Phish @ MSG — Setlist Predictions</h1>
       <span class="pill">5 NIGHTS · #92–96</span>
     </div>
-    <p class="sub">Five-night Madison Square Garden run celebrating Phish's 92nd through 96th shows at the Garden — each night themed to a year, <b>1992 → 1996</b>. Twenty predicted songs per night; check them off as they're played. Everything here is editable — click any song to rename it, use ✕ to remove, <b>+ add</b> to insert your own. The number beside each pick is how many times that song was played in its theme year. Predictions <b>never reuse a song played earlier in the run</b> — Phish doesn't repeat across a residency, and the two played nights share exactly zero songs.</p>
+    <p class="sub">Five-night Madison Square Garden run celebrating Phish's 92nd through 96th shows at the Garden — each night themed to a year, <b>1992 → 1996</b>. Twenty predicted songs per night, each with the reason it was picked; check them off as they're played. Everything is editable — click a song to rename it, ✕ to remove, <b>+ add</b> for your own. The number beside each pick is how many times it was played in its theme year. Predictions <b>never reuse a song played earlier in the run</b> — Phish doesn't repeat across a residency, and the two played nights share exactly zero songs.</p>
     <div class="toolbar">
       <button class="btn" id="exportBtn">Copy all predictions</button>
       <button class="btn warn" id="resetAllBtn">Reset all nights to Claude's picks</button>
@@ -190,15 +198,15 @@
       <summary>How the picks for nights 3–5 are made <span class="tag">model v7 · measured, not estimated</span></summary>
 
       <div class="callout">
-        <p><b>This model got simpler because the data said it should.</b> Every earlier version — including the one that was on this page four hours ago — was tuned on intuition about what a themed night &ldquo;feels like.&rdquo; With the phish.net API wired in, the actual play counts are now measured: 1994 alone is 147 shows, 3,084 song rows, 340 distinct songs.</p>
+        <p><b>This model got simpler because the data said it should.</b> Every earlier version — including the one on this page a few hours ago — was tuned on intuition about what a themed night &ldquo;feels like.&rdquo; With the phish.net API wired in, the play counts are now measured: 1994 alone is 147 shows, 3,084 song rows, 340 distinct songs.</p>
         <p>The measurement killed both the old model and its replacement. What survives is the dullest possible rule, and it beats everything else tested.</p>
       </div>
 
       <h4>The error that ran through every previous version</h4>
-      <p>v5 concluded that setlists draw from the <em>middle</em> of a year's frequency ranking, and built its picks around a &ldquo;20–60% depth band.&rdquo; That was an artifact of ranking each song within the <b>full theme-year pool</b> instead of the <b>eligible pool</b> — the one that remains after striking everything already played earlier in the run.</p>
-      <p>Ranked correctly against the eligible pool, the 24 songs Phish played on Jul 24 sat at:</p>
+      <p>v5 concluded that setlists draw from the <em>middle</em> of a year's frequency ranking, and built its picks around a &ldquo;20–60% depth band.&rdquo; That was an artifact of ranking each song within the <b>full theme-year pool</b> instead of the <b>eligible pool</b> — the one left after striking everything already played earlier in the run.</p>
+      <p>Ranked correctly against the eligible pool, the 24 songs played on Jul 24 sat at:</p>
       <p class="ranks"><code>2 · 7 · 8 · 10 · 11 · 12 · 19 · 24 · 26 · 27 · 31 · 32 · 42 · 46 · 48 · 56 · 69 · 70 · 80 · 94 · 95 · 106 · 109 · 161</code></p>
-      <p>Hit density falls monotonically with rank — 7 songs in the top 20, 12 in the top 40, and a long thin tail after that. There is no middle-depth sweet spot. The band just plays what it plays most, minus what it already played.</p>
+      <p>Hit density falls monotonically with rank — 7 in the top 20, 12 in the top 40, then a long thin tail. There is no middle-depth sweet spot. The band plays what it plays most, minus what it already played.</p>
 
       <table>
         <thead><tr><th scope="col">Strategy, scored on the Jul 24 night</th><th scope="col" class="n">Hits</th></tr></thead>
@@ -209,18 +217,21 @@
           <tr><th scope="row">v5's self-graded backtest (claimed)</th><td class="n">19 / 40 — invalid</td></tr>
         </tbody>
       </table>
-      <p>v5's headline number was never a held-out score: the rules were tuned against nights 1–2 and then graded on those same two nights. The one genuine blind test it ever faced scored 6/20, which is chance.</p>
+      <p>v5's headline number was never a held-out score: the rules were tuned against nights 1–2 and then graded on those same two nights. The one genuine blind test it faced scored 6/20, which is chance.</p>
 
-      <h4>A correction to this page's own last update</h4>
-      <p>Earlier today this model was revised to reserve three slots for &ldquo;era-signature covers,&rdquo; on the reasoning that night 2 played six covers so v5 was wrong to exclude them. The play counts say <b>v5 was right and that revision was wrong.</b> Covers do get played, but no individual cover is a good standalone bet — the pool is enormous and flat, exactly as v5 argued. Amazing Grace is on tonight's slate purely because it was played 31 times in 1994, which is how a cover should earn a slot: on frequency, not on a reserved quota. Loving Cup, Frankenstein and the Purple Rain vacuum solo were cut. So was Wolfman's Brother, promoted this afternoon on the reasoning that <em>Hoist</em> is the 1994 record — true, but it was barely played live that year.</p>
+      <h4>A correction to this page's own earlier update</h4>
+      <p>Earlier today this model was revised to reserve three slots for &ldquo;era-signature covers,&rdquo; reasoning that night 2 played six covers so v5 was wrong to exclude them. The play counts say <b>v5 was right and that revision was wrong.</b> Covers get played, but no individual cover is a good standalone bet — the pool is enormous and flat, exactly as v5 argued. Amazing Grace is on tonight's slate purely because it was played 31 times in 1994, which is how a cover should earn a slot: on frequency, not a reserved quota. Loving Cup, Frankenstein and the Purple Rain vacuum solo were cut, as was Wolfman's Brother — promoted this afternoon because <em>Hoist</em> is the 1994 record, which is true and irrelevant, since it was barely played live that year. Album year is not play frequency.</p>
 
-      <h4>What the model is now, in full</h4>
-      <p><b>1.</b> Pull every song played in the theme year from phish.net; count plays. <b>2.</b> Strike every song already played earlier in this run. <b>3.</b> Take the top 20 by play count. That's it — no depth band, no cover quota, no archetype buckets, no simulation.</p>
-      <p>The run no-repeat rule in step 2 is the only real insight here, and it's free: 7/22 and 7/24 share zero songs, and 50 are now off the board for tonight.</p>
+      <h4>The model, in full</h4>
+      <p><b>1.</b> Pull every song played in the theme year from phish.net; count plays. <b>2.</b> Strike every song already played earlier in this run. <b>3.</b> Take the top 20. That's it — no depth band, no cover quota, no archetype buckets, no simulation. The run no-repeat rule in step 2 is the only real insight here, and it's free: 50 songs are off the board for tonight.</p>
+
+      <h4>What writing the reasons exposed — the next thing to fix</h4>
+      <p>Attaching a sourced rationale to all 60 picks surfaced a blind spot. <b>v7 ranks on theme-year plays and completely ignores whether a song is anywhere near current rotation.</b> Tonight is mostly fine — 16 of 20 picks have been played within the last dozen shows — but Amazing Grace carries a <b>900-show gap</b>. Nights 4 and 5 are far more exposed: Acoustic Army hasn't appeared in 1,096 shows, Suspicious Minds 1,019, Johnny B. Goode 926, I'm Blue I'm Lonesome 791.</p>
+      <p>This is deliberately <em>not</em> fixed yet, because the right answer is genuinely unknown. A year-themed night is exactly the occasion a band reaches for dormant era material — night 2 proved it, opening the vault for Big Ball Jam at a 1,170-show gap and the first Kung since 2019. So a dormancy penalty might improve the model or might destroy the thing that makes themed nights predictable at all. Tonight's result is the first real test: if Amazing Grace lands, dormancy is noise; if the deep cuts miss across nights 3–5, v8 gets a gap term.</p>
 
       <h4>The honest caveat</h4>
-      <p>One scored blind night is the entire evidentiary base, and v7's measured margin over random on it is <b>1.2 songs out of 20</b>. That is well inside noise for a single show. The strongest claim available is that v7 is simpler than what it replaced, is fitted to nothing, and would have beaten the published slate on the only night both could be scored against. Judge it across nights 3, 4 and 5 — and expect scores to drift upward regardless, because the eligible pool shrinks every night whether or not the model is any good.</p>
-      <p>Set placement below is cosmetic. The model predicts <em>which twenty songs</em>, not the running order, and scoring only counts whether a song was played at all.</p>
+      <p>One scored blind night is the entire evidentiary base, and v7's measured margin on it is <b>1.2 songs out of 20</b> — well inside noise. The strongest available claim is that v7 is simpler than what it replaced, is fitted to nothing, and would have beaten the published slate on the only night both could be scored against. Expect scores to drift up regardless as the eligible pool shrinks, whether or not the model is any good.</p>
+      <p>Set placement is cosmetic. The model predicts <em>which twenty songs</em>, not the running order, and scoring only counts whether a song was played at all.</p>
     </details>
   </header>
 
@@ -234,9 +245,9 @@
 (function () {
   "use strict";
 
-  function song(n, hit, tag) { return { name: n, hit: !!hit, tag: tag || "" }; }
+  function song(n, hit, tag, why) { return { name: n, hit: !!hit, tag: tag || "", why: why || "" }; }
   function s(arr, hit) { return arr.map(function (n) { return song(n, hit); }); }
-  function tagged(arr) { return arr.map(function (p) { return song(p[0], false, p[1] + "×"); }); }
+  function P(arr) { return arr.map(function (p) { return song(p[0], false, p[1] + "×", p[2]); }); }
 
   var DEFAULTS = {
     nights: [
@@ -260,35 +271,104 @@
       },
       {
         n: 3, year: "1994", show: 94, date: "Sat · Jul 25", status: "tonight", exp: "7",
-        note: "The top 20 of 1994 by measured play count, minus the 50 songs burned on Jul 22 and Jul 24. Numbers beside each pick are 1994 plays across 147 shows. Nothing here is a hunch — Sample in a Jar led 1994 with 73 plays, Julius 65, Down with Disease 58. The same rule applied to Jul 24 would have scored 7 of 20 against the published slate's 6.",
+        note: "The top 20 of 1994 by measured play count, minus the 50 songs burned on Jul 22 and Jul 24. Counts are 1994 plays across 147 shows. The same rule applied to Jul 24 would have scored 7 of 20 against the published slate's 6.",
         sets: [
-          { name: "Set 1", songs: tagged([["Sample in a Jar",73],["Julius",65],["Rift",49],["Poor Heart",46],["Cavern",45],["Scent of a Mule",44],["It's Ice",42],["Fee",39],["Axilla (Part II)",34]]) },
-          { name: "Set 2", songs: tagged([["Down with Disease",58],["You Enjoy Myself",48],["Tweezer",36],["If I Could",34],["Simple",34],["Wilson",27],["Nellie Kane",26],["The Squirming Coil",26]]) },
-          { name: "Encore", songs: tagged([["Amazing Grace",31],["Tweezer Reprise",25],["Lifeboy",24]]) }
+          { name: "Set 1", songs: P([
+            ["Sample in a Jar",73,"The most-played song of 1994, full stop — 73 times across 147 shows. Debuted Feb 1993, and still current: last played 5 shows ago. The single safest pick on the board."],
+            ["Julius",65,"Debuted 4 Apr 1994 and went straight into heavy rotation — 65 plays in its first nine months. A pure <b>Hoist</b>-era marker and still live today."],
+            ["Rift",49,"A 1990 song that hit its live peak in 1994 at 49 plays. 319 all-time and played 8 shows ago, so there's no dust on it."],
+            ["Poor Heart",46,"The bluegrass sprint 1994 reached for constantly — 46 plays. <span class=\"risk\">Riskier than the count suggests:</span> 76 shows since the last one."],
+            ["Cavern",45,"45 plays in 1994, 484 all-time. A set-closing workhorse that's only still available because nights 1 and 2 both skipped it."],
+            ["Scent of a Mule",44,"Debuted the same night as Julius in Apr 1994 and was played 44 times that year. <span class=\"risk\">Dormant lately</span> — a 95-show gap."],
+            ["It's Ice",42,"A <b>Rift</b>-album piece that peaked in 1994 at 42 plays. Played 7 shows ago, so it's in current rotation as well as era-correct."],
+            ["Fee",39,"39 plays. Short, era-correct, and exactly the kind of connective song a themed night reaches for between the big vehicles."],
+            ["Axilla (Part II)",34,"Debuted Apr 1994 and played 34 times that year. Worth noting: Axilla <em>Part I</em> went on night 1, but these are separate songs, so this one is still eligible."]
+          ]) },
+          { name: "Set 2", songs: P([
+            ["Down with Disease",58,"Debuted 31 Dec 1993 and then defined 1994 with 58 plays. 325 all-time and played 10 shows ago — era-correct and current at once."],
+            ["You Enjoy Myself",48,"48 plays in 1994 and 626 all-time. Somehow unburned through two nights, which makes it the biggest name still on the board."],
+            ["Tweezer",36,"1994 is its defining year — the Bomb Factory version, Tweezerfest — at 36 plays. Still unplayed this run and played just 9 shows ago."],
+            ["If I Could",34,"34 plays in 1994 out of only 69 all-time. <b>Over half its entire life happened that year</b>, which makes it the sharpest 1994 marker on the slate."],
+            ["Simple",34,"Broke out in 1994 with 34 plays after a Dec 1993 debut. 211 all-time and played 8 shows ago."],
+            ["Wilson",27,"27 plays in 1994, 305 all-time. The crowd-call opener, still in regular rotation."],
+            ["Nellie Kane",26,"A Hot Rize cover played 26 times in 1994 — part of the bluegrass segment the band leaned on hard that year."],
+            ["The Squirming Coil",26,"26 plays in 1994 and 377 all-time. The solo-piano outro makes it a natural set-one closer."]
+          ]) },
+          { name: "Encore", songs: P([
+            ["Amazing Grace",31,"31 plays in 1994 — the only cover earning a slot on frequency alone, which is how covers should qualify. <span class=\"risk\">Also the riskiest pick here:</span> 900 shows since it was last played."],
+            ["Tweezer Reprise",25,"25 plays in 1994. It rides along with Tweezer — if that one hits, this often follows in the same show."],
+            ["Lifeboy",24,"A <b>Hoist</b> ballad with 64 plays all-time and 24 of them in 1994 — heavily concentrated in exactly this year. Played 4 shows ago."]
+          ]) }
         ]
       },
       {
         n: 4, year: "1995", show: 95, date: "Mon · Jul 27", status: "up",
-        note: "Top 20 of 1995 by play count, minus everything burned through Jul 25 — which assumes tonight's slate lands, so treat this as provisional. It will be regenerated from the real Jul 25 setlist. 1995 is a flatter year than 1994: the leader, Free, has 32 plays where Sample in a Jar had 73, so the top of this list is less separated from the pack.",
+        note: "Top 20 of 1995 by play count, minus everything burned through Jul 25 — which assumes tonight's slate lands, so treat it as provisional and expect a rebuild from the real setlist. 1995 is a flatter year than 1994: the leader has 32 plays where Sample in a Jar had 73, so the top of this list is less separated from the pack.",
         sets: [
-          { name: "Set 1", songs: tagged([["Free",32],["Strange Design",29],["Ya Mar",18],["Uncle Pen",16],["Ha Ha Ha",15],["Taste",14],["Timber (Jerry the Mule)",13],["Mound",12],["The Curtain",12]]) },
-          { name: "Set 2", songs: tagged([["Theme from the Bottom",27],["Acoustic Army",27],["Cars Trucks Buses",20],["I'm Blue, I'm Lonesome",18],["Prince Caspian",17],["Keyboard Army",14],["Billy Breathes",14],["While My Guitar Gently Weeps",13]]) },
-          { name: "Encore", songs: tagged([["A Day in the Life",23],["Hello My Baby",15],["Suspicious Minds",11]]) }
+          { name: "Set 1", songs: P([
+            ["Free",32,"The most-played song of 1995 at 32. Debuted May 1995 and took over immediately; 240 all-time and played 4 shows ago."],
+            ["Strange Design",29,"29 plays in 1995 out of 68 all-time — overwhelmingly a 1995 song. Rare since, at a 60-show gap."],
+            ["Ya Mar",18,"A 1987 cover played 18 times in 1995 and still current at a 17-show gap. 238 all-time."],
+            ["Uncle Pen",16,"Bill Monroe cover, 16 plays in 1995 and 212 all-time. <span class=\"risk\">Long dormant:</span> 337 shows since the last one."],
+            ["Ha Ha Ha",15,"15 of its 33 all-time plays land in 1995. Short, odd, and very much of that year. 230-show gap."],
+            ["Taste",14,"Debuted Jun 1995 and played 14 times that year; 154 all-time and played 6 shows ago, so it's both era-correct and current."],
+            ["Timber (Jerry the Mule)",13,"An old blues cover played 13 times in 1995, 109 all-time, and still in rotation at a 9-show gap."],
+            ["Mound",12,"A <b>Rift</b>-era piece with 12 plays in 1995 and 118 all-time. Played 14 shows ago."],
+            ["The Curtain",12,"12 plays in 1995. A 1988 song, though it carries a 184-show gap now."]
+          ]) },
+          { name: "Set 2", songs: P([
+            ["Theme from the Bottom",27,"Debuted May 1995 and played 27 times that year. 200 all-time, played 9 shows ago."],
+            ["Acoustic Army",27,"<b>All 27 of its all-time plays fall in 1995</b> — the most era-locked song on any slate here. <span class=\"risk\">Hasn't been played in 1,096 shows,</span> so it's a pure themed-night bet."],
+            ["Cars Trucks Buses",20,"Debuted Sep 1995 and played 20 times. 89 all-time, 43-show gap."],
+            ["I'm Blue, I'm Lonesome",18,"Bill Monroe cover, 18 plays in 1995 out of 30 all-time. <span class=\"risk\">791-show gap</span> — deep-vault material."],
+            ["Prince Caspian",17,"Debuted Jun 1995, played 17 times that year, 187 all-time — and played just 2 shows ago."],
+            ["Keyboard Army",14,"<b>All 14 of its all-time plays are 1995.</b> It effectively exists only in this year. 406-show gap."],
+            ["Billy Breathes",14,"Debuted Sep 1995 with 14 plays that year; 67 all-time and current at a 17-show gap."],
+            ["While My Guitar Gently Weeps",13,"Beatles cover, debuted Oct 1994 and a 1995 regular at 13 plays. 44-show gap."]
+          ]) },
+          { name: "Encore", songs: P([
+            ["A Day in the Life",23,"Beatles cover played 23 times in 1995 out of 75 all-time — the year used it as a closer repeatedly."],
+            ["Hello My Baby",15,"The a cappella number, 15 plays in 1995 after a Sep 1995 debut. 257-show gap."],
+            ["Suspicious Minds",11,"Elvis cover with 13 plays all-time, 11 of them in 1995. <span class=\"risk\">1,019-show gap</span> — this only makes sense on a 1995-themed night."]
+          ]) }
         ]
       },
       {
         n: 5, year: "1996", show: 96, date: "Wed · Jul 29", status: "up",
         note: "Top 20 of 1996, minus everything burned through Jul 27. The most provisional slate of the five — it compounds two nights of assumed predictions, and every upstream miss leaves a song wrongly marked eligible here. Worth regenerating after each of the next two shows rather than trusting as-is.",
         sets: [
-          { name: "Set 1", songs: tagged([["Character Zero",30],["Punch You in the Eye",22],["Train Song",20],["Funky Bitch",19],["Talk",15],["I Didn't Know",14],["NICU",14],["Guyute",13],["Waste",26]]) },
-          { name: "Set 2", songs: tagged([["Wolfman's Brother",18],["Swept Away",18],["Steep",18],["Life on Mars?",17],["Harpua",14],["Loving Cup",13],["Frankenstein",15],["The Star-Spangled Banner",17]]) },
-          { name: "Encore", songs: tagged([["Johnny B. Goode",16],["Fire",16],["Rocky Top",15]]) }
+          { name: "Set 1", songs: P([
+            ["Character Zero",30,"Debuted Jun 1996 and immediately became the year's most-played song at 30. 265 all-time, played 5 shows ago."],
+            ["Waste",26,"Also a Jun 1996 debut, 26 plays that year, 109 all-time. Current at an 11-show gap."],
+            ["Punch You in the Eye",22,"A 1989 song played 22 times in 1996; 172 all-time and still in rotation."],
+            ["Train Song",20,"Debuted Jul 1996 and played 20 times that year — 59 all-time, so 1996 is a third of its whole life."],
+            ["Funky Bitch",19,"Son Seals cover, 19 plays in 1996 and 236 all-time. A long-running blues staple."],
+            ["Talk",15,"<b>All 15 of its all-time plays are 1996.</b> Another song that exists only inside its theme year."],
+            ["I Didn't Know",14,"14 plays in 1996, 265 all-time. The vacuum-solo vehicle — a 1990s signature bit."],
+            ["NICU",14,"14 plays in 1996, 161 all-time, and played just 3 shows ago."],
+            ["Guyute",13,"Debuted Oct 1994 but only became a rotation regular later; 13 plays in 1996 and current at a 5-show gap."]
+          ]) },
+          { name: "Set 2", songs: P([
+            ["Wolfman's Brother",18,"Debuted Apr 1994 but grew into a real vehicle afterward — 18 plays in 1996, 252 all-time, played 10 shows ago. Cut from the 1994 night for exactly this reason."],
+            ["Swept Away",18,"Debuted Oct 1996 with 18 plays. Effectively inseparable from Steep — they travel as a pair, so picking one should mean picking both."],
+            ["Steep",18,"The other half of the Swept Away pairing, same 18 plays and same Oct 1996 debut. If one lands, the other almost certainly does."],
+            ["Life on Mars?",17,"<b>17 of its 23 all-time plays are 1996</b> — Page's showcase that year. <span class=\"risk\">539-show gap</span> since."],
+            ["The Star-Spangled Banner",17,"17 plays in 1996 — the year they repeatedly opened shows with it. 360-show gap now."],
+            ["Harpua",14,"The narration set-piece, played 14 times in 1996 out of 66 all-time. 114-show gap."],
+            ["Loving Cup",13,"Rolling Stones cover, 13 plays in 1996 — a standard encore of the era."],
+            ["Frankenstein",15,"Edgar Winter cover, 15 plays in 1996 and 94 all-time. Still current at a 13-show gap."]
+          ]) },
+          { name: "Encore", songs: P([
+            ["Johnny B. Goode",16,"Chuck Berry closer, 16 plays in 1996 out of 23 all-time. <span class=\"risk\">926-show gap</span> — vault material outside a themed night."],
+            ["Fire",16,"Hendrix cover, 16 plays in 1996 and 139 all-time. Played 7 shows ago, so this one is genuinely live."],
+            ["Rocky Top",15,"Bluegrass encore staple, 15 plays in 1996 and 208 all-time. Current at a 10-show gap."]
+          ]) }
         ]
       }
     ]
   };
 
-  var KEY = "phish-msg-96-predictions-v7";
+  var KEY = "phish-msg-96-predictions-v7b";
   var state, active = 0;
 
   function clone(o) { return JSON.parse(JSON.stringify(o)); }
@@ -443,6 +523,9 @@
       save();
     });
 
+    var body = document.createElement("div");
+    body.className = "body";
+
     var nm = document.createElement("div");
     nm.className = "name";
     nm.contentEditable = "true";
@@ -456,6 +539,14 @@
     nm.addEventListener("keydown", function (e) {
       if (e.key === "Enter") { e.preventDefault(); nm.blur(); }
     });
+    body.appendChild(nm);
+
+    if (sg.why) {
+      var why = document.createElement("div");
+      why.className = "why";
+      why.innerHTML = sg.why;
+      body.appendChild(why);
+    }
 
     var del = document.createElement("button");
     del.className = "del";
@@ -467,7 +558,7 @@
     });
 
     li.appendChild(cb);
-    li.appendChild(nm);
+    li.appendChild(body);
     if (sg.tag) {
       var chip = document.createElement("span");
       chip.className = "tagchip";
@@ -488,6 +579,7 @@
   });
 
   document.getElementById("exportBtn").addEventListener("click", function () {
+    var strip = function (h) { return h.replace(/<[^>]*>/g, ""); };
     var lines = ["PHISH @ MSG 2026 — SETLIST PREDICTIONS (Shows #92–96) — model v7", ""];
     state.nights.forEach(function (night) {
       lines.push("=== " + night.year + " · Night " + night.n + " · Show #" + night.show + " · " + night.date + " ===");
@@ -495,6 +587,7 @@
         lines.push(set.name + ":");
         set.songs.forEach(function (sg) {
           lines.push("  " + (sg.hit ? "[x] " : "[ ] ") + sg.name + (sg.tag ? "  (" + sg.tag + ")" : ""));
+          if (sg.why) lines.push("      " + strip(sg.why));
         });
       });
       lines.push("");
@@ -514,8 +607,8 @@
   }
 
   document.getElementById("foot").innerHTML =
-    "Predictions by Claude — starting points to edit, not insider info. Play counts and setlists come from the phish.net API. Night 1 (1992) is the actual setlist. Night 2 (1993) was a genuine blind guess and scored 6 of 20, which is chance; its hits are pre-checked. " +
-    "Nights 3–5 are the top 20 of each theme year by measured play count, minus every song already played in the run — see &ldquo;How the picks are made&rdquo; for why the model got simpler rather than cleverer. " +
+    "Predictions by Claude — starting points to edit, not insider info. Play counts, debut dates and gaps come from the phish.net API. Night 1 (1992) is the actual setlist. Night 2 (1993) was a genuine blind guess and scored 6 of 20, which is chance; its hits are pre-checked. " +
+    "Nights 3–5 are the top 20 of each theme year by measured play count, minus every song already played in the run — see &ldquo;How the picks are made&rdquo; for why the model got simpler rather than cleverer, and for the dormancy problem the reasons exposed. " +
     "Your edits and checkmarks save in this browser. Run: MSG shows #92–96, Jul 22 / 24 / 25 / 27 / 29, 2026.";
 
   var restored = load();
