@@ -27,6 +27,13 @@
       return r.text();
     });
   })).then(function(chunks){
+    for(var i=0;i<chunks.length;i++){
+      if(chunks[i].indexOf('<!DOCTYPE')===0||chunks[i].indexOf('class=')<0){
+        return fail('Your Cloudflare Access session expired while the page was loading, so '
+          +PARTS[i].split('?')[0]+' came back as a login page instead of portfolio data. '
+          +'Sign in again and reload.');
+      }
+    }
     app.innerHTML=chunks.join('');
     var s=document.createElement('script');
     s.src='dash.js?v='+DASH_V;
