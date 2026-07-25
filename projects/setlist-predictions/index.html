@@ -22,6 +22,7 @@
     --good:           #0ca30c;
     --good-text:      #006300;
     --warn:           #fab219;
+    --bad:            #c0392b;
   }
   @media (prefers-color-scheme: dark) {
     :root:where(:not([data-theme="light"])) {
@@ -39,6 +40,7 @@
       --accent-2:       #d95926;
       --good:           #0ca30c;
       --good-text:      #46d446;
+      --bad:            #e8705f;
     }
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -76,7 +78,7 @@
   }
   .method > summary {
     cursor: pointer; font-size: 13px; font-weight: 700; color: var(--text-primary);
-    list-style: none; display: flex; align-items: center; gap: 8px;
+    list-style: none; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
   }
   .method > summary::-webkit-details-marker { display: none; }
   .method > summary::before { content: "▸"; color: var(--text-muted); font-size: 11px; }
@@ -86,13 +88,21 @@
     border: 1px solid var(--border); border-radius: 999px; padding: 2px 8px;
   }
   .method p { font-size: 12.5px; color: var(--text-secondary); margin-top: 10px; max-width: 78ch; }
-  .method table { border-collapse: collapse; margin-top: 12px; font-size: 12.5px; width: 100%; max-width: 560px; }
+  .method h4 { font-size: 12px; font-weight: 700; margin-top: 16px; letter-spacing: 0.02em; }
+  .method table { border-collapse: collapse; margin-top: 12px; font-size: 12.5px; width: 100%; max-width: 620px; }
   .method th, .method td { text-align: left; padding: 5px 10px 5px 0; border-bottom: 1px solid var(--grid); }
   .method th { color: var(--text-muted); font-weight: 600; }
   .method tbody th { color: var(--text-secondary); font-weight: 500; }
   .method td.n { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
   .method tr.win tbody th, .method tr.win th { color: var(--text-primary); font-weight: 700; }
   .method tr.win td.n { color: var(--good-text); }
+  .method tr.bad td.n { color: var(--bad); }
+  .callout {
+    margin-top: 12px; border-left: 3px solid var(--accent-2); background: var(--surface-2);
+    padding: 10px 14px; border-radius: 0 8px 8px 0;
+  }
+  .callout p { margin-top: 0; }
+  .callout p + p { margin-top: 8px; }
 
   /* Tabs */
   .tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 16px 0 14px; }
@@ -144,6 +154,11 @@
   .song .name:hover { background: var(--surface-2); }
   .song .name:focus { border-color: var(--accent); background: var(--surface-2); }
   .song.hit .name { text-decoration: line-through; color: var(--text-muted); }
+  .song .tagchip {
+    flex: none; font-size: 10px; font-weight: 600; letter-spacing: 0.03em;
+    color: var(--text-muted); border: 1px solid var(--border);
+    border-radius: 999px; padding: 1px 7px; white-space: nowrap;
+  }
   .song .del {
     flex: none; font: inherit; cursor: pointer; color: var(--text-muted);
     background: none; border: none; font-size: 17px; line-height: 1; padding: 2px 6px; border-radius: 6px;
@@ -164,7 +179,7 @@
       <h1>Phish @ MSG — Setlist Predictions</h1>
       <span class="pill">5 NIGHTS · #92–96</span>
     </div>
-    <p class="sub">Five-night Madison Square Garden run celebrating Phish's 92nd through 96th shows at the Garden — each night themed to a year, <b>1992 → 1996</b>. Twenty predicted songs per night; check them off as they're played. Everything here is editable — click any song to rename it, use ✕ to remove, <b>+ add</b> to insert your own. Each night has its own list and its own <b>Reset</b>. Predictions <b>never reuse a song that was actually played earlier in the run</b> — Phish doesn't repeat across a residency, so every song confirmed played on an earlier night is struck from the pool for every night after it.</p>
+    <p class="sub">Five-night Madison Square Garden run celebrating Phish's 92nd through 96th shows at the Garden — each night themed to a year, <b>1992 → 1996</b>. Twenty predicted songs per night; check them off as they're played. Everything here is editable — click any song to rename it, use ✕ to remove, <b>+ add</b> to insert your own. Each night has its own list and its own <b>Reset</b>. Predictions <b>never reuse a song that was actually played earlier in the run</b> — Phish doesn't repeat across a residency, and the two played nights share exactly zero songs.</p>
     <div class="toolbar">
       <button class="btn" id="exportBtn">Copy all predictions</button>
       <button class="btn warn" id="resetAllBtn">Reset all nights to Claude's picks</button>
@@ -172,21 +187,39 @@
     </div>
 
     <details class="method">
-      <summary>How the picks for nights 3–5 are made <span class="tag">model v5 · 100,000 simulated shows</span></summary>
-      <p>Nights 3, 4 and 5 were rebuilt after running about 100,000 simulated shows against the two setlists we can actually check. Every rule below was fully specified before it saw a night, then fitted on one real show and scored on the other — so the numbers are held out, not fitted-and-graded on the same data.</p>
+      <summary>How the picks for nights 3–5 are made <span class="tag">model v6 · rebuilt 7/25</span></summary>
+
+      <div class="callout">
+        <p><b>The v5 numbers on this page were wrong, and v6 exists because of it.</b> v5 advertised 19/40 &ldquo;held out.&rdquo; That was a backtest artifact — the rules were tuned against nights 1 and 2 and then scored against those same two nights. The only genuine blind test this project has ever run is the published 1993 slate, and it scored <b>6 of 20</b>.</p>
+        <p>For that night the pool was 83 songs and 24 got played, so twenty random picks expect 5.8. <b>The model performed at chance.</b> Everything below is the attempt to fix that honestly rather than re-grade the same two shows until the number looks good.</p>
+      </div>
+
       <table>
-        <thead><tr><th scope="col">Rule</th><th scope="col" class="n">Held-out score</th></tr></thead>
+        <thead><tr><th scope="col">Approach</th><th scope="col" class="n">Score</th><th scope="col" class="n">vs. random</th></tr></thead>
         <tbody>
-          <tr class="win"><th scope="row">Consensus barbell — v5, what's used here</th><td class="n">19 / 40</td></tr>
-          <tr><th scope="row">What was published for nights 1–2, hand-picked</th><td class="n">17 / 40</td></tr>
-          <tr><th scope="row">Top 20 by that year's play count</th><td class="n">14 / 40</td></tr>
-          <tr><th scope="row">Frequency × distinctiveness — v4, rejected</th><td class="n">12 / 40</td></tr>
-          <tr><th scope="row">Random 20 from the same pool</th><td class="n">10.8 / 40</td></tr>
+          <tr class="win"><th scope="row">v6 consensus — used for nights 3–5</th><td class="n">8.8 exp.</td><td class="n">+1.8</td></tr>
+          <tr><th scope="row">Random 20 from tonight's eligible pool</th><td class="n">7.0 exp.</td><td class="n">—</td></tr>
+          <tr class="bad"><th scope="row">v5, real blind test (1993 night)</th><td class="n">6 / 20</td><td class="n">+0.2</td></tr>
+          <tr><th scope="row">v5, self-graded backtest (claimed)</th><td class="n">19 / 40</td><td class="n">not valid</td></tr>
         </tbody>
       </table>
-      <p>Two ideas got cut. Reserving a quarter of the slots for era-appropriate covers turned out to be <em>negative</em> value — a cover slot is worth about 0.10 expected hits against 0.32 for a rotation slot, because the cover pool is enormous and flat. Covers get played; no individual cover is a good bet. And weighting songs by how distinctive they are to the theme year looked strong until it was tested properly: fitted on one real night and scored on the other it managed 12/40, worse than simply ranking by play count.</p>
-      <p>What survived is duller and works better. Both real setlists drew from the <em>middle</em> of the theme year's ranking — median rank 29 of 101 on Jul 22, 41 of 83 on Jul 24, with only about 7 of ~25 songs coming from the top 20 either night. So each slate takes a few songs from the head of that year's rotation and spreads the rest evenly through the 20–60% depth band. Sweeping that head/depth split across all 21 possible settings, every setting from 0 to 17 head picks beat a straight top-20 — the advantage is the shape, not any one split. Rather than trust the single best split, which on a two-show sample is noise, tonight's slate votes across the whole family and keeps the 20 songs most settings agree on.</p>
-      <p>The honest caveat: three scored shows is a tiny sample, the fitted depth curve failed its own cross-validation as a standalone predictor, and the eligible pool shrinks every night as songs get burned — so accuracy should climb through the run for reasons that have nothing to do with the model getting smarter.</p>
+      <p>Those first two rows are expectations, not results. They will be replaced with a real score after tonight.</p>
+
+      <h4>What v5 got right, and v6 keeps</h4>
+      <p><b>Run no-repeat.</b> Phish doesn't repeat inside a residency, and the two played nights confirm it absolutely — 7/22 and 7/24 have zero songs in common. Every confirmed song is struck from every later night's pool. This is the single most valuable rule in the model and it costs nothing.</p>
+      <p><b>Don't crowd the top of the frequency ranking.</b> Both real setlists drew mostly from mid-depth rotation, with only about 7 of ~25 songs coming from that year's top 20.</p>
+
+      <h4>What v5 got wrong</h4>
+      <p><b>1. It banned era-appropriate covers.</b> v5 calculated a cover slot at 0.10 expected hits against 0.32 for a rotation slot and cut them entirely. Then night 2 played <em>six</em> covers out of 24 songs — La Grange, Sparks, Good Times Bad Times, Daniel Saw the Stone, Sweet Adeline, Also Sprach Zarathustra. Night 1 played three. The mistake was treating &ldquo;covers&rdquo; as one enormous flat pool. The handful of covers that <em>defined</em> a specific year's rotation are neither flat nor rare, and v6 budgets three slots for them.</p>
+      <p><b>2. It drew the backwards lesson from night 2.</b> v5 concluded the band played &ldquo;deep-but-ordinary rotation, so avoid bustouts.&rdquo; Night 2 was in fact a bustout showcase: Big Ball Jam (1,170-show gap), La Grange (531), Sweet Adeline (358), Sparks (357), and the first Kung since 2019. The real lesson isn't <em>fewer</em> bustouts — it's that the bustouts are era-signature novelty and covers, not Gamehendge set pieces. v5's night-3 slate was built on the backwards reading and has been rebuilt.</p>
+      <p><b>3. It ignored song families.</b> Night 1 played Mike's Song → I Am Hydrogen → Weekapaug Groove and The Horse → Silent in the Morning. Pick one member of an inseparable pair and the rest are nearly free hits. v5 picked neither pair intact.</p>
+      <p><b>4. It ranked by frequency instead of filling roles.</b> Both real nights decompose the same way — roughly 5 jam vehicles, 6 era staples, 7 short connective/novelty items, 4 era covers, 2 deep bustouts. A pure frequency ranking systematically under-picks that short connective layer because those songs are brief and score low on every &ldquo;importance&rdquo; proxy, yet they're about 30% of the setlist. v6 fills the five buckets separately.</p>
+
+      <h4>The three biggest changes to tonight's slate</h4>
+      <p><b>Tweezer</b> was on the 1995 night and is now the #2 pick for tonight. 1994 is the single most Tweezer-defining year in the band's history — the Bomb Factory version, Tweezerfest — and it is unburned. <b>Wolfman's Brother</b> moved off the 1996 night for the same reason: it's a <em>Hoist</em> track, and <em>Hoist</em> is the 1994 record. And the whole era-cover layer — Loving Cup, Frankenstein, the Purple Rain vacuum solo — was absent from v5's slate entirely and is now budgeted.</p>
+
+      <h4>The honest caveat</h4>
+      <p>One real blind test, scored at chance, is the entire evidentiary base. v6's edge over random is about <b>1.8 songs out of 20</b>, which a single night cannot confirm or refute — the run would need many more shows to distinguish that from noise. Expected scores also climb every night for a reason that has nothing to do with the model getting smarter: the eligible pool shrinks as songs get burned. Judge v6 on nights 3, 4 and 5 together, and treat any single-night result as close to meaningless.</p>
       <p>Set placement below is cosmetic. The model predicts <em>which twenty songs</em>, not the running order — Set 1 / Set 2 / Encore is a human guess laid over the twenty, and scoring only counts whether the song was played at all.</p>
     </details>
   </header>
@@ -201,24 +234,24 @@
 (function () {
   "use strict";
 
-  // ---- default data: Claude's predictions -------------------------------
-  function song(n, hit) { return { name: n, hit: !!hit }; }
+  function song(n, hit, tag) { return { name: n, hit: !!hit, tag: tag || "" }; }
   function s(arr, hit) { return arr.map(function (n) { return song(n, hit); }); }
+  function tagged(arr) { return arr.map(function (p) { return song(p[0], false, p[1]); }); }
 
   var DEFAULTS = {
     nights: [
       {
         n: 1, year: "1992", show: 92, date: "Wed · Jul 22", status: "done",
-        note: "Actual setlist as reported (JamBase) — the '92 opener. Pre-checked as played; edit if any detail is off and verify on phish.net.",
+        note: "Actual setlist as reported. Pre-checked as played. The Vibration of Life was the night's deepest bustout — unplayed since 1996.",
         sets: [
-          { name: "Set 1", songs: s(["Glide","Runaway Jim","Foam","Axilla","Stash","Cold as Ice","Love You","Hold Your Head Up","Sparkle","AC/DC Bag","Reba","Possum","David Bowie"], true) },
+          { name: "Set 1", songs: s(["Glide","Runaway Jim","Foam","Axilla","Stash","Cold as Ice","Love You","Hold Your Head Up","Sparkle","AC/DC Bag","Reba","Possum","The Vibration of Life","David Bowie"], true) },
           { name: "Set 2", songs: s(["Mike's Song","I Am Hydrogen","Weekapaug Groove","Bouncing Around the Room","My Friend, My Friend","Split Open and Melt","The Lizards","Harry Hood"], true) },
           { name: "Encore", songs: s(["The Horse","Silent in the Morning","Big Black Furry Creature from Mars","Run Like an Antelope"], true) }
         ]
       },
       {
         n: 2, year: "1993", show: 93, date: "Fri · Jul 24", status: "done", score: 6,
-        note: "Scored: 6 of 20. The hits were Chalk Dust Torture, Guelah Papyrus, Maze, The Divided Sky, The Wedge and Lengthwise. The misses are instructive — this slate leaned on set-piece bustouts (Harpua, the Gamehendge pairing, the Purple Rain vacuum solo) that are memorable precisely because they're rare. The band instead played deep-but-ordinary '93 rotation: Tube, Sparks, Daniel Saw the Stone, Big Ball Jam, Weigh. That miss is what the rebuilt model for nights 3–5 corrects for.",
+        note: "Scored 6 of 20 — statistically indistinguishable from picking 20 songs at random out of the 83-song pool, which expects 5.8. Hits: Chalk Dust Torture, Guelah Papyrus, Maze, The Divided Sky, The Wedge, Lengthwise. This result is why the model was rebuilt. The slate bet on Gamehendge set pieces and got a night of era-signature covers and novelty bustouts instead — La Grange, Sparks, Good Times Bad Times, Big Ball Jam, Sweet Adeline, Kung.",
         sets: [
           { name: "Set 1", songs: [song("Chalk Dust Torture", true), song("Rift"), song("Guelah Papyrus", true), song("It's Ice"), song("Fast Enough for You"), song("Maze", true), song("The Curtain"), song("The Divided Sky", true), song("Cavern")] },
           { name: "Set 2", songs: [song("Tweezer"), song("The Wedge", true), song("All Things Reconsidered"), song("Harpua"), song("The Man Who Stepped Into Yesterday"), song("Avenu Malkenu"), song("Purple Rain"), song("You Enjoy Myself")] },
@@ -226,36 +259,36 @@
         ]
       },
       {
-        n: 3, year: "1994", show: 94, date: "Sat · Jul 25", status: "tonight", exp: "9.3",
-        note: "Rebuilt by the v5 consensus model. 1994 repertoire minus everything already burned on Jul 22 and Jul 24 leaves a pool of 69 songs; these are the 20 the most barbell settings agree on. Expected 9.3 of 20, averaged over three different assumptions about how a setlist gets built (6.9 flat / 11.3 frequency-weighted / 9.6 depth-fitted).",
+        n: 3, year: "1994", show: 94, date: "Sat · Jul 25", status: "tonight", exp: "8.8",
+        note: "Rebuilt from scratch by model v6. 1994 repertoire minus the 50 songs burned on Jul 22 and Jul 24 leaves a 69-song pool; these are the 20 that fill the five structural slots best. Expected 8.8 of 20 against a random-20 baseline of 7.0 — a real but modest edge. Biggest corrections to v5: Tweezer promoted from the 1995 night (1994 is the Tweezer year), Wolfman's Brother pulled forward from 1996 (it's a Hoist track), and an era-cover layer added that v5 had banned outright.",
         sets: [
-          { name: "Set 1", songs: s(["Wilson","Sample in a Jar","Poor Heart","Rift","Scent of a Mule","Nellie Kane","It's Ice","Mound","Julius"]) },
-          { name: "Set 2", songs: s(["Down with Disease","Simple","Ginseng Sullivan","Lifeboy","You Enjoy Myself","The Squirming Coil","Fee","Cavern"]) },
-          { name: "Encore", songs: s(["Foreplay/Long Time","Sleeping Monkey","Amazing Grace"]) }
+          { name: "Set 1", songs: tagged([["Sample in a Jar","staple"],["Wilson","staple"],["Rift","staple"],["Poor Heart","staple"],["Uncle Pen","novelty"],["Fee","novelty"],["Scent of a Mule","jam"],["If I Could","staple"],["Julius","staple"]]) },
+          { name: "Set 2", songs: tagged([["Down with Disease","jam"],["Tweezer","jam"],["Wolfman's Brother","jam"],["Simple","jam"],["You Enjoy Myself","jam"],["Halley's Comet","novelty"],["Nellie Kane","novelty"],["Cavern","staple"]]) },
+          { name: "Encore", songs: tagged([["Loving Cup","cover"],["Frankenstein","cover"],["Purple Rain","cover"]]) }
         ]
       },
       {
-        n: 4, year: "1995", show: 95, date: "Mon · Jul 27", status: "up", exp: "11.6",
-        note: "Same v5 construction, run forward: 1995 repertoire minus everything burned through Jul 25 leaves a pool of 51. Expected 11.6 of 20 (9.4 flat / 13.1 frequency-weighted / 12.4 depth-fitted). The expected score rises each night mostly because the pool shrinks, not because the model improves.",
+        n: 4, year: "1995", show: 95, date: "Mon · Jul 27", status: "up", exp: "11.4",
+        note: "Same v6 construction run forward, assuming tonight goes roughly to plan. 1995 repertoire minus everything burned through Jul 25 leaves a pool of about 52. Expected 11.4 of 20 against a random baseline of 8.0. The expected score rises mostly because the pool shrinks, not because the model improves. Guyute and Acoustic Army sit here rather than on the 1994 night — both are late-1994 arrivals that only became rotation regulars in 1995.",
         sets: [
-          { name: "Set 1", songs: s(["Ha Ha Ha","The Curtain","Free","Uncle Pen","I Didn't Know","Cars Trucks Buses","Strange Design","Timber","Taste"]) },
-          { name: "Set 2", songs: s(["Tweezer","Theme From the Bottom","Acoustic Army","Keyboard Army","I'm Blue I'm Lonesome","Billy Breathes","While My Guitar Gently Weeps","Suspicious Minds"]) },
-          { name: "Encore", songs: s(["Hello! Ma Baby","A Day in the Life","Tweezer Reprise"]) }
+          { name: "Set 1", songs: tagged([["Free","jam"],["Ha Ha Ha","novelty"],["Ya Mar","staple"],["I Didn't Know","novelty"],["Strange Design","staple"],["Timber (Jerry the Mule)","staple"],["Punch You in the Eye","staple"],["The Squirming Coil","staple"],["Guyute","jam"]]) },
+          { name: "Set 2", songs: tagged([["Theme From the Bottom","jam"],["Taste","jam"],["Colonel Forbin's Ascent","staple"],["Fly Famous Mockingbird","staple"],["Acoustic Army","novelty"],["Life on Mars?","cover"],["Sleeping Monkey","novelty"],["Suspicious Minds","cover"]]) },
+          { name: "Encore", songs: tagged([["A Day in the Life","cover"],["Amazing Grace","novelty"],["Tweezer Reprise","staple"]]) }
         ]
       },
       {
-        n: 5, year: "1996", show: 96, date: "Wed · Jul 29", status: "up", exp: "14.5",
-        note: "The closer. 1996 repertoire minus everything burned through Jul 27 leaves a pool of only 38, which is why this is the highest-confidence night of the five: expected 14.5 of 20 (12.6 flat / 15.9 frequency-weighted / 15.0 depth-fitted). Treat that number as an upper bound — it assumes the four nights before it go roughly to plan.",
+        n: 5, year: "1996", show: 96, date: "Wed · Jul 29", status: "up", exp: "13.9",
+        note: "The closer, and the highest-confidence night purely by arithmetic — 1996 repertoire minus everything burned through Jul 27 leaves a pool of roughly 40, so a random 20 already expects 11.5. Treat 13.9 as an upper bound: it assumes the four nights before it land close to plan, and every miss upstream leaves a burned song wrongly marked eligible here.",
         sets: [
-          { name: "Set 1", songs: s(["The Star-Spangled Banner","Wolfman's Brother","Funky Bitch","Punch You in the Eye","Talk","Ya Mar","Train Song","NICU","Guyute"]) },
-          { name: "Set 2", songs: s(["Swept Away","Steep","Prince Caspian","Life on Mars?","Waste","Loving Cup","Fire","Frankenstein"]) },
-          { name: "Encore", songs: s(["Johnny B. Goode","Rocky Top","Character Zero"]) }
+          { name: "Set 1", songs: tagged([["The Star-Spangled Banner","novelty"],["Funky Bitch","cover"],["NICU","staple"],["Talk","staple"],["Train Song","staple"],["Cars Trucks Buses","staple"],["Horn","novelty"],["Buried Alive","novelty"],["Sanity","staple"]]) },
+          { name: "Set 2", songs: tagged([["Prince Caspian","jam"],["Character Zero","jam"],["Swept Away","novelty"],["Steep","novelty"],["Waste","staple"],["Billy Breathes","staple"],["Contact","novelty"],["Harpua","jam"]]) },
+          { name: "Encore", songs: tagged([["Fire","cover"],["Johnny B. Goode","cover"],["Rocky Top","cover"]]) }
         ]
       }
     ]
   };
 
-  var KEY = "phish-msg-96-predictions-v3";
+  var KEY = "phish-msg-96-predictions-v6";
   var state, active = 0;
 
   function clone(o) { return JSON.parse(JSON.stringify(o)); }
@@ -361,7 +394,6 @@
       addBtn.addEventListener("click", function () {
         set.songs.push(song("", false));
         save(); render();
-        // focus the newly added field
         var lists = document.querySelectorAll(".songs");
         var last = lists[si] && lists[si].lastElementChild;
         if (last) { var nm = last.querySelector(".name"); if (nm) nm.focus(); }
@@ -406,7 +438,6 @@
     cb.addEventListener("change", function () {
       sg.hit = cb.checked;
       li.classList.toggle("hit", sg.hit);
-      // update counter without full re-render
       var c = document.querySelector(".counter");
       if (c) c.innerHTML = counterHTML(night);
       save();
@@ -437,13 +468,19 @@
 
     li.appendChild(cb);
     li.appendChild(nm);
+    if (sg.tag) {
+      var chip = document.createElement("span");
+      chip.className = "tagchip";
+      chip.textContent = sg.tag;
+      chip.title = "Structural slot this pick fills";
+      li.appendChild(chip);
+    }
     li.appendChild(del);
     return li;
   }
 
   function render() { renderTabs(); renderPanel(); }
 
-  // ---- toolbar ----------------------------------------------------------
   document.getElementById("resetAllBtn").addEventListener("click", function () {
     if (window.confirm("Reset ALL five nights back to Claude's original picks? This clears every edit and checkmark.")) {
       state = clone(DEFAULTS); active = 0; save(); render();
@@ -451,13 +488,13 @@
   });
 
   document.getElementById("exportBtn").addEventListener("click", function () {
-    var lines = ["PHISH @ MSG 2026 — SETLIST PREDICTIONS (Shows #92–96)", ""];
+    var lines = ["PHISH @ MSG 2026 — SETLIST PREDICTIONS (Shows #92–96) — model v6", ""];
     state.nights.forEach(function (night) {
       lines.push("=== " + night.year + " · Night " + night.n + " · Show #" + night.show + " · " + night.date + " ===");
       night.sets.forEach(function (set) {
         lines.push(set.name + ":");
         set.songs.forEach(function (sg) {
-          lines.push("  " + (sg.hit ? "[x] " : "[ ] ") + sg.name);
+          lines.push("  " + (sg.hit ? "[x] " : "[ ] ") + sg.name + (sg.tag ? "  (" + sg.tag + ")" : ""));
         });
       });
       lines.push("");
@@ -477,13 +514,11 @@
   }
 
   document.getElementById("foot").innerHTML =
-    "Predictions by Claude — starting points to edit, not insider info. Night 1 (1992) reflects the reported actual setlist. Night 2 (1993) was a blind guess and scored 6 of 20; its hits are pre-checked. " +
-    "Nights 3–5 were rebuilt from roughly 100,000 simulated shows using the v5 consensus model, which scores 19/40 held out against the two setlists we can check — see &ldquo;How the picks are made&rdquo; above. Each night's pool excludes every song confirmed played on an earlier night, so a few night-2 predictions that never happened are still live on night 3. " +
+    "Predictions by Claude — starting points to edit, not insider info. Night 1 (1992) is the reported actual setlist. Night 2 (1993) was a genuine blind guess and scored 6 of 20, which is chance; its hits are pre-checked. " +
+    "Nights 3–5 were rebuilt on Jul 25 by model v6 after that result invalidated v5's self-graded backtest — see &ldquo;How the picks are made&rdquo; above for what changed and why. Each night's pool excludes every song confirmed played on an earlier night. " +
     "Your edits and checkmarks save in this browser. Run: MSG shows #92–96, Jul 22 / 24 / 25 / 27 / 29, 2026.";
 
-  // ---- boot -------------------------------------------------------------
   var restored = load();
-  // default to the first not-yet-played night for convenience
   if (!restored) {
     for (var i = 0; i < state.nights.length; i++) {
       if (state.nights[i].status !== "done") { active = i; break; }
