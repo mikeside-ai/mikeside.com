@@ -34,16 +34,34 @@
           HOW PROJECT HOSTING WORKS:
           Each project gets its own folder, e.g. /projects/budget-tool/index.html
           Then add a card below linking to it. Self-contained HTML apps drop right in.
-          Private projects (e.g. Dangle My Stash) are locked behind Cloudflare Access —
-          the tile is public but the destination requires Google sign-in.
+
+          PRIVATE PROJECTS:
+          The tile is public but the destination requires Google sign-in, enforced by
+          Cloudflare Access. mikeside.com is proxied through Cloudflare, so Access can
+          gate either a whole subdomain (Dangle My Stash) or a single path on this site
+          (Personal Dashboard -> mikeside.com/projects/dashboard/*). Configure it under
+          Zero Trust -> Access -> Applications.
+
+          IMPORTANT: Cloudflare Access protects the URL, NOT this repository. This repo
+          is public, so anything committed here is readable on GitHub by anyone whether
+          or not the page it lives on is gated. Never commit an unredacted variant of a
+          private project into this repo — publish only the redacted build.
         -->
         <div class="grid">
+          <a class="card" href="/projects/dashboard/">
+            <h3>Personal Dashboard</h3>
+            <span class="tag">🔒 Private</span>
+          </a>
           <a class="card" href="/supmaine/">
             <h3>SUP Maine</h3>
             <span class="tag">Live</span>
           </a>
           <a class="card" href="/projects/setlist/">
             <h3>Phish Live Setlist</h3>
+            <span class="tag">Live</span>
+          </a>
+          <a class="card" href="/projects/setlist-predictions/">
+            <h3>Phish Setlist Predictions</h3>
             <span class="tag">Live</span>
           </a>
           <a class="card" href="/projects/setlist/integration-diagram.html">
