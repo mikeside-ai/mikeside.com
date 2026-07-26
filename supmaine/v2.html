@@ -2,6 +2,24 @@
 <html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
+<script>
+/* CANONICAL HOST GUARD (2026-07-26) — must stay first in <head>.
+   This site answers on TWO URLs: supmaine.mikeside.com (canonical) and
+   mikeside.com/supmaine/. The Google Places key is HTTP-referrer-restricted
+   to supmaine.mikeside.com/*, so on the mikeside.com/supmaine/ path EVERY
+   photo request is rejected ("Requests from referer https://mikeside.com/
+   are blocked") while the rest of the page works perfectly — which is
+   exactly what "the photos are gone" looked like. Bookmarks on the wrong
+   URL are now redirected instead of silently losing all imagery. */
+(function () {
+  var h = location.hostname;
+  if (h === 'mikeside.com' || h === 'www.mikeside.com') {
+    var p = location.pathname.replace(/^\/supmaine(\/|$)/, '/');
+    location.replace('https://supmaine.mikeside.com' + p + location.search + location.hash);
+  }
+})();
+</script>
+<link rel="canonical" href="https://supmaine.mikeside.com/v2.html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080F18" id="meta-theme">
 <title>SupMaine v2 Beta — Maine, Aug 4–11 2026</title>
