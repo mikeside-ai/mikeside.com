@@ -9,6 +9,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="supmaine.css?v=20260724g">
+<style>
+/* v2 beta link — inline so supmaine.css needs no version bump */
+.v2beta{display:inline-flex;align-items:center;gap:9px;margin:16px 0 0;padding:10px 18px;
+  border-radius:100px;text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:11.5px;
+  letter-spacing:.15em;text-transform:uppercase;font-weight:600;color:#F3EFE7;
+  background:linear-gradient(100deg,#16293B,#254058);border:1px solid #FF7A2F;
+  box-shadow:0 0 0 rgba(255,122,47,.55),0 8px 24px -12px rgba(22,41,59,.5);
+  animation:v2glow 2.8s ease-in-out infinite;transition:transform .18s ease}
+.v2beta:hover{transform:translateY(-1px);background:linear-gradient(100deg,#FF7A2F,#C9452D);
+  border-color:#FF7A2F;animation-play-state:paused}
+.v2beta .dot{width:6px;height:6px;border-radius:50%;background:#FF7A2F;flex:0 0 auto;
+  box-shadow:0 0 8px 2px rgba(255,122,47,.9)}
+.v2beta .arrow{font-size:13px;opacity:.85}
+@keyframes v2glow{
+  0%,100%{box-shadow:0 0 0 0 rgba(255,122,47,.42),0 8px 24px -12px rgba(22,41,59,.5)}
+  50%{box-shadow:0 0 22px 3px rgba(255,122,47,.42),0 8px 24px -12px rgba(22,41,59,.5)}
+}
+@media (prefers-reduced-motion:reduce){.v2beta{animation:none;box-shadow:0 0 16px 2px rgba(255,122,47,.38)}}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -17,6 +36,7 @@
   <div class="eyebrow">Tide chart · Aug 4 – 11, 2026</div>
   <h1>MAINE<span class="thin">wedding weekend + coastal adventure</span></h1>
   <div class="crew"><a href="#pack-vlad">Vlad</a><a href="#pack-allison">Allison</a><a href="#pack-sean">Sean</a><a href="reservation.html" target="_blank" rel="noopener">🚙 Jeep Wrangler</a></div>
+  <a class="v2beta" href="v2.html"><span class="dot"></span>SupMaine v2 Beta<span class="arrow">&rarr;</span></a>
   <div class="countdown" id="countdown"><b id="cd-num">—</b><small id="cd-label">days to wheels-up</small></div>
   <div class="weather-chip" id="weather-chip"><span class="wemoji">🌤️</span><span><b id="wx-temp">—</b> <small id="wx-label">checking Portland, ME…</small></span></div>
   <div class="hero-img" style="height:240px;margin-top:18px"><svg class="fill" viewBox="0 0 900 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img">
