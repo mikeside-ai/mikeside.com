@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setlist Lizard ... With — Mikeside</title>
+  <meta name="description" content="Live Phish setlists, song by song — and every show we've kept." />
+  <link rel="canonical" href="https://mikeside.com/projects/setlistlizard_with/" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ---- setlist board (Stage Left) ---- */
+    .board {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.6rem 1.8rem;
+      max-width: 640px; margin: 0 auto;
+    }
+    .showhead { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+    .showhead .venue { font-family: "Fraunces", Georgia, serif; font-size: 1.25rem; font-weight: 600; }
+    .loc { color: var(--muted); font-size: 0.9rem; margin-top: 0.25rem; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase; padding: 0.2rem 0.7rem;
+      border-radius: 999px; border: 1px solid var(--border); color: var(--muted); white-space: nowrap;
+    }
+    .badge.live { color: var(--accent-soft); border-color: var(--accent); }
+    .badge.live::before {
+      content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%;
+      background: var(--accent); animation: pulse 1.4s infinite;
+    }
+    @keyframes pulse { 50% { opacity: 0.25; } }
+    .setblock { margin-top: 1.4rem; }
+    .setname {
+      font-family: "Fraunces", Georgia, serif; color: var(--accent-soft);
+      font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase;
+      border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; margin-bottom: 0.6rem;
+    }
+    .board ol { list-style: none; }
+    .board li { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; padding: 0.32rem 0; }
+    .board li .tr { color: var(--muted); }
+    .board li .fn { color: var(--accent-soft); font-size: 0.8em; }
+    .board li .len { color: var(--muted); font-variant-numeric: tabular-nums; font-size: 0.88rem; white-space: nowrap; }
+    .board li.now .song-t { color: var(--accent-soft); }
+    .shownote {
+      margin-top: 1.4rem; border: 1px solid var(--border); border-left: 3px solid var(--accent);
+      border-radius: 10px; padding: 0.85rem 1.05rem; color: var(--muted); font-size: 0.9rem; line-height: 1.6;
+    }
+    .notes { margin-top: 1.4rem; color: var(--muted); font-size: 0.9rem; line-height: 1.65; display: flex; flex-direction: column; gap: 0.7rem; }
+    .notes a { color: var(--text); }
+    .empty { text-align: center; color: var(--muted); padding: 2.2rem 0 1.4rem; }
+    .backlive { display: inline-block; margin-top: 1.2rem; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    /* ---- archive list ---- */
+    .show-list { display: flex; flex-direction: column; gap: 1rem; max-width: 640px; margin: 0 auto; }
+    .yearhead {
+      font-family: "Fraunces", Georgia, serif; color: var(--muted);
+      font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; margin-top: 0.5rem;
+    }
+    a.show-item {
+      display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+      padding: 1.05rem 1.3rem; background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); color: var(--text);
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    a.show-item:hover { transform: translateY(-2px); border-color: var(--accent); text-decoration: none; }
+    .show-item .d { font-weight: 600; }
+    .show-item .v { color: var(--muted); font-size: 0.9rem; flex: 1; }
+    .show-item .tag2 {
+      font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-soft);
+      border: 1px solid var(--border); border-radius: 999px; padding: 0.15rem 0.6rem; white-space: nowrap;
+    }
+    .srcline { text-align: center; color: var(--muted); font-size: 0.78rem; margin-top: 2.4rem; line-height: 1.7; letter-spacing: 0.05em; }
+    .srcline a { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="/">mike<span>side</span></a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/photos/">Photos</a></li>
+        <li><a href="/videos/">Videos</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/projects/" class="active">Projects</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-top:none;">
+      <div class="container">
+        <div class="section-head">
+          <span class="setno">Projects</span>
+          <h2>Setlist Lizard ... With</h2>
+          <p>Song by song, as it happens.</p>
+        </div>
+        <div class="board" id="board"><div class="empty">Loading…</div></div>
+      </div>
+    </section>
+
+    <div class="groove" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+
+    <section class="block" style="border-top:none;">
+      <div class="container">
+        <div class="section-head">
+          <span class="setno">Archive</span>
+          <h2>The shows, kept</h2>
+        </div>
+        <div class="show-list" id="showlist"><div class="empty">Loading…</div></div>
+        <div class="srcline">
+          Setlist data: Phish.net · lengths are live estimates until the recording posts<br />
+          <a href="/projects/setlistlizard_with/integration-diagram.html">how the bot works</a> · <a href="/projects/">← all projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> mikeside.com</div>
+      <div><a href="/">Home</a></div>
+    </div>
+  </footer>
+  <script src="/js/main.js"></script>
+  <script>
+  (function () {
+    var RAW = "https://raw.githubusercontent.com/vlad-hub86/phish-setlist-bot/main/docs";
+    var MARKS = ["¹", "²", "³", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹"];
+    var board = document.getElementById("board");
+    var listEl = document.getElementById("showlist");
+    var liveData = null;
+    var timer = null;
+
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+    function fmtLen(s) { return s && s >= 60 ? "~" + Math.round(s / 60) + "m" : ""; }
+    function fmtDate(iso) {
+      if (!iso) return "";
+      var p = iso.split("-");
+      return (+p[1]) + "/" + (+p[2]) + "/" + p[0].slice(2);
+    }
+    function longDate(iso) {
+      if (!iso) return "";
+      var d = new Date(iso + "T12:00:00");
+      return d.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" });
+    }
+    function isLive(data) {
+      if (!data || data.complete || !data.updated_at) return false;
+      return (Date.now() - Date.parse(data.updated_at)) < 30 * 60 * 1000;
+    }
+
+    function renderShow(data, opts) {
+      opts = opts || {};
+      if (!data || !data.sets || !data.sets.length) {
+        board.innerHTML = '<div class="empty">No show tonight — check back on a show day.</div>';
+        return;
+      }
+      var live = !opts.archive && isLive(data);
+      var badge = live ? '<span class="badge live">Live</span>'
+        : data.complete ? '<span class="badge">Final</span>'
+        : '<span class="badge">' + esc(fmtDate(data.showdate)) + "</span>";
+      var h = '<div class="showhead"><span class="venue">' + esc(data.venue) + "</span>" + badge + "</div>" +
+        '<div class="loc">' + esc(longDate(data.showdate)) + " · " +
+        esc([data.city, data.state].filter(Boolean).join(", ")) + "</div>";
+      if (data.note) h += '<div class="shownote">' + esc(data.note) + "</div>";
+
+      var footnotes = [], mi = 0;
+      for (var si = 0; si < data.sets.length; si++) {
+        var s = data.sets[si];
+        h += '<div class="setblock"><div class="setname">' + esc(s.display || ("Set " + s.label)) + "</div><ol>";
+        for (var i = 0; i < s.songs.length; i++) {
+          var song = s.songs[i];
+          var mark = "";
+          if (song.footnote) {
+            mark = MARKS[mi] || "(" + (mi + 1) + ")"; mi++;
+            footnotes.push(mark + " " + song.footnote);
+          }
+          var isCurrent = live && si === data.sets.length - 1 && i === s.songs.length - 1;
+          var tr = song.transition && song.transition !== "," ? ' <span class="tr">' + esc(song.transition) + "</span>" : "";
+          h += '<li class="' + (isCurrent ? "now" : "") + '"><span><span class="song-t">' + esc(song.title) + "</span>" +
+            (mark ? ' <span class="fn">' + mark + "</span>" : "") + tr + "</span>" +
+            '<span class="len">' + (isCurrent ? "playing…" : fmtLen(song.length_secs)) + "</span></li>";
+        }
+        h += "</ol></div>";
+      }
+      var noteBits = footnotes.slice();
+      if (data.shownotes && data.shownotes.length) noteBits = noteBits.concat(data.shownotes);
+      if (noteBits.length) {
+        h += '<div class="notes">' + noteBits.map(function (n) { return "<p>" + esc(n) + "</p>"; }).join("") + "</div>";
+      }
+      if (data.phishnet_url) {
+        h += '<div class="notes"><p><a href="' + esc(data.phishnet_url) + '" rel="noopener">this show on Phish.net →</a></p></div>';
+      }
+      if (opts.archive) h += '<a class="backlive" href="#">← back to the live board</a>';
+      board.innerHTML = h;
+    }
+
+    function fetchJSON(url) {
+      return fetch(url + (url.indexOf("?") < 0 ? "?" : "&") + "t=" + Date.now(), { cache: "no-store" })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+    }
+
+    function loadLive() {
+      return fetchJSON(RAW + "/setlist.json").then(function (data) {
+        liveData = data;
+        if (!location.hash.slice(1)) renderShow(data);
+      }).catch(function () {
+        if (!location.hash.slice(1)) board.innerHTML = '<div class="empty">No show data yet.</div>';
+      });
+    }
+
+    function loadArchiveList() {
+      return fetchJSON(RAW + "/setlists/index.json").then(function (idx) {
+        var shows = (idx && idx.shows) || [];
+        if (!shows.length) { listEl.innerHTML = '<div class="empty">No shows kept yet.</div>'; return; }
+        var h = "", year = "";
+        shows.forEach(function (s) {
+          var y = (s.showdate || "").slice(0, 4);
+          if (y !== year) { year = y; h += '<div class="yearhead">' + esc(y) + "</div>"; }
+          h += '<a class="show-item" href="#' + esc(s.showdate) + '"><span class="d">' + esc(fmtDate(s.showdate)) + "</span>" +
+            '<span class="v">' + esc([s.venue, [s.city, s.state].filter(Boolean).join(", ")].filter(Boolean).join(" — ")) + "</span>" +
+            (s.tag ? '<span class="tag2">' + esc(s.tag) + "</span>" : "") + "</a>";
+        });
+        listEl.innerHTML = h;
+      }).catch(function () {
+        listEl.innerHTML = '<div class="empty">Archive unavailable.</div>';
+      });
+    }
+
+    function route() {
+      var d = location.hash.slice(1);
+      if (/^\d{4}-\d{2}-\d{2}$/.test(d)) {
+        board.innerHTML = '<div class="empty">Loading…</div>';
+        fetchJSON(RAW + "/setlists/" + d + ".json")
+          .then(function (data) { renderShow(data, { archive: true }); })
+          .catch(function () { board.innerHTML = '<div class="empty">Couldn’t load that show.</div>'; });
+      } else if (liveData) {
+        renderShow(liveData);
+      } else {
+        loadLive();
+      }
+      var b = document.querySelector(".section-head");
+      if (b) b.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    window.addEventListener("hashchange", route);
+    loadLive();
+    loadArchiveList();
+    timer = setInterval(loadLive, 60 * 1000);
+    if (location.hash.slice(1)) route();
+  })();
+  </script>
+</body>
+</html>
