@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Personal dashboard: inbox triage and GitHub activity, refreshed twice daily.">
+<meta name="description" content="Personal dashboard: training, fantasy football, inbox triage, run conditions and GitHub activity, refreshed twice daily.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f9f9f7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0d0d0d" media="(prefers-color-scheme: dark)">
@@ -114,6 +114,7 @@
 
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   @media (max-width: 760px) { .grid2 { grid-template-columns: 1fr; } }
+  .stack { margin-top: 16px; }
   .card {
     background: var(--surface-1); border: 1px solid var(--border);
     border-radius: 12px; padding: 18px 18px 16px;
@@ -152,6 +153,7 @@
     min-height: 2px; transition: opacity .12s ease;
   }
   .sbar.today i { background: repeating-linear-gradient(135deg, var(--series-1) 0 4px, transparent 4px 8px), var(--series-1); opacity: .55; }
+  .sbar.zero i { background: var(--status-critical); opacity: .45; }
   .sbar:hover i { opacity: .75; }
   .sbar b { font-size: 10px; font-weight: 600; color: var(--text-muted); text-align: center; margin-top: 4px; font-variant-numeric: tabular-nums; }
   .spark-axis { display: flex; gap: 6px; }
@@ -194,6 +196,7 @@
   .tag.setup    { border-color: var(--baseline); color: var(--text-secondary); }
   .tag.pr       { border-color: var(--series-1); color: var(--series-1); }
   .tag.stale    { border-color: var(--status-warning); color: var(--text-secondary); }
+  .tag.good     { border-color: var(--series-3); color: var(--series-3); }
   .item .t { font-size: 13.5px; line-height: 1.35; }
   .item .m { font-size: 12px; color: var(--text-muted); margin-top: 1px; }
   .item a { color: inherit; }
@@ -213,11 +216,15 @@
     flex: none; font-size: 11px; font-weight: 600; color: var(--text-secondary);
     font-variant-numeric: tabular-nums; padding-top: 2px; width: 92px;
   }
-  /* phish predictor */
+
+  /* full-width cards */
   .full { margin-top: 16px; }
+  .hero { margin-top: 0; margin-bottom: 16px; }
   .picks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
   @media (max-width: 900px) { .picks { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 460px) { .picks { grid-template-columns: 1fr; } }
+  .picks.two { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 560px) { .picks.two { grid-template-columns: 1fr; } }
   .pick {
     display: flex; gap: 8px; align-items: baseline;
     border: 1px solid var(--border); border-radius: 8px;
@@ -230,6 +237,7 @@
   .pick.lock { border-color: var(--series-1); }
   .pick.lock b { color: var(--series-1); }
   .pick .why { font-size: 10px; color: var(--text-muted); margin-left: auto; flex: none; }
+  .pick .pos { font-size: 10px; font-weight: 700; color: var(--text-muted); }
   .acc { display: flex; flex-direction: column; gap: 9px; margin-bottom: 4px; }
   .accrow {
     display: grid; grid-template-columns: minmax(140px, 265px) 1fr 62px;
@@ -239,6 +247,23 @@
   .accbar i { display: block; height: 100%; border-radius: 4px; background: var(--series-1); }
   .accbar i.pass { background: var(--series-3); }
   .accrow .n { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+
+  /* weather strip */
+  .wx { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; margin-top: 2px; }
+  .wxd { border: 1px solid var(--border); border-radius: 8px; padding: 7px 3px; text-align: center; }
+  .wxd .dow { font-size: 10px; font-weight: 700; color: var(--text-muted); letter-spacing: .04em; }
+  .wxd .hi { font-size: 16px; font-weight: 700; line-height: 1.3; font-variant-numeric: tabular-nums; }
+  .wxd .lo { font-size: 10px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+  .wxd.hot { border-color: var(--status-critical); }
+  .wxd.hot .hi { color: var(--status-critical); }
+  .wxd.best { border-color: var(--series-3); }
+  .wxd.best .hi { color: var(--series-3); }
+  .alert {
+    display: flex; gap: 8px; align-items: baseline; font-size: 12px;
+    color: var(--text-secondary); border: 1px solid var(--status-warning);
+    border-radius: 8px; padding: 8px 10px; margin-bottom: 12px; line-height: 1.4;
+  }
+  .alert b { color: var(--text-primary); }
 
   .note {
     margin-top: 14px; font-size: 12px; color: var(--text-muted);
@@ -265,17 +290,18 @@
   }
 </style>
 </head>
-<body data-updated="2026-07-26T07:05:00-05:00">
+<body data-updated="2026-07-26T12:15:00-05:00">
 <a class="skip no-print" href="#main">Skip to dashboard</a>
 <div class="wrap">
   <header>
     <div class="masthead">
       <h1>Vlad's Dashboard</h1>
       <span class="live-pill" id="live-pill"><span class="live-dot"></span><span id="live-text">LIVE</span></span>
-      <span class="updated">Updated <b>Sun, Jul 26, 2026 · 7:05 AM CT</b> &middot; <span id="rel">just now</span></span>
+      <span class="updated">Updated <b>Sun, Jul 26, 2026 · 12:15 PM CT</b> &middot; <span id="rel">just now</span></span>
     </div>
     <div class="toolbar no-print">
       <button class="btn" id="theme-btn" type="button" aria-label="Theme: Auto (click to change)">Theme: Auto</button>
+      <a class="btn" href="https://www.strava.com/athlete/training">Open Strava &rarr;</a>
       <a class="btn" href="https://mail.google.com/mail/u/0/#search/in%3Ainbox+is%3Aunread">Open unread mail &rarr;</a>
       <a class="btn" href="https://github.com/pulls">Open pull requests &rarr;</a>
       <span class="btn" style="cursor:default">PUBLIC &middot; Redacted copy &mdash; safe to share.</span>
@@ -283,7 +309,160 @@
   </header>
 
   <main id="main">
+
+  <!-- ============ TRAINING (hero) ============ -->
+  <section class="card full hero" aria-labelledby="train-h">
+    <div class="card-head">
+      <div>
+        <div class="card-title" id="train-h">Training</div>
+        <div class="card-sub">stated focus: <b>Build</b> &mdash; increase VO<sub>2</sub> max to get faster</div>
+      </div>
+      <span class="src-badge">Strava &middot; live</span>
+    </div>
+
+    <div class="tiles">
+      <div class="tile" title="Days since the last recorded activity of any kind.">
+        <div class="v">7</div><div class="l">days since last activity</div>
+        <div class="d down">longest gap since early June</div>
+      </div>
+      <div class="tile" title="Running distance recorded Mon-Sun this week.">
+        <div class="v">0.0 mi</div><div class="l">run volume this week</div>
+        <div class="d down">&darr; 2.9 mi 4-week average</div>
+      </div>
+      <div class="tile" title="Fastest moving pace on a run of at least 1.5 miles in the last 8 weeks.">
+        <div class="v">7:30 /mi</div><div class="l">best recent pace</div>
+        <div class="d up">&uarr; from 12:51 /mi in early June</div>
+      </div>
+    </div>
+
+    <div class="mix-label">Run volume per week &middot; last 8 weeks
+      <span style="color:var(--text-muted)">(total 22.2 mi across 13 runs)</span></div>
+    <div class="spark" role="img" aria-label="Weekly run miles, week of Jun 1: 3.5, Jun 8: 0, Jun 15: 7.0, Jun 22: 7.7, Jun 29: 0, Jul 6: 2.1, Jul 13: 1.9, Jul 20: 0">
+      <div class="sbar" title="Week of Jun 1: 3.5 mi over 3 runs"><i style="height:44.6%"></i><b>3.5</b></div><div class="sbar zero" title="Week of Jun 8: no recorded activity"><i style="height:2%"></i><b>0</b></div><div class="sbar" title="Week of Jun 15: 7.0 mi over 5 runs, plus 2 lifts"><i style="height:90.7%"></i><b>7.0</b></div><div class="sbar" title="Week of Jun 22: 7.7 mi over 3 runs — peak week"><i style="height:100.0%"></i><b>7.7</b></div><div class="sbar zero" title="Week of Jun 29: 1 lift, no running"><i style="height:2%"></i><b>0</b></div><div class="sbar" title="Week of Jul 6: 2.1 mi over 1 run, plus 1 lift"><i style="height:26.5%"></i><b>2.1</b></div><div class="sbar" title="Week of Jul 13: 1.9 mi over 1 run, plus 1 lift and 1 stair session"><i style="height:25.0%"></i><b>1.9</b></div><div class="sbar today zero" title="Week of Jul 20: no recorded activity (current week)"><i style="height:2%"></i><b>0</b></div>
+    </div>
+    <div class="spark-axis" aria-hidden="true"><span>Jun 1</span><span>Jun 8</span><span>Jun 15</span><span>Jun 22</span><span>Jun 29</span><span>Jul 6</span><span>Jul 13</span><span>Jul 20</span></div>
+    <details class="tableview">
+      <summary>View as table</summary>
+      <table>
+        <thead><tr><th scope="col">Week of</th><th scope="col" class="n">Run miles</th><th scope="col" class="n">Runs</th><th scope="col" class="n">Lifts</th></tr></thead>
+        <tbody><tr><th scope="row">Jun 1</th><td class="n">3.5</td><td class="n">3</td><td class="n">0</td></tr><tr><th scope="row">Jun 8</th><td class="n">0.0</td><td class="n">0</td><td class="n">0</td></tr><tr><th scope="row">Jun 15</th><td class="n">7.0</td><td class="n">5</td><td class="n">2</td></tr><tr><th scope="row">Jun 22</th><td class="n">7.7</td><td class="n">3</td><td class="n">0</td></tr><tr><th scope="row">Jun 29</th><td class="n">0.0</td><td class="n">0</td><td class="n">1</td></tr><tr><th scope="row">Jul 6</th><td class="n">2.1</td><td class="n">1</td><td class="n">1</td></tr><tr><th scope="row">Jul 13</th><td class="n">1.9</td><td class="n">1</td><td class="n">1</td></tr><tr><th scope="row">Jul 20 (current)</th><td class="n">0.0</td><td class="n">0</td><td class="n">0</td></tr></tbody>
+      </table>
+    </details>
+
+    <div class="sect-label" style="margin-top:16px">Moving pace &middot; every run over 1.5 miles, newest first</div>
+    <div class="mix-label">Green clears the 8:17 /mi needed for the 25:45 5K currently predicted from your zones</div>
+    <div class="acc"><div class="accrow"><span>Jul 19 <span style="color:var(--text-muted)">&middot; 1.93 mi</span></span><span class="accbar" role="img" aria-label="7 minutes 30 seconds per mile"><i class="pass" style="width:100%"></i></span><span class="n">7:30</span></div><div class="accrow"><span>Jul 12 <span style="color:var(--text-muted)">&middot; 2.05 mi</span></span><span class="accbar" role="img" aria-label="8 minutes 16 seconds per mile"><i class="pass" style="width:90.8%"></i></span><span class="n">8:16</span></div><div class="accrow"><span>Jun 28 <span style="color:var(--text-muted)">&middot; 3.30 mi</span></span><span class="accbar" role="img" aria-label="9 minutes 31 seconds per mile"><i style="width:78.8%"></i></span><span class="n">9:31</span></div><div class="accrow"><span>Jun 23 <span style="color:var(--text-muted)">&middot; 4.02 mi</span></span><span class="accbar" role="img" aria-label="9 minutes 22 seconds per mile"><i style="width:80.1%"></i></span><span class="n">9:22</span></div><div class="accrow"><span>Jun 15 <span style="color:var(--text-muted)">&middot; 3.10 mi</span></span><span class="accbar" role="img" aria-label="10 minutes 50 seconds per mile"><i style="width:69.3%"></i></span><span class="n">10:50</span></div></div>
+
+    <div class="note">
+      Two trends are pulling in opposite directions. Speed is genuinely improving &mdash; moving pace has
+      come down from 12:51 /mi in early June to 7:30 /mi on Jul 19, and the last two runs both cleared the
+      8:17 /mi that the predicted 25:45 5K implies. Volume has gone the other way: the Jun 22 peak week was
+      7.7 miles, the last four weeks average 2.9, and the current week is empty at seven days since any
+      recorded session.
+      <br><br>
+      For a stated VO<sub>2</sub> max build, the shape of that is backwards. Short and fast is the right
+      stimulus, but it only compounds on top of an aerobic base, and the base is where the miles went.
+      The other thing worth fixing: FTP is an estimate rather than a measured number, and the 5K time is a
+      prediction rather than a result, so every zone on this page is derived from a race you have not
+      actually run. One timed 5K would replace all of it with real data.
+    </div>
+  </section>
+
   <div class="grid2">
+
+    <!-- ============ FANTASY FOOTBALL ============ -->
+    <section class="card" aria-labelledby="ff-h">
+      <div class="card-head">
+        <div>
+          <div class="card-title" id="ff-h">Fantasy Football</div>
+          <div class="card-sub">2026 draft board &middot; consensus ADP, PPR</div>
+        </div>
+        <span class="src-badge">public ADP &middot; live</span>
+      </div>
+
+      <div class="tiles">
+        <div class="tile" title="Days until the NFL Kickoff Game on September 9, 2026.">
+          <div class="v">45</div><div class="l">days to kickoff</div>
+          <div class="d">Wed, Sep 9 &middot; NE at SEA</div>
+        </div>
+        <div class="tile" title="Consensus first overall pick by average draft position.">
+          <div class="v">1.01</div><div class="l">Jahmyr Gibbs</div>
+          <div class="d">ADP 1.7 &middot; Bijan 1.8, coin flip</div>
+        </div>
+        <div class="tile" title="Most home leagues draft in the two weeks before Week 1.">
+          <div class="v">Aug</div><div class="l">draft window</div>
+          <div class="d">board refreshes twice daily</div>
+        </div>
+      </div>
+
+      <div class="sect-label">Round 1 &middot; top 12 by ADP</div>
+      <div class="picks two">
+        <div class="pick lock"><b>1</b><span>Jahmyr Gibbs <span class="pos">RB</span></span><span class="why">1.7</span></div>
+        <div class="pick lock"><b>2</b><span>Bijan Robinson <span class="pos">RB</span></span><span class="why">1.8</span></div>
+        <div class="pick"><b>3</b><span>Ja'Marr Chase <span class="pos">WR</span></span><span class="why">3.3</span></div>
+        <div class="pick"><b>4</b><span>Puka Nacua <span class="pos">WR</span></span><span class="why">4.3</span></div>
+        <div class="pick"><b>5</b><span>Jaxon Smith-Njigba <span class="pos">WR</span></span><span class="why">5.8</span></div>
+        <div class="pick"><b>6</b><span>Christian McCaffrey <span class="pos">RB</span></span><span class="why">6.5</span></div>
+        <div class="pick"><b>7</b><span>Jonathan Taylor <span class="pos">RB</span></span><span class="why">8.0</span></div>
+        <div class="pick"><b>8</b><span>Amon-Ra St. Brown <span class="pos">WR</span></span><span class="why">8.3</span></div>
+        <div class="pick"><b>9</b><span>CeeDee Lamb <span class="pos">WR</span></span><span class="why">11.5</span></div>
+        <div class="pick"><b>10</b><span>James Cook <span class="pos">RB</span></span><span class="why">11.6</span></div>
+        <div class="pick"><b>11</b><span>Ashton Jeanty <span class="pos">RB</span></span><span class="why">12.3</span></div>
+        <div class="pick"><b>12</b><span>Justin Jefferson <span class="pos">WR</span></span><span class="why">12.7</span></div>
+      </div>
+
+      <div class="sect-label">Rounds 2&ndash;3 &middot; the turn</div>
+      <div class="picks two">
+        <div class="pick"><b>13</b><span>De'Von Achane <span class="pos">RB</span></span><span class="why">14.2</span></div>
+        <div class="pick"><b>14</b><span>Saquon Barkley <span class="pos">RB</span></span><span class="why">16.8</span></div>
+        <div class="pick"><b>15</b><span>Omarion Hampton <span class="pos">RB</span></span><span class="why">16.9</span></div>
+        <div class="pick"><b>16</b><span>Chase Brown <span class="pos">RB</span></span><span class="why">17.4</span></div>
+        <div class="pick"><b>17</b><span>Drake London <span class="pos">WR</span></span><span class="why">17.6</span></div>
+        <div class="pick"><b>18</b><span>Brock Bowers <span class="pos">TE</span></span><span class="why">19.7</span></div>
+        <div class="pick"><b>19</b><span>Kenneth Walker <span class="pos">RB</span></span><span class="why">20.1</span></div>
+        <div class="pick"><b>20</b><span>Derrick Henry <span class="pos">RB</span></span><span class="why">21.2</span></div>
+        <div class="pick"><b>21</b><span>Trey McBride <span class="pos">TE</span></span><span class="why">21.7</span></div>
+        <div class="pick"><b>22</b><span>Nico Collins <span class="pos">WR</span></span><span class="why">23.6</span></div>
+        <div class="pick"><b>23</b><span>A.J. Brown <span class="pos">WR</span></span><span class="why">24.3</span></div>
+        <div class="pick"><b>24</b><span>Jeremiyah Love <span class="pos">RB</span></span><span class="why">24.4</span></div>
+      </div>
+
+      <div class="sect-label">Targets and fades</div>
+      <ul class="plain">
+        <li class="item">
+          <span class="tag good">Sleeper</span>
+          <div>
+            <div class="t">Kenneth Gainwell, RB &mdash; ADP ~100</div>
+            <div class="m">Career highs last year: 1,023 scrimmage yards, 8 TDs, 73 catches. Lands in a committee on an offense that targets backs heavily &mdash; PPR floor well above his cost.</div>
+          </div>
+        </li>
+        <li class="item">
+          <span class="tag good">Breakout</span>
+          <div>
+            <div class="t">Bhayshul Tuten, RB &mdash; ADP ~60</div>
+            <div class="m">386 yards and 7 TDs as a backup rookie, scored in all four games with 9+ touches, fastest 40 among 2025 draft-class backs. Steps into the primary role after Etienne's departure.</div>
+          </div>
+        </li>
+        <li class="item">
+          <span class="tag deadline">Bust</span>
+          <div>
+            <div class="t">Sam Darnold, QB</div>
+            <div class="m">Finished QB14, projects QB20. Run-first offense ranked third in rushing attempts, 20 turnovers last season, negligible rushing floor of his own. Let someone else pay for the Super Bowl.</div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="note">
+        Board reads PPR consensus ADP; half-PPR pushes the backs up and standard pushes Chase and Nacua
+        down a slot or two. The 1.01 is effectively a coin flip &mdash; Gibbs and Robinson are separated by
+        0.1 of a pick, which is noise. From the turn onward the shape of this board favours taking the
+        elite tight ends earlier than usual: Bowers and McBride go inside the top 22 while the WR room
+        stays deep into round four, so the positional edge is at TE, not receiver.
+        <br><br>
+        In September this panel switches from a draft board to weekly start/sit calls. That needs your
+        roster, which no connected service exposes &mdash; send it once and it can be tracked from there.
+      </div>
+    </section>
 
     <!-- ============ INBOX ============ -->
     <section class="card" aria-labelledby="inbox-h">
@@ -309,7 +488,6 @@
           <div class="d">11 of ~201 are people</div>
         </div>
       </div>
-
 
       <div class="mix-label">7-day mix (Gmail estimate)</div>
       <div class="mixbar" role="img" aria-label="Inbox mix: Promos and updates ~190, Primary 6, Social 5">
@@ -344,7 +522,7 @@
         <li class="item">
           <span class="tag deadline">Payment</span>
           <div>
-            <div class="t">1 subscription suspended for non-payment &mdash; new since last refresh</div>
+            <div class="t">1 subscription suspended for non-payment</div>
             <div class="m">details in the private dashboard</div>
           </div>
         </li>
@@ -387,11 +565,104 @@
       </div>
     </section>
 
+  </div>
+
+  <div class="grid2 stack">
+
+    <!-- ============ RUN CONDITIONS ============ -->
+    <section class="card" aria-labelledby="run-h">
+      <div class="card-head">
+        <div>
+          <div class="card-title" id="run-h">Run Conditions</div>
+          <div class="card-sub">7-day outlook &middot; nearest trailhead</div>
+        </div>
+        <span class="src-badge">AllTrails &middot; live</span>
+      </div>
+
+      <div class="alert" role="status">
+        <b>Heat advisory</b>
+        <span>Excessive heat expected. Six of the next seven days top 90&deg;F, and overnight lows never drop below 73&deg;F &mdash; there is no cool part of the afternoon this week.</span>
+      </div>
+
+      <div class="mix-label">Daily high / low &deg;F</div>
+      <div class="wx" role="img" aria-label="Seven day forecast highs and lows: Sunday 91 over 73, Monday 90 over 73, Tuesday 96 over 74, Wednesday 92 over 78, Thursday 92 over 74, Friday 94 over 73, Saturday 83 over 75">
+        <div class="wxd hot"><div class="dow">SUN</div><div class="hi">91</div><div class="lo">73</div></div>
+        <div class="wxd hot"><div class="dow">MON</div><div class="hi">90</div><div class="lo">73</div></div>
+        <div class="wxd hot"><div class="dow">TUE</div><div class="hi">96</div><div class="lo">74</div></div>
+        <div class="wxd hot"><div class="dow">WED</div><div class="hi">92</div><div class="lo">78</div></div>
+        <div class="wxd hot"><div class="dow">THU</div><div class="hi">92</div><div class="lo">74</div></div>
+        <div class="wxd hot"><div class="dow">FRI</div><div class="hi">94</div><div class="lo">73</div></div>
+        <div class="wxd best"><div class="dow">SAT</div><div class="hi">83</div><div class="lo">75</div></div>
+      </div>
+      <details class="tableview">
+        <summary>View as table</summary>
+        <table>
+          <thead><tr><th scope="col">Day</th><th scope="col" class="n">High</th><th scope="col" class="n">Low</th></tr></thead>
+          <tbody><tr><th scope="row">Sunday</th><td class="n">91</td><td class="n">73</td></tr><tr><th scope="row">Monday</th><td class="n">90</td><td class="n">73</td></tr><tr><th scope="row">Tuesday</th><td class="n">96</td><td class="n">74</td></tr><tr><th scope="row">Wednesday</th><td class="n">92</td><td class="n">78</td></tr><tr><th scope="row">Thursday</th><td class="n">92</td><td class="n">74</td></tr><tr><th scope="row">Friday</th><td class="n">94</td><td class="n">73</td></tr><tr><th scope="row">Saturday</th><td class="n">83</td><td class="n">75</td></tr></tbody>
+        </table>
+      </details>
+
+      <div class="sect-label">This week's window</div>
+      <ul class="plain">
+        <li class="item">
+          <span class="tag good">Best</span>
+          <div>
+            <div class="t">Saturday, any time &mdash; 83&deg;F high</div>
+            <div class="m">The only day all week under 90. If one longer run gets done, put it here.</div>
+          </div>
+        </li>
+        <li class="item">
+          <span class="tag stale">Daily</span>
+          <div>
+            <div class="t">Before 8:00 AM, every other day</div>
+            <div class="m">Lows land 73&ndash;78&deg;F just before dawn. Your June block already ran at 6:25&ndash;8:41 AM, so this is a return to what worked, not a new habit.</div>
+          </div>
+        </li>
+        <li class="item">
+          <span class="tag deadline">Avoid</span>
+          <div>
+            <div class="t">Tuesday afternoon &mdash; 96&deg;F</div>
+            <div class="m">Week's peak. Wednesday is the worst overnight at a 78&deg;F low, so Wednesday morning offers the least relief.</div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="sect-label">Trail options nearby</div>
+      <ul class="plain">
+        <li class="item">
+          <span class="tag receipt">5.9 mi</span>
+          <div>
+            <div class="t">5.2 mi moderate loop &middot; 423 ft gain &middot; 4.7&#9733;</div>
+            <div class="m">Closest trailhead of the four. Shaded ridge running, and the flattest profile here &mdash; the sane option in this heat.</div>
+          </div>
+        </li>
+        <li class="item">
+          <span class="tag receipt">10.1 mi</span>
+          <div>
+            <div class="t">3.4 mi moderate loop &middot; 360 ft gain &middot; 4.5&#9733;</div>
+            <div class="m">Waterfall and river on route, which matters at 90&deg;F. Shortest of the four.</div>
+          </div>
+        </li>
+        <li class="item">
+          <span class="tag receipt">12.7 mi</span>
+          <div>
+            <div class="t">4.4 mi moderate loop &middot; 751 ft gain &middot; 4.8&#9733;</div>
+            <div class="m">Highest rated and the most climbing. Save it for Saturday.</div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="note">
+        Trail names and links are withheld from this public copy because they would disclose the metro
+        area; distances are from home. The private dashboard names them.
+      </div>
+    </section>
+
     <!-- ============ GITHUB ============ -->
     <section class="card" aria-labelledby="gh-h">
       <div class="card-head">
         <div>
-          <div class="card-title" id="gh-h">GitHub Activity</div>
+          <div class="card-title" id="gh-h">GitHub</div>
           <div class="card-sub">github.com/vlad-hub86 &middot; 4 repos</div>
         </div>
         <span class="src-badge">GitHub &middot; live</span>
@@ -412,7 +683,6 @@
         </div>
       </div>
 
-
       <div class="mix-label">Commits per day &middot; last 7 days
         <span style="color:var(--text-muted)">(total 210)</span></div>
       <div class="spark" role="img" aria-label="Commits per day, Mon Jul 20: 15, Tue Jul 21: 16, Wed Jul 22: 16, Thu Jul 23: 94, Fri Jul 24: 28, Sat Jul 25: 30, Sun Jul 26: 11">
@@ -421,34 +691,26 @@
       <div class="spark-axis" aria-hidden="true"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
       <details class="tableview">
         <summary>View as table</summary>
-        <table><caption class="sr-only"></caption>
+        <table>
           <thead><tr><th scope="col">Day</th><th scope="col" class="n">Commits</th></tr></thead>
           <tbody><tr><th scope="row">Mon Jul 20</th><td class="n">15</td></tr><tr><th scope="row">Tue Jul 21</th><td class="n">16</td></tr><tr><th scope="row">Wed Jul 22</th><td class="n">16</td></tr><tr><th scope="row">Thu Jul 23</th><td class="n">94</td></tr><tr><th scope="row">Fri Jul 24</th><td class="n">28</td></tr><tr><th scope="row">Sat Jul 25</th><td class="n">30</td></tr><tr><th scope="row">Sun Jul 26 (today, partial)</th><td class="n">11</td></tr></tbody>
         </table>
       </details>
 
       <div class="sect-label">Open pull requests</div>
-
       <ul class="plain">
         <li class="item">
           <span class="tag pr">Yours</span>
           <div>
             <div class="t"><a href="https://github.com/vlad-hub86/miajune-site/pull/6">miajune-site #6</a> &mdash; Online membership signup with contract flow</div>
-            <div class="m">Yours &middot; open 3 days &middot; still needs a dedicated Formspree endpoint + Square contract template before it goes live</div>
-            <div class="rowlinks">
-              <a href="https://github.com/vlad-hub86/miajune-site/pull/6/files">Review diff</a>
-              <a href="https://github.com/vlad-hub86/miajune-site/pull/6#partial-pull-merging">Merge</a>
-            </div>
+            <div class="m">Open 3 days &middot; needs a dedicated Formspree endpoint and a Square contract template before it goes live</div>
           </div>
         </li>
         <li class="item">
           <span class="tag pr">Bot</span>
           <div>
             <div class="t"><a href="https://github.com/vlad-hub86/miajune-site/pull/5">miajune-site #5</a> &mdash; Cloudflare Workers config</div>
-            <div class="m">Duplicate of the already-merged #4 &middot; conflicts with the Jul 21 Porkbun decision &middot; recommend close</div>
-            <div class="rowlinks">
-              <a href="https://github.com/vlad-hub86/miajune-site/pull/5">Close it</a>
-            </div>
+            <div class="m">Duplicate of the merged #4 &middot; conflicts with the Jul 21 Porkbun decision &middot; recommend close</div>
           </div>
         </li>
         <li class="item">
@@ -460,99 +722,52 @@
         </li>
       </ul>
 
-      <div class="sect-label">Latest commits</div>
-
-      <ul class="plain">
-        <li class="commit"><span class="repo">mikeside.com</span><span>An encore is not a set <span style="color: var(--text-muted);">&middot; 3:05 AM</span></span></li>
-        <li class="commit"><span class="repo">miajune-site</span><span>Add image embedding support to blog post bodies (#3) <span style="color: var(--text-muted);">&middot; 2:58 AM</span></span></li>
-        <li class="commit"><span class="repo">mikeside.com</span><span>Fix two donut defects found testing the live dashboard <span style="color: var(--text-muted);">&middot; 2:58 AM</span></span></li>
-        <li class="commit"><span class="repo">mikeside.com</span><span>Point the archive list at the new show pages + surface tour stats <span style="color: var(--text-muted);">&middot; 2:14 AM</span></span></li>
-        <li class="commit"><span class="repo">mikeside.com</span><span>Setlist Lizard v1: the four tracked show pages + archive wiring <span style="color: var(--text-muted);">&middot; 2:13 AM</span></span></li>
-      </ul>
+      <div class="note">
+        Commit counts are by author date in Central Time; today's bar is a partial day.
+      </div>
     </section>
 
   </div>
 
-  <!-- ============ PHISH SETLIST PREDICTOR ============ -->
-  <section class="card full" aria-labelledby="phish-h">
+  <!-- ============ PHISH SETLIST PREDICTOR (bonus tile) ============ -->
+  <section class="card full bonus" aria-labelledby="phish-h">
     <div class="card-head">
       <div>
         <div class="card-title" id="phish-h">Phish Setlist Predictor</div>
-        <div class="card-sub">MSG summer residency &middot; each night recreates the year matching its show number</div>
+        <div class="card-sub">bonus &middot; MSG residency, each night recreates the year matching its show number</div>
       </div>
       <span class="src-badge">phish.net &middot; public setlists</span>
     </div>
 
     <div class="tiles">
-      <div class="tile" title="Held-out score of tonight's method across both scored nights, out of 40.">
-        <div class="v">19 / 40</div><div class="l">held-out accuracy</div>
-        <div class="d up">&uarr; 5 over top-20 by play count</div>
+      <div class="tile" title="Most recent scored night.">
+        <div class="v">10 / 16</div><div class="l">last night scored</div>
+        <div class="d up">Jul 25 &middot; #94 &middot; model v7</div>
       </div>
-      <div class="tile" title="Simulated shows drawn to compare candidate slates.">
-        <div class="v">100k</div><div class="l">shows simulated</div>
-        <div class="d">3 scored slates &middot; 3 worlds</div>
+      <div class="tile" title="The next show in the residency and the year it is expected to recreate.">
+        <div class="v">1995</div><div class="l">next theme &middot; Mon Jul 27</div>
+        <div class="d">MSG show #95</div>
       </div>
-      <div class="tile" title="The year this show's setlist is expected to recreate.">
-        <div class="v">1994</div><div class="l">tonight's theme</div>
-        <div class="d">69 songs still unplayed</div>
+      <div class="tile" title="Nights scored so far in the residency, out of five.">
+        <div class="v">3 / 5</div><div class="l">nights scored</div>
+        <div class="d">residency ends Jul 29 &middot; #96</div>
       </div>
     </div>
 
-
-      <div class="mix-label">Backtest accuracy &middot; blind, scored against published setlists</div>
-      <div class="acc"><div class="accrow"><span>Jul 22 &middot; #92 &middot; '92 theme <span style="color:var(--text-muted)">&middot; model v1</span></span><span class="accbar" role="img" aria-label="7 of 20 correct"><i class="" style="width:35%"></i></span><span class="n">7 / 20</span></div><div class="accrow"><span>Jul 24 &middot; #93 &middot; '93 theme <span style="color:var(--text-muted)">&middot; model v2</span></span><span class="accbar" role="img" aria-label="10 of 20 correct"><i class="pass" style="width:50%"></i></span><span class="n">10 / 20</span></div><div class="accrow"><span>Jul 24 &middot; #93 &middot; tracker page <span style="color:var(--text-muted)">&middot; model v2b</span></span><span class="accbar" role="img" aria-label="6 of 20 correct"><i class="" style="width:30%"></i></span><span class="n">6 / 20</span></div></div>
-      <div class="note" style="margin-top:10px">
-        v1 keyed on tour recency: 7/20. v2 dropped recency and mapped the MSG show number to a year
-        &mdash; #92 played a 1992 setlist, #93 a 1993 one &mdash; spending every slot on that year's
-        rotation minus songs already burned in the run: 10/20. A separate blind slate on the public
-        tracker page scored 6/20 the same night, which is the useful reminder that 10/20 was partly luck.
-      </div>
-
-      <div class="sect-label" style="margin-top:16px">What 100,000 simulated shows changed</div>
-      <div class="mix-label">Rules scored held out &middot; each fully specified before it saw either night</div>
-      <div class="acc"><div class="accrow"><span>Consensus barbell &mdash; v5, tonight's method</span><span class="accbar" role="img" aria-label="19 / 40 correct"><i class="pass" style="width:48%"></i></span><span class="n">19 / 40</span></div><div class="accrow"><span>What was actually published &mdash; v1 + v2, hand-picked</span><span class="accbar" role="img" aria-label="17 / 40 correct"><i class="" style="width:42%"></i></span><span class="n">17 / 40</span></div><div class="accrow"><span>Top 20 by that year's play count</span><span class="accbar" role="img" aria-label="14 / 40 correct"><i class="" style="width:35%"></i></span><span class="n">14 / 40</span></div><div class="accrow"><span>Frequency &times; distinctiveness &mdash; v4, rejected</span><span class="accbar" role="img" aria-label="12 / 40 correct"><i class="" style="width:30%"></i></span><span class="n">12 / 40</span></div><div class="accrow"><span>Random 20 from the same pool</span><span class="accbar" role="img" aria-label="10.8 / 40 correct"><i class="" style="width:27%"></i></span><span class="n">10.8 / 40</span></div></div>
-      <div class="note" style="margin-top:10px">
-        Two results overturned the plan. First, the v3 idea of reserving a quarter of the slots for era
-        covers is <em>negative value</em>: a cover slot is worth 0.10 expected hits against 0.32 for a
-        rotation slot, because the cover pool is huge and flat &mdash; covers get played, but no
-        individual cover is a good bet. Second, v4's distinctiveness term looked strong until it was
-        tested properly; fitted on one real night and scored on the other it managed 12/40, worse than
-        just ranking by play count. Both were cut.
-        <br><br>
-        What survived is duller and works better. Both real setlists drew from the <em>middle</em> of
-        the theme year's ranking &mdash; median rank 29 of 101 on 7/22 and 41 of 83 on 7/24, with only
-        7 of ~25 songs coming from the top 20 either night. Sweeping the head/mid-depth split across all
-        21 settings, every one from 0 to 17 head picks beat a straight top-20. So tonight's slate votes
-        across the whole family rather than trusting the single best split, which on two shows is noise.
-        Held out, that construction scores 19/40 &mdash; and 11/20 on 7/22, the best any method has
-        managed on that night. Expected tonight: <b>9.3 of 20</b>, averaged over three different
-        assumptions about how a setlist gets built.
-        <br><br>
-        The honest caveat: three scored shows is a small sample, the depth kernel failed its own
-        cross-validation, and the pool shrinks every night, so accuracy should rise through the run
-        for reasons that have nothing to do with the model getting smarter.
-      </div>
-
-      <div class="sect-label">Tonight's 20 &middot; Sat, Jul 25 &middot; Madison Square Garden &middot; MSG show #94 &middot; expected theme 1994</div>
-      <div class="mix-label" style="margin-top:12px">Head of the rotation &mdash; top 10 of the 69 &rsquo;94 songs still unplayed</div><div class="picks"><div class="pick lock"><b>1</b><span>Sample in a Jar</span><span class="why">72 plays</span></div><div class="pick lock"><b>2</b><span>Julius</span><span class="why">65 plays</span></div><div class="pick"><b>3</b><span>Down with Disease</span></div><div class="pick"><b>4</b><span>Rift</span></div><div class="pick"><b>5</b><span>Poor Heart</span></div><div class="pick"><b>6</b><span>Cavern</span></div><div class="pick"><b>7</b><span>Scent of a Mule</span></div><div class="pick"><b>8</b><span>It's Ice</span></div><div class="pick"><b>9</b><span>You Enjoy Myself</span></div><div class="pick"><b>10</b><span>Fee</span></div></div><div class="mix-label" style="margin-top:12px">Mid-depth &mdash; ranks 14&ndash;22, where both scored nights actually drew from</div><div class="picks"><div class="pick"><b>11</b><span>Amazing Grace</span></div><div class="pick"><b>12</b><span>Simple</span></div><div class="pick"><b>13</b><span>Wilson</span></div><div class="pick"><b>14</b><span>Nellie Kane</span></div><div class="pick"><b>15</b><span>The Squirming Coil</span></div><div class="pick"><b>16</b><span>Lifeboy</span></div><div class="pick"><b>17</b><span>Ginseng Sullivan</span></div></div><div class="mix-label" style="margin-top:12px">Deep cuts with a 1994 fingerprint &mdash; ranks 24&ndash;28</div><div class="picks"><div class="pick"><b>18</b><span>Mound</span></div><div class="pick"><b>19</b><span>Sleeping Monkey</span></div><div class="pick"><b>20</b><span>Foreplay/Long Time</span><span class="why">flyer</span></div></div>
-      <details class="tableview">
-        <summary>View as table</summary>
-        <table>
-          <thead><tr><th scope="col">#</th><th scope="col">Song</th><th scope="col">Bucket</th></tr></thead>
-          <tbody><tr><th scope="row">1</th><td>Sample in a Jar</td><td>Head</td></tr><tr><th scope="row">2</th><td>Julius</td><td>Head</td></tr><tr><th scope="row">3</th><td>Down with Disease</td><td>Head</td></tr><tr><th scope="row">4</th><td>Rift</td><td>Head</td></tr><tr><th scope="row">5</th><td>Poor Heart</td><td>Head</td></tr><tr><th scope="row">6</th><td>Cavern</td><td>Head</td></tr><tr><th scope="row">7</th><td>Scent of a Mule</td><td>Head</td></tr><tr><th scope="row">8</th><td>It's Ice</td><td>Head</td></tr><tr><th scope="row">9</th><td>You Enjoy Myself</td><td>Head</td></tr><tr><th scope="row">10</th><td>Fee</td><td>Head</td></tr><tr><th scope="row">11</th><td>Amazing Grace</td><td>Mid-depth</td></tr><tr><th scope="row">12</th><td>Simple</td><td>Mid-depth</td></tr><tr><th scope="row">13</th><td>Wilson</td><td>Mid-depth</td></tr><tr><th scope="row">14</th><td>Nellie Kane</td><td>Mid-depth</td></tr><tr><th scope="row">15</th><td>The Squirming Coil</td><td>Mid-depth</td></tr><tr><th scope="row">16</th><td>Lifeboy</td><td>Mid-depth</td></tr><tr><th scope="row">17</th><td>Ginseng Sullivan</td><td>Mid-depth</td></tr><tr><th scope="row">18</th><td>Mound</td><td>Deep cut</td></tr><tr><th scope="row">19</th><td>Sleeping Monkey</td><td>Deep cut</td></tr><tr><th scope="row">20</th><td>Foreplay/Long Time</td><td>Deep cut</td></tr></tbody>
-        </table>
-        <table>
-          <thead><tr><th scope="col">Rule</th><th scope="col">Held-out score</th></tr></thead>
-          <tbody><tr><th scope="row">Consensus barbell - v5, tonight's method</th><td class="n">19 / 40</td></tr><tr><th scope="row">What was actually published - v1 + v2, hand-picked</th><td class="n">17 / 40</td></tr><tr><th scope="row">Top 20 by that year's play count</th><td class="n">14 / 40</td></tr><tr><th scope="row">Frequency x distinctiveness - v4, rejected</th><td class="n">12 / 40</td></tr><tr><th scope="row">Random 20 from the same pool</th><td class="n">10.8 / 40</td></tr></tbody>
-        </table>
-      </details>
+    <div class="note" style="margin-top:0">
+      The model, its version history, the full scoring table and each night's 20 picks live on the
+      standalone page &mdash; <a href="/projects/setlist-predictions/">open the setlist predictor &rarr;</a>.
+      That page is the single source of truth; this tile mirrors it.
+    </div>
   </section>
+
   </main>
 
   <footer>
-    Sources: Gmail (aggregate counts only) and GitHub (vlad-hub86), pulled live. All data on this page is real &mdash; no sample data.
-    Unread and mix counts are Gmail estimates, rounded. Commit counts are by author date in Central Time;
-    today's bar is a partial day. Auto-refresh: twice daily (7&nbsp;AM &amp; 3&nbsp;PM CT) via a scheduled Claude task &mdash;
+    Sources: Strava, Gmail (aggregate counts only), public fantasy football ADP, AllTrails and GitHub
+    (vlad-hub86), all pulled live. No sample data.
+    Unread and mix counts are Gmail estimates, rounded. Training figures cover Mon&ndash;Sun weeks and count
+    only recorded activities. Auto-refresh: twice daily (7&nbsp;AM &amp; 3&nbsp;PM CT) via a scheduled Claude task &mdash;
     <span id="next-refresh">next refresh pending</span>.
     <noscript><br>JavaScript is off, so the relative times and theme toggle are inactive &mdash; the timestamp above is exact.</noscript>
   </footer>
