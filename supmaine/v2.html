@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080F18" id="meta-theme">
+<title>SupMaine v2 Beta — Maine, Aug 4–11 2026</title>
+<meta name="description" content="Wedding weekend + coastal adventure. Aug 4–11, 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="v2.css?v=20260726a">
+</head>
+<body>
+<a class="skip" href="#route">Skip to itinerary</a>
+<div class="wrap">
+
+<header class="mast">
+  <div class="beta-tag">SupMaine v2 · Beta</div>
+  <h1 class="title">Maine,<br><em>at last</em></h1>
+  <div class="sub">Aug 4 – 11, 2026 · Vlad · Allison · Sean · one Jeep Wrangler</div>
+  <div class="mast-rule"></div>
+
+  <div class="instruments">
+    <div class="inst accent">
+      <div class="k">Countdown</div>
+      <div class="v"><b id="cd-num">—</b> <small id="cd-label">days to wheels-up</small></div>
+    </div>
+    <div class="inst">
+      <div class="k">Days</div>
+      <div class="v">8 <small>Tue → Tue</small></div>
+    </div>
+    <div class="inst tide">
+      <div class="k">The main event</div>
+      <div class="v">Sat 8 <small>3:30 PM</small></div>
+    </div>
+    <div class="inst">
+      <div class="k">Weather</div>
+      <div class="v" id="weather-chip"><b id="wx-temp">—</b> <small id="wx-label">Portland, ME</small></div>
+    </div>
+  </div>
+
+  <div class="util">
+    <button class="ubtn" id="t-search">⌕ Search stops <kbd>⌘K</kbd></button>
+    <button class="ubtn" id="t-view">☰ Timeline</button>
+    <button class="ubtn" id="t-theme">◐ Light</button>
+    <button class="ubtn" id="t-ics">↓ Add to calendar</button>
+    <a class="ubtn" href="reservation.html">🚙 Jeep</a>
+    <a class="ubtn" href="index.html">← v1</a>
+  </div>
+</header>
+
+<nav class="dayNav" aria-label="Jump to day">
+  <div class="chips">
+    <a class="chip" href="#d1">Tue 4</a>
+    <a class="chip" href="#d2">Wed 5</a>
+    <a class="chip" href="#d3">Thu 6</a>
+    <a class="chip" href="#d4">Fri 7</a>
+    <a class="chip" href="#d5">Sat 8 💍</a>
+    <a class="chip" href="#d5b">Sun 9</a>
+    <a class="chip" href="#d6">Mon 10</a>
+    <a class="chip" href="#d7">Tue 11</a>
+  </div>
+</nav>
+
+<div class="nowbar" id="nowbar"></div>
+
+<main class="route" id="route"></main>
+
+<section class="map-section">
+  <h2 class="sec">The whole route</h2>
+  <div id="route-map"></div>
+  <div class="map-legend" id="map-legend"></div>
+</section>
+
+<section class="todo-section" id="todo-section"></section>
+<section class="pack-section" id="pack-section"></section>
+
+<footer>
+  <span>Kravchuk / Moffett expedition</span>
+  <span>v2 beta · <a href="index.html">v1 is still live here</a></span>
+</footer>
+
+</div>
+
+<!-- command palette -->
+<div class="pal-back" id="pal-back" role="dialog" aria-modal="true" aria-label="Search stops">
+  <div class="pal">
+    <input id="pal-input" type="text" placeholder="Search any stop, option or address…" autocomplete="off" spellcheck="false">
+    <div class="pal-list" id="pal-list"></div>
+    <div class="pal-foot"><span>↑↓ move</span><span>⏎ jump</span><span>esc close</span></div>
+  </div>
+</div>
+
+<div class="lb" id="lb"><div><img id="lb-img" alt=""><div class="cap" id="lb-cap"></div></div></div>
+<div class="toast" id="toast"></div>
+<div class="offbadge" id="offbadge"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="v2.js?v=20260726a"></script>
+<script src="weather.js?v=20260723a" defer></script>
+<script src="tides.js?v=20260724a" defer></script>
+<script src="photos.js?v=20260724d" defer></script>
+<script src="directions.js?v=20260724c" defer></script>
+</body>
+</html>
