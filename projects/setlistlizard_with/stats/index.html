@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tour Stats — Setlist Lizard ... With</title>
+  <meta name="description" content="Interactive Phish tour stats — song rotation, set placement, jam lengths. Click anything to drill in." />
+  <link rel="canonical" href="https://mikeside.com/projects/setlistlizard_with/stats/" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
+  <style>
+    .wrapx { max-width: 1040px; margin: 0 auto; }
+    .filters { display:flex; flex-wrap:wrap; gap:.5rem; align-items:center; min-height:2rem; margin-bottom:1.4rem; }
+    .chip { display:inline-flex; align-items:center; gap:.45rem; font-size:.76rem; letter-spacing:.06em; text-transform:uppercase;
+            background:var(--card); border:1px solid var(--accent); color:var(--accent-soft); border-radius:999px; padding:.28rem .8rem; cursor:pointer; }
+    .chip .x { font-size:1rem; line-height:1; opacity:.7; }
+    .chip:hover .x { opacity:1; }
+    .hint { font-size:.76rem; color:var(--muted); letter-spacing:.05em; }
+    .charts { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1rem; }
+    .panel { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:1.1rem 1.3rem; }
+    .panel h3 { font-family:"Fraunces",Georgia,serif; font-size:.82rem; letter-spacing:.16em; text-transform:uppercase; color:var(--accent-soft); margin:0 0 .2rem; }
+    .panel .sub { font-size:.74rem; color:var(--muted); margin-bottom:.9rem; line-height:1.5; }
+    svg { display:block; width:100%; overflow:visible; }
+    .arc, .bar, .dot { cursor:pointer; transition:opacity .15s ease; }
+    .arc:hover, .bar:hover, .dot:hover { opacity:.75; }
+    .dim { opacity:.22; }
+    .lbl { font-size:11px; fill:var(--muted); }
+    .val { font-size:11px; fill:var(--muted); font-variant-numeric:tabular-nums; }
+    .nm  { font-size:12px; fill:var(--text); }
+    .center-n { font-family:"Fraunces",Georgia,serif; font-size:26px; fill:var(--accent-soft); text-anchor:middle; }
+    .center-l { font-size:10px; fill:var(--muted); text-anchor:middle; letter-spacing:.14em; text-transform:uppercase; }
+    .showlist { display:flex; flex-direction:column; gap:.6rem; margin-top:1rem; }
+    .showlist a { display:flex; justify-content:space-between; gap:1rem; align-items:baseline; padding:.8rem 1rem;
+                  background:var(--card); border:1px solid var(--border); border-radius:var(--radius); color:var(--text); font-size:.9rem; }
+    .showlist a:hover { border-color:var(--accent); text-decoration:none; }
+    .showlist .m { color:var(--muted); font-size:.8rem; }
+    .tt { position:fixed; pointer-events:none; background:#0d1117; border:1px solid var(--border); border-radius:8px;
+          padding:.45rem .7rem; font-size:.78rem; color:var(--text); z-index:50; opacity:0; transition:opacity .1s; max-width:240px; }
+    .empty { color:var(--muted); font-size:.85rem; padding:1rem 0; }
+    .srcline { text-align:center; color:var(--muted); font-size:.78rem; margin-top:2.4rem; line-height:1.7; letter-spacing:.05em; }
+    .srcline a { color:var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="/">mike<span>side</span></a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/photos/">Photos</a></li>
+        <li><a href="/videos/">Videos</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/projects/" class="active">Projects</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <section class="block" style="border-top:none;">
+      <div class="container wrapx">
+        <div class="section-head">
+          <span class="setno">Setlist Lizard ... With</span>
+          <h2>Tour stats</h2>
+          <p>Click any wedge, bar, or dot to filter everything else. The URL follows you — share the view.</p>
+        </div>
+        <div class="filters" id="filters"><span class="hint" id="hint">Loading the tour…</span></div>
+        <div class="charts">
+          <div class="panel">
+            <h3>Where songs land</h3>
+            <div class="sub">Share of songs by set. Click a wedge to isolate that slot.</div>
+            <svg id="donut" viewBox="0 0 260 200"></svg>
+          </div>
+          <div class="panel">
+            <h3>Most played</h3>
+            <div class="sub">Songs by appearances. Click a bar to follow that song across the tour.</div>
+            <svg id="bars" viewBox="0 0 320 240"></svg>
+          </div>
+          <div class="panel" style="grid-column:1/-1;">
+            <h3>Jam lengths</h3>
+            <div class="sub">Every timed song, plotted by duration. Right side is where the night went long — click a dot for that show.</div>
+            <svg id="swarm" viewBox="0 0 640 200"></svg>
+          </div>
+        </div>
+        <div class="showlist" id="showlist"></div>
+        <div class="srcline">
+          Setlist data: Phish.net · durations: phish.in · built from the shows the bot has tracked so far<br />
+          <a href="/projects/setlistlizard_with/">← all shows</a> · <a href="/projects/">all projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="tt" id="tt"></div>
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> mikeside.com</div>
+      <div><a href="/">Home</a></div>
+    </div>
+  </footer>
+  <script src="/js/main.js"></script>
+  <script>
+  (function () {
+    var TOUR = { shows: [], songs: [] };
+    var ACCENT = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim() || "#c0442f";
+    var SOFT = getComputedStyle(document.documentElement).getPropertyValue("--accent-soft").trim() || "#e08a6a";
+    var MUTED = getComputedStyle(document.documentElement).getPropertyValue("--muted").trim() || "#8b949e";
+    var filters = { set: null, song: null, show: null };
+    var tt = document.getElementById("tt");
+
+    function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+    function fmt(sec) { if (!sec) return ""; var m = Math.floor(sec / 60), s = sec % 60; return m + ":" + (s < 10 ? "0" : "") + s; }
+    function shortDate(iso) { var p = iso.split("-"); return (+p[1]) + "/" + (+p[2]); }
+
+    function rows() {
+      return TOUR.songs.filter(function (r) {
+        if (filters.set && r.set_bucket !== filters.set) return false;
+        if (filters.song && r.title !== filters.song) return false;
+        if (filters.show && r.showdate !== filters.show) return false;
+        return true;
+      });
+    }
+
+    // ---- URL state
+    function readURL() {
+      var q = new URLSearchParams(location.search);
+      filters.set = q.get("set"); filters.song = q.get("song"); filters.show = q.get("show");
+    }
+    function writeURL() {
+      var q = new URLSearchParams();
+      if (filters.set) q.set("set", filters.set);
+      if (filters.song) q.set("song", filters.song);
+      if (filters.show) q.set("show", filters.show);
+      var s = q.toString();
+      history.replaceState(null, "", s ? "?" + s : location.pathname);
+    }
+    function toggle(key, val) {
+      filters[key] = (filters[key] === val) ? null : val;
+      writeURL(); render();
+    }
+
+    function showTip(evt, html) {
+      tt.innerHTML = html; tt.style.opacity = 1;
+      var x = evt.clientX + 14, y = evt.clientY + 14;
+      if (x + 250 > window.innerWidth) x = evt.clientX - 250;
+      tt.style.left = x + "px"; tt.style.top = y + "px";
+    }
+    function hideTip() { tt.style.opacity = 0; }
+    function wire(el, tip, onClick) {
+      el.addEventListener("mousemove", function (e) { showTip(e, tip); });
+      el.addEventListener("mouseleave", hideTip);
+      el.addEventListener("click", function () { hideTip(); onClick(); });
+    }
+    function svgEl(tag, attrs) {
+      var n = document.createElementNS("http://www.w3.org/2000/svg", tag);
+      for (var k in attrs) n.setAttribute(k, attrs[k]);
+      return n;
+    }
+
+    // ---- donut: set distribution
+    function drawDonut() {
+      var svg = document.getElementById("donut"); svg.innerHTML = "";
+      var data = {}; rows().forEach(function (r) { data[r.set_bucket] = (data[r.set_bucket] || 0) + 1; });
+      var keys = Object.keys(data).sort();
+      var total = keys.reduce(function (a, k) { return a + data[k]; }, 0);
+      if (!total) { svg.appendChild(svgEl("text", { x: 130, y: 100, class: "lbl", "text-anchor": "middle" })).textContent = "no songs match"; return; }
+      var cx = 90, cy = 100, r0 = 44, r1 = 76, a = -Math.PI / 2;
+      keys.forEach(function (k, i) {
+        var frac = data[k] / total, a2 = a + frac * Math.PI * 2;
+        var large = frac > 0.5 ? 1 : 0;
+        var p = ["M", cx + r1 * Math.cos(a), cy + r1 * Math.sin(a),
+                 "A", r1, r1, 0, large, 1, cx + r1 * Math.cos(a2), cy + r1 * Math.sin(a2),
+                 "L", cx + r0 * Math.cos(a2), cy + r0 * Math.sin(a2),
+                 "A", r0, r0, 0, large, 0, cx + r0 * Math.cos(a), cy + r0 * Math.sin(a), "Z"].join(" ");
+        var op = 1 - i * 0.22;
+        var path = svgEl("path", { d: p, fill: i === 0 ? ACCENT : SOFT, "fill-opacity": Math.max(0.35, op), class: "arc" });
+        if (filters.set && filters.set !== k) path.classList.add("dim");
+        wire(path, "<b>" + esc(k) + "</b><br>" + data[k] + " songs · " + Math.round(frac * 100) + "%", function () { toggle("set", k); });
+        svg.appendChild(path);
+        var t = svgEl("text", { x: 186, y: 70 + i * 20, class: "nm" }); t.textContent = k;
+        var v = svgEl("text", { x: 186, y: 84 + i * 20, class: "val" }); v.textContent = data[k] + " songs";
+        svg.appendChild(t); svg.appendChild(v);
+        a = a2;
+      });
+      var n = svgEl("text", { x: cx, y: cy + 2, class: "center-n" }); n.textContent = total;
+      var l = svgEl("text", { x: cx, y: cy + 18, class: "center-l" }); l.textContent = "songs";
+      svg.appendChild(n); svg.appendChild(l);
+    }
+
+    // ---- bars: most played
+    function drawBars() {
+      var svg = document.getElementById("bars"); svg.innerHTML = "";
+      var c = {}; rows().forEach(function (r) { c[r.title] = (c[r.title] || 0) + 1; });
+      var arr = Object.keys(c).map(function (k) { return { t: k, n: c[k] }; })
+        .sort(function (a, b) { return b.n - a.n || a.t.localeCompare(b.t); }).slice(0, 12);
+      if (!arr.length) { return; }
+      var max = arr[0].n, x0 = 140, w = 160, bh = 14, gap = 5;
+      svg.setAttribute("viewBox", "0 0 320 " + (arr.length * (bh + gap) + 10));
+      arr.forEach(function (d, i) {
+        var y = i * (bh + gap) + 4;
+        var t = svgEl("text", { x: x0 - 8, y: y + bh - 3, class: "nm", "text-anchor": "end" });
+        t.textContent = d.t.length > 22 ? d.t.slice(0, 21) + "…" : d.t;
+        svg.appendChild(t);
+        var bw = Math.max(2, d.n / max * w);
+        var rect = svgEl("rect", { x: x0, y: y, width: bw, height: bh, rx: 3, fill: ACCENT, "fill-opacity": .75, class: "bar" });
+        if (filters.song && filters.song !== d.t) rect.classList.add("dim");
+        wire(rect, "<b>" + esc(d.t) + "</b><br>" + d.n + (d.n === 1 ? " play" : " plays"), function () { toggle("song", d.t); });
+        svg.appendChild(rect);
+        var v = svgEl("text", { x: x0 + bw + 6, y: y + bh - 3, class: "val" }); v.textContent = d.n;
+        svg.appendChild(v);
+      });
+    }
+
+    // ---- swarm: durations
+    function drawSwarm() {
+      var svg = document.getElementById("swarm"); svg.innerHTML = "";
+      var timed = rows().filter(function (r) { return r.length_secs; });
+      if (!timed.length) {
+        var t = svgEl("text", { x: 320, y: 100, class: "lbl", "text-anchor": "middle" });
+        t.textContent = "no timed songs in this slice yet"; svg.appendChild(t); return;
+      }
+      var max = Math.max.apply(null, timed.map(function (r) { return r.length_secs; }));
+      var min = Math.min.apply(null, timed.map(function (r) { return r.length_secs; }));
+      var W = 600, X0 = 20, Y = 120, span = Math.max(1, max - min);
+      svg.appendChild(svgEl("line", { x1: X0, y1: Y + 34, x2: X0 + W, y2: Y + 34, stroke: MUTED, "stroke-opacity": .3 }));
+      [0, .25, .5, .75, 1].forEach(function (f) {
+        var v = min + span * f, x = X0 + W * f;
+        var tk = svgEl("text", { x: x, y: Y + 50, class: "val", "text-anchor": "middle" });
+        tk.textContent = fmt(Math.round(v)); svg.appendChild(tk);
+      });
+      var buckets = {};
+      timed.sort(function (a, b) { return a.length_secs - b.length_secs; }).forEach(function (r) {
+        var x = X0 + (r.length_secs - min) / span * W;
+        var k = Math.round(x / 9);
+        buckets[k] = (buckets[k] || 0);
+        var row = buckets[k]++;
+        var cy = Y - (row % 9) * 11;
+        var dot = svgEl("circle", { cx: x, cy: cy, r: 4.2, fill: r.length_secs >= 900 ? SOFT : ACCENT,
+                                    "fill-opacity": .8, class: "dot" });
+        if (filters.song && filters.song !== r.title) dot.classList.add("dim");
+        if (filters.show && filters.show !== r.showdate) dot.classList.add("dim");
+        wire(dot, "<b>" + esc(r.title) + "</b><br>" + fmt(r.length_secs) + " · " + esc(r.set_display) +
+                  "<br>" + shortDate(r.showdate) + " " + esc(r.venue), function () { toggle("song", r.title); });
+        svg.appendChild(dot);
+      });
+      var lab = svgEl("text", { x: X0, y: Y + 66, class: "lbl" });
+      lab.textContent = timed.length + " timed songs · longest " + fmt(max); svg.appendChild(lab);
+    }
+
+    // ---- show list
+    function drawShows() {
+      var el = document.getElementById("showlist");
+      var keep = {}; rows().forEach(function (r) { keep[r.showdate] = true; });
+      var list = TOUR.shows.filter(function (s) { return keep[s.showdate]; });
+      if (!list.length) { el.innerHTML = '<div class="empty">Nothing matches those filters.</div>'; return; }
+      el.innerHTML = list.map(function (s) {
+        var n = rows().filter(function (r) { return r.showdate === s.showdate; }).length;
+        var extra = (filters.song || filters.set) ? n + " matching" : s.songs + " songs";
+        return '<a href="' + esc(s.url) + '"><span><b>' + esc(shortDate(s.showdate)) + "</b> " + esc(s.venue) +
+               '</span><span class="m">' + esc(extra) + (s.tag ? " · " + esc(s.tag) : "") + "</span></a>";
+      }).join("");
+    }
+
+    function drawFilters() {
+      var el = document.getElementById("filters"), bits = [];
+      ["set", "song", "show"].forEach(function (k) {
+        if (filters[k]) bits.push('<span class="chip" data-k="' + k + '">' + esc(filters[k]) + '<span class="x">×</span></span>');
+      });
+      el.innerHTML = bits.length ? bits.join("")
+        : '<span class="hint">No filters — showing all ' + TOUR.shows.length + ' tracked shows. Click a chart to drill in.</span>';
+      Array.prototype.forEach.call(el.querySelectorAll(".chip"), function (c) {
+        c.addEventListener("click", function () { filters[c.dataset.k] = null; writeURL(); render(); });
+      });
+    }
+
+    function render() { drawFilters(); drawDonut(); drawBars(); drawSwarm(); drawShows(); }
+
+    // Data comes straight from the bot's feed, so the dashboard picks up a new
+    // show the moment the bot commits it — no rebuild of this page required.
+    var RAW = "https://raw.githubusercontent.com/vlad-hub86/phish-setlist-bot/main/docs";
+    function getJSON(u) {
+      return fetch(u + (u.indexOf("?") < 0 ? "?" : "&") + "t=" + Date.now(), { cache: "no-store" })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+    }
+    function bucketOf(label) {
+      var l = String(label == null ? "1" : label).toLowerCase();
+      return l.charAt(0) === "e" ? "Encore" : "Set " + label;
+    }
+    function flatten(show) {
+      var out = [];
+      (show.sets || []).forEach(function (s) {
+        (s.songs || []).forEach(function (song, i) {
+          out.push({
+            title: (song.title || "").trim(),
+            transition: song.transition || "",
+            length_secs: song.length_secs,
+            footnote: song.footnote,
+            set_label: String(s.label),
+            set_display: s.display || ("Set " + s.label),
+            set_bucket: bucketOf(s.label),
+            pos_in_set: i + 1,
+            showdate: show.showdate,
+            venue: show.venue
+          });
+        });
+      });
+      return out;
+    }
+    function fail(msg) {
+      document.getElementById("filters").innerHTML = '<span class="hint">' + msg + "</span>";
+    }
+
+    readURL();
+    getJSON(RAW + "/setlists/index.json").then(function (idx) {
+      var list = (idx && idx.shows) || [];
+      if (!list.length) { fail("No shows tracked yet."); return; }
+      list.sort(function (a, b) { return a.showdate < b.showdate ? -1 : 1; });
+      return Promise.all(list.map(function (s) {
+        return getJSON(RAW + "/setlists/" + s.showdate + ".json")
+          .then(function (d) { d.tag = d.tag || s.tag; return d; })
+          .catch(function () { return null; });
+      })).then(function (shows) {
+        shows = shows.filter(Boolean);
+        if (!shows.length) { fail("Couldn't load any shows."); return; }
+        TOUR = {
+          shows: shows.map(function (sh) {
+            var rws = flatten(sh);
+            return {
+              showdate: sh.showdate, venue: sh.venue || "", city: sh.city || "",
+              state: sh.state || "", tag: sh.tag, songs: rws.length,
+              url: "/projects/setlistlizard_with/" + sh.showdate + "/"
+            };
+          }),
+          songs: shows.reduce(function (a, sh) { return a.concat(flatten(sh)); }, [])
+        };
+        render();
+      });
+    }).catch(function () { fail("Tour data unavailable right now — try a refresh."); });
+  })();
+  </script>
+</body>
+</html>
