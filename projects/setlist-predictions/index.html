@@ -9,98 +9,100 @@
   :root {
     color-scheme: light;
     --page:#f9f9f7; --surface-1:#fcfcfb; --surface-2:#f2f1ec;
-    --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#898781;
-    --grid:#e1e0d9; --baseline:#c3c2b7; --border:rgba(11,11,11,0.10);
-    --accent:#2a78d6; --accent-2:#eb6834; --good:#0ca30c; --good-text:#006300;
-    --warn:#fab219; --bad:#c0392b; --tierb:#8b5cf6;
+    --text-primary:#0b0b0b; --text-secondary:#4a4945; --text-muted:#6b6963;
+    --faint:#8d8b85;
+    --grid:#e1e0d9; --baseline:#b9b8ad; --border:rgba(11,11,11,0.12);
+    --accent:#2a78d6; --accent-2:#c9501e; --good:#0a8f0a; --good-text:#046004;
+    --warn:#fab219; --bad:#b8321f; --tierb:#7c3aed;
   }
   @media (prefers-color-scheme: dark) {
     :root:where(:not([data-theme="light"])) {
       color-scheme: dark;
-      --page:#0d0d0d; --surface-1:#1a1a19; --surface-2:#232320;
-      --text-primary:#ffffff; --text-secondary:#c3c2b7; --text-muted:#898781;
-      --grid:#2c2c2a; --baseline:#383835; --border:rgba(255,255,255,0.10);
-      --accent:#3987e5; --accent-2:#d95926; --good:#0ca30c; --good-text:#46d446;
-      --bad:#e8705f; --tierb:#a78bfa;
+      --page:#0d0d0d; --surface-1:#1a1a19; --surface-2:#252523;
+      --text-primary:#ffffff; --text-secondary:#d2d1c8; --text-muted:#a3a199;
+      --faint:#8d8b85;
+      --grid:#33332f; --baseline:#4a4945; --border:rgba(255,255,255,0.14);
+      --accent:#5c9ff0; --accent-2:#f0824f; --good:#22c55e; --good-text:#4ade80;
+      --bad:#f87171; --tierb:#a78bfa;
     }
   }
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background:var(--page); color:var(--text-primary); padding:24px 16px 60px; line-height:1.4; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background:var(--page); color:var(--text-primary); padding:24px 16px 60px; line-height:1.45; }
   .wrap { max-width:960px; margin:0 auto; }
-  header { margin-bottom:18px; }
-  .masthead { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 12px; }
+  .prose { max-width:70ch; }
   h1 { font-size:25px; font-weight:700; letter-spacing:-0.02em; }
-  .pill { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600; color:var(--accent-2); border:1px solid var(--border); border-radius:999px; padding:3px 10px; background:var(--surface-1); }
-  .sub { font-size:13px; color:var(--text-muted); margin-top:6px; max-width:74ch; }
-  .toolbar { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 4px; }
-  .btn { font:inherit; font-size:12.5px; font-weight:600; cursor:pointer; color:var(--text-secondary); background:var(--surface-1); border:1px solid var(--border); border-radius:8px; padding:6px 11px; }
-  .btn:hover { border-color:var(--baseline); color:var(--text-primary); }
-  .btn.warn:hover { border-color:var(--warn); }
+  .masthead { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 12px; }
+  .sub { font-size:13.5px; color:var(--text-muted); margin-top:7px; max-width:70ch; }
 
-  /* RUN SCORECARD */
-  .runcard { margin-top:18px; border:1px solid var(--border); border-radius:12px; overflow:hidden; background:var(--surface-1); }
-  .rc-head { padding:11px 15px; border-bottom:1px solid var(--grid); display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px; }
-  .rc-head .t { font-size:13px; font-weight:800; letter-spacing:0.04em; text-transform:uppercase; }
-  .rc-head .s { font-size:12px; color:var(--text-muted); font-variant-numeric:tabular-nums; }
-  .rc-head .s b { color:var(--good-text); font-size:14px; }
-  .rc-body { padding:14px 15px; }
-  .nrow { margin-bottom:20px; }
-  .nrow:last-child { margin-bottom:0; }
-  .nr-top { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px; margin-bottom:7px; }
-  .nr-top .yr { font-size:15px; font-weight:800; letter-spacing:-0.01em; }
-  .nr-top .mv { font-size:11px; font-weight:700; color:var(--text-muted); border:1px solid var(--border); border-radius:999px; padding:1px 8px; }
-  .nr-top .mv.retro { color:var(--text-muted); font-style:italic; font-weight:600; }
-  .nr-top .sc { margin-left:auto; font-size:12.5px; font-weight:700; font-variant-numeric:tabular-nums; color:var(--good-text); }
-  .nr-top .sc small { color:var(--text-muted); font-weight:600; }
-  /* bars */
-  .bars { margin:6px 0 9px; }
-  .bar { display:flex; align-items:center; gap:8px; margin-bottom:4px; font-size:11px; }
-  .bar .lb { flex:none; width:74px; color:var(--text-muted); font-weight:600; }
-  .bar .tr { flex:1; height:14px; background:var(--surface-2); border-radius:3px; overflow:hidden; }
-  .bar .fl { height:100%; border-radius:3px; }
-  .bar .fl.m { background:var(--good); }
-  .bar .fl.r { background:var(--baseline); }
-  .bar .vv { flex:none; width:34px; text-align:right; font-variant-numeric:tabular-nums; font-weight:700; color:var(--text-secondary); }
-  /* setlist chips */
-  .chips { display:flex; flex-wrap:wrap; gap:4px; }
-  .ch { font-size:11.5px; padding:2px 8px; border-radius:999px; border:1px solid var(--border); color:var(--text-muted); background:var(--surface-2); }
-  .ch.g { border-color:var(--good); color:var(--good-text); font-weight:700; background:transparent; }
-  .nr-cap { font-size:11.5px; color:var(--text-muted); margin-top:6px; line-height:1.5; }
-  .rc-foot { padding:11px 15px; border-top:1px solid var(--grid); background:var(--surface-2); font-size:11.5px; color:var(--text-muted); line-height:1.55; }
-  .rc-foot b { color:var(--text-secondary); }
-  .legend { display:flex; flex-wrap:wrap; gap:14px; font-size:11px; color:var(--text-muted); margin-top:2px; }
-  .legend span { display:flex; align-items:center; gap:5px; }
-  .sw { width:10px; height:10px; border-radius:3px; display:inline-block; }
+  /* NEXT UP hero */
+  .hero { margin-top:16px; border:2px solid var(--accent-2); border-radius:12px; overflow:hidden; }
+  .hero-h { background:var(--accent-2); color:#fff; padding:9px 15px; display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px; }
+  .hero-h .t { font-size:12px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; }
+  .hero-h .d { font-size:12px; font-weight:600; opacity:.95; }
+  .hero-b { padding:13px 15px; background:var(--surface-1); }
+  .hero-b .hl { font-size:13px; color:var(--text-secondary); max-width:72ch; }
+  .hero-calls { display:flex; flex-wrap:wrap; gap:8px; margin-top:11px; }
+  .hc { flex:1 1 190px; border:1px solid var(--border); border-radius:9px; padding:8px 11px; background:var(--surface-2); }
+  .hc .k { font-size:10px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:var(--text-muted); }
+  .hc .v { font-size:14.5px; font-weight:700; margin-top:2px; }
+  .hc .x { font-size:11px; color:var(--text-muted); margin-top:2px; }
+  .hero-b .jump { margin-top:11px; font-size:12.5px; }
+  .hero-b .jump a { color:var(--accent); font-weight:600; text-decoration:none; border-bottom:1px solid currentColor; }
 
-  .method { margin-top:14px; background:var(--surface-1); border:1px solid var(--border); border-radius:12px; padding:12px 16px; }
-  .method > summary { cursor:pointer; font-size:13px; font-weight:700; color:var(--text-primary); list-style:none; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
-  .method > summary::-webkit-details-marker { display:none; }
-  .method > summary::before { content:"▸"; color:var(--text-muted); font-size:11px; }
-  .method[open] > summary::before { content:"▾"; }
-  .method > summary .tag { font-size:11px; font-weight:600; color:var(--text-muted); border:1px solid var(--border); border-radius:999px; padding:2px 8px; }
-  .method p { font-size:12.5px; color:var(--text-secondary); margin-top:10px; max-width:78ch; }
-  .method h4 { font-size:12px; font-weight:700; margin-top:16px; letter-spacing:0.02em; }
-  .method code { font-size:11.5px; background:var(--surface-2); padding:1px 4px; border-radius:4px; }
-  .method table { border-collapse:collapse; margin-top:12px; font-size:12.5px; width:100%; max-width:660px; }
-  .method th, .method td { text-align:left; padding:5px 10px 5px 0; border-bottom:1px solid var(--grid); }
-  .method th { color:var(--text-muted); font-weight:600; }
-  .method tbody th { color:var(--text-secondary); font-weight:500; }
-  .method td.n { text-align:right; font-variant-numeric:tabular-nums; font-weight:600; white-space:nowrap; }
-  .method tr.win tbody th, .method tr.win th { color:var(--text-primary); font-weight:700; }
-  .method tr.win td.n { color:var(--good-text); }
-  .method tr.bad td.n { color:var(--bad); }
-  .callout { margin-top:12px; border-left:3px solid var(--accent-2); background:var(--surface-2); padding:10px 14px; border-radius:0 8px 8px 0; }
-  .callout p { margin-top:0; } .callout p + p { margin-top:8px; }
-
-  .tabs { display:flex; flex-wrap:wrap; gap:6px; margin:16px 0 14px; }
-  .tab { font:inherit; cursor:pointer; text-align:left; background:var(--surface-1); border:1px solid var(--border); border-radius:10px; padding:8px 12px; min-width:118px; flex:1 1 118px; color:var(--text-secondary); }
-  .tab .ty { font-size:17px; font-weight:700; color:var(--text-primary); letter-spacing:-0.01em; }
-  .tab .td { font-size:11px; color:var(--text-muted); margin-top:1px; }
+  /* sticky nav */
+  .navwrap { position:sticky; top:0; z-index:20; background:var(--page); padding:12px 0 8px; margin-top:16px; }
+  .tabs { display:flex; flex-wrap:wrap; gap:6px; }
+  .tab { font:inherit; cursor:pointer; text-align:left; background:var(--surface-1); border:1px solid var(--border); border-radius:10px; padding:7px 11px; min-width:112px; flex:1 1 112px; color:var(--text-secondary); }
+  .tab .ty { font-size:16px; font-weight:700; color:var(--text-primary); }
+  .tab .td { font-size:10.5px; color:var(--text-muted); margin-top:1px; }
   .tab .ts { font-size:10.5px; font-weight:700; margin-top:2px; font-variant-numeric:tabular-nums; }
-  .tab .ts.g { color:var(--good-text); }
+  .tab .ts.g { color:var(--good-text); } .tab .ts.f { color:var(--faint); font-style:italic; }
   .tab[aria-selected="true"] { border-color:var(--accent); box-shadow:inset 0 0 0 1px var(--accent); }
   .tab .dot { display:inline-block; width:7px; height:7px; border-radius:50%; margin-left:5px; vertical-align:middle; }
   .dot.done { background:var(--good); } .dot.next { background:var(--accent-2); } .dot.up { background:var(--baseline); }
+
+  details.box { margin-top:14px; background:var(--surface-1); border:1px solid var(--border); border-radius:12px; padding:12px 16px; }
+  details.box > summary { cursor:pointer; font-size:13px; font-weight:700; list-style:none; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  details.box > summary::-webkit-details-marker { display:none; }
+  details.box > summary::before { content:"▸"; color:var(--text-muted); font-size:11px; }
+  details.box[open] > summary::before { content:"▾"; }
+  details.box > summary .tag { font-size:11px; font-weight:600; color:var(--text-muted); border:1px solid var(--border); border-radius:999px; padding:2px 8px; }
+  details.box p { font-size:13px; color:var(--text-secondary); margin-top:10px; max-width:70ch; }
+  details.box h4 { font-size:12.5px; font-weight:700; margin-top:17px; }
+  details.box code { font-size:12px; background:var(--surface-2); padding:1px 4px; border-radius:4px; }
+  table.dt { border-collapse:collapse; margin-top:12px; font-size:12.5px; width:100%; max-width:660px; }
+  table.dt th, table.dt td { text-align:left; padding:6px 10px 6px 0; border-bottom:1px solid var(--grid); }
+  table.dt thead th { color:var(--text-muted); font-weight:600; }
+  table.dt tbody th { color:var(--text-secondary); font-weight:500; }
+  table.dt td.n { text-align:right; font-variant-numeric:tabular-nums; font-weight:600; white-space:nowrap; }
+  table.dt tr.live td.n { color:var(--good-text); }
+  table.dt tr.fit td.n { color:var(--faint); font-style:italic; }
+  .warnbox { margin-top:12px; border-left:3px solid var(--bad); background:var(--surface-2); padding:11px 14px; border-radius:0 8px 8px 0; }
+  .warnbox p { margin-top:0; } .warnbox p + p { margin-top:9px; }
+  .warnbox .lbl { font-size:10.5px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:var(--bad); display:block; margin-bottom:5px; }
+
+  /* run scorecard */
+  .rc-body { padding:4px 0 0; }
+  .nrow { padding:13px 0; border-bottom:1px solid var(--grid); }
+  .nrow:last-child { border-bottom:none; }
+  .nr-top { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px; margin-bottom:8px; }
+  .nr-top .yr { font-size:15px; font-weight:800; }
+  .nr-top .mv { font-size:10.5px; font-weight:700; border:1px solid var(--border); border-radius:999px; padding:1px 8px; }
+  .nr-top .mv.live { color:var(--good-text); border-color:var(--good); }
+  .nr-top .mv.fit { color:var(--faint); font-style:italic; }
+  .nr-top .sc { margin-left:auto; font-size:12.5px; font-weight:700; font-variant-numeric:tabular-nums; }
+  .nr-top .sc .mult { color:var(--good-text); }
+  .bar { display:flex; align-items:center; gap:9px; margin-bottom:4px; font-size:11px; }
+  .bar .lb { flex:none; width:78px; color:var(--text-muted); font-weight:600; }
+  .bar .tr { flex:1; height:15px; background:var(--surface-2); border:1px solid var(--grid); border-radius:3px; overflow:hidden; }
+  .bar .fl { display:block; height:100%; border-radius:2px 0 0 2px; }
+  .bar .fl.m { background:var(--good); }
+  .bar .fl.r { background:var(--baseline); }
+  .bar .vv { flex:none; width:32px; text-align:right; font-variant-numeric:tabular-nums; font-weight:700; color:var(--text-secondary); }
+  .chips { display:flex; flex-wrap:wrap; gap:4px; margin-top:9px; }
+  .ch { font-size:11.5px; padding:2px 8px; border-radius:999px; border:1px solid var(--border); color:var(--text-muted); background:var(--surface-2); }
+  .ch.g { border-color:var(--good); color:var(--good-text); font-weight:700; background:transparent; }
+  .nr-cap { font-size:11.5px; color:var(--text-muted); margin-top:8px; line-height:1.55; max-width:72ch; }
 
   .card { background:var(--surface-1); border:1px solid var(--border); border-radius:12px; padding:18px; }
   .panel-head { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px; margin-bottom:4px; }
@@ -110,105 +112,115 @@
   .status-chip.done { color:var(--good-text); border-color:var(--good); }
   .status-chip.next { color:#fff; background:var(--accent-2); border-color:var(--accent-2); }
   .status-chip.up { color:var(--text-secondary); }
-  .panel-note { font-size:12.5px; color:var(--text-secondary); margin:8px 0 10px; max-width:80ch; }
+  .panel-note { font-size:13px; color:var(--text-secondary); margin:9px 0 12px; max-width:72ch; }
+  .legendbar { font-size:11.5px; color:var(--text-muted); background:var(--surface-2); border:1px solid var(--grid); border-radius:8px; padding:7px 11px; margin-bottom:12px; line-height:1.6; }
+  .legendbar b { color:var(--text-secondary); }
 
-  .scoreboard { display:flex; flex-wrap:wrap; border:1px solid var(--border); border-radius:10px; overflow:hidden; margin-bottom:4px; }
+  .scoreboard { display:flex; flex-wrap:wrap; border:1px solid var(--border); border-radius:10px; overflow:hidden; }
   .sbi { flex:1 1 140px; padding:11px 13px; border-right:1px solid var(--grid); background:var(--surface-2); }
   .sbi:last-child { border-right:none; }
   .sbi .k { font-size:10.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-muted); }
   .sbi .v { font-size:21px; font-weight:800; margin-top:3px; font-variant-numeric:tabular-nums; }
   .sbi .v small { font-size:13px; font-weight:600; color:var(--text-muted); }
   .sbi .x { font-size:11px; color:var(--text-muted); margin-top:2px; }
-  .sbi .v.up { color:var(--good-text); } .sbi .v.dn { color:var(--bad); }
+  .sbi .v.up { color:var(--good-text); } .sbi .v.dn { color:var(--bad); } .sbi .v.fit { color:var(--faint); font-style:italic; }
 
-  .lesson { margin-top:14px; border-left:3px solid var(--accent); background:var(--surface-2); padding:10px 14px; border-radius:0 8px 8px 0; font-size:12.5px; color:var(--text-secondary); line-height:1.55; }
+  .lesson { margin-top:14px; border-left:3px solid var(--accent); background:var(--surface-2); padding:11px 14px; border-radius:0 8px 8px 0; font-size:12.5px; color:var(--text-secondary); line-height:1.6; max-width:74ch; }
   .lesson b { color:var(--text-primary); }
 
-  .mblock { margin-top:16px; border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+  .actual { margin-top:16px; border:1px solid var(--good); border-radius:10px; overflow:hidden; }
+  .actual .ah { background:var(--good); color:#fff; padding:7px 12px; font-size:11px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; }
+  .actual .ab { padding:11px 13px; background:var(--surface-1); }
+  .actual .sr { font-size:12.5px; margin-bottom:7px; line-height:1.85; }
+  .actual .sn { font-size:10.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-muted); margin-right:6px; }
+  .actual .pr { color:var(--good-text); font-weight:700; }
+  .actual .np { color:var(--text-secondary); }
+  .actual .an { background:var(--surface-2); border-top:1px solid var(--grid); padding:9px 13px; font-size:11.5px; color:var(--text-muted); line-height:1.55; }
+
+  .mblock { margin-top:14px; border:1px solid var(--border); border-radius:10px; overflow:hidden; }
   .mb-head { background:var(--surface-2); padding:8px 12px; display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px; }
   .mb-head .mn { font-size:12.5px; font-weight:700; }
   .mb-head .mn em { font-style:normal; font-weight:600; color:var(--text-muted); font-size:11.5px; }
   .mb-head .ms { font-size:13px; font-weight:800; font-variant-numeric:tabular-nums; }
-  .mb-head .ms.g { color:var(--good-text); } .mb-head .ms.r { color:var(--bad); }
-  .mb-note { padding:9px 12px; font-size:11.5px; color:var(--text-muted); border-bottom:1px solid var(--grid); line-height:1.5; }
+  .mb-head .ms.g { color:var(--good-text); } .mb-head .ms.r { color:var(--bad); } .mb-head .ms.f { color:var(--faint); font-style:italic; }
+  .mb-note { padding:9px 12px; font-size:11.5px; color:var(--text-muted); border-bottom:1px solid var(--grid); line-height:1.55; }
   .picks { padding:10px 12px; display:flex; flex-wrap:wrap; gap:5px; }
   .pk { font-size:12px; padding:3px 9px; border-radius:999px; border:1px solid var(--border); color:var(--text-muted); background:var(--surface-1); }
   .pk.h { border-color:var(--good); color:var(--good-text); font-weight:700; background:transparent; }
-  .pk .c { font-size:10px; opacity:.65; margin-left:3px; font-variant-numeric:tabular-nums; }
+  .pk .c { font-size:10px; opacity:.7; margin-left:3px; }
 
-  .actual { margin-top:18px; border:1px solid var(--good); border-radius:10px; overflow:hidden; }
-  .actual .ah { background:var(--good); color:#fff; padding:7px 12px; font-size:11px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; }
-  .actual .ab { padding:11px 13px; background:var(--surface-1); }
-  .actual .sr { font-size:12.5px; margin-bottom:7px; line-height:1.8; }
-  .actual .sn { font-size:10.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-muted); margin-right:6px; }
-  .actual .pr { color:var(--good-text); font-weight:700; }
-  .actual .np { color:var(--text-secondary); }
-  .actual .an { background:var(--surface-2); border-top:1px solid var(--grid); padding:9px 13px; font-size:11.5px; color:var(--text-muted); line-height:1.5; }
-
-  .game { margin-top:20px; border:1px solid var(--accent); border-radius:10px; overflow:hidden; }
-  .game-head { background:var(--surface-2); padding:8px 12px; display:flex; align-items:baseline; justify-content:space-between; gap:8px; flex-wrap:wrap; }
+  .game { margin-top:20px; border:1px solid var(--accent); border-radius:10px; overflow:hidden; scroll-margin-top:70px; }
+  .game-head { background:var(--surface-2); padding:9px 12px; display:flex; align-items:baseline; justify-content:space-between; gap:8px; flex-wrap:wrap; }
   .game-head .t { font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); }
   .game-head .sc { font-size:12px; font-weight:600; color:var(--text-secondary); font-variant-numeric:tabular-nums; }
   .game-head .sc b { color:var(--text-primary); }
-  .grow { display:flex; align-items:flex-start; gap:10px; padding:9px 12px; border-top:1px solid var(--grid); }
+  .grow { display:flex; align-items:flex-start; gap:10px; padding:10px 12px; border-top:1px solid var(--grid); }
   .grow:first-of-type { border-top:none; }
-  .grow input[type=checkbox] { width:15px; height:15px; flex:none; cursor:pointer; accent-color:var(--good); margin-top:5px; }
-  .grow .pts { flex:none; width:30px; height:24px; border-radius:6px; margin-top:1px; display:flex; align-items:center; justify-content:center; font-size:12.5px; font-weight:700; background:var(--accent); color:#fff; }
+  .grow .mk { flex:none; width:22px; height:22px; display:flex; align-items:center; justify-content:center; margin-top:2px; font-size:14px; font-weight:800; }
+  .grow .mk.y { color:var(--good-text); } .grow .mk.n { color:var(--faint); }
+  .grow input[type=checkbox] { width:20px; height:20px; flex:none; cursor:pointer; accent-color:var(--good); margin-top:3px; }
+  .grow .pts { flex:none; min-width:44px; height:24px; border-radius:6px; margin-top:1px; display:flex; align-items:center; justify-content:center; gap:2px; font-size:11.5px; font-weight:700; background:var(--accent); color:#fff; }
   .grow.lo .pts { background:var(--baseline); color:var(--text-primary); }
   .grow.hit .pts { background:var(--good); }
   .grow .gb { flex:1; min-width:0; }
-  .grow .gn { font-size:14px; font-weight:600; }
+  .grow .gn { font-size:14.5px; font-weight:600; }
   .grow.hit .gn { color:var(--good-text); }
-  .grow .gr { font-size:11.5px; color:var(--text-muted); margin-top:2px; line-height:1.45; max-width:74ch; }
+  .grow .gr { font-size:11.5px; color:var(--text-muted); margin-top:3px; line-height:1.55; max-width:72ch; }
   .grow .gr b { color:var(--text-secondary); font-weight:600; }
-  .grow .meta { flex:none; text-align:right; margin-top:2px; min-width:52px; font-variant-numeric:tabular-nums; }
-  .grow .meta .pp { font-size:12px; font-weight:700; color:var(--text-secondary); display:block; }
+  .grow .meta { flex:none; text-align:right; margin-top:2px; min-width:54px; font-variant-numeric:tabular-nums; }
+  .grow .meta .pp { font-size:12.5px; font-weight:700; color:var(--text-secondary); display:block; }
   .grow .meta .gg { font-size:10.5px; font-weight:600; color:var(--text-muted); display:block; margin-top:1px; }
   .grow .meta .gg.far { color:var(--accent-2); }
-  .game-foot { padding:9px 12px; border-top:1px solid var(--grid); font-size:11.5px; color:var(--text-muted); background:var(--surface-2); }
+  .game-foot { padding:10px 12px; border-top:1px solid var(--grid); font-size:11.5px; color:var(--text-muted); background:var(--surface-2); line-height:1.55; }
 
   .calls { margin-top:16px; border:1px solid var(--border); border-radius:10px; overflow:hidden; }
-  .calls-head { font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-muted); background:var(--surface-2); padding:7px 12px; }
+  .calls-head { font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-muted); background:var(--surface-2); padding:8px 12px; }
   .calls-head .hint { font-weight:600; letter-spacing:0; text-transform:none; font-size:11px; }
-  .call { display:flex; align-items:flex-start; gap:12px; padding:10px 12px; border-top:1px solid var(--grid); }
+  .call { display:flex; align-items:flex-start; gap:11px; padding:11px 12px; border-top:1px solid var(--grid); }
   .call:first-of-type { border-top:none; }
-  .call input[type=checkbox] { width:15px; height:15px; flex:none; cursor:pointer; accent-color:var(--good); margin-top:3px; }
-  .call .k { flex:none; width:92px; font-size:11px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; color:var(--text-muted); padding-top:3px; }
+  .call .mk { flex:none; width:20px; font-size:14px; font-weight:800; margin-top:2px; }
+  .call .mk.y { color:var(--good-text); } .call .mk.n { color:var(--bad); } .call .mk.q { color:var(--faint); }
+  .call .k { flex:none; width:88px; font-size:11px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; color:var(--text-muted); padding-top:3px; }
   .call .v { flex:1; min-width:0; }
-  .call .pick { font-size:14px; font-weight:600; }
-  .call.hit .pick { color:var(--good-text); }
+  .call .pick { font-size:14.5px; font-weight:600; }
   .call.missed .pick { text-decoration:line-through; color:var(--text-muted); }
-  .call .basis { font-size:11.5px; color:var(--text-muted); margin-top:2px; line-height:1.45; }
+  .call .basis { font-size:11.5px; color:var(--text-muted); margin-top:3px; line-height:1.55; max-width:72ch; }
   .call .basis b { color:var(--text-secondary); font-weight:600; }
-  .call .verdict { font-size:11.5px; margin-top:4px; font-weight:600; color:var(--bad); }
-  .call .alts { font-size:11.5px; color:var(--text-muted); margin-top:3px; }
+  .call .verdict { font-size:11.5px; margin-top:5px; font-weight:600; color:var(--bad); }
+  .call .alts { font-size:11.5px; color:var(--text-muted); margin-top:4px; }
   .call .alts span { color:var(--text-secondary); }
-  .call .odds { flex:none; font-size:10px; font-weight:700; color:var(--text-muted); border:1px solid var(--border); border-radius:999px; padding:1px 7px; white-space:nowrap; margin-top:3px; }
+  .call .odds { flex:none; font-size:10px; font-weight:700; color:var(--text-muted); border:1px solid var(--border); border-radius:999px; padding:2px 8px; white-space:nowrap; margin-top:3px; }
 
   .setblock { margin-top:16px; }
   .set-label { font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-muted); margin-bottom:6px; }
   .set-count { font-weight:600; letter-spacing:0; text-transform:none; color:var(--baseline); }
   ul.songs { list-style:none; }
-  .song { display:flex; align-items:flex-start; gap:10px; padding:9px 4px; border-top:1px solid var(--grid); }
+  .song { display:flex; align-items:flex-start; gap:10px; padding:10px 4px; border-top:1px solid var(--grid); }
   .song:first-child { border-top:none; }
-  .song input[type=checkbox] { width:16px; height:16px; flex:none; cursor:pointer; accent-color:var(--good); margin-top:4px; }
+  .song input[type=checkbox] { width:20px; height:20px; flex:none; cursor:pointer; accent-color:var(--good); margin-top:3px; }
   .song .body { flex:1; min-width:0; }
-  .song .name { font-size:14px; padding:2px 6px; border-radius:6px; border:1px solid transparent; outline:none; }
-  .song .name:hover { background:var(--surface-2); }
+  .song .name { font-size:14.5px; }
   .song.hit .name { color:var(--good-text); font-weight:600; }
-  .song .why { font-size:11.5px; color:var(--text-muted); line-height:1.45; padding:2px 6px 0; max-width:72ch; }
+  .song .why { font-size:11.5px; color:var(--text-muted); line-height:1.55; margin-top:3px; max-width:72ch; }
   .song .why b { color:var(--text-secondary); font-weight:600; }
   .song .why .risk { color:var(--accent-2); font-weight:600; }
   .song .why .tb { color:var(--tierb); font-weight:700; }
-  .song .tagchip { flex:none; font-size:10px; font-weight:600; color:var(--text-muted); border:1px solid var(--border); border-radius:999px; padding:1px 8px; white-space:nowrap; margin-top:3px; }
+  .song .tagchip { flex:none; font-size:10px; font-weight:600; color:var(--text-muted); border:1px solid var(--border); border-radius:999px; padding:2px 8px; white-space:nowrap; margin-top:3px; }
   .song .tagchip.far { color:var(--accent-2); border-color:var(--accent-2); }
   .song .tagchip.tierb { color:var(--tierb); border-color:var(--tierb); }
-  .song .del { flex:none; font:inherit; cursor:pointer; color:var(--text-muted); background:none; border:none; font-size:17px; line-height:1; padding:2px 6px; border-radius:6px; }
-  .addrow { margin-top:6px; }
-  .add-btn { font:inherit; font-size:12.5px; font-weight:600; cursor:pointer; color:var(--accent); background:none; border:1px dashed var(--border); border-radius:7px; padding:5px 10px; }
-  .panel-foot { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; border-top:1px solid var(--grid); padding-top:12px; }
-  footer { margin-top:22px; font-size:12px; color:var(--text-muted); line-height:1.6; }
-  .savenote { font-size:11.5px; color:var(--text-muted); margin-left:4px; }
+  footer { margin-top:24px; font-size:12px; color:var(--text-muted); line-height:1.65; max-width:78ch; }
+
+  @media (max-width:560px){
+    .call { flex-wrap:wrap; }
+    .call .k { width:auto; padding-top:0; }
+    .call .v { flex:1 1 100%; margin-top:5px; }
+    .call .odds { margin-top:0; }
+    .grow { flex-wrap:wrap; }
+    .grow .gb { flex:1 1 calc(100% - 90px); }
+    .grow .meta { margin-left:auto; }
+    .bar .lb { width:64px; }
+    .navwrap { padding-top:8px; }
+  }
 </style>
 </head>
 <body>
@@ -216,60 +228,81 @@
   <header>
     <div class="masthead">
       <h1>Phish @ MSG — Setlist Predictions</h1>
-      <span class="pill">MODEL v8 · NEXT: #95, MON JUL 27</span>
     </div>
-    <p class="sub">Five-night Madison Square Garden run — Phish's 92nd through 96th shows at the Garden, each themed to a year, <b>1992 → 1996</b>. Three nights played. Every night carries the predictions that were live at the time, the model version that produced them, and the score against what was actually played.</p>
+    <p class="sub">Five nights at Madison Square Garden — Phish's 92nd through 96th shows there, each themed to a year, <b>1992 → 1996</b>. Three played, two to go. Predictions, the model behind them, and an honest scorecard.</p>
 
-    <div class="runcard">
-      <div class="rc-head">
-        <span class="t">Run scorecard — three nights played</span>
-        <span class="s"><b>25</b> of 66 songs caught · random baseline 11.7</span>
+    <div class="hero">
+      <div class="hero-h">
+        <span class="t">Next up — Show #95, the 1995 night</span>
+        <span class="d">Mon 27 Jul · model v8</span>
       </div>
-      <div class="rc-body" id="rcBody"></div>
-      <div class="rc-foot">
-        <b>Read the raw counts, not the percentages.</b> Night 3 looks far better by coverage rate — 10 of 16 — but a front-of-house outage cut its first set to five songs, so there were only 16 unique songs to catch instead of 24–26. The hit counts of 9, 6 and 10 are comparable; the rates are not.
-        <div class="legend" style="margin-top:8px">
-          <span><i class="sw" style="background:var(--good)"></i> caught by the model</span>
-          <span><i class="sw" style="background:var(--baseline)"></i> missed</span>
+      <div class="hero-b">
+        <p class="hl"><b>The first genuine out-of-sample test of v8.</b> Everything new in this version — the costume-album rule, the reserved era-signature slots, the reframed called shots — was written after Saturday's show and has never predicted anything. These four calls are pre-registered here so Monday's result is unambiguous.</p>
+        <div class="hero-calls">
+          <div class="hc"><div class="k">Opener</div><div class="v">The Real Me</div><div class="x">Quadrophenia, track 2 — the costume bet</div></div>
+          <div class="hc"><div class="k">Encore</div><div class="v">I Didn't Know</div><div class="x">the Fish vacuum slot</div></div>
+          <div class="hc"><div class="k">Bustout</div><div class="v">3–4 songs, gap 300+</div><div class="x">a count, not a name</div></div>
+          <div class="hc"><div class="k">Longest jam</div><div class="v">You Enjoy Myself</div><div class="x">unburned through three nights</div></div>
         </div>
+        <p class="jump"><a href="#ladder">Jump to the 10-pick game ladder ↓</a> &nbsp;·&nbsp; <a href="#slate">the 20-song slate ↓</a></p>
       </div>
     </div>
 
-    <div class="toolbar">
-      <button class="btn" id="exportBtn">Copy all predictions</button>
-      <button class="btn warn" id="resetAllBtn">Reset all nights</button>
-      <span class="savenote" id="saveNote"></span>
-    </div>
-
-    <details class="method">
-      <summary>The model, and how it changed across the run <span class="tag">v5 → v8</span></summary>
-      <div class="callout">
-        <p><b>Frequency wins the bulk slate. Era-narrative wins the single marquee slots.</b> That is the one sentence three scored nights produced, and it took until #94 to see it.</p>
-      </div>
-      <table>
-        <thead><tr><th scope="col">Version</th><th scope="col">Core idea</th><th scope="col" class="n">Best score</th></tr></thead>
-        <tbody>
-          <tr class="bad"><th scope="row">v5</th><td>Mid-depth &ldquo;barbell&rdquo; sampling</td><td class="n">6/20 on #93</td></tr>
-          <tr><th scope="row">v6</th><td>Archetype buckets, cover quota</td><td class="n">9/20 on #94</td></tr>
-          <tr class="win"><th scope="row">v7</th><td>Top 20 of the eligible pool by play count</td><td class="n">10/20 on #94</td></tr>
-          <tr class="win"><th scope="row">v8</th><td>v7 + 3 reserved era-signature slots</td><td class="n">12/20 retro</td></tr>
-        </tbody>
-      </table>
-      <h4>What each night taught</h4>
-      <p><b>#92</b> established <b>run no-repeat</b> — the played nights share zero songs. Still the single most valuable rule, and free.</p>
-      <p><b>#93</b> exposed a measurement error in the model since v4: ranking songs inside the <em>full</em> theme-year pool instead of the <em>eligible</em> post-burn pool. Corrected, hit density falls monotonically with rank — no mid-depth sweet spot.</p>
-      <p><b>#94</b> produced the <b>costume-album rule</b> and the frequency-versus-narrative split.</p>
-      <h4>The costume-album rule</h4>
-      <p>Phish's Halloween &ldquo;musical costume&rdquo; tradition — covering a whole album — ran from 1994 until they began writing their own with Wingsuit/Fuego. It fires for exactly the years that have one: <b>1992 none → nothing appeared. 1993 none → nothing appeared. 1994 <em>White Album</em> → Back in the U.S.S.R. opened.</b> 1995 is <em>Quadrophenia</em>, 1996 is <em>Remain in Light</em>. A play-count model structurally cannot find these songs — one or two plays in the theme year puts them at the bottom of every frequency list.</p>
-      <h4>Called shots, reframed after 0-for-4</h4>
-      <p><b>Opener</b> is now the costume track-one pick rather than the frequency leader, which backtested at rank 14 and 3 and then missed entirely. <b>Encore</b> is now the Fish/novelty slot. <b>Longest jam</b> follows era-narrative over jamchart count. <b>Bustout is now a count, not a name</b> — 3, 4 and 3 songs past a 300-show gap across the three nights, while no individual candidate clears 10%.</p>
-      <h4>Still true</h4>
-      <p>Do not filter on dormancy — every night runs a current-rotation core plus 3–4 deep bustouts. Secret Language is collinear with play count. Skipping the obvious loses hits on the bulk slate every way it is cut.</p>
-    </details>
+    <div class="navwrap"><div class="tabs" id="tabs" role="tablist"></div></div>
   </header>
 
-  <div class="tabs" id="tabs" role="tablist"></div>
   <div class="card" id="panel" role="tabpanel"></div>
+
+  <details class="box">
+    <summary>Run scorecard — what was caught, and what that's worth <span class="tag">two live nights</span></summary>
+    <div class="warnbox">
+      <span class="lbl">Read this before the numbers</span>
+      <p><b>Only two of the three played nights had a published slate.</b> Night 1 predates this project — nothing was preserved — so its bar below is a <em>retrodiction</em>, computed afterwards. It is not evidence of anything and is not counted in the live total.</p>
+      <p><b>The live record is 16 of 40 across two nights, against a random baseline of 7.4.</b> Every other number on this page that beats it is fitted.</p>
+    </div>
+    <div class="rc-body" id="rcBody"></div>
+    <h4>Why &ldquo;beats random&rdquo; is a weaker claim than it sounds</h4>
+    <p>The comparator throughout is a random 20 songs drawn from the same eligible pool. That is a fair pool — but it is <b>not the baseline a competent fan represents.</b> The natural human baseline is &ldquo;the twenty most-played songs of the theme year, minus whatever they already played this run&rdquo; — and that <em>is</em> v7. Beating random therefore demonstrates two things a phish.net-literate fan already had for free: the theme-year premise, which the band announced publicly, and the no-repeat rule.</p>
+    <p><b>The model's edge over an informed fan is currently indistinguishable from zero</b>, because the model is what an informed fan would do. Every cleverer idea tried this week — distinctiveness weighting, mid-depth sampling, archetype buckets, a cover quota — lost to the plain frequency list.</p>
+    <h4>Scores will rise over the next two nights whatever happens</h4>
+    <p>66 songs are now burned. The eligible pool shrinks every night, so a random slate gets better too. Expect #95 and #96 to score higher than #94 <b>for arithmetic reasons that have nothing to do with the model improving</b>. Judge v8 against the random baseline for its own night, not against Saturday.</p>
+  </details>
+
+  <details class="box">
+    <summary>The model — live results vs fitted results <span class="tag">v5 → v8</span></summary>
+    <div class="warnbox">
+      <span class="lbl">Two ledgers, kept separate</span>
+      <p><b>Live</b> means published before the show. <b>Fitted</b> means computed afterwards, on a night already known. Fitted numbers are shown in grey italic everywhere on this page and should not be read as skill.</p>
+    </div>
+    <table class="dt">
+      <thead><tr><th scope="col">Result</th><th scope="col">Night</th><th scope="col" class="n">Score</th></tr></thead>
+      <tbody>
+        <tr class="live"><th scope="row">v5 — mid-depth barbell</th><td>#93, live</td><td class="n">6 / 20</td></tr>
+        <tr class="live"><th scope="row">v7 — top 20 by play count</th><td>#94, live</td><td class="n">10 / 20</td></tr>
+        <tr class="fit"><th scope="row">v5 — same night, for comparison</th><td>#94, fitted</td><td class="n">8 / 20</td></tr>
+        <tr class="fit"><th scope="row">v6 — archetype buckets</th><td>#94, fitted</td><td class="n">9 / 20</td></tr>
+        <tr class="fit"><th scope="row">v8 — v7 + reserved slots</th><td>#94, fitted</td><td class="n">12 / 20</td></tr>
+      </tbody>
+    </table>
+    <p><b>The like-for-like improvement is 8 to 10</b>, v5 to v7 on the same night. An earlier version of this page showed 6 → 9 → 10 → 12 as a progress curve; that compared different versions on different nights and overstated the gain.</p>
+    <p><b>And v8's 12/20 is worth nothing at all.</b> It was produced by removing three picks already known to have missed and inserting two songs already known to have hit. Any rule built that way scores higher. It is printed here only so Monday's real number has something to be compared against.</p>
+
+    <h4>What each night actually taught</h4>
+    <p><b>#92 → run no-repeat.</b> The played nights share zero songs. Striking every played song from later pools costs nothing and is the most valuable rule in the model. The cold blind guess for #93 collapsed to 2/20 precisely because six of its twenty picks had been played the night before.</p>
+    <p><b>#93 → rank inside the eligible pool, never the full year.</b> v5 built a &ldquo;mid-depth band&rdquo; on an artifact of ranking within the full theme-year pool instead of the post-burn pool. Corrected, hit density falls monotonically with rank. Worth remembering: that same v5 was sold on this page as &ldquo;held out, not fitted&rdquo; at 19/40 — and then scored 6/20 live. <b>That is the best evidence available for how much to trust any backtest here, including v8's.</b></p>
+    <p><b>#94 → the costume-album rule, on one observation.</b> The night opened with Back in the U.S.S.R., off the Beatles' <em>White Album</em>, which Phish played as their 1994 Halloween musical costume.</p>
+
+    <h4>The costume rule is n = 1</h4>
+    <p>An earlier version of this page claimed the rule &ldquo;fires for exactly the years that have one&rdquo; and listed 1992 and 1993 as confirmations. <b>Those are not confirmations.</b> Neither year has a costume album, so the rule makes no prediction on those nights and nothing could have falsified it. The evidence is a single observation — and it is the same observation that inspired the rule.</p>
+    <p>A further hedge worth naming: v8 carries <em>both</em> readings of the rule for Monday — the repertoire pick (Drowned) and the album-opener pick (The Real Me). Two guesses at one idea means either landing will look like validation. That roughly doubles the chance of a spurious confirmation, and it is a deliberate trade for coverage rather than a clean test.</p>
+
+    <h4>&ldquo;Era-narrative wins the marquee slots&rdquo; has a live record of 0 for 4</h4>
+    <p>Every called shot on #94 missed — Wilson, Sleeping Monkey, Poor Heart, You Enjoy Myself. The narrative reading of that night (Halloween costume, Fish vacuum bit, Tweezerfest) is an <em>explanation fitted afterwards</em>, not a prediction that landed. v8 spends 3 of 20 slate slots on it anyway, which re-admits an idea this project measured and rejected a day earlier. That is a bet, not a finding, and Monday is the first time it is exposed.</p>
+
+    <h4>Still standing</h4>
+    <p>Do not filter on dormancy — each night runs a current-rotation core plus 3–4 deep bustouts. Secret Language is collinear with play count and adds nothing. Skipping the obvious loses hits on the bulk slate every way it was cut. Bustouts are worth predicting as a <em>count</em>, though &ldquo;3–4&rdquo; is a range drawn around the only three observations that exist, so a hit on Monday proves little.</p>
+  </details>
+
   <footer id="foot"></footer>
 </div>
 
@@ -281,55 +314,46 @@
   function G(a){ return a.map(function(g,i){ return {pts:10-i,name:g[0],p:g[1],why:g[2],gap:g[3],hit:!!g[4]}; }); }
   function M(name,sub,note,score,tone,picks){ return {name:name,sub:sub,note:note,score:score,tone:tone,picks:picks}; }
 
-  // ---- run scorecard data -------------------------------------------------
   var RUN = [
-    { year:"1992", show:92, date:"Jul 22", model:"no slate preserved", retro:true,
-      hits:9, played:26, random:4.3,
-      cap:"This project joined at night 2, so no live slate exists for #92. The bar shows what v7 <em>would</em> have scored applied after the fact — a retrodiction, not foresight.",
+    { year:"1992", show:92, live:false, model:"retrodiction only", hits:9, played:26, random:4.3,
+      cap:"This project joined at night 2, so no slate was ever published for #92 and none was preserved. The bar shows what v7 <em>would</em> have scored applied afterwards. <b>Not counted in the live total.</b>",
       songs:[["Glide",0],["Runaway Jim",1],["Foam",1],["Axilla",0],["Stash",1],["Cold as Ice",1],["Love You",0],["Hold Your Head Up",1],["Sparkle",1],["AC/DC Bag",0],["Reba",1],["Possum",0],["The Vibration of Life",0],["David Bowie",1],["Mike's Song",0],["I Am Hydrogen",0],["Weekapaug Groove",0],["Bouncing Around the Room",1],["My Friend, My Friend",0],["Split Open and Melt",0],["The Lizards",0],["Harry Hood",0],["The Horse",0],["Silent in the Morning",0],["Big Black Furry Creature from Mars",0],["Run Like an Antelope",0]] },
-    { year:"1993", show:93, date:"Jul 24", model:"v5 — published live", retro:false,
-      hits:6, played:24, random:3.4,
-      cap:"The only genuine blind test the original model faced. 6 of 20 against a random-20 expectation of 3.4 — above chance but not meaningfully. The night was a bustout showcase the slate had no way to reach.",
+    { year:"1993", show:93, live:true, model:"v5 — published live", hits:6, played:24, random:3.4,
+      cap:"The only blind test the original model faced. 6 of 20 against a random-20 expectation of 3.4 — <b>1.8× random</b>, the weakest of the three nights. The show was a bustout showcase the slate had no way to reach.",
       songs:[["Llama",0],["Bathtub Gin",0],["Lengthwise",1],["Maze",1],["Gumbo",0],["Daniel Saw the Stone",0],["Weigh",0],["Guelah Papyrus",1],["The Divided Sky",1],["Tube",0],["Big Ball Jam",0],["La Grange",0],["Also Sprach Zarathustra",0],["Chalk Dust Torture",1],["Sparks",0],["Slave to the Traffic Light",0],["The Wedge",1],["Makisupa Policeman",0],["Kung",0],["Suzy Greenberg",0],["Golgi Apparatus",0],["Good Times Bad Times",0],["Sweet Adeline",0],["Fluffhead",0]] },
-    { year:"1994", show:94, date:"Jul 25", model:"v7 — published live", retro:false,
-      hits:10, played:16, random:4.0,
-      cap:"The best night for the slate. The four songs it missed are the four that define the v8 rewrite: Back in the U.S.S.R. and Highway to Hell (costume album and era cover), Purple Rain (Fish novelty), Punch You in the Eye and Catapult (era-locked deep cuts).",
+    { year:"1994", show:94, live:true, model:"v7 — published live", hits:10, played:16, random:4.0,
+      cap:"<b>2.5× random — genuinely the best night of the three</b>, and the multiple is the right way to see that. A front-of-house outage cut set 1 to five songs, so only 16 unique songs were available to catch; the coverage <em>rate</em> is inflated by that, but the multiple over random is not.",
       songs:[["Back in the U.S.S.R.",0],["Simple",1],["Rift",1],["Punch You in the Eye",0],["Wolfman's Brother",0],["Highway to Hell",0],["Down with Disease",1],["Tweezer",1],["Sample in a Jar",1],["Lifeboy",1],["Julius",1],["Catapult",0],["Cavern",1],["The Squirming Coil",1],["Purple Rain",0],["Tweezer Reprise",1]] }
   ];
 
   function renderRun(){
-    var el = document.getElementById("rcBody");
-    el.innerHTML = RUN.map(function(n){
-      var maxV = 20;
-      var mw = Math.round((n.hits/maxV)*100), rw = Math.round((n.random/maxV)*100);
+    document.getElementById("rcBody").innerHTML = RUN.map(function(n){
+      var mw=Math.round((n.hits/20)*100), rw=Math.round((n.random/20)*100);
+      var mult=(n.hits/n.random).toFixed(1);
       return '<div class="nrow">'+
         '<div class="nr-top"><span class="yr">'+n.year+'</span>'+
-          '<span class="mv'+(n.retro?' retro':'')+'">'+n.model+'</span>'+
-          '<span class="sc">'+n.hits+' <small>of '+n.played+' played</small></span></div>'+
-        '<div class="bars">'+
-          '<div class="bar"><span class="lb">model</span><span class="tr"><span class="fl m" style="width:'+mw+'%"></span></span><span class="vv">'+n.hits+'</span></div>'+
-          '<div class="bar"><span class="lb">random 20</span><span class="tr"><span class="fl r" style="width:'+rw+'%"></span></span><span class="vv">'+n.random+'</span></div>'+
-        '</div>'+
-        '<div class="chips">'+ n.songs.map(function(s){
-          return '<span class="ch'+(s[1]?' g':'')+'">'+s[0]+'</span>'; }).join("") +'</div>'+
-        '<div class="nr-cap">'+n.cap+'</div>'+
-      '</div>';
+          '<span class="mv '+(n.live?'live':'fit')+'">'+n.model+'</span>'+
+          '<span class="sc"><span class="mult">'+mult+'× random</span> · '+n.hits+' of '+n.played+'</span></div>'+
+        '<div class="bar"><span class="lb">model</span><span class="tr"><span class="fl m" style="width:'+mw+'%"></span></span><span class="vv">'+n.hits+'</span></div>'+
+        '<div class="bar"><span class="lb">random 20</span><span class="tr"><span class="fl r" style="width:'+rw+'%"></span></span><span class="vv">'+n.random+'</span></div>'+
+        '<div class="chips">'+n.songs.map(function(s){ return '<span class="ch'+(s[1]?' g':'')+'">'+s[0]+'</span>'; }).join("")+'</div>'+
+        '<div class="nr-cap">'+n.cap+'</div></div>';
     }).join("");
   }
 
   var DEFAULTS = { nights: [
-    { n:1, year:"1992", show:92, date:"Wed · Jul 22", status:"done", tabScore:"9 / 20 retro",
+    { n:1, year:"1992", show:92, date:"Wed · Jul 22", status:"done", tabScore:"9 / 20", tabFit:true,
       note:"The first night of the run, and the only one with no surviving prediction. What it produced instead was the rule that has carried the whole project: Phish does not repeat songs inside a residency.",
       scores:[
-        {k:"Published slate",v:"—",x:"not preserved",tone:""},
-        {k:"v7 retrodiction",v:"9",sm:"/ 20",x:"random ≈ 4.3",tone:"up"},
-        {k:"Cold blind guess",v:"8",sm:"/ 20",x:"no data used",tone:""},
+        {k:"Published slate",v:"—",x:"none preserved",tone:""},
+        {k:"v7, fitted after",v:"9",sm:"/ 20",x:"not a prediction",tone:"fit"},
+        {k:"Cold blind guess",v:"8",sm:"/ 20",x:"zero data used",tone:""},
         {k:"Songs played",v:"26",x:"deepest gap 1,468",tone:""}
       ],
-      lesson:"<b>What #92 taught: run no-repeat.</b> Nights 1 and 2 share exactly zero songs. Striking every played song from every later night's pool costs nothing and is worth more than every other rule combined — the cold blind guess for #93 collapsed to 2/20 precisely because six of its twenty picks had already been played on this night.",
+      lesson:"<b>What #92 taught: run no-repeat.</b> Nights 1 and 2 share exactly zero songs. Striking every played song from later pools costs nothing and is worth more than every other rule combined — the cold blind guess for #93 collapsed to 2/20 precisely because six of its twenty picks had already been played on this night.",
       models:[
-        M("No published slate","the inherited dashboard","<b>Nothing is shown here because nothing survived.</b> The version of this dashboard the project inherited displayed night 1 as the actual setlist only. Its methodology box referred to a hand-picked slate scoring roughly 11/20, but that list was not preserved and is not reconstructed from memory.","—","",[]),
-        M("v7 retrodiction","top 20 of 1992 by play count","Applied after the fact, with no burn list since this was the opening night. 1992 across 124 Phish shows.","9 / 20","g",
+        M("No published slate","this project joined at night 2","<b>Nothing survived.</b> The dashboard this project inherited showed night 1 as the actual setlist only. Its methodology box mentioned a hand-picked slate scoring roughly 11/20, but that list was never preserved and is not reconstructed from memory here.","—","f",[]),
+        M("v7 — fitted afterwards","not a prediction","Applied after the fact with no burn list, since this was the opening night. 1992 across 124 Phish shows. <b>Shown for calibration only.</b>","9 / 20","f",
           [["Cold as Ice","85×",1],["Sparkle","67×",1],["Llama","65×",0],["Cavern","63×",0],["Maze","57×",0],["Rift","56×",0],["Bouncing Around the Room","56×",1],["Foam","56×",1],["Stash","55×",1],["Runaway Jim","55×",1],["Hold Your Head Up","53×",1],["The Squirming Coil","51×",0],["Poor Heart","49×",0],["You Enjoy Myself","48×",0],["Reba","47×",1],["David Bowie","47×",1],["Chalk Dust Torture","46×",0],["Suzy Greenberg","45×",0],["Guelah Papyrus","43×",0],["The Landlady","43×",0]]),
         M("Cold blind guess","no data, model recall only","Written and locked before looking at any setlist or play count — the project's only true zero-information baseline.","8 / 20","",
           [["Runaway Jim","",1],["The Divided Sky","",0],["Reba","",1],["Mike's Song","",1],["Weekapaug Groove","",1],["You Enjoy Myself","",0],["Run Like an Antelope","",1],["Cavern","",0],["Foam","",1],["It's Ice","",0],["Rift","",0],["The Landlady","",0],["Guelah Papyrus","",0],["Horn","",0],["My Sweet One","",0],["Fast Enough for You","",0],["Uncle Pen","",0],["The Lizards","",1],["Esther","",0],["Glide","",1]])
@@ -338,65 +362,65 @@
         {name:"Set 1", songs:["Glide","Runaway Jim","Foam","Axilla","Stash","Cold as Ice","Love You","Hold Your Head Up","Sparkle","AC/DC Bag","Reba","Possum","The Vibration of Life","David Bowie"]},
         {name:"Set 2", songs:["Mike's Song","I Am Hydrogen","Weekapaug Groove","Bouncing Around the Room","My Friend, My Friend","Split Open and Melt","The Lizards","Harry Hood"]},
         {name:"Encore", songs:["The Horse","Silent in the Morning","Big Black Furry Creature from Mars","Run Like an Antelope"]}
-      ], note:"1992 predates the Halloween costume-album tradition, and nothing costume-related appeared — one of the three data points behind the v8 rule. Deepest bustout: The Vibration of Life, unplayed since 1996. Three songs past a 300-show gap." } },
+      ], note:"1992 predates the Halloween costume-album tradition. Nothing costume-related appeared — but since the rule makes no prediction for a year without a costume album, that is not evidence for it. Deepest bustout: The Vibration of Life, unplayed since 1996. Three songs past a 300-show gap." } },
 
-    { n:2, year:"1993", show:93, date:"Fri · Jul 24", status:"done", tabScore:"6 / 20",
-      note:"The only genuine blind test the original model ever faced. It scored at chance, and diagnosing why produced the measurement fix that became v7.",
+    { n:2, year:"1993", show:93, date:"Fri · Jul 24", status:"done", tabScore:"6 / 20 live",
+      note:"The only genuine blind test the original model ever faced. It scored at 1.8× random — the weakest night — and diagnosing why produced the measurement fix that became v7.",
       scores:[
-        {k:"v5 published",v:"6",sm:"/ 20",x:"random ≈ 3.4",tone:"dn"},
-        {k:"v7 retrodiction",v:"7",sm:"/ 20",x:"double random",tone:"up"},
+        {k:"v5, live",v:"6",sm:"/ 20",x:"1.8× random",tone:"up"},
+        {k:"v7, fitted after",v:"7",sm:"/ 20",x:"not a prediction",tone:"fit"},
         {k:"Cold blind guess",v:"2",sm:"/ 20",x:"below chance",tone:"dn"},
         {k:"Songs played",v:"24",x:"deepest gap 1,170",tone:""}
       ],
-      lesson:"<b>What #93 taught: rank inside the eligible pool, never the full year.</b> v5 concluded setlists draw from the <em>middle</em> of a year's ranking and built a &ldquo;20–60% depth band&rdquo; around it. That was an artifact of ranking within the full theme-year pool instead of the pool left after the burn. Ranked correctly, this night's 24 songs sat at ranks 2, 7, 8, 10, 11, 12, 19, 24, 26, 27, 31, 32, 42, 46, 48, 56, 69, 70, 80, 94, 95, 106, 109, 161 — density falling monotonically, no sweet spot. v5's advertised 19/40 was never held out; it was tuned and graded on the same two nights.",
+      lesson:"<b>What #93 taught: rank inside the eligible pool, never the full year.</b> v5 built a &ldquo;20–60% depth band&rdquo; on an artifact of ranking within the full theme-year pool instead of the pool left after the burn. Ranked correctly, this night's 24 songs sat at ranks 2, 7, 8, 10, 11, 12, 19, 24, 26, 27, 31, 32, 42, 46, 48, 56, 69, 70, 80, 94, 95, 106, 109, 161 — density falling monotonically, no sweet spot. <b>v5 was advertised on this page as &ldquo;held out, not fitted&rdquo; at 19/40, then scored 6/20 live.</b> That gap is the best available evidence for how much any backtest here is worth.",
       models:[
-        M("v5 — consensus barbell","published, live at showtime","Mid-depth sampling across 21 head/depth settings. <b>6 of 20 against a random-20 expectation of 3.4.</b> The slate leaned on Gamehendge set pieces — Harpua, TMWSIY/Avenu Malkenu, the Purple Rain vacuum solo — and got a night of era-signature covers and novelty bustouts instead.","6 / 20","r",
+        M("v5 — consensus barbell","published live at showtime","Mid-depth sampling across 21 head/depth settings. The slate leaned on Gamehendge set pieces — Harpua, TMWSIY/Avenu Malkenu, the Purple Rain vacuum solo — and got a night of era-signature covers and novelty bustouts instead.","6 / 20","g",
           [["Chalk Dust Torture","",1],["Rift","",0],["Guelah Papyrus","",1],["It's Ice","",0],["Fast Enough for You","",0],["Maze","",1],["The Curtain","",0],["The Divided Sky","",1],["Cavern","",0],["Tweezer","",0],["The Wedge","",1],["All Things Reconsidered","",0],["Harpua","",0],["The Man Who Stepped Into Yesterday","",0],["Avenu Malkenu","",0],["Purple Rain","",0],["You Enjoy Myself","",0],["Lengthwise","",1],["Amazing Grace","",0],["Rocky Top","",0]]),
-        M("v7 retrodiction","top 20 of eligible 1993 pool","1993 across 112 Phish shows, minus the 26 songs burned Jul 22. Beats the published slate by one and roughly doubles the random baseline.","7 / 20","g",
+        M("v7 — fitted afterwards","not a prediction","1993 across 112 Phish shows, minus the 26 songs burned Jul 22. Beats the published slate by one. <b>Computed after the night was known.</b>","7 / 20","f",
           [["Rift","69×",0],["Big Ball Jam","66×",1],["You Enjoy Myself","61×",0],["Amazing Grace","57×",0],["Poor Heart","57×",0],["It's Ice","56×",0],["Maze","54×",1],["Chalk Dust Torture","53×",1],["Cavern","53×",0],["Llama","47×",1],["Golgi Apparatus","47×",1],["Guelah Papyrus","42×",1],["The Squirming Coil","42×",0],["Tweezer","41×",0],["I Didn't Know","34×",0],["Uncle Pen","34×",0],["Mound","34×",0],["Fee","33×",0],["The Divided Sky","31×",1],["Tweezer Reprise","31×",0]]),
-        M("Cold blind guess","no data, model recall only","<b>The most instructive failure in the project.</b> Six of these twenty had been played the night before — Mike's Song, Weekapaug Groove, Run Like an Antelope, Axilla, The Horse and Silent in the Morning — and were therefore near-impossible. That one mistake is what makes run no-repeat worth more than every other rule combined.","2 / 20","r",
+        M("Cold blind guess","no data, model recall only","<b>The most instructive failure in the project.</b> Six of these twenty had been played the night before — Mike's Song, Weekapaug Groove, Run Like an Antelope, Axilla, The Horse and Silent in the Morning — and were therefore near-impossible.","2 / 20","r",
           [["Sample in a Jar","",0],["Rift","",0],["The Divided Sky","",1],["Harry Hood","",0],["Run Like an Antelope","",0],["Mike's Song","",0],["Weekapaug Groove","",0],["You Enjoy Myself","",0],["Fast Enough for You","",0],["Mound","",0],["It's Ice","",0],["My Friend, My Friend","",0],["Punch You in the Eye","",0],["Axilla","",0],["Nellie Kane","",0],["Ginseng Sullivan","",0],["Halley's Comet","",0],["The Horse","",0],["Silent in the Morning","",0],["Kung","",1]])
       ],
       actual:{ sets:[
         {name:"Set 1", songs:["Llama","Bathtub Gin","Lengthwise","Maze","Gumbo","Daniel Saw the Stone","Weigh","Guelah Papyrus","The Divided Sky","Tube","Big Ball Jam","La Grange"]},
         {name:"Set 2", songs:["Also Sprach Zarathustra","Chalk Dust Torture","Sparks","Slave to the Traffic Light","The Wedge","Makisupa Policeman","Kung","Suzy Greenberg","Golgi Apparatus","Good Times Bad Times"]},
         {name:"Encore", songs:["Sweet Adeline","Fluffhead"]}
-      ], note:"A bustout showcase: Big Ball Jam at a 1,170-show gap, La Grange 531, Sweet Adeline 358, Sparks 357, and the first Kung since 2019 — four past a 300-show gap. Six of the 24 songs were covers. 1993 predates the costume tradition and nothing costume-related appeared. The encore was Sweet Adeline, an a cappella novelty rather than the frequency leader — the first hint of the pattern #94 confirmed." } },
+      ], note:"A bustout showcase: Big Ball Jam at a 1,170-show gap, La Grange 531, Sweet Adeline 358, Sparks 357, and the first Kung since 2019 — four past a 300-show gap. Six of the 24 songs were covers. The encore was Sweet Adeline, an a cappella novelty rather than the frequency leader." } },
 
-    { n:3, year:"1994", show:94, date:"Sat · Jul 25", status:"done", tabScore:"10 / 20",
-      note:"The best night for the slate and the worst for the called shots. v7 was live: top 20 of the eligible 1994 pool, four called shots, and a weighted ten-pick ladder.",
+    { n:3, year:"1994", show:94, date:"Sat · Jul 25", status:"done", tabScore:"10 / 20 live",
+      note:"The best night for the slate at 2.5× random, and a clean sweep of failures on the called shots. v7 was live: top 20 of the eligible 1994 pool, four called shots, and a weighted ten-pick ladder.",
       scores:[
-        {k:"v7 slate",v:"10",sm:"/ 20",x:"random ≈ 4",tone:"up"},
+        {k:"v7 slate, live",v:"10",sm:"/ 20",x:"2.5× random",tone:"up"},
         {k:"Ten-pick ladder",v:"42",sm:"/ 55",x:"expected 24.9",tone:"up"},
         {k:"Called shots",v:"0",sm:"/ 4",x:"all four missed",tone:"dn"},
-        {k:"v8 retrodiction",v:"12",sm:"/ 20",x:"in-sample",tone:"up"}
+        {k:"v8, fitted after",v:"12",sm:"/ 20",x:"worth nothing",tone:"fit"}
       ],
-      lesson:"<b>What #94 taught: frequency wins the bulk slate, era-narrative wins the marquee slots.</b> Three for three — the opener was a <em>White Album</em> track off the 1994 Halloween costume, the encore was the Fish vacuum bit, and the longest jam was Tweezer despite jamcharts favouring YEM 27–23. Both &ldquo;over-clever&rdquo; v6 picks retracted on frequency grounds, Wolfman's Brother and Purple Rain, hit. The ladder's top four all landed for 34 of its 42 points.",
+      lesson:"<b>The ladder beat its own expectation by 69% — 42 against 24.9.</b> That is not a triumph, it is a calibration failure in the optimistic direction: the probabilities that drove the ranking were badly under-confident. The ranking was still right (the top four all hit, for 34 of the 42 points), but the numbers attached to it were not. Meanwhile all four called shots missed, and the &ldquo;era-narrative&rdquo; reading of this night — Halloween costume, Fish vacuum bit, Tweezerfest — is an explanation fitted afterwards, not a prediction that landed.",
       calls:[
         C("Opener","Wilson","9/124 · 7%","The most frequent 1994 set-one opener. Flagged at the time as the weakest of the four calls.","Buried Alive (8) · Sample in a Jar (6) · Rift (6)",{t:"MISS — Back in the U.S.S.R., a 485-show bustout off the 1994 Halloween White Album."}),
         C("Encore","Sleeping Monkey","11/124 · 9%","Led all 1994 encores at eleven, and absent from the slate — frequency cut it while positional data liked it.","Amazing Grace (7) · Ginseng Sullivan (5) · Fire (5)",{t:"MISS — Purple Rain, the Fish/vacuum novelty that v7 cut on the grounds that no individual cover is a good bet."}),
-        C("Bustout","Poor Heart","gap 76","Highest 1994 play count among songs past a 50-show gap. Flagged as a long shot by construction.","Scent of a Mule (g95) · Amazing Grace (g900) · Nellie Kane (g54)",{t:"MISS — three landed and none were listed: U.S.S.R. (485), Highway to Hell (659), Catapult (223). The predicted count of 3–4 was right; the names were unreachable."}),
-        C("Longest jam","You Enjoy Myself","27 jamcharts","Led all unburned 1994 songs in jamchart entries, ahead of Tweezer's 23.","Tweezer (23) · It's Ice (17) · Simple (11)",{t:"MISS — Tweezer, five times, in a Tweezerfest restaging 6/18/94. Data said YEM, narrative said Tweezer."})
+        C("Bustout","Poor Heart","gap 76","Highest 1994 play count among songs past a 50-show gap. Flagged as a long shot by construction.","Scent of a Mule (g95) · Amazing Grace (g900) · Nellie Kane (g54)",{t:"MISS — three landed and none were listed: U.S.S.R. (485), Highway to Hell (659), Catapult (223)."}),
+        C("Longest jam","You Enjoy Myself","27 jamcharts","Led all unburned 1994 songs in jamchart entries, ahead of Tweezer's 23.","Tweezer (23) · It's Ice (17) · Simple (11)",{t:"MISS — Tweezer, five times, in a Tweezerfest restaging 6/18/94."})
       ],
       models:[
-        M("v7 — top 20 by play count","published, live at showtime","1994 across 124 Phish shows, minus the 50 songs burned Jul 22 and Jul 24.","10 / 20","g",
+        M("v7 — top 20 by play count","published live at showtime","1994 across 124 Phish shows, minus the 50 songs burned Jul 22 and Jul 24. <b>The only live slate for this night.</b>","10 / 20","g",
           [["Sample in a Jar","73×",1],["Julius","65×",1],["Rift","49×",1],["Poor Heart","46×",0],["Cavern","45×",1],["Scent of a Mule","44×",0],["It's Ice","42×",0],["Fee","39×",0],["Axilla (Part II)","34×",0],["Down with Disease","58×",1],["You Enjoy Myself","48×",0],["Tweezer","36×",1],["If I Could","34×",0],["Simple","34×",1],["Wilson","27×",0],["Nellie Kane","26×",0],["The Squirming Coil","26×",1],["Amazing Grace","31×",0],["Tweezer Reprise","25×",1],["Lifeboy","24×",1]]),
-        M("v8 retrodiction","17 frequency + 3 reserved slots","Swaps the three weakest v7 picks — Amazing Grace, Nellie Kane and Wilson, all of which missed — for the costume-album, Fish/novelty and era-locked slots. <b>Fitted to the night it explains</b>, so Monday is the real test.","12 / 20","g",
+        M("v8 — fitted afterwards","predictive value: zero","<b>Built by deleting three picks already known to have missed</b> — Amazing Grace, Nellie Kane, Wilson — <b>and inserting two songs already known to have hit.</b> Any rule constructed that way scores higher. Shown only so Monday's genuine number has a reference point.","12 / 20","f",
           [["Back in the U.S.S.R.","TIER B",1],["Purple Rain","TIER B",1],["Catapult","TIER B",1],["Sample in a Jar","73×",1],["Julius","65×",1],["Rift","49×",1],["Poor Heart","46×",0],["Cavern","45×",1],["Scent of a Mule","44×",0],["It's Ice","42×",0],["Fee","39×",0],["Axilla (Part II)","34×",0],["Down with Disease","58×",1],["You Enjoy Myself","48×",0],["Tweezer","36×",1],["If I Could","34×",0],["Simple","34×",1],["The Squirming Coil","26×",1],["Tweezer Reprise","25×",1],["Lifeboy","24×",1]]),
-        M("v6 — archetype buckets","retracted before showtime","Cover quota and album-year reasoning, both retracted on frequency grounds hours before the show. <b>Its two most criticised picks — Wolfman's Brother and Purple Rain — both hit.</b>","9 / 20","",
+        M("v6 — fitted afterwards","retracted before showtime","Cover quota and album-year reasoning, both retracted hours before the show. Its two most criticised picks — Wolfman's Brother and Purple Rain — both hit, which is the strongest argument the era-narrative idea has. It is still a fitted number.","9 / 20","f",
           [["Sample in a Jar","",1],["Julius","",1],["Down with Disease","",1],["Rift","",1],["You Enjoy Myself","",0],["Poor Heart","",0],["Cavern","",1],["Scent of a Mule","",0],["Fee","",0],["Simple","",1],["Wilson","",0],["Nellie Kane","",0],["If I Could","",0],["Tweezer","",1],["Uncle Pen","",0],["Wolfman's Brother","",1],["Halley's Comet","",0],["Loving Cup","",0],["Frankenstein","",0],["Purple Rain","",1]]),
-        M("v5 — consensus barbell","superseded that morning","The mid-depth model that had been on the page since the run began.","8 / 20","",
+        M("v5 — fitted afterwards","the like-for-like comparison","The model superseded that morning, scored on the same night. <b>This is the honest measure of v7's improvement: 8 to 10, not 6 to 10.</b>","8 / 20","f",
           [["Sample in a Jar","",1],["Julius","",1],["Down with Disease","",1],["Rift","",1],["You Enjoy Myself","",0],["Poor Heart","",0],["Cavern","",1],["Scent of a Mule","",0],["It's Ice","",0],["Fee","",0],["Simple","",1],["Wilson","",0],["Nellie Kane","",0],["The Squirming Coil","",1],["Lifeboy","",1],["Amazing Grace","",0],["Mound","",0],["Ginseng Sullivan","",0],["Foreplay/Long Time","",0],["Sleeping Monkey","",0]])
       ],
       game:{ expected:"24.9",
-        note:"Ranked strictly by probability. The top four all hit for 34 of the 42 points. Tweezer was the one adjusted figure — placed at 37% rather than its raw 29% — and even that was too cautious: at 8 points instead of 5 the ladder would read 45.",
+        note:"Ranked strictly by probability. The top four all hit for 34 of the 42 points — the ranking worked. The 69% overshoot against expectation means the probabilities were too low, not that the model was good; a well-calibrated model lands near its expectation.",
         picks:G([
-          ["Sample in a Jar","59%","The most-played song of all of 1994 and unburned. Nothing else was close.",5,true],
+          ["Sample in a Jar","59%","The most-played song of all of 1994 and unburned.",5,true],
           ["Julius","52%","65 plays after an April 1994 debut — that rate in only nine months.",11,true],
           ["Down with Disease","47%","58 plays; debuted 31 Dec 1993, so 1994 is its breakout year.",10,true],
           ["Rift","40%","49 plays, its live peak. Not era-specific, but the ladder rewards probability.",8,true],
           ["You Enjoy Myself","39%","48 plays and 626 all-time. <b>Still unplayed after three nights.</b>",4,false],
-          ["Tweezer","37%","Adjusted up from a raw 29%. <b>Still far too cautious.</b>",9,true],
+          ["Tweezer","37%","Adjusted up from a raw 29%. Still far too cautious — it became the whole set.",9,true],
           ["Poor Heart","37%","46 plays. The riskiest pick in the top half at a 76-show gap.",76,false],
           ["Cavern","36%","45 plays, 484 all-time. A set-closing workhorse.",11,true],
           ["Scent of a Mule","36%","44 plays, debuted the same April 1994 night as Julius.",95,false],
@@ -406,54 +430,55 @@
         {name:"Set 1", songs:["Back in the U.S.S.R.","Simple","Rift","Punch You in the Eye","Wolfman's Brother"]},
         {name:"Set 2", songs:["Highway to Hell","Down with Disease","Tweezer","Down with Disease","Tweezer","Sample in a Jar","Tweezer","Lifeboy","Julius","Tweezer","Catapult","Tweezer","Cavern","Tweezer","The Squirming Coil"]},
         {name:"Encore", songs:["Purple Rain","Tweezer Reprise"]}
-      ], note:"Set 1 was ended early by a front-of-house outage, which mechanically suppressed every hit count. Set 2 became a Tweezerfest — five Tweezers wrapping the other songs, restaging 6/18/94. Three deep bustouts: Back in the U.S.S.R. (485 shows), Highway to Hell (659), Catapult (223)." } },
+      ], note:"Set 1 was ended early by a front-of-house outage. Set 2 became a Tweezerfest — five Tweezers wrapping the other songs, restaging 6/18/94. Three deep bustouts: Back in the U.S.S.R. (485 shows), Highway to Hell (659), Catapult (223)." } },
 
     { n:4, year:"1995", show:95, date:"Mon · Jul 27", status:"next",
-      note:"First real test of v8. Top 17 of 1995 by play count across 83 Phish shows, minus the 66 songs burned across nights 1–3, plus three reserved Tier B slots. The burn list reopened a lot: You Enjoy Myself, Poor Heart, Scent of a Mule, It's Ice, Amazing Grace and Fee all survived Saturday.",
+      note:"The first genuine out-of-sample test of v8. Top 17 of 1995 by play count across 83 Phish shows, minus the 66 songs burned so far, plus three reserved Tier B slots. Saturday reopened a lot: You Enjoy Myself, Poor Heart, Scent of a Mule, It's Ice, Amazing Grace and Fee all survived.",
+      pre:"<b>Pre-registered test.</b> Three things decide whether v8 is real: does a Quadrophenia song appear at all; does Tier B (Drowned, Keyboard Army, I Didn't Know) outscore the three frequency picks it displaced; and does the slate beat this night's random baseline by more than 2.5×, which is what plain v7 managed on Saturday. Anything less and the new rules are decoration.",
       calls:[
-        C("Opener","The Real Me","costume · track 1","<b>The v8 costume rule applied directly.</b> On #94 they opened with track one of the White Album. Quadrophenia — the 1995 Halloween costume — opens <em>I Am the Sea</em> into <em>The Real Me</em>. Played twice ever, 1,087-show gap: exactly the profile Back in the U.S.S.R. had.","I Am the Sea (g1118) · Ya Mar (6/83, frequency leader) · Buried Alive"),
-        C("Encore","I Didn't Know","Fish slot","<b>Reframed from frequency to the Fish/novelty slot</b> after Purple Rain. The vacuum-solo vehicle, 10 plays in 1995 and current at a 14-show gap. Hello My Baby is the a cappella alternative, but night 2 already spent that card on Sweet Adeline.","A Day in the Life (9/83) · Hello My Baby · Cracklin' Rosie"),
-        C("Bustout","3–4 songs past a 300-show gap","count, not name","<b>This call is now a number.</b> Nights 1–3 produced 3, 4 and 3. Naming them is hopeless — no individual candidate clears 10%. If you want a name anyway, Acoustic Army at a 1,096-show gap is the most era-locked song on the board.","Acoustic Army (g1096) · I'm Blue I'm Lonesome (g791) · Keyboard Army (g406)"),
-        C("Longest jam","You Enjoy Myself","25 plays in 1995","Unburned through three nights, which is remarkable for the biggest jam vehicle in the catalogue at 626 all-time. Its non-appearance Saturday makes it more likely here, not less.","Theme from the Bottom (8 jamcharts) · Free · Timber (Jerry the Mule)")
+        C("Opener","The Real Me","costume · track 1","<b>The costume rule, applied directly.</b> On #94 they opened with track one of the White Album. Quadrophenia opens <em>I Am the Sea</em> into <em>The Real Me</em>. Played twice ever, 1,087-show gap — the same profile Back in the U.S.S.R. had. <b>One observation is the entire basis for this.</b>","I Am the Sea (g1118) · Ya Mar (6/83, frequency leader) · Buried Alive"),
+        C("Encore","I Didn't Know","Fish slot","Reframed from frequency to the Fish/novelty slot after Purple Rain — a reframe with a 0-for-4 live record behind it. The vacuum-solo vehicle, 10 plays in 1995, current at a 14-show gap.","A Day in the Life (9/83) · Hello My Baby · Cracklin' Rosie"),
+        C("Bustout","3–4 songs past a 300-show gap","count, not name","A count rather than a title, because no individual candidate clears 10%. <b>Be sceptical of a hit:</b> the range 3–4 was drawn around the only three observations that exist, and a wide count range for a Phish show is close to unfalsifiable.","Acoustic Army (g1096) · I'm Blue I'm Lonesome (g791) · Keyboard Army (g406)"),
+        C("Longest jam","You Enjoy Myself","25 plays in 1995","Unburned through three nights, which is remarkable for the biggest jam vehicle in the catalogue at 626 all-time. The same call missed on Saturday.","Theme from the Bottom (8 jamcharts) · Free · Timber (Jerry the Mule)")
       ],
       sets:[
         { name:"Set 1", songs:P([
-          ["Free","32× · g4","The most-played song of 1995, debuted May 1995 and took over immediately. 240 all-time.",4],
-          ["Strange Design","29× · g60","29 of its 68 all-time plays fall in 1995 — overwhelmingly a song of this year.",60],
-          ["Poor Heart","27× · g76","27 plays in 1995, and it survived Saturday untouched. <span class=\"risk\">76-show gap.</span>",76],
-          ["Scent of a Mule","23× · g95","23 plays in 1995. Also survived Saturday. <span class=\"risk\">95-show gap.</span>",95],
-          ["It's Ice","20× · g7","20 plays in 1995 and current at a 7-show gap.",7],
-          ["Ya Mar","18× · g17","18 plays in 1995 and the year's most common set-one opener at six.",17],
-          ["Prince Caspian","17× · g2","Debuted Jun 1995 — the freshest song on this slate.",2],
-          ["Uncle Pen","16× · g337","Bill Monroe cover, 16 plays in 1995. <span class=\"risk\">Long dormant.</span>",337],
-          ["Taste","14× · g6","Debuted Jun 1995 as Taste That Surrounds; 154 all-time and current.",6]
+          ["Free","32 plays · gap 4","The most-played song of 1995, debuted May 1995 and took over immediately. 240 all-time.",4],
+          ["Strange Design","29 plays · gap 60","29 of its 68 all-time plays fall in 1995 — overwhelmingly a song of this year.",60],
+          ["Poor Heart","27 plays · gap 76","27 plays in 1995, and it survived Saturday untouched.",76],
+          ["Scent of a Mule","23 plays · gap 95","23 plays in 1995. Also survived Saturday.",95],
+          ["It's Ice","20 plays · gap 7","20 plays in 1995 and current at a 7-show gap.",7],
+          ["Ya Mar","18 plays · gap 17","18 plays in 1995 and the year's most common set-one opener at six.",17],
+          ["Prince Caspian","17 plays · gap 2","Debuted Jun 1995 — the freshest song on this slate.",2],
+          ["Uncle Pen","16 plays · gap 337","Bill Monroe cover, 16 plays in 1995. <span class=\"risk\">Long dormant.</span>",337],
+          ["Taste","14 plays · gap 6","Debuted Jun 1995 as Taste That Surrounds; 154 all-time and current.",6]
         ]) },
         { name:"Set 2", songs:P([
-          ["Theme from the Bottom","27× · g9","Debuted May 1995, eight jamchart entries — the year's leading unburned jam vehicle.",9],
-          ["You Enjoy Myself","25× · g4","25 plays in 1995, 626 all-time. <b>Unburned through three nights</b> — the biggest name left in the run.",4],
-          ["Acoustic Army","27× · g1096","<b>All 27 of its all-time plays fall in 1995.</b> <span class=\"risk\">Unplayed in 1,096 shows</span> — exactly the profile that produced Back in the U.S.S.R.",1096],
-          ["Drowned","<span class=\"tb\">TIER B</span> · g118","<span class=\"tb\">Costume-album slot.</span> From <em>Quadrophenia</em> — the one song off it that genuinely entered the repertoire, at <b>48 all-time plays against 4 for the next-best</b>. Only 2 plays in 1995, so frequency ranking would never surface it.",118],
-          ["Cars Trucks Buses","20× · g43","Debuted Sep 1995 and played 20 times — that rate in a third of a year.",43],
-          ["I'm Blue, I'm Lonesome","18× · g791","Bill Monroe cover, 18 of its 30 all-time plays in 1995. <span class=\"risk\">Deep vault.</span>",791],
-          ["Keyboard Army","<span class=\"tb\">TIER B</span> · g406","<span class=\"tb\">Era-locked slot.</span> <b>All 14 of its all-time plays are 1995.</b>",406],
-          ["Billy Breathes","13× · g17","Debuted Sep 1995; 67 all-time and current.",17]
+          ["Theme from the Bottom","27 plays · gap 9","Debuted May 1995, eight jamchart entries — the year's leading unburned jam vehicle.",9],
+          ["You Enjoy Myself","25 plays · gap 4","25 plays in 1995, 626 all-time. <b>Unburned through three nights.</b>",4],
+          ["Acoustic Army","27 plays · gap 1096","<b>All 27 of its all-time plays fall in 1995.</b> <span class=\"risk\">Unplayed in 1,096 shows.</span>",1096],
+          ["Drowned","<span class=\"tb\">TIER B</span> · gap 118","<span class=\"tb\">Costume-album slot.</span> From <em>Quadrophenia</em>, and the one song off it that entered the repertoire — <b>48 all-time plays against 4 for the next-best</b>. Only 2 plays in 1995, so frequency ranking would never surface it. <b>This pick is the costume rule's real test.</b>",118],
+          ["Cars Trucks Buses","20 plays · gap 43","Debuted Sep 1995 and played 20 times — that rate in a third of a year.",43],
+          ["I'm Blue, I'm Lonesome","18 plays · gap 791","Bill Monroe cover, 18 of its 30 all-time plays in 1995. <span class=\"risk\">Deep vault.</span>",791],
+          ["Keyboard Army","<span class=\"tb\">TIER B</span> · gap 406","<span class=\"tb\">Era-locked slot.</span> <b>All 14 of its all-time plays are 1995.</b>",406],
+          ["Billy Breathes","13 plays · gap 17","Debuted Sep 1995; 67 all-time and current.",17]
         ]) },
         { name:"Encore", songs:P([
-          ["A Day in the Life","23× · g37","Beatles cover, 23 plays in 1995 and the year's most common encore at nine.",37],
-          ["I Didn't Know","<span class=\"tb\">TIER B</span> · g14","<span class=\"tb\">Fish/novelty slot.</span> The vacuum vehicle, 10 plays in 1995. Added because Purple Rain proved this category deserves a reserved slot.",14],
-          ["Hello My Baby","15× · g257","The a cappella number. Ranked below I Didn't Know because night 2 used the a cappella card.",257]
+          ["A Day in the Life","23 plays · gap 37","Beatles cover, 23 plays in 1995 and the year's most common encore at nine.",37],
+          ["I Didn't Know","<span class=\"tb\">TIER B</span> · gap 14","<span class=\"tb\">Fish/novelty slot.</span> The vacuum vehicle, 10 plays in 1995.",14],
+          ["Hello My Baby","15 plays · gap 257","The a cappella number. Ranked below I Didn't Know because night 2 used the a cappella card.",257]
         ]) }
       ],
       game:{ expected:"18.2",
-        note:"Percentages are 1995 plays ÷ 83 shows, except Drowned, estimated at 30% from the costume rule — roughly a 60% chance a Quadrophenia song appears at all, times even odds it is the repertoire song rather than a deep album cut. A genuine guess on one prior observation, flagged as such.",
+        note:"Percentages are 1995 plays ÷ 83 shows, except Drowned, estimated at 30% from the costume rule — roughly a 60% chance a Quadrophenia song appears at all, times even odds it is the repertoire song rather than a deep album cut. That is a guess on one prior observation. Note also that Saturday's ladder overshot its expectation by 69%, so treat 18.2 as a floor rather than a forecast.",
         picks:G([
           ["Free","39%","The most-played song of 1995 at 32, current at a 4-show gap.",4],
           ["Strange Design","35%","29 of its 68 all-time plays fall in 1995.",60],
           ["Theme from the Bottom","33%","27 plays and the year's leading unburned jam vehicle.",9],
           ["Acoustic Army","33%","Every one of its 27 plays falls in 1995. Ranked under Theme on a 1,096-show gap.",1096],
-          ["Poor Heart","33%","27 plays, and it survived Saturday. <b>The riskiest pick in the top half.</b>",76],
+          ["Poor Heart","33%","27 plays, and it survived Saturday. The riskiest pick in the top half.",76],
           ["You Enjoy Myself","30%","25 plays, 626 all-time, still unburned after three nights.",4],
-          ["Drowned","30%","<b>The costume-album bet.</b> Raw 1995 rate is 2%, so this rests entirely on the new rule. If it hits, v8 is onto something.",118],
+          ["Drowned","30%","<b>The costume-album bet.</b> Raw 1995 rate is 2%, so this placement rests entirely on a rule with one observation behind it.",118],
           ["Scent of a Mule","28%","23 plays in 1995, and it also survived Saturday.",95],
           ["A Day in the Life","28%","23 plays and the year's most common encore.",37],
           ["It's Ice","24%","20 plays in 1995, current at a 7-show gap.",7]
@@ -462,44 +487,44 @@
     { n:5, year:"1996", show:96, date:"Wed · Jul 29", status:"up",
       note:"The closer, and the most provisional slate — it compounds a night of assumed predictions. Punch You in the Eye and Wolfman's Brother were burned Saturday and removed. Rebuild after Monday.",
       calls:[
-        C("Opener","Born Under Punches","costume · track 1","The costume rule again: <em>Remain in Light</em>, the 1996 Halloween costume, opens with Born Under Punches. Played once ever, 1,042-show gap.","The Star-Spangled Banner (3/73) · Funky Bitch"),
-        C("Encore","Waste","4/73 · 5%","Debuted Jun 1996 and closed four shows that year. <b>Weaker than the Fish-slot logic now governing this call</b> — 1996's Fish material is thin once earlier nights are burned.","Rocky Top (3) · Johnny B. Goode (3, g926)"),
-        C("Bustout","3–4 songs past a 300-show gap","count, not name","Same reframing as Monday.","Johnny B. Goode (g926) · Life on Mars? (g539) · Star-Spangled Banner (g360)"),
-        C("Longest jam","Crosseyed and Painless","72 all-time","The costume album pays off twice: Crosseyed is from <em>Remain in Light</em> and became one of the band's biggest modern vehicles, current at a 6-show gap. Every native 1996 vehicle is burned upstream.","Character Zero · Funky Bitch · Esther")
+        C("Opener","Born Under Punches","costume · track 1","<em>Remain in Light</em>, the 1996 Halloween costume, opens with Born Under Punches. Played once ever, 1,042-show gap.","The Star-Spangled Banner (3/73) · Funky Bitch"),
+        C("Encore","Waste","4/73 · 5%","Debuted Jun 1996 and closed four shows that year. Weaker than the Fish-slot logic now governing this call — 1996's Fish material is thin once earlier nights are burned.","Rocky Top (3) · Johnny B. Goode (3, g926)"),
+        C("Bustout","3–4 songs past a 300-show gap","count, not name","Same reframing, same caveat.","Johnny B. Goode (g926) · Life on Mars? (g539) · Star-Spangled Banner (g360)"),
+        C("Longest jam","Crosseyed and Painless","72 all-time","From <em>Remain in Light</em>, and it became one of the band's biggest modern vehicles — current at a 6-show gap. Every native 1996 vehicle is burned upstream.","Character Zero · Funky Bitch · Esther")
       ],
       sets:[
         { name:"Set 1", songs:P([
-          ["Character Zero","30× · g5","Debuted Jun 1996 and immediately became the year's most-played song.",5],
-          ["Waste","26× · g11","Also a Jun 1996 debut, and the year's most common encore.",11],
-          ["Train Song","20× · g92","Debuted Jul 1996 — 59 all-time, so 1996 is a third of its whole life.",92],
-          ["Funky Bitch","19× · g31","Son Seals cover, 236 all-time.",31],
-          ["Talk","15× · g120","<b>All 15 of its all-time plays are 1996.</b>",120],
-          ["Frankenstein","15× · g13","Edgar Winter cover, 94 all-time. Still current.",13],
-          ["NICU","14× · g3","161 all-time, and the freshest pick on this slate.",3],
-          ["I Didn't Know","14× · g14","The vacuum vehicle — though it may well be burned Monday.",14],
-          ["Guyute","13× · g5","Debuted Oct 1994 but only became a regular later.",5]
+          ["Character Zero","30 plays · gap 5","Debuted Jun 1996 and immediately became the year's most-played song.",5],
+          ["Waste","26 plays · gap 11","Also a Jun 1996 debut, and the year's most common encore.",11],
+          ["Train Song","20 plays · gap 92","Debuted Jul 1996 — 59 all-time, so 1996 is a third of its whole life.",92],
+          ["Funky Bitch","19 plays · gap 31","Son Seals cover, 236 all-time.",31],
+          ["Talk","15 plays · gap 120","<b>All 15 of its all-time plays are 1996.</b>",120],
+          ["Frankenstein","15 plays · gap 13","Edgar Winter cover, 94 all-time. Still current.",13],
+          ["NICU","14 plays · gap 3","161 all-time, and the freshest pick on this slate.",3],
+          ["I Didn't Know","14 plays · gap 14","The vacuum vehicle — though it may well be burned Monday.",14],
+          ["Guyute","13 plays · gap 5","Debuted Oct 1994 but only became a regular later.",5]
         ]) },
         { name:"Set 2", songs:P([
-          ["Crosseyed and Painless","<span class=\"tb\">TIER B</span> · g6","<span class=\"tb\">Costume-album slot.</span> From <em>Remain in Light</em>, and by far the one that entered the repertoire — <b>72 all-time plays</b>, current at a 6-show gap. The strongest Tier B candidate on any night.",6],
-          ["Swept Away","18× · g229","Debuted Oct 1996. Inseparable from Steep.",229],
-          ["Steep","18× · g229","The other half of the Swept Away pairing.",229],
-          ["Life on Mars?","17× · g539","<b>17 of its 23 all-time plays are 1996</b> — Page's showcase that year.",539],
-          ["The Star-Spangled Banner","17× · g360","17 plays in 1996 — the year they repeatedly opened with it.",360],
-          ["Harpua","14× · g114","The narration set-piece, 66 all-time.",114],
-          ["Loving Cup","13× · g10","Rolling Stones cover — a standard encore of the era, still current.",10],
-          ["Born Under Punches","<span class=\"tb\">TIER B</span> · g1042","<span class=\"tb\">Costume album-opener slot.</span> Track one of <em>Remain in Light</em>, played once ever. The Back in the U.S.S.R. shaped bet, and also the opener call.",1042]
+          ["Crosseyed and Painless","<span class=\"tb\">TIER B</span> · gap 6","<span class=\"tb\">Costume-album slot.</span> From <em>Remain in Light</em>, and by far the one that entered the repertoire — <b>72 all-time plays</b>, current at a 6-show gap. The strongest Tier B candidate on any night.",6],
+          ["Swept Away","18 plays · gap 229","Debuted Oct 1996. Inseparable from Steep — these two slots are close to a single bet.",229],
+          ["Steep","18 plays · gap 229","The other half of the Swept Away pairing.",229],
+          ["Life on Mars?","17 plays · gap 539","<b>17 of its 23 all-time plays are 1996</b> — Page's showcase that year.",539],
+          ["The Star-Spangled Banner","17 plays · gap 360","17 plays in 1996 — the year they repeatedly opened with it.",360],
+          ["Harpua","14 plays · gap 114","The narration set-piece, 66 all-time.",114],
+          ["Loving Cup","13 plays · gap 10","Rolling Stones cover — a standard encore of the era, still current.",10],
+          ["Born Under Punches","<span class=\"tb\">TIER B</span> · gap 1042","<span class=\"tb\">Costume album-opener slot.</span> Track one of <em>Remain in Light</em>, played once ever.",1042]
         ]) },
         { name:"Encore", songs:P([
-          ["Johnny B. Goode","16× · g926","Chuck Berry closer, 16 of its 23 all-time plays in 1996.",926],
-          ["Fire","16× · g7","Hendrix cover, 139 all-time. Genuinely live.",7],
-          ["Rocky Top","15× · g10","Bluegrass encore staple, 208 all-time.",10]
+          ["Johnny B. Goode","16 plays · gap 926","Chuck Berry closer, 16 of its 23 all-time plays in 1996.",926],
+          ["Fire","16 plays · gap 7","Hendrix cover, 139 all-time. Genuinely live.",7],
+          ["Rocky Top","15 plays · gap 10","Bluegrass encore staple, 208 all-time.",10]
         ]) }
       ],
-      game:{ expected:"16.8", note:"Provisional — rebuild after Monday. Crosseyed and Painless is placed on the costume rule rather than its 1996 count.",
+      game:{ expected:"16.8", note:"Provisional — rebuild after Monday. Crosseyed and Painless is placed on the costume rule rather than its 1996 count. With 66-plus songs burned, expect this night to score higher for pool-shrink reasons alone.",
         picks:G([
           ["Character Zero","41%","The year's most-played song in barely half a year.",5],
           ["Waste","36%","A Jun 1996 debut and the year's most common encore.",11],
-          ["Crosseyed and Painless","30%","<b>The costume bet for this night</b>, and stronger than Drowned: 72 all-time and a 6-show gap make it both era-signature and current.",6],
+          ["Crosseyed and Painless","30%","The costume bet for this night, and stronger than Drowned: 72 all-time and a 6-show gap make it both era-signature and current.",6],
           ["Train Song","27%","1996 is a third of its entire life.",92],
           ["Funky Bitch","26%","A durable blues staple rather than an era marker.",31],
           ["Swept Away","25%","Inseparable from Steep.",229],
@@ -510,26 +535,22 @@
         ]) } }
   ]};
 
-  var KEY = "phish-msg-96-predictions-v8c";
-  var state, active = 0;
+  var KEY="phish-msg-v9", state, active=0;
   function clone(o){ return JSON.parse(JSON.stringify(o)); }
-  function load(){ try{ var r=window.localStorage.getItem(KEY); if(r){ state=JSON.parse(r); return true; } }catch(e){} state=clone(DEFAULTS); return false; }
-  function save(){ try{ window.localStorage.setItem(KEY, JSON.stringify(state)); flash(); }catch(e){ note("Session only."); } }
-  var t1; function flash(){ note("Saved ✓"); clearTimeout(t1); t1=setTimeout(function(){note("");},1400); }
-  function note(t){ document.getElementById("saveNote").textContent=t; }
-  function gamePoints(n){ if(!n.game) return null; var p=0; n.game.picks.forEach(function(g){ if(g.hit)p+=g.pts; }); return p; }
+  function load(){ try{ var r=localStorage.getItem(KEY); if(r){ state=JSON.parse(r); return true; } }catch(e){} state=clone(DEFAULTS); return false; }
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
+  function gamePoints(n){ if(!n.game) return 0; var p=0; n.game.picks.forEach(function(g){ if(g.hit)p+=g.pts; }); return p; }
 
   function renderTabs(){
-    var tabs=document.getElementById("tabs"); tabs.innerHTML="";
+    var t=document.getElementById("tabs"); t.innerHTML="";
     state.nights.forEach(function(n,i){
       var b=document.createElement("button"); b.className="tab"; b.setAttribute("role","tab");
       b.setAttribute("aria-selected", i===active?"true":"false");
-      var dc = n.status==="done"?"done":(n.status==="next"?"next":"up");
-      var sc = n.tabScore ? '<div class="ts g">'+n.tabScore+'</div>' : '';
-      b.innerHTML='<div class="ty">'+n.year+'<span class="dot '+dc+'"></span></div>'+
-        '<div class="td">#'+n.show+' · '+n.date+'</div>'+sc;
-      b.addEventListener("click", function(){ active=i; render(); });
-      tabs.appendChild(b);
+      var dc=n.status==="done"?"done":(n.status==="next"?"next":"up");
+      var sc=n.tabScore?'<div class="ts '+(n.tabFit?"f":"g")+'">'+n.tabScore+'</div>':'';
+      b.innerHTML='<div class="ty">'+n.year+'<span class="dot '+dc+'"></span></div><div class="td">#'+n.show+' · '+n.date+'</div>'+sc;
+      b.addEventListener("click", function(){ active=i; render(); window.scrollTo({top:document.getElementById("panel").offsetTop-70, behavior:"smooth"}); });
+      t.appendChild(b);
     });
   }
   function statusText(s){ return s==="done"?"Played":(s==="next"?"● Next up":"Upcoming"); }
@@ -537,169 +558,162 @@
   function renderPanel(){
     var n=state.nights[active], p=document.getElementById("panel"); p.innerHTML="";
     var h=document.createElement("div"); h.className="panel-head";
-    h.innerHTML='<div><div class="panel-title">'+n.year+' Night — Show #'+n.show+'</div>'+
-      '<div class="panel-meta">Night '+n.n+' of 5 · '+n.date+' · Madison Square Garden</div></div>'+
-      '<span class="status-chip '+n.status+'">'+statusText(n.status)+'</span>';
+    h.innerHTML='<div><div class="panel-title">'+n.year+' Night — Show #'+n.show+'</div><div class="panel-meta">Night '+n.n+' of 5 · '+n.date+' · Madison Square Garden</div></div><span class="status-chip '+n.status+'">'+statusText(n.status)+'</span>';
     p.appendChild(h);
     var nt=document.createElement("p"); nt.className="panel-note"; nt.textContent=n.note; p.appendChild(nt);
-    if(n.scores){
-      var sb=document.createElement("div"); sb.className="scoreboard";
+    if(n.pre){ var pr=document.createElement("div"); pr.className="lesson"; pr.innerHTML=n.pre; p.appendChild(pr); }
+    if(n.scores){ var sb=document.createElement("div"); sb.className="scoreboard";
       sb.innerHTML=n.scores.map(function(s){ return '<div class="sbi"><div class="k">'+s.k+'</div><div class="v '+(s.tone||'')+'">'+s.v+(s.sm?' <small>'+s.sm+'</small>':'')+'</div><div class="x">'+s.x+'</div></div>'; }).join("");
-      p.appendChild(sb);
-    }
+      p.appendChild(sb); }
     if(n.lesson){ var l=document.createElement("div"); l.className="lesson"; l.innerHTML=n.lesson; p.appendChild(l); }
+
     if(n.calls) renderCalls(n,p);
-    if(n.models) n.models.forEach(function(m){
-      var box=document.createElement("div"); box.className="mblock";
-      var mh=document.createElement("div"); mh.className="mb-head";
-      mh.innerHTML='<span class="mn">'+m.name+' <em>· '+m.sub+'</em></span><span class="ms '+(m.tone||'')+'">'+m.score+'</span>';
-      box.appendChild(mh);
-      var mn=document.createElement("div"); mn.className="mb-note"; mn.innerHTML=m.note; box.appendChild(mn);
-      if(m.picks && m.picks.length){
-        var pk=document.createElement("div"); pk.className="picks";
-        pk.innerHTML=m.picks.map(function(x){ return '<span class="pk'+(x[2]?' h':'')+'">'+x[0]+(x[1]?'<span class="c">'+x[1]+'</span>':'')+'</span>'; }).join("");
-        box.appendChild(pk);
-      }
-      p.appendChild(box);
-    });
-    if(n.sets) n.sets.forEach(function(set,si){
-      var b=document.createElement("div"); b.className="setblock";
-      var lb=document.createElement("div"); lb.className="set-label";
-      lb.innerHTML=set.name+' <span class="set-count">'+set.songs.length+' songs</span>'; b.appendChild(lb);
-      var ul=document.createElement("ul"); ul.className="songs";
-      set.songs.forEach(function(sg,gi){ ul.appendChild(songRow(n,si,gi,sg)); });
-      b.appendChild(ul);
-      var ar=document.createElement("div"); ar.className="addrow";
-      var ab=document.createElement("button"); ab.className="add-btn"; ab.textContent="+ add song";
-      ab.addEventListener("click", function(){ set.songs.push({name:"",hit:false,tag:"",why:"",gap:null}); save(); render(); });
-      ar.appendChild(ab); b.appendChild(ar); p.appendChild(b);
-    });
-    if(n.game) renderGame(n,p);
-    if(n.actual){
-      var a=document.createElement("div"); a.className="actual";
-      var ah=document.createElement("div"); ah.className="ah"; ah.textContent="What was actually played"; a.appendChild(ah);
-      var ab2=document.createElement("div"); ab2.className="ab";
-      var pred={}; (n.models||[]).forEach(function(m){ m.picks.forEach(function(x){ if(x[2]) pred[x[0]]=true; }); });
-      ab2.innerHTML=n.actual.sets.map(function(s){
-        return '<div class="sr"><span class="sn">'+s.name+'</span>'+ s.songs.map(function(x){
-          return '<span class="'+(pred[x]?'pr':'np')+'">'+x+'</span>'; }).join(' <span style="color:var(--baseline)">›</span> ')+'</div>'; }).join("");
-      ab2.innerHTML+='<div class="sr" style="margin-top:8px;color:var(--text-muted);font-size:11.5px">Green = at least one model had it.</div>';
-      a.appendChild(ab2);
-      var an=document.createElement("div"); an.className="an"; an.textContent=n.actual.note; a.appendChild(an);
-      p.appendChild(a);
+
+    // live slate for upcoming nights, actual setlist first for played nights
+    if(n.status!=="done" && n.sets){
+      var lg=document.createElement("div"); lg.className="legendbar";
+      lg.innerHTML='<b>Reading the labels:</b> &ldquo;27 plays&rdquo; = times played in the theme year · &ldquo;gap 76&rdquo; = shows since it was last played anywhere · <span style="color:var(--accent-2);font-weight:700">orange</span> = dormant, 50-plus shows · <span style="color:var(--tierb);font-weight:700">TIER B</span> = one of the three reserved era-signature slots, chosen by rule rather than play count.';
+      var anchor=document.createElement("div"); anchor.id="slate";
+      p.appendChild(anchor); p.appendChild(lg);
+      renderSets(n,p);
     }
-    var ft=document.createElement("div"); ft.className="panel-foot";
-    var rs=document.createElement("button"); rs.className="btn warn"; rs.textContent="Reset this night";
-    rs.addEventListener("click", function(){ if(confirm("Reset the "+n.year+" night?")){ state.nights[active]=clone(DEFAULTS.nights[active]); save(); render(); } });
-    ft.appendChild(rs); p.appendChild(ft);
+    if(n.status==="done" && n.actual) renderActual(n,p,true);
+    if(n.models){
+      var live=n.models.filter(function(m){return m.tone!=="f";});
+      var fit=n.models.filter(function(m){return m.tone==="f";});
+      live.forEach(function(m){ p.appendChild(modelBlock(m)); });
+      if(fit.length){
+        var d=document.createElement("details"); d.className="box"; d.style.marginTop="16px";
+        var s=document.createElement("summary");
+        s.innerHTML=fit.length+' other model version'+(fit.length>1?'s':'')+', scored after the fact <span class="tag">fitted — not predictions</span>';
+        d.appendChild(s);
+        fit.forEach(function(m){ d.appendChild(modelBlock(m)); });
+        p.appendChild(d);
+      }
+    }
+    if(n.game) renderGame(n,p);
+    if(n.status==="done" && n.sets) renderSets(n,p);
+  }
+
+  function modelBlock(m){
+    var box=document.createElement("div"); box.className="mblock";
+    var mh=document.createElement("div"); mh.className="mb-head";
+    mh.innerHTML='<span class="mn">'+m.name+' <em>· '+m.sub+'</em></span><span class="ms '+(m.tone||'')+'">'+m.score+'</span>';
+    box.appendChild(mh);
+    var mn=document.createElement("div"); mn.className="mb-note"; mn.innerHTML=m.note; box.appendChild(mn);
+    if(m.picks && m.picks.length){
+      var pk=document.createElement("div"); pk.className="picks";
+      pk.innerHTML=m.picks.map(function(x){ return '<span class="pk'+(x[2]?' h':'')+'">'+x[0]+(x[1]?'<span class="c">'+x[1]+'</span>':'')+'</span>'; }).join("");
+      box.appendChild(pk);
+    }
+    return box;
+  }
+
+  function renderActual(n,p){
+    var a=document.createElement("div"); a.className="actual";
+    var ah=document.createElement("div"); ah.className="ah"; ah.textContent="What was actually played"; a.appendChild(ah);
+    var ab=document.createElement("div"); ab.className="ab";
+    var pred={}; (n.models||[]).forEach(function(m){ if(m.tone!=="f") m.picks.forEach(function(x){ if(x[2]) pred[x[0]]=true; }); });
+    ab.innerHTML=n.actual.sets.map(function(s){
+      return '<div class="sr"><span class="sn">'+s.name+'</span>'+s.songs.map(function(x){
+        return '<span class="'+(pred[x]?'pr':'np')+'">'+x+'</span>'; }).join(' <span style="color:var(--baseline)">›</span> ')+'</div>'; }).join("")+
+      '<div class="sr" style="margin-top:8px;color:var(--text-muted);font-size:11.5px">Green = the live model had it. Fitted models are excluded from this colouring.</div>';
+    a.appendChild(ab);
+    var an=document.createElement("div"); an.className="an"; an.textContent=n.actual.note; a.appendChild(an);
+    p.appendChild(a);
   }
 
   function renderCalls(n,p){
     var box=document.createElement("div"); box.className="calls";
     var hd=document.createElement("div"); hd.className="calls-head";
-    hd.innerHTML='Called shots <span class="hint">'+(n.status==="done"?"scored":"v8 · opener = costume track 1, encore = Fish slot, bustout = a count")+'</span>';
+    hd.innerHTML='Called shots <span class="hint">'+(n.status==="done"?"scored · 0 of 4":"pre-registered · exact song only")+'</span>';
     box.appendChild(hd);
     n.calls.forEach(function(c){
-      var row=document.createElement("div"); row.className="call"+(c.hit?" hit":"")+(c.verdict?" missed":"");
-      var cb=document.createElement("input"); cb.type="checkbox"; cb.checked=c.hit;
-      cb.addEventListener("change", function(){ c.hit=cb.checked; row.classList.toggle("hit",c.hit); save(); });
-      var k=document.createElement("div"); k.className="k"; k.textContent=c.k;
+      var row=document.createElement("div"); row.className="call"+(c.verdict?" missed":"");
+      var mk=document.createElement("div"); mk.className="mk "+(c.verdict?"n":"q"); mk.textContent=c.verdict?"✗":"·"; row.appendChild(mk);
+      var k=document.createElement("div"); k.className="k"; k.textContent=c.k; row.appendChild(k);
       var v=document.createElement("div"); v.className="v";
       var pk=document.createElement("div"); pk.className="pick"; pk.textContent=c.pick; v.appendChild(pk);
       var bs=document.createElement("div"); bs.className="basis"; bs.innerHTML=c.basis; v.appendChild(bs);
       if(c.verdict){ var vd=document.createElement("div"); vd.className="verdict"; vd.textContent=c.verdict.t; v.appendChild(vd); }
       if(c.alts){ var al=document.createElement("div"); al.className="alts"; al.innerHTML="Next best: <span>"+c.alts+"</span>"; v.appendChild(al); }
-      var od=document.createElement("span"); od.className="odds"; od.textContent=c.odds;
-      row.appendChild(cb); row.appendChild(k); row.appendChild(v); row.appendChild(od);
+      row.appendChild(v);
+      var od=document.createElement("span"); od.className="odds"; od.textContent=c.odds; row.appendChild(od);
       box.appendChild(row);
     });
     p.appendChild(box);
   }
 
   function renderGame(n,p){
-    var box=document.createElement("div"); box.className="game";
+    var box=document.createElement("div"); box.className="game"; box.id="ladder";
+    var done=n.status==="done";
     var hd=document.createElement("div"); hd.className="game-head";
-    hd.innerHTML='<span class="t">Setlist game — 10 picks, 10 down to 1</span>'+
-      '<span class="sc" id="gameScore"><b>'+gamePoints(n)+'</b> / 55 · expected '+n.game.expected+'</span>';
+    hd.innerHTML='<span class="t">Setlist game — 10 picks, 10 points down to 1</span>'+
+      '<span class="sc" id="gameScore">'+(done?'<b>'+gamePoints(n)+'</b> / 55 scored · expected '+n.game.expected
+        :'expected <b>'+n.game.expected+'</b> / 55')+'</span>';
     box.appendChild(hd);
     n.game.picks.forEach(function(g){
       var row=document.createElement("div"); row.className="grow"+(g.hit?" hit":"")+(g.pts<=4?" lo":"");
-      var cb=document.createElement("input"); cb.type="checkbox"; cb.checked=g.hit;
-      cb.addEventListener("change", function(){ g.hit=cb.checked; row.classList.toggle("hit",g.hit);
-        var sc=document.getElementById("gameScore"); if(sc) sc.innerHTML='<b>'+gamePoints(n)+'</b> / 55 · expected '+n.game.expected; save(); });
-      var pt=document.createElement("div"); pt.className="pts"; pt.textContent=g.pts;
+      if(done){ var mk=document.createElement("div"); mk.className="mk "+(g.hit?"y":"n"); mk.textContent=g.hit?"✓":"✗"; row.appendChild(mk); }
+      else {
+        var cb=document.createElement("input"); cb.type="checkbox"; cb.checked=g.hit;
+        cb.setAttribute("aria-label","Mark "+g.name+" as played");
+        cb.addEventListener("change", function(){ g.hit=cb.checked; row.classList.toggle("hit",g.hit);
+          var sc=document.getElementById("gameScore"); if(sc) sc.innerHTML='<b>'+gamePoints(n)+'</b> / 55 so far · expected '+n.game.expected; save(); });
+        row.appendChild(cb);
+      }
+      var pt=document.createElement("div"); pt.className="pts"; pt.textContent=g.pts+" pts"; row.appendChild(pt);
       var gb=document.createElement("div"); gb.className="gb";
       var gn=document.createElement("div"); gn.className="gn"; gn.textContent=g.name;
       var gr=document.createElement("div"); gr.className="gr"; gr.innerHTML=g.why;
-      gb.appendChild(gn); gb.appendChild(gr);
+      gb.appendChild(gn); gb.appendChild(gr); row.appendChild(gb);
       var mt=document.createElement("div"); mt.className="meta";
       mt.innerHTML='<span class="pp">'+g.p+'</span><span class="gg'+(g.gap>=50?' far':'')+'">gap '+g.gap+'</span>';
-      row.appendChild(cb); row.appendChild(pt); row.appendChild(gb); row.appendChild(mt);
+      row.appendChild(mt);
       box.appendChild(row);
     });
-    var ft=document.createElement("div"); ft.className="game-foot"; ft.textContent=n.game.note;
+    var ft=document.createElement("div"); ft.className="game-foot"; ft.innerHTML=n.game.note;
     box.appendChild(ft); p.appendChild(box);
   }
 
-  function songRow(n,si,gi,sg){
-    var li=document.createElement("li"); li.className="song"+(sg.hit?" hit":"");
-    var cb=document.createElement("input"); cb.type="checkbox"; cb.checked=sg.hit;
-    cb.addEventListener("change", function(){ sg.hit=cb.checked; li.classList.toggle("hit",sg.hit); save(); });
-    var bd=document.createElement("div"); bd.className="body";
-    var nm=document.createElement("div"); nm.className="name"; nm.contentEditable="true"; nm.spellcheck=false; nm.textContent=sg.name;
-    nm.addEventListener("blur", function(){ sg.name=nm.textContent.replace(/\s+/g," ").trim(); save(); });
-    bd.appendChild(nm);
-    if(sg.why){ var w=document.createElement("div"); w.className="why"; w.innerHTML=sg.why; bd.appendChild(w); }
-    var dl=document.createElement("button"); dl.className="del"; dl.innerHTML="×";
-    dl.addEventListener("click", function(){ n.sets[si].songs.splice(gi,1); save(); render(); });
-    li.appendChild(cb); li.appendChild(bd);
-    if(sg.tag){ var ch=document.createElement("span");
-      ch.className="tagchip"+(/TIER B/.test(sg.tag)?" tierb":(sg.gap!==null&&sg.gap>=50?" far":""));
-      ch.innerHTML=sg.tag; li.appendChild(ch); }
-    li.appendChild(dl);
-    return li;
+  function renderSets(n,p){
+    n.sets.forEach(function(set,si){
+      var b=document.createElement("div"); b.className="setblock";
+      var lb=document.createElement("div"); lb.className="set-label";
+      lb.innerHTML=set.name+' <span class="set-count">'+set.songs.length+' songs</span>'; b.appendChild(lb);
+      var ul=document.createElement("ul"); ul.className="songs";
+      set.songs.forEach(function(sg){
+        var li=document.createElement("li"); li.className="song"+(sg.hit?" hit":"");
+        if(n.status!=="done"){
+          var cb=document.createElement("input"); cb.type="checkbox"; cb.checked=sg.hit;
+          cb.setAttribute("aria-label","Mark "+sg.name+" as played");
+          cb.addEventListener("change", function(){ sg.hit=cb.checked; li.classList.toggle("hit",sg.hit); save(); });
+          li.appendChild(cb);
+        }
+        var bd=document.createElement("div"); bd.className="body";
+        var nm=document.createElement("div"); nm.className="name"; nm.textContent=sg.name; bd.appendChild(nm);
+        if(sg.why){ var w=document.createElement("div"); w.className="why"; w.innerHTML=sg.why; bd.appendChild(w); }
+        li.appendChild(bd);
+        if(sg.tag){ var ch=document.createElement("span");
+          ch.className="tagchip"+(/TIER B/.test(sg.tag)?" tierb":(sg.gap!==null&&sg.gap>=50?" far":""));
+          ch.innerHTML=sg.tag; li.appendChild(ch); }
+        ul.appendChild(li);
+      });
+      b.appendChild(ul); p.appendChild(b);
+    });
   }
 
   function render(){ renderTabs(); renderPanel(); }
-  document.getElementById("resetAllBtn").addEventListener("click", function(){
-    if(confirm("Reset ALL nights?")){ state=clone(DEFAULTS); active=0; save(); render(); } });
-  document.getElementById("exportBtn").addEventListener("click", function(){
-    var strip=function(h){return String(h).replace(/<[^>]*>/g,"");};
-    var L=["PHISH @ MSG 2026 — SETLIST PREDICTIONS — model v8",""];
-    L.push("RUN SCORECARD: 25 of 66 songs caught across three nights (random baseline 11.7)");
-    RUN.forEach(function(r){ L.push("  "+r.year+" #"+r.show+" — "+r.model+" — "+r.hits+" of "+r.played+" played (random "+r.random+")"); });
-    L.push("");
-    state.nights.forEach(function(n){
-      L.push("=== "+n.year+" · Night "+n.n+" · #"+n.show+" · "+n.date+" ["+n.status+"] ===");
-      if(n.models) n.models.forEach(function(m){
-        L.push("  "+m.name+" ("+m.sub+") — "+m.score);
-        if(m.picks.length) L.push("    "+m.picks.map(function(x){return (x[2]?"[x] ":"[ ] ")+x[0];}).join(", ")); });
-      if(n.calls){ L.push("  CALLED SHOTS:");
-        n.calls.forEach(function(c){ L.push("    "+(c.hit?"[x] ":"[ ] ")+c.k+": "+c.pick+"  ("+c.odds+")"); }); }
-      if(n.sets){ n.sets.forEach(function(s){ L.push("  "+s.name+":");
-        s.songs.forEach(function(g){ L.push("    "+(g.hit?"[x] ":"[ ] ")+g.name+(g.tag?"  ("+strip(g.tag)+")":"")); }); }); }
-      if(n.game){ L.push("  LADDER (expected "+n.game.expected+"):");
-        n.game.picks.forEach(function(g){ L.push("    "+(g.hit?"[x] ":"[ ] ")+g.pts+" pts — "+g.name+"  ("+g.p+", gap "+g.gap+")"); }); }
-      if(n.actual){ L.push("  ACTUAL:");
-        n.actual.sets.forEach(function(s){ L.push("    "+s.name+": "+s.songs.join(" > ")); }); }
-      L.push("");
-    });
-    var txt=L.join("\n");
-    var done=function(){ note("Copied ✓"); setTimeout(function(){note("");},1500); };
-    if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(done,done);
-    else window.prompt("Copy:", txt);
-  });
 
   document.getElementById("foot").innerHTML =
-    "Predictions by Claude — starting points to edit, not insider info. Play counts, gaps, jamchart entries and Halloween setlists come from the phish.net API, filtered to Phish shows only. " +
-    "Played nights show the predictions that were live at the time, the model that produced them, and the score. Retrodictions are labelled as such — computed after the fact, not claims of foresight. " +
-    "Run: MSG shows #92–96, Jul 22 / 24 / 25 / 27 / 29, 2026.";
+    "Predictions by Claude — starting points to argue with, not insider info. Play counts, gaps, jamchart entries and Halloween setlists come from the phish.net API, filtered to Phish shows only. " +
+    "<b>Live</b> results were published before the show. <b>Fitted</b> results were computed afterwards on a night already known, are shown in grey italic, and are not evidence of anything. " +
+    "The model's advantage over a well-informed fan is currently unproven — the comparator on this page is random selection, which is a lower bar. Run: MSG shows #92–96, Jul 22 / 24 / 25 / 27 / 29, 2026.";
 
   renderRun();
-  var restored=load();
-  if(!restored){ for(var i=0;i<state.nights.length;i++){ if(state.nights[i].status==="next"){ active=i; break; } } }
+  load();
+  for(var i=0;i<state.nights.length;i++){ if(state.nights[i].status==="next"){ active=i; break; } }
   render();
-  if(restored) note("Restored your saved edits");
 })();
 </script>
 </body>
