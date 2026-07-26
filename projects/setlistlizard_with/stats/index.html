@@ -167,17 +167,32 @@
       keys.forEach(function (k, i) {
         var frac = data[k] / total, a2 = a + frac * Math.PI * 2;
         var large = frac > 0.5 ? 1 : 0;
-        var p = ["M", cx + r1 * Math.cos(a), cy + r1 * Math.sin(a),
-                 "A", r1, r1, 0, large, 1, cx + r1 * Math.cos(a2), cy + r1 * Math.sin(a2),
-                 "L", cx + r0 * Math.cos(a2), cy + r0 * Math.sin(a2),
-                 "A", r0, r0, 0, large, 0, cx + r0 * Math.cos(a), cy + r0 * Math.sin(a), "Z"].join(" ");
+        var p;
+        if (frac >= 0.999) {
+          // A single arc whose start and end points coincide renders as nothing
+          // (zero-width bbox), so a lone category would draw an invisible donut.
+          // Build the full ring from two half-arcs instead; evenodd punches the hole.
+          p = ["M", cx, cy - r1,
+               "A", r1, r1, 0, 1, 1, cx, cy + r1,
+               "A", r1, r1, 0, 1, 1, cx, cy - r1, "Z",
+               "M", cx, cy - r0,
+               "A", r0, r0, 0, 1, 1, cx, cy + r0,
+               "A", r0, r0, 0, 1, 1, cx, cy - r0, "Z"].join(" ");
+        } else {
+          p = ["M", cx + r1 * Math.cos(a), cy + r1 * Math.sin(a),
+               "A", r1, r1, 0, large, 1, cx + r1 * Math.cos(a2), cy + r1 * Math.sin(a2),
+               "L", cx + r0 * Math.cos(a2), cy + r0 * Math.sin(a2),
+               "A", r0, r0, 0, large, 0, cx + r0 * Math.cos(a), cy + r0 * Math.sin(a), "Z"].join(" ");
+        }
         var op = 1 - i * 0.22;
-        var path = svgEl("path", { d: p, fill: i === 0 ? ACCENT : SOFT, "fill-opacity": Math.max(0.35, op), class: "arc" });
+        var path = svgEl("path", { d: p, fill: i === 0 ? ACCENT : SOFT, "fill-opacity": Math.max(0.35, op),
+                                   "fill-rule": "evenodd", class: "arc" });
         if (filters.set && filters.set !== k) path.classList.add("dim");
         wire(path, "<b>" + esc(k) + "</b><br>" + data[k] + " songs · " + Math.round(frac * 100) + "%", function () { toggle("set", k); });
         svg.appendChild(path);
-        var t = svgEl("text", { x: 186, y: 70 + i * 20, class: "nm" }); t.textContent = k;
-        var v = svgEl("text", { x: 186, y: 84 + i * 20, class: "val" }); v.textContent = data[k] + " songs";
+        var ly = 100 - (keys.length - 1) * 17 + i * 34;
+        var t = svgEl("text", { x: 186, y: ly, class: "nm" }); t.textContent = k;
+        var v = svgEl("text", { x: 186, y: ly + 14, class: "val" }); v.textContent = data[k] + " songs";
         svg.appendChild(t); svg.appendChild(v);
         a = a2;
       });
