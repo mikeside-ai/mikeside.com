@@ -228,7 +228,7 @@
     <div class="hero">
       <div class="hero-h">
         <span class="t">Next up — Show #95, the 1995 night</span>
-        <span class="d">Mon 27 Jul · model v8.3</span>
+        <span class="d">Mon 27 Jul · model v8.4</span>
       </div>
       <div class="hero-b">
         <p class="hl"><b>The first genuine out-of-sample test.</b> Everything new here was written after Saturday and has never predicted anything. These four calls are pre-registered so Monday's result is unambiguous. Note the opener call is <em>not</em> a costume pick — see the method notes for why that was a mistake.</p>
@@ -314,6 +314,20 @@
     <p>Two consequences follow, and both reverse what this page said an hour ago:</p>
     <p><b>1. The album is the themed year's own, not the previous year's.</b> The 1994 night took the 1994 costume. So Monday looks to <em>Quadrophenia</em> (Halloween 1995) and Wednesday to <em>Remain in Light</em> (Halloween 1996). <b>Drowned is back on Monday's slate and on the ladder at rank 7</b>, and While My Guitar Gently Weeps — whose costume claim belonged to the night already played — comes off.</p>
     <p><b>2. Frequency is not the selector inside the album.</b> They passed over the 38-play repertoire song for the 3-play album opener. Monday therefore carries Drowned (48 all-time, the only Quadrophenia song that stuck) while noting the rival reading: <em>Quadrophenia</em>'s opening vocal is <b>The Real Me</b>, 2 lifetime plays, unplayed in 1,176 shows — the exact shape of Saturday's pick. Wednesday carries both readings openly: Crosseyed and Painless, and <b>Born Under Punches</b>, <em>Remain in Light</em> track one at one lifetime play.</p>
+    <h4>The sharper test: costume set &rarr; heavy rotation the next year</h4>
+    <p>A better way to ask the question, and one that requires the frequency evidence instead of assuming it: <b>which songs were played in a Halloween costume set and then played a lot the following year?</b> That is computable against the whole catalogue, and the answer is startlingly thin.</p>
+    <table class="dt">
+      <thead><tr><th scope="col">Costume set</th><th scope="col">Song</th><th scope="col" class="n">Plays the next year</th></tr></thead>
+      <tbody>
+        <tr class="live"><th scope="row"><em>White Album</em>, Halloween 1994</th><td>While My Guitar Gently Weeps</td><td class="n"><b>12 in 1995</b></td></tr>
+        <tr><th scope="row">&nbsp;</th><td>I'm So Tired · Why Don't We Do It in the Road? · Cry Baby Cry</td><td class="n">1 each</td></tr>
+        <tr><th scope="row">&nbsp;</th><td>the other 24 White Album tracks</td><td class="n">0</td></tr>
+        <tr class="fit"><th scope="row"><em>Quadrophenia</em>, Halloween 1995</th><td><b>all 15 tracks, Drowned included</b></td><td class="n"><b>0 in 1996</b></td></tr>
+      </tbody>
+    </table>
+    <p><b>One song in the whole catalogue passes this test, and it is While My Guitar Gently Weeps.</b> It is back on Monday's slate. The Quadrophenia set is the opposite result and it could not be cleaner &mdash; every one of its fifteen tracks was played exactly zero times in 1996. Whatever happened with the White Album did not happen with Quadrophenia at all, so this test hands Wednesday nothing.</p>
+    <p>One discipline point that follows from it: <b>for While My Guitar Gently Weeps the costume effect is already priced in.</b> The 12 plays are not evidence sitting alongside the frequency number &mdash; they <em>are</em> the frequency number, and boosting the song above 14% would count the same fact twice. Drowned is the reverse: its two 1995 plays contain no information about the costume link at all, which is why it carries a ladder slot at 30% and While My Guitar Gently Weeps does not carry one at all.</p>
+
     <p>Stated honestly: <b>this is n=1.</b> One night, one song. It is enough to put a 2%-frequency song at rank 7 on Monday and not more, and Monday is a clean test of it — Drowned is carried by nothing except this rule, so it either lands or the rule was a lucky night.</p>
     <p class="risk"><b>Still true, and unaffected:</b> this is not an opener rule. Having just opened #94 with a cover, a cover opener two nights running is less likely, not more. The Real Me and Born Under Punches are not opener calls. Openers revert to frequency.</p>
 
@@ -447,7 +461,7 @@
 
     { n:4, year:"1995", show:95, date:"Mon · Jul 27", status:"next",
       note:"First genuine out-of-sample test. Top 17 of 1995 by play count across 83 Phish shows, minus the 66 burned, plus three reserved slots. Saturday reopened a lot: You Enjoy Myself, Poor Heart, Scent of a Mule, It's Ice, Amazing Grace and Fee all survived.",
-      pre:"<b>Pre-registered test — and the sharpest one this project has.</b> <b>Does Drowned land?</b> It is a 2%-frequency song carried entirely by the costume rule, so it is a clean single-question test: if it hits, the rule is real and worth more weight on Wednesday; if it misses, the rule was one lucky night. Also: do the three reserved slots outscore the frequency picks they displaced, and does the slate beat this night's random baseline by more than 2.5×, which is what plain v7 managed on Saturday. <b>The opener is deliberately not a costume pick</b> — a cover opener two nights running is less likely, not more.",
+      pre:"<b>Pre-registered test — and the sharpest one this project has.</b> Monday tests <b>two different costume mechanisms at once, and they are distinguishable by outcome.</b> <b>Drowned</b> tests the same-year reading: <em>Quadrophenia</em> was the Halloween 1995 costume, exactly as the White Album was 1994's when U.S.S.R. opened Saturday. It is a 2%-frequency song carried by nothing else. <b>While My Guitar Gently Weeps</b> tests the year-lag reading: in the Halloween 1994 costume set, then 12 plays across 1995 — the only song in the catalogue that fits that pattern. Also: do the three reserved slots outscore the frequency picks they displaced, and does the slate beat this night's random baseline by more than 2.5×, which is what plain v7 managed on Saturday. <b>The opener is deliberately not a costume pick</b> — a cover opener two nights running is less likely, not more.",
       calls:[
         C("Opener","Ya Mar","6/83 · 7%","<b>Reverted to frequency.</b> The most common 1995 set-one opener among unburned songs, current at a 17-show gap. Calling the opener off the costume album was wrong twice over — one observation is not a law, and <b>having just opened #94 with a cover, a cover opener two nights running is less likely, not more.</b>","Cars Trucks Buses (5) · Buried Alive (4) · Free"),
         C("Encore","I Didn't Know","Fish slot","Reframed from frequency to the Fish/novelty slot after Purple Rain — a reframe with a 0-for-4 live record behind it. The vacuum-solo vehicle, 10 plays in 1995, current at a 14-show gap.","A Day in the Life (9/83) · Hello My Baby · Cracklin' Rosie"),
@@ -474,7 +488,7 @@
           ["Cars Trucks Buses","20 plays · gap 43","Debuted Sep 1995 — that rate in a third of a year.",43],
           ["I'm Blue, I'm Lonesome","18 plays · gap 791","Bill Monroe cover, 18 of its 30 all-time plays in 1995. <span class=\"risk\">Deep vault.</span>",791],
           ["Keyboard Army","<span class=\"tb\">TIER B</span> · gap 406","<span class=\"tb\">Era-locked slot.</span> <b>All 14 of its all-time plays are 1995.</b>",406],
-          ["Billy Breathes","13 plays · gap 17","Debuted Sep 1995; 67 all-time and current.",17]
+          ["While My Guitar Gently Weeps","12 plays · gap 46","<b>Restored.</b> The single song in Phish history that satisfies the Halloween-to-next-year test: played in the <em>White Album</em> costume set on 31 Oct 1994, then <b>12 times across 1995</b>, June to December. Every other song in that costume set managed 0 or 1. Note the frequency already <em>is</em> the costume effect — 12 plays is what the mechanism produced — so it earns a slate slot at its honest 14% and is not double-counted on the ladder.",46]
         ]) },
         { name:"Encore", songs:P([
           ["A Day in the Life","23 plays · gap 37","Beatles cover, 23 plays in 1995 and the year's most common encore at nine. Also a costume-adjacent song — it is not on the White Album, but the Beatles material stayed live through 1995.",37],
@@ -483,7 +497,7 @@
         ]) }
       ],
       game:{ expected:"18.3",
-        note:"Percentages are 1995 plays ÷ 83 shows, verified against the Phish-only feed — except Drowned, which is a judgement call and is flagged as one. <b>Drowned is back, at rank 7.</b> Its 1995 count is two, so 2% is the frequency case and the rest is the Saturday precedent: a four-lifetime-play song off that year's Halloween album opened #94. Cars Trucks Buses drops off to make room. While My Guitar Gently Weeps came off the slate entirely — its costume claim belonged to the 1994 night, which has been played, and 12/83 does not survive on frequency once the three Tier B slots are reserved. Saturday's ladder overshot its expectation by 69%, so treat 18.3 as a floor.",
+        note:"Percentages are 1995 plays ÷ 83 shows, verified against the Phish-only feed — except Drowned, which is a judgement call and is flagged as one. <b>Drowned is back, at rank 7.</b> Its 1995 count is two, so 2% is the frequency case and the rest is the Saturday precedent: a four-lifetime-play song off that year's Halloween album opened #94. Cars Trucks Buses drops off to make room. While My Guitar Gently Weeps is back on the slate but deliberately <em>not</em> on the ladder: its 12 plays already <em>are</em> the costume effect, so boosting it above its 14% rate would count the same evidence twice. Drowned is the opposite case — its costume evidence is entirely unpriced, because 1995 frequency knows nothing about it. Saturday's ladder overshot its expectation by 69%, so treat 18.3 as a floor.",
         picks:G([
           ["Free","39%","The most-played song of 1995, current at a 4-show gap.",4],
           ["Strange Design","35%","29 of its 68 all-time plays fall in 1995.",60],
@@ -548,7 +562,7 @@
         ]) } }
   ]};
 
-  var KEY="phish-msg-v83", state, active=0;
+  var KEY="phish-msg-v84", state, active=0;
   function clone(o){ return JSON.parse(JSON.stringify(o)); }
   function load(){ try{ var r=localStorage.getItem(KEY); if(r){ state=JSON.parse(r); return true; } }catch(e){} state=clone(DEFAULTS); return false; }
   function save(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
