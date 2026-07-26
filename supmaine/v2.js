@@ -495,23 +495,22 @@
   }
 
   /* =========================================================
-     10. OFFLINE  (service worker + status badge)
+     10. OFFLINE — WITHDRAWN (2026-07-26)
+     The v2 service worker broke Place photos site-wide (root
+     scope + referrer-restricted key), and its first cleanup
+     version force-navigated its clients on activation, which
+     combined with the register() call that used to live here
+     to produce an infinite reload loop. Offline mode returns
+     only after in-browser verification, on a scoped path.
+     This stub only clears any leftover registration — it must
+     NEVER call register().
      ========================================================= */
   function initOffline() {
-    var badge = $('#offbadge');
-    function paint() {
-      if (!navigator.onLine) { badge.className = 'offbadge show off'; badge.textContent = '⚑ Offline — cached copy'; }
-      else if (badge.dataset.ready === '1') { badge.className = 'offbadge show ready'; badge.textContent = '✓ Saved for offline'; setTimeout(function () { badge.classList.remove('show'); }, 4200); }
-      else badge.classList.remove('show');
-    }
-    window.addEventListener('online', paint);
-    window.addEventListener('offline', paint);
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('v2-sw.js').then(function () {
-        badge.dataset.ready = '1'; paint();
+      navigator.serviceWorker.getRegistrations().then(function (rs) {
+        rs.forEach(function (r) { r.unregister(); });
       }).catch(function () { });
     }
-    paint();
   }
 
   /* =========================================================
