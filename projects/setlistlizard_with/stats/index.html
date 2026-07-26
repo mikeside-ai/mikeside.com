@@ -39,6 +39,37 @@
     .empty { color:var(--muted); font-size:.85rem; padding:1rem 0; }
     .srcline { text-align:center; color:var(--muted); font-size:.78rem; margin-top:2.4rem; line-height:1.7; letter-spacing:.05em; }
     .srcline a { color:var(--muted); }
+    .mxwrap { overflow-x:auto; }
+    #matrix { min-width:520px; }
+    .mx-cell { cursor:pointer; }
+    .mx-cell:hover { stroke:var(--accent-soft); stroke-width:1.5; }
+    .mx-lbl { font-size:11px; fill:var(--text); cursor:pointer; }
+    .mx-lbl:hover { fill:var(--accent-soft); }
+    .mx-col { font-size:10px; fill:var(--muted); cursor:pointer; }
+    .mx-col:hover { fill:var(--accent-soft); }
+    .map-out { fill:rgba(255,255,255,.035); stroke:var(--border); stroke-width:1; }
+    .map-route { fill:none; stroke:var(--accent); stroke-opacity:.35; stroke-width:1.4; stroke-dasharray:4 3; }
+    .map-dot { cursor:pointer; fill:var(--accent); fill-opacity:.85; }
+    .map-dot:hover { fill:var(--accent-soft); }
+    .map-lbl { font-size:10px; fill:var(--muted); cursor:pointer; }
+    .map-lbl:hover { fill:var(--accent-soft); }
+    .lab { font-size:.6rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
+           border:1px solid var(--border); border-radius:999px; padding:.1rem .5rem; margin-right:.5rem;
+           font-family:Inter,sans-serif; font-weight:400; }
+    .lrow { display:flex; align-items:baseline; gap:.6rem; padding:.4rem 0; border-bottom:1px solid rgba(255,255,255,.04); font-size:.9rem; }
+    .lrow:last-child { border-bottom:none; }
+    .lrow .r { color:var(--muted); width:1.4rem; font-variant-numeric:tabular-nums; font-size:.8rem; }
+    .lrow .t { flex:1; }
+    .lrow .t a { color:var(--text); }
+    .lrow .t a:hover { color:var(--accent-soft); text-decoration:none; }
+    .lrow .m { color:var(--muted); font-size:.78rem; }
+    .lrow .x { color:var(--accent-soft); font-variant-numeric:tabular-nums; white-space:nowrap; }
+    .prow { display:flex; align-items:center; gap:.6rem; padding:.35rem 0; font-size:.88rem; }
+    .prow .pl { width:4.6rem; color:var(--muted); font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; }
+    .prow .pb { flex:1; height:8px; background:rgba(255,255,255,.05); border-radius:4px; overflow:hidden; }
+    .prow .pb i { display:block; height:100%; background:var(--accent); opacity:.8; }
+    .prow .pv { color:var(--muted); font-variant-numeric:tabular-nums; font-size:.8rem; white-space:nowrap; }
+    .cav { font-size:.74rem; color:var(--muted); line-height:1.6; margin-top:.9rem; }
   </style>
 </head>
 <body>
@@ -80,6 +111,34 @@
             <div class="sub">Every timed song, plotted by duration. Right side is where the night went long — click a dot for that show.</div>
             <svg id="swarm" viewBox="0 0 640 200"></svg>
           </div>
+          <div class="panel" style="grid-column:1/-1;">
+            <h3>Rotation</h3>
+            <div class="sub">Which songs came back. Click a cell for that song at that show, or a row label to follow the song across the tour.</div>
+            <div class="mxwrap"><svg id="matrix"></svg></div>
+          </div>
+          <div class="panel" style="grid-column:1/-1;">
+            <h3>Where the tour went</h3>
+            <div class="sub">Venues in date order. Click a city to filter to its shows. Outline is an approximate continental silhouette, not a survey map.</div>
+            <svg id="map" viewBox="0 0 640 330"></svg>
+          </div>
+        </div>
+
+        <div class="section-head" style="margin-top:2.6rem;">
+          <span class="setno">The Lab</span>
+          <h2>It's so stupendous, living in this tube</h2>
+        </div>
+        <div class="charts">
+          <div class="panel">
+            <h3><span class="lab">Machine-generated</span> Longest jams</h3>
+            <div class="sub">Every timed version this tour, ranked. Click through to the song.</div>
+            <div id="leader"></div>
+          </div>
+          <div class="panel">
+            <h3><span class="lab">Machine-generated</span> Pacing by slot</h3>
+            <div class="sub">Median and mean song length per slot — how the band spends time as a night develops.</div>
+            <div id="pacing"></div>
+            <p class="cav" id="pacecav"></p>
+          </div>
         </div>
         <div class="showlist" id="showlist"></div>
         <div class="srcline">
@@ -110,6 +169,10 @@
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
     function fmt(sec) { if (!sec) return ""; var m = Math.floor(sec / 60), s = sec % 60; return m + ":" + (s < 10 ? "0" : "") + s; }
     function shortDate(iso) { var p = iso.split("-"); return (+p[1]) + "/" + (+p[2]); }
+    // Mirrors slugify() in tools/build_setlistlizard.py — keep the two in step.
+    function slug(t) { return String(t || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "untitled"; }
+    function songHref(t) { return "/projects/setlistlizard_with/song/?s=" + slug(t); }
+    function median(a) { var b = a.slice().sort(function (x, y) { return x - y; }); return b.length ? b[Math.floor(b.length / 2)] : 0; }
 
     function rows() {
       return TOUR.songs.filter(function (r) {
@@ -214,7 +277,9 @@
         var y = i * (bh + gap) + 4;
         var t = svgEl("text", { x: x0 - 8, y: y + bh - 3, class: "nm", "text-anchor": "end" });
         t.textContent = d.t.length > 22 ? d.t.slice(0, 21) + "…" : d.t;
-        svg.appendChild(t);
+        // Label navigates to the song page; the bar itself filters. Two different jobs.
+        var link = svgEl("a", { href: songHref(d.t), class: "nmlink" });
+        link.appendChild(t); svg.appendChild(link);
         var bw = Math.max(2, d.n / max * w);
         var rect = svgEl("rect", { x: x0, y: y, width: bw, height: bh, rx: 3, fill: ACCENT, "fill-opacity": .75, class: "bar" });
         if (filters.song && filters.song !== d.t) rect.classList.add("dim");
@@ -261,6 +326,195 @@
       lab.textContent = timed.length + " timed songs · longest " + fmt(max); svg.appendChild(lab);
     }
 
+    // ---- rotation matrix: song x show
+    function drawMatrix() {
+      var svg = document.getElementById("matrix"); svg.innerHTML = "";
+      var all = TOUR.songs;                       // matrix ignores filters so it stays a stable map
+      if (!all.length) return;
+      var shows = TOUR.shows.map(function (s) { return s.showdate; });
+      var counts = {};
+      all.forEach(function (r) {
+        counts[r.title] = counts[r.title] || {};
+        counts[r.title][r.showdate] = (counts[r.title][r.showdate] || 0) + 1;
+      });
+      var every = Object.keys(counts).map(function (t) {
+        var n = 0; for (var d in counts[t]) n += counts[t][d];
+        return { t: t, n: n, shows: Object.keys(counts[t]).length };
+      }).sort(function (a, b) { return b.shows - a.shows || b.n - a.n || a.t.localeCompare(b.t); });
+      // This panel is about repeats. A song played once, in one show, is not a
+      // repeat — including those just pads the grid with empty rows.
+      var totals = every.filter(function (d) { return d.shows > 1 || d.n > 1; }).slice(0, 20);
+      var onceOnly = every.length - every.filter(function (d) { return d.shows > 1 || d.n > 1; }).length;
+      if (!totals.length) {
+        var t0 = svgEl("text", { x: 10, y: 20, class: "lbl" });
+        t0.textContent = "No song has repeated yet across the tracked shows.";
+        svg.setAttribute("viewBox", "0 0 520 40"); svg.appendChild(t0); return;
+      }
+
+      var L = 150, CW = Math.min(58, Math.max(34, (520 - L) / Math.max(1, shows.length)));
+      var RH = 20, TOP = 26, W = L + shows.length * CW + 12, H = TOP + totals.length * RH + 22;
+      svg.setAttribute("viewBox", "0 0 " + W + " " + H);
+      svg.setAttribute("style", "min-width:" + Math.max(520, W) + "px");
+      var maxN = Math.max.apply(null, totals.map(function (d) { return d.n; }));
+
+      shows.forEach(function (d, j) {
+        var tx = svgEl("text", { x: L + j * CW + CW / 2, y: TOP - 10, class: "mx-col", "text-anchor": "middle" });
+        tx.textContent = shortDate(d);
+        wire(tx, "<b>" + shortDate(d) + "</b><br>filter to this show", function () { toggle("show", d); });
+        svg.appendChild(tx);
+      });
+
+      totals.forEach(function (row, i) {
+        var y = TOP + i * RH;
+        var lb = svgEl("text", { x: L - 10, y: y + RH / 2 + 4, class: "mx-lbl", "text-anchor": "end" });
+        lb.textContent = row.t.length > 22 ? row.t.slice(0, 21) + "…" : row.t;
+        wire(lb, "<b>" + esc(row.t) + "</b><br>" + row.n + " plays across " + row.shows + " shows", function () { toggle("song", row.t); });
+        svg.appendChild(lb);
+        shows.forEach(function (d, j) {
+          var n = (counts[row.t] && counts[row.t][d]) || 0;
+          var x = L + j * CW + 2;
+          var cell = svgEl("rect", {
+            x: x, y: y + 2, width: CW - 4, height: RH - 4, rx: 3,
+            fill: n ? (n > 1 ? SOFT : ACCENT) : "rgba(255,255,255,0.04)",
+            "fill-opacity": n ? Math.min(1, 0.4 + 0.3 * n) : 1, class: "mx-cell"
+          });
+          var tip = n ? "<b>" + esc(row.t) + "</b><br>" + shortDate(d) + " · " + n + (n === 1 ? " play" : " plays")
+                      : "<b>" + esc(row.t) + "</b><br>" + shortDate(d) + " · not played";
+          wire(cell, tip, function () {
+            if (!n) { toggle("show", d); return; }
+            filters.song = row.t; filters.show = d; writeURL(); render();
+          });
+          svg.appendChild(cell);
+          if (n > 1) {
+            var cn = svgEl("text", { x: x + (CW - 4) / 2, y: y + RH / 2 + 4, class: "val", "text-anchor": "middle" });
+            cn.textContent = n; cn.setAttribute("pointer-events", "none"); svg.appendChild(cn);
+          }
+        });
+      });
+      var note = svgEl("text", { x: L - 10, y: TOP - 10, class: "mx-col", "text-anchor": "end" });
+      note.textContent = "repeated songs only";
+      svg.appendChild(note);
+      var foot = svgEl("text", { x: L, y: H - 1, class: "mx-col" });
+      foot.textContent = onceOnly + " more song" + (onceOnly === 1 ? "" : "s") + " played once and not repeated"
+        + (maxN ? " · darker = more plays that night" : "");
+      svg.appendChild(foot);
+    }
+
+    // ---- venue map
+    var CITIES = {
+      "New York, NY": [-74.01, 40.71], "Syracuse, NY": [-76.15, 43.05],
+      "Madison, WI": [-89.40, 43.07], "Noblesville, IN": [-86.01, 40.05],
+      "Savannah, GA": [-81.09, 32.08], "Raleigh, NC": [-78.64, 35.78],
+      "Columbia, MD": [-76.86, 39.20], "Boston, MA": [-71.06, 42.36],
+      "Commerce City, CO": [-104.93, 39.81], "Las Vegas, NV": [-115.14, 36.17]
+    };
+    var STATES = {
+      NY: [-75.5, 42.9], NJ: [-74.5, 40.1], PA: [-77.8, 40.9], MA: [-71.8, 42.3], CT: [-72.7, 41.6],
+      RI: [-71.5, 41.7], VT: [-72.7, 44.0], NH: [-71.6, 43.7], ME: [-69.2, 45.3], MD: [-76.8, 39.0],
+      DE: [-75.5, 39.0], VA: [-78.7, 37.5], WV: [-80.6, 38.6], NC: [-79.4, 35.5], SC: [-80.9, 33.9],
+      GA: [-83.4, 32.6], FL: [-81.6, 28.1], AL: [-86.8, 32.8], MS: [-89.7, 32.7], TN: [-86.3, 35.8],
+      KY: [-84.9, 37.5], OH: [-82.8, 40.3], IN: [-86.3, 39.9], IL: [-89.2, 40.0], MI: [-84.6, 43.3],
+      WI: [-89.6, 44.6], MN: [-94.3, 46.3], IA: [-93.5, 42.0], MO: [-92.5, 38.4], AR: [-92.4, 34.9],
+      LA: [-92.0, 31.1], TX: [-99.3, 31.5], OK: [-97.5, 35.6], KS: [-98.4, 38.5], NE: [-99.8, 41.5],
+      SD: [-100.2, 44.4], ND: [-100.5, 47.4], MT: [-109.6, 47.0], WY: [-107.6, 43.0], CO: [-105.5, 39.0],
+      NM: [-106.1, 34.4], AZ: [-111.7, 34.2], UT: [-111.7, 39.3], NV: [-116.6, 39.3], ID: [-114.6, 44.4],
+      WA: [-120.4, 47.4], OR: [-120.6, 43.9], CA: [-119.7, 36.8]
+    };
+    var US = [[-124.7,48.4],[-124.2,46.3],[-124.0,43.8],[-124.4,42.0],[-123.8,39.4],[-122.4,37.8],
+      [-121.0,36.6],[-120.6,34.6],[-118.4,33.7],[-117.1,32.5],[-114.8,32.5],[-111.0,31.3],[-108.2,31.3],
+      [-106.5,31.8],[-104.9,29.3],[-103.1,28.9],[-101.4,29.8],[-99.1,26.4],[-97.1,25.9],[-97.4,27.9],
+      [-95.0,29.0],[-93.8,29.7],[-91.3,29.2],[-89.4,29.2],[-88.0,30.4],[-86.5,30.4],[-84.3,30.0],
+      [-83.0,29.1],[-82.7,27.5],[-80.1,25.2],[-80.4,27.2],[-81.3,29.9],[-80.9,32.0],[-79.2,33.3],
+      [-77.9,34.2],[-76.0,36.9],[-75.2,38.5],[-74.0,40.5],[-72.0,41.3],[-70.7,41.7],[-70.0,42.0],
+      [-70.8,43.1],[-67.0,44.8],[-67.8,47.1],[-70.0,45.3],[-73.3,45.0],[-76.9,44.0],[-79.2,43.3],
+      [-82.4,41.7],[-83.1,42.3],[-82.5,45.3],[-84.5,46.5],[-88.0,48.3],[-90.8,48.2],[-95.2,49.0],
+      [-104.0,49.0],[-117.0,49.0],[-123.0,49.0]];
+
+    function drawMap() {
+      var svg = document.getElementById("map"); svg.innerHTML = "";
+      var K = Math.cos(38 * Math.PI / 180);
+      var lon0 = -125, lon1 = -66, lat0 = 24, lat1 = 50;
+      var W = 640, H = 330, PAD = 12;
+      function P(lon, lat) {
+        var x = PAD + ((lon - lon0) * K) / ((lon1 - lon0) * K) * (W - 2 * PAD);
+        var y = PAD + (lat1 - lat) / (lat1 - lat0) * (H - 2 * PAD);
+        return [x, y];
+      }
+      svg.appendChild(svgEl("polygon", { class: "map-out",
+        points: US.map(function (p) { var q = P(p[0], p[1]); return q[0].toFixed(1) + "," + q[1].toFixed(1); }).join(" ") }));
+
+      // one point per city, in date order
+      var seen = {}, seq = [];
+      TOUR.shows.forEach(function (s) {
+        var key = [s.city, s.state].filter(Boolean).join(", ");
+        var ll = CITIES[key] || STATES[s.state];
+        if (!ll) return;
+        if (!seen[key]) { seen[key] = { key: key, ll: ll, shows: [], approx: !CITIES[key] }; seq.push(seen[key]); }
+        seen[key].shows.push(s);
+      });
+      if (!seq.length) {
+        var t = svgEl("text", { x: W / 2, y: H / 2, class: "lbl", "text-anchor": "middle" });
+        t.textContent = "no venues located yet"; svg.appendChild(t); return;
+      }
+      if (seq.length > 1) {
+        svg.appendChild(svgEl("polyline", { class: "map-route",
+          points: seq.map(function (c) { var q = P(c.ll[0], c.ll[1]); return q[0].toFixed(1) + "," + q[1].toFixed(1); }).join(" ") }));
+      }
+      seq.forEach(function (c) {
+        var q = P(c.ll[0], c.ll[1]);
+        var r = 4 + Math.min(6, c.shows.length * 1.6);
+        var dot = svgEl("circle", { cx: q[0].toFixed(1), cy: q[1].toFixed(1), r: r, class: "map-dot" });
+        if (filters.show && c.shows.every(function (s) { return s.showdate !== filters.show; })) dot.classList.add("dim");
+        var tip = "<b>" + esc(c.key) + "</b><br>" + c.shows.length + (c.shows.length === 1 ? " show" : " shows") +
+                  "<br>" + c.shows.map(function (s) { return shortDate(s.showdate); }).join(", ") +
+                  (c.approx ? "<br><i>state-level position</i>" : "");
+        wire(dot, tip, function () {
+          if (c.shows.length === 1) { toggle("show", c.shows[0].showdate); }
+          else { filters.show = null; writeURL(); render(); }
+        });
+        svg.appendChild(dot);
+        var lb = svgEl("text", { x: (+q[0] + r + 4).toFixed(1), y: (+q[1] + 3.5).toFixed(1), class: "map-lbl" });
+        lb.textContent = c.key.split(",")[0] + (c.shows.length > 1 ? " ×" + c.shows.length : "");
+        wire(lb, tip, function () { if (c.shows.length === 1) toggle("show", c.shows[0].showdate); });
+        svg.appendChild(lb);
+      });
+    }
+
+    // ---- the lab: leaderboard + pacing
+    function drawLab() {
+      var timed = rows().filter(function (r) { return r.length_secs; })
+        .sort(function (a, b) { return b.length_secs - a.length_secs; }).slice(0, 10);
+      var el = document.getElementById("leader");
+      el.innerHTML = timed.length ? timed.map(function (r, i) {
+        return '<div class="lrow"><span class="r">' + (i + 1) + '</span>' +
+               '<span class="t"><a href="' + songHref(r.title) + '">' + esc(r.title) + "</a>" +
+               '<span class="m"> · ' + shortDate(r.showdate) + " " + esc(r.set_display) + "</span></span>" +
+               '<span class="x">' + fmt(r.length_secs) + "</span></div>";
+      }).join("") : '<div class="empty">No timed songs in this slice yet.</div>';
+
+      var byBucket = {};
+      rows().forEach(function (r) {
+        if (!r.length_secs) return;
+        (byBucket[r.set_bucket] = byBucket[r.set_bucket] || []).push(r.length_secs);
+      });
+      var keys = Object.keys(byBucket).sort();
+      var mx = 0;
+      keys.forEach(function (k) { byBucket[k].forEach(function (v) { if (v > mx) mx = v; }); });
+      var pe = document.getElementById("pacing");
+      pe.innerHTML = keys.length ? keys.map(function (k) {
+        var a = byBucket[k], med = median(a);
+        var mean = a.reduce(function (x, y) { return x + y; }, 0) / a.length;
+        return '<div class="prow"><span class="pl">' + esc(k) + "</span>" +
+               '<span class="pb"><i style="width:' + (med / mx * 100).toFixed(1) + '%"></i></span>' +
+               '<span class="pv">med ' + fmt(Math.round(med)) + " · mean " + fmt(Math.round(mean)) + "</span></div>";
+      }).join("") : '<div class="empty">Not enough timed songs yet.</div>';
+
+      var n = rows().filter(function (r) { return r.length_secs; }).length;
+      document.getElementById("pacecav").textContent = n
+        ? "Computed from " + n + " timed songs. Bars scale to the longest single song in view. This is arithmetic on durations from phish.in, not audio analysis — no claim about what the music is doing."
+        : "";
+    }
+
     // ---- show list
     function drawShows() {
       var el = document.getElementById("showlist");
@@ -287,7 +541,7 @@
       });
     }
 
-    function render() { drawFilters(); drawDonut(); drawBars(); drawSwarm(); drawShows(); }
+    function render() { drawFilters(); drawDonut(); drawBars(); drawSwarm(); drawMatrix(); drawMap(); drawLab(); drawShows(); }
 
     // Data comes straight from the bot's feed, so the dashboard picks up a new
     // show the moment the bot commits it — no rebuild of this page required.
