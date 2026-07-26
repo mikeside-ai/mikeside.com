@@ -108,11 +108,12 @@
         <div class="section-head">
           <span class="setno">Archive</span>
           <h2>The shows, kept</h2>
+          <p>Every tracked show has its own page — setlist, lengths, notes, sources. <a href="/projects/setlistlizard_with/stats/">See the tour stats →</a></p>
         </div>
         <div class="show-list" id="showlist"><div class="empty">Loading…</div></div>
         <div class="srcline">
           Setlist data: Phish.net · lengths are live estimates until the recording posts<br />
-          <a href="/projects/setlistlizard_with/integration-diagram.html">how the bot works</a> · <a href="/projects/">← all projects</a>
+          <a href="/projects/setlistlizard_with/stats/">tour stats</a> · <a href="/projects/setlistlizard_with/integration-diagram.html">how the bot works</a> · <a href="/projects/">← all projects</a>
         </div>
       </div>
     </section>
@@ -223,7 +224,7 @@
         shows.forEach(function (s) {
           var y = (s.showdate || "").slice(0, 4);
           if (y !== year) { year = y; h += '<div class="yearhead">' + esc(y) + "</div>"; }
-          h += '<a class="show-item" href="#' + esc(s.showdate) + '"><span class="d">' + esc(fmtDate(s.showdate)) + "</span>" +
+          h += '<a class="show-item" href="/projects/setlistlizard_with/' + esc(s.showdate) + '/"><span class="d">' + esc(fmtDate(s.showdate)) + "</span>" +
             '<span class="v">' + esc([s.venue, [s.city, s.state].filter(Boolean).join(", ")].filter(Boolean).join(" — ")) + "</span>" +
             (s.tag ? '<span class="tag2">' + esc(s.tag) + "</span>" : "") + "</a>";
         });
