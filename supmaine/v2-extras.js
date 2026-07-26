@@ -82,7 +82,13 @@
   }
   function nameOf(el) {
     var n = el.querySelector('.stop-name, .name');
-    return n ? n.textContent.replace(/\s+/g, ' ').trim() : '';
+    if (!n) return '';
+    // .stop-name often carries a trailing <span class="tag"> ("host pick",
+    // "cash only", "probably cut"). textContent glues it straight onto the
+    // name — "Red's Eats, Wiscassetcash only" — so drop tags before reading.
+    var c = n.cloneNode(true);
+    Array.prototype.slice.call(c.querySelectorAll('.tag')).forEach(function (t) { t.remove(); });
+    return c.textContent.replace(/\s+/g, ' ').trim();
   }
   function timeOf(el) {
     var t = el.querySelector('.stop-time, .label');
