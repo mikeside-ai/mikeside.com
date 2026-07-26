@@ -10,11 +10,53 @@
   // API-restriction list MUST include "Maps JavaScript API" and "Places API (New)".
   var KEY = "AIzaSyAUT6tkXPxU5SPvf61maQUgWyAYcVraTaM";
 
-  var CACHE_KEY = "maine-place-photos-v3";
+  // ---- PERMANENT GUARD (2026-07-26): service-worker sweep ----
+  // A root-scoped service worker once proxied these photo requests, broke the
+  // referrer-restricted key, and wiped photos on BOTH site versions. No worker
+  // is ever supposed to exist on this origin. Both v1 and v2 load this file,
+  // so every visit from every browser sheds any lingering worker + its caches.
+  if ("serviceWorker" in navigator) {
+    try {
+      navigator.serviceWorker.getRegistrations().then(function(rs){
+        rs.forEach(function(r){ r.unregister(); });
+      }).catch(function(){});
+      if (window.caches && caches.keys) {
+        caches.keys().then(function(ks){
+          ks.forEach(function(k){ if (k.indexOf("supmaine-v2-") === 0) caches.delete(k); });
+        }).catch(function(){});
+      }
+    } catch(e) {}
+  }
+
+  // ---- cache v4: timestamped entries with a shelf life ----
+  // Google photo URIs expire, and the old v3 cache both kept them forever and
+  // DELETED entries on any image error — so one transient failure (bad network,
+  // SW interference, expired URL) became a permanent blank. v4: entries carry a
+  // fetch time and go stale after TTL; stale URLs still render (better than a
+  // gap) while a background refresh replaces them; failures are never persisted.
+  var CACHE_KEY = "maine-place-photos-v4";
+  var TTL = 20 * 60 * 60 * 1000;      // 20h — comfortably under URI expiry
   var STOP_SHOTS = 3;                 // max photos injected per stop
   var cache = {};
   try { cache = JSON.parse(localStorage.getItem(CACHE_KEY)) || {}; } catch(e){ cache = {}; }
+  try { localStorage.removeItem("maine-place-photos-v3"); } catch(e){}
   function saveCache(){ try { localStorage.setItem(CACHE_KEY, JSON.stringify(cache)); } catch(e){} }
+  function cacheGet(k){
+    var e = cache[k]; if (!e) return null;
+    if (Array.isArray(e) || typeof e === "string") return { urls: asList(e), fresh: false }; // legacy shape → stale
+    if (!e.u) return null;
+    return { urls: asList(e.u), fresh: (Date.now() - (e.t || 0)) < TTL };
+  }
+  function cacheSet(k, urls){ cache[k] = { u: urls, t: Date.now() }; saveCache(); }
+  // one live retry per key per pageview — never a refetch storm, never a persisted failure
+  var retried = {};
+  function refreshOnce(k, query, want, width, cb){
+    if (retried[k]) return; retried[k] = 1;
+    searchPhotos(query, want, width).then(function(urls){
+      if (urls) { cacheSet(k, urls); cb(urls); }
+      // on failure: keep whatever cache we had; the next pageview retries
+    });
+  }
 
   // The most iconic place per leg — its Google Place photo becomes that day's banner,
   // layered over the SVG/curated fallback. d5 is intentionally absent (couple photo stays).
@@ -75,7 +117,13 @@
       img.loading = "lazy"; img.alt = query; img.setAttribute("data-cap", query);
       img.onerror = function(){
         img.remove();
-        if (!wrap.querySelector("img")) { wrap.remove(); if (cache[query]){ delete cache[query]; saveCache(); } }
+        if (!wrap.querySelector("img")) {
+          wrap.remove();
+          // Do NOT evict — the URL probably just expired. Fetch fresh once and rebuild.
+          refreshOnce(query, query, STOP_SHOTS, 400, function(urls){
+            if (!stop.querySelector(".stop-shots")) injectShots(stop, urls, query);
+          });
+        }
       };
       img.src = u;
       wrap.appendChild(img);
@@ -85,11 +133,11 @@
 
   function fetchPhoto(stop, query){
     if (stop.querySelector("img") || stop.querySelector(".stop-shots")) return;
-    if (cache[query]) { injectShots(stop, cache[query], query); return; }
+    var c = cacheGet(query);
+    if (c && c.fresh) { injectShots(stop, c.urls, query); return; }
+    if (c) injectShots(stop, c.urls, query);            // stale beats blank; onerror path refreshes
     searchPhotos(query, STOP_SHOTS, 400).then(function(urls){
-      if (!urls) return;
-      cache[query] = urls; saveCache();
-      injectShots(stop, urls, query);
+      if (urls) { cacheSet(query, urls); injectShots(stop, urls, query); }
     });
   }
 
@@ -104,8 +152,11 @@
     img.loading = "lazy"; img.alt = query; img.setAttribute("data-cap", query);
     img.onerror = function(){
       img.remove();
-      if (cache["hero::" + query]){ delete cache["hero::" + query]; saveCache(); }
-      cleanupEmpty(dp);
+      // Do NOT evict — refetch once; only tidy up if the fresh fetch also fails.
+      refreshOnce("hero::" + query, query, 1, 900, function(urls){
+        if (!dp.querySelector("img.gphoto")) bannerImg(dp, urls[0], query);
+      });
+      setTimeout(function(){ cleanupEmpty(dp); }, 8000);
     };
     img.src = url;
     dp.appendChild(img);
@@ -113,11 +164,12 @@
   function fetchBanner(dp, query){
     if (dp.querySelector("img.gphoto")) return;
     var ck = "hero::" + query;
-    if (cache[ck]) { bannerImg(dp, cache[ck], query); return; }
+    var c = cacheGet(ck);
+    if (c && c.fresh) { bannerImg(dp, c.urls[0], query); return; }
+    if (c) bannerImg(dp, c.urls[0], query);             // stale beats blank
     searchPhotos(query, 1, 900).then(function(urls){
-      if (!urls) { cleanupEmpty(dp); return; }
-      cache[ck] = urls[0]; saveCache();
-      bannerImg(dp, urls[0], query);
+      if (urls) { cacheSet(ck, urls); bannerImg(dp, urls[0], query); }
+      else if (!c) cleanupEmpty(dp);
     });
   }
   function ensureBanner(sec){
