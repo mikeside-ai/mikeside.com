@@ -1,79 +1,36 @@
-<!-- CANONICAL RESTORE SNAPSHOT - not a page.
-     Last-known-good markup for the Phish Setlist Predictor card in
-     projects/dashboard/index.html. If a scheduled refresh ever drops the
-     card (index.html no longer contains id="phish-h"), paste this block
-     back in between the grid2 closing </div> and </main>. -->
-<!-- ============ PHISH SETLIST PREDICTOR ============ -->
-  <section class="card full" aria-labelledby="phish-h">
+<!-- CANONICAL RESTORE SNAPSHOT - Phish bonus tile, 2026-07-26.
+     This is the SMALL one-card tile that mirrors /projects/setlist-predictions/.
+     It is NOT a full-width panel and it holds NO song picks or scoring rows.
+     If projects/dashboard/index.html ever loses id="phish-h", or ever grows a
+     full-width Phish card with picks, strip this comment and paste the markup
+     below verbatim between the GitHub section closing </div> and </main>. -->
+  <section class="card full bonus" aria-labelledby="phish-h">
     <div class="card-head">
       <div>
         <div class="card-title" id="phish-h">Phish Setlist Predictor</div>
-        <div class="card-sub">MSG summer residency &middot; each night recreates the year matching its show number</div>
+        <div class="card-sub">bonus &middot; MSG residency, each night recreates the year matching its show number</div>
       </div>
       <span class="src-badge">phish.net &middot; public setlists</span>
     </div>
 
     <div class="tiles">
-      <div class="tile" title="Held-out score of tonight's method across both scored nights, out of 40.">
-        <div class="v">19 / 40</div><div class="l">held-out accuracy</div>
-        <div class="d up">&uarr; 5 over top-20 by play count</div>
+      <div class="tile" title="Most recent scored night.">
+        <div class="v">10 / 16</div><div class="l">last night scored</div>
+        <div class="d up">Jul 25 &middot; #94 &middot; model v7</div>
       </div>
-      <div class="tile" title="Simulated shows drawn to compare candidate slates.">
-        <div class="v">100k</div><div class="l">shows simulated</div>
-        <div class="d">3 scored slates &middot; 3 worlds</div>
+      <div class="tile" title="The next show in the residency and the year it is expected to recreate.">
+        <div class="v">1995</div><div class="l">next theme &middot; Mon Jul 27</div>
+        <div class="d">MSG show #95</div>
       </div>
-      <div class="tile" title="The year this show's setlist is expected to recreate.">
-        <div class="v">1994</div><div class="l">tonight's theme</div>
-        <div class="d">69 songs still unplayed</div>
+      <div class="tile" title="Nights scored so far in the residency, out of five.">
+        <div class="v">3 / 5</div><div class="l">nights scored</div>
+        <div class="d">residency ends Jul 29 &middot; #96</div>
       </div>
     </div>
 
-    
-      <div class="mix-label">Backtest accuracy &middot; blind, scored against published setlists</div>
-      <div class="acc"><div class="accrow"><span>Jul 22 &middot; #92 &middot; '92 theme <span style="color:var(--text-muted)">&middot; model v1</span></span><span class="accbar" role="img" aria-label="7 of 20 correct"><i class="" style="width:35%"></i></span><span class="n">7 / 20</span></div><div class="accrow"><span>Jul 24 &middot; #93 &middot; '93 theme <span style="color:var(--text-muted)">&middot; model v2</span></span><span class="accbar" role="img" aria-label="10 of 20 correct"><i class="pass" style="width:50%"></i></span><span class="n">10 / 20</span></div><div class="accrow"><span>Jul 24 &middot; #93 &middot; tracker page <span style="color:var(--text-muted)">&middot; model v2b</span></span><span class="accbar" role="img" aria-label="6 of 20 correct"><i class="" style="width:30%"></i></span><span class="n">6 / 20</span></div></div>
-      <div class="note" style="margin-top:10px">
-        v1 keyed on tour recency: 7/20. v2 dropped recency and mapped the MSG show number to a year
-        &mdash; #92 played a 1992 setlist, #93 a 1993 one &mdash; spending every slot on that year's
-        rotation minus songs already burned in the run: 10/20. A separate blind slate on the public
-        tracker page scored 6/20 the same night, which is the useful reminder that 10/20 was partly luck.
-      </div>
-
-      <div class="sect-label" style="margin-top:16px">What 100,000 simulated shows changed</div>
-      <div class="mix-label">Rules scored held out &middot; each fully specified before it saw either night</div>
-      <div class="acc"><div class="accrow"><span>Consensus barbell &mdash; v5, tonight's method</span><span class="accbar" role="img" aria-label="19 / 40 correct"><i class="pass" style="width:48%"></i></span><span class="n">19 / 40</span></div><div class="accrow"><span>What was actually published &mdash; v1 + v2, hand-picked</span><span class="accbar" role="img" aria-label="17 / 40 correct"><i class="" style="width:42%"></i></span><span class="n">17 / 40</span></div><div class="accrow"><span>Top 20 by that year's play count</span><span class="accbar" role="img" aria-label="14 / 40 correct"><i class="" style="width:35%"></i></span><span class="n">14 / 40</span></div><div class="accrow"><span>Frequency &times; distinctiveness &mdash; v4, rejected</span><span class="accbar" role="img" aria-label="12 / 40 correct"><i class="" style="width:30%"></i></span><span class="n">12 / 40</span></div><div class="accrow"><span>Random 20 from the same pool</span><span class="accbar" role="img" aria-label="10.8 / 40 correct"><i class="" style="width:27%"></i></span><span class="n">10.8 / 40</span></div></div>
-      <div class="note" style="margin-top:10px">
-        Two results overturned the plan. First, the v3 idea of reserving a quarter of the slots for era
-        covers is <em>negative value</em>: a cover slot is worth 0.10 expected hits against 0.32 for a
-        rotation slot, because the cover pool is huge and flat &mdash; covers get played, but no
-        individual cover is a good bet. Second, v4's distinctiveness term looked strong until it was
-        tested properly; fitted on one real night and scored on the other it managed 12/40, worse than
-        just ranking by play count. Both were cut.
-        <br><br>
-        What survived is duller and works better. Both real setlists drew from the <em>middle</em> of
-        the theme year's ranking &mdash; median rank 29 of 101 on 7/22 and 41 of 83 on 7/24, with only
-        7 of ~25 songs coming from the top 20 either night. Sweeping the head/mid-depth split across all
-        21 settings, every one from 0 to 17 head picks beat a straight top-20. So tonight's slate votes
-        across the whole family rather than trusting the single best split, which on two shows is noise.
-        Held out, that construction scores 19/40 &mdash; and 11/20 on 7/22, the best any method has
-        managed on that night. Expected tonight: <b>9.3 of 20</b>, averaged over three different
-        assumptions about how a setlist gets built.
-        <br><br>
-        The honest caveat: three scored shows is a small sample, the depth kernel failed its own
-        cross-validation, and the pool shrinks every night, so accuracy should rise through the run
-        for reasons that have nothing to do with the model getting smarter.
-      </div>
-
-      <div class="sect-label">Tonight's 20 &middot; Sat, Jul 25 &middot; Madison Square Garden &middot; MSG show #94 &middot; expected theme 1994</div>
-      <div class="mix-label" style="margin-top:12px">Head of the rotation &mdash; top 10 of the 69 &rsquo;94 songs still unplayed</div><div class="picks"><div class="pick lock"><b>1</b><span>Sample in a Jar</span><span class="why">72 plays</span></div><div class="pick lock"><b>2</b><span>Julius</span><span class="why">65 plays</span></div><div class="pick"><b>3</b><span>Down with Disease</span></div><div class="pick"><b>4</b><span>Rift</span></div><div class="pick"><b>5</b><span>Poor Heart</span></div><div class="pick"><b>6</b><span>Cavern</span></div><div class="pick"><b>7</b><span>Scent of a Mule</span></div><div class="pick"><b>8</b><span>It's Ice</span></div><div class="pick"><b>9</b><span>You Enjoy Myself</span></div><div class="pick"><b>10</b><span>Fee</span></div></div><div class="mix-label" style="margin-top:12px">Mid-depth &mdash; ranks 14&ndash;22, where both scored nights actually drew from</div><div class="picks"><div class="pick"><b>11</b><span>Amazing Grace</span></div><div class="pick"><b>12</b><span>Simple</span></div><div class="pick"><b>13</b><span>Wilson</span></div><div class="pick"><b>14</b><span>Nellie Kane</span></div><div class="pick"><b>15</b><span>The Squirming Coil</span></div><div class="pick"><b>16</b><span>Lifeboy</span></div><div class="pick"><b>17</b><span>Ginseng Sullivan</span></div></div><div class="mix-label" style="margin-top:12px">Deep cuts with a 1994 fingerprint &mdash; ranks 24&ndash;28</div><div class="picks"><div class="pick"><b>18</b><span>Mound</span></div><div class="pick"><b>19</b><span>Sleeping Monkey</span></div><div class="pick"><b>20</b><span>Foreplay/Long Time</span><span class="why">flyer</span></div></div>
-      <details class="tableview">
-        <summary>View as table</summary>
-        <table>
-          <thead><tr><th scope="col">#</th><th scope="col">Song</th><th scope="col">Bucket</th></tr></thead>
-          <tbody><tr><th scope="row">1</th><td>Sample in a Jar</td><td>Head</td></tr><tr><th scope="row">2</th><td>Julius</td><td>Head</td></tr><tr><th scope="row">3</th><td>Down with Disease</td><td>Head</td></tr><tr><th scope="row">4</th><td>Rift</td><td>Head</td></tr><tr><th scope="row">5</th><td>Poor Heart</td><td>Head</td></tr><tr><th scope="row">6</th><td>Cavern</td><td>Head</td></tr><tr><th scope="row">7</th><td>Scent of a Mule</td><td>Head</td></tr><tr><th scope="row">8</th><td>It's Ice</td><td>Head</td></tr><tr><th scope="row">9</th><td>You Enjoy Myself</td><td>Head</td></tr><tr><th scope="row">10</th><td>Fee</td><td>Head</td></tr><tr><th scope="row">11</th><td>Amazing Grace</td><td>Mid-depth</td></tr><tr><th scope="row">12</th><td>Simple</td><td>Mid-depth</td></tr><tr><th scope="row">13</th><td>Wilson</td><td>Mid-depth</td></tr><tr><th scope="row">14</th><td>Nellie Kane</td><td>Mid-depth</td></tr><tr><th scope="row">15</th><td>The Squirming Coil</td><td>Mid-depth</td></tr><tr><th scope="row">16</th><td>Lifeboy</td><td>Mid-depth</td></tr><tr><th scope="row">17</th><td>Ginseng Sullivan</td><td>Mid-depth</td></tr><tr><th scope="row">18</th><td>Mound</td><td>Deep cut</td></tr><tr><th scope="row">19</th><td>Sleeping Monkey</td><td>Deep cut</td></tr><tr><th scope="row">20</th><td>Foreplay/Long Time</td><td>Deep cut</td></tr></tbody>
-        </table>
-        <table>
-          <thead><tr><th scope="col">Rule</th><th scope="col">Held-out score</th></tr></thead>
-          <tbody><tr><th scope="row">Consensus barbell - v5, tonight's method</th><td class="n">19 / 40</td></tr><tr><th scope="row">What was actually published - v1 + v2, hand-picked</th><td class="n">17 / 40</td></tr><tr><th scope="row">Top 20 by that year's play count</th><td class="n">14 / 40</td></tr><tr><th scope="row">Frequency x distinctiveness - v4, rejected</th><td class="n">12 / 40</td></tr><tr><th scope="row">Random 20 from the same pool</th><td class="n">10.8 / 40</td></tr></tbody>
-        </table>
-      </details>
+    <div class="note" style="margin-top:0">
+      The model, its version history, the full scoring table and each night's 20 picks live on the
+      standalone page &mdash; <a href="/projects/setlist-predictions/">open the setlist predictor &rarr;</a>.
+      That page is the single source of truth; this tile mirrors it.
+    </div>
   </section>
