@@ -95,6 +95,14 @@
   .dt tfoot th, .dt tfoot td { color:var(--text-muted); font-size:12px; border-top:2px solid var(--grid); }
   @media (max-width:560px){ .cnm { flex-basis:52px; font-size:11.5px; } .cax { margin-left:0; flex-basis:100%; } }
 
+  /* --- oddities --- */
+  .rules { margin-top:12px; border-left:3px solid var(--tierb); background:var(--surface-2); padding:11px 14px; border-radius:0 8px 8px 0; }
+  .rules p { margin-top:0; font-size:12.5px; } .rules p + p { margin-top:8px; }
+  .rules .lbl { font-size:10.5px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:var(--tierb); display:block; margin-bottom:5px; }
+  .dt .mut { color:var(--faint); }
+  .dt .g { font-size:10.5px; font-weight:700; color:var(--accent-2); font-variant-numeric:tabular-nums; }
+  .pre { border-left:3px solid var(--good); background:var(--surface-2); padding:10px 14px; border-radius:0 8px 8px 0; font-size:13px; }
+
   /* --- readability --- */
   .box p, .box li { line-height:1.65; max-width:74ch; }
   .box h4 { margin-top:22px; }
@@ -280,7 +288,7 @@
     <p class="sub">Five nights at Madison Square Garden — Phish's 92nd through 96th shows there, each themed to a year, <b>1992 → 1996</b>. Three played, two to go. Predictions, the model behind them, and an honest scorecard.</p>
 
     <div class="mdl">
-      <div class="mdl-h"><span class="t">How the model works</span><span class="v">v8.6 &middot; 26 Jul</span></div>
+      <div class="mdl-h"><span class="t">How the model works</span><span class="v">v8.7 &middot; 26 Jul</span></div>
       <div class="mdl-b">
         <p class="mdl-lede">Each night is themed to a year. The model ranks that year's songs by how often Phish actually played them, throws out everything already used earlier in the run, and takes the top twenty. Three slots are held back for things frequency cannot see.</p>
         <div class="mdl-steps">
@@ -301,7 +309,7 @@
     <div class="hero">
       <div class="hero-h">
         <span class="t">Next up — Show #95, the 1995 night</span>
-        <span class="d">Mon 27 Jul · model v8.6</span>
+        <span class="d">Mon 27 Jul · model v8.7</span>
       </div>
       <div class="hero-b">
         <p class="hl"><b>The first genuine out-of-sample test.</b> Everything here was written after Saturday and has never predicted anything. These four calls are pre-registered, so Monday's result is unambiguous. The opener is deliberately <em>not</em> a costume pick — a cover opener two nights running is less likely, not more.</p>
@@ -363,6 +371,32 @@
   </details>
 
   <details class="box">
+    <summary>Oddities — sandwiches, fests and the deep end <span class="tag">3 nights</span></summary>
+    <p>Setlist structure the song list does not capture, counted the same way every night so it can be tracked rather than admired.</p>
+    <div class="rules">
+      <span class="lbl">How these are counted</span>
+      <p><b>Fest</b> — one song three or more times inside a single set. <b>Sandwich</b> — a song bracketing at least one different song, then returning. <b>Deep bustout</b> — a gap of 300 shows or more.</p>
+      <p><b>A fest's own wrap-arounds do not count as sandwiches.</b> Tweezer bracketed six separate songs on #94; none of them are logged here. Counting each leg would turn one event into six and drown out the thing that actually was a sandwich that night.</p>
+    </div>
+    <table class="dt">
+      <thead><tr><th scope="col">Night</th><th scope="col">Fest</th><th scope="col">Sandwich</th><th scope="col">Deep bustouts</th><th scope="col" class="n">Longest segue run</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">#92 &middot; 1992</th><td class="mut">none</td><td><b>David Bowie</b> &gt; The Vibration of Life &gt; <b>David Bowie</b></td><td>Cold as Ice <span class="g">1468</span> &middot; The Vibration of Life <span class="g">1027</span> &middot; Love You <span class="g">382</span></td><td class="n">6</td></tr>
+        <tr><th scope="row">#93 &middot; 1993</th><td class="mut">none</td><td><b>Tube</b> &gt; Big Ball Jam &gt; <b>Tube</b></td><td>Big Ball Jam <span class="g">1170</span> &middot; La Grange <span class="g">531</span> &middot; Sweet Adeline <span class="g">358</span> &middot; Sparks <span class="g">357</span></td><td class="n">6</td></tr>
+        <tr><th scope="row">#94 &middot; 1994</th><td><b>Tweezer &times;6</b>, set 2</td><td><b>Down with Disease</b> &gt; Tweezer &gt; <b>Down with Disease</b></td><td>Highway to Hell <span class="g">659</span> &middot; Purple Rain <span class="g">535</span> &middot; Back in the U.S.S.R. <span class="g">485</span></td><td class="n">7</td></tr>
+      </tbody>
+    </table>
+
+    <h4>One sandwich a night, three for three</h4>
+    <p>Every night of this run has produced exactly one, never two and never zero. That alone is worth pre-registering.</p>
+    <p><b>On both nights without a fest, the filling was that night's deepest bustout.</b> The Vibration of Life had gone 1,027 shows and came back inside a Bowie. Big Ball Jam had gone 1,170 and came back inside a Tube. Those are the two largest gaps of the entire run, and neither was played on its own — both were delivered wrapped. On #94 the fest took that role instead, and the sandwich fell to a pair of Down with Diseases around a Tweezer.</p>
+    <p class="pre"><b>Pre-registered for #95 and #96:</b> one sandwich each night. If a night produces no fest, expect the filling to be that night's largest gap rather than a rotation song — which means the bustout call and the sandwich call are the same question asked twice.</p>
+
+    <h4>The rest of the deep end</h4>
+    <p>Deep bustouts have run 3, 4, 3 — the range the called-shot uses. What the count hides is the spread: <b>#92 and #93 reached past a thousand shows, #94 topped out at 659.</b> The 1990s-themed nights are pulling from genuinely different depths, and the earlier the theme year, the deeper the reach — which makes sense, since a 1992 rotation contains more songs that have since fallen out of the band's hands entirely.</p>
+  </details>
+
+  <details class="box">
     <summary>Run scorecard — what was caught, and what that's worth <span class="tag">two live nights</span></summary>
     <div class="warnbox">
       <span class="lbl">Read this before the numbers</span>
@@ -374,11 +408,11 @@
     <p>The comparator throughout is a random 20 songs from the same eligible pool. That is a fair pool — but it is <b>not the baseline a competent fan represents.</b> The natural human baseline is &ldquo;the twenty most-played songs of the theme year, minus whatever they already played this run&rdquo; — and that <em>is</em> v7. Beating random therefore demonstrates two things any phish.net-literate fan had for free: the theme-year premise, announced publicly by the band, and the no-repeat rule.</p>
     <p><b>The model's edge over an informed fan is currently indistinguishable from zero</b>, because the model is what an informed fan would do. Every cleverer idea tried this week lost to the plain frequency list.</p>
     <h4>Scores will rise over the next two nights whatever happens</h4>
-    <p>66 songs are burned. The eligible pool shrinks every night, so a random slate improves too. Expect #95 and #96 to score higher than #94 <b>for arithmetic reasons unrelated to the model improving</b>. Judge v8.6 against the random baseline for its own night.</p>
+    <p>66 songs are burned. The eligible pool shrinks every night, so a random slate improves too. Expect #95 and #96 to score higher than #94 <b>for arithmetic reasons unrelated to the model improving</b>. Judge v8.7 against the random baseline for its own night.</p>
   </details>
 
   <details class="box" id="method">
-    <summary>The model — and the costume-album correction <span class="tag">v5 → v8.6</span></summary>
+    <summary>The model — and the costume-album correction <span class="tag">v5 → v8.7</span></summary>
     <div class="warnbox">
       <span class="lbl">Two ledgers, kept separate</span>
       <p><b>Live</b> means published before the show. <b>Fitted</b> means computed afterwards on a night already known. Fitted numbers appear in grey italic and are not skill.</p>
@@ -534,7 +568,7 @@
         C("Opener","Wilson","9/124 · 7%","The most frequent 1994 set-one opener. Flagged at the time as the weakest of the four calls.","Buried Alive (8) · Sample in a Jar (6) · Rift (6)",{t:"MISS — Back in the U.S.S.R., a 485-show bustout off the 1994 Halloween White Album."}),
         C("Encore","Sleeping Monkey","11/124 · 9%","Led all 1994 encores at eleven, absent from the slate — frequency cut it while positional data liked it.","Amazing Grace (7) · Ginseng Sullivan (5) · Fire (5)",{t:"MISS — Purple Rain, the Fish/vacuum novelty that v7 cut."}),
         C("Bustout","Poor Heart","gap 76","Highest 1994 play count among songs past a 50-show gap. A long shot by construction.","Scent of a Mule (g95) · Amazing Grace (g900) · Nellie Kane (g54)",{t:"MISS — three landed, none listed: U.S.S.R. (485), Highway to Hell (659), Catapult (223)."}),
-        C("Longest jam","You Enjoy Myself","27 jamcharts","Led all unburned 1994 songs in jamchart entries, ahead of Tweezer's 23.","Tweezer (23) · It's Ice (17) · Simple (11)",{t:"MISS — Tweezer, five times, in a Tweezerfest restaging 6/18/94."})
+        C("Longest jam","You Enjoy Myself","27 jamcharts","Led all unburned 1994 songs in jamchart entries, ahead of Tweezer's 23.","Tweezer (23) · It's Ice (17) · Simple (11)",{t:"MISS — Tweezer, six times, in a Tweezerfest restaging 6/18/94."})
       ],
       models:[
         M("v7 — top 20 by play count","published live at showtime","1994 across 124 Phish shows, minus the 50 burned. <b>The only live slate for this night.</b> Ladder: 42/55.","10 / 20","g",
@@ -564,7 +598,7 @@
         {name:"Set 1", songs:["Back in the U.S.S.R.","Simple","Rift","Punch You in the Eye","Wolfman's Brother"]},
         {name:"Set 2", songs:["Highway to Hell","Down with Disease","Tweezer","Down with Disease","Tweezer","Sample in a Jar","Tweezer","Lifeboy","Julius","Tweezer","Catapult","Tweezer","Cavern","Tweezer","The Squirming Coil"]},
         {name:"Encore", songs:["Purple Rain","Tweezer Reprise"]}
-      ], note:"Set 1 was ended early by a front-of-house outage. Set 2 became a Tweezerfest — five Tweezers wrapping the other songs, restaging 6/18/94. Three deep bustouts: U.S.S.R. (485), Highway to Hell (659), Catapult (223). Back in the U.S.S.R. is a White Album track, from the Halloween 1994 costume set held two months after most of 1994 was played." } },
+      ], note:"Set 1 was ended early by a front-of-house outage. Set 2 became a Tweezerfest — six Tweezers wrapping the other songs, restaging 6/18/94. Three deep bustouts: U.S.S.R. (485), Highway to Hell (659), Catapult (223). Back in the U.S.S.R. is a White Album track, from the Halloween 1994 costume set held two months after most of 1994 was played." } },
 
     { n:4, year:"1995", show:95, date:"Mon · Jul 27", status:"next",
       note:"First genuine out-of-sample test. Top 17 of 1995 by play count across 83 Phish shows, minus the 66 burned, plus three reserved slots. Saturday reopened a lot: You Enjoy Myself, Poor Heart, Scent of a Mule, It's Ice, Amazing Grace and Fee all survived.",
@@ -669,7 +703,7 @@
         ]) } }
   ]};
 
-  var KEY="phish-msg-v86", state, active=0;
+  var KEY="phish-msg-v87", state, active=0;
   function clone(o){ return JSON.parse(JSON.stringify(o)); }
   function load(){ try{ var r=localStorage.getItem(KEY); if(r){ state=JSON.parse(r); return true; } }catch(e){} state=clone(DEFAULTS); return false; }
   function save(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
