@@ -41,7 +41,6 @@
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.35} }
   .livedot { display:inline-block; width:8px; height:8px; border-radius:50%; background:#fff; animation:pulse 1.6s ease-in-out infinite; }
 
-  /* LIVE banner */
   .livebox { margin-top:16px; border:2px solid var(--live); border-radius:12px; overflow:hidden; }
   .livebox .lb-head { background:var(--live); color:#fff; padding:8px 14px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px; }
   .livebox .lb-head .lt { font-size:12px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; display:flex; align-items:center; gap:8px; }
@@ -55,7 +54,7 @@
   .sbi .x { font-size:11px; color:var(--text-muted); margin-top:2px; }
   .sbi .v.up { color:var(--good-text); }
   .lb-sets { background:var(--surface-1); border-top:1px solid var(--grid); padding:11px 14px; }
-  .lb-sets .sr { font-size:12.5px; margin-bottom:6px; line-height:1.7; }
+  .lb-sets .sr { font-size:12.5px; margin-bottom:6px; line-height:1.8; }
   .lb-sets .sr:last-child { margin-bottom:0; }
   .lb-sets .sn { font-size:10.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-muted); margin-right:6px; }
   .lb-sets .hitS { color:var(--good-text); font-weight:700; }
@@ -81,7 +80,6 @@
   .method tr.bad td.n { color:var(--bad); }
   .callout { margin-top:12px; border-left:3px solid var(--accent-2); background:var(--surface-2); padding:10px 14px; border-radius:0 8px 8px 0; }
   .callout p { margin-top:0; } .callout p + p { margin-top:8px; }
-  .ranks { font-variant-numeric:tabular-nums; font-size:11.5px; word-spacing:2px; }
 
   .tabs { display:flex; flex-wrap:wrap; gap:6px; margin:16px 0 14px; }
   .tab { font:inherit; cursor:pointer; text-align:left; background:var(--surface-1); border:1px solid var(--border); border-radius:10px; padding:8px 12px; min-width:118px; flex:1 1 118px; color:var(--text-secondary); }
@@ -197,7 +195,7 @@
       <h1>Phish @ MSG — Setlist Predictions</h1>
       <span class="pill live"><span class="livedot"></span> LIVE · #94</span>
     </div>
-    <p class="sub">Five-night Madison Square Garden run celebrating Phish's 92nd through 96th shows at the Garden — each night themed to a year, <b>1992 → 1996</b>. The 1994 night is <b>in progress right now</b> and every prediction below is being scored live. Each night has a twenty-song slate, four called shots, and a weighted ten-pick ladder. Every pick shows <b>theme-year plays × and current gap</b>.</p>
+    <p class="sub">Five-night Madison Square Garden run celebrating Phish's 92nd through 96th shows at the Garden — each night themed to a year, <b>1992 → 1996</b>. The 1994 night is <b>in progress</b> and every prediction is being scored live. Each night has a twenty-song slate, four called shots, and a weighted ten-pick ladder.</p>
 
     <div class="livebox">
       <div class="lb-head">
@@ -216,45 +214,42 @@
     </div>
 
     <details class="method">
-      <summary>How the picks are made, and what tonight is already teaching <span class="tag">model v7 · live</span></summary>
+      <summary>How the picks are made, and what tonight is teaching <span class="tag">model v7 · live</span></summary>
 
       <div class="callout">
-        <p><b>Live verdict so far: the ladder is working and the called shots are not.</b> The top four ladder slots have all hit, which is 34 of the points on the board — exactly the concentration the ranking argument predicted. Meanwhile the opener call is dead and it died in a way that exposes a real structural hole.</p>
+        <p><b>They are playing a Tweezerfest.</b> Tweezer has appeared five times in set two, wrapping Down with Disease, Sample in a Jar, Lifeboy, Julius, Catapult and Cavern. That is a direct restaging of <b>6/18/94</b> — the most famous structural gag of the theme year.</p>
+        <p>The note written into the Tweezer pick this afternoon read &ldquo;1994 is its defining year — the Bomb Factory version, Tweezerfest.&rdquo; That was meant as colour. It turned out to be literal, which makes hedging Tweezer down from 8 points to 5 the clearest scoring error of the night.</p>
       </div>
 
-      <h4>The miss that matters: Halloween costume songs</h4>
-      <p>Tonight opened with <b>Back in the U.S.S.R.</b>, a 485-show bustout last played in 2013. It is a <em>White Album</em> track — and Phish played the White Album in full as their <b>1994 Halloween musical costume</b>. Highway to Hell followed in set two at a 659-show gap.</p>
-      <p><b>A play-count model structurally cannot find these songs.</b> Halloween-costume material was played once or twice in the theme year, so it sits at the very bottom of any frequency ranking while being among the most era-defining music the band has. This is now the top rule for v8: <b>the theme year's Halloween album gets its own reserved bucket</b>, scored separately from rotation frequency. It also partially rehabilitates the &ldquo;era-distinctiveness&rdquo; idea that was rejected earlier — rejected correctly for the bulk slate, wrongly for era-signature set pieces.</p>
-      <p>Highway to Hell is the same failure from the other direction: 15 plays in 1994, ranked 32nd in the eligible pool, just outside the top-20 cut.</p>
-
-      <h4>Tweezer: the conservative call was wrong</h4>
-      <p>Tweezer went in at 5 points after a run-level analysis put it at 37% rather than the 49% a full commitment implied. It is the architecture of set two — a Tweezer → Down with Disease → Tweezer sandwich. The more aggressive placement at 8 points would have scored better. The reasoning behind the hedge was sound and the outcome went the other way; recorded here rather than quietly corrected.</p>
-
-      <h4>Openers may simply be unwinnable</h4>
-      <p>Backtested against nights 1 and 2, the opener model ranked the actual opener 14th and 3rd, and no variant improved it. Tonight it was a 485-show bustout. Three data points, no model in reach: <b>this category should probably be reframed or dropped</b> rather than tuned.</p>
-
-      <h4>The backtest that set the slate</h4>
+      <h4>Live scorecard</h4>
       <table>
-        <thead><tr><th scope="col">Strategy</th><th scope="col" class="n">#92</th><th scope="col" class="n">#93</th><th scope="col" class="n">Total</th></tr></thead>
+        <thead><tr><th scope="col">Instrument</th><th scope="col" class="n">Score</th><th scope="col" class="n">Expected</th></tr></thead>
         <tbody>
-          <tr class="win"><th scope="row">v7 — top 20 of eligible pool</th><td class="n">9</td><td class="n">7</td><td class="n">16 / 40</td></tr>
-          <tr><th scope="row">Top 20 restricted to Secret-Language songs</th><td class="n">9</td><td class="n">7</td><td class="n">16 / 40</td></tr>
-          <tr><th scope="row">Skip top 5, take ranks 6–25</th><td class="n">8</td><td class="n">7</td><td class="n">15 / 40</td></tr>
-          <tr><th scope="row">Ranks 11–30 (&ldquo;mid-depth&rdquo;)</th><td class="n">8</td><td class="n">6</td><td class="n">14 / 40</td></tr>
-          <tr><th scope="row">Skip top 3, take ranks 4–23</th><td class="n">7</td><td class="n">6</td><td class="n">13 / 40</td></tr>
-          <tr class="bad"><th scope="row">Random 20 from the same pool</th><td class="n">4.3</td><td class="n">3.4</td><td class="n">7.7 / 40</td></tr>
+          <tr class="win"><th scope="row">Ten-pick ladder</th><td class="n">42 / 55</td><td class="n">24.9</td></tr>
+          <tr><th scope="row">Twenty-song slate</th><td class="n">9 / 20</td><td class="n">~7</td></tr>
+          <tr class="bad"><th scope="row">Called shots</th><td class="n">0 / 4</td><td class="n">—</td></tr>
         </tbody>
       </table>
+      <p>The ladder's top four all hit — Sample in a Jar, Julius, Down with Disease, Rift — which is 34 of the 42 points and exactly the concentration the ranking argument predicted. The called shots are 0 for 4 and three of them are already dead.</p>
 
-      <h4>Why the ladder is ranked strictly by probability</h4>
-      <p>The game scores <code>Σ points × P(played)</code>. By the rearrangement inequality that is maximised by pairing the largest point value with the largest probability, straight down — the ranking is the entire strategy. 10 + 9 + 8 = 27 of 55 points sit in the top three slots, so half the game is decided by three songs. Tonight all three hit.</p>
-      <p>The probabilities were calibrated first: summed play rates predicted 8.77 hits on #92 (actual 9) and 8.41 on #93 (actual 7), a ratio of 0.93 — so raw play rate is already a well-calibrated probability and needed no fudge factor.</p>
+      <h4>The structural miss: Halloween costume songs</h4>
+      <p>Tonight opened with <b>Back in the U.S.S.R.</b>, a 485-show bustout last played in 2013 — a <em>White Album</em> track, and Phish played the White Album in full as their <b>1994 Halloween musical costume</b>. Highway to Hell followed at a 659-show gap.</p>
+      <p><b>A play-count model structurally cannot find these songs.</b> Halloween-costume material was played once or twice in the theme year, so it sits at the bottom of any frequency ranking while being among the most era-defining music the band has. Top rule for v8: <b>the theme year's Halloween album gets its own reserved bucket.</b> Highway to Hell is the same failure from the other side — 15 plays in 1994, ranked 32nd, just outside the cut.</p>
+
+      <h4>The bustout structure held, even though the pick failed</h4>
+      <p>Three deep bustouts tonight: Back in the U.S.S.R. (485), Highway to Hell (659), Catapult (223). Nights #92 and #93 each produced 3–4 songs past a 300-show gap, and tonight lands squarely inside that. <b>The structural finding is confirmed; the naming of it remains impossible.</b> Bustout should be reframed as a predicted <em>count</em>, or a <em>category</em>, not a title.</p>
+
+      <h4>Longest jam: the narrative beat the data</h4>
+      <p>The call was You Enjoy Myself on jamchart entries, 27 to Tweezer's 23. It is Tweezer, by a distance. The quantitative signal pointed one way, the era-narrative pointed the other, and the narrative won — the same lesson the Tweezer hedge taught.</p>
+
+      <h4>Openers may simply be unwinnable</h4>
+      <p>Backtested against nights 1 and 2, the opener model ranked the actual opener 14th and 3rd, and no variant improved it. Tonight it was a 485-show bustout. Three data points, no model in reach: this category should be reframed or dropped rather than tuned.</p>
 
       <h4>Dormancy: still do not filter on it</h4>
-      <p>Both earlier nights ran a median gap of 10–11 shows with 3–4 songs past a 300-show gap. Tonight fits exactly: a current-rotation core plus Back in the U.S.S.R. (485) and Highway to Hell (659). A gap penalty would have thrown away the show's two most memorable moments — and no gap-based model could have picked them either.</p>
+      <p>Both earlier nights ran a median gap of 10–11 shows with 3–4 songs past a 300-show gap, and tonight fits exactly — a current-rotation core plus three vault moments. A gap penalty would have thrown away the show's most memorable material, and no gap-based model could have picked it either.</p>
 
       <h4>Why this page is not auto-polling</h4>
-      <p>Live results are baked in and re-published rather than fetched in the browser. Auto-polling would require the phish.net API key in the page source of a public repository, which would leak it. The clean path to genuine live updates is the existing setlist bot's <code>phishpicks</code> ingest endpoint, which already receives one JSON record per song and needs no key on the read side.</p>
+      <p>Live results are baked in and re-published rather than fetched in the browser. Auto-polling would require the phish.net API key in the source of a public repository. The clean path is the existing setlist bot's <code>phishpicks</code> ingest endpoint, which already receives one JSON record per song and needs no key on the read side.</p>
     </details>
   </header>
 
@@ -268,16 +263,15 @@
 (function () {
   "use strict";
 
-  // ---- LIVE STATE: update this block as the show progresses ---------------
+  // ---- LIVE STATE ---------------------------------------------------------
   var LIVE = {
     date: "2026-07-25",
-    label: "Set 2 in progress · 15 songs logged",
+    label: "Set 2 in progress · 20 songs logged",
     sets: [
       { name: "Set 1", songs: ["Back in the U.S.S.R.","Simple","Rift","Punch You in the Eye","Wolfman's Brother"] },
-      { name: "Set 2", songs: ["Highway to Hell","Down with Disease","Tweezer","Down with Disease","Tweezer","Sample in a Jar","Tweezer","Lifeboy","Julius","Tweezer"] }
+      { name: "Set 2", songs: ["Highway to Hell","Down with Disease","Tweezer","Down with Disease","Tweezer","Sample in a Jar","Tweezer","Lifeboy","Julius","Tweezer","Catapult","Tweezer","Cavern","Tweezer","The Squirming Coil"] }
     ],
-    note: "Set 1 was ended early by a front-of-house outage — a truncated set mechanically suppresses every hit count tonight. Back in the U.S.S.R. last played 2013-10-23 (485 shows); Highway to Hell last played 2009-08-16 (659 shows). Trey teased Dave's Energy Guide in Simple.",
-    openerActual: "Back in the U.S.S.R."
+    note: "Set 1 was ended early by a front-of-house outage — a truncated set mechanically suppresses every hit count tonight. Set 2 is a Tweezerfest: five Tweezers wrapping the other songs, restaging 6/18/94. Bustouts: Back in the U.S.S.R. (485 shows, last 2013-10-23), Highway to Hell (659, last 2009-08-16), Catapult (223, last 2021-09-05). Trey teased Dave's Energy Guide in Simple, and wore a Pepe Le Pew T-shirt."
   };
   var PLAYED = (function () {
     var s = {};
@@ -304,7 +298,7 @@
       },
       {
         n:2, year:"1993", show:93, date:"Fri · Jul 24", status:"done", score:6,
-        note:"The published slate scored 6 of 20. v7 applied to the same night scores 7, against a corrected random baseline of 3.4. Ranking this night's 24 songs against the eligible pool is what exposed the depth-band error carried since v4.",
+        note:"The published slate scored 6 of 20. v7 applied to the same night scores 7, against a corrected random baseline of 3.4. Ranking this night's 24 songs against the eligible pool exposed the depth-band error carried since v4.",
         sets:[
           { name:"Set 1", songs:[song("Chalk Dust Torture",true),song("Rift"),song("Guelah Papyrus",true),song("It's Ice"),song("Fast Enough for You"),song("Maze",true),song("The Curtain"),song("The Divided Sky",true),song("Cavern")] },
           { name:"Set 2", songs:[song("Tweezer"),song("The Wedge",true),song("All Things Reconsidered"),song("Harpua"),song("The Man Who Stepped Into Yesterday"),song("Avenu Malkenu"),song("Purple Rain"),song("You Enjoy Myself")] },
@@ -315,7 +309,7 @@
         n:3, year:"1994", show:94, date:"Sat · Jul 25", status:"live",
         note:"Scored live. The top 20 of 1994 by measured play count minus the 50 songs burned on Jul 22 and Jul 24, plus four called shots and a ten-pick ladder. Green means it has been played.",
         h2h:{
-          intro:"Three model configurations are on trial tonight — v5 from this morning, v6 from this afternoon, v7 live now. Songs marked ◂ are unique to that version; green means it has already hit.",
+          intro:"Three model configurations on trial tonight — v5 from this morning, v6 from this afternoon, v7 live now. Songs marked ◂ are unique to that version; green means it has hit.",
           versions:[
             { name:"v5 — consensus barbell", sub:"this morning · mid-depth sampling",
               songs:["Sample in a Jar","Julius","Down with Disease","Rift","You Enjoy Myself","Poor Heart","Cavern","Scent of a Mule","It's Ice","Fee","Simple","Wilson","Nellie Kane","The Squirming Coil","Lifeboy","Amazing Grace","Mound","Ginseng Sullivan","Foreplay/Long Time","Sleeping Monkey"],
@@ -327,7 +321,7 @@
               songs:["Sample in a Jar","Julius","Down with Disease","Rift","You Enjoy Myself","Poor Heart","Cavern","Scent of a Mule","It's Ice","Fee","Simple","Wilson","Nellie Kane","The Squirming Coil","Lifeboy","Amazing Grace","Tweezer","If I Could","Axilla (Part II)","Tweezer Reprise"],
               diff:["Tweezer","If I Could","Axilla (Part II)","Tweezer Reprise"] }
           ],
-          verdict:"Live note: Tweezer is a v7-only pick and it is the centrepiece of set two, so v7 is beating v5 on its unique four. But v6 quietly owns Wolfman's Brother, which neither v5 nor v7 carried — the version most likely to look foolish just landed a pick both of its successors dropped."
+          verdict:"v7 is ahead on its unique four because Tweezer is the entire architecture of set two — a pick v5 did not carry at all. But v6, the version written off as most likely to look foolish, owns Wolfman's Brother, which neither v5 nor v7 kept. Its cover quota produced nothing; its willingness to promote a Hoist track produced a hit."
         },
         calls:[
           C("Opener","Wilson","9/124 · 7%",
@@ -339,13 +333,13 @@
             "Amazing Grace (7) · Ginseng Sullivan (5) · Fire (5)",
             {r:"pend", t:"Pending — encore not yet played."}),
           C("Bustout","Poor Heart","gap 76",
-            "Highest 1994 play count among songs past a 50-show gap. <b>A long shot by construction</b> — 3–4 deep bustouts land per night from ~50 candidates.",
+            "Highest 1994 play count among songs past a 50-show gap. <b>A long shot by construction.</b>",
             "Scent of a Mule (g95) · Amazing Grace (g900) · Nellie Kane (g54)",
-            {r:"miss", t:"MISS — the night's bustouts are Back in the U.S.S.R. (485) and Highway to Hell (659), both far deeper than anything on the candidate list."}),
+            {r:"miss", t:"MISS — three bustouts landed and none were on the list: Back in the U.S.S.R. (485), Highway to Hell (659), Catapult (223). The predicted count of 3–4 was right; the names were unreachable."}),
           C("Longest jam","You Enjoy Myself","27 jamcharts",
             "Leads all unburned 1994 songs in jamchart entries, ahead of Tweezer's 23. Tweezer is the close second and the more era-romantic answer.",
             "Tweezer (23) · It's Ice (17) · Simple (11)",
-            {r:"pend", t:"Trending MISS — YEM unplayed; Tweezer has anchored set two across multiple segments."})
+            {r:"miss", t:"MISS — it is Tweezer, five times over, in a Tweezerfest restaging 6/18/94. The jamchart data favoured YEM and the era-narrative favoured Tweezer; the narrative was right."})
         ],
         sets:[
           { name:"Set 1", songs:P([
@@ -361,30 +355,30 @@
           ]) },
           { name:"Set 2", songs:P([
             ["Down with Disease",58,"Debuted 31 Dec 1993 and defined 1994 with 58 plays, second only to Sample in Secret-Language flags.",10],
-            ["You Enjoy Myself",48,"48 plays in 1994, 626 all-time, 27 jamchart entries — more than any other unburned song. Tonight's longest-jam call.",4],
-            ["Tweezer",36,"1994 is its defining year at 36 plays and 23 jamchart entries. <b>A v7-only pick that v5 missed entirely.</b>",9],
+            ["You Enjoy Myself",48,"48 plays in 1994, 626 all-time, 27 jamchart entries — more than any other unburned song. Tonight's longest-jam call, and it lost to Tweezer.",4],
+            ["Tweezer",36,"1994 is its defining year at 36 plays and 23 jamchart entries. <b>A v7-only pick that v5 missed entirely — and it became the whole set.</b>",9],
             ["If I Could",34,"34 plays in 1994 out of only 69 all-time — <b>over half its entire life happened that year.</b>",4],
             ["Simple",34,"Broke out in 1994 with 34 plays after a Dec 1993 debut. 211 all-time.",8],
             ["Wilson",27,"27 plays in 1994, 305 all-time — and the year's most common opener at nine. Tonight's opener call.",8],
             ["Nellie Kane",26,"A Hot Rize cover played 26 times in 1994 — part of the bluegrass segment the band leaned on that year.",54],
-            ["The Squirming Coil",26,"26 plays in 1994, 377 all-time. The solo-piano outro makes it a natural set-one closer.",7]
+            ["The Squirming Coil",26,"26 plays in 1994, 377 all-time. The solo-piano outro makes it a natural set closer.",7]
           ]) },
           { name:"Encore", songs:P([
             ["Amazing Grace",31,"31 plays in 1994 and the year's second-most-common encore. <span class=\"risk\">The riskiest pick here:</span> 900 shows since the last one.",900],
-            ["Tweezer Reprise",25,"25 plays in 1994. Appeared in ~69% of 1994 shows that had a Tweezer — this slot and Tweezer are close to one bet held twice.",9],
+            ["Tweezer Reprise",25,"25 plays in 1994. Appeared in ~69% of 1994 shows that had a Tweezer — and tonight has had five Tweezers.",9],
             ["Lifeboy",24,"A <b>Hoist</b> ballad, 64 plays all-time with 24 in 1994 — concentrated in exactly this year.",4]
           ]) }
         ],
         game:{
           expected:"24.9",
-          note:"Ranked strictly by probability, which provably maximises expected points. Percentages are 1994 plays ÷ 124 shows, calibrated against the two played nights (ratio 0.93). Tweezer is the one adjusted figure — 37% rather than its raw 29%, from a run-level analysis. In hindsight that hedge was too conservative.",
+          note:"Ranked strictly by probability, which provably maximises expected points. Percentages are 1994 plays ÷ 124 shows, calibrated against the two played nights (ratio 0.93). Tweezer was the one adjusted figure — 37% rather than its raw 29%. Given that set two is a Tweezerfest, that hedge was far too conservative: at 8 points instead of 5 the ladder would read 45.",
           picks:G([
             ["Sample in a Jar","59%","The most-played song of all of 1994 and unburned. Nothing else is close, so it takes the 10 without argument.",5],
             ["Julius","52%","65 plays after an April 1994 debut — that rate in only nine months. <b>Hoist</b> is the single most 1994 thing available.",11],
             ["Down with Disease","47%","58 plays and the second-heaviest Secret Language song of the year. The definitive '1994 night' song that is also genuinely likely.",10],
             ["Rift","40%","49 plays. Not glamorous and not era-specific — a 1990 song that simply peaked in 1994 — but the ladder rewards probability, not storytelling.",8],
             ["You Enjoy Myself","39%","48 plays, 626 all-time, unplayed across both earlier nights. The biggest name left on the board.",4],
-            ["Tweezer","37%","Raw 1994 rate is 29%, which would leave it eleventh and off this ladder. Adjusted up because its rate <b>declines</b> through 1995 and 1996, making tonight its best remaining chance. <b>The hedge to 37% rather than 49% cost a point.</b>",9],
+            ["Tweezer","37%","Raw 1994 rate is 29%, which would leave it eleventh and off this ladder. Adjusted up because its rate <b>declines</b> through 1995 and 1996. <b>Still too cautious — it is the architecture of set two.</b>",9],
             ["Poor Heart","37%","46 plays. Effectively tied with Tweezer. <b>The riskiest pick in the top half</b> at a 76-show gap.",76],
             ["Cavern","36%","45 plays, 484 all-time. A pure set-closing workhorse — no era story, just volume.",11],
             ["Scent of a Mule","36%","44 plays, debuted the same April 1994 night as Julius. Its 95-show gap makes it the shakier of the near-ties.",95],
@@ -394,11 +388,11 @@
       },
       {
         n:4, year:"1995", show:95, date:"Mon · Jul 27", status:"up",
-        note:"Top 20 of 1995 across 83 Phish shows, minus everything burned through Jul 25. Provisional — will be rebuilt from tonight's real setlist, which has already burned Simple, Rift, Wolfman's Brother, Punch You in the Eye and others.",
+        note:"Top 20 of 1995 across 83 Phish shows. Provisional and now visibly stale — tonight has already burned Simple, Rift, Wolfman's Brother, Punch You in the Eye, Cavern and The Squirming Coil. Rebuild after the encore.",
         calls:[
-          C("Opener","Ya Mar","6/83 · 7%","The most frequent 1995 set-one opener among unburned songs. <b>Given tonight's result, treat every opener call as near-worthless.</b>","Cars Trucks Buses (5) · Buried Alive (4)"),
+          C("Opener","Ya Mar","6/83 · 7%","The most frequent 1995 set-one opener among unburned songs. <b>After tonight, treat every opener call as near-worthless.</b>","Cars Trucks Buses (5) · Buried Alive (4)"),
           C("Encore","A Day in the Life","9/83 · 11%","The clearest positional signal on any night here — 1995 closed with this Beatles cover nine times.","Fire (6) · Bold As Love (5, g59)"),
-          C("Bustout","Strange Design","gap 60","29 of its 68 all-time plays fall in 1995. <b>Same caveat as every bustout call</b> — a lottery ticket.","Acoustic Army (g1096) · I'm Blue I'm Lonesome (g791)"),
+          C("Bustout","Strange Design","gap 60","<b>Reframe this call</b> — tonight proved the count (3–4 per night) is predictable and the names are not.","Acoustic Army (g1096) · I'm Blue I'm Lonesome (g791)"),
           C("Longest jam","Theme from the Bottom","8 jamcharts","Leads unburned 1995 songs in jamchart entries. Thinner than 1994's signal.","Timber (Jerry the Mule) (6) · Free (3)")
         ],
         sets:[
@@ -421,7 +415,7 @@
             ["Prince Caspian",17,"Debuted Jun 1995, 17 plays that year, 187 all-time — the shortest gap on this slate.",2],
             ["Keyboard Army",14,"<b>All 14 of its all-time plays are 1995.</b> It exists only in this year.",406],
             ["Billy Breathes",14,"Debuted Sep 1995 with 14 plays that year; 67 all-time and current.",17],
-            ["While My Guitar Gently Weeps",13,"Beatles cover, debuted at the Oct 1994 Halloween White Album set — the same set that produced tonight's opener.",44]
+            ["While My Guitar Gently Weeps",13,"Beatles cover, debuted at the Oct 1994 Halloween White Album set — <b>the same set that produced tonight's opener.</b> Worth promoting on the rebuild.",44]
           ]) },
           { name:"Encore", songs:P([
             ["A Day in the Life",23,"Beatles cover, 23 plays in 1995 and the year's most common encore at nine.",37],
@@ -446,11 +440,11 @@
       },
       {
         n:5, year:"1996", show:96, date:"Wed · Jul 29", status:"up",
-        note:"Top 20 of 1996 across 73 Phish shows. The most provisional slate of the five — it compounds two nights of assumed predictions. Note Wolfman's Brother has already been burned tonight and must come off.",
+        note:"Top 20 of 1996 across 73 Phish shows. The most provisional slate — Punch You in the Eye and Wolfman's Brother have both been burned tonight and must come off on the rebuild.",
         calls:[
-          C("Opener","The Star-Spangled Banner","3/73 · 4%","<b>The weakest call on the page</b>, and after tonight the whole category looks unwinnable.","Punch You in the Eye (2) · Funky Bitch (1)"),
+          C("Opener","The Star-Spangled Banner","3/73 · 4%","<b>The weakest call on the page</b>, and after tonight the category looks unwinnable.","Punch You in the Eye (2) · Funky Bitch (1)"),
           C("Encore","Waste","4/73 · 5%","Debuted Jun 1996 and closed four shows that year.","Rocky Top (3) · Johnny B. Goode (3, g926)"),
-          C("Bustout","Train Song","gap 92","15 plays in 1996 out of 59 all-time. The Swept Away / Steep pair is the bigger swing.","Swept Away (g229) · Steep (g229)"),
+          C("Bustout","Train Song","gap 92","15 plays in 1996 out of 59 all-time. <b>Reframe as a count, not a name.</b>","Swept Away (g229) · Steep (g229)"),
           C("Longest jam","Esther","2 jamcharts","<b>Close to meaningless and shown that way deliberately</b> — every heavy 1996 vehicle is burned upstream.","Crosseyed and Painless (2) · Funky Bitch (2)")
         ],
         sets:[
@@ -498,15 +492,13 @@
     ]
   };
 
-  // auto-mark live hits
   DEFAULTS.nights.forEach(function (night) {
     if (night.status !== "live") return;
     night.sets.forEach(function (set) { set.songs.forEach(function (sg) { if (PLAYED[sg.name]) sg.hit = true; }); });
     if (night.game) night.game.picks.forEach(function (g) { if (PLAYED[g.name]) g.hit = true; });
-    if (night.calls) night.calls.forEach(function (c) { if (c.verdict && c.verdict.r === "hit") c.hit = true; });
   });
 
-  var KEY = "phish-msg-96-predictions-live94";
+  var KEY = "phish-msg-96-predictions-live94b";
   var state, active = 0;
 
   function clone(o) { return JSON.parse(JSON.stringify(o)); }
@@ -545,19 +537,16 @@
     return h;
   }
 
-  // ---- live banner --------------------------------------------------------
   function renderLive() {
     var night = state.nights.filter(function (n) { return n.status === "live"; })[0];
     if (!night) { document.querySelector(".livebox").style.display = "none"; return; }
     document.getElementById("lu").textContent = LIVE.label;
-
     var t = nightTotals(night), c = callTotals(night), g = gamePoints(night);
     var uniq = Object.keys(PLAYED).length;
     document.getElementById("scoreboard").innerHTML =
       '<div class="sbi"><div class="k">Ten-pick ladder</div><div class="v up">' + g + ' <small>/ 55</small></div><div class="x">expected ' + night.game.expected + '</div></div>' +
       '<div class="sbi"><div class="k">20-song slate</div><div class="v">' + t.hit + ' <small>/ ' + t.total + '</small></div><div class="x">' + uniq + ' unique songs played</div></div>' +
-      '<div class="sbi"><div class="k">Called shots</div><div class="v">' + c.hit + ' <small>/ ' + c.total + '</small></div><div class="x">opener + bustout already missed</div></div>';
-
+      '<div class="sbi"><div class="k">Called shots</div><div class="v">' + c.hit + ' <small>/ ' + c.total + '</small></div><div class="x">3 of 4 already missed</div></div>';
     var html = "";
     LIVE.sets.forEach(function (st) {
       html += '<div class="sr"><span class="sn">' + st.name + '</span>' +
@@ -630,9 +619,8 @@
     var vers = document.createElement("div"); vers.className="vers";
     night.h2h.versions.forEach(function (v) {
       var col = document.createElement("div"); col.className="ver";
-      var h = document.createElement("h5"); h.innerHTML = v.name + "<br><em>" + v.sub + "</em>"; col.appendChild(h);
-      var ol = document.createElement("ol");
-      var got = 0;
+      var h = document.createElement("h5"); col.appendChild(h);
+      var ol = document.createElement("ol"); var got = 0;
       v.songs.forEach(function (sg) {
         var li = document.createElement("li"); li.textContent = sg;
         var cls = [];
@@ -641,7 +629,7 @@
         li.className = cls.join(" ");
         ol.appendChild(li);
       });
-      h.innerHTML += '<br><em style="color:var(--good-text)">' + got + ' hits so far</em>';
+      h.innerHTML = v.name + "<br><em>" + v.sub + "</em><br><em style='color:var(--good-text)'>" + got + " hits so far</em>";
       col.appendChild(ol); vers.appendChild(col);
     });
     d.appendChild(vers);
@@ -764,7 +752,6 @@
     if (window.confirm("Reset ALL five nights?")) { state = clone(DEFAULTS); active = 0; save(); render(); }
   });
   document.getElementById("exportBtn").addEventListener("click", function () {
-    var strip = function (h) { return h.replace(/<[^>]*>/g, ""); };
     var lines = ["PHISH @ MSG 2026 — SETLIST PREDICTIONS — model v7", ""];
     state.nights.forEach(function (night) {
       lines.push("=== " + night.year + " · Night " + night.n + " · #" + night.show + " · " + night.date + " ===");
