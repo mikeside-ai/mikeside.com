@@ -313,7 +313,7 @@ def render_show(show: dict, prev: dict | None, nxt: dict | None, slugs: dict | N
         head = e(s.get("display") or f"Set {label}")
         sub = f"{len(slist)} songs" + (f" · {fmt_len(set_total)} timed" if set_total else "")
         body.append(f'<div class="setblock"><div class="setname"><span>{head}</span><span class="sl">{e(sub)}</span></div><ol>')
-        for song in slist:
+        for song_i, song in enumerate(slist):
             mark = ""
             if song.get("footnote"):
                 mark = MARKS[mi] if mi < len(MARKS) else f"({mi+1})"
@@ -329,10 +329,22 @@ def render_show(show: dict, prev: dict | None, nxt: dict | None, slugs: dict | N
             slug = slugs.get(t_raw, slugify(t_raw)) if slugs else slugify(t_raw)
             t_html = (f'<a class="song-t" href="{BASE_PATH}/song/?s={slug}">{e(t_raw)}</a>'
                       if t_raw else '<span class="song-t"></span>')
+            # Listen link: once the show is complete the phish.in recording is
+            # (or will be) up. A curated top-level "phishin" map ("set:pos" ->
+            # exact track URL) wins; otherwise the show player. Inline-styled on
+            # purpose — cached stylesheets must not be able to hide it.
+            listen = ""
+            if show.get("complete") and t_raw:
+                track = (show.get("phishin") or {}).get(f"{label}:{song_i + 1}")
+                url = track or f"https://phish.in/{date}"
+                listen = (f' <a class="lsn" href="{e(url)}" rel="noopener" '
+                          f'title="Listen on phish.in" aria-label="Listen to {e(t_raw)} on phish.in" '
+                          f'style="color:var(--accent-soft);text-decoration:none;'
+                          f'margin-left:.5rem;font-size:.85em;opacity:.75;">&#9835;</a>')
             body.append(
                 f'<li class="srow{big}"><div class="sline"><span>{t_html}'
                 f'{f" <span class=fn>{mark}</span>" if mark else ""}{trs}</span>'
-                f'<span class="len">{fmt_len(ln)}</span></div>{bar}</li>'
+                f'<span class="len">{fmt_len(ln)}{listen}</span></div>{bar}</li>'
             )
         body.append("</ol></div>")
 
@@ -406,6 +418,40 @@ def render_show(show: dict, prev: dict | None, nxt: dict | None, slugs: dict | N
     else:
         pager.append("<span></span>")
 
+    # Curated media: official posts from the night, embedded rather than
+    # re-hosted — the platforms render their own photos and carry the credit.
+    media_html = ""
+    media = [m for m in (show.get("media") or []) if isinstance(m, dict) and m.get("url")]
+    if media:
+        embeds, want_x, want_ig = [], False, False
+        for m in media:
+            u = e(m["url"])
+            if m.get("type") == "instagram" or "instagram.com" in m["url"]:
+                want_ig = True
+                embeds.append(
+                    f'<blockquote class="instagram-media" data-instgrm-permalink="{u}" '
+                    f'data-instgrm-version="14" style="margin:0 auto;max-width:540px;">'
+                    f'<a href="{u}" rel="noopener">View on Instagram</a></blockquote>')
+            else:
+                want_x = True
+                embeds.append(
+                    f'<blockquote class="twitter-tweet" data-theme="dark" data-dnt="true">'
+                    f'<a href="{u}" rel="noopener">View on X</a></blockquote>')
+        scripts = ""
+        if want_x:
+            scripts += '<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
+        if want_ig:
+            scripts += '<script async src="https://www.instagram.com/embed.js"></script>'
+        media_html = f"""
+    <section class="block" style="border-top:none;">
+      <div class="container">
+        <div class="section-head"><span class="setno">From the night</span><h2>Official shots</h2>
+          <p>Posted by the band — embedded from the source.</p></div>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">{''.join(embeds)}</div>
+        {scripts}
+      </div>
+    </section>"""
+
     curve = energy_curve(rows, slugs or {})
     curve_html = (
         '<div class="curvewrap"><div class="curvehead"><span>The shape of the night</span>'
@@ -458,7 +504,7 @@ def render_show(show: dict, prev: dict | None, nxt: dict | None, slugs: dict | N
         <div class="tube">{lab}</div>
       </div>
     </section>
-
+{media_html}
     <section class="block" style="border-top:none;">
       <div class="container">
         <div class="section-head"><span class="setno">Elsewhere</span><h2>Go deeper</h2></div>
@@ -652,7 +698,7 @@ def main() -> int:
         print(f"  show page: {sh['showdate']}  {sh.get('venue','')}")
 
     # Song detail is served by the hand-maintained shell at song/index.html,
-    # which reads ?s=<slug> and renders from the feed — see render_song() above
+    # which reads ?s=<slug> and renders from the feed — see render_song() below
     # for the pre-rendered variant, kept for when a build workflow exists.
     print(f"  songs linked: {len(songs)} (rendered live by song/?s=<slug>)")
 
