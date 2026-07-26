@@ -47,6 +47,33 @@
   .hero-b .jump { margin-top:11px; font-size:12.5px; }
   .hero-b .jump a { color:var(--accent); font-weight:600; text-decoration:none; border-bottom:1px solid currentColor; }
 
+  /* --- model summary block --- */
+  .mdl { margin-top:16px; border:1px solid var(--border); border-radius:12px; background:var(--surface-1); overflow:hidden; }
+  .mdl-h { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px; padding:10px 15px; border-bottom:1px solid var(--border); background:var(--surface-2); }
+  .mdl-h .t { font-size:12px; font-weight:800; letter-spacing:0.09em; text-transform:uppercase; }
+  .mdl-h .v { font-size:11.5px; font-weight:700; color:var(--accent); }
+  .mdl-b { padding:14px 15px; }
+  .mdl-lede { font-size:14px; line-height:1.6; max-width:66ch; }
+  .mdl-steps { display:flex; flex-wrap:wrap; gap:9px; margin-top:13px; counter-reset:st; }
+  .st { flex:1 1 200px; border:1px solid var(--border); border-radius:9px; padding:9px 12px; background:var(--surface-2); }
+  .st .n2 { font-size:10px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); }
+  .st .h { font-size:13.5px; font-weight:700; margin-top:3px; }
+  .st .d2 { font-size:11.5px; color:var(--text-muted); margin-top:3px; line-height:1.45; }
+  .mdl-bets { margin-top:13px; border-top:1px solid var(--border); padding-top:12px; }
+  .bet { display:flex; gap:11px; align-items:flex-start; padding:7px 0; }
+  .bet + .bet { border-top:1px dashed var(--grid); }
+  .bet .pc { flex:0 0 52px; font-size:16px; font-weight:800; color:var(--accent-2); text-align:right; line-height:1.3; }
+  .bet .bd { flex:1 1 auto; }
+  .bet .bn { font-size:14px; font-weight:700; }
+  .bet .bx { font-size:11.5px; color:var(--text-muted); margin-top:2px; line-height:1.5; }
+  .mdl-foot { margin-top:12px; font-size:12px; color:var(--text-muted); line-height:1.55; }
+
+  /* --- readability --- */
+  .box p, .box li { line-height:1.65; max-width:74ch; }
+  .box h4 { margin-top:22px; }
+  .box > p:first-of-type { font-size:13.5px; }
+  @media (max-width:560px){ .bet .pc { flex-basis:44px; font-size:15px; } }
+
   .navwrap { position:sticky; top:0; z-index:20; background:var(--page); padding:12px 0 8px; margin-top:16px; }
   .tabs { display:flex; flex-wrap:wrap; gap:6px; }
   .tab { font:inherit; cursor:pointer; text-align:left; background:var(--surface-1); border:1px solid var(--border); border-radius:10px; padding:7px 11px; min-width:112px; flex:1 1 112px; color:var(--text-secondary); }
@@ -225,13 +252,32 @@
     <div class="masthead"><h1>Phish @ MSG — Setlist Predictions</h1></div>
     <p class="sub">Five nights at Madison Square Garden — Phish's 92nd through 96th shows there, each themed to a year, <b>1992 → 1996</b>. Three played, two to go. Predictions, the model behind them, and an honest scorecard.</p>
 
+    <div class="mdl">
+      <div class="mdl-h"><span class="t">How the model works</span><span class="v">v8.5 &middot; 26 Jul</span></div>
+      <div class="mdl-b">
+        <p class="mdl-lede">Each night is themed to a year. The model ranks that year's songs by how often Phish actually played them, throws out everything already used earlier in the run, and takes the top twenty. Three slots are held back for things frequency cannot see.</p>
+        <div class="mdl-steps">
+          <div class="st"><div class="n2">Step 1</div><div class="h">Count the theme year</div><div class="d2">Every song Phish played that year, from the phish.net feed, side projects filtered out.</div></div>
+          <div class="st"><div class="n2">Step 2</div><div class="h">Strike what's burned</div><div class="d2">Phish does not repeat inside a run. 66 songs are gone already. This is the single most valuable rule.</div></div>
+          <div class="st"><div class="n2">Step 3</div><div class="h">Take the top 20</div><div class="d2">Ranked inside the surviving pool, never the full year — getting that backwards broke two earlier versions.</div></div>
+          <div class="st"><div class="n2">Step 4</div><div class="h">Reserve 3 slots</div><div class="d2">The Halloween costume album, the Fish novelty song, and the most era-locked song of the year.</div></div>
+        </div>
+        <div class="mdl-bets">
+          <p style="font-size:12px;font-weight:800;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px">The two big bets</p>
+          <div class="bet"><div class="pc">45%</div><div class="bd"><div class="bn">Drowned &middot; Monday</div><div class="bx">From <em>Quadrophenia</em>, the Halloween 1995 costume. Frequency says 2%. The rest is Saturday, when the 1994 night opened with a White Album song that had three lifetime plays.</div></div></div>
+          <div class="bet"><div class="pc">80%</div><div class="bd"><div class="bn">Crosseyed and Painless &middot; Wednesday</div><div class="bx">From <em>Remain in Light</em>, the Halloween 1996 costume. Unlike Drowned it is a living song — 8% of every show, and eight MSG appearances weighted to marquee nights.</div></div></div>
+        </div>
+        <p class="mdl-foot"><b>Live record: 16 of 40 across two nights</b>, against a random baseline of 7.4. Everything else on this page that scores better was computed after the fact and is labelled as such. <a href="#method" style="color:var(--accent);font-weight:600">Full method and every correction ↓</a></p>
+      </div>
+    </div>
+
     <div class="hero">
       <div class="hero-h">
         <span class="t">Next up — Show #95, the 1995 night</span>
         <span class="d">Mon 27 Jul · model v8.5</span>
       </div>
       <div class="hero-b">
-        <p class="hl"><b>The first genuine out-of-sample test.</b> Everything new here was written after Saturday and has never predicted anything. These four calls are pre-registered so Monday's result is unambiguous. Note the opener call is <em>not</em> a costume pick — see the method notes for why that was a mistake.</p>
+        <p class="hl"><b>The first genuine out-of-sample test.</b> Everything here was written after Saturday and has never predicted anything. These four calls are pre-registered, so Monday's result is unambiguous. The opener is deliberately <em>not</em> a costume pick — a cover opener two nights running is less likely, not more.</p>
         <div class="hero-calls">
           <div class="hc"><div class="k">Opener</div><div class="v">Ya Mar</div><div class="x">1995's most common opener, 6 of 83</div></div>
           <div class="hc"><div class="k">Encore</div><div class="v">I Didn't Know</div><div class="x">the Fish vacuum slot</div></div>
@@ -279,11 +325,11 @@
     <p>The comparator throughout is a random 20 songs from the same eligible pool. That is a fair pool — but it is <b>not the baseline a competent fan represents.</b> The natural human baseline is &ldquo;the twenty most-played songs of the theme year, minus whatever they already played this run&rdquo; — and that <em>is</em> v7. Beating random therefore demonstrates two things any phish.net-literate fan had for free: the theme-year premise, announced publicly by the band, and the no-repeat rule.</p>
     <p><b>The model's edge over an informed fan is currently indistinguishable from zero</b>, because the model is what an informed fan would do. Every cleverer idea tried this week lost to the plain frequency list.</p>
     <h4>Scores will rise over the next two nights whatever happens</h4>
-    <p>66 songs are burned. The eligible pool shrinks every night, so a random slate improves too. Expect #95 and #96 to score higher than #94 <b>for arithmetic reasons unrelated to the model improving</b>. Judge v8.1 against the random baseline for its own night.</p>
+    <p>66 songs are burned. The eligible pool shrinks every night, so a random slate improves too. Expect #95 and #96 to score higher than #94 <b>for arithmetic reasons unrelated to the model improving</b>. Judge v8.5 against the random baseline for its own night.</p>
   </details>
 
-  <details class="box">
-    <summary>The model — and the costume-album correction <span class="tag">v5 → v8.1</span></summary>
+  <details class="box" id="method">
+    <summary>The model — and the costume-album correction <span class="tag">v5 → v8.5</span></summary>
     <div class="warnbox">
       <span class="lbl">Two ledgers, kept separate</span>
       <p><b>Live</b> means published before the show. <b>Fitted</b> means computed afterwards on a night already known. Fitted numbers appear in grey italic and are not skill.</p>
