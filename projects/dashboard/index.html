@@ -265,14 +265,14 @@
   }
 </style>
 </head>
-<body data-updated="2026-07-26T01:45:00-05:00">
+<body data-updated="2026-07-26T07:05:00-05:00">
 <a class="skip no-print" href="#main">Skip to dashboard</a>
 <div class="wrap">
   <header>
     <div class="masthead">
       <h1>Vlad's Dashboard</h1>
       <span class="live-pill" id="live-pill"><span class="live-dot"></span><span id="live-text">LIVE</span></span>
-      <span class="updated">Updated <b>Sun, Jul 26, 2026 · 1:45 AM CT</b> &middot; <span id="rel">just now</span></span>
+      <span class="updated">Updated <b>Sun, Jul 26, 2026 · 7:05 AM CT</b> &middot; <span id="rel">just now</span></span>
     </div>
     <div class="toolbar no-print">
       <button class="btn" id="theme-btn" type="button" aria-label="Theme: Auto (click to change)">Theme: Auto</button>
@@ -301,8 +301,8 @@
           <div class="d">Gmail estimate, capped</div>
         </div>
         <div class="tile" title="Security alerts, deadlines and setup notices in the last 7 days.">
-          <div class="v">5</div><div class="l">need attention</div>
-          <div class="d down">1 is a failed auto-payment</div>
+          <div class="v">10</div><div class="l">need attention</div>
+          <div class="d down">6 are payment problems</div>
         </div>
         <div class="tile" title="Share of the last 7 days' inbox that is promotional or automated.">
           <div class="v">~95%</div><div class="l">promo / noise</div>
@@ -310,7 +310,7 @@
         </div>
       </div>
 
-      
+
       <div class="mix-label">7-day mix (Gmail estimate)</div>
       <div class="mixbar" role="img" aria-label="Inbox mix: Promos and updates ~190, Primary 6, Social 5">
         <div style="flex:190; background: var(--series-2);" title="Promos &amp; updates: ~190 threads"></div><div style="flex:6; background: var(--series-1);" title="Primary: 6 threads"></div><div style="flex:5; background: var(--series-3);" title="Social: 5 threads"></div>
@@ -325,7 +325,7 @@
       </details>
 
       <div class="sect-label">Needs attention</div>
-      
+
       <ul class="plain">
         <li class="item">
           <span class="tag security">Security</span>
@@ -337,7 +337,21 @@
         <li class="item">
           <span class="tag deadline">Payment</span>
           <div>
-            <div class="t">1 failed auto-payment &mdash; second attempt, late fee pending</div>
+            <div class="t">1 failed auto-payment &mdash; second attempt failed, late fee pending</div>
+            <div class="m">details in the private dashboard</div>
+          </div>
+        </li>
+        <li class="item">
+          <span class="tag deadline">Payment</span>
+          <div>
+            <div class="t">1 subscription suspended for non-payment &mdash; new since last refresh</div>
+            <div class="m">details in the private dashboard</div>
+          </div>
+        </li>
+        <li class="item">
+          <span class="tag deadline">Payment</span>
+          <div>
+            <div class="t">4 card alerts &mdash; 2 debit declines (insufficient funds), 1 over-limit notice, 1 upcoming auto-payment on a card that just declined</div>
             <div class="m">details in the private dashboard</div>
           </div>
         </li>
@@ -362,7 +376,7 @@
         <li class="item">
           <span class="tag receipt">Count</span>
           <div>
-            <div class="t">23 payment / balance notices</div>
+            <div class="t">~35 payment / balance notices</div>
             <div class="m">merchants and amounts shown only in the private dashboard</div>
           </div>
         </li>
@@ -385,36 +399,36 @@
 
       <div class="tiles">
         <div class="tile" title="Commits authored today (Central Time), so far.">
-          <div class="v">4</div><div class="l">commits today</div>
+          <div class="v">11</div><div class="l">commits today</div>
           <div class="d down">&darr; 30 yesterday</div>
         </div>
         <div class="tile" title="Open pull requests across all your repositories.">
-          <div class="v">4</div><div class="l">open PRs</div>
-          <div class="d">no change since Jul 23</div>
+          <div class="v">3</div><div class="l">open PRs</div>
+          <div class="d up">1 merged overnight</div>
         </div>
         <div class="tile" title="Total commits authored in the last 7 days.">
-          <div class="v">203</div><div class="l">commits this week</div>
+          <div class="v">210</div><div class="l">commits this week</div>
           <div class="d up">peak 94 on Thu</div>
         </div>
       </div>
 
-      
+
       <div class="mix-label">Commits per day &middot; last 7 days
-        <span style="color:var(--text-muted)">(total 203)</span></div>
-      <div class="spark" role="img" aria-label="Commits per day, Mon Jul 20: 15, Tue Jul 21: 16, Wed Jul 22: 16, Thu Jul 23: 94, Fri Jul 24: 28, Sat Jul 25: 30, Sun Jul 26: 4">
-        <div class="sbar" title="Mon Jul 20: 15 commits"><i style="height:16.0%"></i><b>15</b></div><div class="sbar" title="Tue Jul 21: 16 commits"><i style="height:17.0%"></i><b>16</b></div><div class="sbar" title="Wed Jul 22: 16 commits"><i style="height:17.0%"></i><b>16</b></div><div class="sbar" title="Thu Jul 23: 94 commits"><i style="height:100.0%"></i><b>94</b></div><div class="sbar" title="Fri Jul 24: 28 commits"><i style="height:29.8%"></i><b>28</b></div><div class="sbar" title="Sat Jul 25: 30 commits"><i style="height:31.9%"></i><b>30</b></div><div class="sbar today" title="Sun Jul 26: 4 commits (today, partial)"><i style="height:4.3%"></i><b>4</b></div>
+        <span style="color:var(--text-muted)">(total 210)</span></div>
+      <div class="spark" role="img" aria-label="Commits per day, Mon Jul 20: 15, Tue Jul 21: 16, Wed Jul 22: 16, Thu Jul 23: 94, Fri Jul 24: 28, Sat Jul 25: 30, Sun Jul 26: 11">
+        <div class="sbar" title="Mon Jul 20: 15 commits"><i style="height:16.0%"></i><b>15</b></div><div class="sbar" title="Tue Jul 21: 16 commits"><i style="height:17.0%"></i><b>16</b></div><div class="sbar" title="Wed Jul 22: 16 commits"><i style="height:17.0%"></i><b>16</b></div><div class="sbar" title="Thu Jul 23: 94 commits"><i style="height:100.0%"></i><b>94</b></div><div class="sbar" title="Fri Jul 24: 28 commits"><i style="height:29.8%"></i><b>28</b></div><div class="sbar" title="Sat Jul 25: 30 commits"><i style="height:31.9%"></i><b>30</b></div><div class="sbar today" title="Sun Jul 26: 11 commits (today, partial)"><i style="height:11.7%"></i><b>11</b></div>
       </div>
       <div class="spark-axis" aria-hidden="true"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
       <details class="tableview">
         <summary>View as table</summary>
         <table><caption class="sr-only"></caption>
           <thead><tr><th scope="col">Day</th><th scope="col" class="n">Commits</th></tr></thead>
-          <tbody><tr><th scope="row">Mon Jul 20</th><td class="n">15</td></tr><tr><th scope="row">Tue Jul 21</th><td class="n">16</td></tr><tr><th scope="row">Wed Jul 22</th><td class="n">16</td></tr><tr><th scope="row">Thu Jul 23</th><td class="n">94</td></tr><tr><th scope="row">Fri Jul 24</th><td class="n">28</td></tr><tr><th scope="row">Sat Jul 25</th><td class="n">30</td></tr><tr><th scope="row">Sun Jul 26 (today, partial)</th><td class="n">4</td></tr></tbody>
+          <tbody><tr><th scope="row">Mon Jul 20</th><td class="n">15</td></tr><tr><th scope="row">Tue Jul 21</th><td class="n">16</td></tr><tr><th scope="row">Wed Jul 22</th><td class="n">16</td></tr><tr><th scope="row">Thu Jul 23</th><td class="n">94</td></tr><tr><th scope="row">Fri Jul 24</th><td class="n">28</td></tr><tr><th scope="row">Sat Jul 25</th><td class="n">30</td></tr><tr><th scope="row">Sun Jul 26 (today, partial)</th><td class="n">11</td></tr></tbody>
         </table>
       </details>
 
       <div class="sect-label">Open pull requests</div>
-      
+
       <ul class="plain">
         <li class="item">
           <span class="tag pr">Yours</span>
@@ -424,17 +438,6 @@
             <div class="rowlinks">
               <a href="https://github.com/vlad-hub86/miajune-site/pull/6/files">Review diff</a>
               <a href="https://github.com/vlad-hub86/miajune-site/pull/6#partial-pull-merging">Merge</a>
-            </div>
-          </div>
-        </li>
-        <li class="item">
-          <span class="tag stale">20 days</span>
-          <div>
-            <div class="t"><a href="https://github.com/vlad-hub86/miajune-site/pull/3">miajune-site #3</a> &mdash; Image embedding in blog posts</div>
-            <div class="m">Yours, open since Jul 6 &middot; tested &amp; ready &mdash; oldest open PR, no movement in 4 days</div>
-            <div class="rowlinks">
-              <a href="https://github.com/vlad-hub86/miajune-site/pull/3/files">Review diff</a>
-              <a href="https://github.com/vlad-hub86/miajune-site/pull/3#partial-pull-merging">Merge</a>
             </div>
           </div>
         </li>
@@ -458,13 +461,13 @@
       </ul>
 
       <div class="sect-label">Latest commits</div>
-      
+
       <ul class="plain">
-        <li class="commit"><span class="repo">mikeside.com</span><span>Rename Phish Live Setlist to Setlist Lizard &hellip; With <span style="color: var(--text-muted);">&middot; 1:40 AM</span></span></li>
-        <li class="commit"><span class="repo">setlist-bot</span><span>tests: v2 payload, transition_in rules, repeat handling <span style="color: var(--text-muted);">&middot; 1:13 AM</span></span></li>
-        <li class="commit"><span class="repo">setlist-bot</span><span>runner: add songid and transition_in to per-song meta <span style="color: var(--text-muted);">&middot; 1:12 AM</span></span></li>
-        <li class="commit"><span class="repo">setlist-bot</span><span>phishpicks v2 payload + receiver-aware response handling <span style="color: var(--text-muted);">&middot; 1:12 AM</span></span></li>
-        <li class="commit"><span class="repo">mikeside.com</span><span>Setlist predictions: run-wide scorecard across played nights <span style="color: var(--text-muted);">&middot; Jul 25, 10:53 PM</span></span></li>
+        <li class="commit"><span class="repo">mikeside.com</span><span>An encore is not a set <span style="color: var(--text-muted);">&middot; 3:05 AM</span></span></li>
+        <li class="commit"><span class="repo">miajune-site</span><span>Add image embedding support to blog post bodies (#3) <span style="color: var(--text-muted);">&middot; 2:58 AM</span></span></li>
+        <li class="commit"><span class="repo">mikeside.com</span><span>Fix two donut defects found testing the live dashboard <span style="color: var(--text-muted);">&middot; 2:58 AM</span></span></li>
+        <li class="commit"><span class="repo">mikeside.com</span><span>Point the archive list at the new show pages + surface tour stats <span style="color: var(--text-muted);">&middot; 2:14 AM</span></span></li>
+        <li class="commit"><span class="repo">mikeside.com</span><span>Setlist Lizard v1: the four tracked show pages + archive wiring <span style="color: var(--text-muted);">&middot; 2:13 AM</span></span></li>
       </ul>
     </section>
 
@@ -495,7 +498,7 @@
       </div>
     </div>
 
-    
+
       <div class="mix-label">Backtest accuracy &middot; blind, scored against published setlists</div>
       <div class="acc"><div class="accrow"><span>Jul 22 &middot; #92 &middot; '92 theme <span style="color:var(--text-muted)">&middot; model v1</span></span><span class="accbar" role="img" aria-label="7 of 20 correct"><i class="" style="width:35%"></i></span><span class="n">7 / 20</span></div><div class="accrow"><span>Jul 24 &middot; #93 &middot; '93 theme <span style="color:var(--text-muted)">&middot; model v2</span></span><span class="accbar" role="img" aria-label="10 of 20 correct"><i class="pass" style="width:50%"></i></span><span class="n">10 / 20</span></div><div class="accrow"><span>Jul 24 &middot; #93 &middot; tracker page <span style="color:var(--text-muted)">&middot; model v2b</span></span><span class="accbar" role="img" aria-label="6 of 20 correct"><i class="" style="width:30%"></i></span><span class="n">6 / 20</span></div></div>
       <div class="note" style="margin-top:10px">
