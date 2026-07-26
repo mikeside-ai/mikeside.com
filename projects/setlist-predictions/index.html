@@ -26,6 +26,9 @@
       --bad:#f87171; --tierb:#a78bfa;
     }
   }
+  @media (prefers-color-scheme: dark) {
+    .chart { --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#9085e9; }
+  }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background:var(--page); color:var(--text-primary); padding:24px 16px 60px; line-height:1.45; }
   .wrap { max-width:960px; margin:0 auto; }
@@ -67,6 +70,30 @@
   .bet .bn { font-size:14px; font-weight:700; }
   .bet .bx { font-size:11.5px; color:var(--text-muted); margin-top:2px; line-height:1.5; }
   .mdl-foot { margin-top:12px; font-size:12px; color:var(--text-muted); line-height:1.55; }
+
+  /* --- model comparison chart --- */
+  .chart { --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#4a3aa7;
+           margin-top:14px; border:1px solid var(--border); border-radius:10px; padding:13px 15px 15px; background:var(--surface-1); }
+  .clg { display:flex; flex-wrap:wrap; align-items:center; gap:14px; padding-bottom:11px; border-bottom:1px solid var(--grid); }
+  .lg { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:700; color:var(--text-secondary); }
+  .lg i { width:11px; height:11px; border-radius:3px; display:block; }
+  .cax { margin-left:auto; font-size:11px; color:var(--faint); }
+  .cband { margin-top:14px; }
+  .cband + .cband { border-top:1px dashed var(--grid); padding-top:13px; }
+  .cbh { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px; }
+  .cbt { font-size:13.5px; font-weight:700; }
+  .cba { font-size:11.5px; font-weight:700; color:var(--accent-2); }
+  .cbs { font-size:11.5px; color:var(--text-muted); margin-top:1px; margin-bottom:8px; }
+  .cbar { display:flex; align-items:center; gap:9px; padding:2.5px 0; }
+  .cnm { flex:0 0 62px; font-size:12px; font-weight:700; color:var(--text-secondary); display:flex; align-items:center; gap:4px; }
+  .cnm .lv { font-size:8.5px; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:#fff; background:var(--good); border-radius:3px; padding:1px 3px; }
+  .ctr { flex:1 1 auto; min-width:60px; height:14px; background:var(--surface-2); border:1px solid var(--grid); border-radius:3px; overflow:hidden; }
+  .cfl { display:block; height:100%; border-radius:2px 3px 3px 2px; }
+  .cvl { flex:0 0 20px; text-align:right; font-size:12.5px; font-weight:700; font-variant-numeric:tabular-nums; color:var(--text-primary); }
+  .cap { caption-side:top; text-align:left; font-size:11px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--faint); padding-bottom:5px; }
+  .sw { width:10px; height:10px; border-radius:2px; display:inline-block; margin-right:6px; vertical-align:-1px; }
+  .dt tfoot th, .dt tfoot td { color:var(--text-muted); font-size:12px; border-top:2px solid var(--grid); }
+  @media (max-width:560px){ .cnm { flex-basis:52px; font-size:11.5px; } .cax { margin-left:0; flex-basis:100%; } }
 
   /* --- readability --- */
   .box p, .box li { line-height:1.65; max-width:74ch; }
@@ -253,7 +280,7 @@
     <p class="sub">Five nights at Madison Square Garden — Phish's 92nd through 96th shows there, each themed to a year, <b>1992 → 1996</b>. Three played, two to go. Predictions, the model behind them, and an honest scorecard.</p>
 
     <div class="mdl">
-      <div class="mdl-h"><span class="t">How the model works</span><span class="v">v8.5 &middot; 26 Jul</span></div>
+      <div class="mdl-h"><span class="t">How the model works</span><span class="v">v8.6 &middot; 26 Jul</span></div>
       <div class="mdl-b">
         <p class="mdl-lede">Each night is themed to a year. The model ranks that year's songs by how often Phish actually played them, throws out everything already used earlier in the run, and takes the top twenty. Three slots are held back for things frequency cannot see.</p>
         <div class="mdl-steps">
@@ -274,7 +301,7 @@
     <div class="hero">
       <div class="hero-h">
         <span class="t">Next up — Show #95, the 1995 night</span>
-        <span class="d">Mon 27 Jul · model v8.5</span>
+        <span class="d">Mon 27 Jul · model v8.6</span>
       </div>
       <div class="hero-b">
         <p class="hl"><b>The first genuine out-of-sample test.</b> Everything here was written after Saturday and has never predicted anything. These four calls are pre-registered, so Monday's result is unambiguous. The opener is deliberately <em>not</em> a costume pick — a cover opener two nights running is less likely, not more.</p>
@@ -299,15 +326,37 @@
     <table class="dt">
       <thead><tr><th scope="col">Bot</th><th scope="col">Its idea</th><th scope="col" class="n">Ladder</th><th scope="col" class="n">Status</th></tr></thead>
       <tbody>
-        <tr class="fit"><th scope="row">v8</th><td>frequency + 3 reserved era slots</td><td class="n">54 / 55</td><td class="n">fitted</td></tr>
+        <tr class="fit"><th scope="row">v8</th><td>frequency + 3 reserved era slots</td><td class="n">54 / 55</td><td class="n">fitted, hindsight</td></tr>
         <tr class="fit"><th scope="row">v6</th><td>archetype buckets, cover quota</td><td class="n">43 / 55</td><td class="n">fitted</td></tr>
         <tr class="live"><th scope="row">v7</th><td>top 20 of the eligible pool</td><td class="n">42 / 55</td><td class="n">LIVE</td></tr>
         <tr class="fit"><th scope="row">v5</th><td>mid-depth barbell</td><td class="n">40 / 55</td><td class="n">fitted</td></tr>
         <tr><th scope="row">Random 10</th><td>drawn from the same pool</td><td class="n">≈11 / 55</td><td class="n">baseline</td></tr>
       </tbody>
     </table>
-    <h4>What the table actually shows</h4>
-    <p><b>The three real bots land within three points of each other on a 55-point scale.</b> v5, v6 and v7 disagree about method loudly and about outcomes barely — because they share a frequency core that does essentially all the work. The arguing this week was over the last few slots.</p>
+    <h4>Where each model actually scored &mdash; by how hard the song was to find</h4>
+    <p>Every song #94 played has a rank inside the eligible pool &mdash; its position once the 1994 play counts are sorted and the 50 songs burned on earlier nights are struck out. Sorting the night that way splits it three ways, and the split is the whole story of this project.</p>
+    <div class="chart" role="img" aria-label="Grouped bar chart: songs caught by each model version, split by eligible-pool rank band. All four models cluster in the top-20 band; only v8 reaches the deep band.">
+      <div class="clg"><span class="lg"><i style="background:var(--s1)"></i>v5</span><span class="lg"><i style="background:var(--s2)"></i>v6</span><span class="lg"><i style="background:var(--s3)"></i>v7</span><span class="lg"><i style="background:var(--s4)"></i>v8</span><span class="cax">bars share one scale, 0&ndash;10 songs</span></div>
+      <div class="cband"><div class="cbh"><span class="cbt">Top 20 of the eligible pool</span><span class="cba">10 songs played</span></div><div class="cbs">the obvious core &mdash; any frequency rule finds these</div><div class="cbar" title="v5 caught 5 of 10 — Rift · Down with Disease · Sample in a Jar · Julius · Cavern"><div class="cnm">v5</div><div class="ctr"><div class="cfl" style="width:50.0%;background:var(--s1)"></div></div><div class="cvl">5</div></div><div class="cbar" title="v6 caught 7 of 10 — Down with Disease · Tweezer · Sample in a Jar · Julius · Simple · Cavern · Rift"><div class="cnm">v6</div><div class="ctr"><div class="cfl" style="width:70.0%;background:var(--s2)"></div></div><div class="cvl">7</div></div><div class="cbar" title="v7 caught 10 of 10 — all ten: Sample in a Jar · Julius · Down with Disease · Rift · Cavern · Tweezer · Simple · The Squirming Coil · Tweezer Reprise · Lifeboy"><div class="cnm">v7 <span class="lv">live</span></div><div class="ctr"><div class="cfl" style="width:100.0%;background:var(--s3)"></div></div><div class="cvl">10</div></div><div class="cbar" title="v8 caught 7 of 10 — Simple · Rift · Down with Disease · Tweezer · Sample in a Jar · Julius · Cavern"><div class="cnm">v8</div><div class="ctr"><div class="cfl" style="width:70.0%;background:var(--s4)"></div></div><div class="cvl">7</div></div></div><div class="cband"><div class="cbh"><span class="cbt">Ranks 21&ndash;60</span><span class="cba">5 songs played</span></div><div class="cbs">mid rotation &mdash; where the models actually differ</div><div class="cbar" title="v5 caught 1 of 5 — Punch You in the Eye (44)"><div class="cnm">v5</div><div class="ctr"><div class="cfl" style="width:10.0%;background:var(--s1)"></div></div><div class="cvl">1</div></div><div class="cbar" title="v6 caught 2 of 5 — Wolfman's Brother (59) · Purple Rain (50)"><div class="cnm">v6</div><div class="ctr"><div class="cfl" style="width:20.0%;background:var(--s2)"></div></div><div class="cvl">2</div></div><div class="cbar" title="v7 caught 0 of 5 — none — a top-20 rule cannot reach here"><div class="cnm">v7 <span class="lv">live</span></div><div class="ctr"><div class="cfl" style="width:0.0%;background:var(--s3)"></div></div><div class="cvl">0</div></div><div class="cbar" title="v8 caught 1 of 5 — Purple Rain (50), via the reserved Fish/novelty slot"><div class="cnm">v8</div><div class="ctr"><div class="cfl" style="width:10.0%;background:var(--s4)"></div></div><div class="cvl">1</div></div></div><div class="cband"><div class="cbh"><span class="cbt">Rank 61+</span><span class="cba">1 song played</span></div><div class="cbs">deep &mdash; unreachable without a reserved slot</div><div class="cbar" title="v5 caught 0 of 1 — none"><div class="cnm">v5</div><div class="ctr"><div class="cfl" style="width:0.0%;background:var(--s1)"></div></div><div class="cvl">0</div></div><div class="cbar" title="v6 caught 0 of 1 — none"><div class="cnm">v6</div><div class="ctr"><div class="cfl" style="width:0.0%;background:var(--s2)"></div></div><div class="cvl">0</div></div><div class="cbar" title="v7 caught 0 of 1 — none — a top-20 rule cannot reach here"><div class="cnm">v7 <span class="lv">live</span></div><div class="ctr"><div class="cfl" style="width:0.0%;background:var(--s3)"></div></div><div class="cvl">0</div></div><div class="cbar" title="v8 caught 1 of 1 — Back in the U.S.S.R. (rank 97, 2 plays in 1994), via the reserved costume slot"><div class="cnm">v8</div><div class="ctr"><div class="cfl" style="width:10.0%;background:var(--s4)"></div></div><div class="cvl">1</div></div></div>
+    </div>
+    <table class="dt" style="margin-top:14px">
+      <caption class="cap">The same numbers as a table</caption>
+      <thead><tr><th scope="col">Model</th><th scope="col" class="n">Top 20</th><th scope="col" class="n">21&ndash;60</th><th scope="col" class="n">61+</th><th scope="col" class="n">Total</th></tr></thead>
+      <tbody><tr><th scope="row"><i class="sw" style="background:var(--s1)"></i>v5</th><td class="n">5</td><td class="n">1</td><td class="n">0</td><td class="n"><b>6</b></td></tr><tr><th scope="row"><i class="sw" style="background:var(--s2)"></i>v6</th><td class="n">7</td><td class="n">2</td><td class="n">0</td><td class="n"><b>9</b></td></tr><tr><th scope="row"><i class="sw" style="background:var(--s3)"></i>v7</th><td class="n">10</td><td class="n">0</td><td class="n">0</td><td class="n"><b>10</b></td></tr><tr><th scope="row"><i class="sw" style="background:var(--s4)"></i>v8</th><td class="n">7</td><td class="n">1</td><td class="n">1</td><td class="n"><b>9</b></td></tr></tbody>
+      <tfoot><tr><th scope="row">Songs available</th><td class="n">10</td><td class="n">5</td><td class="n">1</td><td class="n">16</td></tr></tfoot>
+    </table>
+
+    <h4>What the chart shows, and why two numbers moved</h4>
+    <p><b>v7 caught the top-20 band exactly &mdash; all ten &mdash; and nothing outside it.</b> That is not a coincidence, it is what the rule <em>is</em>: v7 picks the top 20 of the eligible pool, so it hits every played song in that band by construction and can never reach past it. The frequency core is a solved problem, and it was worth 10 of 16.</p>
+    <p><b>Every point of disagreement between these models lives in the six songs outside the top 20.</b> The best any version managed there was two, and the whole reason v8 exists is to reach them. So look at what that reaching cost.</p>
+    <div class="warnbox">
+      <span class="lbl">The reserved slots lost money</span>
+      <p><b>v8 spends three of v7's top-20 slots to buy three reserved ones.</b> It bought Back in the U.S.S.R. and Purple Rain &mdash; genuinely unreachable songs, exactly as designed &mdash; and paid three certain hits for them. <b>Net: 10 &rarr; 9.</b> The clever version lost to the boring one.</p>
+      <p>This matters on Monday, because <b>the current model makes the same trade.</b> Drowned, Keyboard Army and I Didn't Know occupy three slots that would otherwise hold the next three names on the frequency list. On this evidence that trade is negative unless the reserved picks are better than the ones v8 chose.</p>
+    </div>
+    <p><b>Two numbers on the table above are lower than previously published, and the correction is worth naming.</b> Earlier this page showed v5 at 8/20 and v8 at 12/20. Those slates were assembled by hand <em>after</em> the setlist was known. The chart runs each rule mechanically instead &mdash; v5 as top 8 plus twelve from the 20&ndash;40% depth band, v8 as v7's top 17 plus three reserved slots &mdash; and applied blind they score <b>6 and 9</b>. v6 and v7 are unchanged at 9 and 10. A rule is only worth what it scores when it is not allowed to peek.</p>
+    <h4>What the ladder table shows</h4>
+    <p><b>On the ten-pick ladder the three real bots land within three points of each other on a 55-point scale.</b> v5, v6 and v7 disagree about method loudly and about outcomes barely — because they share a frequency core that does essentially all the work. The arguing this week was over the last few slots.</p>
     <p><b>v6 would have beaten v7.</b> The version retracted hours before showtime — cover quota, album-year reasoning, the one I called most likely to look foolish — scores 43 to v7's 42, because it carried Tweezer high and had Wolfman's Brother. It is a fitted number, but the ranking is uncomfortable and worth keeping visible.</p>
     <p><b>v8's 54 is meaningless</b> and is listed only for completeness. It picks Back in the U.S.S.R., Purple Rain and Catapult — three songs already known to have been played. A bot built after the fact will always win a contest scored on that night.</p>
     <p>The honest reading: on this evidence there is no demonstrated skill gap between the model versions, only a large gap between all of them and random. See the scorecard for why beating random is a weaker claim than it sounds.</p>
@@ -325,11 +374,11 @@
     <p>The comparator throughout is a random 20 songs from the same eligible pool. That is a fair pool — but it is <b>not the baseline a competent fan represents.</b> The natural human baseline is &ldquo;the twenty most-played songs of the theme year, minus whatever they already played this run&rdquo; — and that <em>is</em> v7. Beating random therefore demonstrates two things any phish.net-literate fan had for free: the theme-year premise, announced publicly by the band, and the no-repeat rule.</p>
     <p><b>The model's edge over an informed fan is currently indistinguishable from zero</b>, because the model is what an informed fan would do. Every cleverer idea tried this week lost to the plain frequency list.</p>
     <h4>Scores will rise over the next two nights whatever happens</h4>
-    <p>66 songs are burned. The eligible pool shrinks every night, so a random slate improves too. Expect #95 and #96 to score higher than #94 <b>for arithmetic reasons unrelated to the model improving</b>. Judge v8.5 against the random baseline for its own night.</p>
+    <p>66 songs are burned. The eligible pool shrinks every night, so a random slate improves too. Expect #95 and #96 to score higher than #94 <b>for arithmetic reasons unrelated to the model improving</b>. Judge v8.6 against the random baseline for its own night.</p>
   </details>
 
   <details class="box" id="method">
-    <summary>The model — and the costume-album correction <span class="tag">v5 → v8.5</span></summary>
+    <summary>The model — and the costume-album correction <span class="tag">v5 → v8.6</span></summary>
     <div class="warnbox">
       <span class="lbl">Two ledgers, kept separate</span>
       <p><b>Live</b> means published before the show. <b>Fitted</b> means computed afterwards on a night already known. Fitted numbers appear in grey italic and are not skill.</p>
@@ -339,12 +388,12 @@
       <tbody>
         <tr class="live"><th scope="row">v5 — mid-depth barbell</th><td>#93, live</td><td class="n">6 / 20</td></tr>
         <tr class="live"><th scope="row">v7 — top 20 by play count</th><td>#94, live</td><td class="n">10 / 20</td></tr>
-        <tr class="fit"><th scope="row">v5 — same night, for comparison</th><td>#94, fitted</td><td class="n">8 / 20</td></tr>
+        <tr class="fit"><th scope="row">v5 — same night, run mechanically</th><td>#94, fitted</td><td class="n">6 / 20</td></tr>
         <tr class="fit"><th scope="row">v6 — archetype buckets</th><td>#94, fitted</td><td class="n">9 / 20</td></tr>
-        <tr class="fit"><th scope="row">v8 — v7 + reserved slots</th><td>#94, fitted</td><td class="n">12 / 20</td></tr>
+        <tr class="fit"><th scope="row">v8 — v7 + reserved slots, run mechanically</th><td>#94, fitted</td><td class="n">9 / 20</td></tr>
       </tbody>
     </table>
-    <p><b>The like-for-like improvement is 8 to 10</b>, v5 to v7 on the same night. And <b>v8's 12/20 is worth nothing</b> — it was produced by removing three picks known to have missed and inserting two known to have hit.</p>
+    <p><b>The like-for-like improvement is 6 to 10</b>, v5 to v7 on the same night. And <b>v8 does not improve on v7 at all</b> — run as a rule rather than assembled with hindsight it scores 9, because its three reserved slots cost three certain top-20 hits to buy two unreachable ones. The 12/20 previously shown here was built after the fact and has been withdrawn.</p>
 
     <h4>The costume album — what Saturday actually proved, and the wrong turn taken after it</h4>
     <p>Phish's Halloween tradition is to cover an entire album in costume. #94 opened with <b>Back in the U.S.S.R.</b>, a <em>White Album</em> track — and the White Album was the <b>Halloween 1994</b> costume. That is one observation, and it is worth reading carefully, because the first reading of it here was wrong.</p>
@@ -620,7 +669,7 @@
         ]) } }
   ]};
 
-  var KEY="phish-msg-v85", state, active=0;
+  var KEY="phish-msg-v86", state, active=0;
   function clone(o){ return JSON.parse(JSON.stringify(o)); }
   function load(){ try{ var r=localStorage.getItem(KEY); if(r){ state=JSON.parse(r); return true; } }catch(e){} state=clone(DEFAULTS); return false; }
   function save(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
