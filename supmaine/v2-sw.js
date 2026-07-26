@@ -11,6 +11,12 @@
    deletes every cache it created, registers no fetch handler (so nothing is
    intercepted any more), and then unregisters itself.
 
+   NOTE: an earlier version of this cleanup also called clients.navigate() on
+   activation to force-reload controlled pages. Combined with v2.js
+   re-registering this worker on every load, that produced an INFINITE RELOAD
+   LOOP (register → activate → reload → register → …). Cleanup must never
+   navigate. Pages shed the dead worker on their next natural navigation.
+
    Do not add a fetch handler here. If offline mode comes back it needs its own
    scoped path plus a hard rule that cross-origin and image requests are never
    intercepted — and it needs verifying in a browser before it ships. */
@@ -26,14 +32,6 @@ self.addEventListener('activate', function (e) {
         return Promise.all(keys.map(function (k) {
           if (k.indexOf('supmaine-v2-') === 0) return caches.delete(k);
         }));
-      })
-      .then(function () { return self.clients.claim(); })
-      .then(function () {
-        // Reload every page this worker still controls, so they come back
-        // uncontrolled and fetch their photos directly again.
-        return self.clients.matchAll({ type: 'window' }).then(function (cs) {
-          cs.forEach(function (c) { if (c.navigate) c.navigate(c.url); });
-        });
       })
       .then(function () { return self.registration.unregister(); })
       .catch(function () { return self.registration.unregister(); })
