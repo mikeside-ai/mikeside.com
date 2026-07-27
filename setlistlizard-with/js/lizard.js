@@ -58,6 +58,21 @@
 
   function ensureBar() {
     if (bar) return;
+    // The bar lives at the TOP of the setlist (sticky), per Vlad: you're
+    // reading the list while it plays, and the bottom of a long set is all
+    // footnotes. These overrides beat the stylesheet's fixed-bottom rules by
+    // cascade order, so the player can move without another CSS version bump.
+    if (!document.getElementById("lizard-player-css")) {
+      var st = document.createElement("style");
+      st.id = "lizard-player-css";
+      st.textContent =
+        "#lizard-player{position:sticky;top:.5rem;bottom:auto;left:auto;right:auto;" +
+        "max-width:820px;margin:0 auto .9rem;border:1px solid var(--accent);" +
+        "border-radius:var(--radius);box-shadow:0 8px 28px rgba(0,0,0,.4);}" +
+        "body.lz-open{padding-bottom:0;}" +
+        "@media (max-width:640px){#lizard-player{top:.3rem;}}";
+      document.head.appendChild(st);
+    }
     bar = document.createElement("div");
     bar.id = "lizard-player";
     bar.innerHTML =
@@ -67,7 +82,9 @@
       '<input class="lz-seek" id="lzSeek" type="range" min="0" max="1000" value="0" aria-label="Seek" />' +
       '<span class="lz-time" id="lzTime">0:00 / 0:00</span>' +
       '<button class="lz-x" id="lzClose" aria-label="Close player">×</button>';
-    document.body.appendChild(bar);
+    var host = document.querySelector(".board");
+    if (host && host.parentNode) host.parentNode.insertBefore(bar, host);
+    else document.body.appendChild(bar);
     document.body.classList.add("lz-open");
     el = {
       toggle: document.getElementById("lzToggle"),
