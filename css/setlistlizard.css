@@ -116,3 +116,95 @@ a.credit-n:hover { text-decoration:underline; }
 .qa h3 { font-family:"Fraunces",Georgia,serif; font-size:1.02rem; font-weight:600; color:var(--text); margin:0 0 .45rem; }
 .qa p { color:var(--muted); font-size:.92rem; line-height:1.7; margin:0; }
 .mus { color:var(--accent-soft); }
+
+/* ---- v5: facelift, mobile pass, inline player, Lab pies ---- */
+
+/* A whisper of warmth at the top of every card — same accent, stretched. */
+.board, .tube, .lp {
+  background-image:linear-gradient(180deg, rgba(240,118,92,.05), rgba(240,118,92,0) 130px);
+}
+.stat { transition:border-color .15s ease, transform .15s ease; }
+.stat:hover { border-color:var(--accent); transform:translateY(-2px); }
+
+/* Mobile: the board should read like a setlist in your pocket, not a
+   shrunken desktop page. */
+@media (max-width:640px) {
+  /* The site nav's off-canvas <ul> widens the document by ~60px on phones
+     (pre-existing, from the global stylesheet); clip it so the setlist
+     never side-scrolls. */
+  html, body { overflow-x:hidden; }
+  .glance { grid-template-columns:repeat(2,1fr); gap:.55rem; }
+  .stat { padding:.6rem .55rem; }
+  .stat .n { font-size:1.2rem; }
+  .board { padding:1.05rem .95rem; }
+  .tube { padding:1.05rem .95rem; }
+  .pager { gap:.5rem; }
+  .pager a { padding:.55rem .7rem; }
+  .pager a .pg-v { white-space:normal; font-size:.8rem; }
+  .sline { flex-wrap:wrap; row-gap:.15rem; }
+  .sline .len { margin-left:auto; }
+  .curvewrap { padding:.8rem .8rem .4rem; }
+  .lz-play { width:28px; height:28px; }
+}
+
+/* Play buttons, injected by lizard.js beside every ♫. */
+.lz-play {
+  width:22px; height:22px; padding:0; margin-left:.5rem; vertical-align:middle;
+  border:1px solid var(--accent); border-radius:50%; background:transparent;
+  color:var(--accent-soft); font-size:.6rem; line-height:1; cursor:pointer;
+  transition:background .15s ease, color .15s ease, transform .15s ease;
+}
+.lz-play:hover { background:var(--accent); color:#fff; transform:scale(1.08); }
+.lz-play.on { background:var(--accent); color:#fff; }
+
+/* The player bar. Fixed to the bottom, attribution built in. */
+#lizard-player {
+  position:fixed; left:0; right:0; bottom:0; z-index:70;
+  display:flex; align-items:center; gap:.85rem;
+  padding:.6rem max(.95rem, env(safe-area-inset-left)) calc(.6rem + env(safe-area-inset-bottom));
+  background:rgba(13,17,23,.96); border-top:1px solid var(--accent);
+  backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
+}
+body.lz-open { padding-bottom:74px; }
+.lz-main {
+  flex:none; width:40px; height:40px; border-radius:50%;
+  border:1px solid var(--accent); background:var(--card); color:var(--accent-soft);
+  font-size:.95rem; cursor:pointer; transition:background .15s ease, color .15s ease;
+}
+.lz-main:hover { background:var(--accent); color:#fff; }
+.lz-meta { min-width:0; flex:0 1 15rem; }
+.lz-title { font-weight:600; font-size:.87rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.lz-sub { font-size:.66rem; letter-spacing:.05em; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.lz-sub a { color:var(--accent-soft); }
+.lz-seek { flex:1 1 auto; min-width:70px; accent-color:var(--accent); height:4px; cursor:pointer; }
+.lz-time { flex:none; font-size:.72rem; color:var(--muted); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.lz-x { flex:none; background:none; border:none; color:var(--muted); font-size:1.25rem; line-height:1; cursor:pointer; padding:.2rem .4rem; }
+.lz-x:hover { color:var(--text); }
+@media (max-width:560px) {
+  .lz-time { display:none; }
+  .lz-meta { flex:1 1 auto; }
+  .lz-seek { flex:1 1 100%; order:5; }
+  #lizard-player { flex-wrap:wrap; row-gap:.35rem; }
+  body.lz-open { padding-bottom:96px; }
+}
+
+/* Lab pies. */
+.labpies {
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(236px, 1fr));
+  gap:1rem; max-width:820px; margin:1rem auto 0;
+}
+.lp { background-color:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:1rem 1.1rem; }
+.lp h4 {
+  font-family:"Fraunces",Georgia,serif; font-size:.78rem; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--accent-soft); margin:0 0 .2rem;
+}
+.lp .lps { font-size:.69rem; color:var(--muted); line-height:1.5; margin:0 0 .75rem; }
+.lp .lpc { display:flex; align-items:center; gap:.9rem; }
+.lp svg { width:104px; flex:none; display:block; overflow:visible; }
+.lp ul { list-style:none; margin:0; padding:0; flex:1; min-width:0; font-size:.75rem; }
+.lp li { display:flex; align-items:baseline; gap:.45rem; padding:.13rem 0; color:var(--muted); }
+.lp li i { width:8px; height:8px; border-radius:2px; flex:none; transform:translateY(1px); }
+.lp li b { color:var(--text); font-weight:500; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.lp li .n { margin-left:auto; font-variant-numeric:tabular-nums; }
+.lp .lpe { font-size:.73rem; color:var(--muted); line-height:1.6; margin:0; }
+@media (max-width:520px) { .labpies { grid-template-columns:1fr; } }
