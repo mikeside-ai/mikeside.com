@@ -78,8 +78,11 @@
   .sw { width:10px; height:10px; border-radius:2px; display:inline-block; margin-right:6px; vertical-align:-1px; }
   .yr { color:var(--faint); font-weight:400; margin-left:6px; font-size:11px; }
   footer { margin-top:32px; padding-top:14px; border-top:1px solid var(--grid); font-size:11.5px; color:var(--faint); }
+  .tscroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .tscroll table { min-width:520px; }
   @media (max-width:560px) {
     .cnm { flex-basis:60px; font-size:11px; }
+    .two > div { flex-basis:100%; }
     .kv { font-size:22px; }
     .cvl { flex-basis:30px; }
   }
@@ -111,11 +114,11 @@
 
   <figure class="fg">
     <figcaption><span class="fn">The data</span><span class="ft">Every test, every score</span><span class="fs">hits out of 20 picks</span></figcaption>
-    <table class="dt">
+    <div class="tscroll"><table class="dt">
       <thead><tr><th scope="col">Test</th><th scope="col" class="n">Pool</th><th scope="col" class="n">Played</th><th scope="col" class="n">Burned</th><th scope="col" class="n">Random</th><th scope="col" class="n">v5</th><th scope="col" class="n">v6</th><th scope="col" class="n">v7</th><th scope="col" class="n">v8</th></tr></thead>
       <tbody><tr><th scope="row">Fox Theatre n3<span class="yr">1995</span></th><td class="n">131</td><td class="n">24</td><td class="n">36</td><td class="n mut">3.66</td><td class="n">12</td><td class="n">13</td><td class="n">11</td><td class="n">11</td></tr><tr><th scope="row">MSG NYE n3<span class="yr">1997</span></th><td class="n">161</td><td class="n">24</td><td class="n">35</td><td class="n mut">2.98</td><td class="n">5</td><td class="n">7</td><td class="n">8</td><td class="n">8</td></tr><tr><th scope="row">Miami NYE n4<span class="yr">2003</span></th><td class="n">147</td><td class="n">25</td><td class="n">53</td><td class="n mut">3.4</td><td class="n">7</td><td class="n">8</td><td class="n">11</td><td class="n">10</td></tr><tr><th scope="row">Miami NYE n4<span class="yr">2009</span></th><td class="n">182</td><td class="n">30</td><td class="n">65</td><td class="n mut">3.3</td><td class="n">10</td><td class="n">13</td><td class="n">16</td><td class="n">15</td></tr><tr><th scope="row">Dick's n3<span class="yr">2012</span></th><td class="n">176</td><td class="n">21</td><td class="n">38</td><td class="n mut">2.39</td><td class="n">5</td><td class="n">8</td><td class="n">10</td><td class="n">8</td></tr><tr><th scope="row">Baker's Dozen n6<span class="yr">2017</span></th><td class="n">71</td><td class="n">19</td><td class="n">85</td><td class="n mut">5.35</td><td class="n">3</td><td class="n">4</td><td class="n">3</td><td class="n">3</td></tr><tr><th scope="row">MSG NYE n4<span class="yr">2017</span></th><td class="n">202</td><td class="n">24</td><td class="n">49</td><td class="n mut">2.38</td><td class="n">7</td><td class="n">6</td><td class="n">7</td><td class="n">7</td></tr><tr><th scope="row">Dick's n3<span class="yr">2019</span></th><td class="n">186</td><td class="n">25</td><td class="n">42</td><td class="n mut">2.69</td><td class="n">4</td><td class="n">8</td><td class="n">8</td><td class="n">9</td></tr><tr><th scope="row">Dick's n4<span class="yr">2022</span></th><td class="n">183</td><td class="n">17</td><td class="n">50</td><td class="n mut">1.86</td><td class="n">5</td><td class="n">8</td><td class="n">10</td><td class="n">9</td></tr><tr><th scope="row">Woodlands n5<span class="yr">2024</span></th><td class="n">140</td><td class="n">16</td><td class="n">66</td><td class="n mut">2.29</td><td class="n">7</td><td class="n">6</td><td class="n">6</td><td class="n">6</td></tr></tbody>
       <tfoot><tr><th scope="row">Total</th><td class="n">&mdash;</td><td class="n">225</td><td class="n">&mdash;</td><td class="n mut">30.3</td><td class="n"><b>65</b></td><td class="n"><b>81</b></td><td class="n"><b>90</b></td><td class="n"><b>86</b></td></tr></tfoot>
-    </table>
+    </table></div>
   </figure>
 
   <div class="note">
