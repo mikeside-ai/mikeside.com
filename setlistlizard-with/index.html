@@ -555,8 +555,8 @@
     }
 
     // Announced-but-unplayed shows (docs/upcoming.json in the bot feed).
-    // They never join the tile grid below \u2014 the front page stays played
-    // shows only \u2014 but Next keeps walking into them, and the archive list
+    // They never join the tile grid below — the front page stays played
+    // shows only — but Next keeps walking into them, and the archive list
     // leads with a single "next up" tile.
     var UP = [];
     function nextUpcoming(afterDate) {
@@ -581,20 +581,20 @@
       function btn(date, dir) {
         if (!date) return "<span></span>";
         var meta = META[date] || {};
-        var label = dir === "prev" ? "\u2190 Previous show" : "Next show \u2192";
+        var label = dir === "prev" ? "← Previous show" : "Next show →";
         return '<a href="?d=' + esc(date) + '" data-d="' + esc(date) + '">' +
           '<span><span class="pg-l">' + label + '</span>' +
-          '<span class="pg-v">' + esc(shortDate(date)) + " \u00b7 " + esc(meta.venue || "") + "</span></span></a>";
+          '<span class="pg-v">' + esc(shortDate(date)) + " · " + esc(meta.venue || "") + "</span></span></a>";
       }
       // Past the newest played show, Next hands off to the announced
-      // calendar \u2014 the generated stub pages under the same URL scheme.
+      // calendar — the generated stub pages under the same URL scheme.
       function upBtn(u) {
         return '<a href="' + BASE + "/" + esc(u.showdate) + '/">' +
-          '<span><span class="pg-l">Next show \u2192</span>' +
-          '<span class="pg-v">' + esc(shortDate(u.showdate)) + " \u00b7 " + esc(u.venue || "") + "</span></span></a>";
+          '<span><span class="pg-l">Next show →</span>' +
+          '<span class="pg-v">' + esc(shortDate(u.showdate)) + " · " + esc(u.venue || "") + "</span></span></a>";
       }
       var nextUp = (!next && i === ALL.length - 1) ? nextUpcoming(ALL[ALL.length - 1]) : null;
-      // Both copies are identical \u2014 the top one exists because the bottom
+      // Both copies are identical — the top one exists because the bottom
       // scrolls out of reach on a three-set night.
       var html = btn(prev, "prev") + (next ? btn(next, "next")
                                             : nextUp ? upBtn(nextUp) : "<span></span>");
@@ -710,6 +710,6 @@
     });
   })();
   </script>
-  <script src="/setlistlizard-with/js/lizard.js?v=4" defer></script>
+  <script src="/setlistlizard-with/js/lizard.js?v=5" defer></script>
 </body>
 </html>
