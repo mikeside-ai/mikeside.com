@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Song — Setlist Lizard ... With</title>
+  <meta name="description" content="Every version of a Phish song this tour — lengths, set placement and notes." />
+  <link rel="canonical" href="https://mikeside.com/setlistlizard-with/song/" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/setlistlizard.css?v=4" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="/">mike<span>side</span></a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/photos/">Photos</a></li>
+        <li><a href="/videos/">Videos</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/projects/" class="active">Projects</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <section class="block" style="border-top:none;">
+      <div class="container">
+        <div class="crumb"><a href="/setlistlizard-with/">Setlist Lizard ... With</a> · <a href="/setlistlizard-with/stats/">Stats</a></div>
+        <div class="section-head">
+          <span class="setno">Song</span>
+          <h2 id="title">Loading…</h2>
+          <p id="sub"></p>
+        </div>
+        <div class="glance" id="tiles"></div>
+        <div class="board" id="board"><div class="empty">Loading…</div></div>
+        <div class="srcline">
+          Setlist data: <a href="https://phish.net/" rel="noopener">Phish.net</a> ·
+          audio, durations, tags and banter: <a href="https://phish.in/" rel="noopener">phish.in</a> ·
+          only shows the bot has tracked appear here<br />
+          <a href="/setlistlizard-with/credits/">credits &amp; FAQ</a> · <a href="/setlistlizard-with/stats/">tour stats</a> · <a href="/setlistlizard-with/">all shows</a> · <a href="/projects/">← all projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> mikeside.com</div>
+      <div><a href="/">Home</a></div>
+    </div>
+  </footer>
+  <script src="/js/main.js"></script>
+  <script>
+  (function () {
+    var RAW = "https://raw.githubusercontent.com/vlad-hub86/phish-setlist-bot/main/docs";
+    var titleEl = document.getElementById("title");
+    var subEl = document.getElementById("sub");
+    var tilesEl = document.getElementById("tiles");
+    var board = document.getElementById("board");
+
+    function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+    function fmt(sec) { if (!sec) return ""; var m = Math.floor(sec / 60), s = sec % 60; return m + ":" + (s < 10 ? "0" : "") + s; }
+    function shortDate(iso) {
+      var M = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+      var p = iso.split("-"); return M[(+p[1]) - 1] + " " + (+p[2]);
+    }
+    // Mirrors slugify() in tools/build_setlistlizard.py — keep the two in step.
+    function slug(t) { return String(t || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "untitled"; }
+    function median(a) { var b = a.slice().sort(function (x, y) { return x - y; }); return b.length ? b[Math.floor(b.length / 2)] : 0; }
+    function bucketOf(label) {
+      var l = String(label == null ? "1" : label).toLowerCase();
+      return l.charAt(0) === "e" ? "Encore" : "Set " + label;
+    }
+    function getJSON(u) {
+      return fetch(u + (u.indexOf("?") < 0 ? "?" : "&") + "t=" + Date.now(), { cache: "no-store" })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+    }
+    function want() {
+      var q = new URLSearchParams(location.search).get("s");
+      if (q) return q;
+      // tolerate a trailing path segment too: /song/tweezer/
+      var m = location.pathname.replace(/\/+$/, "").split("/");
+      var last = m[m.length - 1];
+      return last === "song" ? "" : last;
+    }
+    function bail(msg) {
+      titleEl.textContent = "Song not found";
+      subEl.textContent = "";
+      board.innerHTML = '<div class="empty">' + msg + "</div>";
+    }
+
+    var target = want();
+    if (!target) { bail('No song specified. Pick one from the <a href="/setlistlizard-with/stats/">tour stats</a>.'); return; }
+
+    getJSON(RAW + "/setlists/index.json").then(function (idx) {
+      var list = (idx && idx.shows) || [];
+      list.sort(function (a, b) { return a.showdate < b.showdate ? -1 : 1; });
+      return Promise.all(list.map(function (s) {
+        return getJSON(RAW + "/setlists/" + s.showdate + ".json").catch(function () { return null; });
+      }));
+    }).then(function (shows) {
+      var versions = [], title = null;
+      shows.filter(Boolean).forEach(function (sh) {
+        (sh.sets || []).forEach(function (st) {
+          (st.songs || []).forEach(function (song, i) {
+            var t = (song.title || "").trim();
+            if (slug(t) !== target) return;
+            title = title || t;
+            // Mirrors apply_phishin() in tools/build_setlistlizard.py — the
+            // curated map carries the real recorded length and the track URL.
+            var pt = ((sh.phishin || {}).tracks || {})[String(st.label) + ":" + (i + 1)] || null;
+            versions.push({
+              title: t, showdate: sh.showdate, venue: sh.venue || "",
+              set_display: st.display || ("Set " + st.label), set_bucket: bucketOf(st.label),
+              pos_in_set: i + 1, length_secs: pt ? (pt.d || null) : song.length_secs,
+              listen: pt ? pt.u : null, footnote: song.footnote
+            });
+          });
+        });
+      });
+      if (!versions.length) { bail("No tracked show has this song yet."); return; }
+
+      document.title = title + " — every version this tour — Setlist Lizard ... With";
+      titleEl.textContent = title;
+      var showDates = versions.map(function (v) { return v.showdate; })
+        .filter(function (d, i, a) { return a.indexOf(d) === i; });
+      subEl.textContent = versions.length + " version" + (versions.length === 1 ? "" : "s") +
+        " across " + showDates.length + " tracked show" + (showDates.length === 1 ? "" : "s") + ".";
+
+      var timed = versions.filter(function (v) { return v.length_secs; });
+      var lens = timed.map(function (v) { return v.length_secs; }).sort(function (a, b) { return a - b; });
+      var med = median(lens);
+      var tiles = [
+        [versions.length, "Plays"], [showDates.length, "Shows"],
+        [lens.length ? fmt(lens[lens.length - 1]) : "—", "Longest"],
+        [lens.length ? fmt(lens[0]) : "—", "Shortest"],
+        [med ? fmt(med) : "—", "Median"]
+      ];
+      tilesEl.innerHTML = tiles.map(function (t) {
+        return '<div class="stat"><div class="n">' + esc(t[0]) + '</div><div class="l">' + esc(t[1]) + "</div></div>";
+      }).join("");
+
+      var plc = {};
+      versions.forEach(function (v) { plc[v.set_bucket] = (plc[v.set_bucket] || 0) + 1; });
+      var keys = Object.keys(plc).sort(function (a, b) {
+        return (a === "Encore") - (b === "Encore") || a.localeCompare(b);
+      });
+      var tot = versions.length;
+      var plcHtml = keys.map(function (k) {
+        return '<div class="plc"><span class="pl">' + esc(k) + '</span>' +
+               '<span class="pbar"><i style="width:' + (plc[k] / tot * 100).toFixed(1) + '%"></i></span>' +
+               '<span class="pn">' + plc[k] + "</span></div>";
+      }).join("");
+
+      var mx = lens.length ? lens[lens.length - 1] : 1;
+      var rows = versions.map(function (v) {
+        var w = v.length_secs ? (v.length_secs / mx * 100) : 0;
+        var big = v.length_secs >= 900 ? " big" : "";
+        return '<a class="vrow' + big + '" href="/setlistlizard-with/' + esc(v.showdate) + '/">' +
+          '<div class="vtop"><span class="vd">' + esc(shortDate(v.showdate)) + "</span>" +
+          '<span class="vv">' + esc(v.venue) + "</span>" +
+          '<span class="vs">' + esc(v.set_display) + " · #" + v.pos_in_set + "</span>" +
+          '<span class="vl">' + (fmt(v.length_secs) || "—") +
+          (v.listen ? ' <span class="lsn" data-href="' + esc(v.listen) + '" title="Listen on phish.in" ' +
+            'style="color:var(--accent-soft);margin-left:.4rem;font-size:.85em;opacity:.8;cursor:pointer;">&#9835;</span>' : "") +
+          "</span></div>" +
+          (v.length_secs ? '<div class="vbar" style="width:' + w.toFixed(1) + '%"></div>' : "") +
+          (v.footnote ? '<div class="vfn">' + esc(v.footnote) + "</div>" : "") + "</a>";
+      }).join("");
+
+      var spread = lens.length >= 2
+        ? '<p class="cav">Spread this tour: ' + fmt(lens[0]) + " to " + fmt(lens[lens.length - 1]) +
+          " across " + lens.length + " timed version" + (lens.length === 1 ? "" : "s") +
+          " (median " + fmt(med) + ")."
+          + (timed.length < versions.length
+              ? " " + (versions.length - timed.length) + " version" + ((versions.length - timed.length) === 1 ? "" : "s") +
+                " not yet timed — durations firm up when phish.in posts the recording."
+              : "") + "</p>"
+        : "";
+
+      board.innerHTML =
+        '<div class="setname"><span>Where it lands</span></div>' + plcHtml +
+        '<div class="setname" style="margin-top:1.6rem;"><span>Every version</span><span class="sl">newest last</span></div>' +
+        '<div class="vlist">' + rows + "</div>" + spread;
+
+      // The ♫ sits inside the row's <a>, so it can't be an <a> itself.
+      // Intercept the click before the row navigates to the show page.
+      board.addEventListener("click", function (ev) {
+        var el = ev.target.closest && ev.target.closest(".lsn[data-href]");
+        if (!el) return;
+        ev.preventDefault();
+        ev.stopPropagation();
+        window.open(el.getAttribute("data-href"), "_blank", "noopener");
+      });
+    }).catch(function () {
+      bail("Couldn't load the tour data right now — try a refresh.");
+    });
+  })();
+  </script>
+</body>
+</html>
