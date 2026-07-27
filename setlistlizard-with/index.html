@@ -554,6 +554,18 @@
       document.dispatchEvent(new CustomEvent("lizard:refresh"));
     }
 
+    // Announced-but-unplayed shows (docs/upcoming.json in the bot feed).
+    // They never join the tile grid below — the front page stays played
+    // shows only — but Next keeps walking into them, and the archive list
+    // leads with a single "next up" tile.
+    var UP = [];
+    function nextUpcoming(afterDate) {
+      for (var k = 0; k < UP.length; k++) {
+        if ((UP[k].showdate || "") > (afterDate || "")) return UP[k];
+      }
+      return null;
+    }
+
     // Prev/next across every tracked show. Same markup and styling as the
     // generated show pages, so the board navigates the run the same way.
     function drawPager(current) {
@@ -574,9 +586,18 @@
           '<span><span class="pg-l">' + label + '</span>' +
           '<span class="pg-v">' + esc(shortDate(date)) + " · " + esc(meta.venue || "") + "</span></span></a>";
       }
+      // Past the newest played show, Next hands off to the announced
+      // calendar — the generated stub pages under the same URL scheme.
+      function upBtn(u) {
+        return '<a href="' + BASE + "/" + esc(u.showdate) + '/">' +
+          '<span><span class="pg-l">Next show →</span>' +
+          '<span class="pg-v">' + esc(shortDate(u.showdate)) + " · " + esc(u.venue || "") + "</span></span></a>";
+      }
+      var nextUp = (!next && i === ALL.length - 1) ? nextUpcoming(ALL[ALL.length - 1]) : null;
       // Both copies are identical — the top one exists because the bottom
       // scrolls out of reach on a three-set night.
-      var html = btn(prev, "prev") + btn(next, "next");
+      var html = btn(prev, "prev") + (next ? btn(next, "next")
+                                            : nextUp ? upBtn(nextUp) : "<span></span>");
       hosts.forEach(function (h) {
         h.innerHTML = html;
         Array.prototype.forEach.call(h.querySelectorAll("a[data-d]"), function (a) {
@@ -651,6 +672,20 @@
         if (!shows.length) { el.showlist.innerHTML = '<div class="empty">No shows kept yet.</div>'; return; }
         shows.sort(function (a, b) { return a.showdate < b.showdate ? 1 : -1; });
         var h = "", year = "";
+        // One tile for the next anticipated show, ahead of the archive.
+        var up = nextUpcoming(shows[0].showdate);
+        if (up) {
+          var p = up.showdate.split("-"), t = new Date();
+          var days = Math.round((new Date(+p[0], p[1] - 1, +p[2]) -
+            new Date(t.getFullYear(), t.getMonth(), t.getDate())) / 864e5);
+          var when = days <= 0 ? "Tonight 🎪" : days === 1 ? "Tomorrow" : days + " days away";
+          h += '<div class="yearhead">Next up</div>' +
+            '<a class="show-item" href="' + BASE + "/" + esc(up.showdate) + '/" ' +
+            'style="border-left:3px solid var(--accent);">' +
+            '<span class="d">' + esc(shortDate(up.showdate)) + "</span>" +
+            '<span class="v">' + esc([up.venue, [up.city, up.state].filter(Boolean).join(", ")].filter(Boolean).join(" — ")) + "</span>" +
+            '<span class="tag2">🦎 ' + when + "</span></a>";
+        }
         shows.forEach(function (s) {
           var y = (s.showdate || "").slice(0, 4);
           if (y !== year) { year = y; h += '<div class="yearhead">' + esc(y) + "</div>"; }
@@ -664,10 +699,17 @@
 
     readPin();
     window.addEventListener("popstate", function () { readPin(); lastKey = ""; pickAndRender(); });
-    loop();
-    loadArchiveList();
+    // Load the announced calendar first so the pager and the "next up" tile
+    // can use it on the very first paint; a missing file just means no tile.
+    fetchJSON(RAW + "/upcoming.json").then(function (u) {
+      UP = ((u && u.shows) || []).filter(function (s) { return s && s.showdate; })
+        .sort(function (a, b) { return a.showdate < b.showdate ? -1 : 1; });
+    }).catch(function () {}).then(function () {
+      loop();
+      loadArchiveList();
+    });
   })();
   </script>
-  <script src="/setlistlizard-with/js/lizard.js?v=2" defer></script>
+  <script src="/setlistlizard-with/js/lizard.js?v=3" defer></script>
 </body>
 </html>
