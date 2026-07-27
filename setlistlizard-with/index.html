@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
   <!-- Same stylesheet the generated show pages link, so the live board and an
        archive page are the same object rendered from different sources. -->
-  <link rel="stylesheet" href="/css/setlistlizard.css?v=4" />
+  <link rel="stylesheet" href="/css/setlistlizard.css?v=5" />
   <style>
     .badge {
       display:inline-flex; align-items:center; gap:.45rem; font-size:.72rem; font-weight:600;
@@ -86,6 +86,7 @@
           <h2>It's so stupendous, living in this tube</h2>
         </div>
         <div class="tube" id="lab"></div>
+        <div class="labpies" id="lizard-lab-pies"></div>
       </div>
     </section>
 
@@ -333,6 +334,9 @@
         el.glance.innerHTML = ""; el.curve.innerHTML = ""; el.fullpage.innerHTML = "";
         if (el.pager) el.pager.innerHTML = "";
         if (el.pagerTop) el.pagerTop.innerHTML = "";
+        window.__lizardLabData = null;
+        var lp0 = document.getElementById("lizard-lab-pies");
+        if (lp0) lp0.innerHTML = "";
         el.labSection.hidden = el.mediaSection.hidden = el.srcSection.hidden = true;
         return;
       }
@@ -537,6 +541,17 @@
         return '<a href="' + esc(s[0]) + '" rel="noopener">' + esc(s[1]) + '<span class="w">' + esc(s[2]) + "</span></a>";
       }).join("");
       el.srcSection.hidden = false;
+
+      // Hand the finished board to lizard.js: it injects the play buttons
+      // beside every ♫ and draws the Lab pies from song_meta.json.
+      var uq = [], uqSeen = {};
+      rows.forEach(function (r) {
+        var s = slugify(r.title);
+        if (r.title && !uqSeen[s]) { uqSeen[s] = 1; uq.push({ t: r.title, s: s }); }
+      });
+      window.__lizardLabData = { showdate: show.showdate, songs: uq };
+      document.dispatchEvent(new CustomEvent("lizard:lab"));
+      document.dispatchEvent(new CustomEvent("lizard:refresh"));
     }
 
     // Prev/next across every tracked show. Same markup and styling as the
@@ -653,5 +668,6 @@
     loadArchiveList();
   })();
   </script>
+  <script src="/setlistlizard-with/js/lizard.js?v=1" defer></script>
 </body>
 </html>
