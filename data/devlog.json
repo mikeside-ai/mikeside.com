@@ -4,7 +4,7 @@
     { "id": "mikeside", "name": "mikeside.com", "url": "/" },
     { "id": "supmaine", "name": "SUP Maine", "url": "/supmaine/" },
     { "id": "setlist-lizard", "name": "Setlist Lizard ... With", "url": "/setlistlizard-with/" },
-    { "id": "setlist-predictions", "name": "Phish Setlist Predictions", "url": "/projects/setlist-predictions/" },
+    { "id": "setlist-predictions", "name": "Setlist Prophet", "url": "/projects/setlist-predictions/" },
     { "id": "setlist-bot", "name": "Phish Setlist Bot", "url": "/projects/setlistlizard_with/integration-diagram.html" }
   ],
   "feeds": [
@@ -14,6 +14,34 @@
     }
   ],
   "entries": [
+    {
+      "date": "2026-07-27",
+      "project": "setlist-predictions",
+      "type": "infra",
+      "title": "Renamed: Setlist Prophet, models become Forbin v5–v10",
+      "notes": "Phish Setlist Predictions gets its real name. The models are the Forbin line now, after the Colonel — same models, clearer lineage. Same address; nothing to re-link."
+    },
+    {
+      "date": "2026-07-27",
+      "project": "setlist-predictions",
+      "type": "release",
+      "title": "Forbin v10: occasion-aware",
+      "notes": "A curated residency does not avoid recently-played songs, so the rotation-state term switches off on special nights — v9 was scoring below plain frequency there. Those nights also run 27.1 songs against 21.1, so the odds rise 40% to match. Calibration on occasion nights goes 1.56 to 1.24."
+    },
+    {
+      "date": "2026-07-27",
+      "project": "setlist-predictions",
+      "type": "feature",
+      "title": "KPI dashboard rebuilt on 100 simulations",
+      "notes": "Six models over 100 held-out shows, 1994–2026. Forbin v10 836, v9 828, v7 806, v8 765, v6 699, v5 592, against 309 for chance. Reserved slots settled as a 41-song loss. Full patch notes now live on the page."
+    },
+    {
+      "date": "2026-07-27",
+      "project": "setlist-predictions",
+      "type": "content",
+      "title": "\"Random\" is now \"Chance\" — and base Claude gets its own number",
+      "notes": "The baseline bar was never a model, just the arithmetic of 20 blind draws; it now says so. The genuinely untrained number sits beside it: picks made from model knowledge alone scored 10 of 40, against 7.7 for darts."
+    },
     {
       "date": "2026-07-27",
       "project": "mikeside",
