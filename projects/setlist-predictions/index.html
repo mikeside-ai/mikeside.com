@@ -2,274 +2,383 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Phish @ MSG — Setlist Predictions</title>
+<title>Setlist Prophet — Phish @ MSG · five nights, 1992→1996</title>
+<script>
+(function(){
+  var t=null;
+  try{ t=localStorage.getItem("sp-theme"); }catch(e){}
+  if(t==="light"||t==="dark"||t==="hulk"||t==="donut"){
+    document.documentElement.setAttribute("data-theme", t);
+  }
+})();
+</script>
 <style>
+  /* ================= theme system ================= */
   :root {
     color-scheme: light;
     --page:#f9f9f7; --surface-1:#fcfcfb; --surface-2:#f2f1ec;
     --text-primary:#0b0b0b; --text-secondary:#4a4945; --text-muted:#6b6963;
     --faint:#8d8b85;
     --grid:#e1e0d9; --baseline:#b9b8ad; --border:rgba(11,11,11,0.12);
-    --accent:#2a78d6; --accent-2:#c9501e; --good:#0a8f0a; --good-text:#046004;
+    --accent:#2a78d6; --accent-2:#c9501e;
+    --on-accent:#ffffff; --on-accent-2:#ffffff;
+    --good:#0a8f0a; --good-text:#046004; --on-good:#ffffff;
     --warn:#fab219; --bad:#b8321f; --tierb:#7c3aed;
+    --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#4a3aa7;
+    --shadow-1:0 1px 2px rgba(11,11,11,.05);
+    --shadow-2:0 2px 6px rgba(11,11,11,.05), 0 14px 36px -22px rgba(11,11,11,.30);
+    --mast-glow:none;
   }
   @media (prefers-color-scheme: dark) {
-    :root:where(:not([data-theme="light"])) {
+    :root:not([data-theme]) {
       color-scheme: dark;
-      --page:#0d0d0d; --surface-1:#1a1a19; --surface-2:#252523;
-      --text-primary:#ffffff; --text-secondary:#d2d1c8; --text-muted:#a3a199;
-      --faint:#8d8b85;
-      --grid:#33332f; --baseline:#4a4945; --border:rgba(255,255,255,0.14);
-      --accent:#5c9ff0; --accent-2:#f0824f; --good:#22c55e; --good-text:#4ade80;
-      --bad:#f87171; --tierb:#a78bfa;
+      --page:#141413; --surface-1:#1a1a19; --surface-2:#232322;
+      --text-primary:#ffffff; --text-secondary:#c3c2b7; --text-muted:#a09e94;
+      --faint:#82807a;
+      --grid:#34332f; --baseline:#57554e; --border:rgba(255,255,255,0.14);
+      --accent:#3987e5; --accent-2:#e0703d;
+      --on-accent:#ffffff; --on-accent-2:#141413;
+      --good:#22c55e; --good-text:#4ade80; --on-good:#0c2213;
+      --warn:#fbbf24; --bad:#f87171; --tierb:#a78bfa;
+      --s1:#3987e5; --s2:#e0703d; --s3:#2fb383; --s4:#9c8ff0;
+      --shadow-1:0 1px 2px rgba(0,0,0,.3);
+      --shadow-2:0 2px 8px rgba(0,0,0,.35);
     }
   }
-  @media (prefers-color-scheme: dark) {
-    .chart { --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#9085e9; }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page:#141413; --surface-1:#1a1a19; --surface-2:#232322;
+    --text-primary:#ffffff; --text-secondary:#c3c2b7; --text-muted:#a09e94;
+    --faint:#82807a;
+    --grid:#34332f; --baseline:#57554e; --border:rgba(255,255,255,0.14);
+    --accent:#3987e5; --accent-2:#e0703d;
+    --on-accent:#ffffff; --on-accent-2:#141413;
+    --good:#22c55e; --good-text:#4ade80; --on-good:#0c2213;
+    --warn:#fbbf24; --bad:#f87171; --tierb:#a78bfa;
+    --s1:#3987e5; --s2:#e0703d; --s3:#2fb383; --s4:#9c8ff0;
+    --shadow-1:0 1px 2px rgba(0,0,0,.3);
+    --shadow-2:0 2px 8px rgba(0,0,0,.35);
   }
+  :root[data-theme="hulk"] {
+    color-scheme: dark;
+    --page:#17131f; --surface-1:#221a2e; --surface-2:#2c2140;
+    --text-primary:#f4f0fb; --text-secondary:#cfc7e2; --text-muted:#a99ec6;
+    --faint:#84789f;
+    --grid:#3a2d52; --baseline:#5b4a7d; --border:rgba(203,183,255,0.17);
+    --accent:#4ade80; --accent-2:#a78bfa;
+    --on-accent:#0b2213; --on-accent-2:#17131f;
+    --good:#4ade80; --good-text:#86efac; --on-good:#0b2213;
+    --warn:#fbbf24; --bad:#fb7185; --tierb:#c4b5fd;
+    --s1:#4ade80; --s2:#a78bfa; --s3:#2dd4bf; --s4:#f9a8d4;
+    --shadow-1:0 1px 2px rgba(0,0,0,.35);
+    --shadow-2:0 2px 10px rgba(0,0,0,.4);
+    --mast-glow:0 0 26px rgba(74,222,128,.30);
+  }
+  :root[data-theme="donut"] {
+    color-scheme: dark;
+    --page:#0a4a5c; --surface-1:#0e586c; --surface-2:#13677e;
+    --text-primary:#f2fbfd; --text-secondary:#cdeaf2; --text-muted:#b8e0ea;
+    --faint:#86bccb;
+    --grid:#1e6d83; --baseline:#5f97a8; --border:rgba(214,240,247,0.22);
+    --accent:#ffb3ab; --accent-2:#ff8f7e;
+    --on-accent:#40100a; --on-accent-2:#3b0d06;
+    --good:#4ade80; --good-text:#9ff3bc; --on-good:#0b2213;
+    --warn:#fcd34d; --bad:#ff958a; --tierb:#d8b4fe;
+    --s1:#ffb3ab; --s2:#fcd34d; --s3:#7ee8c0; --s4:#c9b8fd;
+    --shadow-1:0 1px 2px rgba(0,20,26,.35);
+    --shadow-2:0 2px 10px rgba(0,20,26,.4);
+  }
+
+  /* ================= base ================= */
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background:var(--page); color:var(--text-primary); padding:24px 16px 60px; line-height:1.45; }
+  html { -webkit-text-size-adjust:100%; }
+  body {
+    font-family:system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background:var(--page); color:var(--text-primary); line-height:1.5;
+    padding:20px max(16px, env(safe-area-inset-right)) calc(64px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  }
+  :root[data-theme="donut"] body {
+    background-image:
+      radial-gradient(circle at 15px 15px, transparent 8px, rgba(220,38,38,.16) 9px, rgba(220,38,38,.16) 13px, transparent 14px),
+      radial-gradient(circle at 47px 49px, transparent 6px, rgba(220,38,38,.11) 7px, rgba(220,38,38,.11) 10px, transparent 11px);
+    background-size:64px 64px;
+  }
   .wrap { max-width:960px; margin:0 auto; }
-  h1 { font-size:25px; font-weight:700; letter-spacing:-0.02em; }
-  .masthead { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 12px; }
-  .sub { font-size:13.5px; color:var(--text-muted); margin-top:7px; max-width:70ch; }
+  :focus-visible { outline:2px solid var(--accent); outline-offset:2px; border-radius:4px; }
+  button, input, summary { touch-action:manipulation; }
 
-  .hero { margin-top:16px; border:2px solid var(--accent-2); border-radius:12px; overflow:hidden; }
-  .hero-h { background:var(--accent-2); color:#fff; padding:9px 15px; display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px; }
-  .hero-h .t { font-size:12px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; }
-  .hero-h .d { font-size:12px; font-weight:600; opacity:.95; }
-  .hero-b { padding:13px 15px; background:var(--surface-1); }
-  .hero-b .hl { font-size:13px; color:var(--text-secondary); max-width:72ch; }
-  .hero-calls { display:flex; flex-wrap:wrap; gap:8px; margin-top:11px; }
-  .hc { flex:1 1 190px; border:1px solid var(--border); border-radius:9px; padding:8px 11px; background:var(--surface-2); }
-  .hc .k { font-size:10px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:var(--text-muted); }
-  .hc .v { font-size:14.5px; font-weight:700; margin-top:2px; }
-  .hc .x { font-size:11px; color:var(--text-muted); margin-top:2px; }
-  .hero-b .jump { margin-top:11px; font-size:12.5px; }
-  .hero-b .jump a { color:var(--accent); font-weight:600; text-decoration:none; border-bottom:1px solid currentColor; }
+  /* ================= masthead ================= */
+  .masthead { display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:10px 16px; padding-top:4px; }
+  .kicker { font-size:12px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent-2); }
+  h1 { font-size:clamp(30px, 6vw, 42px); line-height:1.05; font-weight:800; letter-spacing:-0.03em; margin-top:4px; text-shadow:var(--mast-glow); }
+  .sub { font-size:14px; color:var(--text-muted); margin-top:10px; max-width:70ch; line-height:1.6; }
 
-  /* --- model summary block --- */
-  .mdl { margin-top:16px; border:1px solid var(--border); border-radius:12px; background:var(--surface-1); overflow:hidden; }
-  .mdl-h { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px; padding:10px 15px; border-bottom:1px solid var(--border); background:var(--surface-2); }
+  /* ================= hero (marquee) ================= */
+  .hero { margin-top:22px; border:1px solid var(--accent-2); border-radius:16px; overflow:hidden; box-shadow:var(--shadow-2); }
+  .hero-h { background:var(--accent-2); color:var(--on-accent-2); padding:12px 18px; display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:6px 12px; }
+  .hero-h .t { font-size:13.5px; font-weight:800; letter-spacing:0.09em; text-transform:uppercase; }
+  .hero-h .d { font-size:12.5px; font-weight:700; opacity:.92; }
+  .hero-b { padding:16px 18px 18px; background:var(--surface-1); }
+  .hero-b .hl { font-size:14px; line-height:1.6; color:var(--text-secondary); max-width:72ch; }
+  .hero-calls { display:grid; grid-template-columns:repeat(auto-fit, minmax(165px, 1fr)); gap:10px; margin-top:14px; }
+  .hc { border:1px solid var(--border); border-radius:12px; padding:11px 13px; background:var(--surface-2); }
+  .hc .k { font-size:10.5px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-muted); }
+  .hc .v { font-size:18px; font-weight:800; letter-spacing:-0.01em; margin-top:3px; }
+  .hc .x { font-size:12px; color:var(--text-muted); margin-top:3px; line-height:1.45; }
+  .hero-b .jump { margin-top:14px; font-size:13px; }
+  .hero-b .jump a { color:var(--accent); font-weight:700; text-decoration:none; border-bottom:1px solid currentColor; padding-bottom:1px; }
+
+  /* ================= model summary ================= */
+  .mdl { margin-top:20px; border:1px solid var(--border); border-radius:16px; background:var(--surface-1); overflow:hidden; box-shadow:var(--shadow-1); }
+  .mdl-h { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px; padding:11px 18px; border-bottom:1px solid var(--border); background:var(--surface-2); }
   .mdl-h .t { font-size:12px; font-weight:800; letter-spacing:0.09em; text-transform:uppercase; }
-  .mdl-h .v { font-size:11.5px; font-weight:700; color:var(--accent); }
-  .mdl-b { padding:14px 15px; }
-  .mdl-lede { font-size:14px; line-height:1.6; max-width:66ch; }
-  .mdl-steps { display:flex; flex-wrap:wrap; gap:9px; margin-top:13px; counter-reset:st; }
-  .st { flex:1 1 200px; border:1px solid var(--border); border-radius:9px; padding:9px 12px; background:var(--surface-2); }
+  .mdl-h .v { font-size:12px; font-weight:700; color:var(--accent); }
+  .mdl-b { padding:16px 18px 18px; }
+  .mdl-lede { font-size:14.5px; line-height:1.65; max-width:66ch; }
+  .mdl-steps { display:grid; grid-template-columns:repeat(auto-fit, minmax(195px, 1fr)); gap:10px; margin-top:15px; }
+  .st { border:1px solid var(--border); border-radius:12px; padding:11px 13px; background:var(--surface-2); }
   .st .n2 { font-size:10px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); }
   .st .h { font-size:13.5px; font-weight:700; margin-top:3px; }
-  .st .d2 { font-size:11.5px; color:var(--text-muted); margin-top:3px; line-height:1.45; }
-  .mdl-bets { margin-top:13px; border-top:1px solid var(--border); padding-top:12px; }
-  .bet { display:flex; gap:11px; align-items:flex-start; padding:7px 0; }
+  .st .d2 { font-size:12px; color:var(--text-muted); margin-top:4px; line-height:1.5; }
+  .mdl-bets { margin-top:15px; border-top:1px solid var(--border); padding-top:13px; }
+  .bet { display:flex; gap:12px; align-items:flex-start; padding:8px 0; }
   .bet + .bet { border-top:1px dashed var(--grid); }
-  .bet .pc { flex:0 0 52px; font-size:16px; font-weight:800; color:var(--accent-2); text-align:right; line-height:1.3; }
+  .bet .pc { flex:0 0 56px; font-size:19px; font-weight:800; color:var(--accent-2); text-align:right; line-height:1.25; font-variant-numeric:tabular-nums; }
   .bet .bd { flex:1 1 auto; }
-  .bet .bn { font-size:14px; font-weight:700; }
-  .bet .bx { font-size:11.5px; color:var(--text-muted); margin-top:2px; line-height:1.5; }
-  .mdl-foot { margin-top:12px; font-size:12px; color:var(--text-muted); line-height:1.55; }
+  .bet .bn { font-size:14.5px; font-weight:700; }
+  .bet .bx { font-size:12.5px; color:var(--text-muted); margin-top:3px; line-height:1.55; }
+  .mdl-foot { margin-top:13px; font-size:12.5px; color:var(--text-muted); line-height:1.6; }
 
-  /* --- model comparison chart --- */
-  .chart { --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#4a3aa7;
-           margin-top:14px; border:1px solid var(--border); border-radius:10px; padding:13px 15px 15px; background:var(--surface-1); }
+  /* ================= model comparison chart ================= */
+  .chart { margin-top:14px; border:1px solid var(--border); border-radius:14px; padding:14px 16px 16px; background:var(--surface-1); }
   .clg { display:flex; flex-wrap:wrap; align-items:center; gap:14px; padding-bottom:11px; border-bottom:1px solid var(--grid); }
   .lg { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:700; color:var(--text-secondary); }
-  .lg i { width:11px; height:11px; border-radius:3px; display:block; }
-  .cax { margin-left:auto; font-size:11px; color:var(--faint); }
+  .lg i { width:11px; height:11px; border-radius:4px; display:block; }
+  .cax { margin-left:auto; font-size:11.5px; color:var(--faint); }
   .cband { margin-top:14px; }
   .cband + .cband { border-top:1px dashed var(--grid); padding-top:13px; }
   .cbh { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px; }
   .cbt { font-size:13.5px; font-weight:700; }
-  .cba { font-size:11.5px; font-weight:700; color:var(--accent-2); }
-  .cbs { font-size:11.5px; color:var(--text-muted); margin-top:1px; margin-bottom:8px; }
-  .cbar { display:flex; align-items:center; gap:9px; padding:2.5px 0; }
-  .cnm { flex:0 0 62px; font-size:12px; font-weight:700; color:var(--text-secondary); display:flex; align-items:center; gap:4px; }
-  .cnm .lv { font-size:8.5px; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:#fff; background:var(--good); border-radius:3px; padding:1px 3px; }
-  .ctr { flex:1 1 auto; min-width:60px; height:14px; background:var(--surface-2); border:1px solid var(--grid); border-radius:3px; overflow:hidden; }
-  .cfl { display:block; height:100%; border-radius:2px 3px 3px 2px; }
-  .cvl { flex:0 0 20px; text-align:right; font-size:12.5px; font-weight:700; font-variant-numeric:tabular-nums; color:var(--text-primary); }
-  .cap { caption-side:top; text-align:left; font-size:11px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--faint); padding-bottom:5px; }
-  .sw { width:10px; height:10px; border-radius:2px; display:inline-block; margin-right:6px; vertical-align:-1px; }
+  .cba { font-size:12px; font-weight:700; color:var(--accent-2); }
+  .cbs { font-size:12px; color:var(--text-muted); margin-top:1px; margin-bottom:9px; }
+  .cbar { display:flex; align-items:center; gap:10px; padding:3px 0; }
+  .cnm { flex:0 0 64px; font-size:12px; font-weight:700; color:var(--text-secondary); display:flex; align-items:center; gap:4px; }
+  .cnm .lv { font-size:8.5px; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:var(--on-good); background:var(--good); border-radius:4px; padding:1.5px 4px; }
+  .ctr { flex:1 1 auto; min-width:60px; height:12px; background:var(--surface-2); border-radius:999px; overflow:hidden; }
+  .cfl { display:block; height:100%; border-radius:999px; }
+  .cvl { flex:0 0 22px; text-align:right; font-size:12.5px; font-weight:700; font-variant-numeric:tabular-nums; color:var(--text-primary); }
+  .cap { caption-side:top; text-align:left; font-size:11px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--faint); padding-bottom:6px; }
+  .sw { width:10px; height:10px; border-radius:3px; display:inline-block; margin-right:6px; vertical-align:-1px; }
   .dt tfoot th, .dt tfoot td { color:var(--text-muted); font-size:12px; border-top:2px solid var(--grid); }
-  @media (max-width:560px){ .cnm { flex-basis:52px; font-size:11.5px; } .cax { margin-left:0; flex-basis:100%; } }
+  @media (max-width:560px){ .cnm { flex-basis:54px; font-size:11.5px; } .cax { margin-left:0; flex-basis:100%; } }
 
-  /* --- oddities --- */
-  .rules { margin-top:12px; border-left:3px solid var(--tierb); background:var(--surface-2); padding:11px 14px; border-radius:0 8px 8px 0; }
-  .rules p { margin-top:0; font-size:12.5px; } .rules p + p { margin-top:8px; }
+  /* ================= callouts ================= */
+  .rules { margin-top:12px; border-left:3px solid var(--tierb); background:var(--surface-2); padding:12px 15px; border-radius:0 10px 10px 0; }
+  .rules p { margin-top:0; font-size:13px; } .rules p + p { margin-top:8px; }
   .rules .lbl { font-size:10.5px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:var(--tierb); display:block; margin-bottom:5px; }
   .dt .mut { color:var(--faint); }
   .dt .g { font-size:10.5px; font-weight:700; color:var(--accent-2); font-variant-numeric:tabular-nums; }
-  .pre { border-left:3px solid var(--good); background:var(--surface-2); padding:10px 14px; border-radius:0 8px 8px 0; font-size:13px; }
+  .pre { border-left:3px solid var(--good); background:var(--surface-2); padding:11px 15px; border-radius:0 10px 10px 0; font-size:13px; }
+  span.risk { color:var(--accent-2); font-weight:600; }
+  p.risk b { color:var(--accent-2); }
 
-  /* --- readability --- */
   .box p, .box li { line-height:1.65; max-width:74ch; }
-  .box h4 { margin-top:22px; }
+  .box h4 { margin-top:22px; font-size:13.5px; }
   .box > p:first-of-type { font-size:13.5px; }
-  @media (max-width:560px){ .bet .pc { flex-basis:44px; font-size:15px; } }
+  @media (max-width:560px){ .bet .pc { flex-basis:46px; font-size:16px; } }
 
-  .navwrap { position:sticky; top:0; z-index:20; background:var(--page); padding:12px 0 8px; margin-top:16px; }
-  .tabs { display:flex; flex-wrap:wrap; gap:6px; }
-  .tab { font:inherit; cursor:pointer; text-align:left; background:var(--surface-1); border:1px solid var(--border); border-radius:10px; padding:7px 11px; min-width:112px; flex:1 1 112px; color:var(--text-secondary); }
-  .tab .ty { font-size:16px; font-weight:700; color:var(--text-primary); }
-  .tab .td { font-size:10.5px; color:var(--text-muted); margin-top:1px; }
-  .tab .ts { font-size:10.5px; font-weight:700; margin-top:2px; font-variant-numeric:tabular-nums; }
+  /* ================= sticky nav + theme switch ================= */
+  .navwrap { position:sticky; top:0; z-index:20; background:var(--page); padding:10px 0 10px; margin-top:20px; box-shadow:0 1px 0 var(--border); }
+  .nav-top { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:9px; }
+  .brandmark { font-size:11.5px; font-weight:800; letter-spacing:0.13em; text-transform:uppercase; color:var(--text-muted); white-space:nowrap; }
+  .themes { display:flex; align-items:center; background:var(--surface-2); border:1px solid var(--border); border-radius:999px; padding:3px; gap:2px; }
+  .thbtn { font:inherit; font-size:12.5px; font-weight:700; color:var(--text-muted); background:transparent; border:0; border-radius:999px; padding:0 13px; min-height:44px; min-width:44px; cursor:pointer; transition:background-color .14s ease, color .14s ease; }
+  .thbtn:hover { color:var(--text-primary); }
+  .thbtn[aria-pressed="true"] { background:var(--accent); color:var(--on-accent); box-shadow:var(--shadow-1); }
+  @media (max-width:520px){
+    .brandmark { display:none; }
+    .nav-top { justify-content:center; }
+    .thbtn { padding:0 11px; }
+  }
+  .tabs { display:flex; gap:8px; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; padding-bottom:2px; }
+  .tabs::-webkit-scrollbar { display:none; }
+  .tab { font:inherit; cursor:pointer; text-align:left; background:var(--surface-1); border:1px solid var(--border); border-radius:12px; padding:9px 13px 10px; flex:1 0 148px; min-width:148px; min-height:44px; color:var(--text-secondary); transition:border-color .14s ease, background-color .14s ease; }
+  .tab:hover { border-color:var(--accent); }
+  .tab .ty { font-size:17px; font-weight:800; color:var(--text-primary); letter-spacing:-0.01em; }
+  .tab .td { font-size:11.5px; color:var(--text-muted); margin-top:2px; }
+  .tab .ts { font-size:11.5px; font-weight:700; margin-top:3px; font-variant-numeric:tabular-nums; }
   .tab .ts.g { color:var(--good-text); } .tab .ts.f { color:var(--faint); font-style:italic; }
-  .tab[aria-selected="true"] { border-color:var(--accent); box-shadow:inset 0 0 0 1px var(--accent); }
-  .tab .dot { display:inline-block; width:7px; height:7px; border-radius:50%; margin-left:5px; vertical-align:middle; }
+  .tab[aria-selected="true"] { border-color:var(--accent); box-shadow:inset 0 0 0 1.5px var(--accent); background:var(--surface-2); }
+  .tab[aria-selected="true"] .ty { color:var(--accent); }
+  .tab .dot { display:inline-block; width:7px; height:7px; border-radius:50%; margin-left:6px; vertical-align:middle; }
   .dot.done { background:var(--good); } .dot.next { background:var(--accent-2); } .dot.up { background:var(--baseline); }
 
-  details.box { margin-top:14px; background:var(--surface-1); border:1px solid var(--border); border-radius:12px; padding:12px 16px; }
-  details.box > summary { cursor:pointer; font-size:13px; font-weight:700; list-style:none; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  /* ================= collapsibles ================= */
+  details.box { margin-top:16px; background:var(--surface-1); border:1px solid var(--border); border-radius:14px; padding:0 18px; box-shadow:var(--shadow-1); scroll-margin-top:140px; }
+  details.box[open] { padding-bottom:18px; }
+  details.box > summary { cursor:pointer; font-size:13.5px; font-weight:700; list-style:none; display:flex; align-items:center; gap:11px; flex-wrap:wrap; min-height:52px; padding:14px 0; }
   details.box > summary::-webkit-details-marker { display:none; }
-  details.box > summary::before { content:"▸"; color:var(--text-muted); font-size:11px; }
-  details.box[open] > summary::before { content:"▾"; }
-  details.box > summary .tag { font-size:11px; font-weight:600; color:var(--text-muted); border:1px solid var(--border); border-radius:999px; padding:2px 8px; }
+  details.box > summary::before { content:""; flex:none; width:8px; height:8px; border-right:2px solid var(--text-muted); border-bottom:2px solid var(--text-muted); transform:rotate(-45deg); transition:transform .16s ease; }
+  details.box[open] > summary::before { transform:rotate(45deg); }
+  details.box[open] > summary { border-bottom:1px dashed var(--grid); margin-bottom:8px; }
+  details.box > summary .tag { font-size:11px; font-weight:600; color:var(--text-muted); border:1px solid var(--border); border-radius:999px; padding:3px 9px; }
   details.box p { font-size:13px; color:var(--text-secondary); margin-top:10px; max-width:70ch; }
-  details.box h4 { font-size:12.5px; font-weight:700; margin-top:17px; }
-  details.box code { font-size:12px; background:var(--surface-2); padding:1px 4px; border-radius:4px; }
+  details.box h4 { font-size:13px; font-weight:700; margin-top:18px; }
+  details.box code { font-size:12px; background:var(--surface-2); padding:1px 5px; border-radius:5px; }
+
+  /* ================= tables ================= */
+  .tblwrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
   table.dt { border-collapse:collapse; margin-top:12px; font-size:12.5px; width:100%; max-width:680px; }
-  table.dt th, table.dt td { text-align:left; padding:6px 10px 6px 0; border-bottom:1px solid var(--grid); }
-  table.dt thead th { color:var(--text-muted); font-weight:600; }
+  table.dt th, table.dt td { text-align:left; padding:7px 10px 7px 0; border-bottom:1px solid var(--grid); }
+  table.dt thead th { color:var(--text-muted); font-weight:600; font-size:11.5px; letter-spacing:0.03em; text-transform:uppercase; }
   table.dt tbody th { color:var(--text-secondary); font-weight:500; }
   table.dt td.n { text-align:right; font-variant-numeric:tabular-nums; font-weight:600; white-space:nowrap; }
   table.dt tr.live td.n, table.dt tr.live tbody th { color:var(--good-text); }
   table.dt tr.live th { color:var(--text-primary); font-weight:700; }
   table.dt tr.fit td.n { color:var(--faint); font-style:italic; }
-  .warnbox { margin-top:12px; border-left:3px solid var(--bad); background:var(--surface-2); padding:11px 14px; border-radius:0 8px 8px 0; }
+  .warnbox { margin-top:12px; border-left:3px solid var(--bad); background:var(--surface-2); padding:12px 15px; border-radius:0 10px 10px 0; }
   .warnbox p { margin-top:0; } .warnbox p + p { margin-top:9px; }
   .warnbox .lbl { font-size:10.5px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:var(--bad); display:block; margin-bottom:5px; }
 
+  /* ================= run scorecard ================= */
   .rc-body { padding:4px 0 0; }
-  .nrow { padding:13px 0; border-bottom:1px solid var(--grid); }
+  .nrow { padding:14px 0; border-bottom:1px solid var(--grid); }
   .nrow:last-child { border-bottom:none; }
-  .nr-top { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px; margin-bottom:8px; }
-  .nr-top .yr { font-size:15px; font-weight:800; }
-  .nr-top .mv { font-size:10.5px; font-weight:700; border:1px solid var(--border); border-radius:999px; padding:1px 8px; }
+  .nr-top { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px; margin-bottom:9px; }
+  .nr-top .yr { font-size:16px; font-weight:800; letter-spacing:-0.01em; }
+  .nr-top .mv { font-size:10.5px; font-weight:700; border:1px solid var(--border); border-radius:999px; padding:2px 9px; }
   .nr-top .mv.live { color:var(--good-text); border-color:var(--good); }
   .nr-top .mv.fit { color:var(--faint); font-style:italic; }
   .nr-top .sc { margin-left:auto; font-size:12.5px; font-weight:700; font-variant-numeric:tabular-nums; }
   .nr-top .sc .mult { color:var(--good-text); }
-  .bar { display:flex; align-items:center; gap:9px; margin-bottom:4px; font-size:11px; }
-  .bar .lb { flex:none; width:78px; color:var(--text-muted); font-weight:600; }
-  .bar .tr { flex:1 1 auto; min-width:60px; height:15px; background:var(--surface-2); border:1px solid var(--grid); border-radius:3px; overflow:hidden; }
-  .bar .fl { display:block; height:100%; border-radius:2px 0 0 2px; }
+  .bar { display:flex; align-items:center; gap:10px; margin-bottom:6px; font-size:12px; }
+  .bar .lb { flex:none; width:80px; color:var(--text-muted); font-weight:600; }
+  .bar .tr { flex:1 1 auto; min-width:60px; height:12px; background:var(--surface-2); border-radius:999px; overflow:hidden; }
+  .bar .fl { display:block; height:100%; border-radius:999px; }
   .bar .fl.m { background:var(--good); }
   .bar .fl.r { background:var(--baseline); }
-  .bar .vv { flex:none; width:32px; text-align:right; font-variant-numeric:tabular-nums; font-weight:700; color:var(--text-secondary); }
-  .chips { display:flex; flex-wrap:wrap; gap:4px; margin-top:9px; }
-  .ch { font-size:11.5px; padding:2px 8px; border-radius:999px; border:1px solid var(--border); color:var(--text-muted); background:var(--surface-2); }
+  .bar .vv { flex:none; width:34px; text-align:right; font-variant-numeric:tabular-nums; font-weight:700; color:var(--text-secondary); }
+  .chips { display:flex; flex-wrap:wrap; gap:5px; margin-top:10px; }
+  .ch { font-size:11.5px; padding:3px 9px; border-radius:999px; border:1px solid var(--border); color:var(--text-muted); background:var(--surface-2); }
   .ch.g { border-color:var(--good); color:var(--good-text); font-weight:700; background:transparent; }
-  .nr-cap { font-size:11.5px; color:var(--text-muted); margin-top:8px; line-height:1.55; max-width:72ch; }
+  .nr-cap { font-size:12.5px; color:var(--text-muted); margin-top:9px; line-height:1.55; max-width:72ch; }
 
-  .card { background:var(--surface-1); border:1px solid var(--border); border-radius:12px; padding:18px; }
+  /* ================= night panel ================= */
+  .card { background:var(--surface-1); border:1px solid var(--border); border-radius:16px; padding:20px 18px; box-shadow:var(--shadow-1); }
   .panel-head { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px; margin-bottom:4px; }
-  .panel-title { font-size:16px; font-weight:700; }
-  .panel-meta { font-size:12px; color:var(--text-muted); }
-  .status-chip { font-size:11px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; border-radius:5px; padding:3px 7px; border:1px solid var(--border); }
+  .panel-title { font-size:19px; font-weight:800; letter-spacing:-0.015em; }
+  .panel-meta { font-size:12.5px; color:var(--text-muted); margin-top:2px; }
+  .status-chip { font-size:11px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; border-radius:6px; padding:4px 9px; border:1px solid var(--border); }
   .status-chip.done { color:var(--good-text); border-color:var(--good); }
-  .status-chip.next { color:#fff; background:var(--accent-2); border-color:var(--accent-2); }
+  .status-chip.next { color:var(--on-accent-2); background:var(--accent-2); border-color:var(--accent-2); }
   .status-chip.up { color:var(--text-secondary); }
-  .panel-note { font-size:13px; color:var(--text-secondary); margin:9px 0 12px; max-width:72ch; }
-  .legendbar { font-size:11.5px; color:var(--text-muted); background:var(--surface-2); border:1px solid var(--grid); border-radius:8px; padding:7px 11px; margin-bottom:12px; line-height:1.6; }
+  .panel-note { font-size:13.5px; color:var(--text-secondary); margin:10px 0 12px; max-width:72ch; line-height:1.6; }
+  .legendbar { font-size:12px; color:var(--text-muted); background:var(--surface-2); border:1px solid var(--grid); border-radius:10px; padding:8px 12px; margin-bottom:12px; line-height:1.6; }
   .legendbar b { color:var(--text-secondary); }
 
-  .scoreboard { display:flex; flex-wrap:wrap; border:1px solid var(--border); border-radius:10px; overflow:hidden; }
-  .sbi { flex:1 1 140px; padding:11px 13px; border-right:1px solid var(--grid); background:var(--surface-2); }
-  .sbi:last-child { border-right:none; }
+  .scoreboard { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:1px; border:1px solid var(--border); border-radius:12px; overflow:hidden; background:var(--grid); }
+  .sbi { padding:12px 14px; background:var(--surface-2); }
   .sbi .k { font-size:10.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-muted); }
-  .sbi .v { font-size:21px; font-weight:800; margin-top:3px; font-variant-numeric:tabular-nums; }
+  .sbi .v { font-size:22px; font-weight:800; margin-top:3px; font-variant-numeric:tabular-nums; letter-spacing:-0.01em; }
   .sbi .v small { font-size:13px; font-weight:600; color:var(--text-muted); }
-  .sbi .x { font-size:11px; color:var(--text-muted); margin-top:2px; }
+  .sbi .x { font-size:11.5px; color:var(--text-muted); margin-top:2px; }
   .sbi .v.up { color:var(--good-text); } .sbi .v.dn { color:var(--bad); } .sbi .v.fit { color:var(--faint); font-style:italic; }
 
-  .lesson { margin-top:14px; border-left:3px solid var(--accent); background:var(--surface-2); padding:11px 14px; border-radius:0 8px 8px 0; font-size:12.5px; color:var(--text-secondary); line-height:1.6; max-width:74ch; }
+  .lesson { margin-top:14px; border-left:3px solid var(--accent); background:var(--surface-2); padding:12px 15px; border-radius:0 10px 10px 0; font-size:13px; color:var(--text-secondary); line-height:1.6; max-width:74ch; }
   .lesson b { color:var(--text-primary); }
 
-  .actual { margin-top:16px; border:1px solid var(--good); border-radius:10px; overflow:hidden; }
-  .actual .ah { background:var(--good); color:#fff; padding:7px 12px; font-size:11px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; }
-  .actual .ab { padding:11px 13px; background:var(--surface-1); }
-  .actual .sr { font-size:12.5px; margin-bottom:7px; line-height:1.85; }
+  .actual { margin-top:16px; border:1px solid var(--good); border-radius:12px; overflow:hidden; }
+  .actual .ah { background:var(--good); color:var(--on-good); padding:8px 13px; font-size:11px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; }
+  .actual .ab { padding:12px 14px; background:var(--surface-1); }
+  .actual .sr { font-size:13px; margin-bottom:7px; line-height:1.85; }
   .actual .sn { font-size:10.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-muted); margin-right:6px; }
   .actual .pr { color:var(--good-text); font-weight:700; }
   .actual .np { color:var(--text-secondary); }
-  .actual .an { background:var(--surface-2); border-top:1px solid var(--grid); padding:9px 13px; font-size:11.5px; color:var(--text-muted); line-height:1.55; }
+  .actual .an { background:var(--surface-2); border-top:1px solid var(--grid); padding:10px 14px; font-size:12.5px; color:var(--text-muted); line-height:1.55; }
 
-  .mblock { margin-top:14px; border:1px solid var(--border); border-radius:10px; overflow:hidden; }
-  .mb-head { background:var(--surface-2); padding:8px 12px; display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px; }
-  .mb-head .mn { font-size:12.5px; font-weight:700; }
+  .mblock { margin-top:14px; border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+  .mb-head { background:var(--surface-2); padding:9px 13px; display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px; }
+  .mb-head .mn { font-size:13px; font-weight:700; }
   .mb-head .mn em { font-style:normal; font-weight:600; color:var(--text-muted); font-size:11.5px; }
-  .mb-head .ms { font-size:13px; font-weight:800; font-variant-numeric:tabular-nums; }
+  .mb-head .ms { font-size:13.5px; font-weight:800; font-variant-numeric:tabular-nums; }
   .mb-head .ms.g { color:var(--good-text); } .mb-head .ms.r { color:var(--bad); } .mb-head .ms.f { color:var(--faint); font-style:italic; }
-  .mb-note { padding:9px 12px; font-size:11.5px; color:var(--text-muted); border-bottom:1px solid var(--grid); line-height:1.55; }
-  .picks { padding:10px 12px; display:flex; flex-wrap:wrap; gap:5px; }
-  .pk { font-size:12px; padding:3px 9px; border-radius:999px; border:1px solid var(--border); color:var(--text-muted); background:var(--surface-1); }
+  .mb-note { padding:9px 13px; font-size:12.5px; color:var(--text-muted); border-bottom:1px solid var(--grid); line-height:1.55; }
+  .picks { padding:11px 13px; display:flex; flex-wrap:wrap; gap:5px; }
+  .pk { font-size:12px; padding:3px 10px; border-radius:999px; border:1px solid var(--border); color:var(--text-muted); background:var(--surface-1); }
   .pk.h { border-color:var(--good); color:var(--good-text); font-weight:700; background:transparent; }
   .pk .c { font-size:10px; opacity:.7; margin-left:3px; }
 
-  .game { margin-top:20px; border:1px solid var(--accent); border-radius:10px; overflow:hidden; scroll-margin-top:70px; }
-  .game-head { background:var(--surface-2); padding:9px 12px; display:flex; align-items:baseline; justify-content:space-between; gap:8px; flex-wrap:wrap; }
-  .game-head .t { font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); }
-  .game-head .sc { font-size:12px; font-weight:600; color:var(--text-secondary); font-variant-numeric:tabular-nums; }
+  /* ================= game ladder ================= */
+  .game { margin-top:20px; border:1px solid var(--accent); border-radius:14px; overflow:hidden; scroll-margin-top:150px; box-shadow:var(--shadow-1); }
+  .game-head { background:var(--surface-2); padding:10px 13px; display:flex; align-items:baseline; justify-content:space-between; gap:8px; flex-wrap:wrap; }
+  .game-head .t { font-size:11px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); }
+  .game-head .sc { font-size:12.5px; font-weight:600; color:var(--text-secondary); font-variant-numeric:tabular-nums; }
   .game-head .sc b { color:var(--text-primary); }
-  .grow { display:flex; align-items:flex-start; gap:10px; padding:10px 12px; border-top:1px solid var(--grid); }
+  .grow { display:flex; align-items:flex-start; gap:10px; padding:11px 13px; border-top:1px solid var(--grid); transition:background-color .15s ease; }
   .grow:first-of-type { border-top:none; }
-  .grow .mk { flex:none; width:22px; height:22px; display:flex; align-items:center; justify-content:center; margin-top:2px; font-size:14px; font-weight:800; }
+  .grow .mk { flex:none; width:24px; height:24px; display:flex; align-items:center; justify-content:center; margin-top:2px; font-size:14px; font-weight:800; }
   .grow .mk.y { color:var(--good-text); } .grow .mk.n { color:var(--faint); }
-  .grow input[type=checkbox] { width:20px; height:20px; flex:none; cursor:pointer; accent-color:var(--good); margin-top:3px; }
-  .grow .pts { flex:none; min-width:44px; height:24px; border-radius:6px; margin-top:1px; display:flex; align-items:center; justify-content:center; font-size:11.5px; font-weight:700; background:var(--accent); color:#fff; }
-  .grow.lo .pts { background:var(--baseline); color:var(--text-primary); }
-  .grow.hit .pts { background:var(--good); }
+  .grow .pts { flex:none; min-width:48px; height:26px; border-radius:8px; margin-top:1px; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; background:var(--accent); color:var(--on-accent); font-variant-numeric:tabular-nums; }
+  .grow.lo .pts { background:var(--surface-2); color:var(--text-secondary); border:1px solid var(--border); }
+  .grow.hit .pts { background:var(--good); color:var(--on-good); border:none; }
   .grow .gb { flex:1; min-width:0; }
-  .grow .gn { font-size:14.5px; font-weight:600; }
+  .grow .gn { font-size:15px; font-weight:600; transition:color .15s ease; }
   .grow.hit .gn { color:var(--good-text); }
-  .grow .gr { font-size:11.5px; color:var(--text-muted); margin-top:3px; line-height:1.55; max-width:72ch; }
+  .grow .gr { font-size:13px; color:var(--text-muted); margin-top:3px; line-height:1.55; max-width:72ch; }
   .grow .gr b { color:var(--text-secondary); font-weight:600; }
-  .grow .meta { flex:none; text-align:right; margin-top:2px; min-width:54px; font-variant-numeric:tabular-nums; }
-  .grow .meta .pp { font-size:12.5px; font-weight:700; color:var(--text-secondary); display:block; }
-  .grow .meta .gg { font-size:10.5px; font-weight:600; color:var(--text-muted); display:block; margin-top:1px; }
+  .grow .meta { flex:none; text-align:right; margin-top:2px; min-width:56px; font-variant-numeric:tabular-nums; }
+  .grow .meta .pp { font-size:13px; font-weight:700; color:var(--text-secondary); display:block; }
+  .grow .meta .gg { font-size:11px; font-weight:600; color:var(--text-muted); display:block; margin-top:1px; }
   .grow .meta .gg.far { color:var(--accent-2); }
-  .game-foot { padding:10px 12px; border-top:1px solid var(--grid); font-size:11.5px; color:var(--text-muted); background:var(--surface-2); line-height:1.55; }
+  .game-foot { padding:11px 13px; border-top:1px solid var(--grid); font-size:13px; color:var(--text-muted); background:var(--surface-2); line-height:1.55; }
 
-  .calls { margin-top:16px; border:1px solid var(--border); border-radius:10px; overflow:hidden; }
-  .calls-head { font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-muted); background:var(--surface-2); padding:8px 12px; }
+  /* ================= called shots ================= */
+  .calls { margin-top:16px; border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+  .calls-head { font-size:11px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-muted); background:var(--surface-2); padding:9px 13px; }
   .calls-head .hint { font-weight:600; letter-spacing:0; text-transform:none; font-size:11px; }
-  .call { display:flex; align-items:flex-start; gap:11px; padding:11px 12px; border-top:1px solid var(--grid); }
+  .call { display:flex; align-items:flex-start; gap:11px; padding:12px 13px; border-top:1px solid var(--grid); }
   .call:first-of-type { border-top:none; }
   .call .mk { flex:none; width:20px; font-size:14px; font-weight:800; margin-top:2px; }
   .call .mk.n { color:var(--bad); } .call .mk.q { color:var(--faint); }
-  .call .k { flex:none; width:88px; font-size:11px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; color:var(--text-muted); padding-top:3px; }
+  .call .k { flex:none; width:92px; font-size:11px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; color:var(--text-muted); padding-top:3px; }
   .call .v { flex:1; min-width:0; }
-  .call .pick { font-size:14.5px; font-weight:600; }
-  .call.missed .pick { text-decoration:line-through; color:var(--text-muted); }
-  .call .basis { font-size:11.5px; color:var(--text-muted); margin-top:3px; line-height:1.55; max-width:72ch; }
+  .call .pick { font-size:15px; font-weight:700; letter-spacing:-0.005em; }
+  .call.missed .pick { text-decoration:line-through; text-decoration-thickness:1.5px; color:var(--text-muted); font-weight:600; }
+  .call .basis { font-size:13px; color:var(--text-muted); margin-top:3px; line-height:1.55; max-width:72ch; }
   .call .basis b { color:var(--text-secondary); font-weight:600; }
-  .call .verdict { font-size:11.5px; margin-top:5px; font-weight:600; color:var(--bad); }
-  .call .alts { font-size:11.5px; color:var(--text-muted); margin-top:4px; }
+  .call .verdict { font-size:13px; margin-top:5px; font-weight:600; color:var(--bad); }
+  .call .alts { font-size:12.5px; color:var(--text-muted); margin-top:4px; }
   .call .alts span { color:var(--text-secondary); }
-  .call .odds { flex:none; font-size:10px; font-weight:700; color:var(--text-muted); border:1px solid var(--border); border-radius:999px; padding:2px 8px; white-space:nowrap; margin-top:3px; }
+  .call .odds { flex:none; font-size:10.5px; font-weight:700; color:var(--text-muted); border:1px solid var(--border); border-radius:999px; padding:3px 9px; white-space:nowrap; margin-top:3px; font-variant-numeric:tabular-nums; }
 
-  .setblock { margin-top:16px; }
-  .set-label { font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-muted); margin-bottom:6px; }
-  .set-count { font-weight:600; letter-spacing:0; text-transform:none; color:var(--baseline); }
+  /* ================= slate song rows ================= */
+  .setblock { margin-top:18px; }
+  #slate { scroll-margin-top:150px; }
+  .set-label { font-size:11px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-muted); margin-bottom:6px; padding-bottom:5px; border-bottom:2px solid var(--grid); }
+  .set-count { font-weight:600; letter-spacing:0; text-transform:none; color:var(--faint); }
   ul.songs { list-style:none; }
-  .song { display:flex; align-items:flex-start; gap:10px; padding:10px 4px; border-top:1px solid var(--grid); }
+  .song { display:flex; align-items:flex-start; gap:8px; padding:10px 2px; border-top:1px solid var(--grid); }
   .song:first-child { border-top:none; }
-  .song input[type=checkbox] { width:20px; height:20px; flex:none; cursor:pointer; accent-color:var(--good); margin-top:3px; }
+  .ckwrap { flex:none; width:44px; height:44px; margin:-7px 0 -7px -10px; display:flex; align-items:center; justify-content:center; cursor:pointer; }
+  .ckwrap input[type=checkbox] { width:22px; height:22px; cursor:pointer; accent-color:var(--good); margin:0; }
   .song .body { flex:1; min-width:0; }
-  .song .name { font-size:14.5px; }
-  .song.hit .name { color:var(--good-text); font-weight:600; }
-  .song .why { font-size:11.5px; color:var(--text-muted); line-height:1.55; margin-top:3px; max-width:72ch; }
+  .song .name { font-size:15px; font-weight:600; letter-spacing:-0.005em; transition:color .15s ease; }
+  .song.hit .name { color:var(--good-text); text-decoration:line-through; text-decoration-thickness:1.5px; text-decoration-color:var(--good); }
+  .song.hit .name::after { content:"✓"; display:inline-block; margin-left:7px; font-weight:800; }
+  .song .why { font-size:13px; color:var(--text-muted); line-height:1.55; margin-top:3px; max-width:72ch; }
   .song .why b { color:var(--text-secondary); font-weight:600; }
   .song .why .risk { color:var(--accent-2); font-weight:600; }
   .song .why .tb { color:var(--tierb); font-weight:700; }
-  .song .tagchip { flex:none; font-size:10px; font-weight:600; color:var(--text-muted); border:1px solid var(--border); border-radius:999px; padding:2px 8px; white-space:nowrap; margin-top:3px; }
+  .song .tagchip { flex:none; font-size:10.5px; font-weight:600; color:var(--text-muted); border:1px solid var(--border); border-radius:999px; padding:3px 9px; white-space:nowrap; margin-top:4px; font-variant-numeric:tabular-nums; }
   .song .tagchip.far { color:var(--accent-2); border-color:var(--accent-2); }
   .song .tagchip.tierb { color:var(--tierb); border-color:var(--tierb); }
-  footer { margin-top:24px; font-size:12px; color:var(--text-muted); line-height:1.65; max-width:78ch; }
+  footer { margin-top:28px; font-size:12.5px; color:var(--text-muted); line-height:1.65; max-width:78ch; }
 
+  /* ================= small screens ================= */
   @media (max-width:560px){
+    body { padding-top:14px; }
     .call { flex-wrap:wrap; }
     .call .k { width:auto; padding-top:0; }
     .call .v { flex:1 1 100%; margin-top:5px; }
@@ -277,15 +386,44 @@
     .grow { flex-wrap:wrap; }
     .grow .gb { flex:1 1 calc(100% - 90px); }
     .grow .meta { margin-left:auto; }
-    .bar .lb { width:64px; }
+    .bar .lb { width:66px; }
+    .card { padding:16px 14px; }
+    .hero-b, .mdl-b { padding:14px; }
+    .hero-h, .mdl-h { padding-left:14px; padding-right:14px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *, *::before, *::after { transition:none !important; animation:none !important; }
   }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <div class="masthead"><h1>Phish @ MSG — Setlist Predictions</h1></div>
+    <div class="masthead">
+      <div>
+        <p class="kicker">Phish @ MSG &middot; five nights, 1992&rarr;1996</p>
+        <h1>Setlist Prophet</h1>
+      </div>
+    </div>
     <p class="sub">Five nights at Madison Square Garden — Phish's 92nd through 96th shows there, each themed to a year, <b>1992 → 1996</b>. Three played, two to go. Predictions, the model behind them, and an honest scorecard.</p>
+
+    <div class="hero">
+      <div class="hero-h">
+        <span class="t">Next up — Show #95, the 1995 night</span>
+        <span class="d">Mon 27 Jul · model v10</span>
+      </div>
+      <div class="hero-b">
+        <p class="hl"><b>The first genuine out-of-sample test.</b> Everything here was written after Saturday and has never predicted anything. These four calls are pre-registered, so Monday's result is unambiguous. The opener is deliberately <em>not</em> a costume pick — a cover opener two nights running is less likely, not more.</p>
+        <div class="hero-calls">
+          <div class="hc"><div class="k">Opener</div><div class="v">Ya Mar</div><div class="x">1995's most common opener, 6 of 83</div></div>
+          <div class="hc"><div class="k">Encore</div><div class="v">A Day in the Life</div><div class="x">1995's most common encore, 9 of 83</div></div>
+          <div class="hc"><div class="k">Bustout</div><div class="v">3–4 songs, gap 300+</div><div class="x">a count, not a name</div></div>
+          <div class="hc"><div class="k">Longest jam</div><div class="v">You Enjoy Myself</div><div class="x">unburned through three nights</div></div>
+        </div>
+        <p class="jump"><a href="#slate">The 20-song slate ↓</a> &nbsp;·&nbsp; <a href="#ladder">the 10-pick game ladder ↓</a></p>
+      </div>
+    </div>
 
     <div class="mdl">
       <div class="mdl-h"><span class="t">How the model works</span><span class="v">v10 &mdash; released 27 Jul</span></div>
@@ -307,24 +445,18 @@
       </div>
     </div>
 
-    <div class="hero">
-      <div class="hero-h">
-        <span class="t">Next up — Show #95, the 1995 night</span>
-        <span class="d">Mon 27 Jul · model v10</span>
-      </div>
-      <div class="hero-b">
-        <p class="hl"><b>The first genuine out-of-sample test.</b> Everything here was written after Saturday and has never predicted anything. These four calls are pre-registered, so Monday's result is unambiguous. The opener is deliberately <em>not</em> a costume pick — a cover opener two nights running is less likely, not more.</p>
-        <div class="hero-calls">
-          <div class="hc"><div class="k">Opener</div><div class="v">Ya Mar</div><div class="x">1995's most common opener, 6 of 83</div></div>
-          <div class="hc"><div class="k">Encore</div><div class="v">A Day in the Life</div><div class="x">1995's most common encore, 9 of 83</div></div>
-          <div class="hc"><div class="k">Bustout</div><div class="v">3–4 songs, gap 300+</div><div class="x">a count, not a name</div></div>
-          <div class="hc"><div class="k">Longest jam</div><div class="v">You Enjoy Myself</div><div class="x">unburned through three nights</div></div>
+    <div class="navwrap">
+      <div class="nav-top">
+        <span class="brandmark" aria-hidden="true">Setlist Prophet</span>
+        <div class="themes" role="group" aria-label="Colour theme">
+          <button type="button" class="thbtn" data-theme-pick="light" aria-pressed="false">Light</button>
+          <button type="button" class="thbtn" data-theme-pick="dark" aria-pressed="false">Dark</button>
+          <button type="button" class="thbtn" data-theme-pick="hulk" aria-pressed="false">Hulk</button>
+          <button type="button" class="thbtn" data-theme-pick="donut" aria-pressed="false">Donut</button>
         </div>
-        <p class="jump"><a href="#slate">The 20-song slate ↓</a> &nbsp;·&nbsp; <a href="#ladder">the 10-pick game ladder ↓</a></p>
       </div>
+      <div class="tabs" id="tabs" role="tablist"></div>
     </div>
-
-    <div class="navwrap"><div class="tabs" id="tabs" role="tablist"></div></div>
   </header>
 
   <div class="card" id="panel" role="tabpanel"></div>
@@ -332,7 +464,7 @@
   <details class="box">
     <summary>Bot-wars — every model's 10-pick ladder, scored on #94 <span class="tag">bonus</span></summary>
     <p>Each version's ten highest-confidence picks, ranked by its own logic, scored on the 1994 night. Ten points for the top pick down to one for the tenth, 55 available.</p>
-    <table class="dt">
+    <div class="tblwrap"><table class="dt">
       <thead><tr><th scope="col">Bot</th><th scope="col">Its idea</th><th scope="col" class="n">Ladder</th><th scope="col" class="n">Status</th></tr></thead>
       <tbody>
         <tr class="fit"><th scope="row">v8</th><td>frequency + 3 reserved era slots</td><td class="n">54 / 55</td><td class="n">fitted, hindsight</td></tr>
@@ -341,19 +473,19 @@
         <tr class="fit"><th scope="row">v5</th><td>mid-depth barbell</td><td class="n">40 / 55</td><td class="n">fitted</td></tr>
         <tr><th scope="row">Random 10</th><td>drawn from the same pool</td><td class="n">≈11 / 55</td><td class="n">baseline</td></tr>
       </tbody>
-    </table>
+    </table></div>
     <h4>Where each model actually scored &mdash; by how hard the song was to find</h4>
     <p>Every song #94 played has a rank inside the eligible pool &mdash; its position once the 1994 play counts are sorted and the 50 songs burned on earlier nights are struck out. Sorting the night that way splits it three ways, and the split is the whole story of this project.</p>
     <div class="chart" role="img" aria-label="Grouped bar chart: songs caught by each model version, split by eligible-pool rank band. All four models cluster in the top-20 band; only v8 reaches the deep band.">
       <div class="clg"><span class="lg"><i style="background:var(--s1)"></i>v5</span><span class="lg"><i style="background:var(--s2)"></i>v6</span><span class="lg"><i style="background:var(--s3)"></i>v7</span><span class="lg"><i style="background:var(--s4)"></i>v8</span><span class="cax">bars share one scale, 0&ndash;10 songs</span></div>
       <div class="cband"><div class="cbh"><span class="cbt">Top 20 of the eligible pool</span><span class="cba">10 songs played</span></div><div class="cbs">the obvious core &mdash; any frequency rule finds these</div><div class="cbar" title="v5 caught 5 of 10 — Rift · Down with Disease · Sample in a Jar · Julius · Cavern"><div class="cnm">v5</div><div class="ctr"><div class="cfl" style="width:50.0%;background:var(--s1)"></div></div><div class="cvl">5</div></div><div class="cbar" title="v6 caught 7 of 10 — Down with Disease · Tweezer · Sample in a Jar · Julius · Simple · Cavern · Rift"><div class="cnm">v6</div><div class="ctr"><div class="cfl" style="width:70.0%;background:var(--s2)"></div></div><div class="cvl">7</div></div><div class="cbar" title="v7 caught 10 of 10 — all ten: Sample in a Jar · Julius · Down with Disease · Rift · Cavern · Tweezer · Simple · The Squirming Coil · Tweezer Reprise · Lifeboy"><div class="cnm">v7 <span class="lv">live</span></div><div class="ctr"><div class="cfl" style="width:100.0%;background:var(--s3)"></div></div><div class="cvl">10</div></div><div class="cbar" title="v8 caught 7 of 10 — Simple · Rift · Down with Disease · Tweezer · Sample in a Jar · Julius · Cavern"><div class="cnm">v8</div><div class="ctr"><div class="cfl" style="width:70.0%;background:var(--s4)"></div></div><div class="cvl">7</div></div></div><div class="cband"><div class="cbh"><span class="cbt">Ranks 21&ndash;60</span><span class="cba">5 songs played</span></div><div class="cbs">mid rotation &mdash; where the models actually differ</div><div class="cbar" title="v5 caught 1 of 5 — Punch You in the Eye (44)"><div class="cnm">v5</div><div class="ctr"><div class="cfl" style="width:10.0%;background:var(--s1)"></div></div><div class="cvl">1</div></div><div class="cbar" title="v6 caught 2 of 5 — Wolfman's Brother (59) · Purple Rain (50)"><div class="cnm">v6</div><div class="ctr"><div class="cfl" style="width:20.0%;background:var(--s2)"></div></div><div class="cvl">2</div></div><div class="cbar" title="v7 caught 0 of 5 — none — a top-20 rule cannot reach here"><div class="cnm">v7 <span class="lv">live</span></div><div class="ctr"><div class="cfl" style="width:0.0%;background:var(--s3)"></div></div><div class="cvl">0</div></div><div class="cbar" title="v8 caught 1 of 5 — Purple Rain (50), via the reserved Fish/novelty slot"><div class="cnm">v8</div><div class="ctr"><div class="cfl" style="width:10.0%;background:var(--s4)"></div></div><div class="cvl">1</div></div></div><div class="cband"><div class="cbh"><span class="cbt">Rank 61+</span><span class="cba">1 song played</span></div><div class="cbs">deep &mdash; unreachable without a reserved slot</div><div class="cbar" title="v5 caught 0 of 1 — none"><div class="cnm">v5</div><div class="ctr"><div class="cfl" style="width:0.0%;background:var(--s1)"></div></div><div class="cvl">0</div></div><div class="cbar" title="v6 caught 0 of 1 — none"><div class="cnm">v6</div><div class="ctr"><div class="cfl" style="width:0.0%;background:var(--s2)"></div></div><div class="cvl">0</div></div><div class="cbar" title="v7 caught 0 of 1 — none — a top-20 rule cannot reach here"><div class="cnm">v7 <span class="lv">live</span></div><div class="ctr"><div class="cfl" style="width:0.0%;background:var(--s3)"></div></div><div class="cvl">0</div></div><div class="cbar" title="v8 caught 1 of 1 — Back in the U.S.S.R. (rank 97, 2 plays in 1994), via the reserved costume slot"><div class="cnm">v8</div><div class="ctr"><div class="cfl" style="width:10.0%;background:var(--s4)"></div></div><div class="cvl">1</div></div></div>
     </div>
-    <table class="dt" style="margin-top:14px">
+    <div class="tblwrap"><table class="dt" style="margin-top:14px">
       <caption class="cap">The same numbers as a table</caption>
       <thead><tr><th scope="col">Model</th><th scope="col" class="n">Top 20</th><th scope="col" class="n">21&ndash;60</th><th scope="col" class="n">61+</th><th scope="col" class="n">Total</th></tr></thead>
       <tbody><tr><th scope="row"><i class="sw" style="background:var(--s1)"></i>v5</th><td class="n">5</td><td class="n">1</td><td class="n">0</td><td class="n"><b>6</b></td></tr><tr><th scope="row"><i class="sw" style="background:var(--s2)"></i>v6</th><td class="n">7</td><td class="n">2</td><td class="n">0</td><td class="n"><b>9</b></td></tr><tr><th scope="row"><i class="sw" style="background:var(--s3)"></i>v7</th><td class="n">10</td><td class="n">0</td><td class="n">0</td><td class="n"><b>10</b></td></tr><tr><th scope="row"><i class="sw" style="background:var(--s4)"></i>v8</th><td class="n">7</td><td class="n">1</td><td class="n">1</td><td class="n"><b>9</b></td></tr></tbody>
       <tfoot><tr><th scope="row">Songs available</th><td class="n">10</td><td class="n">5</td><td class="n">1</td><td class="n">16</td></tr></tfoot>
-    </table>
+    </table></div>
 
     <h4>What the chart shows, and why two numbers moved</h4>
     <p><b>v7 caught the top-20 band exactly &mdash; all ten &mdash; and nothing outside it.</b> That is not a coincidence, it is what the rule <em>is</em>: v7 picks the top 20 of the eligible pool, so it hits every played song in that band by construction and can never reach past it. The frequency core is a solved problem, and it was worth 10 of 16.</p>
@@ -380,14 +512,14 @@
       <p><b>Fest</b> — one song three or more times inside a single set. <b>Sandwich</b> — a song bracketing at least one different song, then returning. <b>Deep bustout</b> — a gap of 300 shows or more.</p>
       <p><b>A fest's own wrap-arounds do not count as sandwiches.</b> Tweezer bracketed six separate songs on #94; none of them are logged here. Counting each leg would turn one event into six and drown out the thing that actually was a sandwich that night.</p>
     </div>
-    <table class="dt">
+    <div class="tblwrap"><table class="dt">
       <thead><tr><th scope="col">Night</th><th scope="col">Fest</th><th scope="col">Sandwich</th><th scope="col">Deep bustouts</th><th scope="col" class="n">Longest segue run</th></tr></thead>
       <tbody>
         <tr><th scope="row">#92 &middot; 1992</th><td class="mut">none</td><td><b>David Bowie</b> &gt; The Vibration of Life &gt; <b>David Bowie</b></td><td>Cold as Ice <span class="g">1468</span> &middot; The Vibration of Life <span class="g">1027</span> &middot; Love You <span class="g">382</span></td><td class="n">6</td></tr>
         <tr><th scope="row">#93 &middot; 1993</th><td class="mut">none</td><td><b>Tube</b> &gt; Big Ball Jam &gt; <b>Tube</b></td><td>Big Ball Jam <span class="g">1170</span> &middot; La Grange <span class="g">531</span> &middot; Sweet Adeline <span class="g">358</span> &middot; Sparks <span class="g">357</span></td><td class="n">6</td></tr>
         <tr><th scope="row">#94 &middot; 1994</th><td><b>Tweezer &times;6</b>, set 2</td><td><b>Down with Disease</b> &gt; Tweezer &gt; <b>Down with Disease</b></td><td>Highway to Hell <span class="g">659</span> &middot; Purple Rain <span class="g">535</span> &middot; Back in the U.S.S.R. <span class="g">485</span></td><td class="n">7</td></tr>
       </tbody>
-    </table>
+    </table></div>
 
     <h4>One sandwich a night, three for three</h4>
     <p>Every night of this run has produced exactly one, never two and never zero. That alone is worth pre-registering.</p>
@@ -419,7 +551,7 @@
       <span class="lbl">Two ledgers, kept separate</span>
       <p><b>Live</b> means published before the show. <b>Fitted</b> means computed afterwards on a night already known. Fitted numbers appear in grey italic and are not skill.</p>
     </div>
-    <table class="dt">
+    <div class="tblwrap"><table class="dt">
       <thead><tr><th scope="col">Result</th><th scope="col">Night</th><th scope="col" class="n">Score</th></tr></thead>
       <tbody>
         <tr class="live"><th scope="row">v5 — mid-depth barbell</th><td>#93, live</td><td class="n">6 / 20</td></tr>
@@ -428,26 +560,26 @@
         <tr class="fit"><th scope="row">v6 — archetype buckets</th><td>#94, fitted</td><td class="n">9 / 20</td></tr>
         <tr class="fit"><th scope="row">v8 — v7 + reserved slots, run mechanically</th><td>#94, fitted</td><td class="n">9 / 20</td></tr>
       </tbody>
-    </table>
+    </table></div>
     <p><b>The like-for-like improvement is 6 to 10</b>, v5 to v7 on the same night. And <b>v8 does not improve on v7 at all</b> — run as a rule rather than assembled with hindsight it scores 9, because its three reserved slots cost three certain top-20 hits to buy two unreachable ones. The 12/20 previously shown here was built after the fact and has been withdrawn.</p>
 
     <h4>The costume album — what Saturday actually proved, and the wrong turn taken after it</h4>
     <p>Phish's Halloween tradition is to cover an entire album in costume. #94 opened with <b>Back in the U.S.S.R.</b>, a <em>White Album</em> track — and the White Album was the <b>Halloween 1994</b> costume. That is one observation, and it is worth reading carefully, because the first reading of it here was wrong.</p>
     <p>The error was to ask <em>&ldquo;did the costume songs enter the following year's rotation?&rdquo;</em> That is a question about 1990s setlist mechanics, and the answer is mostly no. But it is <b>the wrong question</b>, because the song they actually played never entered any rotation at all:</p>
-    <table class="dt">
+    <div class="tblwrap"><table class="dt">
       <thead><tr><th scope="col">Song</th><th scope="col">Role</th><th scope="col" class="n">Lifetime plays</th><th scope="col" class="n">Gap coming in</th><th scope="col">Played Sat?</th></tr></thead>
       <tbody>
         <tr class="live"><th scope="row">Back in the U.S.S.R.</th><td><em>White Album</em> track one</td><td class="n">3</td><td class="n">534</td><td><b>yes — opener</b></td></tr>
         <tr class="fit"><th scope="row">While My Guitar Gently Weeps</th><td>the White Album song that stuck</td><td class="n">38</td><td class="n">46</td><td>no</td></tr>
       </tbody>
-    </table>
+    </table></div>
     <p><b>Four lifetime plays: 31 Oct 1994, 6 Dec 1994, 23 Oct 2013, and Saturday.</b> Frequency ranked it at zero. It was chosen because it was on that year's Halloween album and for no other reason — so rotation data cannot explain it, and the audit built on rotation data was answering a question nobody asked. The rule is not about what a costume album contributed to the repertoire. It is about the band, in 2026, nodding to that year's Halloween show.</p>
     <p>Two consequences follow, and both reverse what this page said an hour ago:</p>
     <p><b>1. The album is the themed year's own, not the previous year's.</b> The 1994 night took the 1994 costume. So Monday looks to <em>Quadrophenia</em> (Halloween 1995) and Wednesday to <em>Remain in Light</em> (Halloween 1996). <b>Drowned is carried on Monday's ladder at rank 7 as a declared override</b> — v10 itself ranks it near zero. While My Guitar Gently Weeps is off both slate and ladder: 12 plays puts it 21st in the eligible pool, one place outside the cut.</p>
     <p><b>2. Frequency is not the selector inside the album.</b> They passed over the 38-play repertoire song for the 3-play album opener. Monday therefore carries Drowned (48 all-time, the only Quadrophenia song that stuck) while noting the rival reading: <em>Quadrophenia</em>'s opening vocal is <b>The Real Me</b>, 2 lifetime plays, unplayed in 1,176 shows — the exact shape of Saturday's pick. Wednesday carries both readings openly: Crosseyed and Painless, and <b>Born Under Punches</b>, <em>Remain in Light</em> track one at one lifetime play.</p>
     <h4>The sharper test: costume set &rarr; heavy rotation the next year</h4>
     <p>A better way to ask the question, and one that requires the frequency evidence instead of assuming it: <b>which songs were played in a Halloween costume set and then played a lot the following year?</b> That is computable against the whole catalogue, and the answer is startlingly thin.</p>
-    <table class="dt">
+    <div class="tblwrap"><table class="dt">
       <thead><tr><th scope="col">Costume set</th><th scope="col">Song</th><th scope="col" class="n">Plays the next year</th></tr></thead>
       <tbody>
         <tr class="live"><th scope="row"><em>White Album</em>, Halloween 1994</th><td>While My Guitar Gently Weeps</td><td class="n"><b>12 in 1995</b></td></tr>
@@ -455,20 +587,20 @@
         <tr><th scope="row">&nbsp;</th><td>the other 24 White Album tracks</td><td class="n">0</td></tr>
         <tr class="fit"><th scope="row"><em>Quadrophenia</em>, Halloween 1995</th><td><b>all 15 tracks, Drowned included</b></td><td class="n"><b>0 in 1996</b></td></tr>
       </tbody>
-    </table>
+    </table></div>
     <p><b>One song in the whole catalogue passes this test, and it is While My Guitar Gently Weeps.</b> And even it falls one place short &mdash; 12 plays ranks 21st in the eligible 1995 pool, just outside the twenty. The Quadrophenia set is the opposite result and it could not be cleaner &mdash; every one of its fifteen tracks was played exactly zero times in 1996. Whatever happened with the White Album did not happen with Quadrophenia at all, so this test hands Wednesday nothing.</p>
     <p>One discipline point that follows from it: <b>for While My Guitar Gently Weeps the costume effect is already priced in.</b> The 12 plays are not evidence sitting alongside the frequency number &mdash; they <em>are</em> the frequency number, and boosting the song above 14% would count the same fact twice. Drowned is the reverse: its two 1995 plays contain no information about the costume link at all, which is why it carries the top ladder slot at 45% and While My Guitar Gently Weeps does not carry one at all.</p>
 
     <p>Stated honestly: <b>this is n=1.</b> One night, one song. It is enough to put a 2%-frequency song at rank 7 on Monday and not more, and Monday is a clean test of it — Drowned is carried by nothing except this rule, so it either lands or the rule was a lucky night.</p>
     <h4>Crosseyed at 80% &mdash; and what the gap objection got wrong</h4>
     <p>The first version of this page put Crosseyed and Painless on Wednesday's slate but kept it off the ladder, reasoning that a 7-show gap was the wrong shape for a costume pick next to U.S.S.R.'s 534. <b>That objection does not survive contact with the data.</b> U.S.S.R. was chosen for the <em>opener</em> &mdash; a slot where a bustout <em>is</em> the point. Nothing about it says the band avoids a current song for a mid-set nod, and the two picks are not competing for the same job.</p>
-    <table class="dt">
+    <div class="tblwrap"><table class="dt">
       <thead><tr><th scope="col"></th><th scope="col" class="n">All-time</th><th scope="col" class="n">Modern rate</th><th scope="col" class="n">Last played</th><th scope="col" class="n">MSG shows</th></tr></thead>
       <tbody>
         <tr class="live"><th scope="row">Crosseyed and Painless</th><td class="n">75</td><td class="n"><b>~8%</b></td><td class="n">2026-07-15</td><td class="n"><b>8</b></td></tr>
         <tr class="fit"><th scope="row">Drowned</th><td class="n">48</td><td class="n">~2%</td><td class="n">2023-10-15</td><td class="n">3</td></tr>
       </tbody>
-    </table>
+    </table></div>
     <p>Six of Crosseyed's eight MSG appearances fall on 29 December&ndash;1 January &mdash; the marquee nights of the New Year's runs. <b>It is the band's big-statement song in this building</b>, and Wednesday closes a five-night run on the night themed to the year the song was born. That case stands on its own without the costume rule; the costume rule then adds to it. <b>It goes to the top of Wednesday's ladder at 80%.</b></p>
     <p>Consistency then forces a second change. If the same-year nod is near-certain on Wednesday, it cannot be a coin flip on Monday &mdash; <em>Quadrophenia</em> is the Halloween 1995 costume and Drowned is its only survivor, 48 all-time against 4 for the next-best track. <b>Drowned goes from 30% to 45% and takes the top slot on Monday.</b> It is held under Crosseyed for one honest reason and only one: Crosseyed is a living song at 8% a night, while Drowned has not been played since October 2023 and runs about 2%. <span class="risk">These two are now the largest positions on the page, and both are judgement, not measurement.</span></p>
 
@@ -704,7 +836,7 @@
         ]) } }
   ]};
 
-  var KEY="phish-msg-v97", state, active=0;
+  var KEY="phish-msg-v2-1", state, active=0;
   function clone(o){ return JSON.parse(JSON.stringify(o)); }
   function load(){ try{ var r=localStorage.getItem(KEY); if(r){ state=JSON.parse(r); return true; } }catch(e){} state=clone(DEFAULTS); return false; }
   function save(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
@@ -821,7 +953,7 @@
         cb.setAttribute("aria-label","Mark "+g.name+" as played");
         cb.addEventListener("change", function(){ g.hit=cb.checked; row.classList.toggle("hit",g.hit);
           var sc=document.getElementById("gameScore"); if(sc) sc.innerHTML='<b>'+gamePoints(n)+'</b> / 55 so far · expected '+n.game.expected; save(); });
-        row.appendChild(cb); }
+        var cw=document.createElement("label"); cw.className="ckwrap"; cw.appendChild(cb); row.appendChild(cw); }
       var pt=document.createElement("div"); pt.className="pts"; pt.textContent=g.pts+" pts"; row.appendChild(pt);
       var gb=document.createElement("div"); gb.className="gb";
       var gn=document.createElement("div"); gn.className="gn"; gn.textContent=g.name;
@@ -847,7 +979,7 @@
           var cb=document.createElement("input"); cb.type="checkbox"; cb.checked=sg.hit;
           cb.setAttribute("aria-label","Mark "+sg.name+" as played");
           cb.addEventListener("change", function(){ sg.hit=cb.checked; li.classList.toggle("hit",sg.hit); save(); });
-          li.appendChild(cb);
+          var cw=document.createElement("label"); cw.className="ckwrap"; cw.appendChild(cb); li.appendChild(cw);
         }
         var bd=document.createElement("div"); bd.className="body";
         var nm=document.createElement("div"); nm.className="name"; nm.textContent=sg.name; bd.appendChild(nm);
@@ -873,6 +1005,34 @@
   renderRun(); load();
   for(var i=0;i<state.nights.length;i++){ if(state.nights[i].status==="next"){ active=i; break; } }
   render();
+
+  var THEME_KEY="sp-theme";
+  var themeButtons=[].slice.call(document.querySelectorAll(".thbtn"));
+  function currentTheme(){
+    var t=document.documentElement.getAttribute("data-theme");
+    if(t) return t;
+    return (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+  }
+  function markTheme(){
+    var cur=currentTheme();
+    themeButtons.forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-theme-pick")===cur ? "true" : "false");
+    });
+  }
+  themeButtons.forEach(function(b){
+    b.addEventListener("click", function(){
+      var v=b.getAttribute("data-theme-pick");
+      document.documentElement.setAttribute("data-theme", v);
+      try{ localStorage.setItem(THEME_KEY, v); }catch(e){}
+      markTheme();
+    });
+  });
+  if(window.matchMedia){
+    var mqd=window.matchMedia("(prefers-color-scheme: dark)");
+    if(mqd.addEventListener){ mqd.addEventListener("change", markTheme); }
+    else if(mqd.addListener){ mqd.addListener(markTheme); }
+  }
+  markTheme();
 })();
 </script>
 </body>
