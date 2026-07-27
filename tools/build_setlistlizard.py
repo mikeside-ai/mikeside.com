@@ -3,10 +3,10 @@
 
 Reads per-show JSON (the schema bot/site.py already writes) and emits:
 
-    projects/setlistlizard_with/<showdate>/index.html   one page per show
-    projects/setlistlizard_with/data/tour.json          aggregate the dashboard reads
+    setlistlizard-with/<showdate>/index.html   one page per show
+    setlistlizard-with/data/tour.json          aggregate the dashboard reads
 
-The dashboard at projects/setlistlizard_with/stats/ is a hand-maintained static
+The dashboard at setlistlizard-with/stats/ is a hand-maintained static
 page that fetches tour.json at runtime, so rebuilds only ever touch data + show
 pages — never the app itself.
 
@@ -31,7 +31,7 @@ from datetime import datetime
 from pathlib import Path
 
 RAW = "https://raw.githubusercontent.com/vlad-hub86/phish-setlist-bot/main/docs"
-BASE_PATH = "/projects/setlistlizard_with"
+BASE_PATH = "/setlistlizard-with"
 SITE = "https://mikeside.com"
 
 # Songs whose "length" is really a placeholder in the feed (segues, jams that
@@ -707,7 +707,7 @@ def render_show(show: dict, prev: dict | None, nxt: dict | None, slugs: dict | N
         )
 
     # --- sources
-    q = date.replace("-", "")
+    q = f"{date[:4]}-{date[5:7]}-{date[8:10]}"
     pn = show.get("phishnet_url") or f"https://phish.net/setlists/?d={q}"
     reddit = f"https://www.reddit.com/r/phish/search/?q={venue.replace(' ', '+')}+{short_date(date).replace(' ', '+')}&restrict_sr=1&sort=relevance"
     srcs = [
@@ -993,7 +993,7 @@ def main() -> int:
         print("no shows found", file=sys.stderr)
         return 1
 
-    root = args.out / "projects" / "setlistlizard_with"
+    root = args.out / "setlistlizard-with"
     root.mkdir(parents=True, exist_ok=True)
 
     songs = build_song_index(shows)
