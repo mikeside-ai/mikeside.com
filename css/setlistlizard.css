@@ -1,9 +1,13 @@
 /* Setlist Lizard ... With — show page styles. Generated pages link this. */
 .crumb { font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:1rem; }
   .crumb a { color:var(--muted); }
-  .glance { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:.8rem; max-width:820px; margin:0 auto 2rem; }
+  .glance { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:.8rem; max-width:820px; margin:0 auto 2rem; }
   .stat { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:.9rem 1rem; text-align:center; }
-  .stat .n { font-family:"Fraunces",Georgia,serif; font-size:1.5rem; font-weight:600; color:var(--accent-soft); font-variant-numeric:tabular-nums; }
+  /* Inter, not Fraunces: the serif was both hard to read at a glance and wide
+     enough that a long single word ("Tweezerfest") ran out of its tile. */
+  .stat .n { font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif; font-size:1.45rem;
+             font-weight:700; letter-spacing:-.015em; line-height:1.2; color:var(--accent-soft);
+             font-variant-numeric:tabular-nums; overflow-wrap:break-word; }
   .stat .l { font-size:.68rem; letter-spacing:.13em; text-transform:uppercase; color:var(--muted); margin-top:.25rem; }
   .board { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:1.6rem 1.8rem; max-width:820px; margin:0 auto; }
   .setblock { margin-top:1.4rem; }
@@ -30,12 +34,24 @@
   .tube li:last-child { border-bottom:none; }
   .tube .x { color:var(--accent-soft); font-variant-numeric:tabular-nums; white-space:nowrap; }
   .tube .cav { margin-top:1rem; font-size:.76rem; color:var(--muted); line-height:1.6; }
-  .srcs { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:.7rem; max-width:820px; margin:0 auto; }
+  .srcs { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:.7rem; max-width:820px; margin:0 auto; }
   .srcs a { display:block; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:.8rem 1rem; color:var(--text); font-size:.88rem; transition:border-color .15s ease, transform .15s ease; }
   .srcs a:hover { border-color:var(--accent); transform:translateY(-2px); text-decoration:none; }
   .srcs .w { display:block; font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-top:.2rem; }
+  /* Show-to-show navigation. These were plain text links tucked under the
+     setlist; as buttons they read as the primary way to walk the run. */
   .pager { display:flex; justify-content:space-between; gap:1rem; max-width:820px; margin:2.4rem auto 0; font-size:.85rem; }
-  .pager a { color:var(--muted); }
+  .pager a { display:flex; align-items:center; gap:.5rem; min-width:0; flex:1;
+             background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+             padding:.75rem 1.05rem; color:var(--text); line-height:1.35;
+             transition:border-color .15s ease, transform .15s ease, color .15s ease; }
+  .pager a:last-child { justify-content:flex-end; text-align:right; }
+  .pager a:only-child { flex:0 1 auto; }
+  .pager a:hover { border-color:var(--accent); color:var(--accent-soft); transform:translateY(-2px); text-decoration:none; }
+  .pager a .pg-l { display:block; font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+  .pager a .pg-v { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .pager > span:empty { flex:1; }
+  @media (max-width:560px) { .pager a .pg-v { white-space:normal; } }
   .srcline { text-align:center; color:var(--muted); font-size:.78rem; margin-top:2.4rem; line-height:1.7; letter-spacing:.05em; }
   .srcline a { color:var(--muted); }
 
