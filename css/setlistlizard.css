@@ -93,3 +93,26 @@ a.vrow.big .vbar { opacity:.85; background:var(--accent-soft); }
 a.vrow:hover .vbar { opacity:1; }
 .vfn { color:var(--muted); font-size:.8rem; margin-top:.25rem; }
 .board .cav { margin-top:1.2rem; font-size:.78rem; color:var(--muted); line-height:1.6; }
+
+/* ---- v4: credits page, top pager ---- */
+/* The pager repeats above the setlist because the bottom one was easy to miss
+   on a long night. Same markup, tighter margins, quieter until hovered. */
+.pager.top { margin:0 auto 1.4rem; font-size:.8rem; }
+.pager.top a { padding:.5rem .9rem; }
+
+.credit { max-width:820px; margin:0 auto 1.1rem; background:var(--card); border:1px solid var(--border);
+          border-left:3px solid var(--accent); border-radius:var(--radius); padding:1.2rem 1.5rem; }
+.credit-k { font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+a.credit-n { display:inline-block; font-family:"Fraunces",Georgia,serif; font-size:1.5rem;
+             color:var(--accent-soft); margin:.15rem 0 .5rem; }
+a.credit-n:hover { text-decoration:underline; }
+.credit p { color:var(--muted); font-size:.92rem; line-height:1.7; margin:.55rem 0 0; }
+.credit p:first-of-type { margin-top:0; }
+
+.faq { max-width:820px; margin:0 auto; background:var(--card); border:1px solid var(--border);
+       border-radius:var(--radius); padding:.6rem 1.5rem 1.4rem; }
+.qa { padding:1.1rem 0; border-bottom:1px solid rgba(255,255,255,.05); }
+.qa:last-child { border-bottom:none; }
+.qa h3 { font-family:"Fraunces",Georgia,serif; font-size:1.02rem; font-weight:600; color:var(--text); margin:0 0 .45rem; }
+.qa p { color:var(--muted); font-size:.92rem; line-height:1.7; margin:0; }
+.mus { color:var(--accent-soft); }
