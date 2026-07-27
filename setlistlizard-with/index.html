@@ -202,6 +202,83 @@
       return (Date.now() - Date.parse(d.updated_at)) < 30 * 60 * 1000;
     }
 
+    // ---- song alerts: browser notifications while the board is open.
+    // The board already polls every 30 s during a show; when a new song
+    // appears, notify (unless the tab is focused — then you're watching it
+    // land anyway). Android needs the service worker; desktop uses the
+    // Notification constructor directly. Opt-in via the 🔔 next to the badge.
+    var NOTIFY_KEY = "lzNotify";
+    var seenSongs = null;      // seeded on the first live render — no backlog spam
+    if ("serviceWorker" in navigator) {
+      try { navigator.serviceWorker.register(BASE + "/sw.js"); } catch (e) {}
+    }
+    function notifyWanted() {
+      try {
+        return localStorage.getItem(NOTIFY_KEY) === "1" &&
+          ("Notification" in window) && Notification.permission === "granted";
+      } catch (e) { return false; }
+    }
+    function sendNote(title, body) {
+      var opts = { body: body, tag: "lz-" + title, icon: "/favicon.ico" };
+      try { new Notification(title, opts); }
+      catch (e) {                     // Android: notifications go through the SW
+        if (navigator.serviceWorker) {
+          navigator.serviceWorker.getRegistration(BASE + "/").then(function (reg) {
+            if (reg && reg.showNotification) reg.showNotification(title, opts);
+          }).catch(function () {});
+        }
+      }
+    }
+    function bellHtml() {
+      return ' <button id="lzBell" type="button" style="background:none;border:1px solid var(--border);' +
+        'border-radius:999px;cursor:pointer;font-size:.85rem;line-height:1.4;padding:.12rem .55rem;' +
+        'vertical-align:middle;margin-left:.35rem;color:var(--text);"></button>';
+    }
+    function setBell(on) {
+      var b = document.getElementById("lzBell");
+      if (!b) return;
+      b.textContent = on ? "🔔 alerts on" : "🔕 song alerts";
+      b.title = on ? "You'll get a notification for each song as it posts — click to turn off"
+                   : "Get a browser notification for each song the moment it posts";
+    }
+    function wireBell() {
+      var b = document.getElementById("lzBell");
+      if (!b) return;
+      setBell(notifyWanted());
+      b.addEventListener("click", function () {
+        if (notifyWanted()) {
+          try { localStorage.setItem(NOTIFY_KEY, "0"); } catch (e) {}
+          setBell(false);
+          return;
+        }
+        if (!("Notification" in window)) { b.textContent = "notifications unavailable"; return; }
+        Notification.requestPermission().then(function (p) {
+          if (p === "granted") {
+            try { localStorage.setItem(NOTIFY_KEY, "1"); } catch (e) {}
+            setBell(true);
+            sendNote("🦎 Song alerts on", "Each song will land here the moment it's posted.");
+          } else setBell(false);
+        });
+      });
+    }
+    function noteNewSongs(rows, show, live) {
+      if (!live) return;
+      var keys = {}, fresh = [];
+      rows.forEach(function (r) {
+        if (!r.title) return;
+        var k = r.label + ":" + r.pos + ":" + r.title;
+        keys[k] = 1;
+        if (seenSongs && !seenSongs[k]) fresh.push(r);
+      });
+      var first = seenSongs === null;
+      seenSongs = keys;
+      if (first || !fresh.length || !notifyWanted()) return;
+      if (document.visibilityState === "visible" && document.hasFocus()) return;
+      fresh.forEach(function (r) {
+        sendNote(r.title, r.setDisplay + " · #" + r.pos + " · " + (show.venue || ""));
+      });
+    }
+
     // Show days are Eastern-time days: from mid-afternoon (soundchecks post
     // around then) the board defaults to TONIGHT instead of the last complete
     // show, and polls fast so the first note lands within seconds of the bot
@@ -227,7 +304,8 @@
       var key = "preshow:" + u.showdate;
       if (key === lastKey) return;
       lastKey = key;
-      el.headDate.innerHTML = esc(longDate(u.showdate)) + ' <span class="badge live">Tonight</span>';
+      el.headDate.innerHTML = esc(longDate(u.showdate)) + ' <span class="badge live">Tonight</span>' + bellHtml();
+      wireBell();
       el.headVenue.textContent = u.venue || "";
       el.headLoc.textContent = [u.city, u.state].filter(Boolean).join(", ");
       el.glance.innerHTML = ""; el.curve.innerHTML = ""; el.fullpage.innerHTML = "";
@@ -395,7 +473,8 @@
 
       var badge = live ? '<span class="badge live">Live</span>'
         : show.complete ? '<span class="badge">Final</span>' : "";
-      el.headDate.innerHTML = esc(longDate(show.showdate)) + " " + badge;
+      el.headDate.innerHTML = esc(longDate(show.showdate)) + " " + badge + (live ? bellHtml() : "");
+      if (live) wireBell();
       el.headVenue.textContent = show.venue || "";
       el.headLoc.textContent = [show.city, show.state].filter(Boolean).join(", ");
 
@@ -604,6 +683,8 @@
       window.__lizardLabData = { showdate: show.showdate, songs: uq };
       document.dispatchEvent(new CustomEvent("lizard:lab"));
       document.dispatchEvent(new CustomEvent("lizard:refresh"));
+
+      noteNewSongs(rows, show, live);
     }
 
     // Announced-but-unplayed shows (docs/upcoming.json in the bot feed).
