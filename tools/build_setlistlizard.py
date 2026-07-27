@@ -74,6 +74,17 @@ def load_remote() -> list[dict]:
     return out
 
 
+def fetch_feed_json(name: str) -> dict:
+    """Fetch an optional feed file; absent files are a normal condition."""
+    import urllib.request
+    try:
+        with urllib.request.urlopen(f"{RAW}/{name}", timeout=30) as r:
+            return json.loads(r.read().decode("utf-8"))
+    except Exception as exc:
+        print(f"  (no {name}: {exc})", file=sys.stderr)
+        return {}
+
+
 # ------------------------------------------------------------------- phish.in
 
 # Tags phish.in hangs off individual tracks.  Anything not listed here still
@@ -414,7 +425,7 @@ SHOW_CSS_HREF = "/css/setlistlizard.css?v=5"
 
 # Shared runtime: the inline player and the Lab pies. It enhances markup that
 # already exists (♫ links, the labpies container), so pages stay plain HTML.
-LIZARD_JS = '<script src="/setlistlizard-with/js/lizard.js?v=2" defer></script>'
+LIZARD_JS = '<script src="/setlistlizard-with/js/lizard.js?v=3" defer></script>'
 
 
 def pager_html(prev: dict | None, nxt: dict | None, top: bool = False) -> str:
@@ -961,6 +972,155 @@ def render_song(entry: dict, all_slugs: dict) -> str:
 """
 
 
+# ------------------------------------------------------------- upcoming stubs
+
+def render_upcoming(show: dict, prev: dict | None, nxt: dict | None,
+                    n_more: int) -> str:
+    """A page for an announced-but-unplayed show, so Next never dead-ends.
+
+    These pages are deliberately NOT on the landing board's tile grid (the
+    front page stays played-shows-only, plus its single "next up" tile) —
+    they exist so the prev/next chain keeps going through the whole
+    announced calendar.
+    """
+    date = show["showdate"]
+    venue = show.get("venue", "")
+    loc = ", ".join(p for p in (show.get("city", ""), show.get("state", "")) if p)
+    title = f"Phish — {short_date(date)}, {date[:4]} · {venue} (upcoming)"
+    desc = (f"Phish plays {venue}, {loc} on {long_date(date)}. "
+            "The Setlist Lizard tracks it live, song by song, once the lights go down.")
+    more = (f" · {n_more} more announced after this" if n_more else
+            " · last announced show of the year")
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{e(title)} — Setlist Lizard ... With</title>
+  <meta name="description" content="{e(desc)}" />
+  <link rel="canonical" href="{SITE}{BASE_PATH}/{date}/" />
+  <meta property="og:title" content="{e(title)}" />
+  <meta property="og:description" content="{e(desc)}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{SITE}{BASE_PATH}/{date}/" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{SHOW_CSS_HREF}" />
+</head>
+<body>
+{nav()}
+  <main>
+    <section class="block" style="border-top:none;">
+      <div class="container">
+        <div class="crumb"><a href="{BASE_PATH}/">Setlist Lizard ... With</a> · <a href="{BASE_PATH}/stats/">Stats</a></div>
+        <div class="section-head">
+          <span class="setno">{e(long_date(date))}</span>
+          <h2>{e(venue)}</h2>
+          <p>{e(loc)}</p>
+        </div>
+        {pager_html(prev, nxt, top=True)}
+        <div class="board" style="text-align:center;padding:3rem 1.5rem;">
+          <div style="font-family:Fraunces,Georgia,serif;font-size:1.5rem;color:var(--accent-soft);">
+            🦎 Not played yet</div>
+          <div id="lz-countdown" data-date="{date}"
+               style="margin-top:.8rem;font-size:2.2rem;font-family:Fraunces,Georgia,serif;"></div>
+          <p style="color:var(--muted);max-width:34rem;margin:1rem auto 0;line-height:1.7;">
+            This show is on the announced calendar{e(more)}. When the lights go
+            down the Lizard follows it live — songs land here as they're played,
+            and the recording, lengths and Lab analysis follow from
+            <a href="https://phish.in/" rel="noopener">phish.in</a> in the days after.</p>
+          <p style="margin-top:1.4rem;"><a href="{BASE_PATH}/"
+             style="color:var(--accent-soft);">← Back to the current board</a></p>
+        </div>
+        {pager_html(prev, nxt)}
+        <div class="srcline" style="margin-top:2rem;">
+          Tour dates: <a href="https://phish.net/" rel="noopener">Phish.net</a> ·
+          <a href="{BASE_PATH}/credits/">credits &amp; FAQ</a> · <a href="{BASE_PATH}/">all shows</a>
+        </div>
+      </div>
+    </section>
+  </main>
+{FOOTER}
+{LIZARD_JS}
+  <script>
+  (function () {{
+    var el = document.getElementById("lz-countdown");
+    if (!el) return;
+    var p = el.getAttribute("data-date").split("-");
+    var d = new Date(+p[0], p[1] - 1, +p[2]);
+    var t = new Date();
+    var days = Math.round((d - new Date(t.getFullYear(), t.getMonth(), t.getDate())) / 864e5);
+    el.textContent = days <= 0 ? "Tonight 🎪" : days === 1 ? "Tomorrow"
+                   : days + " days away";
+  }})();
+  </script>
+</body>
+</html>
+"""
+
+
+# ------------------------------------------------------------------- song meta
+
+def assemble_song_meta(shows: list[dict], slugs: dict) -> dict | None:
+    """setlistlizard-with/data/song_meta.json — the Lab pies' single source.
+
+    Three inputs merged, in priority order:
+      tools/song_curation.json   hand-curated writers/albums/artist fixes
+                                 (including the phish.in errata) + seed gaps
+      docs/song_meta_auto.json   bot-published: debut date (earliest phish.in
+                                 recording), cover artist, original flag
+      the feed itself            per-show "gaps" maps from Phish.net
+
+    If neither curation nor auto data is available the existing file is left
+    alone rather than clobbered with something emptier.
+    """
+    cur = {}
+    cur_path = Path("tools/song_curation.json")
+    if cur_path.exists():
+        try:
+            cur = json.loads(cur_path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError) as exc:
+            print(f"  ! song_curation.json unreadable: {exc}", file=sys.stderr)
+    auto = fetch_feed_json("song_meta_auto.json")
+    if not cur and not auto:
+        return None
+
+    auto_songs = auto.get("songs") or {}
+    cur_songs = cur.get("songs") or {}
+
+    songs: dict = {}
+    for sh in shows:
+        for r in songs_of(sh):
+            slug = slugs.get(r["title"], slugify(r["title"]))
+            if not r["title"] or slug in songs:
+                continue
+            rec: dict = {}
+            a = auto_songs.get(slug) or {}
+            if a.get("debut"):
+                rec["debut"] = a["debut"][:4] if len(a["debut"]) >= 4 else a["debut"]
+            if a.get("plays_recorded"):
+                rec["plays"] = a["plays_recorded"]
+            if a.get("artist") and not a.get("original", True):
+                rec["artist"] = a["artist"]
+            rec.update(cur_songs.get(slug) or {})   # curation always wins
+            songs[slug] = rec
+
+    gaps: dict = dict(cur.get("gaps") or {})        # curated seed (MSG four)
+    for sh in shows:
+        g = sh.get("gaps")
+        if isinstance(g, dict) and g:
+            gaps[sh["showdate"]] = g
+
+    return {
+        "note": cur.get("note") or (
+            "Debuts are the earliest phish.in recording; writers and albums "
+            "are hand-curated; gaps come from Phish.net. Corrections applied "
+            "over phish.in metadata are listed in tools/song_curation.json."),
+        "songs": songs,
+        "gaps": gaps,
+    }
+
+
 # ------------------------------------------------------------------ tour + stats
 
 def build_tour(shows: list[dict]) -> dict:
@@ -1017,13 +1177,33 @@ def main() -> int:
     songs = build_song_index(shows)
     slugs = {e_["title"]: e_["slug"] for e_ in songs.values()}
 
+    # Announced-but-unplayed shows extend the prev/next chain past the latest
+    # played show, so Next never dead-ends while a tour is still running.
+    upcoming_feed = fetch_feed_json("upcoming.json")
+    played_dates = {sh["showdate"] for sh in shows}
+    upcoming = sorted(
+        (u for u in (upcoming_feed.get("shows") or [])
+         if u.get("showdate") and u["showdate"] not in played_dates),
+        key=lambda u: u["showdate"])
+    timeline: list[dict] = shows + upcoming
+
     for i, sh in enumerate(shows):
-        prev = shows[i - 1] if i else None
-        nxt = shows[i + 1] if i + 1 < len(shows) else None
+        prev = timeline[i - 1] if i else None
+        nxt = timeline[i + 1] if i + 1 < len(timeline) else None
         d = root / sh["showdate"]
         d.mkdir(parents=True, exist_ok=True)
         (d / "index.html").write_text(render_show(sh, prev, nxt, slugs), encoding="utf-8")
         print(f"  show page: {sh['showdate']}  {sh.get('venue','')}")
+
+    for j, up in enumerate(upcoming):
+        idx = len(shows) + j
+        prev = timeline[idx - 1] if idx else None
+        nxt = timeline[idx + 1] if idx + 1 < len(timeline) else None
+        d = root / up["showdate"]
+        d.mkdir(parents=True, exist_ok=True)
+        (d / "index.html").write_text(
+            render_upcoming(up, prev, nxt, len(upcoming) - j - 1), encoding="utf-8")
+        print(f"  upcoming stub: {up['showdate']}  {up.get('venue','')}")
 
     # Song detail is served by the hand-maintained shell at song/index.html,
     # which reads ?s=<slug> and renders from the feed — see render_song() below
@@ -1035,6 +1215,17 @@ def main() -> int:
     (root / "data" / "tour.json").write_text(
         json.dumps(tour, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"  dashboard: {len(tour['songs'])} song rows across {len(shows)} shows")
+
+    meta = assemble_song_meta(shows, slugs)
+    if meta:
+        (root / "data" / "song_meta.json").write_text(
+            json.dumps(meta, ensure_ascii=False, separators=(",", ":")),
+            encoding="utf-8")
+        n_cur = sum(1 for s in meta["songs"].values() if "writers" in s or "album" in s)
+        print(f"  song_meta: {len(meta['songs'])} songs "
+              f"({n_cur} curated), gaps for {len(meta['gaps'])} shows")
+    else:
+        print("  song_meta: no curation or auto data — left untouched")
 
     return 0
 
