@@ -288,14 +288,14 @@
     <p class="sub">Five nights at Madison Square Garden — Phish's 92nd through 96th shows there, each themed to a year, <b>1992 → 1996</b>. Three played, two to go. Predictions, the model behind them, and an honest scorecard.</p>
 
     <div class="mdl">
-      <div class="mdl-h"><span class="t">How the model works</span><span class="v">v8.8 &middot; 26 Jul</span></div>
+      <div class="mdl-h"><span class="t">How the model works</span><span class="v">v9 &mdash; released 27 Jul</span></div>
       <div class="mdl-b">
-        <p class="mdl-lede">Each night is themed to a year. The model ranks that year's songs by how often Phish actually played them, throws out everything already used earlier in the run, and takes the top twenty. Three slots are held back for things frequency cannot see.</p>
+        <p class="mdl-lede">Each night is themed to a year. The model ranks that year's songs by how often Phish actually played them, throws out everything already used earlier in the run, and takes the top twenty. Reserved slots are gone — the backtest measured them losing twice. What is left is frequency, rotation state, and honest odds.</p>
         <div class="mdl-steps">
           <div class="st"><div class="n2">Step 1</div><div class="h">Count the theme year</div><div class="d2">Every song Phish played that year, from the phish.net feed, side projects filtered out.</div></div>
           <div class="st"><div class="n2">Step 2</div><div class="h">Strike what's burned</div><div class="d2">Phish does not repeat inside a run. 66 songs are gone already. This is the single most valuable rule.</div></div>
           <div class="st"><div class="n2">Step 3</div><div class="h">Take the top 20</div><div class="d2">Ranked inside the surviving pool, never the full year — getting that backwards broke two earlier versions.</div></div>
-          <div class="st"><div class="n2">Step 4</div><div class="h">Reserve 3 slots</div><div class="d2">The Halloween costume album, the Fish novelty song, and the most era-locked song of the year.</div></div>
+          <div class="st"><div class="n2">Step 4</div><div class="h">Calibrate the odds</div><div class="d2">Raw play rates understate reality by 2&times;. A curve fitted on 50 backtest shows and checked on 50 more converts them into honest probabilities.</div></div>
         </div>
         <div class="mdl-bets">
           <p style="font-size:12px;font-weight:800;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px">The two big bets</p>
@@ -303,14 +303,14 @@
           <div class="bet"><div class="pc">80%</div><div class="bd"><div class="bn">Crosseyed and Painless &middot; Wednesday</div><div class="bx">From <em>Remain in Light</em>, the Halloween 1996 costume. Unlike Drowned it is a living song — 8% of every show, and eight MSG appearances weighted to marquee nights.</div></div></div>
         </div>
         <p class="mdl-foot"><b>Live record: 16 of 40 across two nights</b>, against a random baseline of 7.4. Everything else on this page that scores better was computed after the fact and is labelled as such. <a href="#method" style="color:var(--accent);font-weight:600">Full method and every correction ↓</a></p>
-        <p class="mdl-foot" style="margin-top:8px;padding-top:10px;border-top:1px dashed var(--grid)"><b>The rules have now been backtested</b> against ten held-out shows from 1995 to 2024 &mdash; 40 blind runs, 800 picks. Plain frequency won, the reserved slots lost again, and every model overshot its own odds by 2.6&times;. <a href="./kpi.html" style="color:var(--accent);font-weight:600">Backtest KPI dashboard &rarr;</a></p>
+        <p class="mdl-foot" style="margin-top:8px;padding-top:10px;border-top:1px dashed var(--grid)"><b>v9 is released, on the back of 100 simulations</b> against held-out shows from 1994 to 2026. It adds one thing to plain frequency &mdash; a song played recently is about half as likely as its rate suggests &mdash; and fixes the odds. It caught 828 of 2,281 songs, 2.68&times; random, and took 182 more ladder points than v7. <a href="./kpi.html" style="color:var(--accent);font-weight:600">100-simulation KPI dashboard &rarr;</a></p>
       </div>
     </div>
 
     <div class="hero">
       <div class="hero-h">
         <span class="t">Next up — Show #95, the 1995 night</span>
-        <span class="d">Mon 27 Jul · model v8.8</span>
+        <span class="d">Mon 27 Jul · model v9</span>
       </div>
       <div class="hero-b">
         <p class="hl"><b>The first genuine out-of-sample test.</b> Everything here was written after Saturday and has never predicted anything. These four calls are pre-registered, so Monday's result is unambiguous. The opener is deliberately <em>not</em> a costume pick — a cover opener two nights running is less likely, not more.</p>
@@ -409,11 +409,11 @@
     <p>The comparator throughout is a random 20 songs from the same eligible pool. That is a fair pool — but it is <b>not the baseline a competent fan represents.</b> The natural human baseline is &ldquo;the twenty most-played songs of the theme year, minus whatever they already played this run&rdquo; — and that <em>is</em> v7. Beating random therefore demonstrates two things any phish.net-literate fan had for free: the theme-year premise, announced publicly by the band, and the no-repeat rule.</p>
     <p><b>The model's edge over an informed fan is currently indistinguishable from zero</b>, because the model is what an informed fan would do. Every cleverer idea tried this week lost to the plain frequency list.</p>
     <h4>Scores will rise over the next two nights whatever happens</h4>
-    <p>66 songs are burned. The eligible pool shrinks every night, so a random slate improves too. Expect #95 and #96 to score higher than #94 <b>for arithmetic reasons unrelated to the model improving</b>. Judge v8.7 against the random baseline for its own night.</p>
+    <p>66 songs are burned. The eligible pool shrinks every night, so a random slate improves too. Expect #95 and #96 to score higher than #94 <b>for arithmetic reasons unrelated to the model improving</b>. Judge v9 against the random baseline for its own night.</p>
   </details>
 
   <details class="box" id="method">
-    <summary>The model — and the costume-album correction <span class="tag">v5 → v8.8</span></summary>
+    <summary>The model — and the costume-album correction <span class="tag">v5 → v9</span></summary>
     <div class="warnbox">
       <span class="lbl">Two ledgers, kept separate</span>
       <p><b>Live</b> means published before the show. <b>Fitted</b> means computed afterwards on a night already known. Fitted numbers appear in grey italic and are not skill.</p>
@@ -612,45 +612,44 @@
       ],
       sets:[
         { name:"Set 1", songs:P([
-          ["Free","32 plays · gap 4","The most-played song of 1995, debuted May 1995 and took over immediately. 240 all-time.",4],
-          ["Strange Design","29 plays · gap 60","29 of its 68 all-time plays fall in 1995.",60],
-          ["Poor Heart","27 plays · gap 76","27 plays in 1995, and it survived Saturday untouched.",76],
-          ["Scent of a Mule","23 plays · gap 95","23 plays in 1995. Also survived Saturday.",95],
-          ["It's Ice","20 plays · gap 7","20 plays in 1995, current at a 7-show gap.",7],
-          ["Ya Mar","18 plays · gap 17","18 plays in 1995 and the year's most common opener at six. Tonight's opener call.",17],
-          ["Prince Caspian","17 plays · gap 2","Debuted Jun 1995 — the freshest song on this slate.",2],
-          ["Uncle Pen","16 plays · gap 337","Bill Monroe cover, 16 plays in 1995. <span class=\"risk\">Long dormant.</span>",337],
-          ["Taste","14 plays · gap 6","Debuted Jun 1995 as Taste That Surrounds; 154 all-time and current.",6]
+          ["Free","32 plays · 50% · gap 5","Most-played song of 1995 and current at a 5-show gap.",5],
+          ["Strange Design","29 plays · 48% · gap 61","29 of its 68 all-time plays fall in 1995.",61],
+          ["Acoustic Army","27 plays · 47% · gap 1097","<b>All 27 all-time plays are 1995.</b> <span class=\"risk\">Unplayed in 1,097 shows.</span>",1097],
+          ["Poor Heart","27 plays · 47% · gap 77","27 plays, and it survived Saturday untouched.",77],
+          ["Theme from the Bottom","27 plays · 47% · gap 10","Debuted May 1995; the year's leading unburned jam vehicle.",10],
+          ["You Enjoy Myself","25 plays · 45% · gap 5","626 all-time. Unburned through three nights. Tonight's longest-jam call.",5],
+          ["A Day in the Life","23 plays · 44% · gap 38","Beatles cover, and 1995's most common encore at nine.",38],
+          ["Scent of a Mule","23 plays · 44% · gap 96","23 plays in 1995. Also survived Saturday.",96],
+          ["Cars Trucks Buses","20 plays · 41% · gap 44","Debuted Sep 1995 — that rate inside a third of a year.",44]
         ]) },
         { name:"Set 2", songs:P([
-          ["Theme from the Bottom","27 plays · gap 9","Debuted May 1995, eight jamchart entries — the year's leading unburned jam vehicle.",9],
-          ["You Enjoy Myself","25 plays · gap 4","626 all-time. <b>Unburned through three nights.</b>",4],
-          ["Acoustic Army","27 plays · gap 1096","<b>All 27 of its all-time plays fall in 1995.</b> <span class=\"risk\">Unplayed in 1,096 shows.</span>",1096],
-          ["Drowned","<span class=\"tb\">TIER B</span> · gap 125","<span class=\"tb\">Costume-album slot — restored.</span> From <em>Quadrophenia</em>, the <b>Halloween 1995</b> costume — <em>this</em> year's, not last year's. <b>Saturday settled this:</b> #94 opened with Back in the U.S.S.R., a White Album track from the <b>Halloween 1994</b> costume, on a 534-show gap and <b>four lifetime plays</b>. The band reached for the 1994 album on the 1994 night. Drowned is the only Quadrophenia song that ever stuck: <b>48 all-time against 4 for the next-best.</b> Frequency ranks it near zero at 2 plays in 1995 — which is exactly what it ranked for U.S.S.R.",125],
-          ["Cars Trucks Buses","20 plays · gap 43","Debuted Sep 1995 — that rate in a third of a year.",43],
-          ["I'm Blue, I'm Lonesome","18 plays · gap 791","Bill Monroe cover, 18 of its 30 all-time plays in 1995. <span class=\"risk\">Deep vault.</span>",791],
-          ["Keyboard Army","<span class=\"tb\">TIER B</span> · gap 406","<span class=\"tb\">Era-locked slot.</span> <b>All 14 of its all-time plays are 1995.</b>",406],
-          ["While My Guitar Gently Weeps","12 plays · gap 46","<b>Restored.</b> The single song in Phish history that satisfies the Halloween-to-next-year test: played in the <em>White Album</em> costume set on 31 Oct 1994, then <b>12 times across 1995</b>, June to December. Every other song in that costume set managed 0 or 1. Note the frequency already <em>is</em> the costume effect — 12 plays is what the mechanism produced — so it earns a slate slot at its honest 14% and is not double-counted on the ladder.",46]
+          ["It's Ice","20 plays · 41% · gap 8","20 plays, current at an 8-show gap.",8],
+          ["I'm Blue, I'm Lonesome","18 plays · 38% · gap 792","Bill Monroe cover, 18 of its 30 all-time plays in 1995. <span class=\"risk\">Deep vault.</span>",792],
+          ["Ya Mar","18 plays · 38% · gap 18","1995's most common set-one opener at six. Tonight's opener call.",18],
+          ["Amazing Grace","17 plays · 35% · gap 901","17 plays in 1995. <span class=\"risk\">Long dormant.</span>",901],
+          ["Prince Caspian","17 plays · 35% · gap 3","Debuted Jun 1995 — freshest song on this slate.",3],
+          ["Uncle Pen","16 plays · 32% · gap 338","Bill Monroe cover, 16 plays in 1995.",338],
+          ["Hello My Baby","15 plays · 30% · gap 258","The a cappella number.",258],
+          ["Fee","14 plays · 27% · gap 6","14 plays and current.",6]
         ]) },
         { name:"Encore", songs:P([
-          ["A Day in the Life","23 plays · gap 37","Beatles cover, 23 plays in 1995 and the year's most common encore at nine. Also a costume-adjacent song — it is not on the White Album, but the Beatles material stayed live through 1995.",37],
-          ["I Didn't Know","<span class=\"tb\">TIER B</span> · gap 14","<span class=\"tb\">Fish/novelty slot.</span> The vacuum vehicle, 10 plays in 1995.",14],
-          ["Hello My Baby","15 plays · gap 257","The a cappella number. Ranked below I Didn't Know because night 2 used the a cappella card.",257]
+          ["Ha Ha Ha","14 plays · 27% · gap 231","14 plays in 1995, almost all of its life.",231],
+          ["Keyboard Army","14 plays · 27% · gap 407","<b>All 14 all-time plays are 1995.</b>",407],
+          ["While My Guitar Gently Weeps","12 plays · 23% · gap 45","The one song in the catalogue that passes the Halloween-to-next-year test: White Album costume set 1994, then 12 plays across 1995.",45]
         ]) }
       ],
-      game:{ expected:"19.6",
-        note:"Percentages are 1995 plays ÷ 83 shows, verified against the Phish-only feed — except Drowned, which is a judgement call and is flagged as one. <b>Drowned is back, and now at rank 1.</b> Its 1995 count is two, so 2% is the frequency case and the rest is the Saturday precedent: a four-lifetime-play song off that year's Halloween album opened #94. Cars Trucks Buses drops off to make room. While My Guitar Gently Weeps is back on the slate but deliberately <em>not</em> on the ladder: its 12 plays already <em>are</em> the costume effect, so boosting it above its 14% rate would count the same evidence twice. Drowned is the opposite case — its costume evidence is entirely unpriced, because 1995 frequency knows nothing about it. Saturday's ladder overshot its expectation by 69%, so treat 18.3 as a floor.",
+      game:{ expected:"25.9", note:"<b>Now v9, and every number here changed.</b> These are calibrated probabilities, not raw play rates: the 100-simulation backtest showed a raw rate understates reality by 2.0&times;, so Free reads 50% where it used to read 39%. The picks are unchanged by calibration — it is a monotonic transform — but the odds are finally honest. <b>The three reserved Tier B slots are gone</b>, measured losing twice. Drowned survives only as a declared override.",
         picks:G([
-          ["Drowned","45%","<b>Raised from 30%, for consistency.</b> If the same-year costume nod is near-certain on Wednesday, it has to be close to that on Monday too — <em>Quadrophenia</em> is the Halloween 1995 costume and Drowned is its only survivor, 48 all-time against 4 for the next-best. The earlier 30% was timidity, not analysis. Held under Wednesday's Crosseyed for one honest reason: <span class=\"risk\">Drowned has not been played since Oct 2023</span> and runs ~2% in the modern era, where Crosseyed runs 8% and played ten days ago. <b>The single biggest judgement call on this page.</b>",125],
-          ["Free","39%","The most-played song of 1995, current at a 4-show gap.",4],
-          ["Strange Design","35%","29 of its 68 all-time plays fall in 1995.",60],
-          ["Theme from the Bottom","33%","The year's leading unburned jam vehicle at eight jamcharts.",9],
-          ["Acoustic Army","33%","Every one of its 27 plays falls in 1995. Ranked under Theme on a 1,096-show gap.",1096],
-          ["Poor Heart","33%","27 plays, and it survived Saturday. The riskiest pick in the top half.",76],
-          ["You Enjoy Myself","30%","626 all-time, still unburned after three nights.",4],
-          ["Scent of a Mule","28%","23 plays in 1995, and it also survived Saturday.",95],
-          ["A Day in the Life","28%","23 plays and the year's most common encore.",37],
-          ["It's Ice","24%","20 plays in 1995, current at a 7-show gap.",7]
+          ["Free","50%","Most-played song of 1995, current at a 5-show gap.",5],
+          ["Strange Design","48%","29 of its 68 all-time plays are 1995.",61],
+          ["Acoustic Army","47%","Every one of its 27 plays falls in 1995.",1097],
+          ["Poor Heart","47%","27 plays, and it survived Saturday.",77],
+          ["Theme from the Bottom","47%","The year's leading unburned jam vehicle.",10],
+          ["You Enjoy Myself","45%","626 all-time, unburned after three nights.",5],
+          ["Drowned","45%","<b>Declared override, not a v9 pick.</b> v9 ranks it near zero on two 1995 plays. It is here on the costume argument alone — <em>Quadrophenia</em> was the Halloween 1995 album, exactly as the White Album was 1994's when U.S.S.R. opened #94.",119],
+          ["A Day in the Life","44%","23 plays and the year's most common encore.",38],
+          ["Scent of a Mule","44%","23 plays in 1995; survived Saturday.",96],
+          ["Cars Trucks Buses","41%","20 plays after a Sep 1995 debut.",44]
         ]) } },
 
     { n:5, year:"1996", show:96, date:"Wed · Jul 29", status:"up",
@@ -663,48 +662,48 @@
       ],
       sets:[
         { name:"Set 1", songs:P([
-          ["Taste","28 plays · gap 6","<b>The most-played song of 1996</b> at 28 across 73 shows. Debuted mid-1995 as Taste That Surrounds; 154 all-time. Also on Monday's slate — burns if it lands.",6],
-          ["Character Zero","21 plays · gap 5","Debuted Jun 1996 and immediately tied for the year's most-played unburned song. 265 all-time. Tonight's longest-jam call.",5],
-          ["Waste","17 plays · gap 11","A Jun 1996 debut and the year's most frequent encore at four. Tonight's encore call.",11],
-          ["Prince Caspian","17 plays · gap 2","17 plays in 1996 and the freshest song on this slate. Also on Monday's slate.",2],
-          ["Train Song","15 plays · gap 92","Debuted Jul 1996 — 59 all-time, so 1996 is roughly a quarter of its whole life.",92],
-          ["Funky Bitch","14 plays · gap 31","Son Seals cover, 236 all-time. Three 1996 encores.",31],
-          ["Swept Away","13 plays · gap 229","Debuted Oct 1996. Inseparable from Steep — these two slots are close to a single bet.",229],
-          ["Steep","13 plays · gap 229","The other half of the Swept Away pairing.",229],
-          ["Wilson","12 plays · gap 9","Tied for the year's most common set-one opener at five. Tonight's opener call.",9]
+          ["Taste","28 plays · 50% · gap 7","Most-played song of 1996. Also on Monday's slate — burns if it lands.",7],
+          ["You Enjoy Myself","24 plays · 47% · gap 5","626 all-time; Monday's longest-jam call.",5],
+          ["Character Zero","21 plays · 44% · gap 6","Debuted Jun 1996 and immediately tied for most-played. Tonight's longest-jam call.",6],
+          ["Poor Heart","21 plays · 44% · gap 77","21 plays in 1996 and four openers.",77],
+          ["Theme from the Bottom","20 plays · 43% · gap 10","20 plays in 1996 on top of 27 in 1995.",10],
+          ["Cars Trucks Buses","19 plays · 42% · gap 44","19 in 1996 after 20 in 1995 — a genuine two-year staple.",44],
+          ["Ya Mar","19 plays · 42% · gap 18","Tied for the year's most common opener at five.",18],
+          ["Scent of a Mule","18 plays · 42% · gap 96","18 plays in 1996; survived Saturday.",96],
+          ["Free","17 plays · 41% · gap 5","32 plays in 1995 and still 17 in 1996.",5]
         ]) },
         { name:"Set 2", songs:P([
-          ["You Enjoy Myself","24 plays · gap 4","626 all-time and still unburned after three nights. Also Monday's longest-jam call — burns if it lands.",4],
-          ["Theme from the Bottom","20 plays · gap 9","20 plays in 1996 on top of 27 in 1995. Also on Monday's slate.",9],
-          ["Cars Trucks Buses","19 plays · gap 43","19 plays in 1996 after 20 in 1995 — a genuine two-year staple.",43],
-          ["Scent of a Mule","18 plays · gap 95","18 plays in 1996, and it survived Saturday untouched.",95],
-          ["Free","17 plays · gap 4","32 plays in 1995 and still 17 in 1996. Monday's top pick — burns if it lands.",4],
-          ["Life on Mars?","10 plays · gap 539","<b>10 of its 23 all-time plays are 1996</b> — Page's showcase that year. <span class=\"risk\">Deep vault.</span>",539],
-          ["Crosseyed and Painless","<span class=\"tb\">TIER B</span> · gap 7","<span class=\"tb\">Costume-album slot — the highest-confidence pick on this page.</span> <em>Remain in Light</em>, the <b>Halloween 1996</b> costume, on the 1996 night. <b>The earlier objection here was wrong.</b> A 7-show gap was called the wrong shape for this rule on the basis of U.S.S.R.'s 534 — but U.S.S.R. was chosen for the <em>opener</em>, where a bustout is the whole point. A mid-set nod wants the repertoire song, and Crosseyed is emphatically that: 75 all-time, ~8% of every show since 2019, and <b>eight MSG appearances, six of them on Dec 29&ndash;Jan 1 marquee nights.</b> It is the band's go-to big-statement song in this building, and Wednesday closes a five-night run.",7],
-          ["Born Under Punches (The Heat Goes On)","<span class=\"tb\">TIER B</span> · gap 1129","<span class=\"tb\">The structural analogue.</span> <em>Remain in Light</em> track one, exactly as Back in the U.S.S.R. is <em>White Album</em> track one. <b>One lifetime play — 31 Oct 1996 — and nothing since.</b> That is the same shape as Saturday's pick, where the repertoire song (While My Guitar Gently Weeps, 38 plays) was passed over for the album opener with four. Carried on the slate, kept off the ladder: one lifetime play is not worth points.",1129]
+          ["Hello My Baby","17 plays · 41% · gap 258","The a cappella number, 17 plays in 1996.",258],
+          ["Prince Caspian","17 plays · 41% · gap 3","17 plays and the freshest song on this slate.",3],
+          ["Waste","17 plays · 41% · gap 12","Jun 1996 debut and the year's most frequent encore at four. Tonight's encore call.",12],
+          ["A Day in the Life","15 plays · 35% · gap 38","Beatles cover, 15 plays in 1996.",38],
+          ["Train Song","15 plays · 35% · gap 93","Debuted Jul 1996 — a quarter of its whole life.",93],
+          ["Funky Bitch","14 plays · 32% · gap 32","Son Seals cover, 236 all-time, three 1996 encores.",32],
+          ["It's Ice","14 plays · 32% · gap 8","14 plays in 1996.",8],
+          ["Steep","13 plays · 29% · gap 230","Debuted Oct 1996. Inseparable from Swept Away.",230]
         ]) },
         { name:"Encore", songs:P([
-          ["Johnny B. Goode","9 plays · gap 926","Chuck Berry closer, 9 of its 23 all-time plays in 1996. Three 1996 encores. <span class=\"risk\">Deep vault.</span>",926],
-          ["Fire","8 plays · gap 7","Hendrix cover, 139 all-time, three 1996 encores. Genuinely live.",7],
-          ["Talk","8 plays · gap 120","<b>All 8 of its all-time plays are 1996.</b> The purest era marker available.",120]
+          ["Swept Away","13 plays · 29% · gap 230","The other half of that pair.",230],
+          ["Wilson","12 plays · 26% · gap 9","Tied for the year's most common opener. Tonight's opener call.",9],
+          ["Crosseyed and Painless","2 plays · 80% · gap 7","<b>Declared override at 80%, not a v9 pick.</b> v9 ranks it near the bottom on two 1996 plays. It is here on <em>Remain in Light</em> being the Halloween 1996 costume, 75 all-time plays, and eight MSG appearances weighted to marquee nights.",7]
         ]) }
       ],
-      game:{ expected:"20.5", note:"<b>Rebuilt on verified counts.</b> Every figure previously shown for this night was inflated — Character Zero read 30 against a true 21, the Star-Spangled Banner 17 against a true 10. All percentages here are confirmed 1996 plays ÷ 73 Phish shows, side projects filtered. <b>Drowned is not here</b> — it belongs to Monday, since <em>Quadrophenia</em> was the Halloween <em>1995</em> costume and the themed night takes its own year's album. This night's costume slot is Crosseyed and Painless, with Born Under Punches carried as the album-opener reading; neither is on the ladder, Crosseyed because a 7-show gap is the wrong shape for this rule and Born Under Punches because one lifetime play is not worth points. Still provisional in one respect that matters — three of these ten (Taste, You Enjoy Myself, Cars Trucks Buses) are also on Monday's slate and burn if they land, which is why they sit below Character Zero despite higher raw rates. Seven of the twenty slate songs overlap Monday. Rebuilt again Monday night.",
+      game:{ expected:"27.0", note:"<b>v9, calibrated.</b> Percentages are 1996 plays ÷ 73 shows put through the calibration curve fitted on 50 backtest shows and validated on 50 more — which is why they read roughly double the raw rate. Ranks are still discounted for Monday burn risk. Crosseyed sits on top as a declared override rather than a model pick, and is the single largest position on this page.",
         picks:G([
-          ["Crosseyed and Painless","80%","<b>The costume bet, and the biggest single position on this page.</b> Vlad calls it 90%; this sits a little under, and the whole of the gap is the risk that the nod goes to a deep cut the way U.S.S.R. did rather than to the repertoire song. Everything else points one way: <em>Remain in Light</em> is the 1996 costume, Crosseyed is its only real survivor at 75 plays against 1&ndash;2 for every other track, it runs ~8% on an ordinary night, it has eight MSG appearances weighted to marquee dates, and it cannot burn Monday. 80 and 90 rank identically, so the disagreement costs nothing.",7],
-          ["Character Zero","29%","Tied for the year's most-played unburned song, and it cannot burn Monday — it is not on that slate.",5],
-          ["Taste","38%","The single most-played song of 1996. Ranked below Character Zero only because Monday could burn it.",6],
-          ["You Enjoy Myself","33%","626 all-time, unburned through three nights — but it is Monday's longest-jam call.",4],
-          ["Waste","23%","A Jun 1996 debut and the year's most frequent encore. Safe from Monday.",11],
-          ["Train Song","21%","1996 is about a quarter of its entire life. Safe from Monday.",92],
-          ["Cars Trucks Buses","26%","Nineteen plays in 1996 after twenty in 1995 — but it is on Monday's slate.",43],
-          ["Funky Bitch","19%","A durable blues staple rather than an era marker. Safe from Monday.",31],
-          ["Swept Away","18%","Inseparable from Steep. Safe from Monday.",229],
-          ["Steep","18%","The other half of that pair.",229],
+          ["Crosseyed and Painless","80%","<b>Declared override.</b> Halloween 1996 costume album, 75 all-time, eight MSG appearances weighted to marquee nights, and it cannot burn Monday.",7],
+          ["Character Zero","44%","Tied for the year's most-played unburned song, and safe from Monday.",6],
+          ["Taste","50%","The single most-played song of 1996 — ranked below Character Zero only because Monday can burn it.",7],
+          ["You Enjoy Myself","47%","Unburned through three nights, but it is Monday's longest-jam call.",5],
+          ["Waste","41%","Jun 1996 debut and the year's most frequent encore. Safe from Monday.",12],
+          ["Train Song","35%","A quarter of its entire life is 1996. Safe from Monday.",93],
+          ["Cars Trucks Buses","42%","Two-year staple — but it is on Monday's slate.",44],
+          ["Funky Bitch","32%","A durable blues staple rather than an era marker. Safe from Monday.",32],
+          ["Steep","29%","Inseparable from Swept Away. Safe from Monday.",230],
+          ["Swept Away","29%","The other half of that pair.",230]
         ]) } }
   ]};
 
-  var KEY="phish-msg-v88", state, active=0;
+  var KEY="phish-msg-v90", state, active=0;
   function clone(o){ return JSON.parse(JSON.stringify(o)); }
   function load(){ try{ var r=localStorage.getItem(KEY); if(r){ state=JSON.parse(r); return true; } }catch(e){} state=clone(DEFAULTS); return false; }
   function save(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
