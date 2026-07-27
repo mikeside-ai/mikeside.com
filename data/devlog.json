@@ -5,7 +5,7 @@
     { "id": "supmaine", "name": "SUP Maine", "url": "/supmaine/" },
     { "id": "setlist-lizard", "name": "Setlist Lizard ... With", "url": "/setlistlizard-with/" },
     { "id": "setlist-predictions", "name": "Setlist Prophet", "url": "/projects/setlist-predictions/" },
-    { "id": "setlist-bot", "name": "Phish Setlist Bot" }
+    { "id": "setlist-bot", "name": "Phish Setlist Bot", "url": "/projects/setlistlizard_with/integration-diagram.html" }
   ],
   "feeds": [
     {
@@ -14,6 +14,13 @@
     }
   ],
   "entries": [
+    {
+      "date": "2026-07-27",
+      "project": "mikeside",
+      "type": "content",
+      "title": "New slogan: Stage left side of life",
+      "notes": "\"You're on the Mike side now\" retires. The page title and description followed it out — both were still pointing the other direction, which would have read as a contradiction against the new line. \"Stage left\" runs in clone-suit yellow, the one color the Stage Left palette didn't have."
+    },
     {
       "date": "2026-07-27",
       "project": "setlist-predictions",
