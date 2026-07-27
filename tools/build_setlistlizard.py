@@ -36,7 +36,9 @@ SITE = "https://mikeside.com"
 
 # Songs whose "length" is really a placeholder in the feed (segues, jams that
 # phish.in hasn't split out yet) come through as null. We never invent a number.
-MARKS = ["¹", "²", "³", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹", "¹⁰", "¹¹", "¹²"]
+_SUP = str.maketrans("0123456789", "⁰¹²³⁴⁵⁶⁷⁸⁹")
+# 1..40 as superscripts — a busy MSG night can carry two dozen notes.
+MARKS = [str(i).translate(_SUP) for i in range(1, 41)]
 
 
 # --------------------------------------------------------------------------- io
@@ -46,7 +48,7 @@ def load_local(data_dir: Path) -> list[dict]:
     for p in sorted(data_dir.glob("*.json")):
         if p.name == "index.json":
             continue
-        shows.append(json.loads(p.read_text(encoding="utf-8")))
+        shows.append(apply_phishin(json.loads(p.read_text(encoding="utf-8"))))
     return shows
 
 
@@ -69,8 +71,95 @@ def load_remote() -> list[dict]:
             print(f"  ! skipping {d}: {exc}", file=sys.stderr)
             continue
         show.setdefault("tag", entry.get("tag"))
-        out.append(show)
+        out.append(apply_phishin(show))
     return out
+
+
+# ------------------------------------------------------------------- phish.in
+
+# Tags phish.in hangs off individual tracks.  Anything not listed here still
+# renders, it just gets the default chip styling.
+TAG_STYLE = {
+    "Bustout": "bust",
+    "Tease": "tease",
+    "Jam": "jam",
+    "Alt Lyric": "alt",
+    "Alt Rig": "alt",
+    "Narration": "alt",
+    "Unfinished": "unf",
+    "Banter": "banter",
+    "Lore": "lore",
+}
+
+# Inline so a stale cached stylesheet can never swallow them.
+CHIP_BASE = ("display:inline-block;margin-left:.4rem;padding:.05rem .4rem;border-radius:999px;"
+             "font-size:.68em;letter-spacing:.04em;text-transform:uppercase;vertical-align:.08em;"
+             "border:1px solid;line-height:1.5;")
+CHIP_COLOR = {
+    "bust": "color:#f0b429;border-color:#f0b42955;background:#f0b4291a;",
+    "tease": "color:#7bc6ff;border-color:#7bc6ff55;background:#7bc6ff1a;",
+    "jam": "color:#9ae6b4;border-color:#9ae6b455;background:#9ae6b41a;",
+    "alt": "color:#d6a2ff;border-color:#d6a2ff55;background:#d6a2ff1a;",
+    "unf": "color:#ff9b9b;border-color:#ff9b9b55;background:#ff9b9b1a;",
+    "banter": "color:#ffd6a5;border-color:#ffd6a555;background:#ffd6a51a;",
+    "seg": "color:#9aa5b1;border-color:#9aa5b155;background:#9aa5b11a;",
+}
+
+
+_STOP = {"a", "an", "the", "was", "were", "in", "on", "of", "to", "and", "did",
+         "not", "contain", "featured", "included", "from", "with", "for", "his",
+         "her", "its", "at", "by", "is", "are", "no", "tease", "teases", "jam",
+         "lyrics", "lyric", "changed", "ending", "played"}
+
+
+def same_note(a: str, b: str) -> bool:
+    """Is a curated footnote saying what phish.in already says?
+
+    "No whistling." vs "Did not contain the whistling ending." — different
+    wording, same fact. Compare content words: if either note's meaningful
+    words are almost entirely inside the other's, treat it as a duplicate.
+    """
+    def words(s):
+        return {w for w in re.split(r"[^a-z0-9]+", (s or "").lower()) if w and w not in _STOP}
+    wa, wb = words(a), words(b)
+    if not wa or not wb:
+        return False
+    small, big = (wa, wb) if len(wa) <= len(wb) else (wb, wa)
+    return len(small & big) / len(small) >= 0.7
+
+
+def chip(name: str, kind: str | None = None) -> str:
+    kind = kind or TAG_STYLE.get(name, "seg")
+    style = CHIP_BASE + CHIP_COLOR.get(kind, CHIP_COLOR["seg"])
+    return f'<span class="chip {kind}" style="{style}">{name}</span>'
+
+
+def apply_phishin(show: dict) -> dict:
+    """Fold the curated phish.in track map into the setlist.
+
+    The map lives at show["phishin"]["tracks"] keyed "<set label>:<1-based pos>"
+    and is the ONLY source of listen links: if a track isn't in the map we emit
+    no link at all rather than guessing a URL that 404s.  Track durations from
+    phish.in are the real recorded lengths and win over anything in the feed.
+    """
+    pi = show.get("phishin") or {}
+    tracks = pi.get("tracks") or {}
+    if not tracks:
+        return show
+    for s in show.get("sets", []):
+        label = str(s.get("label", "1"))
+        for i, song in enumerate(s.get("songs", [])):
+            t = tracks.get(f"{label}:{i + 1}")
+            if not t:
+                continue
+            song["_pi"] = t
+            if t.get("d"):
+                song["length_secs"] = t["d"]
+            elif t.get("m"):
+                # this song shares one phish.in track with its neighbours; the
+                # whole segment is timed on the first song of the group
+                song["length_secs"] = None
+    return show
 
 
 # ---------------------------------------------------------------- derived stats
@@ -86,6 +175,7 @@ def songs_of(show: dict) -> list[dict]:
                 "transition": song.get("transition") or "",
                 "length_secs": song.get("length_secs"),
                 "footnote": song.get("footnote"),
+                "pi": song.get("_pi"),
                 "set_label": label,
                 "set_display": s.get("display") or f"Set {label}",
                 "set_bucket": bucket(label),
@@ -132,6 +222,11 @@ def show_stats(show: dict) -> dict:
     longest = max(timed, key=lambda r: r["length_secs"]) if timed else None
     counts = Counter(r["title"] for r in rows)
     repeats = {t: c for t, c in counts.items() if c > 1}
+    shapes = repeat_shapes(show)
+    bustouts = sum(
+        1 for r in rows
+        if any(t.get("name") == "Bustout" for t in ((r.get("pi") or {}).get("tags") or []))
+    )
     blocks = show.get("sets", [])
     # An encore is not a set. Phish.net labels encores "e"/"e2"/"e3"; everything
     # else ("1", "2", "3") is a real set. Counting the encore as a set turns every
@@ -150,28 +245,111 @@ def show_stats(show: dict) -> dict:
         "avg": (total / len(timed)) if timed else 0,
         "footnotes": sum(1 for r in rows if r["footnote"]),
         "repeats": repeats,
+        "bustouts": bustouts,
+        "sandwiches": shapes["sandwiches"],
+        "fests": shapes["fests"],
+        "unresolved": shapes["unresolved"],
         "rows": rows,
     }
 
 
-def jam_profile(rows: list[dict]) -> list[dict]:
-    """The honest, no-audio version of a jam profile.
+# Songs whose reprise is a standing companion rather than a separate event.
+REPRISE_PARTNERS = {"Tweezer": "Tweezer Reprise"}
 
-    Compares each timed song against the median timed song of the show. Songs
-    running well past the median are where the show stretched out. This is
-    arithmetic on durations, not musical analysis — labelled as such on the page.
+
+def fest_name(title: str) -> str:
+    """Tweezer -> Tweezerfest. Multi-word titles keep the space."""
+    t = re.sub(r"^(The|A)\s+", "", (title or "").strip())
+    return f"{t}fest" if " " not in t else f"{t} fest"
+
+
+def repeat_shapes(show: dict) -> dict:
+    """Find the sandwiches, the fests, and the Tweezers left unresolved.
+
+    Phish vocabulary, which the earlier "reprises" counter got twice wrong:
+
+    * A **sandwich** is Song > other song(s) > Song: the same song returns after
+      an interruption, with the songs in between as the filling.
+    * A **fest** is one song played and re-jammed all night — three or more
+      helpings. Tweezerfest. A fest supersedes the sandwiches inside it,
+      otherwise a six-Tweezer night would report fifteen overlapping sandwiches.
     """
-    timed = sorted((r for r in rows if r["length_secs"]), key=lambda r: r["length_secs"])
+    sandwiches, fests = [], []
+    show_counts = Counter()
+    for s in show.get("sets", []):
+        for song in s.get("songs", []):
+            t = (song.get("title") or "").strip()
+            if t:
+                show_counts[t] += 1
+
+    festy = {t for t, c in show_counts.items() if c >= 3}
+
+    for t in sorted(festy, key=lambda x: (-show_counts[x], x)):
+        spots, filling, where = [], [], []
+        for s in show.get("sets", []):
+            titles = [(x.get("title") or "").strip() for x in s.get("songs", [])]
+            if t not in titles:
+                continue
+            where.append(s.get("display") or f"Set {s.get('label')}")
+            first, last = titles.index(t), len(titles) - 1 - titles[::-1].index(t)
+            for other in titles[first:last + 1]:
+                if other != t and other not in filling:
+                    filling.append(other)
+            spots.append((first, last))
+        fests.append({
+            "song": t,
+            "name": fest_name(t),
+            "count": show_counts[t],
+            "sets": where,
+            "filling": filling,
+        })
+
+    for s in show.get("sets", []):
+        label = s.get("display") or f"Set {s.get('label')}"
+        titles = [(x.get("title") or "").strip() for x in s.get("songs", [])]
+        seen = set()
+        for i, t in enumerate(titles):
+            if not t or t in festy or t in seen:
+                continue
+            later = [j for j in range(i + 1, len(titles)) if titles[j] == t]
+            if not later:
+                continue
+            seen.add(t)
+            j = later[-1]
+            filling = [x for x in titles[i + 1:j] if x != t]
+            if not filling:
+                continue  # back-to-back isn't a sandwich, it's one long song
+            sandwiches.append({"song": t, "set": label, "filling": filling})
+
+    # Reprises are NOT a finding. Tweezer Reprise accompanies Tweezer almost
+    # every time — it's a staple, usually the encore or the set closer, and
+    # saying "here is a reprise" tells a Phish fan nothing they don't know.
+    # The noteworthy case is the inverse: a Tweezer left unresolved. That's
+    # rare and usually deliberate — the band will hold the Reprise back to
+    # close out a run when Tweezer landed earlier in the weekend.
+    played = set(show_counts)
+    unresolved = [
+        song for song, rep in REPRISE_PARTNERS.items()
+        if song in played and rep not in played
+    ]
+    return {"sandwiches": sandwiches, "fests": fests, "unresolved": sorted(unresolved)}
+
+
+def jam_profile(rows: list[dict]) -> list[dict]:
+    """The longest versions of the night, and nothing more than that.
+
+    This used to print a ratio against the median timed song of the show, which
+    was arithmetic pretending to be analysis: a night stacked with short songs
+    inflates every ratio, so "2.99x" said nothing about whether that Bathtub Gin
+    was actually a big one. Answering that needs the song's own history, which
+    is a phish.in backfill we haven't done. Until then, list the durations
+    plainly and let them speak.
+    """
+    timed = [r for r in rows if r["length_secs"]]
     if len(timed) < 3:
         return []
-    mid = timed[len(timed) // 2]["length_secs"]
-    out = []
-    for r in timed:
-        ratio = r["length_secs"] / mid if mid else 1
-        if ratio >= 1.6:
-            out.append({**r, "ratio": round(ratio, 2)})
-    out.sort(key=lambda r: -r["length_secs"])
-    return out[:6]
+    timed.sort(key=lambda r: -r["length_secs"])
+    return timed[:6]
 
 
 def slugify(title: str) -> str:
@@ -305,6 +483,7 @@ def render_show(show: dict, prev: dict | None, nxt: dict | None, slugs: dict | N
 
     # --- setlist body
     body, fnotes, mi = [], [], 0
+    banter = []          # (song title, phish.in url, what it was, transcript)
     for s in show.get("sets", []):
         label = str(s.get("label", "1"))
         slist = s.get("songs", [])
@@ -314,11 +493,44 @@ def render_show(show: dict, prev: dict | None, nxt: dict | None, slugs: dict | N
         sub = f"{len(slist)} songs" + (f" · {fmt_len(set_total)} timed" if set_total else "")
         body.append(f'<div class="setblock"><div class="setname"><span>{head}</span><span class="sl">{e(sub)}</span></div><ol>')
         for song_i, song in enumerate(slist):
-            mark = ""
-            if song.get("footnote"):
-                mark = MARKS[mi] if mi < len(MARKS) else f"({mi+1})"
+            pi = song.get("_pi") or {}
+            pi_tags = pi.get("tags") or []
+            t_raw0 = (song.get("title") or "").strip()
+
+            # phish.in tag notes become footnotes alongside the curated ones, so
+            # a song can carry several marks (Makisupa is Alt Lyric AND Bustout).
+            # Two guards: songs sharing one merged phish.in track would otherwise
+            # repeat that track's notes once per song, and a curated footnote
+            # saying the same thing as phish.in's would print twice.
+            pi_notes = []
+            if not pi.get("m"):
+                for tg in pi_tags:
+                    n = (tg.get("notes") or "").strip()
+                    # a Tease note is bare ("The Well") — say what it is
+                    if n and tg.get("name") == "Tease":
+                        n = f"Tease: {n}"
+                    if n and n not in pi_notes:
+                        pi_notes.append(n)
+                    if (tg.get("name") in ("Banter", "Narration")) and tg.get("transcript"):
+                        banter.append((t_raw0, pi.get("u"), n or tg.get("name"), tg["transcript"]))
+            notes = []
+            if song.get("footnote") and not any(same_note(song["footnote"], n) for n in pi_notes):
+                notes.append(song["footnote"])
+            notes.extend(pi_notes)
+            marks = []
+            for n in notes:
+                mk = MARKS[mi] if mi < len(MARKS) else f"({mi+1})"
                 mi += 1
-                fnotes.append(f"{mark} {song['footnote']}")
+                marks.append(mk)
+                fnotes.append(f"{mk} {n}")
+            mark = "".join(marks)
+
+            chips = "".join(
+                chip(e(tg.get("name") or ""))
+                for tg in pi_tags if tg.get("name") not in ("Lore",)
+            )
+            if pi.get("n"):
+                chips += chip("Segued", "seg")
             ln = song.get("length_secs")
             tr = song.get("transition") or ""
             trs = f' <span class="tr">{e(tr)}</span>' if tr and tr != "," else ""
@@ -329,21 +541,20 @@ def render_show(show: dict, prev: dict | None, nxt: dict | None, slugs: dict | N
             slug = slugs.get(t_raw, slugify(t_raw)) if slugs else slugify(t_raw)
             t_html = (f'<a class="song-t" href="{BASE_PATH}/song/?s={slug}">{e(t_raw)}</a>'
                       if t_raw else '<span class="song-t"></span>')
-            # Listen link: once the show is complete the phish.in recording is
-            # (or will be) up. A curated top-level "phishin" map ("set:pos" ->
-            # exact track URL) wins; otherwise the show player. Inline-styled on
-            # purpose — cached stylesheets must not be able to hide it.
+            # Listen link. ONLY from the curated phish.in track map — a guessed
+            # URL 404s (phish.in posts a recording a day or two after the show),
+            # so no verified track means no link. Inline-styled on purpose:
+            # a cached stylesheet must not be able to hide it.
             listen = ""
-            if show.get("complete") and t_raw:
-                track = (show.get("phishin") or {}).get(f"{label}:{song_i + 1}")
-                url = track or f"https://phish.in/{date}"
+            url = pi.get("u")
+            if url and t_raw:
                 listen = (f' <a class="lsn" href="{e(url)}" rel="noopener" '
                           f'title="Listen on phish.in" aria-label="Listen to {e(t_raw)} on phish.in" '
                           f'style="color:var(--accent-soft);text-decoration:none;'
                           f'margin-left:.5rem;font-size:.85em;opacity:.75;">&#9835;</a>')
             body.append(
                 f'<li class="srow{big}"><div class="sline"><span>{t_html}'
-                f'{f" <span class=fn>{mark}</span>" if mark else ""}{trs}</span>'
+                f'{f" <span class=fn>{mark}</span>" if mark else ""}{trs}{chips}</span>'
                 f'<span class="len">{fmt_len(ln)}{listen}</span></div>{bar}</li>'
             )
         body.append("</ol></div>")
@@ -355,43 +566,123 @@ def render_show(show: dict, prev: dict | None, nxt: dict | None, slugs: dict | N
     for n in show.get("shownotes", []) or []:
         body.append(f'<div class="shownote">{e(n)}</div>')
 
+    # --- sandwiches, fests and the genuine reprises
+    shapes = []
+    for f in st["fests"]:
+        fill = ", ".join(f["filling"][:6]) + ("…" if len(f["filling"]) > 6 else "")
+        shapes.append(
+            f'<div class="shape" style="border:1px solid var(--border);border-left:3px solid #f0b429;'
+            f'border-radius:10px;padding:.8rem 1rem;margin-top:.7rem;">'
+            f'<div style="font-family:Fraunces,Georgia,serif;color:#f0b429;font-size:1.05rem;">'
+            f'🥪 {e(f["name"])}</div>'
+            f'<div style="color:var(--muted);font-size:.9rem;line-height:1.6;margin-top:.25rem;">'
+            f'{e(f["song"])} played <b>{f["count"]}×</b> in {e(", ".join(f["sets"]))}, re-jammed around '
+            f'{e(fill)}.</div></div>'
+        )
+    for s in st["sandwiches"]:
+        fill = ", ".join(s["filling"][:6]) + ("…" if len(s["filling"]) > 6 else "")
+        shapes.append(
+            f'<div class="shape" style="border:1px solid var(--border);border-left:3px solid var(--accent);'
+            f'border-radius:10px;padding:.8rem 1rem;margin-top:.7rem;">'
+            f'<div style="font-family:Fraunces,Georgia,serif;color:var(--accent-soft);font-size:1.05rem;">'
+            f'🥪 {e(s["song"])} sandwich</div>'
+            f'<div style="color:var(--muted);font-size:.9rem;line-height:1.6;margin-top:.25rem;">'
+            f'{e(s["song"])} &gt; {e(fill)} &gt; {e(s["song"])} · {e(s["set"])}</div></div>'
+        )
+    for song in st["unresolved"]:
+        shapes.append(
+            f'<div class="shape" style="border:1px solid var(--border);border-left:3px solid #ff9b9b;'
+            f'border-radius:10px;padding:.8rem 1rem;margin-top:.7rem;">'
+            f'<div style="font-family:Fraunces,Georgia,serif;color:#ff9b9b;font-size:1.05rem;">'
+            f'⁉ {e(song)}, no Reprise</div>'
+            f'<div style="color:var(--muted);font-size:.9rem;line-height:1.6;margin-top:.25rem;">'
+            f'{e(song)} went unresolved tonight. Rare, and usually deliberate — the Reprise '
+            f'often gets held back to cap a later night of the run.</div></div>'
+        )
+    if shapes:
+        body.append(
+            '<div class="shapes" style="margin-top:1.6rem;">'
+            '<div class="setname"><span>Sandwiches &amp; fests</span>'
+            f'<span class="sl">{len(shapes)} shape{"s" if len(shapes) != 1 else ""}</span></div>'
+            + "".join(shapes) + "</div>"
+        )
+
+    # --- from the stage: banter/narration excerpts, transcribed by phish.in.
+    # Excerpt + link, never the whole transcript — the full text is theirs.
+    if banter:
+        cards = []
+        for song_t, url, what, text in banter:
+            txt = " ".join(text.split())
+            clipped = txt[:230].rstrip()
+            if len(txt) > 230:
+                clipped = clipped.rsplit(" ", 1)[0] + " …"
+            more = (f' <a href="{e(url)}" rel="noopener" style="color:var(--accent-soft);">'
+                    "full transcript on phish.in →</a>") if url else ""
+            cards.append(
+                f'<div class="btr" style="border-left:2px solid var(--accent);padding:.15rem 0 .15rem .9rem;margin:.9rem 0;">'
+                f'<div style="font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);">'
+                f'{e(song_t)} · {e(what)}</div>'
+                f'<p style="margin:.35rem 0 0;font-style:italic;">“{e(clipped)}”</p>'
+                f'<div style="font-size:.8rem;margin-top:.3rem;color:var(--muted);">transcript: phish.in{more}</div>'
+                f"</div>"
+            )
+        body.append(
+            '<div class="stage" style="margin-top:1.6rem;">'
+            '<div class="setname"><span>From the stage</span>'
+            f'<span class="sl">{len(banter)} moment{"s" if len(banter) != 1 else ""}</span></div>'
+            + "".join(cards) + "</div>"
+        )
+
     # --- glance strip
-    reps = st["repeats"]
-    rep_txt = f"{sum(reps.values()) - len(reps)}" if reps else "0"
+    # "Reprises" used to mean "songs played more than once", which is not what a
+    # reprise is. A repeated song is a sandwich (or a fest); a reprise is a song
+    # in its own right — Tweezer Reprise. The tile now leads with the fest when
+    # there is one, since that's the headline of a night like 7/25.
+    if st["fests"]:
+        shape_v, shape_l = st["fests"][0]["name"], "Fest"
+    else:
+        shape_v, shape_l = len(st["sandwiches"]), "Sandwiches"
     glance = [
         ("songs", st["songs"], "Songs"),
         ("sets", st["sets"], "Sets"),
         ("timed", fmt_len(st["timed_total"]) or "—", "Timed"),
         ("longest", (st["longest"]["title"] if st["longest"] else "—"), "Longest"),
-        ("reps", rep_txt, "Reprises"),
-        ("notes", st["footnotes"], "Notes"),
+        ("shape", shape_v, shape_l),
+        ("bust", st["bustouts"] or st["footnotes"], "Bustouts" if st["bustouts"] else "Notes"),
     ]
-    glance_html = "".join(
-        f'<div class="stat"><div class="n">{e(v)}</div><div class="l">{e(l)}</div></div>'
-        for _k, v, l in glance
-    )
+    def _tile(v, l):
+        # A long unbroken word (a fest name, a one-word song title) overflows the
+        # tile at full size — step it down rather than let it clip.
+        t = str(v)
+        sz = "font-size:1rem;" if len(t) > 13 else ("font-size:1.2rem;" if len(t) > 9 else "")
+        return (f'<div class="stat"><div class="n" style="{sz}overflow-wrap:anywhere;line-height:1.25;">'
+                f'{e(t)}</div><div class="l">{e(l)}</div></div>')
+
+    glance_html = "".join(_tile(v, l) for _k, v, l in glance)
 
     # --- the lab section
     jams = jam_profile(rows)
     if jams:
         lab_rows = "".join(
             f'<li><span>{e(j["title"])} <span style="color:var(--muted);font-size:.85em">· {e(j["set_display"])}</span></span>'
-            f'<span class="x">{fmt_len(j["length_secs"])} · {j["ratio"]}×</span></li>'
+            f'<span class="x">{fmt_len(j["length_secs"])}</span></li>'
             for j in jams
         )
         lab = (
             '<span class="lab">Machine-generated</span>'
+            '<div class="setname" style="border:none;margin-bottom:.2rem;"><span>Longest of the night</span></div>'
             f"<ul>{lab_rows}</ul>"
-            '<p class="cav">Ratio compares each song against the median timed song of this show — '
-            "a rough read on where the night stretched out. This is arithmetic on durations, not audio "
-            "analysis; real audio work (tempo, energy, segment detection off the phish.in recording) "
-            "lands here next.</p>"
+            '<p class="cav">Straight off the phish.in timings, longest first. What this can’t tell '
+            "you yet is whether any of these is a big version — that needs each song’s own history "
+            "to compare against, which is the next thing to pull in. After that: phish.in publishes a "
+            "jam-start marker per track, so the composed section and the improvisation can be separated "
+            "and measured properly. That’s what belongs in this tube.</p>"
         )
     else:
         lab = (
             '<span class="lab">Machine-generated</span>'
-            '<p class="cav">Not enough timed songs in this show yet to profile. Durations firm up once '
-            "phish.in posts the recording — check back.</p>"
+            '<p class="cav">Nothing timed yet. Durations arrive when phish.in posts the recording, '
+            "usually a day or two after the show.</p>"
         )
 
     # --- sources
