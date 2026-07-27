@@ -47,7 +47,7 @@ jobs:
         run: |
           git config user.name "setlist-lizard builder"
           git config user.email "builder@mikeside.com"
-          git add projects/setlistlizard_with
+          git add setlistlizard-with
           if git diff --cached --quiet; then
             echo "No changes — nothing to deploy."
             exit 0
