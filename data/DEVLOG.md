@@ -4,10 +4,21 @@ The front page's **Dev Log** section (`/#devlog`) renders one tile per public
 project and a merged wire of dev notes / patch notes underneath. Everything it
 shows comes from JSON feeds; no HTML edits are ever needed to post.
 
+## Two similarly-named projects — don't confuse them
+
+- **Setlist Prophet** (`setlist-predictions`) — the prediction models, at
+  `/projects/setlist-predictions/`. Renamed from "Phish Setlist Predictions"
+  on 2026-07-27; its models are the **Forbin** line, v5–v10. Hosted in this repo.
+- **Phish Setlist Bot** (`setlist-bot`) — the posting bot and its integration
+  diagram, in its own repo, feeding in from raw.githubusercontent.com.
+
+They are separate tiles with separate feeds. A rename to one is never a rename
+to the other.
+
 ## Where entries live
 
 - **Projects hosted in this repo** (mikeside.com itself, SUP Maine,
-  Setlist Lizard ... With, Phish Setlist Predictions): append an entry to
+  Setlist Lizard ... With, Setlist Prophet): append an entry to
   `data/devlog.json` → `entries[]`. The next deploy publishes it.
 - **Projects in their own repo** (Phish Setlist Bot): keep a `devlog.json`
   anywhere raw-fetchable (the bot uses
@@ -49,6 +60,11 @@ Add one object to `projects[]`:
 
 Current ids: `mikeside`, `supmaine`, `setlist-lizard`, `setlist-predictions`,
 `setlist-bot`.
+
+**Renaming a tile:** change `projects[].name` only. The `id` is referenced by
+every entry and by `feeds[]`, so changing it silently drops the whole history
+— entries with unknown project ids are discarded without warning. `setlist-
+predictions` keeps its id even though the project is now called Setlist Prophet.
 
 **Excluded by policy:** private projects (Personal Dashboard, Dangle My
 Stash) do not post here. This log is public; never include anything that
