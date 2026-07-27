@@ -49,6 +49,26 @@ header {
 .nav ul a:hover, .nav ul a.active { color: var(--text); text-decoration: none; }
 .nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
 
+/* HIDDEN 2026-07-27 — Photos, Videos and Blog are unlinked site-wide while
+   those sections are empty. The front page and /projects/ have their <li>s
+   commented out in the HTML; every other page that links this stylesheet
+   (the Setlist Lizard board, all generated show/song/stats/credits pages)
+   still carries them in markup, because those are written by
+   tools/build_setlistlizard.py and a hand edit would be overwritten on the
+   next build. This is the single switch that covers all of them.
+   TO RESTORE: delete this block, and uncomment the <li>s in index.html and
+   projects/index.html. The durable fix is to drop the three lines from the
+   nav template in tools/build_setlistlizard.py and let the build regenerate
+   — do that and this block can go.
+   The second rule is a fallback for any browser without :has(); it hides the
+   link but leaves an empty list item. */
+.nav ul li:has(> a[href="/photos/"]),
+.nav ul li:has(> a[href="/videos/"]),
+.nav ul li:has(> a[href="/blog/"]) { display: none; }
+.nav ul a[href="/photos/"],
+.nav ul a[href="/videos/"],
+.nav ul a[href="/blog/"] { display: none; }
+
 /* ---------- Hero ---------- */
 .hero { padding: 5rem 0 4.5rem; }
 .hero-grid {
