@@ -411,7 +411,11 @@ FOOTER = """  <footer>
   <script src="/js/main.js"></script>"""
 
 
-SHOW_CSS_HREF = "/css/setlistlizard.css?v=4"
+SHOW_CSS_HREF = "/css/setlistlizard.css?v=5"
+
+# Shared runtime: the inline player and the Lab pies. It enhances markup that
+# already exists (♫ links, the labpies container), so pages stay plain HTML.
+LIZARD_JS = '<script src="/setlistlizard-with/js/lizard.js?v=1" defer></script>'
 
 
 def pager_html(prev: dict | None, nxt: dict | None, top: bool = False) -> str:
@@ -757,6 +761,17 @@ def render_show(show: dict, prev: dict | None, nxt: dict | None, slugs: dict | N
       </div>
     </section>"""
 
+    # The Lab pies render client-side (lizard.js) from this embedded list of
+    # tonight's unique songs joined against data/song_meta.json — one shared
+    # implementation instead of a Python copy and a JS copy drifting apart.
+    uniq, seen_slugs = [], set()
+    for r in rows:
+        sl = slugs.get(r["title"], slugify(r["title"])) if slugs else slugify(r["title"])
+        if r["title"] and sl not in seen_slugs:
+            seen_slugs.add(sl)
+            uniq.append({"t": r["title"], "s": sl})
+    lab_json = json.dumps({"showdate": date, "songs": uniq}, ensure_ascii=False)
+
     curve = energy_curve(rows, slugs or {})
     curve_html = (
         '<div class="curvewrap"><div class="curvehead"><span>The shape of the night</span>'
@@ -808,6 +823,8 @@ def render_show(show: dict, prev: dict | None, nxt: dict | None, slugs: dict | N
           <h2>It's so stupendous, living in this tube</h2>
         </div>
         <div class="tube">{lab}</div>
+        <div class="labpies" id="lizard-lab-pies"></div>
+        <script type="application/json" id="lizard-lab-data">{lab_json}</script>
       </div>
     </section>
 {media_html}
@@ -825,6 +842,7 @@ def render_show(show: dict, prev: dict | None, nxt: dict | None, slugs: dict | N
     </section>
   </main>
 {FOOTER}
+{LIZARD_JS}
 </body>
 </html>
 """
@@ -938,6 +956,7 @@ def render_song(entry: dict, all_slugs: dict) -> str:
     </section>
   </main>
 {FOOTER}
+{LIZARD_JS}
 </body>
 </html>
 """
@@ -1017,6 +1036,16 @@ def main() -> int:
     (root / "data" / "tour.json").write_text(
         json.dumps(tour, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"  dashboard: {len(tour['songs'])} song rows across {len(shows)} shows")
+
+    # TEMPORARY BRIDGE — remove once .github/workflows/build-shows.yml stages
+    # "setlistlizard-with" instead of the old "projects/setlistlizard_with".
+    # The workflow's commit step still adds the old path (this tool can't edit
+    # workflow files), so in CI we stage our own output; the workflow's
+    # `git diff --cached --quiet` then sees it and commits as usual.
+    if os.environ.get("GITHUB_ACTIONS") and str(args.out) == ".":
+        import subprocess
+        subprocess.run(["git", "add", "setlistlizard-with"], check=False)
+        print("  staged setlistlizard-with for the workflow's commit step")
     return 0
 
 
