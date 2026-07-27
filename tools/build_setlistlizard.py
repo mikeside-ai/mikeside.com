@@ -411,7 +411,28 @@ FOOTER = """  <footer>
   <script src="/js/main.js"></script>"""
 
 
-SHOW_CSS_HREF = "/css/setlistlizard.css?v=3"
+SHOW_CSS_HREF = "/css/setlistlizard.css?v=4"
+
+
+def pager_html(prev: dict | None, nxt: dict | None, top: bool = False) -> str:
+    """Show-to-show navigation, rendered twice per page.
+
+    The bottom copy scrolls away on a three-set night, so the same pager also
+    sits directly above the setlist. Both are the same markup; the top one is
+    just smaller.
+    """
+    parts = []
+    for show, label, cls in ((prev, "← Previous show", ""), (nxt, "Next show →", "")):
+        if not show:
+            parts.append("<span></span>")
+            continue
+        parts.append(
+            f'<a href="{BASE_PATH}/{show["showdate"]}/"{cls}><span>'
+            f'<span class="pg-l">{label}</span>'
+            f'<span class="pg-v">{e(short_date(show["showdate"]))} · {e(show.get("venue", ""))}</span>'
+            f"</span></a>"
+        )
+    return f'<div class="pager{" top" if top else ""}">{"".join(parts)}</div>'
 
 
 def energy_curve(rows: list[dict], slugs: dict) -> str:
@@ -566,7 +587,7 @@ def render_show(show: dict, prev: dict | None, nxt: dict | None, slugs: dict | N
     for n in show.get("shownotes", []) or []:
         body.append(f'<div class="shownote">{e(n)}</div>')
 
-    # --- sandwiches, fests, and the Tweezer left unresolved
+    # --- sandwiches, fests and the genuine reprises
     shapes = []
     for f in st["fests"]:
         fill = ", ".join(f["filling"][:6]) + ("…" if len(f["filling"]) > 6 else "")
@@ -686,7 +707,7 @@ def render_show(show: dict, prev: dict | None, nxt: dict | None, slugs: dict | N
         )
 
     # --- sources
-    q = f"{date[:4]}-{date[5:7]}-{date[8:10]}"
+    q = date.replace("-", "")
     pn = show.get("phishnet_url") or f"https://phish.net/setlists/?d={q}"
     reddit = f"https://www.reddit.com/r/phish/search/?q={venue.replace(' ', '+')}+{short_date(date).replace(' ', '+')}&restrict_sr=1&sort=relevance"
     srcs = [
@@ -699,15 +720,8 @@ def render_show(show: dict, prev: dict | None, nxt: dict | None, slugs: dict | N
         f'<a href="{e(u)}" rel="noopener">{e(n)}<span class="w">{e(w)}</span></a>' for u, n, w in srcs
     )
 
-    pager = []
-    if prev:
-        pager.append(f'<a href="{BASE_PATH}/{prev["showdate"]}/">← {e(short_date(prev["showdate"]))} · {e(prev.get("venue",""))}</a>')
-    else:
-        pager.append("<span></span>")
-    if nxt:
-        pager.append(f'<a href="{BASE_PATH}/{nxt["showdate"]}/">{e(short_date(nxt["showdate"]))} · {e(nxt.get("venue",""))} →</a>')
-    else:
-        pager.append("<span></span>")
+    pager_top = pager_html(prev, nxt, top=True)
+    pager_bottom = pager_html(prev, nxt)
 
     # Curated media: official posts from the night, embedded rather than
     # re-hosted — the platforms render their own photos and carry the credit.
@@ -778,9 +792,10 @@ def render_show(show: dict, prev: dict | None, nxt: dict | None, slugs: dict | N
           <p>{e(loc)}</p>
         </div>
         <div class="glance">{glance_html}</div>
+        {pager_top}
         <div class="board">{''.join(body)}</div>
         {curve_html}
-        <div class="pager">{''.join(pager)}</div>
+        {pager_bottom}
       </div>
     </section>
 
@@ -801,8 +816,10 @@ def render_show(show: dict, prev: dict | None, nxt: dict | None, slugs: dict | N
         <div class="section-head"><span class="setno">Elsewhere</span><h2>Go deeper</h2></div>
         {f'<div class="srcs">{srcs_html}</div>'}
         <div class="srcline">
-          Setlist data: Phish.net · durations: phish.in · lengths are live estimates until the recording posts<br />
-          <a href="{BASE_PATH}/stats/">tour stats</a> · <a href="{BASE_PATH}/">all shows</a> · <a href="/projects/">← all projects</a>
+          Setlist data: <a href="https://phish.net/" rel="noopener">Phish.net</a> ·
+          audio, durations, tags and banter: <a href="https://phish.in/" rel="noopener">phish.in</a> ·
+          lengths are live estimates until the recording posts<br />
+          <a href="{BASE_PATH}/credits/">credits &amp; FAQ</a> · <a href="{BASE_PATH}/stats/">tour stats</a> · <a href="{BASE_PATH}/">all shows</a> · <a href="/projects/">← all projects</a>
         </div>
       </div>
     </section>
@@ -912,8 +929,10 @@ def render_song(entry: dict, all_slugs: dict) -> str:
           {spread}
         </div>
         <div class="srcline">
-          Setlist data: Phish.net · durations: phish.in · only shows the bot has tracked appear here<br />
-          <a href="{BASE_PATH}/stats/">tour stats</a> · <a href="{BASE_PATH}/">all shows</a> · <a href="/projects/">← all projects</a>
+          Setlist data: <a href="https://phish.net/" rel="noopener">Phish.net</a> ·
+          audio, durations, tags and banter: <a href="https://phish.in/" rel="noopener">phish.in</a> ·
+          only shows the bot has tracked appear here<br />
+          <a href="{BASE_PATH}/credits/">credits &amp; FAQ</a> · <a href="{BASE_PATH}/stats/">tour stats</a> · <a href="{BASE_PATH}/">all shows</a> · <a href="/projects/">← all projects</a>
         </div>
       </div>
     </section>
