@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://mikeside.com/projects/setlistlizard_with/song/" />
   <link rel="stylesheet" href="/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/setlistlizard.css?v=2" />
+  <link rel="stylesheet" href="/css/setlistlizard.css" />
 </head>
 <body>
   <header>
@@ -106,10 +106,14 @@
             var t = (song.title || "").trim();
             if (slug(t) !== target) return;
             title = title || t;
+            // Mirrors apply_phishin() in tools/build_setlistlizard.py — the
+            // curated map carries the real recorded length and the track URL.
+            var pt = ((sh.phishin || {}).tracks || {})[String(st.label) + ":" + (i + 1)] || null;
             versions.push({
               title: t, showdate: sh.showdate, venue: sh.venue || "",
               set_display: st.display || ("Set " + st.label), set_bucket: bucketOf(st.label),
-              pos_in_set: i + 1, length_secs: song.length_secs, footnote: song.footnote
+              pos_in_set: i + 1, length_secs: pt ? (pt.d || null) : song.length_secs,
+              listen: pt ? pt.u : null, footnote: song.footnote
             });
           });
         });
@@ -156,7 +160,10 @@
           '<div class="vtop"><span class="vd">' + esc(shortDate(v.showdate)) + "</span>" +
           '<span class="vv">' + esc(v.venue) + "</span>" +
           '<span class="vs">' + esc(v.set_display) + " · #" + v.pos_in_set + "</span>" +
-          '<span class="vl">' + (fmt(v.length_secs) || "—") + "</span></div>" +
+          '<span class="vl">' + (fmt(v.length_secs) || "—") +
+          (v.listen ? ' <span class="lsn" data-href="' + esc(v.listen) + '" title="Listen on phish.in" ' +
+            'style="color:var(--accent-soft);margin-left:.4rem;font-size:.85em;opacity:.8;cursor:pointer;">&#9835;</span>' : "") +
+          "</span></div>" +
           (v.length_secs ? '<div class="vbar" style="width:' + w.toFixed(1) + '%"></div>' : "") +
           (v.footnote ? '<div class="vfn">' + esc(v.footnote) + "</div>" : "") + "</a>";
       }).join("");
@@ -175,6 +182,16 @@
         '<div class="setname"><span>Where it lands</span></div>' + plcHtml +
         '<div class="setname" style="margin-top:1.6rem;"><span>Every version</span><span class="sl">newest last</span></div>' +
         '<div class="vlist">' + rows + "</div>" + spread;
+
+      // The ♫ sits inside the row's <a>, so it can't be an <a> itself.
+      // Intercept the click before the row navigates to the show page.
+      board.addEventListener("click", function (ev) {
+        var el = ev.target.closest && ev.target.closest(".lsn[data-href]");
+        if (!el) return;
+        ev.preventDefault();
+        ev.stopPropagation();
+        window.open(el.getAttribute("data-href"), "_blank", "noopener");
+      });
     }).catch(function () {
       bail("Couldn't load the tour data right now — try a refresh.");
     });
