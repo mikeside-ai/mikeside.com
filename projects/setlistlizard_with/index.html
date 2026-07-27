@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
   <!-- Same stylesheet the generated show pages link, so the live board and an
        archive page are the same object rendered from different sources. -->
-  <link rel="stylesheet" href="/css/setlistlizard.css?v=3" />
+  <link rel="stylesheet" href="/css/setlistlizard.css?v=4" />
   <style>
     .badge {
       display:inline-flex; align-items:center; gap:.45rem; font-size:.72rem; font-weight:600;
@@ -69,6 +69,7 @@
           <p id="headLoc"></p>
         </div>
         <div id="glance"></div>
+        <div class="pager top" id="pagerTop"></div>
         <div class="board" id="board"><div class="empty">Loading…</div></div>
         <div id="curve"></div>
         <div class="pager" id="pager"></div>
@@ -112,8 +113,10 @@
         </div>
         <div class="show-list" id="showlist"><div class="empty">Loading…</div></div>
         <div class="srcline">
-          Setlist data: Phish.net · durations and tags: phish.in · lengths are live estimates until the recording posts<br />
-          <a href="/projects/setlistlizard_with/stats/">tour stats</a> · <a href="/projects/setlistlizard_with/integration-diagram.html">how the bot works</a> · <a href="/projects/">← all projects</a>
+          Setlist data: <a href="https://phish.net/" rel="noopener">Phish.net</a> ·
+          audio, durations, tags and banter: <a href="https://phish.in/" rel="noopener">phish.in</a> ·
+          lengths are live estimates until the recording posts<br />
+          <a href="/projects/setlistlizard_with/credits/">credits &amp; FAQ</a> · <a href="/projects/setlistlizard_with/stats/">tour stats</a> · <a href="/projects/setlistlizard_with/integration-diagram.html">how the bot works</a> · <a href="/projects/">← all projects</a>
         </div>
       </div>
     </section>
@@ -148,7 +151,8 @@
       labSection: document.getElementById("labSection"), media: document.getElementById("media"),
       mediaSection: document.getElementById("mediaSection"), srcs: document.getElementById("srcs"),
       srcSection: document.getElementById("srcSection"), showlist: document.getElementById("showlist"),
-      pager: document.getElementById("pager")
+      pager: document.getElementById("pager"),
+      pagerTop: document.getElementById("pagerTop")
     };
     var ALL = [];        // every tracked showdate, oldest first
     var META = {};       // showdate -> {venue, city, state} for the pager labels
@@ -328,6 +332,7 @@
         el.board.innerHTML = '<div class="empty">Nothing on stage right now — the archive below has every show we’ve kept.</div>';
         el.glance.innerHTML = ""; el.curve.innerHTML = ""; el.fullpage.innerHTML = "";
         if (el.pager) el.pager.innerHTML = "";
+        if (el.pagerTop) el.pagerTop.innerHTML = "";
         el.labSection.hidden = el.mediaSection.hidden = el.srcSection.hidden = true;
         return;
       }
@@ -405,7 +410,7 @@
       if (show.note) html.push('<div class="shownote">' + esc(show.note) + "</div>");
       (show.shownotes || []).forEach(function (n) { html.push('<div class="shownote">' + esc(n) + "</div>"); });
 
-      // sandwiches, fests, unresolved Tweezers
+      // sandwiches, fests, reprises
       var shp = shapesOf(show), shapes = [];
       shp.fests.forEach(function (f) {
         var fill = f.filling.slice(0, 6).join(", ") + (f.filling.length > 6 ? "…" : "");
@@ -537,9 +542,13 @@
     // Prev/next across every tracked show. Same markup and styling as the
     // generated show pages, so the board navigates the run the same way.
     function drawPager(current) {
-      if (!el.pager) return;
+      var hosts = [el.pager, el.pagerTop].filter(Boolean);
+      if (!hosts.length) return;
       var i = ALL.indexOf(current);
-      if (i < 0 || ALL.length < 2) { el.pager.innerHTML = ""; return; }
+      if (i < 0 || ALL.length < 2) {
+        hosts.forEach(function (h) { h.innerHTML = ""; });
+        return;
+      }
       var prev = i > 0 ? ALL[i - 1] : null;
       var next = i < ALL.length - 1 ? ALL[i + 1] : null;
       function btn(date, dir) {
@@ -550,9 +559,14 @@
           '<span><span class="pg-l">' + label + '</span>' +
           '<span class="pg-v">' + esc(shortDate(date)) + " · " + esc(meta.venue || "") + "</span></span></a>";
       }
-      el.pager.innerHTML = btn(prev, "prev") + btn(next, "next");
-      Array.prototype.forEach.call(el.pager.querySelectorAll("a[data-d]"), function (a) {
-        a.addEventListener("click", function (ev) { ev.preventDefault(); goto(a.getAttribute("data-d")); });
+      // Both copies are identical — the top one exists because the bottom
+      // scrolls out of reach on a three-set night.
+      var html = btn(prev, "prev") + btn(next, "next");
+      hosts.forEach(function (h) {
+        h.innerHTML = html;
+        Array.prototype.forEach.call(h.querySelectorAll("a[data-d]"), function (a) {
+          a.addEventListener("click", function (ev) { ev.preventDefault(); goto(a.getAttribute("data-d")); });
+        });
       });
     }
 
