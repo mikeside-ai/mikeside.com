@@ -303,7 +303,7 @@
           <div class="bet"><div class="pc">80%</div><div class="bd"><div class="bn">Crosseyed and Painless &middot; Wednesday</div><div class="bx">From <em>Remain in Light</em>, the Halloween 1996 costume. Unlike Drowned it is a living song — 8% of every show, and eight MSG appearances weighted to marquee nights.</div></div></div>
         </div>
         <p class="mdl-foot"><b>Live record: 16 of 40 across two nights</b>, against a random baseline of 7.4. Everything else on this page that scores better was computed after the fact and is labelled as such. <a href="#method" style="color:var(--accent);font-weight:600">Full method and every correction ↓</a></p>
-        <p class="mdl-foot" style="margin-top:8px;padding-top:10px;border-top:1px dashed var(--grid)"><b>v9 is released, on the back of 100 simulations</b> against held-out shows from 1994 to 2026. It adds one thing to plain frequency &mdash; a song played recently is about half as likely as its rate suggests &mdash; and fixes the odds. It caught 828 of 2,281 songs, 2.68&times; random, and took 182 more ladder points than v7. <a href="./kpi.html" style="color:var(--accent);font-weight:600">100-simulation KPI dashboard &rarr;</a></p>
+        <p class="mdl-foot" style="margin-top:8px;padding-top:10px;border-top:1px dashed var(--grid)"><b>v9 is released, on the back of 100 simulations</b> against held-out shows from 1994 to 2026. It adds one thing to plain frequency &mdash; a song played recently is about half as likely as its rate suggests &mdash; and fixes the odds. All five versions ran: <b>v9 828, v7 806, v8 765, v6 699, v5 592</b>, against 309 for random. <a href="./kpi.html" style="color:var(--accent);font-weight:600">100-simulation KPI dashboard &rarr;</a></p>
       </div>
     </div>
 
@@ -368,7 +368,8 @@
     <p><b>On the ten-pick ladder the three real bots land within three points of each other on a 55-point scale.</b> v5, v6 and v7 disagree about method loudly and about outcomes barely — because they share a frequency core that does essentially all the work. The arguing this week was over the last few slots.</p>
     <p><b>v6 would have beaten v7.</b> The version retracted hours before showtime — cover quota, album-year reasoning, the one I called most likely to look foolish — scores 43 to v7's 42, because it carried Tweezer high and had Wolfman's Brother. It is a fitted number, but the ranking is uncomfortable and worth keeping visible.</p>
     <p><b>v8's 54 is meaningless</b> and is listed only for completeness. It picks Back in the U.S.S.R., Purple Rain and Catapult — three songs already known to have been played. A bot built after the fact will always win a contest scored on that night.</p>
-    <p>The honest reading: on this evidence there is no demonstrated skill gap between the model versions, only a large gap between all of them and random. See the scorecard for why beating random is a weaker claim than it sounds.</p>
+    <p><b>Settled since, at scale.</b> All five versions have now run against 100 held-out shows: <b>v9 828 &middot; v7 806 &middot; v8 765 &middot; v6 699 &middot; v5 592</b>, random 309. The #94 ordering was not noise after all &mdash; v8's reserved slots lose 41 songs to plain frequency and lose head-to-head on 43 shows against 11. v6, v7 and v8 post <em>identical</em> ladder scores there, because they share a frequency head and differ only in slots worth no ladder points. <a href="./kpi.html" style="color:var(--accent);font-weight:600">Full results &rarr;</a></p>
+    <p>The honest reading of this table alone: on #94 evidence there is no demonstrated skill gap between the model versions, only a large gap between all of them and random. See the scorecard for why beating random is a weaker claim than it sounds.</p>
   </details>
 
   <details class="box">
@@ -703,7 +704,7 @@
         ]) } }
   ]};
 
-  var KEY="phish-msg-v90", state, active=0;
+  var KEY="phish-msg-v91", state, active=0;
   function clone(o){ return JSON.parse(JSON.stringify(o)); }
   function load(){ try{ var r=localStorage.getItem(KEY); if(r){ state=JSON.parse(r); return true; } }catch(e){} state=clone(DEFAULTS); return false; }
   function save(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
