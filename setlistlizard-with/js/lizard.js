@@ -347,7 +347,9 @@
 
     html.push(panel("When it debuted",
       "Tonight’s unique songs by the era Phish first played them (earliest phish.in recording).",
-      tally(known.map(function (r) { return eraOf(+r.m.debut.slice(0, 4)); })),
+      tally(known.map(function (r) {
+        return r.m.debut ? eraOf(+String(r.m.debut).slice(0, 4)) : null;
+      })),
       { order: ERAS }));
 
     html.push(panel("Album representation",
@@ -399,9 +401,76 @@
         " song" + (unknown === 1 ? "" : "s") + " not in the metadata file yet — they join on the next curation pass.</p>" : "");
   }
 
+  /* ================================ themes ================================ */
+  // dark (site default) → light → hulk (green & purple) → donut (Fishman's
+  // muumuu: cerulean field, crimson donuts). The palettes ship as an injected
+  // <style> from initTheme(); this cycles the html attribute and remembers
+  // the pick.
+
+  var THEMES = [
+    { id: "dark",  icon: "🌙", label: "Dark" },
+    { id: "light", icon: "☀️", label: "Light" },
+    { id: "hulk",  icon: "💚", label: "Hulk — green & purple" },
+    { id: "donut", icon: "🍩", label: "Donut — the muumuu" }
+  ];
+
+  function getTheme() {
+    try { return localStorage.getItem("lzTheme") || "dark"; }
+    catch (e) { return "dark"; }
+  }
+
+  function applyTheme(id) {
+    if (id === "dark") document.documentElement.removeAttribute("data-lz-theme");
+    else document.documentElement.setAttribute("data-lz-theme", id);
+    try { localStorage.setItem("lzTheme", id); } catch (e) {}
+    var btn = document.getElementById("lz-theme");
+    if (btn) {
+      var t = THEMES.filter(function (x) { return x.id === id; })[0] || THEMES[0];
+      btn.textContent = t.icon;
+      btn.title = "Theme: " + t.label + " — click to switch";
+      btn.setAttribute("aria-label", btn.title);
+    }
+  }
+
+  function initTheme() {
+    // Palettes + switcher styles ride inside the runtime (same trick as the
+    // player bar css) so the stylesheet never needs a version bump for them.
+    if (!document.getElementById("lizard-theme-css")) {
+      var st = document.createElement("style");
+      st.id = "lizard-theme-css";
+      st.textContent =
+        'html[data-lz-theme="light"]{--bg:#f5f1e8;--bg-soft:#ece7db;--card:#fffdf7;' +
+        '--text:#241e15;--muted:#6d675a;--accent:#b23c27;--accent-soft:#8f2f1c;--border:#d9d2c2;}' +
+        'html[data-lz-theme="light"] .lenbar{opacity:.85;}' +
+        'html[data-lz-theme="hulk"]{--bg:#150a22;--bg-soft:#1d0f2f;--card:#241239;' +
+        '--text:#e9f6e3;--muted:#a89ec6;--accent:#4ed04f;--accent-soft:#86e987;--border:#3c2660;}' +
+        'html[data-lz-theme="donut"]{--bg:#0d3e5c;--bg-soft:#0f4868;--card:#115177;' +
+        '--text:#eef8ff;--muted:#a3c9dc;--accent:#e0324e;--accent-soft:#ff7a8e;--border:#1c6390;}' +
+        '#lz-theme{position:fixed;right:.9rem;bottom:.9rem;z-index:60;width:46px;height:46px;' +
+        'border-radius:50%;border:1px solid var(--border);background:var(--card);color:var(--text);' +
+        'font-size:1.3rem;line-height:1;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.35);' +
+        'transition:transform .15s ease;}' +
+        '#lz-theme:hover{transform:scale(1.08);}' +
+        '@media (max-width:640px){#lz-theme{right:.6rem;bottom:.6rem;width:42px;height:42px;}}';
+      document.head.appendChild(st);
+    }
+    applyTheme(getTheme());
+    if (document.getElementById("lz-theme") || !document.body) return;
+    var btn = document.createElement("button");
+    btn.id = "lz-theme";
+    btn.type = "button";
+    document.body.appendChild(btn);
+    btn.addEventListener("click", function () {
+      var cur = getTheme(), i = 0;
+      THEMES.forEach(function (t, n) { if (t.id === cur) i = n; });
+      applyTheme(THEMES[(i + 1) % THEMES.length].id);
+    });
+    applyTheme(getTheme());
+  }
+
   /* ================================ wiring ================================ */
 
-  function refresh() { injectButtons(); getMeta().then(renderPies); }
+  function refresh() { injectButtons(); getMeta().then(renderPies); initTheme(); }
   document.addEventListener("lizard:refresh", refresh);
   document.addEventListener("lizard:lab", function () { getMeta().then(renderPies); });
   if (document.readyState === "loading") {
