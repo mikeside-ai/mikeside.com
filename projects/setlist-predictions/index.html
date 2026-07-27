@@ -288,7 +288,7 @@
     <p class="sub">Five nights at Madison Square Garden — Phish's 92nd through 96th shows there, each themed to a year, <b>1992 → 1996</b>. Three played, two to go. Predictions, the model behind them, and an honest scorecard.</p>
 
     <div class="mdl">
-      <div class="mdl-h"><span class="t">How the model works</span><span class="v">v9 &mdash; released 27 Jul</span></div>
+      <div class="mdl-h"><span class="t">How the model works</span><span class="v">v10 &mdash; released 27 Jul</span></div>
       <div class="mdl-b">
         <p class="mdl-lede">Each night is themed to a year. The model ranks that year's songs by how often Phish actually played them, throws out everything already used earlier in the run, and takes the top twenty. Reserved slots are gone — the backtest measured them losing twice. What is left is frequency, rotation state, and honest odds.</p>
         <div class="mdl-steps">
@@ -303,14 +303,14 @@
           <div class="bet"><div class="pc">80%</div><div class="bd"><div class="bn">Crosseyed and Painless &middot; Wednesday</div><div class="bx">From <em>Remain in Light</em>, the Halloween 1996 costume. Unlike Drowned it is a living song — 8% of every show, and eight MSG appearances weighted to marquee nights.</div></div></div>
         </div>
         <p class="mdl-foot"><b>Live record: 16 of 40 across two nights</b>, against a random baseline of 7.4. Everything else on this page that scores better was computed after the fact and is labelled as such. <a href="#method" style="color:var(--accent);font-weight:600">Full method and every correction ↓</a></p>
-        <p class="mdl-foot" style="margin-top:8px;padding-top:10px;border-top:1px dashed var(--grid)"><b>v9 is released, on the back of 100 simulations</b> against held-out shows from 1994 to 2026. It adds one thing to plain frequency &mdash; a song played recently is about half as likely as its rate suggests &mdash; and fixes the odds. All five versions ran: <b>v9 828, v7 806, v8 765, v6 699, v5 592</b>, against 309 for random. <a href="./kpi.html" style="color:var(--accent);font-weight:600">100-simulation KPI dashboard &rarr;</a></p>
+        <p class="mdl-foot" style="margin-top:8px;padding-top:10px;border-top:1px dashed var(--grid)"><b>v10 is released, on the back of 100 simulations</b> against held-out shows from 1994 to 2026. It adds one thing to plain frequency &mdash; a song played recently is about half as likely as its rate suggests &mdash; and fixes the odds. All versions ran: <b>v9 828, v7 806, v8 765, v6 699, v5 592</b>, against 309 for random. <b>v10 adds nothing to the ranking</b> — tested on the special-occasion shows it was designed for, it matched v9 on hits and scored worse on the ladder. What it does add is calibration: these nights run 26 songs, not 21, and the odds had to rise 40% to match. <a href="./kpi.html" style="color:var(--accent);font-weight:600">100-simulation KPI dashboard &rarr;</a></p>
       </div>
     </div>
 
     <div class="hero">
       <div class="hero-h">
         <span class="t">Next up — Show #95, the 1995 night</span>
-        <span class="d">Mon 27 Jul · model v9</span>
+        <span class="d">Mon 27 Jul · model v10</span>
       </div>
       <div class="hero-b">
         <p class="hl"><b>The first genuine out-of-sample test.</b> Everything here was written after Saturday and has never predicted anything. These four calls are pre-registered, so Monday's result is unambiguous. The opener is deliberately <em>not</em> a costume pick — a cover opener two nights running is less likely, not more.</p>
@@ -613,44 +613,44 @@
       ],
       sets:[
         { name:"Set 1", songs:P([
-          ["Free","32 plays · 50% · gap 5","Most-played song of 1995.",5],
-          ["Strange Design","29 plays · 48% · gap 61","29 of its 68 all-time plays fall in 1995.",61],
-          ["Acoustic Army","27 plays · 47% · gap 1097","<b>All 27 all-time plays are 1995.</b>",1097],
-          ["Poor Heart","27 plays · 47% · gap 77","27 plays, and it survived Saturday.",77],
-          ["Theme from the Bottom","27 plays · 47% · gap 10","Debuted May 1995; the year's leading unburned jam vehicle.",10],
-          ["You Enjoy Myself","25 plays · 45% · gap 5","626 all-time, unburned through three nights. Tonight's longest-jam call.",5],
-          ["A Day in the Life","23 plays · 44% · gap 38","Beatles cover and 1995's most common encore at nine. Tonight's encore call.",38],
-          ["Scent of a Mule","23 plays · 44% · gap 96","23 plays in 1995.",96],
-          ["Cars Trucks Buses","20 plays · 41% · gap 44","Debuted Sep 1995 — that rate inside a third of a year.",44]
+          ["Free","32 plays · 70% · gap 5","Most-played song of 1995.",5],
+          ["Strange Design","29 plays · 67% · gap 61","29 of its 68 all-time plays fall in 1995.",61],
+          ["Acoustic Army","27 plays · 66% · gap 1097","<b>All 27 all-time plays are 1995.</b>",1097],
+          ["Poor Heart","27 plays · 66% · gap 77","27 plays, and it survived Saturday.",77],
+          ["Theme from the Bottom","27 plays · 66% · gap 10","Debuted May 1995; the year's leading unburned jam vehicle.",10],
+          ["You Enjoy Myself","25 plays · 63% · gap 5","626 all-time, unburned through three nights. Tonight's longest-jam call.",5],
+          ["A Day in the Life","23 plays · 62% · gap 38","Beatles cover and 1995's most common encore at nine. Tonight's encore call.",38],
+          ["Scent of a Mule","23 plays · 62% · gap 96","23 plays in 1995.",96],
+          ["Cars Trucks Buses","20 plays · 57% · gap 44","Debuted Sep 1995 — that rate inside a third of a year.",44]
         ]) },
         { name:"Set 2", songs:P([
-          ["It's Ice","20 plays · 41% · gap 8","20 plays in 1995.",8],
-          ["I'm Blue, I'm Lonesome","18 plays · 38% · gap 792","Bill Monroe cover, 18 of its 30 all-time plays in 1995.",792],
-          ["Ya Mar","18 plays · 38% · gap 18","1995's most common set-one opener at six. Tonight's opener call.",18],
-          ["Amazing Grace","17 plays · 35% · gap 901","17 plays in 1995.",901],
-          ["Prince Caspian","17 plays · 35% · gap 3","Debuted Jun 1995, 17 plays. <b>A 3-show gap is not a mark against it here</b> — this run is a curated residency, not a tour leg, so ordinary repeat-avoidance does not apply.",3],
-          ["Uncle Pen","16 plays · 32% · gap 338","Bill Monroe cover, 16 plays in 1995.",338],
-          ["Hello My Baby","15 plays · 30% · gap 258","The a cappella number.",258],
-          ["Fee","14 plays · 27% · gap 6","14 plays in 1995 and fully current.",6]
+          ["It's Ice","20 plays · 57% · gap 8","20 plays in 1995.",8],
+          ["I'm Blue, I'm Lonesome","18 plays · 53% · gap 792","Bill Monroe cover, 18 of its 30 all-time plays in 1995.",792],
+          ["Ya Mar","18 plays · 53% · gap 18","1995's most common set-one opener at six. Tonight's opener call.",18],
+          ["Amazing Grace","17 plays · 49% · gap 901","17 plays in 1995.",901],
+          ["Prince Caspian","17 plays · 49% · gap 3","Debuted Jun 1995, 17 plays. <b>A 3-show gap is not a mark against it here</b> — this run is a curated residency, not a tour leg, so ordinary repeat-avoidance does not apply.",3],
+          ["Uncle Pen","16 plays · 45% · gap 338","Bill Monroe cover, 16 plays in 1995.",338],
+          ["Hello My Baby","15 plays · 42% · gap 258","The a cappella number.",258],
+          ["Fee","14 plays · 38% · gap 6","14 plays in 1995 and fully current.",6]
         ]) },
         { name:"Encore", songs:P([
-          ["Ha Ha Ha","14 plays · 27% · gap 231","14 plays in 1995 — most of its life.",231],
-          ["Keyboard Army","14 plays · 27% · gap 407","<b>All 14 all-time plays are 1995.</b>",407],
-          ["Taste That Surrounds","14 plays · 27% · gap 1088","The 1995 name for Taste, 14 plays that year.",1088]
+          ["Ha Ha Ha","14 plays · 38% · gap 231","14 plays in 1995 — most of its life.",231],
+          ["Keyboard Army","14 plays · 38% · gap 407","<b>All 14 all-time plays are 1995.</b>",407],
+          ["Taste That Surrounds","14 plays · 38% · gap 1088","The 1995 name for Taste, 14 plays that year.",1088]
         ]) }
       ],
-      game:{ expected:"25.9", note:"<b>v9, with rotation state live.</b> Percentages are 1995 plays ÷ 83 shows put through the calibration curve — which is why Free reads 50% where raw frequency said 39%. <b>The rotation-state term is deliberately switched OFF for this run.</b> It was briefly applied against the band's 2026 form and that was wrong: a themed residency is curated, not cycled. Nothing played before MSG counts against a song — <b>the only songs out of play are the 66 burned across the first three nights.</b> Prince Caspian is back at rank 14 on a 3-show gap, and so are Fee and the rest. Drowned is a declared override, not a v9 pick.",
+      game:{ expected:"35.5", note:"<b>v10 — special-occasion calibration.</b> <b>Every percentage rose about 40% again.</b> The 100-simulation backtest was re-cut by show type and found v9 well calibrated on ordinary shows (ratio 1.03 train, 1.11 test) but badly under-confident on special occasions — NYE, Halloween, Baker's Dozen and this run — at <b>1.38 train and 1.75 test</b>. The reason is simple: those nights average <b>26.4 songs against 21.2</b>, so every pick is likelier to land. v10 applies a 1.4× uplift on nights like this. It changes no picks, only the odds. <b>The rotation-state term is deliberately switched OFF for this run.</b> It was briefly applied against the band's 2026 form and that was wrong: a themed residency is curated, not cycled. Nothing played before MSG counts against a song — <b>the only songs out of play are the 66 burned across the first three nights.</b> Prince Caspian is back at rank 14 on a 3-show gap, and so are Fee and the rest. Drowned is a declared override, not a v9 pick.",
         picks:G([
-          ["Free","50%","Most-played song of 1995 and current.",5],
-          ["Strange Design","48%","29 of its 68 all-time plays are 1995.",61],
-          ["Acoustic Army","47%","Every one of its 27 plays falls in 1995.",1097],
-          ["Poor Heart","47%","27 plays, and it survived Saturday.",77],
-          ["Theme from the Bottom","47%","The year's leading unburned jam vehicle.",10],
-          ["You Enjoy Myself","45%","626 all-time, unburned after three nights.",5],
+          ["Free","70%","Most-played song of 1995 and current.",5],
+          ["Strange Design","67%","29 of its 68 all-time plays are 1995.",61],
+          ["Acoustic Army","66%","Every one of its 27 plays falls in 1995.",1097],
+          ["Poor Heart","66%","27 plays, and it survived Saturday.",77],
+          ["Theme from the Bottom","66%","The year's leading unburned jam vehicle.",10],
+          ["You Enjoy Myself","63%","626 all-time, unburned after three nights.",5],
           ["Drowned","45%","<b>Declared override — v9 ranks this 3.8%.</b> Two 1995 plays is all the model sees. It is here on the costume argument alone: <em>Quadrophenia</em> was the Halloween 1995 album, exactly as the White Album was 1994's when U.S.S.R. opened #94.",119],
-          ["A Day in the Life","44%","23 plays and the year's most common encore.",38],
-          ["Scent of a Mule","44%","23 plays in 1995; survived Saturday.",96],
-          ["Cars Trucks Buses","41%","20 plays after a Sep 1995 debut.",44]
+          ["A Day in the Life","62%","23 plays and the year's most common encore.",38],
+          ["Scent of a Mule","62%","23 plays in 1995; survived Saturday.",96],
+          ["Cars Trucks Buses","57%","20 plays after a Sep 1995 debut.",44]
         ]) } },
 
     { n:5, year:"1996", show:96, date:"Wed · Jul 29", status:"up",
@@ -663,48 +663,48 @@
       ],
       sets:[
         { name:"Set 1", songs:P([
-          ["Taste","28 plays · 50% · gap 7","Most-played song of 1996 — Monday can burn it under its 1995 title, Taste That Surrounds.",7],
-          ["You Enjoy Myself","24 plays · 47% · gap 5","626 all-time; also Monday's longest-jam call.",5],
-          ["Character Zero","21 plays · 44% · gap 6","Debuted Jun 1996 and immediately tied for most-played. Safe from Monday.",6],
-          ["Poor Heart","21 plays · 44% · gap 77","21 plays in 1996 and four openers.",77],
-          ["Theme from the Bottom","20 plays · 43% · gap 10","20 plays in 1996 on top of 27 in 1995.",10],
-          ["Cars Trucks Buses","19 plays · 42% · gap 44","19 in 1996 after 20 in 1995 — a two-year staple.",44],
-          ["Ya Mar","19 plays · 42% · gap 18","Tied for the year's most common opener at five.",18],
-          ["Scent of a Mule","18 plays · 42% · gap 96","18 plays in 1996.",96],
-          ["Free","17 plays · 41% · gap 5","32 plays in 1995 and still 17 in 1996.",5]
+          ["Taste","28 plays · 70% · gap 7","Most-played song of 1996 — Monday can burn it under its 1995 title, Taste That Surrounds.",7],
+          ["You Enjoy Myself","24 plays · 66% · gap 5","626 all-time; also Monday's longest-jam call.",5],
+          ["Character Zero","21 plays · 62% · gap 6","Debuted Jun 1996 and immediately tied for most-played. Safe from Monday.",6],
+          ["Poor Heart","21 plays · 62% · gap 77","21 plays in 1996 and four openers.",77],
+          ["Theme from the Bottom","20 plays · 60% · gap 10","20 plays in 1996 on top of 27 in 1995.",10],
+          ["Cars Trucks Buses","19 plays · 59% · gap 44","19 in 1996 after 20 in 1995 — a two-year staple.",44],
+          ["Ya Mar","19 plays · 59% · gap 18","Tied for the year's most common opener at five.",18],
+          ["Scent of a Mule","18 plays · 59% · gap 96","18 plays in 1996.",96],
+          ["Free","17 plays · 57% · gap 5","32 plays in 1995 and still 17 in 1996.",5]
         ]) },
         { name:"Set 2", songs:P([
-          ["Hello My Baby","17 plays · 41% · gap 258","The a cappella number, 17 plays in 1996.",258],
-          ["Prince Caspian","17 plays · 41% · gap 3","17 plays in 1996. <b>Restored to rank 11</b> — a 3-show gap does not count against a song in a curated residency.",3],
-          ["Waste","17 plays · 41% · gap 12","Jun 1996 debut and the year's most frequent encore at four. Tonight's encore call.",12],
-          ["A Day in the Life","15 plays · 35% · gap 38","Beatles cover, 15 plays in 1996.",38],
-          ["Train Song","15 plays · 35% · gap 93","Debuted Jul 1996 — a quarter of its whole life.",93],
-          ["Funky Bitch","14 plays · 32% · gap 32","Son Seals cover, three 1996 encores.",32],
-          ["It's Ice","14 plays · 32% · gap 8","14 plays in 1996.",8],
-          ["Steep","13 plays · 29% · gap 230","Debuted Oct 1996. Inseparable from Swept Away.",230]
+          ["Hello My Baby","17 plays · 57% · gap 258","The a cappella number, 17 plays in 1996.",258],
+          ["Prince Caspian","17 plays · 57% · gap 3","17 plays in 1996. <b>Restored to rank 11</b> — a 3-show gap does not count against a song in a curated residency.",3],
+          ["Waste","17 plays · 57% · gap 12","Jun 1996 debut and the year's most frequent encore at four. Tonight's encore call.",12],
+          ["A Day in the Life","15 plays · 49% · gap 38","Beatles cover, 15 plays in 1996.",38],
+          ["Train Song","15 plays · 49% · gap 93","Debuted Jul 1996 — a quarter of its whole life.",93],
+          ["Funky Bitch","14 plays · 45% · gap 32","Son Seals cover, three 1996 encores.",32],
+          ["It's Ice","14 plays · 45% · gap 8","14 plays in 1996.",8],
+          ["Steep","13 plays · 41% · gap 230","Debuted Oct 1996. Inseparable from Swept Away.",230]
         ]) },
         { name:"Encore", songs:P([
-          ["Swept Away","13 plays · 29% · gap 230","The other half of that pair.",230],
-          ["Wilson","12 plays · 26% · gap 9","Tied for the year's most common opener. Tonight's opener call.",9],
-          ["Life on Mars?","10 plays · 21% · gap 540","<b>10 of its 23 all-time plays are 1996.</b> <span class=\"risk\">Deep vault.</span>",540]
+          ["Swept Away","13 plays · 41% · gap 230","The other half of that pair.",230],
+          ["Wilson","12 plays · 36% · gap 9","Tied for the year's most common opener. Tonight's opener call.",9],
+          ["Life on Mars?","10 plays · 29% · gap 540","<b>10 of its 23 all-time plays are 1996.</b> <span class=\"risk\">Deep vault.</span>",540]
         ]) }
       ],
-      game:{ expected:"27.2", note:"<b>v9, rotation state live.</b> Calibrated probabilities, with the rotation-state term switched off — a curated residency does not avoid recent songs, so Prince Caspian sits at rank 11 on its 1996 frequency and a 3-show gap counts for nothing. Ranks are also discounted for Monday burn risk, and that risk is unusually high: <b>twelve of these twenty songs also sit on Monday's slate</b>, including Taste, which 1995 logs as Taste That Surrounds. Crosseyed is a declared override, not a model pick, and the largest single position on this page. Rebuilt after Monday.",
+      game:{ expected:"34.8", note:"<b>v9, rotation state live.</b> Calibrated probabilities, with the rotation-state term switched off — a curated residency does not avoid recent songs, so Prince Caspian sits at rank 11 on its 1996 frequency and a 3-show gap counts for nothing. Ranks are also discounted for Monday burn risk, and that risk is unusually high: <b>twelve of these twenty songs also sit on Monday's slate</b>, including Taste, which 1995 logs as Taste That Surrounds. Crosseyed is a declared override, not a model pick, and the largest single position on this page. Rebuilt after Monday.",
         picks:G([
           ["Crosseyed and Painless","80%","<b>Declared override — v9 ranks this 4.2%.</b> Two 1996 plays is all the model sees. It stands on <em>Remain in Light</em> being the Halloween 1996 costume, 75 all-time plays, and eight MSG appearances weighted to marquee nights. Safe from Monday.",7],
-          ["Character Zero","44%","Tied for the year's most-played unburned song, and not on Monday's slate.",6],
-          ["Waste","41%","Jun 1996 debut and the year's most frequent encore. Safe from Monday.",12],
-          ["Taste","50%","The most-played song of 1996 — ranked below the safe picks because Monday can burn it under its 1995 title.",7],
-          ["You Enjoy Myself","47%","Unburned through three nights, but it is Monday's longest-jam call.",5],
-          ["Train Song","35%","A quarter of its entire life is 1996. Safe from Monday.",93],
-          ["Theme from the Bottom","43%","20 plays in 1996 — on Monday's slate.",10],
-          ["Funky Bitch","32%","A durable blues staple rather than an era marker. Safe from Monday.",32],
-          ["Poor Heart","44%","21 plays and four 1996 openers — on Monday's slate.",77],
-          ["Steep","29%","Inseparable from Swept Away. Safe from Monday.",230]
+          ["Character Zero","62%","Tied for the year's most-played unburned song, and not on Monday's slate.",6],
+          ["Waste","57%","Jun 1996 debut and the year's most frequent encore. Safe from Monday.",12],
+          ["Taste","70%","The most-played song of 1996 — ranked below the safe picks because Monday can burn it under its 1995 title.",7],
+          ["You Enjoy Myself","66%","Unburned through three nights, but it is Monday's longest-jam call.",5],
+          ["Train Song","49%","A quarter of its entire life is 1996. Safe from Monday.",93],
+          ["Theme from the Bottom","60%","20 plays in 1996 — on Monday's slate.",10],
+          ["Funky Bitch","45%","A durable blues staple rather than an era marker. Safe from Monday.",32],
+          ["Poor Heart","62%","21 plays and four 1996 openers — on Monday's slate.",77],
+          ["Steep","41%","Inseparable from Swept Away. Safe from Monday.",230]
         ]) } }
   ]};
 
-  var KEY="phish-msg-v94", state, active=0;
+  var KEY="phish-msg-v95", state, active=0;
   function clone(o){ return JSON.parse(JSON.stringify(o)); }
   function load(){ try{ var r=localStorage.getItem(KEY); if(r){ state=JSON.parse(r); return true; } }catch(e){} state=clone(DEFAULTS); return false; }
   function save(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
