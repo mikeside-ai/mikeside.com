@@ -94,12 +94,37 @@
           <h2>Tour stats</h2>
           <p>Click any wedge, bar, or dot to filter everything else. The URL follows you — share the view.</p>
         </div>
-        <div class="filters" id="filters"><span class="hint" id="hint">Loading the tour…</span></div>
+        <div class="filters" id="filters"><span class="hint" id="hint">No filters — showing every tracked show.</span></div>
         <div class="charts">
           <div class="panel">
             <h3>Where songs land</h3>
             <div class="sub">Share of songs by set. Click a wedge to isolate that slot.</div>
             <svg id="donut" viewBox="0 0 260 200"></svg>
+          </div>
+          <div class="panel">
+            <h3>Where the time goes</h3>
+            <div class="sub">Same nights, weighted by minutes rather than song count — second sets carry more than their share. Click to isolate.</div>
+            <svg id="pieTime" viewBox="0 0 260 200"></svg>
+          </div>
+          <div class="panel">
+            <h3>What made it special</h3>
+            <div class="sub">Phish.in&#39;s tags across every tracked song — bustouts, teases, stage banter. Colours match the chips on the show pages.</div>
+            <svg id="pieTags" viewBox="0 0 260 200"></svg>
+          </div>
+          <div class="panel">
+            <h3>Short songs, long jams</h3>
+            <div class="sub">Share of total playing time by how long a song ran. Click a band to filter to it.</div>
+            <svg id="pieLen" viewBox="0 0 260 200"></svg>
+          </div>
+          <div class="panel">
+            <h3>Sandwiches &amp; fests</h3>
+            <div class="sub">A sandwich is Song &gt; other song(s) &gt; Song. A fest is one song re-jammed three or more times in a night.</div>
+            <div id="shapes"></div>
+          </div>
+          <div class="panel">
+            <h3>Rooms played</h3>
+            <div class="sub">Share of songs by venue. Click a slice to filter the whole dashboard to that room.</div>
+            <svg id="pieVenue" viewBox="0 0 260 200"></svg>
           </div>
           <div class="panel">
             <h3>Most played</h3>
@@ -162,7 +187,7 @@
     var ACCENT = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim() || "#c0442f";
     var SOFT = getComputedStyle(document.documentElement).getPropertyValue("--accent-soft").trim() || "#e08a6a";
     var MUTED = getComputedStyle(document.documentElement).getPropertyValue("--muted").trim() || "#8b949e";
-    var filters = { set: null, song: null, show: null };
+    var filters = { set: null, song: null, show: null, venue: null, tag: null, band: null };
     var tt = document.getElementById("tt");
 
     function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
@@ -179,6 +204,9 @@
         if (filters.set && r.set_bucket !== filters.set) return false;
         if (filters.song && r.title !== filters.song) return false;
         if (filters.show && r.showdate !== filters.show) return false;
+        if (filters.venue && r.venue !== filters.venue) return false;
+        if (filters.tag && (r.tags || []).indexOf(filters.tag) < 0) return false;
+        if (filters.band && lenBand(r.length_secs) !== filters.band) return false;
         return true;
       });
     }
@@ -187,12 +215,16 @@
     function readURL() {
       var q = new URLSearchParams(location.search);
       filters.set = q.get("set"); filters.song = q.get("song"); filters.show = q.get("show");
+      filters.venue = q.get("venue"); filters.tag = q.get("tag"); filters.band = q.get("band");
     }
     function writeURL() {
       var q = new URLSearchParams();
       if (filters.set) q.set("set", filters.set);
       if (filters.song) q.set("song", filters.song);
       if (filters.show) q.set("show", filters.show);
+      if (filters.venue) q.set("venue", filters.venue);
+      if (filters.tag) q.set("tag", filters.tag);
+      if (filters.band) q.set("band", filters.band);
       var s = q.toString();
       history.replaceState(null, "", s ? "?" + s : location.pathname);
     }
@@ -219,49 +251,225 @@
       return n;
     }
 
-    // ---- donut: set distribution
-    function drawDonut() {
-      var svg = document.getElementById("donut"); svg.innerHTML = "";
-      var data = {}; rows().forEach(function (r) { data[r.set_bucket] = (data[r.set_bucket] || 0) + 1; });
-      var keys = Object.keys(data).sort();
-      var total = keys.reduce(function (a, k) { return a + data[k]; }, 0);
-      if (!total) { svg.appendChild(svgEl("text", { x: 130, y: 100, class: "lbl", "text-anchor": "middle" })).textContent = "no songs match"; return; }
-      var cx = 90, cy = 100, r0 = 44, r1 = 76, a = -Math.PI / 2;
-      keys.forEach(function (k, i) {
-        var frac = data[k] / total, a2 = a + frac * Math.PI * 2;
-        var large = frac > 0.5 ? 1 : 0;
-        var p;
+    // ---- pies -----------------------------------------------------------
+    // One engine behind every pie on this page. Slices are clickable filters
+    // and the centre always states the total, so a wedge and the number it
+    // came from can never drift apart.
+    var LEN_BANDS = [
+      { key: "20+ min",   min: 1200 },
+      { key: "15–20 min", min: 900 },
+      { key: "10–15 min", min: 600 },
+      { key: "5–10 min",  min: 300 },
+      { key: "under 5",   min: 0 }
+    ];
+    function lenBand(secs) {
+      if (!secs) return null;
+      for (var i = 0; i < LEN_BANDS.length; i++) if (secs >= LEN_BANDS[i].min) return LEN_BANDS[i].key;
+      return LEN_BANDS[LEN_BANDS.length - 1].key;
+    }
+    // Semantic colours, shared with the tag chips on the show pages so a
+    // "Bustout" wedge here is the same yellow as a Bustout chip there.
+    var TAG_COLOR = {
+      "Bustout": "#f0b429", "Tease": "#7bc6ff", "Jam": "#9ae6b4", "Alt Lyric": "#d6a2ff",
+      "Alt Rig": "#c58cf0", "Narration": "#b98ae0", "Unfinished": "#ff9b9b",
+      "Banter": "#ffd6a5", "Lore": "#9aa5b1"
+    };
+    function ramp(i, n) {
+      // accent -> soft, then fading opacity; readable to about eight slices
+      var base = i % 2 === 0 ? ACCENT : SOFT;
+      return { fill: base, op: Math.max(0.32, 1 - Math.floor(i / 2) * 0.26) };
+    }
+
+    function pie(id, entries, opts) {
+      opts = opts || {};
+      var svg = document.getElementById(id); if (!svg) return;
+      svg.innerHTML = "";
+      entries = entries.filter(function (e) { return e.value > 0; });
+      var total = entries.reduce(function (a, e) { return a + e.value; }, 0);
+      if (!total) {
+        var t0 = svgEl("text", { x: 130, y: 100, class: "lbl", "text-anchor": "middle" });
+        t0.textContent = opts.empty || "nothing matches";
+        t0.setAttribute("font-size", "12");
+        svg.appendChild(t0); return;
+      }
+      var cx = 90, cy = 100, r0 = opts.r0 == null ? 44 : opts.r0, r1 = 76, a = -Math.PI / 2;
+      entries.forEach(function (en, i) {
+        var frac = en.value / total, a2 = a + frac * Math.PI * 2;
+        var large = frac > 0.5 ? 1 : 0, d;
         if (frac >= 0.999) {
-          // A single arc whose start and end points coincide renders as nothing
-          // (zero-width bbox), so a lone category would draw an invisible donut.
-          // Build the full ring from two half-arcs instead; evenodd punches the hole.
-          p = ["M", cx, cy - r1,
-               "A", r1, r1, 0, 1, 1, cx, cy + r1,
-               "A", r1, r1, 0, 1, 1, cx, cy - r1, "Z",
-               "M", cx, cy - r0,
-               "A", r0, r0, 0, 1, 1, cx, cy + r0,
-               "A", r0, r0, 0, 1, 1, cx, cy - r0, "Z"].join(" ");
-        } else {
-          p = ["M", cx + r1 * Math.cos(a), cy + r1 * Math.sin(a),
+          // A lone slice's start and end points coincide, so a single arc has a
+          // zero-width bbox and paints nothing. Two half-arcs; evenodd cuts the hole.
+          d = ["M", cx, cy - r1, "A", r1, r1, 0, 1, 1, cx, cy + r1,
+               "A", r1, r1, 0, 1, 1, cx, cy - r1, "Z"];
+          if (r0 > 0) d = d.concat(["M", cx, cy - r0, "A", r0, r0, 0, 1, 1, cx, cy + r0,
+                                    "A", r0, r0, 0, 1, 1, cx, cy - r0, "Z"]);
+          d = d.join(" ");
+        } else if (r0 > 0) {
+          d = ["M", cx + r1 * Math.cos(a), cy + r1 * Math.sin(a),
                "A", r1, r1, 0, large, 1, cx + r1 * Math.cos(a2), cy + r1 * Math.sin(a2),
                "L", cx + r0 * Math.cos(a2), cy + r0 * Math.sin(a2),
                "A", r0, r0, 0, large, 0, cx + r0 * Math.cos(a), cy + r0 * Math.sin(a), "Z"].join(" ");
+        } else {
+          d = ["M", cx, cy, "L", cx + r1 * Math.cos(a), cy + r1 * Math.sin(a),
+               "A", r1, r1, 0, large, 1, cx + r1 * Math.cos(a2), cy + r1 * Math.sin(a2), "Z"].join(" ");
         }
-        var op = 1 - i * 0.22;
-        var path = svgEl("path", { d: p, fill: i === 0 ? ACCENT : SOFT, "fill-opacity": Math.max(0.35, op),
+        var col = en.color ? { fill: en.color, op: 0.9 } : ramp(i, entries.length);
+        var path = svgEl("path", { d: d, fill: col.fill, "fill-opacity": col.op,
                                    "fill-rule": "evenodd", class: "arc" });
-        if (filters.set && filters.set !== k) path.classList.add("dim");
-        wire(path, "<b>" + esc(k) + "</b><br>" + data[k] + " songs · " + Math.round(frac * 100) + "%", function () { toggle("set", k); });
+        if (opts.filterKey && filters[opts.filterKey] && filters[opts.filterKey] !== en.key) path.classList.add("dim");
+        wire(path, "<b>" + esc(en.label || en.key) + "</b><br>" + esc(en.detail || (en.value + "")) +
+                   " · " + Math.round(frac * 100) + "%",
+             function () { if (opts.filterKey) toggle(opts.filterKey, en.key); });
         svg.appendChild(path);
-        var ly = 100 - (keys.length - 1) * 17 + i * 34;
-        var t = svgEl("text", { x: 186, y: ly, class: "nm" }); t.textContent = k;
-        var v = svgEl("text", { x: 186, y: ly + 14, class: "val" }); v.textContent = data[k] + " songs";
-        svg.appendChild(t); svg.appendChild(v);
         a = a2;
       });
-      var n = svgEl("text", { x: cx, y: cy + 2, class: "center-n" }); n.textContent = total;
-      var l = svgEl("text", { x: cx, y: cy + 18, class: "center-l" }); l.textContent = "songs";
-      svg.appendChild(n); svg.appendChild(l);
+      // Legend down the right-hand side. 34px rows so two lines never collide.
+      var step = 34, shown = entries.slice(0, 5);
+      shown.forEach(function (en, i) {
+        var ly = 100 - (shown.length - 1) * 17 + i * step;
+        var sw = svgEl("rect", { x: 178, y: ly - 9, width: 8, height: 8, rx: 2,
+                                 fill: en.color || ramp(i, entries.length).fill,
+                                 "fill-opacity": en.color ? 0.9 : ramp(i, entries.length).op });
+        var t = svgEl("text", { x: 192, y: ly, class: "nm" }); t.textContent = en.label || en.key;
+        var v = svgEl("text", { x: 192, y: ly + 14, class: "val" }); v.textContent = en.detail || en.value;
+        svg.appendChild(sw); svg.appendChild(t); svg.appendChild(v);
+      });
+      if (entries.length > shown.length) {
+        var more = svgEl("text", { x: 192, y: 100 - (shown.length - 1) * 17 + shown.length * step, class: "val" });
+        more.textContent = "+" + (entries.length - shown.length) + " more";
+        svg.appendChild(more);
+      }
+      if (r0 > 0) {
+        var n = svgEl("text", { x: cx, y: cy + 2, class: "center-n" }); n.textContent = opts.centerN == null ? total : opts.centerN;
+        var l = svgEl("text", { x: cx, y: cy + 18, class: "center-l" }); l.textContent = opts.centerL || "songs";
+        svg.appendChild(n); svg.appendChild(l);
+      }
+    }
+
+    function tally(list, keyOf, valueOf) {
+      var m = {}, order = [];
+      list.forEach(function (r) {
+        var ks = keyOf(r);
+        if (ks == null) return;
+        if (!Array.isArray(ks)) ks = [ks];
+        ks.forEach(function (k) {
+          if (k == null) return;
+          if (!(k in m)) { m[k] = 0; order.push(k); }
+          m[k] += valueOf ? valueOf(r) : 1;
+        });
+      });
+      return order.map(function (k) { return { key: k, value: m[k] }; })
+                  .sort(function (a, b) { return b.value - a.value; });
+    }
+
+    function drawDonut() {
+      var e = tally(rows(), function (r) { return r.set_bucket; })
+                .sort(function (a, b) { return a.key < b.key ? -1 : 1; });
+      e.forEach(function (x) { x.detail = x.value + " songs"; });
+      pie("donut", e, { filterKey: "set", centerL: "songs", empty: "no songs match" });
+    }
+
+    function drawPieTime() {
+      var e = tally(rows().filter(function (r) { return r.length_secs; }),
+                    function (r) { return r.set_bucket; },
+                    function (r) { return r.length_secs; })
+                .sort(function (a, b) { return a.key < b.key ? -1 : 1; });
+      var total = e.reduce(function (a, x) { return a + x.value; }, 0);
+      e.forEach(function (x) { x.detail = fmt(x.value); });
+      pie("pieTime", e, { filterKey: "set", centerN: Math.round(total / 60) + "m",
+                          centerL: "timed", empty: "nothing timed yet" });
+    }
+
+    function drawPieTags() {
+      var e = tally(rows(), function (r) { return r.tags && r.tags.length ? r.tags : null; });
+      e.forEach(function (x) { x.color = TAG_COLOR[x.key] || MUTED; x.detail = x.value + "×"; });
+      pie("pieTags", e, { filterKey: "tag", centerN: e.reduce(function (a, x) { return a + x.value; }, 0),
+                          centerL: "tags", empty: "tags arrive with the recording" });
+    }
+
+    function drawPieLen() {
+      var e = tally(rows().filter(function (r) { return r.length_secs; }),
+                    function (r) { return lenBand(r.length_secs); },
+                    function (r) { return r.length_secs; });
+      var order = LEN_BANDS.map(function (b) { return b.key; });
+      e.sort(function (a, b) { return order.indexOf(a.key) - order.indexOf(b.key); });
+      var total = e.reduce(function (a, x) { return a + x.value; }, 0);
+      e.forEach(function (x) { x.detail = fmt(x.value); });
+      pie("pieLen", e, { filterKey: "band", centerN: Math.round(total / 60) + "m",
+                         centerL: "playing", empty: "nothing timed yet" });
+    }
+
+    function drawPieVenue() {
+      var e = tally(rows(), function (r) { return r.venue; });
+      e.forEach(function (x) {
+        x.detail = x.value + " songs";
+        x.label = x.key.length > 22 ? x.key.slice(0, 21) + "…" : x.key;
+      });
+      pie("pieVenue", e, { filterKey: "venue", r0: 0, centerL: "songs", empty: "no shows match" });
+    }
+
+    // ---- sandwiches & fests
+    // A sandwich is Song > other song(s) > Song. A fest is the same song
+    // re-jammed three or more times in one night — Tweezerfest. Neither is a
+    // "reprise": a reprise is a song in its own right, like Tweezer Reprise.
+    function festName(t) {
+      var n = t.replace(/^(The|A)\s+/, "");
+      return n.indexOf(" ") < 0 ? n + "fest" : n + " fest";
+    }
+    function shapesOf(show) {
+      var out = [], counts = {}, sets = show.sets || [];
+      sets.forEach(function (s) {
+        (s.songs || []).forEach(function (x) {
+          var t = (x.title || "").trim(); if (t) counts[t] = (counts[t] || 0) + 1;
+        });
+      });
+      var festy = {};
+      Object.keys(counts).forEach(function (t) { if (counts[t] >= 3) festy[t] = true; });
+      Object.keys(festy).sort(function (a, b) { return counts[b] - counts[a]; }).forEach(function (t) {
+        out.push({ kind: "fest", song: t, name: festName(t), count: counts[t], showdate: show.showdate });
+      });
+      sets.forEach(function (s) {
+        var titles = (s.songs || []).map(function (x) { return (x.title || "").trim(); });
+        var seen = {};
+        titles.forEach(function (t, i) {
+          if (!t || festy[t] || seen[t]) return;
+          var last = titles.lastIndexOf(t);
+          if (last <= i) return;
+          seen[t] = true;
+          var filling = titles.slice(i + 1, last).filter(function (x) { return x !== t; });
+          if (!filling.length) return;
+          out.push({ kind: "sandwich", song: t, filling: filling,
+                     set: s.display || ("Set " + s.label), showdate: show.showdate });
+        });
+      });
+      return out;
+    }
+    function drawShapes() {
+      var el = document.getElementById("shapes"); if (!el) return;
+      var all = [];
+      TOUR.shows.forEach(function (sh) {
+        if (filters.show && sh.showdate !== filters.show) return;
+        if (filters.venue && sh.venue !== filters.venue) return;
+        (sh.shapes || []).forEach(function (x) {
+          if (filters.song && x.song !== filters.song) return;
+          all.push({ s: x, venue: sh.venue });
+        });
+      });
+      if (!all.length) { el.innerHTML = '<div class="empty">No sandwiches or fests in this view.</div>'; return; }
+      el.innerHTML = all.map(function (o) {
+        var x = o.s;
+        var head = x.kind === "fest"
+          ? '<span style="color:#f0b429;">' + esc(x.name) + "</span> · " + x.count + "×"
+          : '<span style="color:var(--accent-soft);">' + esc(x.song) + " sandwich</span>";
+        var body = x.kind === "fest"
+          ? esc(x.song) + " re-jammed all night"
+          : esc(x.song) + " &gt; " + esc(x.filling.slice(0, 3).join(", ")) +
+            (x.filling.length > 3 ? "…" : "") + " &gt; " + esc(x.song);
+        return '<a class="lrow" style="text-decoration:none;" href="/projects/setlistlizard_with/' +
+          esc(x.showdate) + '/"><span class="r">🥪</span><span class="t">' + head +
+          '<div class="m">' + body + "</div></span>" +
+          '<span class="x">' + esc(shortDate(x.showdate)) + "</span></a>";
+      }).join("");
     }
 
     // ---- bars: most played
@@ -301,19 +509,21 @@
       var max = Math.max.apply(null, timed.map(function (r) { return r.length_secs; }));
       var min = Math.min.apply(null, timed.map(function (r) { return r.length_secs; }));
       var W = 600, X0 = 20, Y = 120, span = Math.max(1, max - min);
+      // axis
       svg.appendChild(svgEl("line", { x1: X0, y1: Y + 34, x2: X0 + W, y2: Y + 34, stroke: MUTED, "stroke-opacity": .3 }));
       [0, .25, .5, .75, 1].forEach(function (f) {
         var v = min + span * f, x = X0 + W * f;
         var tk = svgEl("text", { x: x, y: Y + 50, class: "val", "text-anchor": "middle" });
         tk.textContent = fmt(Math.round(v)); svg.appendChild(tk);
       });
+      // simple beeswarm: bucket by x, stack vertically
       var buckets = {};
       timed.sort(function (a, b) { return a.length_secs - b.length_secs; }).forEach(function (r) {
         var x = X0 + (r.length_secs - min) / span * W;
         var k = Math.round(x / 9);
         buckets[k] = (buckets[k] || 0);
         var row = buckets[k]++;
-        var cy = Y - (row % 9) * 11;
+        var cy = Y - (row % 9) * 11 - (row >= 9 ? 0 : 0);
         var dot = svgEl("circle", { cx: x, cy: cy, r: 4.2, fill: r.length_secs >= 900 ? SOFT : ACCENT,
                                     "fill-opacity": .8, class: "dot" });
         if (filters.song && filters.song !== r.title) dot.classList.add("dim");
@@ -324,6 +534,32 @@
       });
       var lab = svgEl("text", { x: X0, y: Y + 66, class: "lbl" });
       lab.textContent = timed.length + " timed songs · longest " + fmt(max); svg.appendChild(lab);
+    }
+
+    // ---- show list
+    function drawShows() {
+      var el = document.getElementById("showlist");
+      var keep = {}; rows().forEach(function (r) { keep[r.showdate] = true; });
+      var list = TOUR.shows.filter(function (s) { return keep[s.showdate]; });
+      if (!list.length) { el.innerHTML = '<div class="empty">Nothing matches those filters.</div>'; return; }
+      el.innerHTML = list.map(function (s) {
+        var n = rows().filter(function (r) { return r.showdate === s.showdate; }).length;
+        var extra = (filters.song || filters.set) ? n + " matching" : s.songs + " songs";
+        return '<a href="' + esc(s.url) + '"><span><b>' + esc(shortDate(s.showdate)) + "</b> " + esc(s.venue) +
+               '</span><span class="m">' + esc(extra) + (s.tag ? " · " + esc(s.tag) : "") + "</span></a>";
+      }).join("");
+    }
+
+    function drawFilters() {
+      var el = document.getElementById("filters"), bits = [];
+      ["set", "song", "show", "venue", "tag", "band"].forEach(function (k) {
+        if (filters[k]) bits.push('<span class="chip" data-k="' + k + '">' + esc(filters[k]) + '<span class="x">×</span></span>');
+      });
+      el.innerHTML = bits.length ? bits.join("")
+        : '<span class="hint">No filters — showing all ' + TOUR.shows.length + ' tracked shows. Click a chart to drill in.</span>';
+      Array.prototype.forEach.call(el.querySelectorAll(".chip"), function (c) {
+        c.addEventListener("click", function () { filters[c.dataset.k] = null; writeURL(); render(); });
+      });
     }
 
     // ---- rotation matrix: song x show
@@ -515,33 +751,7 @@
         : "";
     }
 
-    // ---- show list
-    function drawShows() {
-      var el = document.getElementById("showlist");
-      var keep = {}; rows().forEach(function (r) { keep[r.showdate] = true; });
-      var list = TOUR.shows.filter(function (s) { return keep[s.showdate]; });
-      if (!list.length) { el.innerHTML = '<div class="empty">Nothing matches those filters.</div>'; return; }
-      el.innerHTML = list.map(function (s) {
-        var n = rows().filter(function (r) { return r.showdate === s.showdate; }).length;
-        var extra = (filters.song || filters.set) ? n + " matching" : s.songs + " songs";
-        return '<a href="' + esc(s.url) + '"><span><b>' + esc(shortDate(s.showdate)) + "</b> " + esc(s.venue) +
-               '</span><span class="m">' + esc(extra) + (s.tag ? " · " + esc(s.tag) : "") + "</span></a>";
-      }).join("");
-    }
-
-    function drawFilters() {
-      var el = document.getElementById("filters"), bits = [];
-      ["set", "song", "show"].forEach(function (k) {
-        if (filters[k]) bits.push('<span class="chip" data-k="' + k + '">' + esc(filters[k]) + '<span class="x">×</span></span>');
-      });
-      el.innerHTML = bits.length ? bits.join("")
-        : '<span class="hint">No filters — showing all ' + TOUR.shows.length + ' tracked shows. Click a chart to drill in.</span>';
-      Array.prototype.forEach.call(el.querySelectorAll(".chip"), function (c) {
-        c.addEventListener("click", function () { filters[c.dataset.k] = null; writeURL(); render(); });
-      });
-    }
-
-    function render() { drawFilters(); drawDonut(); drawBars(); drawSwarm(); drawMatrix(); drawMap(); drawLab(); drawShows(); }
+    function render() { drawFilters(); drawDonut(); drawPieTime(); drawPieTags(); drawPieLen(); drawPieVenue(); drawShapes(); drawBars(); drawSwarm(); drawMatrix(); drawMap(); drawLab(); drawShows(); }
 
     // Data comes straight from the bot's feed, so the dashboard picks up a new
     // show the moment the bot commits it — no rebuild of this page required.
@@ -554,14 +764,27 @@
       var l = String(label == null ? "1" : label).toLowerCase();
       return l.charAt(0) === "e" ? "Encore" : "Set " + label;
     }
+    // Mirrors apply_phishin() in tools/build_setlistlizard.py — keep the two in
+    // step. The curated "phishin" map holds the real recorded track lengths and
+    // the exact track URLs; a track shared by several segued songs is timed on
+    // the first of them, so the show total stays honest.
+    function piTrack(show, label, pos) {
+      var pi = show.phishin || {};
+      return (pi.tracks || {})[label + ":" + pos] || null;
+    }
     function flatten(show) {
       var out = [];
       (show.sets || []).forEach(function (s) {
         (s.songs || []).forEach(function (song, i) {
+          var t = piTrack(show, String(s.label), i + 1);
+          var secs = song.length_secs;
+          if (t) { secs = t.d || null; }
           out.push({
             title: (song.title || "").trim(),
             transition: song.transition || "",
-            length_secs: song.length_secs,
+            length_secs: secs,
+            listen: t ? t.u : null,
+            tags: t && t.tags ? t.tags.map(function (g) { return g.name; }) : [],
             footnote: song.footnote,
             set_label: String(s.label),
             set_display: s.display || ("Set " + s.label),
@@ -592,10 +815,11 @@
         if (!shows.length) { fail("Couldn't load any shows."); return; }
         TOUR = {
           shows: shows.map(function (sh) {
-            var rws = flatten(sh);
+            var rows = flatten(sh);
             return {
               showdate: sh.showdate, venue: sh.venue || "", city: sh.city || "",
-              state: sh.state || "", tag: sh.tag, songs: rws.length,
+              state: sh.state || "", tag: sh.tag, songs: rows.length,
+              shapes: shapesOf(sh),
               url: "/projects/setlistlizard_with/" + sh.showdate + "/"
             };
           }),
