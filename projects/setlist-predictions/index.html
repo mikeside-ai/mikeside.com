@@ -288,7 +288,7 @@
     <p class="sub">Five nights at Madison Square Garden — Phish's 92nd through 96th shows there, each themed to a year, <b>1992 → 1996</b>. Three played, two to go. Predictions, the model behind them, and an honest scorecard.</p>
 
     <div class="mdl">
-      <div class="mdl-h"><span class="t">How the model works</span><span class="v">v8.7 &middot; 26 Jul</span></div>
+      <div class="mdl-h"><span class="t">How the model works</span><span class="v">v8.8 &middot; 26 Jul</span></div>
       <div class="mdl-b">
         <p class="mdl-lede">Each night is themed to a year. The model ranks that year's songs by how often Phish actually played them, throws out everything already used earlier in the run, and takes the top twenty. Three slots are held back for things frequency cannot see.</p>
         <div class="mdl-steps">
@@ -303,13 +303,14 @@
           <div class="bet"><div class="pc">80%</div><div class="bd"><div class="bn">Crosseyed and Painless &middot; Wednesday</div><div class="bx">From <em>Remain in Light</em>, the Halloween 1996 costume. Unlike Drowned it is a living song — 8% of every show, and eight MSG appearances weighted to marquee nights.</div></div></div>
         </div>
         <p class="mdl-foot"><b>Live record: 16 of 40 across two nights</b>, against a random baseline of 7.4. Everything else on this page that scores better was computed after the fact and is labelled as such. <a href="#method" style="color:var(--accent);font-weight:600">Full method and every correction ↓</a></p>
+        <p class="mdl-foot" style="margin-top:8px;padding-top:10px;border-top:1px dashed var(--grid)"><b>The rules have now been backtested</b> against ten held-out shows from 1995 to 2024 &mdash; 40 blind runs, 800 picks. Plain frequency won, the reserved slots lost again, and every model overshot its own odds by 2.6&times;. <a href="./kpi.html" style="color:var(--accent);font-weight:600">Backtest KPI dashboard &rarr;</a></p>
       </div>
     </div>
 
     <div class="hero">
       <div class="hero-h">
         <span class="t">Next up — Show #95, the 1995 night</span>
-        <span class="d">Mon 27 Jul · model v8.7</span>
+        <span class="d">Mon 27 Jul · model v8.8</span>
       </div>
       <div class="hero-b">
         <p class="hl"><b>The first genuine out-of-sample test.</b> Everything here was written after Saturday and has never predicted anything. These four calls are pre-registered, so Monday's result is unambiguous. The opener is deliberately <em>not</em> a costume pick — a cover opener two nights running is less likely, not more.</p>
@@ -412,7 +413,7 @@
   </details>
 
   <details class="box" id="method">
-    <summary>The model — and the costume-album correction <span class="tag">v5 → v8.7</span></summary>
+    <summary>The model — and the costume-album correction <span class="tag">v5 → v8.8</span></summary>
     <div class="warnbox">
       <span class="lbl">Two ledgers, kept separate</span>
       <p><b>Live</b> means published before the show. <b>Fitted</b> means computed afterwards on a night already known. Fitted numbers appear in grey italic and are not skill.</p>
@@ -703,7 +704,7 @@
         ]) } }
   ]};
 
-  var KEY="phish-msg-v87", state, active=0;
+  var KEY="phish-msg-v88", state, active=0;
   function clone(o){ return JSON.parse(JSON.stringify(o)); }
   function load(){ try{ var r=localStorage.getItem(KEY); if(r){ state=JSON.parse(r); return true; } }catch(e){} state=clone(DEFAULTS); return false; }
   function save(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
