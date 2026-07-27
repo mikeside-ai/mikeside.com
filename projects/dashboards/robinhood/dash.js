@@ -8,7 +8,7 @@
     var ths=t.tHead.rows[0].cells;
     for(var i=0;i<ths.length;i++){
       var ar=ths[i].querySelector('.ar');
-      if(ar) ar.textContent=(i===col?(st.dir>0?' \\u25B2':' \\u25BC'):'');
+      if(ar) ar.textContent=(i===col?(st.dir>0?' ▲':' ▼'):'');
     }
   }
   window.sortH=function(col){
@@ -17,7 +17,7 @@
     rows.sort(function(a,b){
       var x=a.cells[col].textContent.trim(), y=b.cells[col].textContent.trim();
       if(col===0){ return st.dir*(x<y?-1:(x>y?1:0)); }
-      var xn=parseFloat(x.replace(/[^0-9.\\-]/g,'')), yn=parseFloat(y.replace(/[^0-9.\\-]/g,''));
+      var xn=parseFloat(x.replace(/[^0-9.\-]/g,'')), yn=parseFloat(y.replace(/[^0-9.\-]/g,''));
       var xb=isNaN(xn), yb=isNaN(yn);
       if(xb&&yb) return 0; if(xb) return 1; if(yb) return -1;
       return st.dir*(xn-yn);
