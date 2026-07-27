@@ -3,58 +3,654 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Setlist Lizard ... With</title>
-  <!-- The project itself lives at mikeside.com/projects/setlistlizard_with/.
-       This folder exists only so setlistlizard-with.mikeside.com has somewhere
-       to land: Porkbun's static hosting maps a subdomain to a directory, and a
-       directory needs an index. Everything here is self-contained on purpose —
-       under the subdomain the document root IS this folder, so /css/ and /js/
-       from the main site are not reachable. -->
-  <link rel="canonical" href="https://mikeside.com/projects/setlistlizard_with/" />
-  <meta name="robots" content="noindex,follow" />
-  <meta http-equiv="refresh" content="2;url=https://mikeside.com/projects/setlistlizard_with/" />
+  <title>Setlist Lizard ... With — Mikeside</title>
+  <meta name="description" content="Live Phish setlists, song by song — and every show we've kept." />
+  <link rel="canonical" href="https://mikeside.com/setlistlizard-with/" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
+  <!-- Same stylesheet the generated show pages link, so the live board and an
+       archive page are the same object rendered from different sources. -->
+  <link rel="stylesheet" href="/css/setlistlizard.css?v=4" />
   <style>
-    :root { --bg:#0d1117; --card:#161b26; --text:#e8eaf0; --muted:#8b93a7; --accent:#e0553a; --accent-soft:#f0765c; }
-    * { box-sizing:border-box; }
-    body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
-           background:var(--bg); color:var(--text); text-align:center; padding:2rem;
-           font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif; }
-    .wrap { max-width:30rem; }
-    h1 { font-family:Fraunces,Georgia,serif; font-weight:600; font-size:clamp(1.6rem,6vw,2.3rem);
-         margin:0 0 .5rem; letter-spacing:-.01em; }
-    h1 .w { color:var(--accent-soft); }
-    p { color:var(--muted); font-size:.95rem; line-height:1.7; margin:0 0 1.6rem; }
-    a.go { display:inline-block; border:1px solid var(--accent); border-radius:12px;
-           padding:.7rem 1.4rem; color:var(--accent-soft); text-decoration:none;
-           font-size:.85rem; letter-spacing:.1em; text-transform:uppercase;
-           transition:background .15s ease, color .15s ease; }
-    a.go:hover { background:var(--accent); color:#fff; }
-    .dots { color:var(--muted); letter-spacing:.35em; font-size:.8rem; margin-bottom:1.4rem; }
-    .fine { margin:1.6rem 0 0; font-size:.72rem; letter-spacing:.06em; }
+    .badge {
+      display:inline-flex; align-items:center; gap:.45rem; font-size:.72rem; font-weight:600;
+      letter-spacing:.14em; text-transform:uppercase; padding:.2rem .7rem;
+      border-radius:999px; border:1px solid var(--border); color:var(--muted); white-space:nowrap;
+    }
+    .badge.live { color:var(--accent-soft); border-color:var(--accent); }
+    .badge.live::before {
+      content:""; width:.5rem; height:.5rem; border-radius:50%;
+      background:var(--accent); animation:pulse 1.4s infinite;
+    }
+    @keyframes pulse { 50% { opacity:.25; } }
+    .srow.now .song-t { color:var(--accent-soft); }
+    .srow.now .len { color:var(--accent-soft); }
+    .empty { text-align:center; color:var(--muted); padding:2.2rem 0 1.4rem; }
+    .show-list { display:flex; flex-direction:column; gap:1rem; max-width:820px; margin:0 auto; }
+    .yearhead { font-family:"Fraunces",Georgia,serif; color:var(--muted);
+                font-size:.8rem; letter-spacing:.18em; text-transform:uppercase; margin-top:.5rem; }
+    a.show-item {
+      display:flex; justify-content:space-between; align-items:baseline; gap:1rem;
+      padding:1.05rem 1.3rem; background:var(--card); border:1px solid var(--border);
+      border-radius:var(--radius); color:var(--text);
+      transition:transform .15s ease, border-color .15s ease;
+    }
+    a.show-item:hover { transform:translateY(-2px); border-color:var(--accent); text-decoration:none; }
+    .show-item .d { font-weight:600; }
+    .show-item .v { color:var(--muted); font-size:.9rem; flex:1; }
+    .show-item .tag2 { font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--accent-soft);
+                       border:1px solid var(--border); border-radius:999px; padding:.15rem .6rem; white-space:nowrap; }
+    .fullpage { text-align:center; margin-top:1.4rem; }
+    .fullpage a { font-size:.82rem; letter-spacing:.08em; text-transform:uppercase; color:var(--accent-soft); }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>Setlist Lizard <span class="w">... With</span></h1>
-    <div class="dots">• • •</div>
-    <p>Taking you to the setlists.</p>
-    <a class="go" id="go" href="https://mikeside.com/projects/setlistlizard_with/">Go now →</a>
-    <p class="fine">Setlist data: Phish.net · audio, durations, tags and banter: phish.in</p>
-  </div>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="/">mike<span>side</span></a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/photos/">Photos</a></li>
+        <li><a href="/videos/">Videos</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/projects/" class="active">Projects</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-top:none;">
+      <div class="container">
+        <div class="crumb"><a href="/projects/">Projects</a> · <a href="/setlistlizard-with/stats/">Stats</a></div>
+        <div class="section-head" id="head">
+          <span class="setno" id="headDate">Setlist Lizard ... With</span>
+          <h2 id="headVenue">Loading…</h2>
+          <p id="headLoc"></p>
+        </div>
+        <div id="glance"></div>
+        <div class="pager top" id="pagerTop"></div>
+        <div class="board" id="board"><div class="empty">Loading…</div></div>
+        <div id="curve"></div>
+        <div class="pager" id="pager"></div>
+        <div class="fullpage" id="fullpage"></div>
+      </div>
+    </section>
+
+    <div class="groove" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+    <section class="block" style="border-top:none;" id="labSection" hidden>
+      <div class="container">
+        <div class="section-head">
+          <span class="setno">The Lab</span>
+          <h2>It's so stupendous, living in this tube</h2>
+        </div>
+        <div class="tube" id="lab"></div>
+      </div>
+    </section>
+
+    <section class="block" style="border-top:none;" id="mediaSection" hidden>
+      <div class="container">
+        <div class="section-head"><span class="setno">From the night</span><h2>Official shots</h2>
+          <p>Posted by the band — embedded from the source.</p></div>
+        <div id="media" style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;"></div>
+      </div>
+    </section>
+
+    <section class="block" style="border-top:none;" id="srcSection" hidden>
+      <div class="container">
+        <div class="section-head"><span class="setno">Elsewhere</span><h2>Go deeper</h2></div>
+        <div class="srcs" id="srcs"></div>
+      </div>
+    </section>
+
+    <section class="block" style="border-top:none;">
+      <div class="container">
+        <div class="section-head">
+          <span class="setno">Archive</span>
+          <h2>The shows, kept</h2>
+          <p>Every tracked show has its own page — setlist, lengths, notes, sources. <a href="/setlistlizard-with/stats/">See the tour stats →</a></p>
+        </div>
+        <div class="show-list" id="showlist"><div class="empty">Loading…</div></div>
+        <div class="srcline">
+          Setlist data: <a href="https://phish.net/" rel="noopener">Phish.net</a> ·
+          audio, durations, tags and banter: <a href="https://phish.in/" rel="noopener">phish.in</a> ·
+          lengths are live estimates until the recording posts<br />
+          <a href="/setlistlizard-with/credits/">credits &amp; FAQ</a> · <a href="/setlistlizard-with/stats/">tour stats</a> · <a href="/projects/setlistlizard_with/integration-diagram.html">how the bot works</a> · <a href="/projects/">← all projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> mikeside.com</div>
+      <div><a href="/">Home</a></div>
+    </div>
+  </footer>
+  <script src="/js/main.js"></script>
   <script>
   (function () {
-    var BASE = "https://mikeside.com/projects/setlistlizard_with";
-    // Carry a deeper path through, but ONLY when we're actually being served as
-    // the subdomain root — there, location.pathname is the visitor's path. If
-    // this same file is ever reached at mikeside.com/setlistlizard-with/, the
-    // pathname is the folder name instead, and appending it would send the
-    // reader to a URL that doesn't exist. Go to the project root in that case.
-    var onSub = /^setlistlizard-with\./.test(location.hostname);
-    var p = onSub ? location.pathname.replace(/^\/+/, "") : "";
-    var target = BASE + "/" + p + (onSub ? location.search + location.hash : "");
-    document.getElementById("go").href = target;
-    // replace(), not assign(), so Back doesn't bounce the reader in a loop.
-    setTimeout(function () { location.replace(target); }, 350);
+    "use strict";
+    // This board renders the SAME view as a generated show page — glance tiles,
+    // set blocks with chips and footnotes, sandwiches and fests, stage banter,
+    // the energy curve, the Lab. It mirrors tools/build_setlistlizard.py; the
+    // two must stay in step. The difference is that this one re-renders while
+    // the show is still happening, and picks up phish.in links on its own the
+    // moment the recording posts.
+    var RAW = "https://raw.githubusercontent.com/vlad-hub86/phish-setlist-bot/main/docs";
+    var BASE = "/setlistlizard-with";
+    var SUP = ["⁰","¹","²","³","⁴","⁵","⁶","⁷","⁸","⁹"];
+    var POLL_LIVE = 30000, POLL_IDLE = 300000;
+
+    var el = {
+      headDate: document.getElementById("headDate"), headVenue: document.getElementById("headVenue"),
+      headLoc: document.getElementById("headLoc"), glance: document.getElementById("glance"),
+      board: document.getElementById("board"), curve: document.getElementById("curve"),
+      fullpage: document.getElementById("fullpage"), lab: document.getElementById("lab"),
+      labSection: document.getElementById("labSection"), media: document.getElementById("media"),
+      mediaSection: document.getElementById("mediaSection"), srcs: document.getElementById("srcs"),
+      srcSection: document.getElementById("srcSection"), showlist: document.getElementById("showlist"),
+      pager: document.getElementById("pager"),
+      pagerTop: document.getElementById("pagerTop")
+    };
+    var ALL = [];        // every tracked showdate, oldest first
+    var META = {};       // showdate -> {venue, city, state} for the pager labels
+    var pinned = null;   // ?d=<date> pins the board to one show instead of the newest
+    var timer = null, lastKey = "";
+
+    // ?d=<showdate> pins the board to a specific night so prev/next is
+    // shareable and the back button behaves. No pin = live show, or newest.
+    function readPin() {
+      var d = new URLSearchParams(location.search).get("d");
+      pinned = /^\d{4}-\d{2}-\d{2}$/.test(d || "") ? d : null;
+    }
+    function goto(date) {
+      pinned = date;
+      history.pushState({ d: date }, "", date ? "?d=" + date : location.pathname);
+      lastKey = "";
+      pickAndRender();
+      var h = document.getElementById("head");
+      if (h) h.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+    function mark(n) { return String(n).split("").map(function (d) { return SUP[+d]; }).join(""); }
+    function fmt(sec) { if (!sec) return ""; var m = Math.floor(sec / 60), s = sec % 60; return m + ":" + (s < 10 ? "0" : "") + s; }
+    function slugify(t) { return String(t || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, ""); }
+    function shortDate(iso) { var p = (iso || "").split("-"); return (+p[1]) + "/" + (+p[2]); }
+    function longDate(iso) {
+      if (!iso) return "";
+      var d = new Date(iso + "T12:00:00");
+      return d.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" });
+    }
+    function fetchJSON(u) {
+      return fetch(u + (u.indexOf("?") < 0 ? "?" : "&") + "t=" + Date.now(), { cache: "no-store" })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+    }
+    function isLive(d) {
+      if (!d || d.complete || !d.updated_at || !d.sets || !d.sets.length) return false;
+      return (Date.now() - Date.parse(d.updated_at)) < 30 * 60 * 1000;
+    }
+
+    // ---- chips: identical inline styling to the generator, so a stale cached
+    // stylesheet can never swallow them.
+    var CHIP_BASE = "display:inline-block;margin-left:.4rem;padding:.05rem .4rem;border-radius:999px;" +
+      "font-size:.68em;letter-spacing:.04em;text-transform:uppercase;vertical-align:.08em;" +
+      "border:1px solid;line-height:1.5;";
+    var CHIP_COLOR = {
+      bust: "color:#f0b429;border-color:#f0b42955;background:#f0b4291a;",
+      tease: "color:#7bc6ff;border-color:#7bc6ff55;background:#7bc6ff1a;",
+      jam: "color:#9ae6b4;border-color:#9ae6b455;background:#9ae6b41a;",
+      alt: "color:#d6a2ff;border-color:#d6a2ff55;background:#d6a2ff1a;",
+      unf: "color:#ff9b9b;border-color:#ff9b9b55;background:#ff9b9b1a;",
+      banter: "color:#ffd6a5;border-color:#ffd6a555;background:#ffd6a51a;",
+      seg: "color:#9aa5b1;border-color:#9aa5b155;background:#9aa5b11a;"
+    };
+    var TAG_STYLE = { "Bustout": "bust", "Tease": "tease", "Jam": "jam", "Alt Lyric": "alt",
+      "Alt Rig": "alt", "Narration": "alt", "Unfinished": "unf", "Banter": "banter", "Lore": "lore" };
+    function chip(name, kind) {
+      kind = kind || TAG_STYLE[name] || "seg";
+      return '<span class="chip ' + kind + '" style="' + CHIP_BASE + (CHIP_COLOR[kind] || CHIP_COLOR.seg) + '">' + esc(name) + "</span>";
+    }
+
+    // ---- duplicate-note test, mirroring same_note() in the generator
+    var STOP = {};
+    ("a an the was were in on of to and did not contain featured included from with for his her its at by is are " +
+     "no tease teases jam lyrics lyric changed ending played").split(" ").forEach(function (w) { STOP[w] = 1; });
+    function words(s) {
+      var o = {}, n = 0;
+      String(s || "").toLowerCase().split(/[^a-z0-9]+/).forEach(function (w) { if (w && !STOP[w] && !o[w]) { o[w] = 1; n++; } });
+      return { set: o, n: n };
+    }
+    function sameNote(a, b) {
+      var wa = words(a), wb = words(b);
+      if (!wa.n || !wb.n) return false;
+      var small = wa.n <= wb.n ? wa : wb, big = wa.n <= wb.n ? wb : wa, hit = 0;
+      Object.keys(small.set).forEach(function (w) { if (big.set[w]) hit++; });
+      return hit / small.n >= 0.7;
+    }
+
+    // ---- phish.in map: the ONLY source of a ♫. A recording posts a day or two
+    // after the show, so a guessed URL 404s — no verified track, no music note.
+    function trackOf(show, label, pos) {
+      return (((show.phishin || {}).tracks) || {})[label + ":" + pos] || null;
+    }
+
+    // ---- sandwiches, fests, unresolved Tweezers (mirrors repeat_shapes())
+    var REPRISE_PARTNERS = { "Tweezer": "Tweezer Reprise" };
+    function festName(t) {
+      var n = String(t).replace(/^(The|A)\s+/, "");
+      return n.indexOf(" ") < 0 ? n + "fest" : n + " fest";
+    }
+    function shapesOf(show) {
+      var counts = {}, sets = show.sets || [], fests = [], sandwiches = [];
+      sets.forEach(function (s) {
+        (s.songs || []).forEach(function (x) { var t = (x.title || "").trim(); if (t) counts[t] = (counts[t] || 0) + 1; });
+      });
+      var festy = {};
+      Object.keys(counts).forEach(function (t) { if (counts[t] >= 3) festy[t] = 1; });
+      Object.keys(festy).sort(function (a, b) { return counts[b] - counts[a]; }).forEach(function (t) {
+        var filling = [], where = [];
+        sets.forEach(function (s) {
+          var titles = (s.songs || []).map(function (x) { return (x.title || "").trim(); });
+          if (titles.indexOf(t) < 0) return;
+          where.push(s.display || ("Set " + s.label));
+          var first = titles.indexOf(t), last = titles.lastIndexOf(t);
+          titles.slice(first, last + 1).forEach(function (o) {
+            if (o !== t && filling.indexOf(o) < 0) filling.push(o);
+          });
+        });
+        fests.push({ song: t, name: festName(t), count: counts[t], sets: where, filling: filling });
+      });
+      sets.forEach(function (s) {
+        var titles = (s.songs || []).map(function (x) { return (x.title || "").trim(); }), seen = {};
+        titles.forEach(function (t, i) {
+          if (!t || festy[t] || seen[t]) return;
+          var last = titles.lastIndexOf(t);
+          if (last <= i) return;
+          seen[t] = 1;
+          var filling = titles.slice(i + 1, last).filter(function (x) { return x !== t; });
+          if (!filling.length) return;   // back-to-back is one long song, not a sandwich
+          sandwiches.push({ song: t, set: s.display || ("Set " + s.label), filling: filling });
+        });
+      });
+      // A reprise is not a finding: Tweezer Reprise accompanies Tweezer nearly
+      // every time. The noteworthy case is the inverse — a Tweezer left
+      // unresolved, which is rare and usually deliberate.
+      var unresolved = Object.keys(REPRISE_PARTNERS).filter(function (song) {
+        return counts[song] && !counts[REPRISE_PARTNERS[song]];
+      }).sort();
+      return { fests: fests, sandwiches: sandwiches, unresolved: unresolved };
+    }
+
+    // ---- energy curve (mirrors energy_curve())
+    function curveSVG(rows) {
+      var timed = rows.filter(function (r) { return r.secs; });
+      if (timed.length < 3) return "";
+      var W = 640, PAD = 14, mx = Math.max.apply(null, timed.map(function (r) { return r.secs; }));
+      var n = timed.length;
+      function X(i) { return PAD + (n === 1 ? 0 : (i / (n - 1)) * (W - 2 * PAD)); }
+      function Y(v) { return 24 + (1 - v / mx) * 92; }
+      var pts = timed.map(function (r, i) { return X(i).toFixed(1) + "," + Y(r.secs).toFixed(1); }).join(" ");
+      var parts = ['<svg class="ec" viewBox="0 -4 640 138" role="img" aria-label="Song durations in performance order">'];
+      var seenSet = null;
+      timed.forEach(function (r, i) {
+        if (r.setDisplay !== seenSet) {
+          var x = i === 0 ? PAD : (X(i - 1) + X(i)) / 2;
+          if (i > 0) parts.push('<line class="ec-div" x1="' + x.toFixed(1) + '" y1="8" x2="' + x.toFixed(1) + '" y2="116" />');
+          parts.push('<text class="ec-set" x="' + (i === 0 ? PAD : x + 4).toFixed(1) + '" y="13">' + esc(r.setDisplay) + "</text>");
+          seenSet = r.setDisplay;
+        }
+      });
+      parts.push('<text class="ec-y" x="10" y="27.0">' + fmt(mx) + "</text>");
+      parts.push('<text class="ec-y" x="10" y="73.0">' + fmt(Math.round(mx / 2)) + "</text>");
+      parts.push('<polyline class="ec-line" points="' + pts + '" fill="none" stroke="var(--accent)" stroke-width="1.6" />');
+      timed.forEach(function (r, i) {
+        var big = r.secs >= 900 ? " big" : "";
+        parts.push('<a href="' + BASE + "/song/?s=" + esc(slugify(r.title)) + '">' +
+          '<circle class="ec-dot' + big + '" fill="var(--accent)" cx="' + X(i).toFixed(1) + '" cy="' + Y(r.secs).toFixed(1) + '" r="4">' +
+          "<title>" + esc(r.title) + " — " + fmt(r.secs) + " · " + esc(r.setDisplay) + "</title></circle></a>");
+      });
+      parts.push("</svg>");
+      return '<div class="curvewrap"><div class="curvehead"><span>The shape of the night</span>' +
+        '<span class="ch-sub">song length in play order · click a point for that song</span></div>' +
+        parts.join("") + "</div>";
+    }
+
+    // ---- the main render
+    function renderShow(show, live) {
+      var sets = show.sets || [];
+      if (!sets.length) {
+        el.headVenue.textContent = "No show tonight";
+        el.headDate.textContent = "Setlist Lizard ... With";
+        el.headLoc.textContent = "";
+        el.board.innerHTML = '<div class="empty">Nothing on stage right now — the archive below has every show we’ve kept.</div>';
+        el.glance.innerHTML = ""; el.curve.innerHTML = ""; el.fullpage.innerHTML = "";
+        if (el.pager) el.pager.innerHTML = "";
+        if (el.pagerTop) el.pagerTop.innerHTML = "";
+        el.labSection.hidden = el.mediaSection.hidden = el.srcSection.hidden = true;
+        return;
+      }
+
+      var badge = live ? '<span class="badge live">Live</span>'
+        : show.complete ? '<span class="badge">Final</span>' : "";
+      el.headDate.innerHTML = esc(longDate(show.showdate)) + " " + badge;
+      el.headVenue.textContent = show.venue || "";
+      el.headLoc.textContent = [show.city, show.state].filter(Boolean).join(", ");
+
+      // flatten with phish.in overrides applied, exactly as the generator does
+      var rows = [], mi = 0, fnotes = [], banter = [], html = [];
+      sets.forEach(function (s) {
+        var label = String(s.label == null ? "1" : s.label);
+        (s.songs || []).forEach(function (song, i) {
+          var t = trackOf(show, label, i + 1);
+          var secs = song.length_secs;
+          if (t) secs = t.d || null;
+          rows.push({ title: (song.title || "").trim(), secs: secs, track: t, song: song,
+                      setDisplay: s.display || ("Set " + label), label: label, pos: i + 1 });
+        });
+      });
+      var maxlen = Math.max.apply(null, rows.map(function (r) { return r.secs || 0; })) || 1;
+
+      var ri = 0;
+      sets.forEach(function (s) {
+        var label = String(s.label == null ? "1" : s.label);
+        var songs = s.songs || [];
+        var setRows = rows.slice(ri, ri + songs.length);
+        ri += songs.length;
+        var setTotal = setRows.reduce(function (a, r) { return a + (r.secs || 0); }, 0);
+        var sub = songs.length + " songs" + (setTotal ? " · " + fmt(setTotal) + " timed" : "");
+        html.push('<div class="setblock"><div class="setname"><span>' + esc(s.display || ("Set " + label)) +
+                  '</span><span class="sl">' + esc(sub) + "</span></div><ol>");
+        setRows.forEach(function (r, i) {
+          var t = r.track || {}, tags = t.tags || [];
+          // A track shared by several segued songs would otherwise repeat its
+          // notes once per song; only the first of the group carries them.
+          var piNotes = [];
+          if (!t.m) {
+            tags.forEach(function (g) {
+              var n = (g.notes || "").trim();
+              if (n && g.name === "Tease") n = "Tease: " + n;
+              if (n && piNotes.indexOf(n) < 0) piNotes.push(n);
+              if ((g.name === "Banter" || g.name === "Narration") && g.transcript) {
+                banter.push({ title: r.title, url: t.u, what: n || g.name, text: g.transcript });
+              }
+            });
+          }
+          var notes = [];
+          if (r.song.footnote && !piNotes.some(function (n) { return sameNote(r.song.footnote, n); })) notes.push(r.song.footnote);
+          notes = notes.concat(piNotes);
+          var marks = notes.map(function (n) { mi++; fnotes.push(mark(mi) + " " + n); return mark(mi); }).join("");
+
+          var chips = tags.filter(function (g) { return g.name !== "Lore"; })
+                          .map(function (g) { return chip(g.name); }).join("");
+          if (t.n) chips += chip("Segued", "seg");
+
+          var isNow = live && ri === rows.length && i === setRows.length - 1;
+          var tr = r.song.transition && r.song.transition !== "," ? ' <span class="tr">' + esc(r.song.transition) + "</span>" : "";
+          var big = r.secs && r.secs >= 900 ? " big" : "";
+          var bar = r.secs ? '<div class="lenbar' + big + '" style="width:' + (r.secs / maxlen * 100).toFixed(1) + '%"></div>' : "";
+          var listen = t.u ? ' <a class="lsn" href="' + esc(t.u) + '" rel="noopener" title="Listen on phish.in"' +
+              ' aria-label="Listen to ' + esc(r.title) + ' on phish.in"' +
+              ' style="color:var(--accent-soft);text-decoration:none;margin-left:.5rem;font-size:.85em;opacity:.75;">&#9835;</a>' : "";
+          html.push('<li class="srow' + big + (isNow ? " now" : "") + '"><div class="sline"><span>' +
+            '<a class="song-t" href="' + BASE + "/song/?s=" + esc(slugify(r.title)) + '">' + esc(r.title) + "</a>" +
+            (marks ? ' <span class="fn">' + marks + "</span>" : "") + tr + chips + "</span>" +
+            '<span class="len">' + (isNow ? "playing…" : fmt(r.secs)) + listen + "</span></div>" + bar + "</li>");
+        });
+        html.push("</ol></div>");
+      });
+
+      if (fnotes.length) html.push('<div class="fnlist">' + fnotes.map(function (f) { return "<p>" + esc(f) + "</p>"; }).join("") + "</div>");
+      if (show.note) html.push('<div class="shownote">' + esc(show.note) + "</div>");
+      (show.shownotes || []).forEach(function (n) { html.push('<div class="shownote">' + esc(n) + "</div>"); });
+
+      // sandwiches, fests, reprises
+      var shp = shapesOf(show), shapes = [];
+      shp.fests.forEach(function (f) {
+        var fill = f.filling.slice(0, 6).join(", ") + (f.filling.length > 6 ? "…" : "");
+        shapes.push('<div class="shape" style="border:1px solid var(--border);border-left:3px solid #f0b429;border-radius:10px;padding:.8rem 1rem;margin-top:.7rem;">' +
+          '<div style="font-family:Fraunces,Georgia,serif;color:#f0b429;font-size:1.05rem;">🥪 ' + esc(f.name) + "</div>" +
+          '<div style="color:var(--muted);font-size:.9rem;line-height:1.6;margin-top:.25rem;">' + esc(f.song) +
+          " played <b>" + f.count + "×</b> in " + esc(f.sets.join(", ")) + ", re-jammed around " + esc(fill) + ".</div></div>");
+      });
+      shp.sandwiches.forEach(function (s) {
+        var fill = s.filling.slice(0, 6).join(", ") + (s.filling.length > 6 ? "…" : "");
+        shapes.push('<div class="shape" style="border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:10px;padding:.8rem 1rem;margin-top:.7rem;">' +
+          '<div style="font-family:Fraunces,Georgia,serif;color:var(--accent-soft);font-size:1.05rem;">🥪 ' + esc(s.song) + " sandwich</div>" +
+          '<div style="color:var(--muted);font-size:.9rem;line-height:1.6;margin-top:.25rem;">' + esc(s.song) +
+          " &gt; " + esc(fill) + " &gt; " + esc(s.song) + " · " + esc(s.set) + "</div></div>");
+      });
+      shp.unresolved.forEach(function (song) {
+        shapes.push('<div class="shape" style="border:1px solid var(--border);border-left:3px solid #ff9b9b;border-radius:10px;padding:.8rem 1rem;margin-top:.7rem;">' +
+          '<div style="font-family:Fraunces,Georgia,serif;color:#ff9b9b;font-size:1.05rem;">⁉ ' + esc(song) + ", no Reprise</div>" +
+          '<div style="color:var(--muted);font-size:.9rem;line-height:1.6;margin-top:.25rem;">' + esc(song) +
+          " went unresolved tonight. Rare, and usually deliberate — the Reprise often gets held back to cap a later night of the run.</div></div>");
+      });
+      if (shapes.length) {
+        html.push('<div class="shapes" style="margin-top:1.6rem;"><div class="setname"><span>Sandwiches &amp; fests</span>' +
+          '<span class="sl">' + shapes.length + " shape" + (shapes.length === 1 ? "" : "s") + "</span></div>" + shapes.join("") + "</div>");
+      }
+
+      // from the stage — excerpt and link, never the whole transcript
+      if (banter.length) {
+        var cards = banter.map(function (b) {
+          var txt = b.text.replace(/\s+/g, " "), clip = txt.slice(0, 230).replace(/\s+$/, "");
+          if (txt.length > 230) clip = clip.replace(/\s\S*$/, "") + " …";
+          var more = b.url ? ' <a href="' + esc(b.url) + '" rel="noopener" style="color:var(--accent-soft);">full transcript on phish.in →</a>' : "";
+          return '<div class="btr" style="border-left:2px solid var(--accent);padding:.15rem 0 .15rem .9rem;margin:.9rem 0;">' +
+            '<div style="font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);">' +
+            esc(b.title) + " · " + esc(b.what) + "</div>" +
+            '<p style="margin:.35rem 0 0;font-style:italic;">“' + esc(clip) + '”</p>' +
+            '<div style="font-size:.8rem;margin-top:.3rem;color:var(--muted);">transcript: phish.in' + more + "</div></div>";
+        }).join("");
+        html.push('<div class="stage" style="margin-top:1.6rem;"><div class="setname"><span>From the stage</span>' +
+          '<span class="sl">' + banter.length + " moment" + (banter.length === 1 ? "" : "s") + "</span></div>" + cards + "</div>");
+      }
+      el.board.innerHTML = html.join("");
+
+      // glance strip — an encore is not a set, and a repeated song is a
+      // sandwich or a fest, never a "reprise"
+      var timed = rows.filter(function (r) { return r.secs; });
+      var total = timed.reduce(function (a, r) { return a + r.secs; }, 0);
+      var longest = timed.slice().sort(function (a, b) { return b.secs - a.secs; })[0];
+      var realSets = sets.filter(function (s) { return String(s.label || "1").toLowerCase().charAt(0) !== "e"; });
+      var bust = rows.filter(function (r) {
+        return ((r.track || {}).tags || []).some(function (g) { return g.name === "Bustout"; });
+      }).length;
+      var shapeV = shp.fests.length ? shp.fests[0].name : shp.sandwiches.length;
+      var shapeL = shp.fests.length ? "Fest" : "Sandwiches";
+      var tiles = [
+        [rows.length, "Songs"], [realSets.length, "Sets"],
+        [fmt(total) || "—", "Timed"], [longest ? longest.title : "—", "Longest"],
+        [shapeV, shapeL], [bust || fnotes.length, bust ? "Bustouts" : "Notes"]
+      ];
+      el.glance.innerHTML = '<div class="glance">' + tiles.map(function (t) {
+        // A long unbroken word — a fest name, a one-word song title — overflows
+        // the tile at full size. Step it down rather than let it clip.
+        var v = String(t[0]);
+        var sz = v.length > 13 ? "font-size:1rem;" : v.length > 9 ? "font-size:1.2rem;" : "";
+        return '<div class="stat"><div class="n" style="' + sz + 'overflow-wrap:anywhere;line-height:1.25;">' +
+          esc(v) + '</div><div class="l">' + esc(t[1]) + "</div></div>";
+      }).join("") + "</div>";
+
+      el.curve.innerHTML = curveSVG(rows);
+      drawPager(show.showdate);
+      el.fullpage.innerHTML = show.complete
+        ? '<a href="' + BASE + "/" + esc(show.showdate) + '/">full page for this show →</a>' : "";
+
+      // the Lab
+      // Mirrors jam_profile() in the generator. The old ratio-against-median was
+      // arithmetic pretending to be analysis — a night of short songs inflated
+      // every ratio. Durations, longest first, and nothing claimed beyond that.
+      if (timed.length >= 3) {
+        var jams = timed.slice().sort(function (a, b) { return b.secs - a.secs; }).slice(0, 6);
+        el.lab.innerHTML = '<span class="lab">Machine-generated</span>' +
+          '<div class="setname" style="border:none;margin-bottom:.2rem;"><span>Longest of the night</span></div><ul>' +
+          jams.map(function (j) {
+            return "<li><span>" + esc(j.title) + ' <span style="color:var(--muted);font-size:.85em">· ' + esc(j.setDisplay) +
+              '</span></span><span class="x">' + fmt(j.secs) + "</span></li>";
+          }).join("") +
+          '</ul><p class="cav">Straight off the phish.in timings, longest first. What this can’t tell you yet is ' +
+          "whether any of these is a big version — that needs each song’s own history to compare against, which is " +
+          "the next thing to pull in. After that: phish.in publishes a jam-start marker per track, so the composed " +
+          "section and the improvisation can be separated and measured properly. That’s what belongs in this tube.</p>";
+        el.labSection.hidden = false;
+      } else {
+        el.lab.innerHTML = '<span class="lab">Machine-generated</span><p class="cav">Nothing timed yet. ' +
+          "Durations arrive when phish.in posts the recording, usually a day or two after the show.</p>";
+        el.labSection.hidden = false;
+      }
+
+      // official shots — embeds only, never re-hosted
+      var media = (show.media || []).filter(function (m) { return m && m.url; });
+      if (media.length) {
+        var wantX = false, wantIG = false;
+        el.media.innerHTML = media.map(function (m) {
+          if (m.type === "instagram" || m.url.indexOf("instagram.com") > -1) {
+            wantIG = true;
+            return '<blockquote class="instagram-media" data-instgrm-permalink="' + esc(m.url) +
+              '" data-instgrm-version="14" style="margin:0 auto;max-width:540px;"><a href="' + esc(m.url) + '" rel="noopener">View on Instagram</a></blockquote>';
+          }
+          wantX = true;
+          return '<blockquote class="twitter-tweet" data-theme="dark" data-dnt="true"><a href="' + esc(m.url) + '" rel="noopener">View on X</a></blockquote>';
+        }).join("");
+        el.mediaSection.hidden = false;
+        loadEmbed(wantX, wantIG);
+      } else {
+        el.mediaSection.hidden = true;
+      }
+
+      // sources
+      var q = encodeURIComponent((show.venue || "") + " " + shortDate(show.showdate));
+      el.srcs.innerHTML = [
+        [show.phishnet_url || "https://phish.net/setlists/", "Phish.net", "Setlist, notes, ratings"],
+        ["https://phish.in/" + esc(show.showdate), "phish.in", "Stream the recording"],
+        ["https://www.reddit.com/r/phish/search/?q=" + q + "&restrict_sr=1&sort=relevance", "r/phish", "Show thread"],
+        ["https://phantasytour.com/bands/1/phish/shows", "Phantasy Tour", "Community board"]
+      ].map(function (s) {
+        return '<a href="' + esc(s[0]) + '" rel="noopener">' + esc(s[1]) + '<span class="w">' + esc(s[2]) + "</span></a>";
+      }).join("");
+      el.srcSection.hidden = false;
+    }
+
+    // Prev/next across every tracked show. Same markup and styling as the
+    // generated show pages, so the board navigates the run the same way.
+    function drawPager(current) {
+      var hosts = [el.pager, el.pagerTop].filter(Boolean);
+      if (!hosts.length) return;
+      var i = ALL.indexOf(current);
+      if (i < 0 || ALL.length < 2) {
+        hosts.forEach(function (h) { h.innerHTML = ""; });
+        return;
+      }
+      var prev = i > 0 ? ALL[i - 1] : null;
+      var next = i < ALL.length - 1 ? ALL[i + 1] : null;
+      function btn(date, dir) {
+        if (!date) return "<span></span>";
+        var meta = META[date] || {};
+        var label = dir === "prev" ? "← Previous show" : "Next show →";
+        return '<a href="?d=' + esc(date) + '" data-d="' + esc(date) + '">' +
+          '<span><span class="pg-l">' + label + '</span>' +
+          '<span class="pg-v">' + esc(shortDate(date)) + " · " + esc(meta.venue || "") + "</span></span></a>";
+      }
+      // Both copies are identical — the top one exists because the bottom
+      // scrolls out of reach on a three-set night.
+      var html = btn(prev, "prev") + btn(next, "next");
+      hosts.forEach(function (h) {
+        h.innerHTML = html;
+        Array.prototype.forEach.call(h.querySelectorAll("a[data-d]"), function (a) {
+          a.addEventListener("click", function (ev) { ev.preventDefault(); goto(a.getAttribute("data-d")); });
+        });
+      });
+    }
+
+    var embedded = { x: false, ig: false };
+    function loadEmbed(wantX, wantIG) {
+      if (wantX && !embedded.x) { embedded.x = true; addScript("https://platform.twitter.com/widgets.js"); }
+      else if (wantX && window.twttr && window.twttr.widgets) { window.twttr.widgets.load(el.media); }
+      if (wantIG && !embedded.ig) { embedded.ig = true; addScript("https://www.instagram.com/embed.js"); }
+      else if (wantIG && window.instgrm) { window.instgrm.Embeds.process(); }
+    }
+    function addScript(src) {
+      var s = document.createElement("script"); s.async = true; s.src = src; document.body.appendChild(s);
+    }
+
+    // ---- load. While a show is running the live feed is the fresher source,
+    // but the archive copy carries the curated extras (phish.in track map,
+    // photos), so the two are merged rather than chosen between.
+    function pickAndRender() {
+      return Promise.all([
+        fetchJSON(RAW + "/setlist.json").catch(function () { return null; }),
+        fetchJSON(RAW + "/setlists/index.json").catch(function () { return null; })
+      ]).then(function (r) {
+        var live = r[0], idx = r[1];
+        var shows = (idx && idx.shows) || [];
+        shows.sort(function (a, b) { return a.showdate < b.showdate ? -1 : 1; });
+        ALL = shows.map(function (s) { return s.showdate; });
+        shows.forEach(function (s) { META[s.showdate] = s; });
+        var newest = shows.length ? shows[shows.length - 1].showdate : null;
+        var running = isLive(live);
+        // A pinned date wins over the live show — the reader asked for that night.
+        var date = pinned || ((live && live.sets && live.sets.length) ? live.showdate : newest);
+        if (pinned) running = false;
+        if (!date) { renderShow({}, false); return false; }
+        return fetchJSON(RAW + "/setlists/" + date + ".json")
+          .catch(function () { return null; })
+          .then(function (arch) {
+            var show;
+            if (running && live && !pinned) {
+              show = {};
+              Object.keys(arch || {}).forEach(function (k) { show[k] = arch[k]; });
+              Object.keys(live).forEach(function (k) { show[k] = live[k]; });
+              if (arch && arch.phishin) show.phishin = arch.phishin;
+              if (arch && arch.media) show.media = arch.media;
+            } else {
+              show = arch || live || {};
+            }
+            var key = JSON.stringify([show.showdate, show.updated_at, (show.sets || []).length, running]);
+            if (key !== lastKey) { lastKey = key; renderShow(show, running); }
+            return running;
+          });
+      });
+    }
+
+    function loop() {
+      pickAndRender().then(function (running) {
+        clearTimeout(timer);
+        timer = setTimeout(loop, running ? POLL_LIVE : POLL_IDLE);
+      }).catch(function () {
+        clearTimeout(timer);
+        timer = setTimeout(loop, POLL_IDLE);
+      });
+    }
+
+    function loadArchiveList() {
+      return fetchJSON(RAW + "/setlists/index.json").then(function (idx) {
+        var shows = (idx && idx.shows) || [];
+        if (!shows.length) { el.showlist.innerHTML = '<div class="empty">No shows kept yet.</div>'; return; }
+        shows.sort(function (a, b) { return a.showdate < b.showdate ? 1 : -1; });
+        var h = "", year = "";
+        shows.forEach(function (s) {
+          var y = (s.showdate || "").slice(0, 4);
+          if (y !== year) { year = y; h += '<div class="yearhead">' + esc(y) + "</div>"; }
+          h += '<a class="show-item" href="' + BASE + "/" + esc(s.showdate) + '/"><span class="d">' + esc(shortDate(s.showdate)) + "</span>" +
+            '<span class="v">' + esc([s.venue, [s.city, s.state].filter(Boolean).join(", ")].filter(Boolean).join(" — ")) + "</span>" +
+            (s.tag ? '<span class="tag2">' + esc(s.tag) + "</span>" : "") + "</a>";
+        });
+        el.showlist.innerHTML = h;
+      }).catch(function () { el.showlist.innerHTML = '<div class="empty">Archive unavailable.</div>'; });
+    }
+
+    readPin();
+    window.addEventListener("popstate", function () { readPin(); lastKey = ""; pickAndRender(); });
+    loop();
+    loadArchiveList();
   })();
   </script>
 </body>
