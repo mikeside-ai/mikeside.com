@@ -30,45 +30,52 @@
     },
     {
       "date": "2026-07-27",
+      "project": "setlist-predictions",
+      "type": "content",
+      "title": "Boards regenerated on v9",
+      "notes": "Rotation state applied to 2026 form; the full song pool restored — a curated residency does not avoid recently-played songs; the encore call moves to A Day in the Life."
+    },
+    {
+      "date": "2026-07-27",
       "project": "setlist-lizard",
       "type": "infra",
       "title": "Moved to /setlistlizard-with/",
       "notes": "Outgrew a card in the projects list. Old links redirect; the short address reads better."
     },
     {
-      "date": "2026-07-27",
-      "project": "setlist-lizard",
-      "type": "infra",
-      "title": "Show pages rebuild themselves",
-      "notes": "A workflow regenerates every show page and the tour stats whenever the feed or the generator changes, then hands off to the deploy."
-    },
-    {
-      "date": "2026-07-27",
+      "date": "2026-07-26",
       "project": "setlist-lizard",
       "type": "content",
       "title": "Credits & FAQ page",
-      "notes": "phish.in credited on every page for audio, durations, tags and banter — their one condition for the API."
+      "notes": "phish.in credited on every page for audio, durations, tags and banter — their one condition for the API. Prev/next pagers now sit above the setlist too."
     },
     {
-      "date": "2026-07-27",
+      "date": "2026-07-26",
       "project": "setlist-predictions",
       "type": "release",
       "title": "v9: calibrated odds + rotation-state term",
-      "notes": "Reserved slots removed. Beats v8 48 shows to 19 across 100 simulations."
+      "notes": "Reserved slots removed. Beats v8 48 shows to 19 across 100 simulations; the five-model, 100-simulation verdict recorded in bot-wars."
     },
     {
       "date": "2026-07-26",
       "project": "setlist-predictions",
       "type": "feature",
       "title": "Backtest KPI dashboard",
-      "notes": "10 held-out shows, 4 models, 40 blind runs — plus a per-band comparison chart. Hindsight-built scores withdrawn."
+      "notes": "10 held-out shows, 4 models, 40 blind runs — plus a per-band comparison chart."
+    },
+    {
+      "date": "2026-07-26",
+      "project": "setlist-lizard",
+      "type": "infra",
+      "title": "Show pages rebuild themselves",
+      "notes": "A workflow regenerates every show page and the tour stats whenever the feed or the generator changes, then hands off to the deploy."
     },
     {
       "date": "2026-07-26",
       "project": "setlist-lizard",
       "type": "feature",
-      "title": "Track links, real durations, tag chips, stage banter",
-      "notes": "Show pages pull the phish.in track map; the Oddities section counts sandwiches, fests and deep bustouts."
+      "title": "Oddities: sandwiches, fests and deep bustouts",
+      "notes": "Tour-wide counts, with fest legs excluded from sandwich counting."
     },
     {
       "date": "2026-07-26",
@@ -79,10 +86,73 @@
     },
     {
       "date": "2026-07-26",
+      "project": "setlist-lizard",
+      "type": "feature",
+      "title": "Track links, real durations, tag chips, stage banter",
+      "notes": "Show pages pull the phish.in track map, plus retroactive show notes and per-song listen links for the MSG retrospective nights."
+    },
+    {
+      "date": "2026-07-26",
+      "project": "setlist-predictions",
+      "type": "fix",
+      "title": "Honesty pass: live scores separated from fitted",
+      "notes": "Every count verified against Phish.net; #96 rebuilt on real 1996 data; hindsight-built scores withdrawn; bot-wars section added."
+    },
+    {
+      "date": "2026-07-26",
+      "project": "setlist-lizard",
+      "type": "release",
+      "title": "v2: song pages, venue map, rotation matrix, energy curves",
+      "notes": "Every song gets its own page, the tour-wide Lab arrives, show pages draw an energy curve, and the page generator joins the repo."
+    },
+    {
+      "date": "2026-07-26",
+      "project": "supmaine",
+      "type": "release",
+      "title": "v2 beta: the Deep Water look",
+      "notes": "A second face for the whole trip app — new stylesheet, ten new features, an extras pack. The offline mode shipped, broke photos site-wide, and was reverted within the hour."
+    },
+    {
+      "date": "2026-07-26",
+      "project": "setlist-lizard",
+      "type": "release",
+      "title": "v1: tour dashboard + a page for every show",
+      "notes": "Interactive tour dashboard, per-show pages, the archive wired to them, tour stats surfaced. Also: an encore is not a set."
+    },
+    {
+      "date": "2026-07-26",
+      "project": "setlist-lizard",
+      "type": "infra",
+      "title": "Renamed: Setlist Lizard ... With",
+      "notes": "Phish Live Setlist gets its real name and moves house; old links kept redirecting."
+    },
+    {
+      "date": "2026-07-25",
+      "project": "setlist-predictions",
+      "type": "feature",
+      "title": "Live scoring debuts during #94",
+      "notes": "Picks scored in real time as the setlist lands; played nights backfilled as scored records; run-wide scorecard across all played nights."
+    },
+    {
+      "date": "2026-07-25",
+      "project": "setlist-predictions",
+      "type": "feature",
+      "title": "v6 and v7, rebuilt on real Phish.net data",
+      "notes": "A sourced rationale under every pick, called shots (opener, encore, bustout, longest jam), backtest head-to-heads, and the weighted 10-pick setlist game."
+    },
+    {
+      "date": "2026-07-25",
+      "project": "setlist-predictions",
+      "type": "release",
+      "title": "Predictions page goes public",
+      "notes": "Model v5, the consensus barbell, published after 100k simulated shows — boards for the remaining MSG nights, with its own tile on the projects page."
+    },
+    {
+      "date": "2026-07-24",
       "project": "supmaine",
       "type": "feature",
-      "title": "Run Conditions names its trails",
-      "notes": "Each trail now linked to AllTrails."
+      "title": "Tides, directions, flight status, AllTrails",
+      "notes": "NOAA tide strip on every day card, tap-for-directions on every drive, live flight-status and boarding chips, and verified AllTrails links with corrected distances."
     },
     {
       "date": "2026-07-23",
@@ -90,6 +160,13 @@
       "type": "release",
       "title": "Live setlist page ships",
       "notes": "The live board polls the bot's feed every 60 seconds during shows; the archive keeps every show after."
+    },
+    {
+      "date": "2026-07-23",
+      "project": "supmaine",
+      "type": "feature",
+      "title": "Weather on every day card, a photo for every stop",
+      "notes": "Per-day live forecast with clothing tips, Google Place photos per stop, drive times on every leg, and per-person packing tabs."
     },
     {
       "date": "2026-07-23",
