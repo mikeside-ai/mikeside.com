@@ -10,6 +10,7 @@
   --muted: #9a97a8;
   --accent: #c14b34;      /* kiln brick red */
   --accent-soft: #d9694f;
+  --jumpsuit: #f5c542;    /* clone-suit yellow — slogan only, nothing else */
   --border: #262e4e;
   --radius: 14px;
   --maxw: 1080px;
@@ -63,6 +64,9 @@ header {
   line-height: 1.05; letter-spacing: -0.02em; margin: 0.7rem 0 1.1rem;
 }
 .hero h1 em { font-style: italic; color: var(--accent-soft); }
+/* Opt-in yellow for the front-page slogan. Deliberately scoped to a class so
+   every other hero em stays brick red — the palette allows exactly one yellow. */
+.hero h1 em.jumpsuit { color: var(--jumpsuit); }
 .hero p.lede { color: var(--muted); font-size: 1.12rem; max-width: 34rem; }
 .hero .fineprint {
   margin-top: 1.6rem; color: var(--muted); font-size: 0.8rem;
