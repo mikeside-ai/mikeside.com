@@ -23,7 +23,6 @@ from __future__ import annotations
 import argparse
 import html
 import json
-import os
 import re
 import sys
 from collections import Counter, defaultdict
@@ -1037,15 +1036,6 @@ def main() -> int:
         json.dumps(tour, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"  dashboard: {len(tour['songs'])} song rows across {len(shows)} shows")
 
-    # TEMPORARY BRIDGE — remove once .github/workflows/build-shows.yml stages
-    # "setlistlizard-with" instead of the old "projects/setlistlizard_with".
-    # The workflow's commit step still adds the old path (this tool can't edit
-    # workflow files), so in CI we stage our own output; the workflow's
-    # `git diff --cached --quiet` then sees it and commits as usual.
-    if os.environ.get("GITHUB_ACTIONS") and str(args.out) == ".":
-        import subprocess
-        subprocess.run(["git", "add", "setlistlizard-with"], check=False)
-        print("  staged setlistlizard-with for the workflow's commit step")
     return 0
 
 
