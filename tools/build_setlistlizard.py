@@ -415,7 +415,7 @@ SHOW_CSS_HREF = "/css/setlistlizard.css?v=5"
 
 # Shared runtime: the inline player and the Lab pies. It enhances markup that
 # already exists (♫ links, the labpies container), so pages stay plain HTML.
-LIZARD_JS = '<script src="/setlistlizard-with/js/lizard.js?v=1" defer></script>'
+LIZARD_JS = '<script src="/setlistlizard-with/js/lizard.js?v=2" defer></script>'
 
 
 def pager_html(prev: dict | None, nxt: dict | None, top: bool = False) -> str:
