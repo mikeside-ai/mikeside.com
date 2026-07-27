@@ -5,7 +5,7 @@
     { "id": "supmaine", "name": "SUP Maine", "url": "/supmaine/" },
     { "id": "setlist-lizard", "name": "Setlist Lizard ... With", "url": "/setlistlizard-with/" },
     { "id": "setlist-predictions", "name": "Setlist Prophet", "url": "/projects/setlist-predictions/" },
-    { "id": "setlist-bot", "name": "Phish Setlist Bot", "url": "/projects/setlistlizard_with/integration-diagram.html" }
+    { "id": "setlist-bot", "name": "Phish Setlist Bot" }
   ],
   "feeds": [
     {
