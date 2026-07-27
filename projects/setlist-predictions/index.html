@@ -607,7 +607,7 @@
       pre:"<b>Pre-registered test — and the sharpest one this project has.</b> Monday tests <b>two different costume mechanisms at once, and they are distinguishable by outcome.</b> <b>Drowned</b> tests the same-year reading: <em>Quadrophenia</em> was the Halloween 1995 costume, exactly as the White Album was 1994's when U.S.S.R. opened Saturday. It is a 2%-frequency song carried by nothing else. <b>While My Guitar Gently Weeps</b> tests the year-lag reading: in the Halloween 1994 costume set, then 12 plays across 1995 — the only song in the catalogue that fits that pattern. Also: do the three reserved slots outscore the frequency picks they displaced, and does the slate beat this night's random baseline by more than 2.5×, which is what plain v7 managed on Saturday. <b>The opener is deliberately not a costume pick</b> — a cover opener two nights running is less likely, not more.",
       calls:[
         C("Opener","Ya Mar","6/83 · 7%","<b>Reverted to frequency.</b> The most common 1995 set-one opener among unburned songs, current at a 17-show gap. Calling the opener off the costume album was wrong twice over — one observation is not a law, and <b>having just opened #94 with a cover, a cover opener two nights running is less likely, not more.</b>","Cars Trucks Buses (5) · Buried Alive (4) · Free"),
-        C("Encore","I Didn't Know","Fish slot","Reframed from frequency to the Fish/novelty slot after Purple Rain — a reframe with a 0-for-4 live record behind it. The vacuum-solo vehicle, 10 plays in 1995, current at a 14-show gap.","A Day in the Life (9/83) · Hello My Baby · Cracklin' Rosie"),
+        C("Encore","A Day in the Life","9/83 · 11%","<b>Changed by v9.</b> The Fish/novelty reframe that put I Didn't Know here is gone with the Tier B slots, and v9 actively suppresses that pick — 15 shows since it was last played against a typical gap of 36. This is 1995's most common encore at nine, unburned, and on the slate at 44%.","Hello My Baby (258) · Amazing Grace · Cracklin' Rosie"),
         C("Bustout","3–4 songs past a 300-show gap","count, not name","A count rather than a title, because no individual candidate clears 10%. <b>Be sceptical of a hit:</b> the range was drawn around the only three observations that exist.","Acoustic Army (g1096) · I'm Blue I'm Lonesome (g791) · Keyboard Army (g406)"),
         C("Longest jam","You Enjoy Myself","25 plays in 1995","Unburned through three nights, remarkable for the biggest jam vehicle in the catalogue at 626 all-time. The same call missed on Saturday.","Theme from the Bottom (8 jamcharts) · Free · Timber (Jerry the Mule)")
       ],
@@ -704,7 +704,7 @@
         ]) } }
   ]};
 
-  var KEY="phish-msg-v92", state, active=0;
+  var KEY="phish-msg-v93", state, active=0;
   function clone(o){ return JSON.parse(JSON.stringify(o)); }
   function load(){ try{ var r=localStorage.getItem(KEY); if(r){ state=JSON.parse(r); return true; } }catch(e){} state=clone(DEFAULTS); return false; }
   function save(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
