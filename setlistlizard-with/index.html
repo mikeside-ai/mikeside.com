@@ -251,7 +251,21 @@
           setBell(false);
           return;
         }
-        if (!("Notification" in window)) { b.textContent = "notifications unavailable"; return; }
+        if (!("Notification" in window)) {
+          // iPhone Safari (and most in-app browsers) has no web-notification
+          // API for regular pages. Don't dead-end — say what works.
+          b.textContent = "🔕 no alerts on this browser";
+          b.title = "This browser can't show web notifications — iPhone Safari only allows " +
+            "them for Home-Screen-installed apps with server push. Use desktop or " +
+            "Android Chrome for song alerts; true phone push is on the roadmap.";
+          return;
+        }
+        if (Notification.permission === "denied") {
+          b.textContent = "🔕 blocked — allow in site settings";
+          b.title = "Notifications were blocked for this site. Re-enable them in the " +
+            "browser's site settings (the icon by the address bar), then click again.";
+          return;
+        }
         Notification.requestPermission().then(function (p) {
           if (p === "granted") {
             try { localStorage.setItem(NOTIFY_KEY, "1"); } catch (e) {}
