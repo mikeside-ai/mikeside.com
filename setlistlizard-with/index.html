@@ -117,11 +117,7 @@
           Setlist data: <a href="https://phish.net/" rel="noopener">Phish.net</a> ·
           audio, durations, tags and banter: <a href="https://phish.in/" rel="noopener">phish.in</a> ·
           lengths are live estimates until the recording posts<br />
-          <!-- HIDDEN 2026-07-27 (Vlad, until further notice): the "how the bot works"
-               link to /projects/setlistlizard_with/integration-diagram.html was removed
-               from the line below. The diagram page still exists at that URL but is
-               unlisted and noindex. Restore it here and on /projects/ together. -->
-          <a href="/setlistlizard-with/credits/">credits &amp; FAQ</a> · <a href="/setlistlizard-with/stats/">tour stats</a> · <a href="/projects/">← all projects</a>
+          <a href="/setlistlizard-with/credits/">credits &amp; FAQ</a> · <a href="/setlistlizard-with/stats/">tour stats</a> · <a href="/projects/setlistlizard_with/integration-diagram.html">how the bot works</a> · <a href="/projects/">← all projects</a>
         </div>
       </div>
     </section>
@@ -200,6 +196,54 @@
     function isLive(d) {
       if (!d || d.complete || !d.updated_at || !d.sets || !d.sets.length) return false;
       return (Date.now() - Date.parse(d.updated_at)) < 30 * 60 * 1000;
+    }
+
+    // Show days are Eastern-time days: from mid-afternoon (soundchecks post
+    // around then) the board defaults to TONIGHT instead of the last complete
+    // show, and polls fast so the first note lands within seconds of the bot
+    // posting it. ?preview=tonight forces the flip for testing.
+    var FLIP_HOUR_ET = 15;
+    function etNow() {
+      try {
+        var parts = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York",
+          year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", hour12: false }).formatToParts(new Date());
+        var o = {};
+        parts.forEach(function (p) { o[p.type] = p.value; });
+        return { date: o.year + "-" + o.month + "-" + o.day, hour: +o.hour };
+      } catch (e) { return { date: "", hour: 0 }; }
+    }
+    function tonightShow() {
+      var et = etNow();
+      var t = UP.filter(function (s) { return s.showdate === et.date; })[0] || null;
+      if (!t) return null;
+      var forced = new URLSearchParams(location.search).get("preview") === "tonight";
+      return (et.hour >= FLIP_HOUR_ET || forced) ? t : null;
+    }
+    function renderPreShow(u) {
+      var key = "preshow:" + u.showdate;
+      if (key === lastKey) return;
+      lastKey = key;
+      el.headDate.innerHTML = esc(longDate(u.showdate)) + ' <span class="badge live">Tonight</span>';
+      el.headVenue.textContent = u.venue || "";
+      el.headLoc.textContent = [u.city, u.state].filter(Boolean).join(", ");
+      el.glance.innerHTML = ""; el.curve.innerHTML = ""; el.fullpage.innerHTML = "";
+      el.board.innerHTML = '<div class="empty" style="padding:3rem 1.5rem;">' +
+        '<div style="font-family:Fraunces,Georgia,serif;font-size:1.5rem;color:var(--accent-soft);">🦎 The Lizard is in position</div>' +
+        '<p style="max-width:34rem;margin:1rem auto 0;line-height:1.7;">Show day at ' + esc(u.venue || "the venue") +
+        ". The setlist lands here song by song the moment the first note is played — no refresh needed.</p></div>";
+      var lastPlayed = ALL.length ? ALL[ALL.length - 1] : null;
+      var hosts = [el.pager, el.pagerTop].filter(Boolean);
+      hosts.forEach(function (h) {
+        h.innerHTML = (lastPlayed
+          ? '<a href="?d=' + esc(lastPlayed) + '"><span><span class="pg-l">← Previous show</span>' +
+            '<span class="pg-v">' + esc(shortDate(lastPlayed)) + " · " + esc((META[lastPlayed] || {}).venue || "") + "</span></span></a>"
+          : "<span></span>") + "<span></span>";
+      });
+      window.__lizardLabData = null;
+      var lp = document.getElementById("lizard-lab-pies");
+      if (lp) lp.innerHTML = "";
+      el.labSection.hidden = el.mediaSection.hidden = el.srcSection.hidden = true;
+      document.dispatchEvent(new CustomEvent("lizard:refresh"));
     }
 
     // ---- chips: identical inline styling to the generator, so a stale cached
@@ -637,13 +681,26 @@
         var newest = shows.length ? shows[shows.length - 1].showdate : null;
         var running = isLive(live);
         // A pinned date wins over the live show — the reader asked for that night.
-        var date = pinned || ((live && live.sets && live.sets.length) ? live.showdate : newest);
+        // On a show day the board flips to TONIGHT from mid-afternoon; the
+        // pre-show view yields automatically once the live feed starts flowing.
+        var tonight = (!pinned && !running) ? tonightShow() : null;
+        // Precedence: pinned > actually-live feed > tonight (show-day flip,
+        // which must beat a stale live file from the previous show) > newest.
+        var date = pinned || (running ? live.showdate
+                   : tonight ? tonight.showdate
+                   : (live && live.sets && live.sets.length) ? live.showdate : newest);
         if (pinned) running = false;
         if (!date) { renderShow({}, false); return false; }
         return fetchJSON(RAW + "/setlists/" + date + ".json")
           .catch(function () { return null; })
           .then(function (arch) {
             var show;
+            if (tonight && date === tonight.showdate &&
+                !(arch && arch.sets && arch.sets.length) &&
+                !(live && live.showdate === date && live.sets && live.sets.length)) {
+              renderPreShow(tonight);
+              return true;      // poll at live cadence while we wait
+            }
             if (running && live && !pinned) {
               show = {};
               Object.keys(arch || {}).forEach(function (k) { show[k] = arch[k]; });
