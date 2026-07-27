@@ -1,0 +1,20 @@
+
+/* ---------- Dev Log ---------- */
+.devlog-tiles { margin-bottom: 1.6rem; }
+.devlog-tile { cursor: pointer; user-select: none; }
+.devlog-tile:focus-visible { outline: 2px solid var(--accent-soft); outline-offset: 2px; }
+.devlog-tile.active { border-color: var(--accent); background: rgba(193, 75, 52, 0.10); }
+.devlog-tile .devlog-meta { color: var(--muted); font-size: 0.85rem; }
+.devlog-item { align-items: flex-start; }
+.devlog-main { display: flex; flex-direction: column; gap: 0.3rem; min-width: 0; }
+.devlog-top { display: flex; gap: 0.6rem; align-items: baseline; flex-wrap: wrap; }
+.devlog-title { font-weight: 600; }
+.devlog-note { color: var(--muted); font-size: 0.9rem; }
+.chip {
+  font-size: 0.68rem; color: var(--accent-soft); border: 1px solid var(--border);
+  padding: 0.1rem 0.55rem; border-radius: 999px;
+  text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap;
+}
+.chip.type { color: var(--muted); }
+.devlog-more { margin-top: 1.4rem; text-align: center; }
+.devlog-more .btn { cursor: pointer; background: none; }

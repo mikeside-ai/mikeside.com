@@ -6,6 +6,7 @@
   <title>Mikeside — you're on the right side of the stage</title>
   <meta name="description" content="Mikeside — a personal project space. Photos, videos, writing, and projects built with AI. Page side is that way." />
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/devlog.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
@@ -81,6 +82,21 @@
       </div>
     </section>
 
+    <section class="block" id="devlog">
+      <div class="container">
+        <div class="section-head">
+          <span class="setno">Soundcheck</span>
+          <h2>Dev Log</h2>
+          <p>Patch notes and dev notes from every public project on the site. Tap a tile to filter.</p>
+        </div>
+        <div class="grid devlog-tiles" id="devlog-tiles"></div>
+        <div class="post-list" id="devlog-entries"></div>
+        <div class="devlog-more" id="devlog-more" hidden>
+          <button class="btn" type="button">More from the archive</button>
+        </div>
+      </div>
+    </section>
+
     <div class="groove" aria-hidden="true">
       <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
     </div>
@@ -121,5 +137,6 @@
     </div>
   </footer>
   <script src="/js/main.js"></script>
+  <script src="/js/devlog.js"></script>
 </body>
 </html>

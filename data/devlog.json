@@ -1,0 +1,122 @@
+{
+  "schema": "mikeside-devlog/1",
+  "projects": [
+    { "id": "mikeside", "name": "mikeside.com", "url": "/" },
+    { "id": "supmaine", "name": "SUP Maine", "url": "/supmaine/" },
+    { "id": "setlist-lizard", "name": "Setlist Lizard ... With", "url": "/setlistlizard-with/" },
+    { "id": "setlist-predictions", "name": "Phish Setlist Predictions", "url": "/projects/setlist-predictions/" },
+    { "id": "setlist-bot", "name": "Phish Setlist Bot", "url": "/projects/setlistlizard_with/integration-diagram.html" }
+  ],
+  "feeds": [
+    {
+      "project": "setlist-bot",
+      "url": "https://raw.githubusercontent.com/vlad-hub86/phish-setlist-bot/main/docs/devlog.json"
+    }
+  ],
+  "entries": [
+    {
+      "date": "2026-07-27",
+      "project": "mikeside",
+      "type": "feature",
+      "title": "Dev Log opens",
+      "notes": "Every public project now posts its patch notes here. Tiles filter the wire; outside projects publish their own feed and get merged in."
+    },
+    {
+      "date": "2026-07-27",
+      "project": "setlist-lizard",
+      "type": "release",
+      "title": "v5: inline player, six Lab pies, a real phone pass",
+      "notes": "Any track plays right on the page via phish.in streams, with seek and auto-advance through the set. Six pies chart each night's songs — debut era, album, gap, originals vs covers, writing credits, the Marshall factor."
+    },
+    {
+      "date": "2026-07-27",
+      "project": "setlist-lizard",
+      "type": "infra",
+      "title": "Moved to /setlistlizard-with/",
+      "notes": "Outgrew a card in the projects list. Old links redirect; the short address reads better."
+    },
+    {
+      "date": "2026-07-27",
+      "project": "setlist-lizard",
+      "type": "infra",
+      "title": "Show pages rebuild themselves",
+      "notes": "A workflow regenerates every show page and the tour stats whenever the feed or the generator changes, then hands off to the deploy."
+    },
+    {
+      "date": "2026-07-27",
+      "project": "setlist-lizard",
+      "type": "content",
+      "title": "Credits & FAQ page",
+      "notes": "phish.in credited on every page for audio, durations, tags and banter — their one condition for the API."
+    },
+    {
+      "date": "2026-07-27",
+      "project": "setlist-predictions",
+      "type": "release",
+      "title": "v9: calibrated odds + rotation-state term",
+      "notes": "Reserved slots removed. Beats v8 48 shows to 19 across 100 simulations."
+    },
+    {
+      "date": "2026-07-26",
+      "project": "setlist-predictions",
+      "type": "feature",
+      "title": "Backtest KPI dashboard",
+      "notes": "10 held-out shows, 4 models, 40 blind runs — plus a per-band comparison chart. Hindsight-built scores withdrawn."
+    },
+    {
+      "date": "2026-07-26",
+      "project": "setlist-lizard",
+      "type": "feature",
+      "title": "Track links, real durations, tag chips, stage banter",
+      "notes": "Show pages pull the phish.in track map; the Oddities section counts sandwiches, fests and deep bustouts."
+    },
+    {
+      "date": "2026-07-26",
+      "project": "supmaine",
+      "type": "fix",
+      "title": "Canonical-host guard fixes the vanishing photos",
+      "notes": "The site answered on two URLs and the photo key only trusts one. The wrong host now redirects before a single request is wasted."
+    },
+    {
+      "date": "2026-07-26",
+      "project": "supmaine",
+      "type": "feature",
+      "title": "Run Conditions names its trails",
+      "notes": "Each trail now linked to AllTrails."
+    },
+    {
+      "date": "2026-07-23",
+      "project": "setlist-lizard",
+      "type": "release",
+      "title": "Live setlist page ships",
+      "notes": "The live board polls the bot's feed every 60 seconds during shows; the archive keeps every show after."
+    },
+    {
+      "date": "2026-07-23",
+      "project": "mikeside",
+      "type": "infra",
+      "title": "Deploys move to GitHub Actions",
+      "notes": "Push to main mirrors the repo to the site in about 100 seconds."
+    },
+    {
+      "date": "2026-07-22",
+      "project": "mikeside",
+      "type": "content",
+      "title": "Setlist section added to the front page"
+    },
+    {
+      "date": "2026-07-21",
+      "project": "supmaine",
+      "type": "release",
+      "title": "Trip app live at supmaine.mikeside.com",
+      "notes": "The whole app in a single file."
+    },
+    {
+      "date": "2026-07-18",
+      "project": "mikeside",
+      "type": "release",
+      "title": "mikeside.com opens",
+      "notes": "Domain, hosting, SSL, and the Stage Left theme."
+    }
+  ]
+}
