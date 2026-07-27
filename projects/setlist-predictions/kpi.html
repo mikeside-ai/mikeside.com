@@ -134,10 +134,11 @@
 
   <div class="note">
     <span class="lbl">What this changes</span>
-    <p><b>1. v8 is settled, and it is a loss.</b> 765 against v7's 806 — 41 songs given up, 43 shows lost to 11 won. Three separate measurements now agree: #94, the 10-show backtest, and 100 simulations. <b>Reserved slots are a bad trade and they are gone from v9.</b></p>
-    <p><b>2. v6, v7 and v8 have identical ladders.</b> All three post 2,741 and 473 top-ten hits, because they share the same frequency head and differ only in slate slots 15–20 — which score nothing on a ten-pick ladder. For the setlist game specifically, the choice between them is irrelevant.</p>
-    <p><b>3. Reserving slots for a category works, and still loses.</b> v6 catches 193 covers, the most of any model. It also finishes 107 songs behind v7. That is the general shape of every clever idea tried on this project.</p>
-    <p><b>4. v9's edge is real and small.</b> 37 wins, 28 losses, 35 ties against v7. +22 hits, +142 ladder points, and a tighter spread. It is a better ranker, not a better finder — roughly 60% of what Phish plays is still out of reach of any frequency rule.</p>
+    <p><b>1. v10 is released and leads at 836.</b> Its entire gain sits on the 28 special-occasion shows, where it beats v9 by 8 songs and cuts calibration error from 1.56 to 1.24. On the other 72 shows it is v9, exactly.</p>
+    <p><b>2. v9's rotation term was actively hurting occasion nights.</b> It scored 298 there against plain v7's 303 — a curated residency does not avoid recently-played songs, and penalising them cost real hits. v10 switches it off for those nights only.</p>
+    <p><b>3. v8 is settled, and it is a loss.</b> 765 against v7's 806 — 41 songs given up, 43 shows lost to 11 won. Three independent measurements agree. Reserved slots are gone.</p>
+    <p><b>4. Every clever ranking idea has failed except one.</b> Cover quotas, reserved slots, mid-depth barbells and the short-song filler index all lost to plain frequency. Only v9's rotation term survived a holdout, and only on ordinary shows. <b>The frequency core does the work; the real gains have come from being honest about the odds.</b></p>
+    <p><b>5. The ceiling has not moved.</b> Roughly 60% of what Phish plays still sits outside any frequency rule's reach, and 368 of 2,281 songs were unreachable in principle. Getting past that needs a different signal — segue affinity and set-position priors are next.</p>
   </div>
 
   <h2 class="ph">Patch notes</h2>
@@ -148,7 +149,7 @@
 <div class="pn"><div class="pnh"><span class="pnv">v6</span><span class="pns ">retired</span><span class="pnd">25 Jul 2026</span></div><p class="pnl">Frequency head plus a cover quota and archetype buckets.</p><ul class="pni"><li><b>Best cover-catcher of any model</b> — 193 of 444 — and still finished 107 songs behind v7.</li><li>Reserving slots for a category reliably improves that category and reliably costs more than it returns.</li></ul></div>
 <div class="pn"><div class="pnh"><span class="pnv">v5</span><span class="pns ">retired</span><span class="pnd">24 Jul 2026</span></div><p class="pnl">Mid-depth barbell: top 8 plus twelve from the 20–40% depth band.</p><ul class="pni"><li>The only model published blind before the backtests existed. Scored 6/20 live on #93.</li><li>592 across 100 simulations — last place, 1.92× random.</li></ul></div>
 
-  <footer>100 simulations run 27 July 2026 &middot; data from the phish.net API v5, filtered to <code>artist_name = "Phish"</code> &middot; 100 shows, 5 rules, 2,000 picks per model. Train/test split 50/50, interleaved by date.</footer>
+  <footer>100 simulations run 27 July 2026 &middot; data from the phish.net API v5, filtered to <code>artist_name = "Phish"</code> &middot; 100 shows, 6 rules, 2,000 picks per model. Train/test split 50/50, interleaved by date.</footer>
 </div>
 </body>
 </html>
