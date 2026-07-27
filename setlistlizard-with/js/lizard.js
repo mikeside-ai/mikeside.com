@@ -410,7 +410,7 @@
   var THEMES = [
     { id: "dark",  icon: "🌙", label: "Dark" },
     { id: "light", icon: "☀️", label: "Light" },
-    { id: "hulk",  icon: "💚", label: "Hulk — green & purple" },
+    { id: "hulk",  icon: "🍆", label: "Hulk — green & purple" },
     { id: "donut", icon: "🍩", label: "Donut — the muumuu" },
     { id: "lizard", icon: "🦎", label: "Lizard — house colors" }
   ];
