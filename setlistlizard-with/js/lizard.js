@@ -403,15 +403,16 @@
 
   /* ================================ themes ================================ */
   // dark (site default) → light → hulk (green & purple) → donut (Fishman's
-  // muumuu: cerulean field, crimson donuts). The palettes ship as an injected
-  // <style> from initTheme(); this cycles the html attribute and remembers
-  // the pick.
+  // muumuu: cerulean field, crimson donuts). The palettes live in
+  // setlistlizard.css as data-lz-theme variable overrides; this just cycles
+  // the attribute and remembers the pick.
 
   var THEMES = [
     { id: "dark",  icon: "🌙", label: "Dark" },
     { id: "light", icon: "☀️", label: "Light" },
     { id: "hulk",  icon: "💚", label: "Hulk — green & purple" },
-    { id: "donut", icon: "🍩", label: "Donut — the muumuu" }
+    { id: "donut", icon: "🍩", label: "Donut — the muumuu" },
+    { id: "lizard", icon: "🦎", label: "Lizard — house colors" }
   ];
 
   function getTheme() {
@@ -446,6 +447,8 @@
         '--text:#e9f6e3;--muted:#a89ec6;--accent:#4ed04f;--accent-soft:#86e987;--border:#3c2660;}' +
         'html[data-lz-theme="donut"]{--bg:#0d3e5c;--bg-soft:#0f4868;--card:#115177;' +
         '--text:#eef8ff;--muted:#a3c9dc;--accent:#e0324e;--accent-soft:#ff7a8e;--border:#1c6390;}' +
+        'html[data-lz-theme="lizard"]{--bg:#0e1a10;--bg-soft:#132413;--card:#1a2e1b;' +
+        '--text:#ecf3e0;--muted:#a3b896;--accent:#a9cf3a;--accent-soft:#cbe36e;--border:#2e4a2a;}' +
         '#lz-theme{position:fixed;right:.9rem;bottom:.9rem;z-index:60;width:46px;height:46px;' +
         'border-radius:50%;border:1px solid var(--border);background:var(--card);color:var(--text);' +
         'font-size:1.3rem;line-height:1;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.35);' +
