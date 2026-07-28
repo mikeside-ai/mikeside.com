@@ -628,7 +628,7 @@
 <script>
 (function () {
   "use strict";
-  function P(a){ return a.map(function(p){ return {name:p[0],tag:p[1],why:p[2],gap:p[3],hit:false}; }); }
+  function P(a){ return a.map(function(p){ return {name:p[0],tag:p[1],why:p[2],gap:p[3],hit:!!p[4]}; }); }
   function C(k,pick,odds,basis,alts,verdict){ return {k:k,pick:pick,odds:odds,basis:basis,alts:alts,verdict:verdict||null,hit:false}; }
   function G(a){ return a.map(function(g,i){ return {pts:10-i,name:g[0],p:g[1],why:g[2],gap:g[3],hit:!!g[4]}; }); }
   function M(name,sub,note,score,tone,picks){ return {name:name,sub:sub,note:note,score:score,tone:tone,picks:picks}; }
@@ -642,7 +642,10 @@
       songs:[["Llama",0],["Bathtub Gin",0],["Lengthwise",1],["Maze",1],["Gumbo",0],["Daniel Saw the Stone",0],["Weigh",0],["Guelah Papyrus",1],["The Divided Sky",1],["Tube",0],["Big Ball Jam",0],["La Grange",0],["Also Sprach Zarathustra",0],["Chalk Dust Torture",1],["Sparks",0],["Slave to the Traffic Light",0],["The Wedge",1],["Makisupa Policeman",0],["Kung",0],["Suzy Greenberg",0],["Golgi Apparatus",0],["Good Times Bad Times",0],["Sweet Adeline",0],["Fluffhead",0]] },
     { year:"1994", show:94, live:true, model:"Forbin v7 — published live", hits:10, played:16, random:4.0,
       cap:"<b>2.5× random — genuinely the best night</b>, and the multiple is the right way to see it. A front-of-house outage cut set 1 to five songs, so only 16 unique songs were available; the coverage <em>rate</em> is inflated by that, the multiple is not.",
-      songs:[["Back in the U.S.S.R.",0],["Simple",1],["Rift",1],["Punch You in the Eye",0],["Wolfman's Brother",0],["Highway to Hell",0],["Down with Disease",1],["Tweezer",1],["Sample in a Jar",1],["Lifeboy",1],["Julius",1],["Catapult",0],["Cavern",1],["The Squirming Coil",1],["Purple Rain",0],["Tweezer Reprise",1]] }
+      songs:[["Back in the U.S.S.R.",0],["Simple",1],["Rift",1],["Punch You in the Eye",0],["Wolfman's Brother",0],["Highway to Hell",0],["Down with Disease",1],["Tweezer",1],["Sample in a Jar",1],["Lifeboy",1],["Julius",1],["Catapult",0],["Cavern",1],["The Squirming Coil",1],["Purple Rain",0],["Tweezer Reprise",1]] },
+    { year:"1995", show:95, live:true, model:"Forbin v10 — published live", hits:8, played:20, random:3.0,
+      cap:"<b>2.7× random — the best night of the run.</b> The eligible pool was 135 songs, so a random 20 expects 3.0. The two picks that carried it were the two the model did not want to make: Prince Caspian, restored by the curated-run correction, and Drowned, a declared override the frequency model ranks at 3.8%.",
+      songs:[["Wilson",0],["Timber (Jerry the Mule)",0],["Ha Ha Ha",1],["Scent of a Mule",1],["Theme from the Bottom",1],["Halley's Comet",0],["The Man Who Stepped Into Yesterday",0],["Avenu Malkenu",0],["NICU",0],["Funky Bitch",0],["Taste",1],["The Curtain With",0],["Prince Caspian",1],["Drowned",0],["Billy Breathes",0],["It's Ice",1],["Johnny B. Goode",0],["Free",1],["Strange Design",1],["Loving Cup",0]] }
   ];
 
   function renderRun(){
@@ -734,109 +737,121 @@
         {name:"Encore", songs:["Purple Rain","Tweezer Reprise"]}
       ], note:"Set 1 was ended early by a front-of-house outage. Set 2 became a Tweezerfest — six Tweezers wrapping the other songs, restaging 6/18/94. Three deep bustouts: U.S.S.R. (485), Highway to Hell (659), Catapult (223). Back in the U.S.S.R. is a White Album track, from the Halloween 1994 costume set held two months after most of 1994 was played." } },
 
-    { n:4, year:"1995", show:95, date:"Mon · Jul 27", status:"next",
-      note:"First genuine out-of-sample test. Top 20 of 1995 by play count across 83 Phish shows, minus the 66 burned. Reserved slots are gone. Saturday reopened a lot: You Enjoy Myself, Poor Heart, Scent of a Mule, It's Ice, Amazing Grace and Fee all survived.",
+    { n:4, year:"1995", show:95, date:"Mon · Jul 27", status:"done", tabScore:"8 / 20 live",
+      note:"Eight of the twenty slate songs landed, and nine of the twenty-one published picks once the declared Drowned override is counted — 2.70× random, the best night of the run. The ten-pick ladder scored 31 of 55 against an expected 35.5. First genuine out-of-sample test. Top 20 of 1995 by play count across 83 Phish shows, minus the 66 burned. Reserved slots are gone. Saturday reopened a lot: You Enjoy Myself, Poor Heart, Scent of a Mule, It's Ice, Amazing Grace and Fee all survived.",
       pre:"<b>Pre-registered test — and the sharpest one this project has.</b> Monday tests <b>two different costume mechanisms at once, and they are distinguishable by outcome.</b> <b>Drowned</b> tests the same-year reading: <em>Quadrophenia</em> was the Halloween 1995 costume, exactly as the White Album was 1994's when U.S.S.R. opened Saturday. It is a 2%-frequency song carried by nothing else. <b>While My Guitar Gently Weeps</b> tests the year-lag reading: in the Halloween 1994 costume set, then 12 plays across 1995 — the only song in the catalogue that fits that pattern. Also: do the three reserved slots outscore the frequency picks they displaced, and does the slate beat this night's random baseline by more than 2.5×, which is what plain Forbin v7 managed on Saturday. <b>The opener is deliberately not a costume pick</b> — a cover opener two nights running is less likely, not more.",
+      scores:[{k:"Published slate",v:"8",sm:"/ 20",x:"2.70× random",tone:"up"},{k:"With the Drowned override",v:"9",sm:"/ 21",x:"3.0× random",tone:"up"},{k:"Setlist game",v:"31",sm:"/ 55",x:"expected 35.5",tone:"dn"},{k:"Songs played",v:"20",x:"eligible pool 135",tone:""}],
+      lesson:"<b>What #95 taught: the costume-album rule is real, and v10's uplift was not.</b> Drowned hit — Forbin v9 ranks it 3.8%, and it was published at 45% purely because <em>Quadrophenia</em> was the Halloween 1995 album. That is the same mechanism that put Back in the U.S.S.R. in #94. Two costume albums, two nights, two hits, and each one surfaced exactly one song — the one that entered the repertoire, not a mini-set. Against that, v10's headline change failed: the slate's probabilities summed to 10.79 expected hits and the show delivered 8, over-confident by 1.35×. Strip the 1.4× uplift and Forbin v9 predicts 7.71 against 8 actual. The uplift was fitted on occasion nights averaging 27.1 songs, and this run plays 26, 24, 16 and 20. A themed residency is not NYE.",
       calls:[
-        C("Opener","Ya Mar","6/83 · 7%","<b>Reverted to frequency.</b> The most common 1995 set-one opener among unburned songs, current at a 17-show gap. Calling the opener off the costume album was wrong twice over — one observation is not a law, and <b>having just opened #94 with a cover, a cover opener two nights running is less likely, not more.</b>","Cars Trucks Buses (5) · Buried Alive (4) · Free"),
-        C("Encore","A Day in the Life","9/83 · 11%","<b>Changed by Forbin v9.</b> The Fish/novelty reframe that put I Didn't Know here is gone with the Tier B slots, and Forbin v9 actively suppresses that pick — 15 shows since it was last played against a typical gap of 36. This is 1995's most common encore at nine, unburned, and on the slate at 44%.","Hello My Baby (258) · Amazing Grace · Cracklin' Rosie"),
-        C("Bustout","3–4 songs past a 300-show gap","count, not name","A count rather than a title, because no individual candidate clears 10%. <b>Be sceptical of a hit:</b> the range was drawn around the only three observations that exist.","Acoustic Army (g1096) · I'm Blue I'm Lonesome (g791) · Keyboard Army (g406)"),
-        C("Longest jam","You Enjoy Myself","25 plays in 1995","Unburned through three nights, remarkable for the biggest jam vehicle in the catalogue at 626 all-time. The same call missed on Saturday.","Theme from the Bottom (8 jamcharts) · Free · Timber (Jerry the Mule)")
+        C("Opener","Ya Mar","6/83 · 7%","<b>Reverted to frequency.</b> The most common 1995 set-one opener among unburned songs, current at a 17-show gap. Calling the opener off the costume album was wrong twice over — one observation is not a law, and <b>having just opened #94 with a cover, a cover opener two nights running is less likely, not more.</b>","Cars Trucks Buses (5) · Buried Alive (4) · Free",{t:"MISS — Wilson opened. Wilson was also #96's opener call, so Wednesday needed a new one."}),
+        C("Encore","A Day in the Life","9/83 · 11%","<b>Changed by Forbin v9.</b> The Fish/novelty reframe that put I Didn't Know here is gone with the Tier B slots, and Forbin v9 actively suppresses that pick — 15 shows since it was last played against a typical gap of 36. This is 1995's most common encore at nine, unburned, and on the slate at 44%.","Hello My Baby (258) · Amazing Grace · Cracklin' Rosie",{t:"MISS — Strange Design and Loving Cup encored. Strange Design was a slate hit, just not as the encore call."}),
+        C("Bustout","3–4 songs past a 300-show gap","count, not name","A count rather than a title, because no individual candidate clears 10%. <b>Be sceptical of a hit:</b> the range was drawn around the only three observations that exist.","Acoustic Army (g1096) · I'm Blue I'm Lonesome (g791) · Keyboard Army (g406)",{t:"MISS — over-predicted. Exactly one landed, Johnny B. Goode at 927. Ha Ha Ha (231), Drowned (113) and Strange Design (61) all fall short of the threshold. The range has now run high three times and is narrowed to 1–2 for #96."}),
+        C("Longest jam","You Enjoy Myself","25 plays in 1995","Unburned through three nights, remarkable for the biggest jam vehicle in the catalogue at 626 all-time. The same call missed on Saturday.","Theme from the Bottom (8 jamcharts) · Free · Timber (Jerry the Mule)",{t:"MISS — You Enjoy Myself did not appear at all. The longest jam was Drowned, which carried the night's mini-drum-kit device and Tequila and Cissy Strut teases."})
       ],
       sets:[
         { name:"Set 1", songs:P([
-          ["Free","32 plays · 70% · gap 5","Most-played song of 1995.",5],
-          ["Strange Design","29 plays · 67% · gap 61","29 of its 68 all-time plays fall in 1995.",61],
+          ["Free","32 plays · 70% · gap 5","Most-played song of 1995.",5,1],
+          ["Strange Design","29 plays · 67% · gap 61","29 of its 68 all-time plays fall in 1995.",61,1],
           ["Acoustic Army","27 plays · 66% · gap 1097","<b>All 27 all-time plays are 1995.</b>",1097],
           ["Poor Heart","27 plays · 66% · gap 77","27 plays, and it survived Saturday.",77],
-          ["Theme from the Bottom","27 plays · 66% · gap 10","Debuted May 1995; the year's leading unburned jam vehicle.",10],
+          ["Theme from the Bottom","27 plays · 66% · gap 10","Debuted May 1995; the year's leading unburned jam vehicle.",10,1],
           ["You Enjoy Myself","25 plays · 63% · gap 5","626 all-time, unburned through three nights. Tonight's longest-jam call.",5],
           ["A Day in the Life","23 plays · 62% · gap 38","Beatles cover and 1995's most common encore at nine. Tonight's encore call.",38],
-          ["Scent of a Mule","23 plays · 62% · gap 96","23 plays in 1995.",96],
+          ["Scent of a Mule","23 plays · 62% · gap 96","23 plays in 1995.",96,1],
           ["Cars Trucks Buses","20 plays · 57% · gap 44","Debuted Sep 1995 — that rate inside a third of a year.",44]
         ]) },
         { name:"Set 2", songs:P([
-          ["It's Ice","20 plays · 57% · gap 8","20 plays in 1995.",8],
+          ["It's Ice","20 plays · 57% · gap 8","20 plays in 1995.",8,1],
           ["I'm Blue, I'm Lonesome","18 plays · 53% · gap 792","Bill Monroe cover, 18 of its 30 all-time plays in 1995.",792],
           ["Ya Mar","18 plays · 53% · gap 18","1995's most common set-one opener at six. Tonight's opener call.",18],
           ["Amazing Grace","17 plays · 49% · gap 901","17 plays in 1995.",901],
-          ["Prince Caspian","17 plays · 49% · gap 3","Debuted Jun 1995, 17 plays. <b>A 3-show gap is not a mark against it here</b> — this run is a curated residency, not a tour leg, so ordinary repeat-avoidance does not apply.",3],
+          ["Prince Caspian","17 plays · 49% · gap 3","Debuted Jun 1995, 17 plays. <b>A 3-show gap is not a mark against it here</b> — this run is a curated residency, not a tour leg, so ordinary repeat-avoidance does not apply.",3,1],
           ["Uncle Pen","16 plays · 45% · gap 338","Bill Monroe cover, 16 plays in 1995.",338],
           ["Hello My Baby","15 plays · 42% · gap 258","The a cappella number.",258],
           ["Fee","14 plays · 38% · gap 6","14 plays in 1995 and fully current.",6]
         ]) },
         { name:"Encore", songs:P([
-          ["Ha Ha Ha","14 plays · 38% · gap 231","14 plays in 1995 — most of its life.",231],
+          ["Ha Ha Ha","14 plays · 38% · gap 231","14 plays in 1995 — most of its life.",231,1],
           ["Keyboard Army","14 plays · 38% · gap 407","<b>All 14 all-time plays are 1995.</b>",407],
-          ["Taste That Surrounds","14 plays · 38% · gap 1088","The 1995 name for Taste, 14 plays that year.",1088]
+          ["Taste That Surrounds","14 plays · 38% · gap 1088","The 1995 name for Taste, 14 plays that year.",1088,1]
         ]) }
+      ],
+      models:[
+        M("Forbin v10 — top 20 by play count","published live at showtime","1995 across 83 Phish shows, minus the 66 burned across the first three nights, with Drowned added as a declared costume-album override. <b>The only live slate for this night.</b> Eight of the twenty slate songs hit; nine of twenty-one counting the override. Ladder: 31/55.","9 / 21","g",
+          [["Free","70%",1],["Strange Design","67%",1],["Acoustic Army","66%",0],["Poor Heart","66%",0],["Theme from the Bottom","66%",1],["You Enjoy Myself","63%",0],["A Day in the Life","62%",0],["Scent of a Mule","62%",1],["Cars Trucks Buses","57%",0],["It's Ice","57%",1],["I'm Blue, I'm Lonesome","53%",0],["Ya Mar","53%",0],["Amazing Grace","49%",0],["Prince Caspian","49%",1],["Uncle Pen","45%",0],["Drowned","45% · override",1],["Hello My Baby","42%",0],["Fee","38%",0],["Ha Ha Ha","38%",1],["Keyboard Army","38%",0],["Taste","38% · as Taste That Surrounds",1]])
       ],
       game:{ expected:"35.5", note:"<b>Forbin v10 — special-occasion calibration.</b> <b>Every percentage rose about 40% again.</b> The 100-simulation backtest was re-cut by show type and found Forbin v9 well calibrated on ordinary shows (ratio 1.03 train, 1.11 test) but badly under-confident on special occasions — NYE, Halloween, Baker's Dozen and this run — at <b>1.38 train and 1.75 test</b>. The reason is simple: those nights average <b>26.4 songs against 21.2</b>, so every pick is likelier to land. Forbin v10 applies a 1.4× uplift on nights like this. It changes no picks, only the odds. <b>The rotation-state term is deliberately switched OFF for this run.</b> It was briefly applied against the band's 2026 form and that was wrong: a themed residency is curated, not cycled. Nothing played before MSG counts against a song — <b>the only songs out of play are the 66 burned across the first three nights.</b> Prince Caspian is back at rank 14 on a 3-show gap, and so are Fee and the rest. Drowned is a declared override, not a Forbin v9 pick.",
         picks:G([
-          ["Free","70%","Most-played song of 1995 and current.",5],
-          ["Strange Design","67%","29 of its 68 all-time plays are 1995.",61],
+          ["Free","70%","Most-played song of 1995 and current.",5,true],
+          ["Strange Design","67%","29 of its 68 all-time plays are 1995.",61,true],
           ["Acoustic Army","66%","Every one of its 27 plays falls in 1995.",1097],
           ["Poor Heart","66%","27 plays, and it survived Saturday.",77],
-          ["Theme from the Bottom","66%","The year's leading unburned jam vehicle.",10],
+          ["Theme from the Bottom","66%","The year's leading unburned jam vehicle.",10,true],
           ["You Enjoy Myself","63%","626 all-time, unburned after three nights.",5],
-          ["Drowned","45%","<b>Declared override — Forbin v9 ranks this 3.8%.</b> Two 1995 plays is all the model sees. It is here on the costume argument alone: <em>Quadrophenia</em> was the Halloween 1995 album, exactly as the White Album was 1994's when U.S.S.R. opened #94.",119],
+          ["Drowned","45%","<b>Declared override — Forbin v9 ranks this 3.8%.</b> Two 1995 plays is all the model sees. It is here on the costume argument alone: <em>Quadrophenia</em> was the Halloween 1995 album, exactly as the White Album was 1994's when U.S.S.R. opened #94.",119,true],
           ["A Day in the Life","62%","23 plays and the year's most common encore.",38],
-          ["Scent of a Mule","62%","23 plays in 1995; survived Saturday.",96],
+          ["Scent of a Mule","62%","23 plays in 1995; survived Saturday.",96,true],
           ["Cars Trucks Buses","57%","20 plays after a Sep 1995 debut.",44]
-        ]) } },
+        ]) },
+      actual:{ sets:[
+        {name:"Set 1", songs:["Wilson","Timber (Jerry the Mule)","Ha Ha Ha","Scent of a Mule","Theme from the Bottom","Halley's Comet","The Man Who Stepped Into Yesterday","Avenu Malkenu","NICU","Funky Bitch","Taste"]},
+        {name:"Set 2", songs:["The Curtain With","Prince Caspian","Drowned","Billy Breathes","It's Ice","Johnny B. Goode","Free"]},
+        {name:"Encore", songs:["Strange Design","Loving Cup"]}
+      ], note:"Twenty songs, exactly the length the 1995 era median predicts. Drowned is the one Quadrophenia song to surface, matching Back in the U.S.S.R. two nights earlier: the costume album delivers a single song that entered the repertoire, not a mini-set. Deepest bustout: Johnny B. Goode at a 927-show gap, the only song past 300 against a called range of three to four. Taste is listed here under its modern title; the slate carried it as Taste That Surrounds." } },
 
-    { n:5, year:"1996", show:96, date:"Wed · Jul 29", status:"up",
-      note:"The closer, rebuilt on verified 1996 counts after the numbers first published here proved inflated. 73 Phish shows in 1996, side projects filtered. Still the most provisional slate on the page: twelve of these twenty songs also appear on Monday's slate and burn if they land there first.",
+    { n:5, year:"1996", show:96, date:"Wed · Jul 29", status:"next",
+      note:"Rebuilt after Monday. Eight of the twenty picks previously published here burned that night: Taste, which had been this slate's top pick at 70%, together with Theme from the Bottom, Scent of a Mule, Free, Prince Caspian, Funky Bitch, It's Ice and Wilson, which was also the opener call. Eighty-six songs are now out of play, so the replacements are much rarer material — new entrants promoted only because the burn list ate the head of the 1996 distribution. That is why this slate is so flat: nothing left clears the 78% cap, and the bottom half sits between 24 and 36 per cent.",
       calls:[
-        C("Opener","Wilson","5/73 · 7%","<b>Changed from The Star-Spangled Banner</b> on a verified 1996 opener count. Wilson and Ya Mar tie as the year's most frequent set-one openers at five each; the Banner managed three, not the figure previously shown here. Ya Mar is Monday's opener call, so if it lands it is burned — Wilson is the pick that survives either outcome.","Ya Mar (5, burns if Monday hits) · Poor Heart (4) · The Star-Spangled Banner (3)"),
-        C("Encore","Waste","4/73 · 5%","<b>Verified:</b> debuted Jun 1996 and closed four shows that year, the most of any 1996 encore. Still a weak call in absolute terms — no 1996 encore clears 6%, and the Fish-slot logic that governs this call has a 0-for-4 live record.","Funky Bitch (3) · Johnny B. Goode (3, g926) · Fire (3) · Rocky Top (3)"),
-        C("Bustout","3–4 songs past a 300-show gap","count, not name","Same reframing, same caveat.","Johnny B. Goode (g926) · Life on Mars? (g539) · Star-Spangled Banner (g360)"),
-        C("Longest jam","Character Zero","21 plays in 1996","<b>Changed from Crosseyed and Painless.</b> Crosseyed is a <em>Remain in Light</em> song from Halloween 1996 — which, under the year-lag reading, means it belongs to 1997's rotation, not 1996's. It only got two plays in 1996. Character Zero is 21 plays in half a year — tied for the most-played unburned song of 1996 — and a real vehicle.","Taste · You Enjoy Myself · Funky Bitch")
+        C("Opener","Ya Mar","5/73 · 7%","Five 1996 openers, the most of any surviving song. <b>1996's two leading openers are both burned</b> — Runaway Jim and Chalk Dust Torture at eight each — which is what leaves Ya Mar at the top of a thin field. Note the record: this was also #95's opener call, and it missed.","Poor Heart (four) · The Star-Spangled Banner (three) · Cars Trucks Buses (two)"),
+        C("Encore","Waste","4/73 · 5%","Four 1996 encores, the most of any survivor. Still a weak call in absolute terms — no 1996 encore clears 6%, and the Fish-slot logic that governs this call has yet to land one.","Rocky Top (three) · Fire (three) · Frankenstein (two)"),
+        C("Longest jam","You Enjoy Myself","23 plays in 1996","<b>The only major jam vehicle still alive.</b> Down with Disease, Tweezer, Stash, Mike's Song, David Bowie, Harry Hood, Runaway Jim and Simple are all burned, which leaves one candidate rather than a field.","Character Zero · Steep"),
+        C("Bustout","1–2 songs past a 300-show gap","count, not name","<b>Narrowed from 3–4</b>, which over-predicted at #95: the call was three to four and the show produced exactly one, Johnny B. Goode at a 927-show gap.","Life on Mars? (g540) · The Star-Spangled Banner (g361) · Uncle Pen (g338)")
       ],
       sets:[
         { name:"Set 1", songs:P([
-          ["Taste","28 plays · 70% · gap 7","Most-played song of 1996 — Monday can burn it under its 1995 title, Taste That Surrounds.",7],
-          ["You Enjoy Myself","24 plays · 66% · gap 5","626 all-time; also Monday's longest-jam call.",5],
-          ["Character Zero","21 plays · 62% · gap 6","Debuted Jun 1996 and immediately tied for most-played. Safe from Monday.",6],
-          ["Poor Heart","21 plays · 62% · gap 77","21 plays in 1996 and four openers.",77],
-          ["Theme from the Bottom","20 plays · 60% · gap 10","20 plays in 1996 on top of 27 in 1995.",10],
-          ["Cars Trucks Buses","19 plays · 59% · gap 44","19 in 1996 after 20 in 1995 — a two-year staple.",44],
-          ["Ya Mar","19 plays · 59% · gap 18","Tied for the year's most common opener at five.",18],
-          ["Scent of a Mule","18 plays · 59% · gap 96","18 plays in 1996.",96],
-          ["Free","17 plays · 57% · gap 5","32 plays in 1995 and still 17 in 1996.",5]
+          ["You Enjoy Myself","23 plays · 78% · gap 5","626 all-time and the only major jam vehicle left unburned. Capped at 78%. Tonight's longest-jam call.",5],
+          ["Character Zero","21 plays · 76% · gap 6","Debuted Jun 1996 and immediately tied for the year's most-played.",6],
+          ["Poor Heart","21 plays · 76% · gap 77","21 plays in 1996 and four openers that year, second only to Ya Mar.",77],
+          ["Cars Trucks Buses","19 plays · 73% · gap 44","19 in 1996 after 20 in 1995 — a two-year staple, and it survived Monday.",44],
+          ["Ya Mar","19 plays · 73% · gap 18","Five 1996 openers, the most of any surviving song. Tonight's opener call.",18],
+          ["Waste","17 plays · 70% · gap 12","Four 1996 encores, the most of any survivor. Tonight's encore call.",12],
+          ["Hello My Baby","17 plays · 70% · gap 258","The a cappella number, 17 plays in 1996.",258],
+          ["Train Song","15 plays · 60% · gap 93","Debuted Jul 1996 — a quarter of its entire life falls in the theme year.",93],
+          ["A Day in the Life","15 plays · 60% · gap 38","Beatles cover, 15 plays in 1996 and unburned through four nights.",38]
         ]) },
         { name:"Set 2", songs:P([
-          ["Hello My Baby","17 plays · 57% · gap 258","The a cappella number, 17 plays in 1996.",258],
-          ["Prince Caspian","17 plays · 57% · gap 3","17 plays in 1996. <b>Restored to rank 11</b> — a 3-show gap does not count against a song in a curated residency.",3],
-          ["Waste","17 plays · 57% · gap 12","Jun 1996 debut and the year's most frequent encore at four. Tonight's encore call.",12],
-          ["A Day in the Life","15 plays · 49% · gap 38","Beatles cover, 15 plays in 1996.",38],
-          ["Train Song","15 plays · 49% · gap 93","Debuted Jul 1996 — a quarter of its whole life.",93],
-          ["Funky Bitch","14 plays · 45% · gap 32","Son Seals cover, three 1996 encores.",32],
-          ["It's Ice","14 plays · 45% · gap 8","14 plays in 1996.",8],
-          ["Steep","13 plays · 41% · gap 230","Debuted Oct 1996. Inseparable from Swept Away.",230]
+          ["Swept Away","13 plays · 50% · gap 230","Debuted Oct 1996 and inseparable from Steep; the pair travels together.",230],
+          ["Steep","13 plays · 50% · gap 230","The other half of that pair, and never far from it.",230],
+          ["The Star-Spangled Banner","10 plays · 36% · gap 361","Opened three 1996 shows, third among the year's openers.",361],
+          ["Life on Mars?","10 plays · 36% · gap 540","<b>10 of its 23 all-time plays are 1996.</b> <span class=\"risk\">Deep vault.</span>",540],
+          ["Fee","10 plays · 36% · gap 6","Fully current at a 6-show gap. A new entrant, promoted because the burn list ate the head of the 1996 distribution.",6],
+          ["Talk","8 plays · 27% · gap 121","A 1996 ballad that only reaches a slate now that the top of the year is gone.",121],
+          ["Frankenstein","8 plays · 27% · gap 14","Edgar Winter cover, current at a 14-show gap. Promoted by depletion, not by rate.",14],
+          ["Fire","8 plays · 27% · gap 9","Hendrix cover and a standing encore option, three of them in 1996.",9]
         ]) },
         { name:"Encore", songs:P([
-          ["Swept Away","13 plays · 41% · gap 230","The other half of that pair.",230],
-          ["Wilson","12 plays · 36% · gap 9","Tied for the year's most common opener. Tonight's opener call.",9],
-          ["Life on Mars?","10 plays · 29% · gap 540","<b>10 of its 23 all-time plays are 1996.</b> <span class=\"risk\">Deep vault.</span>",540]
+          ["The Curtain","8 plays · 27% · gap 185","New entrant. The short version, distinct from The Curtain With, which Monday burned.",185],
+          ["Uncle Pen","7 plays · 24% · gap 338","Bill Monroe cover, seven plays in 1996 and long dormant since.",338],
+          ["Rocky Top","7 plays · 24% · gap 11","Bluegrass encore staple, three 1996 encores. Promoted by depletion.",11]
         ]) }
       ],
-      game:{ expected:"34.8", note:"<b>Forbin v9, rotation state live.</b> Calibrated probabilities, with the rotation-state term switched off — a curated residency does not avoid recent songs, so Prince Caspian sits at rank 11 on its 1996 frequency and a 3-show gap counts for nothing. Ranks are also discounted for Monday burn risk, and that risk is unusually high: <b>twelve of these twenty songs also sit on Monday's slate</b>, including Taste, which 1995 logs as Taste That Surrounds. Crosseyed is a declared override, not a model pick, and the largest single position on this page. Rebuilt after Monday.",
+      game:{ expected:"40.7",
+        note:"<b>Forbin v11 — show length and pool depletion.</b> <b>The 1.4× occasion uplift is gone.</b> It was fitted on occasion nights averaging 27.1 songs and this run does not play them, so it is replaced by two measured terms. The first is length: the theme year predicts the show. Era medians run 24, 24, 21, 20 and 19 songs for 1992 through 1996, against 26, 24, 16 with a front-of-house outage, and 20 actually played — <b>three clean nights all within +2, and 1995 exact.</b> Wednesday is therefore forecast at 19–20 songs. The second is depletion: <b>86 songs are now burned</b>, leaving 90 of 1996's 167. Those survivors' raw rates sum to only 5.77 expected songs while the show will play about 19.5, so the depletion factor D is <b>3.38, against 1.97 at #95</b> — where the v9 knots scored 1.04. Every probability here is the v9 knot value scaled by 1.72 and capped at 78%. The slate sums to 10.0 expected hits; a random 20 drawn from a 90-song pool expects 4.33, so the model's edge is <b>2.31×</b>. Crosseyed and Painless is a declared override, not a model pick.",
         picks:G([
-          ["Crosseyed and Painless","80%","<b>Declared override — Forbin v9 ranks this 4.2%.</b> Two 1996 plays is all the model sees. It stands on <em>Remain in Light</em> being the Halloween 1996 costume, 75 all-time plays, and eight MSG appearances weighted to marquee nights. Safe from Monday.",7],
-          ["Character Zero","62%","Tied for the year's most-played unburned song, and not on Monday's slate.",6],
-          ["Waste","57%","Jun 1996 debut and the year's most frequent encore. Safe from Monday.",12],
-          ["Taste","70%","The most-played song of 1996 — ranked below the safe picks because Monday can burn it under its 1995 title.",7],
-          ["You Enjoy Myself","66%","Unburned through three nights, but it is Monday's longest-jam call.",5],
-          ["Train Song","49%","A quarter of its entire life is 1996. Safe from Monday.",93],
-          ["Theme from the Bottom","60%","20 plays in 1996 — on Monday's slate.",10],
-          ["Funky Bitch","45%","A durable blues staple rather than an era marker. Safe from Monday.",32],
-          ["Poor Heart","62%","21 plays and four 1996 openers — on Monday's slate.",77],
-          ["Steep","41%","Inseparable from Swept Away. Safe from Monday.",230]
+          ["You Enjoy Myself","78%","626 all-time and the last major jam vehicle standing. Capped at 78%.",5],
+          ["Character Zero","76%","Tied for the most-played unburned song of 1996, and a real vehicle.",6],
+          ["Crosseyed and Painless","75%","<b>Declared override — not a model pick.</b> The frequency model ranks it nowhere: two 1996 plays is all it sees. It stands on <em>Remain in Light</em> being the Halloween 1996 costume, and the costume-album rule is now 2 for 2 — Back in the U.S.S.R. at #94, Drowned at #95. 75% is a Laplace estimate on two observations, not a frequency.",119],
+          ["Poor Heart","76%","21 plays in 1996 and four openers. It survived Monday.",77],
+          ["Cars Trucks Buses","73%","19 in 1996 on top of 20 in 1995, and still unburned.",44],
+          ["Ya Mar","73%","Five 1996 openers, the most of any survivor. Tonight's opener call.",18],
+          ["Waste","70%","Jun 1996 debut and the year's most frequent encore at four.",12],
+          ["Hello My Baby","70%","The a cappella number, 17 plays in 1996.",258],
+          ["Train Song","60%","Debuted Jul 1996; a quarter of its whole life is the theme year.",93],
+          ["A Day in the Life","60%","Beatles cover, 15 plays in 1996 and still unburned.",38]
         ]) } }
   ]};
 
-  var KEY="phish-msg-v2-1", state, active=0;
+  var KEY="phish-msg-v2-2", state, active=0;
   function clone(o){ return JSON.parse(JSON.stringify(o)); }
   function load(){ try{ var r=localStorage.getItem(KEY); if(r){ state=JSON.parse(r); return true; } }catch(e){} state=clone(DEFAULTS); return false; }
   function save(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
