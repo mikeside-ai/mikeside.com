@@ -1053,6 +1053,32 @@ def render_upcoming(show: dict, prev: dict | None, nxt: dict | None,
     el.textContent = days <= 0 ? "Tonight 🎪" : days === 1 ? "Tomorrow"
                    : days + " days away";
   }})();
+
+  // A show starts — and can finish — long before the next scheduled rebuild
+  // replaces this placeholder with the real page. Without this, "Next show"
+  // from the previous night lands on "not played yet" while the band is on
+  // stage. So watch the feed: the moment a setlist exists for this date, hand
+  // the reader to the live board. location.replace(), not assign, so Back
+  // doesn't bounce them straight back into the redirect.
+  (function () {{
+    var d = "{date}";
+    var RAW = "{RAW}";
+    var gone = false;
+    function check() {{
+      if (gone) return;
+      fetch(RAW + "/setlists/" + d + ".json?t=" + Date.now(), {{ cache: "no-store" }})
+        .then(function (r) {{ return r.ok ? r.json() : null; }})
+        .then(function (j) {{
+          if (!gone && j && j.sets && j.sets.length) {{
+            gone = true;
+            location.replace("{BASE_PATH}/?d=" + d);
+          }}
+        }})
+        .catch(function () {{}});
+    }}
+    check();
+    setInterval(check, 60000);
+  }})();
   </script>
 </body>
 </html>
