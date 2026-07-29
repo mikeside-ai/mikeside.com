@@ -411,7 +411,7 @@
     <div class="hero">
       <div class="hero-h">
         <span class="t">Next up — Show #95, the 1995 night</span>
-        <span class="d">Wed 29 Jul · model Forbin v11.1</span>
+        <span class="d">Wed 29 Jul · model Forbin v11.2</span>
       </div>
       <div class="hero-b">
         <p class="hl"><b>The first genuine out-of-sample test.</b> Everything here was written after Saturday and has never predicted anything. These four calls are pre-registered, so Monday's result is unambiguous. The opener is deliberately <em>not</em> a costume pick — a cover opener two nights running is less likely, not more.</p>
@@ -426,7 +426,7 @@
     </div>
 
     <div class="mdl">
-      <div class="mdl-h"><span class="t">How the model works</span><span class="v">Forbin v11.1 &mdash; recalibrated 29 Jul</span></div>
+      <div class="mdl-h"><span class="t">How the model works</span><span class="v">Forbin v11.2 &mdash; depletion term withdrawn 29 Jul</span></div>
       <div class="mdl-b">
         <p class="mdl-lede">Each night is themed to a year. The model ranks that year's songs by how often Phish actually played them, throws out everything already used earlier in the run, and takes the top twenty. Reserved slots are gone — the backtest measured them losing twice. What is left is frequency, rotation state, and honest odds.</p>
         <div class="mdl-steps">
@@ -440,7 +440,7 @@
           <div class="bet"><div class="pc">45%</div><div class="bd"><div class="bn">Drowned &middot; Monday</div><div class="bx">From <em>Quadrophenia</em>, the Halloween 1995 costume. Frequency says 2%. The rest is Saturday, when the 1994 night opened with a White Album song that had three lifetime plays.</div></div></div>
           <div class="bet"><div class="pc">80%</div><div class="bd"><div class="bn">Crosseyed and Painless &middot; Wednesday</div><div class="bx">From <em>Remain in Light</em>, the Halloween 1996 costume. Unlike Drowned it is a living song — 8% of every show, and eight MSG appearances weighted to marquee nights.</div></div></div>
         </div>
-        <p class="mdl-foot" style="margin-top:8px;padding-top:10px;border-top:1px dashed var(--grid)"><b>Forbin v11.1 is the live model, measured over 100 simulations</b> against held-out shows from 1994 to 2026. It adds one thing to plain frequency &mdash; a song played recently is about half as likely as its rate suggests &mdash; and then fixes the odds. Ranking hits over 100 simulations: <b>Forbin v11 839, Forbin v10 836, Forbin v9 828, Forbin v7 806, Forbin v8 765, Forbin v6 699, Forbin v5 592</b>, against 309 for chance. <b>v11 changed the odds, not the order.</b> It drops v10's flat 1.4&times; occasion uplift for a measured depletion term &mdash; as a run burns through the catalogue the survivors get likelier, and that is what the uplift was crudely standing in for. The <b>+3 hits over v10 come from a title-alias fix</b> (1995 logs <i>Taste That Surrounds</i>, 1996 logs <i>Taste</i>), not from the odds. <b>v11.1 corrects the anchor:</b> v11 set its depletion constant from a single show and under-called by 19% across all 100; refitting moves calibration to 1.001 and holds on three holdouts. <a href="./kpi.html" style="color:var(--accent);font-weight:600">100-simulation KPI dashboard &rarr;</a></p>
+        <p class="mdl-foot" style="margin-top:8px;padding-top:10px;border-top:1px dashed var(--grid)"><b>Forbin v11.2 is the live model, measured over 394 simulations</b> &mdash; the complete population of shows that are night 3 or later of a consecutive run, 1994&ndash;2026, rebuilt from scratch after the original 100-show sample proved unreproducible. The model is plain theme-year frequency with one correction: a song played recently is about half as likely as its rate suggests, switched off inside a curated residency. Hits over 394 simulations: <b>Forbin v10/v11 2,573, Forbin v9 2,565, Forbin v7 2,538, Forbin v5 2,039</b>, against 1,626 for chance. <b>v11's depletion term is withdrawn</b> &mdash; on the full panel it made per-show calibration worse and its anchor moved 34% when the sample grew. What the rebuild found instead: <b>the model's edge collapses as the catalogue is burned</b>, from 3.24&times; chance on a full pool to 1.34&times; on a pool the size of tonight's. <a href="./kpi.html" style="color:var(--accent);font-weight:600">394-simulation KPI dashboard &rarr;</a></p>
         <p class="mdl-foot" style="margin-top:8px;padding-top:10px;border-top:1px dashed var(--grid)"><b>Forbin v10 is released, on the back of 100 simulations</b> against held-out shows from 1994 to 2026. It adds one thing to plain frequency &mdash; a song played recently is about half as likely as its rate suggests &mdash; and fixes the odds. All six ran over 100 simulations: <b>Forbin v10 836, Forbin v9 828, Forbin v7 806, Forbin v8 765, Forbin v6 699, Forbin v5 592</b>, against 309 for random. <b>Forbin v10's whole gain is on nights like this one</b> — 28 special-occasion shows in the sample, averaging 27.1 songs against 21.1. It switches off the repeat-avoidance that a curated residency does not obey, and lifts the odds 40% to match the longer setlists. <a href="./kpi.html" style="color:var(--accent);font-weight:600">100-simulation KPI dashboard &rarr;</a></p>
       </div>
     </div>
@@ -800,7 +800,7 @@
       ], note:"Twenty songs, exactly the length the 1995 era median predicts. Drowned is the one Quadrophenia song to surface, matching Back in the U.S.S.R. two nights earlier: the costume album delivers a single song that entered the repertoire, not a mini-set. Deepest bustout: Johnny B. Goode at a 927-show gap, the only song past 300 against a called range of three to four. Taste is listed here under its modern title; the slate carried it as Taste That Surrounds." } },
 
     { n:5, year:"1996", show:96, date:"Wed · Jul 29", status:"next",
-      note:"Rebuilt after Monday. Eight of the twenty picks previously published here burned that night: Taste, which had been this slate's top pick at 70%, together with Theme from the Bottom, Scent of a Mule, Free, Prince Caspian, Funky Bitch, It's Ice and Wilson, which was also the opener call. Eighty-six songs are now out of play, so the replacements are much rarer material — new entrants promoted only because the burn list ate the head of the 1996 distribution. The head of the slate is now flat against the 78% cap &mdash; seven songs pin there once the recalibrated depletion scale is applied &mdash; while the bottom half sits between 29 and 44 per cent.",
+      note:"Rebuilt after Monday. Eight of the twenty picks previously published here burned that night: Taste, which had been this slate's top pick at 70%, together with Theme from the Bottom, Scent of a Mule, Free, Prince Caspian, Funky Bitch, It's Ice and Wilson, which was also the opener call. Eighty-six songs are now out of play, so the replacements are much rarer material — new entrants promoted only because the burn list ate the head of the 1996 distribution. The slate is flat by construction: five songs tie at the top on 42% and the bottom half sits between 16 and 31 per cent. Nothing here is a confident call &mdash; with 86 songs burned, the material left is genuinely rare and the model knows it.",
       calls:[
         C("Opener","Ya Mar","5/73 · 7%","Five 1996 openers, the most of any surviving song. <b>1996's two leading openers are both burned</b> — Runaway Jim and Chalk Dust Torture at eight each — which is what leaves Ya Mar at the top of a thin field. Note the record: this was also #95's opener call, and it missed.","Poor Heart (four) · The Star-Spangled Banner (three) · Cars Trucks Buses (two)"),
         C("Encore","Waste","4/73 · 5%","Four 1996 encores, the most of any survivor. Still a weak call in absolute terms — no 1996 encore clears 6%, and the Fish-slot logic that governs this call has yet to land one.","Rocky Top (three) · Fire (three) · Frankenstein (two)"),
@@ -809,49 +809,49 @@
       ],
       sets:[
         { name:"Set 1", songs:P([
-          ["You Enjoy Myself","23 plays · 78% · gap 5","626 all-time and the only major jam vehicle left unburned. Capped at 78%. Tonight's longest-jam call.",5],
-          ["Character Zero","21 plays · 78% · gap 6","Debuted Jun 1996 and immediately tied for the year's most-played.",6],
-          ["Poor Heart","21 plays · 78% · gap 77","21 plays in 1996 and four openers that year, second only to Ya Mar.",77],
-          ["Cars Trucks Buses","19 plays · 78% · gap 44","19 in 1996 after 20 in 1995 — a two-year staple, and it survived Monday.",44],
-          ["Ya Mar","19 plays · 78% · gap 18","Five 1996 openers, the most of any surviving song. Tonight's opener call.",18],
-          ["Waste","17 plays · 78% · gap 12","Four 1996 encores, the most of any survivor. Tonight's encore call.",12],
-          ["Hello My Baby","17 plays · 78% · gap 258","The a cappella number, 17 plays in 1996.",258],
-          ["Train Song","15 plays · 73% · gap 93","Debuted Jul 1996 — a quarter of its entire life falls in the theme year.",93],
-          ["A Day in the Life","15 plays · 73% · gap 38","Beatles cover, 15 plays in 1996 and unburned through four nights.",38]
+          ["You Enjoy Myself","23 plays · 42% · gap 5","626 all-time and the only major jam vehicle left unburned. Capped at 78%. Tonight's longest-jam call.",5],
+          ["Character Zero","21 plays · 42% · gap 6","Debuted Jun 1996 and immediately tied for the year's most-played.",6],
+          ["Poor Heart","21 plays · 42% · gap 77","21 plays in 1996 and four openers that year, second only to Ya Mar.",77],
+          ["Cars Trucks Buses","19 plays · 42% · gap 44","19 in 1996 after 20 in 1995 — a two-year staple, and it survived Monday.",44],
+          ["Ya Mar","19 plays · 42% · gap 18","Five 1996 openers, the most of any surviving song. Tonight's opener call.",18],
+          ["Waste","17 plays · 40% · gap 12","Four 1996 encores, the most of any survivor. Tonight's encore call.",12],
+          ["Hello My Baby","17 plays · 40% · gap 258","The a cappella number, 17 plays in 1996.",258],
+          ["Train Song","15 plays · 36% · gap 93","Debuted Jul 1996 — a quarter of its entire life falls in the theme year.",93],
+          ["A Day in the Life","15 plays · 36% · gap 38","Beatles cover, 15 plays in 1996 and unburned through four nights.",38]
         ]) },
         { name:"Set 2", songs:P([
-          ["Swept Away","13 plays · 61% · gap 230","Debuted Oct 1996 and inseparable from Steep; the pair travels together.",230],
-          ["Steep","13 plays · 61% · gap 230","The other half of that pair, and never far from it.",230],
-          ["The Star-Spangled Banner","10 plays · 44% · gap 361","Opened three 1996 shows, third among the year's openers.",361],
-          ["Life on Mars?","10 plays · 44% · gap 540","<b>10 of its 23 all-time plays are 1996.</b> <span class=\"risk\">Deep vault.</span>",540],
-          ["Fee","10 plays · 44% · gap 6","Fully current at a 6-show gap. A new entrant, promoted because the burn list ate the head of the 1996 distribution.",6],
-          ["Talk","8 plays · 33% · gap 121","A 1996 ballad that only reaches a slate now that the top of the year is gone.",121],
-          ["Frankenstein","8 plays · 33% · gap 14","Edgar Winter cover, current at a 14-show gap. Promoted by depletion, not by rate.",14],
-          ["Fire","8 plays · 33% · gap 9","Hendrix cover and a standing encore option, three of them in 1996.",9]
+          ["Swept Away","13 plays · 31% · gap 230","Debuted Oct 1996 and inseparable from Steep; the pair travels together.",230],
+          ["Steep","13 plays · 31% · gap 230","The other half of that pair, and never far from it.",230],
+          ["The Star-Spangled Banner","10 plays · 21% · gap 361","Opened three 1996 shows, third among the year's openers.",361],
+          ["Life on Mars?","10 plays · 21% · gap 540","<b>10 of its 23 all-time plays are 1996.</b> <span class=\"risk\">Deep vault.</span>",540],
+          ["Fee","10 plays · 21% · gap 6","Fully current at a 6-show gap. A new entrant, promoted because the burn list ate the head of the 1996 distribution.",6],
+          ["Talk","8 plays · 18% · gap 121","A 1996 ballad that only reaches a slate now that the top of the year is gone.",121],
+          ["Frankenstein","8 plays · 18% · gap 14","Edgar Winter cover, current at a 14-show gap. Promoted by depletion, not by rate.",14],
+          ["Fire","8 plays · 18% · gap 9","Hendrix cover and a standing encore option, three of them in 1996.",9]
         ]) },
         { name:"Encore", songs:P([
-          ["The Curtain","8 plays · 33% · gap 185","New entrant. The short version, distinct from The Curtain With, which Monday burned.",185],
-          ["Uncle Pen","7 plays · 29% · gap 338","Bill Monroe cover, seven plays in 1996 and long dormant since.",338],
-          ["Rocky Top","7 plays · 29% · gap 11","Bluegrass encore staple, three 1996 encores. Promoted by depletion.",11]
+          ["The Curtain","8 plays · 18% · gap 185","New entrant. The short version, distinct from The Curtain With, which Monday burned.",185],
+          ["Uncle Pen","7 plays · 16% · gap 338","Bill Monroe cover, seven plays in 1996 and long dormant since.",338],
+          ["Rocky Top","7 plays · 16% · gap 11","Bluegrass encore staple, three 1996 encores. Promoted by depletion.",11]
         ]) }
       ],
-      game:{ expected:"42.5",
-        note:"<b>Forbin v11.1 — the anchor was fitted on one show, and 100 shows moved it.</b> v11 replaced the 1.4&times; occasion uplift with two measured terms. The first is length: the theme year predicts the show. Era medians run 24, 24, 21, 20 and 19 songs for 1992 through 1996, against 26, 24, 16 with a front-of-house outage, and 20 actually played — <b>three clean nights all within +2, and 1995 exact.</b> Tonight is forecast at 19&ndash;20 songs. The second is depletion: <b>86 songs are now burned</b>, leaving 88 of 1996's 167. Those survivors' raw rates sum to 5.8 expected songs against a show that will play about 19.5, so the depletion factor D is <b>3.34</b> &mdash; the deepest of the run, against 1.97 at #95. <b>What changed after publication:</b> v11 divided D by 1.97, a constant read off #95 alone. Backtested across the same 100 held-out shows the rest of this project is measured on, that anchor predicts <b>0.813 hits for every hit that lands</b> &mdash; a systematic 19% under-call. Refitting the constant gives <b>1.60</b>, which returns a ratio of <b>1.001</b> across all 100, and holds on three independent holdouts: fit on the even 50 &rarr; 0.952 on the odd 50, fit on the odd 50 &rarr; 1.053, fit on the earliest 50 &rarr; 1.092 on the latest 50. Every probability on this page is the v9 knot value scaled by <b>2.09</b> and capped at 78%. <b>No pick moved and no rank changed</b> &mdash; a monotonic rescale cannot reorder a list. Only the numbers printed beside them did. The slate now sums to <b>11.4 expected hits</b>; a blind 20 drawn from an 88-song pool expects 4.4, so the edge is <b>2.6&times;</b>. <b>Read 11.4 as a floor.</b> In the top decile of depletion &mdash; D between 2.5 and 3.6, where tonight sits &mdash; the ten backtest shows in that band actually delivered <b>12.1 hits on average</b> while this anchor calls 9.5, so the model still under-predicts by roughly a fifth exactly where tonight lives. That band would prefer an anchor near 1.20, but it is ten shows, and fitting a constant to ten shows is the mistake this note exists to correct. <b>The 78% cap is the one number here with no backtest behind it:</b> it never once binds across the 100 cases and it binds on seven of tonight's twenty. Crosseyed and Painless remains a declared override at its stated 75%, not a model pick.",
+      game:{ expected:"25.4",
+        note:"<b>Forbin v11.2 &mdash; the depletion term is withdrawn, hours before the show.</b> Yesterday this slate was published at 11.4 expected hits and a 42.5 ladder, on a term that scaled every probability up as the run burned through the catalogue. <b>That term does not survive a proper panel.</b> The 100-show sample it was fitted on could not be reproduced, so the panel was rebuilt from scratch as the complete population &mdash; <b>394 cases, every show that is night 3 or later of a consecutive run, 1994&ndash;2026</b>, against the old sample's 100. On that panel the depletion multiplier makes per-show calibration <b>worse, not better</b> &mdash; mean error 0.674 against 0.500 for the plain calibration knots &mdash; and its anchor constant moves from 1.60 to 2.14 purely because the panel changed. A constant that swings 34% when you enlarge the sample is absorbing noise, not measuring depletion. It is gone. Every probability here is now the plain knot value.<br><br><b>The harder finding is what depletion actually does to this model, and it is the opposite of what was published.</b> Grouping the 394 cases by how much catalogue is left: with a pool above 160 songs the model catches <b>3.24&times; chance</b>; from 130&ndash;160, 2.45&times;; from 100&ndash;130, 2.05&times;; from 80&ndash;100, <b>1.34&times;</b>; below 80, 1.13&times;. <b>The edge collapses as the pool empties.</b> The burn list removes exactly the high-frequency songs a frequency model is good at calling, and what is left is a flat field of rare material where ranking barely helps. Depletion makes each survivor likelier and the slate as a whole weaker at the same time; only the first half of that was modelled.<br><br><b>Tonight sits in the 80&ndash;100 band.</b> 86 songs burned, <b>88 eligible</b>, and the 55 comparable shows in that band delivered a mean of <b>5.8 hits</b> and a ladder near 20. The independently rebuilt slate sums to <b>5.9 expected hits</b> &mdash; the two agree, which is the reason to trust them. Chance on an 88-song pool is 4.4, so the honest edge tonight is about <b>1.3&times;</b>, the narrowest of the run. This is a worse-sounding forecast than yesterday's and a better-supported one. <b>One caveat in the model's favour:</b> #95 ran at 2.7&times; against a band average of 2.05&times;, so this residency has beaten its comparables every night so far. The rebuilt pipeline reproduced the burn list, the 88-song pool, all four night lengths and all twenty play counts on the published slate exactly, which is why only the odds moved and not one pick. Crosseyed and Painless remains a declared override at its stated 75%, not a model pick.",
         picks:G([
-          ["You Enjoy Myself","78%","626 all-time and the last major jam vehicle standing. Capped at 78%.",5],
-          ["Character Zero","78%","Tied for the most-played unburned song of 1996, and a real vehicle.",6],
+          ["You Enjoy Myself","42%","626 all-time and the last major jam vehicle standing. Capped at 78%.",5],
+          ["Character Zero","42%","Tied for the most-played unburned song of 1996, and a real vehicle.",6],
           ["Crosseyed and Painless","75%","<b>Declared override — not a model pick.</b> The frequency model ranks it nowhere: two 1996 plays is all it sees. It stands on <em>Remain in Light</em> being the Halloween 1996 costume, and the costume-album rule is now 2 for 2 — Back in the U.S.S.R. at #94, Drowned at #95. 75% is a Laplace estimate on two observations, not a frequency.",119],
-          ["Poor Heart","78%","21 plays in 1996 and four openers. It survived Monday.",77],
-          ["Cars Trucks Buses","78%","19 in 1996 on top of 20 in 1995, and still unburned.",44],
-          ["Ya Mar","78%","Five 1996 openers, the most of any survivor. Tonight's opener call.",18],
-          ["Waste","78%","Jun 1996 debut and the year's most frequent encore at four.",12],
-          ["Hello My Baby","78%","The a cappella number, 17 plays in 1996.",258],
-          ["Train Song","73%","Debuted Jul 1996; a quarter of its whole life is the theme year.",93],
-          ["A Day in the Life","73%","Beatles cover, 15 plays in 1996 and still unburned.",38]
+          ["Poor Heart","42%","21 plays in 1996 and four openers. It survived Monday.",77],
+          ["Cars Trucks Buses","42%","19 in 1996 on top of 20 in 1995, and still unburned.",44],
+          ["Ya Mar","42%","Five 1996 openers, the most of any survivor. Tonight's opener call.",18],
+          ["Waste","40%","Jun 1996 debut and the year's most frequent encore at four.",12],
+          ["Hello My Baby","40%","The a cappella number, 17 plays in 1996.",258],
+          ["Train Song","36%","Debuted Jul 1996; a quarter of its whole life is the theme year.",93],
+          ["A Day in the Life","36%","Beatles cover, 15 plays in 1996 and still unburned.",38]
         ]) } }
   ]};
 
-  var KEY="phish-msg-v3-0", state, active=0;
+  var KEY="phish-msg-v3-1", state, active=0;
   function clone(o){ return JSON.parse(JSON.stringify(o)); }
   function load(){ try{ var r=localStorage.getItem(KEY); if(r){ state=JSON.parse(r); return true; } }catch(e){} state=clone(DEFAULTS); return false; }
   function save(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
