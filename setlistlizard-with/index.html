@@ -340,6 +340,12 @@
       if (lp) lp.innerHTML = "";
       el.labSection.hidden = el.mediaSection.hidden = el.srcSection.hidden = true;
       document.dispatchEvent(new CustomEvent("lizard:refresh"));
+
+      // Waiting here means we know the show has NOT started, so an empty
+      // seen-set (rather than null) is the truth: the first song to land is
+      // genuinely new and deserves its alert. Seeding silently is only right
+      // for someone arriving mid-show, which is the null case.
+      seenSongs = {};
     }
 
     // ---- chips: identical inline styling to the generator, so a stale cached
