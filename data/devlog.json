@@ -17,6 +17,13 @@
     {
       "date": "2026-07-29",
       "project": "setlist-predictions",
+      "type": "release",
+      "title": "Forbin v11.2: the panel was rebuilt, and it withdrew yesterday's release",
+      "notes": "The backtest panel was rebuilt as the complete population — all 394 shows from 1994 to 2026 that are night three or later of a consecutive run — after the previous 100-show sample was lost and proved impossible to reconstruct. Songs are now keyed on phish.net song IDs rather than display titles, which removes era-title aliasing at source. On the larger panel v11's depletion term does not survive: it improves aggregate calibration while making per-show calibration worse, 0.674 mean error against 0.500 without it, and its anchor constant moves 1.60 to 2.14 purely because the sample grew. Withdrawn. What the rebuild found instead inverts the premise: the model's edge collapses as the catalogue burns, from 3.24x chance with a 160-song pool to 1.34x at 80 to 100 songs, because the burn list removes exactly the high-frequency material a frequency model is good at calling. Show 96 sits in that band with 88 songs eligible, so its forecast drops from 11.4 expected hits to 5.9 and the ladder from 42.5 to 25.4 — with no pick changed, since the depletion term never touched the ranking. Also measured: the rotation signal is an arch rather than a slope, with long-past-due songs suppressed as hard as recently played ones, and on curated nights the recency penalty vanishes entirely. That second result confirms by measurement the Prince Caspian correction made by hand before show 95. Both are folded into Forbin v12, which holds up on a clean holdout and is queued for release after tonight."
+    },
+    {
+      "date": "2026-07-29",
+      "project": "setlist-predictions",
       "type": "content",
       "title": "MSG #95 scored: 8 of 20, and the first over-prediction",
       "notes": "Forbin v10 caught 8 of 20 on the 1995 night — Free, Strange Design, Theme from the Bottom, Scent of a Mule, It's Ice, Prince Caspian, Ha Ha Ha and Taste. Ten-pick ladder 31 of 55 against an expected 35.5, a ratio of 0.87 and the first time this project has over-called a show. Called shots went 0 for 4, now 0 for 8 live. Two overrides that the model itself ranked near zero both landed: Drowned, kept on the argument that a themed night draws on its own year's Halloween costume album, and Prince Caspian, restored after a rotation-state suppression was judged wrong for a curated residency."
