@@ -406,20 +406,20 @@
         <h1>Setlist Prophet</h1>
       </div>
     </div>
-    <p class="sub">Five nights at Madison Square Garden — Phish's 92nd through 96th shows there, each themed to a year, <b>1992 → 1996</b>. Three played, two to go. Predictions, the model behind them, and an honest scorecard.</p>
+    <p class="sub">Five nights at Madison Square Garden — Phish's 92nd through 96th shows there, each themed to a year, <b>1992 → 1996</b>. Four played, one to go. Predictions, the model behind them, and an honest scorecard.</p>
 
     <div class="hero">
       <div class="hero-h">
-        <span class="t">Next up — Show #95, the 1995 night</span>
+        <span class="t">Next up — Show #96, the 1996 night · the closer</span>
         <span class="d">Wed 29 Jul · model Forbin v11.2</span>
       </div>
       <div class="hero-b">
-        <p class="hl"><b>The first genuine out-of-sample test.</b> Everything here was written after Saturday and has never predicted anything. These four calls are pre-registered, so Monday's result is unambiguous. The opener is deliberately <em>not</em> a costume pick — a cover opener two nights running is less likely, not more.</p>
+        <p class="hl"><b>The last night, and the hardest.</b> 86 songs are burned and 88 remain, the thinnest pool of the run. That cuts both ways: each survivor is likelier, but the burn list has eaten exactly the material a frequency model is good at calling. Measured across 394 backtest shows, a pool this depleted drops the model's edge to <b>1.3&times; chance</b> — the narrowest of the five nights. These four calls are pre-registered. Called shots stand at <b>0 for 8</b> live, so treat them as decoration, not output.</p>
         <div class="hero-calls">
-          <div class="hc"><div class="k">Opener</div><div class="v">Ya Mar</div><div class="x">1995's most common opener, 6 of 83</div></div>
-          <div class="hc"><div class="k">Encore</div><div class="v">A Day in the Life</div><div class="x">1995's most common encore, 9 of 83</div></div>
-          <div class="hc"><div class="k">Bustout</div><div class="v">3–4 songs, gap 300+</div><div class="x">a count, not a name</div></div>
-          <div class="hc"><div class="k">Longest jam</div><div class="v">You Enjoy Myself</div><div class="x">unburned through three nights</div></div>
+          <div class="hc"><div class="k">Opener</div><div class="v">Ya Mar</div><div class="x">1996's most common opener among survivors, 5 of 73</div></div>
+          <div class="hc"><div class="k">Encore</div><div class="v">Waste</div><div class="x">1996's most frequent encore, 4 of 73</div></div>
+          <div class="hc"><div class="k">Bustout</div><div class="v">1–2 songs, gap 300+</div><div class="x">narrowed from 3–4, which over-called at #95</div></div>
+          <div class="hc"><div class="k">Longest jam</div><div class="v">You Enjoy Myself</div><div class="x">the only major vehicle still unburned</div></div>
         </div>
         <p class="jump"><a href="#slate">The 20-song slate ↓</a> &nbsp;·&nbsp; <a href="#ladder">the 10-pick game ladder ↓</a></p>
       </div>
@@ -431,17 +431,17 @@
         <p class="mdl-lede">Each night is themed to a year. The model ranks that year's songs by how often Phish actually played them, throws out everything already used earlier in the run, and takes the top twenty. Reserved slots are gone — the backtest measured them losing twice. What is left is frequency, rotation state, and honest odds.</p>
         <div class="mdl-steps">
           <div class="st"><div class="n2">Step 1</div><div class="h">Count the theme year</div><div class="d2">Every song Phish played that year, from the phish.net feed, side projects filtered out.</div></div>
-          <div class="st"><div class="n2">Step 2</div><div class="h">Strike what's burned</div><div class="d2">Phish does not repeat inside a run. 66 songs are gone already. This is the single most valuable rule.</div></div>
+          <div class="st"><div class="n2">Step 2</div><div class="h">Strike what's burned</div><div class="d2">Phish does not repeat inside a run. 86 songs are gone already, leaving 88. This is the single most valuable rule.</div></div>
           <div class="st"><div class="n2">Step 3</div><div class="h">Take the top 20</div><div class="d2">Ranked inside the surviving pool, never the full year — getting that backwards broke two earlier versions.</div></div>
-          <div class="st"><div class="n2">Step 4</div><div class="h">Calibrate the odds</div><div class="d2">Raw play rates understate reality by 2&times;. A curve fitted on 50 backtest shows and checked on 50 more converts them into honest probabilities.</div></div>
+          <div class="st"><div class="n2">Step 4</div><div class="h">Calibrate the odds</div><div class="d2">Raw play rates understate reality. A curve fitted on half of 394 backtest shows and checked on the other half converts them into honest probabilities.</div></div>
         </div>
         <div class="mdl-bets">
-          <p style="font-size:12px;font-weight:800;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px">The two big bets</p>
-          <div class="bet"><div class="pc">45%</div><div class="bd"><div class="bn">Drowned &middot; Monday</div><div class="bx">From <em>Quadrophenia</em>, the Halloween 1995 costume. Frequency says 2%. The rest is Saturday, when the 1994 night opened with a White Album song that had three lifetime plays.</div></div></div>
-          <div class="bet"><div class="pc">80%</div><div class="bd"><div class="bn">Crosseyed and Painless &middot; Wednesday</div><div class="bx">From <em>Remain in Light</em>, the Halloween 1996 costume. Unlike Drowned it is a living song — 8% of every show, and eight MSG appearances weighted to marquee nights.</div></div></div>
+          <p style="font-size:12px;font-weight:800;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px">The two big bets &mdash; one settled, one live tonight</p>
+          <div class="bet"><div class="pc" style="color:var(--good-text)">HIT</div><div class="bd"><div class="bn">Drowned &middot; #95, settled</div><div class="bx"><b>Published at 45% against a model that ranked it 3.8%</b>, purely because <em>Quadrophenia</em> was the Halloween 1995 costume. It landed, and carried the night's longest jam. That is the costume-album rule at 2 for 2, and the same-year reading confirmed over the year-lag one.</div></div></div>
+          <div class="bet"><div class="pc">75%</div><div class="bd"><div class="bn">Crosseyed and Painless &middot; tonight</div><div class="bx">From <em>Remain in Light</em>, the Halloween 1996 costume. <b>The model ranks it nowhere</b> — two 1996 plays is all it sees. Unlike Drowned it is a living song: 8% of every show, and eight MSG appearances weighted to marquee nights. A declared override, not a model pick, and the last test the costume rule gets this run.</div></div></div>
         </div>
         <p class="mdl-foot" style="margin-top:8px;padding-top:10px;border-top:1px dashed var(--grid)"><b>Forbin v11.2 is the live model, measured over 394 simulations</b> &mdash; the complete population of shows that are night 3 or later of a consecutive run, 1994&ndash;2026, rebuilt from scratch after the original 100-show sample proved unreproducible. The model is plain theme-year frequency with one correction: a song played recently is about half as likely as its rate suggests, switched off inside a curated residency. Hits over 394 simulations: <b>Forbin v10/v11 2,573, Forbin v9 2,565, Forbin v7 2,538, Forbin v5 2,039</b>, against 1,626 for chance. <b>v11's depletion term is withdrawn</b> &mdash; on the full panel it made per-show calibration worse and its anchor moved 34% when the sample grew. What the rebuild found instead: <b>the model's edge collapses as the catalogue is burned</b>, from 3.24&times; chance on a full pool to 1.34&times; on a pool the size of tonight's. <a href="./kpi.html" style="color:var(--accent);font-weight:600">394-simulation KPI dashboard &rarr;</a></p>
-        <p class="mdl-foot" style="margin-top:8px;padding-top:10px;border-top:1px dashed var(--grid)"><b>Forbin v10 is released, on the back of 100 simulations</b> against held-out shows from 1994 to 2026. It adds one thing to plain frequency &mdash; a song played recently is about half as likely as its rate suggests &mdash; and fixes the odds. All six ran over 100 simulations: <b>Forbin v10 836, Forbin v9 828, Forbin v7 806, Forbin v8 765, Forbin v6 699, Forbin v5 592</b>, against 309 for random. <b>Forbin v10's whole gain is on nights like this one</b> — 28 special-occasion shows in the sample, averaging 27.1 songs against 21.1. It switches off the repeat-avoidance that a curated residency does not obey, and lifts the odds 40% to match the longer setlists. <a href="./kpi.html" style="color:var(--accent);font-weight:600">100-simulation KPI dashboard &rarr;</a></p>
+        
       </div>
     </div>
 
@@ -493,7 +493,7 @@
     <div class="warnbox">
       <span class="lbl">The reserved slots lost money</span>
       <p><b>Forbin v8 spends three of Forbin v7's top-20 slots to buy three reserved ones.</b> It bought Back in the U.S.S.R. and Purple Rain &mdash; genuinely unreachable songs, exactly as designed &mdash; and paid three certain hits for them. <b>Net: 10 &rarr; 9.</b> The clever version lost to the boring one.</p>
-      <p>This matters on Monday, because <b>the current model makes the same trade.</b> Drowned, Keyboard Army and I Didn't Know once occupied three slots that would otherwise hold the next three names on the frequency list. That trade is gone in Forbin v10 — Monday's slate is the top 20 on frequency, and Amazing Grace, Ha Ha Ha and Fee are all on it. On this evidence that trade is negative unless the reserved picks are better than the ones Forbin v8 chose.</p>
+      <p><b>Resolved at #95.</b> This mattered because <b>the model made the same trade.</b> Drowned, Keyboard Army and I Didn't Know once occupied three slots that would otherwise hold the next three names on the frequency list. That trade was gone by Forbin v10 &mdash; #95's slate was the top 20 on frequency, and Amazing Grace, Ha Ha Ha and Fee were all on it. <b>Ha Ha Ha hit; Amazing Grace and Fee did not.</b> On this evidence that trade is negative unless the reserved picks are better than the ones Forbin v8 chose.</p>
     </div>
     <p><b>Two numbers on the table above are lower than previously published, and the correction is worth naming.</b> Earlier this page showed Forbin v5 at 8/20 and Forbin v8 at 12/20. Those slates were assembled by hand <em>after</em> the setlist was known. The chart runs each rule mechanically instead &mdash; Forbin v5 as top 8 plus twelve from the 20&ndash;40% depth band, Forbin v8 as Forbin v7's top 17 plus three reserved slots &mdash; and applied blind they score <b>6 and 9</b>. Forbin v6 and Forbin v7 are unchanged at 9 and 10. A rule is only worth what it scores when it is not allowed to peek.</p>
     <h4>What the ladder table shows</h4>
@@ -524,25 +524,25 @@
     <h4>One sandwich a night, three for three</h4>
     <p>Every night of this run has produced exactly one, never two and never zero. That alone is worth pre-registering.</p>
     <p><b>On both nights without a fest, the filling was that night's deepest bustout.</b> The Vibration of Life had gone 1,027 shows and came back inside a Bowie. Big Ball Jam had gone 1,170 and came back inside a Tube. Those are the two largest gaps of the entire run, and neither was played on its own — both were delivered wrapped. On #94 the fest took that role instead, and the sandwich fell to a pair of Down with Diseases around a Tweezer.</p>
-    <p class="pre"><b>Pre-registered for #95 and #96:</b> one sandwich each night. If a night produces no fest, expect the filling to be that night's largest gap rather than a rotation song — which means the bustout call and the sandwich call are the same question asked twice.</p>
+    <p class="pre"><b>Pre-registered for #96:</b> one sandwich each night. If a night produces no fest, expect the filling to be that night's largest gap rather than a rotation song — which means the bustout call and the sandwich call are the same question asked twice.</p>
 
     <h4>The rest of the deep end</h4>
     <p>Deep bustouts have run 3, 4, 3 — the range the called-shot uses. What the count hides is the spread: <b>#92 and #93 reached past a thousand shows, #94 topped out at 659.</b> The 1990s-themed nights are pulling from genuinely different depths, and the earlier the theme year, the deeper the reach — which makes sense, since a 1992 rotation contains more songs that have since fallen out of the band's hands entirely.</p>
   </details>
 
   <details class="box">
-    <summary>Run scorecard — what was caught, and what that's worth <span class="tag">two live nights</span></summary>
+    <summary>Run scorecard — what was caught, and what that's worth <span class="tag">three live nights</span></summary>
     <div class="warnbox">
       <span class="lbl">Read this before the numbers</span>
-      <p><b>Only two of the three played nights had a published slate.</b> Night 1 predates this project — nothing was preserved — so its bar below is a <em>retrodiction</em>. It is not evidence and is not counted in the live total.</p>
-      <p><b>The live record is 16 of 40 across two nights, against a random baseline of 7.4.</b> Every other number on this page that beats it is fitted.</p>
+      <p><b>Only three of the four played nights had a published slate.</b> Night 1 predates this project — nothing was preserved — so its bar below is a <em>retrodiction</em>. It is not evidence and is not counted in the live total.</p>
+      <p><b>The live record is 24 of 60 across three nights, against a chance baseline of 10.4.</b> Six of twenty on #93, ten on #94, eight on #95 &mdash; a multiple of 2.3&times;. Every other number on this page that beats it is fitted.</p>
     </div>
     <div class="rc-body" id="rcBody"></div>
     <h4>Why &ldquo;beats random&rdquo; is a weaker claim than it sounds</h4>
     <p>The comparator throughout is a random 20 songs from the same eligible pool. That is a fair pool — but it is <b>not the baseline a competent fan represents.</b> The natural human baseline is &ldquo;the twenty most-played songs of the theme year, minus whatever they already played this run&rdquo; — and that <em>is</em> Forbin v7. Beating random therefore demonstrates two things any phish.net-literate fan had for free: the theme-year premise, announced publicly by the band, and the no-repeat rule.</p>
     <p><b>The model's edge over an informed fan is currently indistinguishable from zero</b>, because the model is what an informed fan would do. Every cleverer idea tried this week lost to the plain frequency list.</p>
-    <h4>Scores will rise over the next two nights whatever happens</h4>
-    <p>66 songs are burned. The eligible pool shrinks every night, so a random slate improves too. Expect #95 and #96 to score higher than #94 <b>for arithmetic reasons unrelated to the model improving</b>. Judge Forbin v9 against the random baseline for its own night.</p>
+    <h4>Why tonight's score will not be comparable to the others</h4>
+    <p><b>86 songs are burned and 88 remain</b>, the thinnest pool of the run, so blind picks score better tonight than on any earlier night &mdash; chance alone expects 4.4 of 20. Two effects now pull in opposite directions: the shrinking pool lifts the baseline, and it also strips out the high-frequency material the model is best at, which measurably cuts the edge from 2.5&times; to about 1.3&times;. <b>Read tonight as a multiple of chance, never as a raw count.</b> Judge Forbin v9 against the random baseline for its own night.</p>
   </details>
 
   <details class="box" id="method">
@@ -575,8 +575,8 @@
     </table></div>
     <p><b>Four lifetime plays: 31 Oct 1994, 6 Dec 1994, 23 Oct 2013, and Saturday.</b> Frequency ranked it at zero. It was chosen because it was on that year's Halloween album and for no other reason — so rotation data cannot explain it, and the audit built on rotation data was answering a question nobody asked. The rule is not about what a costume album contributed to the repertoire. It is about the band, in 2026, nodding to that year's Halloween show.</p>
     <p>Two consequences follow, and both reverse what this page said an hour ago:</p>
-    <p><b>1. The album is the themed year's own, not the previous year's.</b> The 1994 night took the 1994 costume. So Monday looks to <em>Quadrophenia</em> (Halloween 1995) and Wednesday to <em>Remain in Light</em> (Halloween 1996). <b>Drowned is carried on Monday's ladder at rank 7 as a declared override</b> — Forbin v10 itself ranks it near zero. While My Guitar Gently Weeps is off both slate and ladder: 12 plays puts it 21st in the eligible pool, one place outside the cut.</p>
-    <p><b>2. Frequency is not the selector inside the album.</b> They passed over the 38-play repertoire song for the 3-play album opener. Monday therefore carries Drowned (48 all-time, the only Quadrophenia song that stuck) while noting the rival reading: <em>Quadrophenia</em>'s opening vocal is <b>The Real Me</b>, 2 lifetime plays, unplayed in 1,176 shows — the exact shape of Saturday's pick. Wednesday carries both readings openly: Crosseyed and Painless, and <b>Born Under Punches</b>, <em>Remain in Light</em> track one at one lifetime play.</p>
+    <p><b>1. The album is the themed year's own, not the previous year's.</b> The 1994 night took the 1994 costume. So #95 looked to <em>Quadrophenia</em> (Halloween 1995) and tonight looks to <em>Remain in Light</em> (Halloween 1996). <b>Drowned was carried on #95's ladder at rank 7 as a declared override</b> — Forbin v10 itself ranked it near zero &mdash; <b>and it hit</b>, taking four ladder points and the night's longest jam. While My Guitar Gently Weeps is off both slate and ladder: 12 plays puts it 21st in the eligible pool, one place outside the cut.</p>
+    <p><b>2. Frequency is not the selector inside the album.</b> They passed over the 38-play repertoire song for the 3-play album opener. #95 therefore carried Drowned (48 all-time, the only Quadrophenia song that stuck) while noting the rival reading: <em>Quadrophenia</em>'s opening vocal is <b>The Real Me</b>, 2 lifetime plays, unplayed in 1,176 shows — the exact shape of Saturday's pick. Wednesday carries both readings openly: Crosseyed and Painless, and <b>Born Under Punches</b>, <em>Remain in Light</em> track one at one lifetime play.</p>
     <h4>The sharper test: costume set &rarr; heavy rotation the next year</h4>
     <p>A better way to ask the question, and one that requires the frequency evidence instead of assuming it: <b>which songs were played in a Halloween costume set and then played a lot the following year?</b> That is computable against the whole catalogue, and the answer is startlingly thin.</p>
     <div class="tblwrap"><table class="dt">
@@ -591,8 +591,8 @@
     <p><b>One song in the whole catalogue passes this test, and it is While My Guitar Gently Weeps.</b> And even it falls one place short &mdash; 12 plays ranks 21st in the eligible 1995 pool, just outside the twenty. The Quadrophenia set is the opposite result and it could not be cleaner &mdash; every one of its fifteen tracks was played exactly zero times in 1996. Whatever happened with the White Album did not happen with Quadrophenia at all, so this test hands Wednesday nothing.</p>
     <p>One discipline point that follows from it: <b>for While My Guitar Gently Weeps the costume effect is already priced in.</b> The 12 plays are not evidence sitting alongside the frequency number &mdash; they <em>are</em> the frequency number, and boosting the song above 14% would count the same fact twice. Drowned is the reverse: its two 1995 plays contain no information about the costume link at all, which is why it carries the top ladder slot at 45% and While My Guitar Gently Weeps does not carry one at all.</p>
 
-    <p>Stated honestly: <b>this is n=1.</b> One night, one song. It is enough to put a 2%-frequency song at rank 7 on Monday and not more, and Monday is a clean test of it — Drowned is carried by nothing except this rule, so it either lands or the rule was a lucky night.</p>
-    <h4>Crosseyed at 80% &mdash; and what the gap objection got wrong</h4>
+    <p>Stated honestly: <b>this is n=1.</b> One night, one song. It was enough to put a 2%-frequency song at rank 7 on #95 and not more, and #95 was a clean test of it &mdash; Drowned was carried by nothing except this rule. <b>It landed, so the rule is 2 for 2 and n=2.</b> Tonight's Crosseyed override is the third and final test this run offers.</p>
+    <h4>Crosseyed at 75% &mdash; and what the gap objection got wrong</h4>
     <p>The first version of this page put Crosseyed and Painless on Wednesday's slate but kept it off the ladder, reasoning that a 7-show gap was the wrong shape for a costume pick next to U.S.S.R.'s 534. <b>That objection does not survive contact with the data.</b> U.S.S.R. was chosen for the <em>opener</em> &mdash; a slot where a bustout <em>is</em> the point. Nothing about it says the band avoids a current song for a mid-set nod, and the two picks are not competing for the same job.</p>
     <div class="tblwrap"><table class="dt">
       <thead><tr><th scope="col"></th><th scope="col" class="n">All-time</th><th scope="col" class="n">Modern rate</th><th scope="col" class="n">Last played</th><th scope="col" class="n">MSG shows</th></tr></thead>
@@ -602,7 +602,7 @@
       </tbody>
     </table></div>
     <p>Six of Crosseyed's eight MSG appearances fall on 29 December&ndash;1 January &mdash; the marquee nights of the New Year's runs. <b>It is the band's big-statement song in this building</b>, and Wednesday closes a five-night run on the night themed to the year the song was born. That case stands on its own without the costume rule; the costume rule then adds to it. <b>It goes to the top of Wednesday's ladder at 80%.</b></p>
-    <p>Consistency then forces a second change. If the same-year nod is near-certain on Wednesday, it cannot be a coin flip on Monday &mdash; <em>Quadrophenia</em> is the Halloween 1995 costume and Drowned is its only survivor, 48 all-time against 4 for the next-best track. <b>Drowned goes from 30% to 45% and takes the top slot on Monday.</b> It is held under Crosseyed for one honest reason and only one: Crosseyed is a living song at 8% a night, while Drowned has not been played since October 2023 and runs about 2%. <span class="risk">These two are now the largest positions on the page, and both are judgement, not measurement.</span></p>
+    <p>Consistency then forces a second change. If the same-year nod is near-certain on Wednesday, it cannot be a coin flip on Monday &mdash; <em>Quadrophenia</em> is the Halloween 1995 costume and Drowned is its only survivor, 48 all-time against 4 for the next-best track. <b>Drowned went from 30% to 45% and took the override slot on #95 &mdash; and hit.</b> It is held under Crosseyed for one honest reason and only one: Crosseyed is a living song at 8% a night, while Drowned has not been played since October 2023 and runs about 2%. <span class="risk">These two are now the largest positions on the page, and both are judgement, not measurement.</span></p>
 
     <p class="risk"><b>Still true, and unaffected:</b> this is not an opener rule. Having just opened #94 with a cover, a cover opener two nights running is less likely, not more. The Real Me and Born Under Punches are not opener calls. Openers revert to frequency.</p>
 
@@ -612,7 +612,7 @@
     <p><b>#94 → the costume idea, on one observation, now corrected for the year lag.</b></p>
 
     <h4>&ldquo;Era-narrative wins the marquee slots&rdquo; has a live record of 0 for 4</h4>
-    <p>Every called shot on #94 missed. The narrative reading of that night is an explanation fitted afterwards, not a prediction that landed. Forbin v8 spends 3 of 20 slots on it anyway, re-admitting an idea this project measured and rejected a day earlier. That is a bet, and Monday is the first time it is exposed.</p>
+    <p>Every called shot on #94 missed. The narrative reading of that night is an explanation fitted afterwards, not a prediction that landed. Forbin v8 spends 3 of 20 slots on it anyway, re-admitting an idea this project measured and rejected a day earlier. That was a bet, and #95 exposed it: Forbin v8 was retired before the night ran, on 100 simulations that had it 41 songs behind plain frequency.</p>
 
     <h4>What the numbers audit found &mdash; Sat 25 Jul, after the show</h4>
     <p>Every play count on this page was re-pulled from the Phish-only feed and checked. The 1995 slate came back clean: Free 32, Strange Design 29, Theme from the Bottom 27, Acoustic Army 27, You Enjoy Myself 25 &mdash; all confirmed. <b>The 1996 slate did not.</b> Its counts were inflated across the board &mdash; Character Zero shown at 30 against a true 21, the Star-Spangled Banner at 17 against 10, Swept Away and Steep at 18 against 13. That whole night has been rebuilt from verified numbers, its expected ladder score falling from 16.8 to 14.9, and its opener call moving from the Banner to Wilson on a corrected count of 1996 set-one openers.</p>
