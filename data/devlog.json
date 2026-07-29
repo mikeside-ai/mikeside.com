@@ -15,6 +15,20 @@
   ],
   "entries": [
     {
+      "date": "2026-07-29",
+      "project": "setlist-predictions",
+      "type": "content",
+      "title": "MSG #95 scored: 8 of 20, and the first over-prediction",
+      "notes": "Forbin v10 caught 8 of 20 on the 1995 night — Free, Strange Design, Theme from the Bottom, Scent of a Mule, It's Ice, Prince Caspian, Ha Ha Ha and Taste. Ten-pick ladder 31 of 55 against an expected 35.5, a ratio of 0.87 and the first time this project has over-called a show. Called shots went 0 for 4, now 0 for 8 live. Two overrides that the model itself ranked near zero both landed: Drowned, kept on the argument that a themed night draws on its own year's Halloween costume album, and Prince Caspian, restored after a rotation-state suppression was judged wrong for a curated residency."
+    },
+    {
+      "date": "2026-07-29",
+      "project": "setlist-predictions",
+      "type": "release",
+      "title": "Forbin v11.1: the anchor one show chose, and the anchor a hundred shows chose",
+      "notes": "v11 makes one ranking change and one odds change. The ranking change is title aliasing — 1995 logs the song as Taste That Surrounds and 1996 logs it as Taste, and 81 of the 100 backtest cases touch that alias. Worth +3 hits, 836 to 839, ladder unchanged. The odds change drops v10's flat 1.4x occasion uplift for a measured depletion term: as a run burns through the catalogue the surviving pool shrinks and every survivor gets likelier. v11 anchored that term on a single show and under-called by 19% across 100 held-out shows. v11.1 refits the constant — calibration ratio 0.813 to 1.001, holding at 0.952, 1.053 and 1.092 on three independent holdouts. No pick moved; a monotonic rescale cannot reorder a list. Also tested and rejected: using a run's own prior nights as a show-length prior (22% worse than the class average, correlation 0.188), song-family propagation (lost 4 hits), and a separate occasion anchor (unstable across splits)."
+    },
+    {
       "date": "2026-07-27",
       "project": "mikeside",
       "type": "content",
