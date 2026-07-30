@@ -340,6 +340,29 @@
     .tabbtn{font-size:11.5px;padding:6px 10px}
   }
 
+  /* ---------- this-week tab ---------- */
+  .wk-tbl td{vertical-align:top}
+  .wk-tbl .wk-day{white-space:nowrap;font-weight:660;color:var(--text)}
+  .wk-now{display:inline-block;margin-left:5px;padding:1px 6px;border-radius:999px;
+    background:rgba(110,168,254,.18);border:1px solid rgba(110,168,254,.42);
+    color:#cfe0ff;font-size:9.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+  .wk-hot td{background:rgba(240,185,90,.07)}
+  .wk-hot .wk-day{color:var(--gold)}
+  .wk-mac{margin:0 0 4px;line-height:1.45}
+  .wk-mac:last-child{margin-bottom:0}
+  .wk-t{display:inline-block;min-width:52px;color:var(--faint);font-variant-numeric:tabular-nums}
+  .wk-src{color:var(--faint);font-size:10px}
+  .wk-earn{line-height:1.9}
+  .wk-e{display:inline-block;margin:0 5px 3px 0;padding:2px 7px;border-radius:7px;
+    background:rgba(255,255,255,.045);border:1px solid var(--line);font-size:11px;white-space:nowrap}
+  .wk-e b{font-weight:680;margin-right:4px}
+  .wk-e i{font-style:normal;margin-left:5px;color:var(--faint);font-size:9.5px;text-transform:uppercase}
+  .wk-e-mid{background:rgba(110,168,254,.10);border-color:rgba(110,168,254,.30)}
+  .wk-e-big{background:rgba(240,185,90,.14);border-color:rgba(240,185,90,.45);font-size:12px}
+  .wk-e-big b{color:var(--gold)}
+  .wk-none{color:var(--faint);font-size:11px}
+  @media(max-width:700px){.wk-t{min-width:0;margin-right:6px}}
+
 
 /* ---- shell boot ---- */
 .boot{max-width:760px;margin:80px auto;text-align:center;color:var(--muted);font-size:15px;letter-spacing:.02em}
