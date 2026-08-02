@@ -11,7 +11,7 @@ on:
 
 concurrency:
   group: porkbun-deploy
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -21,13 +21,19 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: pixie-ss1-ftp.porkbun.com
           username: mikeside.com
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           server-dir: ./
+          # Sync state got desynced from the actual server contents (an old
+          # projects/setlistlizard_with/2026-07-22 folder kept failing to
+          # delete with "FTPError: 550 Failed to change directory" on every
+          # run, blocking the deploy). Point at a fresh state file so the
+          # action rescans the server instead of trusting the stale record.
+          state-name: .ftp-deploy-sync-state-v2.json
           exclude: |
             **/.git*
             **/.git*/**
