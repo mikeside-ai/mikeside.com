@@ -45,6 +45,25 @@
   50%{box-shadow:0 0 22px 3px rgba(255,122,47,.42),0 8px 24px -12px rgba(22,41,59,.5)}
 }
 @media (prefers-reduced-motion:reduce){.v2beta{animation:none;box-shadow:0 0 16px 2px rgba(255,122,47,.38)}}
+
+/* ---------- MOBILE OVERFLOW GUARDS (2026-08-03) ----------
+   Inline on purpose: index.html carries no ?v= and is always fetched fresh,
+   so this ships instantly with no cache-bust risk the night before travel.
+   Cause class: flex/grid children default to min-width:auto, so a long
+   unbreakable string (place name, address, mono time string, directions
+   chip) sets a min size the row cannot shrink below. Inside .card that gets
+   clipped by overflow:hidden (text simply cut off at the right edge, no
+   scrollbar); outside .card — the .drive connectors in #route — it widens
+   the whole document. Both read as "cut off on the right."
+   overflow-x:clip (NOT hidden) is the backstop: clip does not create a
+   scroll container, so the sticky day-nav keeps working. */
+html,body{overflow-x:clip}
+img,svg,video,iframe{max-width:100%}
+.stop,.stop>div,.flight>div,.wx-line,.wx-tip,.todo,.pk{min-width:0}
+.leg,.drive{flex-wrap:wrap}
+.leg a.leg-dir,.drive a.leg-dir{flex-wrap:wrap;min-width:0}
+.stop-name,.stop-note,.day-intro,.alt-head,.stay,.stay .addr,.todo-text,
+.flight .tm,.wx-meta,.opt-index a,footer span{overflow-wrap:anywhere}
 </style>
 </head>
 <body>
