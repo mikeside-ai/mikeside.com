@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+/* CANONICAL HOST GUARD (2026-07-26) — must stay first in <head>.
+   Site answers on supmaine.mikeside.com (canonical) and mikeside.com/supmaine/.
+   The Places key is referrer-restricted to the canonical host, so the other
+   path silently loses every photo. Redirect instead. */
+(function () {
+  var h = location.hostname;
+  if (h === 'mikeside.com' || h === 'www.mikeside.com') {
+    var p = location.pathname.replace(/^\/supmaine(\/|$)/, '/');
+    location.replace('https://supmaine.mikeside.com' + p + location.search + location.hash);
+  }
+})();
+</script>
+<link rel="canonical" href="https://supmaine.mikeside.com/stays.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where we sleep — 7 nights · Aug 4–11, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="supmaine.css?v=20260724g">
+<style>
+  html,body{overflow-x:clip}
+  .res-wrap{max-width:600px;margin:0 auto;padding:30px 18px 80px}
+  .res-back{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;color:var(--ink);text-decoration:none;border:1.5px solid var(--ink);border-radius:999px;padding:5px 13px;background:var(--paper);margin-bottom:24px}
+  .res-eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--seaglass);font-weight:600;margin-bottom:10px}
+  .res-title{font-family:"Bricolage Grotesque",serif;font-weight:800;font-size:clamp(30px,7vw,42px);line-height:1;letter-spacing:-.02em;margin-bottom:6px}
+  .res-sub{font-size:14px;color:var(--ink-soft);margin-bottom:22px}
+  .card2{background:var(--paper);border:1.5px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin-bottom:16px;min-width:0}
+  .nite{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--buoy);margin-bottom:7px}
+  .veh{font-family:"Bricolage Grotesque",serif;font-weight:700;font-size:21px;line-height:1.15;margin-bottom:3px;overflow-wrap:anywhere}
+  .host{font-size:13px;color:var(--ink-soft);margin-bottom:12px}
+  .inout{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 13px}
+  .inout div{background:var(--ink);color:var(--fog);border-radius:12px;padding:11px 13px;min-width:0}
+  .inout .k{font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sand)}
+  .inout .v{font-family:"Bricolage Grotesque",serif;font-weight:800;font-size:17px;margin-top:3px}
+  .addr{font-size:13.5px;color:var(--ink-soft);line-height:1.5;overflow-wrap:anywhere}
+  .addr a{color:var(--ink);border-bottom:1.5px solid var(--seaglass);text-decoration:none}
+  .meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+  .pill{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;letter-spacing:.06em;border:1.5px solid var(--line);border-radius:999px;padding:5px 11px;background:var(--fog);color:var(--ink);overflow-wrap:anywhere}
+  .pill.code{border-color:var(--ink);letter-spacing:.1em}
+  .pill.warn{border-color:var(--buoy);color:var(--buoy);background:rgba(201,69,45,.07)}
+  .fine{font-size:12.5px;color:var(--ink-soft);line-height:1.55;margin-top:11px}
+  .flag{background:rgba(201,69,45,.08);border:1.5px solid rgba(201,69,45,.35);border-radius:12px;padding:12px 15px;font-size:13.5px;line-height:1.55;margin-bottom:16px}
+  .flag b{color:var(--buoy)}
+  .soft{background:rgba(94,143,126,.1);border:1.5px solid rgba(94,143,126,.4);border-radius:12px;padding:12px 15px;font-size:13.5px;line-height:1.55;margin-bottom:16px}
+</style>
+</head>
+<body>
+<div class="res-wrap">
+  <a class="res-back" href="index.html">&larr; back to itinerary</a>
+
+  <div class="res-eyebrow">Lodging &middot; 7 nights</div>
+  <h1 class="res-title">🛏️ Where we sleep</h1>
+  <p class="res-sub">Aug 4 &ndash; 11, 2026 &middot; Vlad, Allison, Sean</p>
+
+  <div class="card2">
+    <div class="nite">Night 1 &middot; Tue Aug 4</div>
+    <div class="veh">Cottage 9 &mdash; 5 Boothbay Road</div>
+    <div class="host">Airbnb &middot; host <b>Jeff</b> &middot; Edgecomb, ME</div>
+    <div class="inout">
+      <div><div class="k">Check-in</div><div class="v">Tue Aug 4<br>4:00 PM</div></div>
+      <div><div class="k">Checkout</div><div class="v">Wed Aug 5<br>10:00 AM</div></div>
+    </div>
+    <div class="addr"><a href="https://www.google.com/maps/search/?api=1&query=5+Boothbay+Rd+Edgecomb+ME+04556" target="_blank" rel="noopener">5 Boothbay Rd, Edgecomb, ME 04556</a></div>
+    <div class="meta">
+      <span class="pill code">HM9RXZEYJF</span>
+      <span class="pill">3 guests</span>
+    </div>
+    <p class="fine">Jeep pickup is 12:15 PM and the hosts in Bath are at 1:00 PM &mdash; check-in isn't until 4:00 PM, so Red's Eats and Boothbay Harbor happen before you ever see the cottage. Message Jeff in the Airbnb app for the door code / arrival instructions.</p>
+  </div>
+
+  <div class="card2">
+    <div class="nite">Night 2 &middot; Wed Aug 5</div>
+    <div class="veh">Luxury Glamping #1 &mdash; Come Spring Farm</div>
+    <div class="host">Airbnb "Home in Union" &middot; host <b>Ana Luisa</b> &middot; alpaca farm, Union, ME</div>
+    <div class="inout">
+      <div><div class="k">Check-in</div><div class="v">Wed Aug 5<br>3:00 PM</div></div>
+      <div><div class="k">Checkout</div><div class="v">Thu Aug 6<br>10:00 AM</div></div>
+    </div>
+    <div class="addr"><a href="https://www.google.com/maps/search/?api=1&query=187+Come+Spring+Ln+Union+ME+04862" target="_blank" rel="noopener">187 Come Spring Lane, Union, ME 04862</a></div>
+    <div class="meta">
+      <span class="pill code">HM5H59D8NB</span>
+      <span class="pill warn">1 guest</span>
+      <span class="pill warn">non-refundable</span>
+    </div>
+    <p class="fine">Thursday's 9:00 AM e-bike pickup in Bar Harbor is roughly 1 hr 45 min from Union &mdash; plan to roll out around 7:00 AM, well ahead of the 10:00 AM checkout.</p>
+  </div>
+
+  <div class="flag">
+    <b>Check the guest count on the dome.</b> Airbnb lists this reservation as <b>1 guest</b> while the Edgecomb cottage is booked for 3. Either there are separate dome bookings for Allison and Sean, or the party size needs updating with Ana Luisa. The booking is <b>non-refundable</b>, so a change request goes through the host rather than a cancel-and-rebook.
+  </div>
+
+  <div class="card2">
+    <div class="nite">Night 3 &middot; Thu Aug 6</div>
+    <div class="veh">Harraseeket Inn &mdash; Freeport</div>
+    <div class="host">After Acadia and Young's Lobster Pound in Belfast</div>
+    <div class="meta">
+      <span class="pill warn">no confirmation on file</span>
+    </div>
+    <p class="fine">This is the one lodging night with nothing recorded here. If there's a confirmation email or app screenshot, send it over and it'll get pinned like the rest.</p>
+  </div>
+
+  <div class="card2">
+    <div class="nite">Nights 4&ndash;6 &middot; Fri Aug 7 &rarr; Mon Aug 10</div>
+    <div class="veh">Holiday Inn Portland &mdash; By the Bay</div>
+    <div class="host">Wedding weekend base &middot; 2 Queen Premium Corner Room</div>
+    <div class="inout">
+      <div><div class="k">Check-in</div><div class="v">Fri Aug 7<br>4:00 PM</div></div>
+      <div><div class="k">Checkout</div><div class="v">Mon Aug 10<br>11:00 AM</div></div>
+    </div>
+    <div class="addr"><a href="https://www.google.com/maps/search/?api=1&query=88+Spring+St+Portland+ME+04101" target="_blank" rel="noopener">88 Spring St, Portland, ME 04101</a></div>
+    <div class="meta">
+      <span class="pill code">62164073</span>
+      <span class="pill">3 nights</span>
+      <span class="pill">$1,460.72</span>
+    </div>
+    <p class="fine">Charged to AmEx &hellip;1671. Friday's 2:15 PM ferry to the Peaks Island lobster bake leaves from the Casco Bay Lines terminal, about a 10-minute walk downhill from the hotel.</p>
+  </div>
+
+  <div class="card2">
+    <div class="nite">Night 7 &middot; Mon Aug 10</div>
+    <div class="veh">Hilton Garden Inn &mdash; Portland Airport</div>
+    <div class="host">Last night &middot; positioned for the 6:30 AM flight</div>
+    <div class="meta">
+      <span class="pill warn">no confirmation on file</span>
+    </div>
+    <p class="fine">Shuttle to PWM at about 4:45 AM Tuesday. Confirm the shuttle actually runs that early when you check in &mdash; it's still on the open-items list.</p>
+  </div>
+
+  <div class="soft">
+    <b>Jeep drop-off still unresolved.</b> The Alamo reservation books the return for Tue Aug 11 at 5:30 AM, but Monday's plan has an evening return. If the Jeep goes back Monday night, the Hilton shuttle becomes the only way to the airport.
+  </div>
+
+  <a class="res-back" href="index.html">&larr; back to itinerary</a>
+</div>
+</body>
+</html>
