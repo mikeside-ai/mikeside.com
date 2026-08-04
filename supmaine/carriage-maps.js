@@ -22,14 +22,15 @@
 
   var LEAFLET_CSS = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';
   var LEAFLET_JS  = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
+  var MAP_H = 290;
 
   /* Verified coordinates only. Do not add a point you have not looked up. */
   var P = {
-    shop:    [44.3886334, -68.2142486, 'Bar Harbor Bicycle Shop', '141 Cottage St \u00b7 9:00a pickup'],
-    eagle:   [44.3776642, -68.2532596, 'Eagle Lake Bridge \u2014 post 6', 'Gravel starts here. 2.8 mi up ME-233 from town.'],
+    shop:    [44.3886334, -68.2142486, 'Bar Harbor Bicycle Shop', '141 Cottage St · 9:00a pickup'],
+    eagle:   [44.3776642, -68.2532596, 'Eagle Lake Bridge — post 6', 'Gravel starts here. 2.8 mi up ME-233 from town.'],
     bubble:  [44.3498008, -68.2412453, 'Bubble Pond', 'South of post 7. Carriage road runs along the waterline.'],
-    jordan:  [44.3205459, -68.2536127, 'Jordan Pond House \u2014 post 15', 'Turnaround. Bike racks out front. North shore for the Bubbles.'],
-    duck:    [44.3915147, -68.2358663, 'Duck Brook Bridge \u2014 near post 5', 'Three arches. Shoot it from the streambed, not the top.'],
+    jordan:  [44.3205459, -68.2536127, 'Jordan Pond House — post 15', 'Turnaround. Bike racks out front. North shore for the Bubbles.'],
+    duck:    [44.3915147, -68.2358663, 'Duck Brook Bridge — near post 5', 'Three arches. Shoot it from the streambed, not the top.'],
     witch:   [44.3994434, -68.2435992, 'Witch Hole Pond', 'Nearly flat. Beaver lodges, blueberries in August.']
   };
 
@@ -68,7 +69,8 @@
     var s = document.createElement('style');
     s.textContent =
       '.cm-wrap{margin:14px 0 4px}' +
-      '.cm-map{height:290px;border-radius:12px;border:1.5px solid var(--line);' +
+      '.cm-hold{position:relative;height:' + MAP_H + 'px}' +
+      '.cm-map{height:' + MAP_H + 'px;border-radius:12px;border:1.5px solid var(--line);' +
         'background:var(--fog);z-index:0}' +
       '.cm-map .leaflet-container{font-family:"Instrument Sans",system-ui,sans-serif}' +
       '.cm-note{font-family:"IBM Plex Mono",monospace;font-size:10.5px;line-height:1.6;' +
@@ -77,11 +79,11 @@
       '.cm-pop{font-size:13px;line-height:1.5}' +
       '.cm-pop b{display:block;font-family:"Bricolage Grotesque",serif;font-size:14.5px;' +
         'margin-bottom:3px;color:#16293B}' +
-      '.cm-lock{position:absolute;inset:0;z-index:400;display:flex;align-items:center;' +
-        'justify-content:center;background:rgba(22,41,59,.34);border-radius:12px;cursor:pointer;' +
+      '.cm-lock{position:absolute;top:0;left:0;right:0;height:' + MAP_H + 'px;' +
+        'z-index:400;display:flex;align-items:center;justify-content:center;' +
+        'background:rgba(22,41,59,.34);border-radius:12px;cursor:pointer;' +
         'font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;' +
-        'text-transform:uppercase;color:#fff;font-weight:600;text-align:center;padding:12px}' +
-      '.cm-hold{position:relative}';
+        'text-transform:uppercase;color:#fff;font-weight:600;text-align:center;padding:12px}';
     document.head.appendChild(s);
   }
 
@@ -131,9 +133,9 @@
         map.setView([44.36, -68.24], 12);
       }
 
-      /* Tap-to-activate: stops the map swallowing page scroll on mobile. */
+      /* Tap-to-activate: stops the map swallowing page scroll on mobile.
+         The overlay is sized to the MAP only, never the caption below it. */
       var holder = host.parentNode;
-      holder.classList.add('cm-hold');
       var lock = document.createElement('div');
       lock.className = 'cm-lock';
       lock.textContent = 'Tap to explore the map';
@@ -165,7 +167,7 @@
         var wrap = document.createElement('div');
         wrap.className = 'cm-wrap';
         wrap.innerHTML =
-          '<div class="cm-map" id="' + cfg.id + '"></div>' +
+          '<div class="cm-hold"><div class="cm-map" id="' + cfg.id + '"></div></div>' +
           '<div class="cm-note">Carriage roads are the thin dashed tracks \u2014 ' +
           'switch layers (top right) for contours. <b>No route line is drawn on purpose:</b> ' +
           'these roads wind, and a straight line between pins would be a lie. ' +
