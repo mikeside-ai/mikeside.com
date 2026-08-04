@@ -8,7 +8,7 @@
     var ths=t.tHead.rows[0].cells;
     for(var i=0;i<ths.length;i++){
       var ar=ths[i].querySelector('.ar');
-      if(ar) ar.textContent=(i===col?(st.dir>0?' \u005Cu25B2':' \u005Cu25BC'):'');
+      if(ar) ar.textContent=(i===col?(st.dir>0?' \u25B2':' \u25BC'):'');
     }
   }
   window.sortH=function(col){
