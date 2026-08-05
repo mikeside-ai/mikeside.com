@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+/* CANONICAL HOST GUARD — must stay first in <head> on every page in supmaine/.
+   The site answers on both supmaine.mikeside.com (canonical) and
+   mikeside.com/supmaine/. Keeping every page on the canonical host keeps
+   referrer-restricted assets working and bookmarks honest. */
+(function () {
+  var h = location.hostname;
+  if (h === 'mikeside.com' || h === 'www.mikeside.com') {
+    var p = location.pathname.replace(/^\/supmaine(\/|$)/, '/');
+    location.replace('https://supmaine.mikeside.com' + p + location.search + location.hash);
+  }
+})();
+</script>
+<link rel="canonical" href="https://supmaine.mikeside.com/v3.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0B1F2A">
+<title>Maine, in pictures · Aug 4–11, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="v3.css?v=20260804a">
+</head>
+<body>
+<div id="rope"><i></i></div>
+<header><nav id="rail" aria-label="Jump to a day"></nav></header>
+<main id="album"></main>
+<footer>
+  <span>Maine · Aug 4–11</span>
+  <a href="index.html">Full itinerary</a>
+</footer>
+<script src="v3.js?v=20260804a" defer></script>
+</body>
+</html>
