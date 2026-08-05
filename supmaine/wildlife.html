@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+/* CANONICAL HOST GUARD — must stay first in <head>. The Places key is
+   referrer-restricted to supmaine.mikeside.com, so the mikeside.com/supmaine/
+   path silently loses every photo. Redirect instead. */
+(function () {
+  var h = location.hostname;
+  if (h === 'mikeside.com' || h === 'www.mikeside.com') {
+    var p = location.pathname.replace(/^\/supmaine(\/|$)/, '/');
+    location.replace('https://supmaine.mikeside.com' + p + location.search + location.hash);
+  }
+})();
+</script>
+<link rel="canonical" href="https://supmaine.mikeside.com/wildlife.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wildlife — what's alive out there · Aug 4–11, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="supmaine.css?v=20260724g">
+<style>
+  html,body{overflow-x:clip}
+  .nb-wrap{max-width:640px;margin:0 auto;padding:30px 18px 80px}
+  .nb-back{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;color:var(--ink);text-decoration:none;border:1.5px solid var(--ink);border-radius:999px;padding:5px 13px;background:var(--paper);margin-bottom:22px}
+  .nb-eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--seaglass);font-weight:600;margin-bottom:10px}
+  .nb-title{font-family:"Bricolage Grotesque",serif;font-weight:800;font-size:clamp(30px,7vw,42px);line-height:1;letter-spacing:-.02em;margin-bottom:6px}
+  .nb-sub{font-size:14px;color:var(--ink-soft);margin-bottom:14px;line-height:1.55}
+  .nb-swap{display:inline-flex;align-items:center;gap:7px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--ink);border:1.5px solid var(--seaglass);background:rgba(94,143,126,.14);border-radius:999px;padding:7px 14px;margin-bottom:20px}
+  .jump{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}
+  .jump a{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;letter-spacing:.05em;text-decoration:none;color:var(--ink);border:1.5px solid var(--line);border-radius:999px;padding:5px 11px;background:var(--paper)}
+  .dcard{background:var(--paper);border:1.5px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin-bottom:16px;min-width:0;scroll-margin-top:20px}
+  .dhead{font-family:"Bricolage Grotesque",serif;font-weight:800;font-size:20px;line-height:1.15;margin-bottom:2px}
+  .dwhere{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--buoy);margin-bottom:12px}
+  .sp{border-top:1px dotted var(--line);padding:11px 0 4px;font-size:13.5px;line-height:1.6;overflow-wrap:anywhere}
+  .sp:first-of-type{border-top:none;padding-top:2px}
+  .sp b{color:var(--ink)}
+  .sp .lat{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-soft);font-style:italic}
+  .sp.top>b::before{content:"★ ";color:var(--buoy);font-weight:700}
+  .where{display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--seaglass);margin-top:5px}
+  .warn{color:var(--buoy);font-weight:600}
+  .note{background:rgba(94,143,126,.1);border:1.5px solid rgba(94,143,126,.4);border-radius:12px;padding:12px 15px;font-size:13.5px;line-height:1.55;margin-bottom:18px}
+  .note b{color:var(--ink)}
+  .note.hot{background:rgba(201,69,45,.09);border-color:rgba(201,69,45,.45)}
+  .sect{font-family:"Bricolage Grotesque",serif;font-weight:800;font-size:22px;margin:30px 0 12px}
+</style>
+</head>
+<body>
+<div class="nb-wrap">
+  <a class="nb-back" href="index.html">&larr; back to itinerary</a>
+
+  <div class="nb-eyebrow">Field guide &middot; fauna</div>
+  <h1 class="nb-title">🦭 What's alive out there</h1>
+  <p class="nb-sub">The animals you have a real chance of seeing, day by day, and where to look. <b>★ = the one worth actively watching for</b> that day. Everything here is keyed to <b>early August on the mid-coast</b> — which changes the list more than you'd think. Some famous Maine animals are simply not available to you this week, and those are called out honestly at the bottom rather than padding the list.</p>
+
+  <a class="nb-swap" href="plants.html">🌿 Plant life &rarr;</a>
+
+  <div class="jump">
+    <a href="#w1">Tue 4</a><a href="#w2">Wed 5</a><a href="#w3">Thu 6</a><a href="#w4">Fri 7</a><a href="#w5">Sat 8</a><a href="#w6">Sun 9</a><a href="#w7">Mon 10</a><a href="#miss">Won't see</a>
+  </div>
+
+  <div class="note">
+    <b>Two rules do most of the work.</b> First, <b>tide beats time of day</b> on this coast — seals haul out on ledges as the tide drops and swim off as it floods, so the low-tide windows already on the day cards are also the wildlife windows. Second, <b>the hour after sunrise and the hour before sunset</b> is when mammals move; midday in August is the deadest part of the day for everything except seabirds.
+  </div>
+
+  <div class="dcard" id="w1">
+    <div class="dhead">Tuesday, Aug 4</div>
+    <div class="dwhere">Sheepscot estuary &middot; Wiscasset &middot; Boothbay Harbor</div>
+    <div class="sp top"><b>Osprey</b> <span class="lat">Pandion haliaetus</span> — the big white-bellied fish hawk that builds a messy stick platform on top of channel markers, pilings and dead pines. Early August is the loudest week of their year: the chicks have fledged but still follow the adults around screaming to be fed. They hunt by hovering, then hitting the water feet-first and shaking off mid-air like a dog. Maine's population came back from near-zero after DDT, and the estuary here is thick with them.
+      <span class="where">Look: channel markers on the Sheepscot, the pilings at Boothbay Harbor</span></div>
+    <div class="sp"><b>Harbor seal</b> <span class="lat">Phoca vitulina</span> — Maine's default seal, dog-faced and mottled, hauled out in clumps on exposed ledges. August pups are already weaned and swimming. If you see a lone head bobbing 40 yards out watching you, that's this. Give hauled-out seals a wide berth — 150 ft is the federal guidance, and a spooked group stampeding into the water can injure itself.
+      <span class="where">Look: ledges in Boothbay Harbor as the tide drops</span></div>
+    <div class="sp"><b>American lobster</b> <span class="lat">Homarus americanus</span> — you'll eat one at Red's before you see one alive, but the buoys are the real show. Every one of those painted floats is a licensed lobsterman's <b>registered color pattern</b>, unique to them, repeated on their boat's mast so wardens can match trap to owner from a distance. Once you know that, a harbor full of buoys reads like a phone book.
+      <span class="where">Look: literally everywhere on the water</span></div>
+    <div class="sp"><b>Double-crested cormorant</b> <span class="lat">Nannopterum auritum</span> — the prehistoric-looking black bird standing on a rock with its wings spread wide. It's not showing off; its feathers aren't fully waterproof, which is the trade-off that lets it dive deep, so it has to air-dry between fishing trips.</div>
+    <div class="sp"><b>Common eider</b> <span class="lat">Somateria mollissima</span> — big sea duck. In August you'll see a brown female towing 15–20 ducklings that aren't all hers: eiders pool their broods into <b>crèches</b> guarded by a few &quot;aunties.&quot; The males are the striking black-and-white ones, mostly further offshore by now.</div>
+  </div>
+
+  <div class="dcard" id="w2">
+    <div class="dhead">Wednesday, Aug 5</div>
+    <div class="dwhere">Camden &middot; Penobscot Bay &middot; Rockland &middot; Union</div>
+    <div class="sp top"><b>Bald eagle</b> <span class="lat">Haliaeetus leucocephalus</span> — Penobscot Bay holds one of the densest concentrations in the eastern United States, and the Olad sail is the single best eagle opportunity of your week. Adults are unmistakable; the brown ones with white blotches are juveniles, which take four to five years to get the white head. Watch the tall dead pines on the islands — eagles perch where they can see, not where it's pretty.
+      <span class="where">Look: from the schooner, and from the Mt Battie summit ledges</span></div>
+    <div class="sp"><b>Harbor porpoise</b> <span class="lat">Phocoena phocoena</span> — small, shy, and easy to miss because it does not leap. You get a slow dark triangle of dorsal fin rolling forward and gone, usually in twos and threes. Calm water and a quiet sailboat is exactly the right platform. If a fin comes up three times in a line, that's your porpoise.
+      <span class="where">Look: off the bow of the Olad in flat water</span></div>
+    <div class="sp"><b>Peregrine falcon</b> <span class="lat">Falco peregrinus</span> — the Camden Hills cliffs are historic peregrine ground and the recovery here is one of the state's real conservation wins. Look for a compact, sharp-winged shape cutting fast along a cliff face — nothing else moves like that. By August the young are flying and the family hunts together noisily.
+      <span class="where">Look: the cliff faces below Mt Battie and toward Maiden Cliff</span></div>
+    <div class="sp"><b>Great black-backed gull</b> <span class="lat">Larus marinus</span> — the <b>largest gull in the world</b>, and Rockland Breakwater is full of them alongside the smaller herring gulls. Nearly a 5½-foot wingspan, jet-black mantle, and genuinely predatory — they'll take ducklings and other gulls' chicks. Once you can pick them out of a mixed flock, gulls stop being &quot;gulls.&quot;
+      <span class="where">Look: the Rockland Breakwater, standing on the granite</span></div>
+    <div class="sp"><b>Common loon</b> <span class="lat">Gavia immer</span> — this is your <b>inland</b> night. Union sits in lake country, and the loon's wail carries a long way across still water after dark. The tremolo (the &quot;crazy laugh&quot;) means it's agitated; the long wail is just contact. Step outside at the dome after sunset and listen.
+      <span class="where">Listen: after dark at the Union dome</span></div>
+    <div class="sp"><b>Turkey vulture</b> <span class="lat">Cathartes aura</span> — the big soaring bird holding its wings in a shallow V and rocking side to side. Eagles soar dead flat; if it wobbles, it's a vulture. Common over the Mt Battie ridgeline on a warm afternoon.</div>
+  </div>
+
+  <div class="dcard" id="w3">
+    <div class="dhead">Thursday, Aug 6</div>
+    <div class="dwhere">Acadia &middot; Bar Harbor &middot; Belfast</div>
+    <div class="sp top"><b>Peregrine falcon</b> <span class="lat">Falco peregrinus</span> — Acadia's cliff nests (Precipice, Jordan Cliffs, Valley Cove) are the reason certain trails close each spring, and the reason the closures lift once the young fledge in late summer. Stand at the Precipice pullout with binoculars and you can often watch fledglings harassing each other along the cliff. The stoop is the fastest movement in the animal kingdom — over 200 mph.
+      <span class="where">Look: the Precipice pullout on the Park Loop Road</span></div>
+    <div class="sp"><b>Beaver</b> <span class="lat">Castor canadensis</span> — genuinely likely if you take the e-bike option, because the carriage roads run right past their ponds and beavers come out at dusk. Beaver Dam Pond and Witch Hole Pond are the classic spots. Look for the V-wake with a brown head at the point of it; the tail-slap is a warning aimed at you.
+      <span class="where">Look: Beaver Dam Pond &amp; Witch Hole Pond, first and last light</span></div>
+    <div class="sp"><b>Black guillemot</b> <span class="lat">Cepphus grylle</span> — the most underrated bird on this trip. Small, sooty black, with a bold white wing patch and <b>bright coral-red feet and mouth lining</b>. It's an auk — a puffin relative — and unlike puffins it stays inshore all summer, so it's the one member of that family you can reliably see from land here.
+      <span class="where">Look: the water off Bar Harbor and along the Ocean Path</span></div>
+    <div class="sp"><b>Harbor &amp; gray seal</b> <span class="lat">Phoca vitulina / Halichoerus grypus</span> — Frenchman Bay has both. Gray seals are much bigger with a long straight Roman-nosed profile that gets them the nickname <b>horsehead</b>; harbor seals have a short concave dog face. Side by side the difference is obvious; alone, look at the nose.</div>
+    <div class="sp"><b>Red squirrel</b> <span class="lat">Tamiasciurus hudsonicus</span> — you will hear this before you see it: a long furious mechanical chatter from a spruce, aimed at you. Smaller and rustier than a gray squirrel, and the loudest animal in the park by a distance. The piles of shredded cone scales at the base of conifers are its middens.</div>
+    <div class="sp"><b>Snowshoe hare</b> <span class="lat">Lepus americanus</span> — brown in August, white in winter, huge back feet. Dawn and dusk on the carriage roads and trail edges. Acadia has no coyote-free refuge, so they're jumpy; you'll get a two-second look.</div>
+    <div class="sp"><b>White-tailed deer</b> — common and casual around Sieur de Monts and the roadsides at dusk, which is also your <span class="warn">real driving hazard</span> on the Park Loop Road and Route 3 after dark. Belfast to Freeport that night is prime deer hour. Slow down.</div>
+    <div class="sp"><b>Herring gull</b> — worth naming because of the popovers. The Jordan Pond House gulls and the Thunder Hole gulls are professionals. Do not put a plate down and look away.</div>
+  </div>
+
+  <div class="dcard" id="w4">
+    <div class="dhead">Friday, Aug 7</div>
+    <div class="dwhere">Cape Elizabeth &middot; Casco Bay &middot; Peaks Island</div>
+    <div class="sp top"><b>Harbor seal, from the ferry</b> — the Peaks Island run threads past ledges that seals use hard, and a boat is a far better seal platform than a shoreline because you get above the glare. Sit on the <b>right side heading out</b> for the best angle on the outer ledges and take the trip slowly rather than staring at your phone.
+      <span class="where">Look: the 2:15p ferry out, ledges on the harbor side</span></div>
+    <div class="sp"><b>Common tern</b> <span class="lat">Sterna hirundo</span> — sharper and more elegant than any gull: forked tail, black cap, red-black bill, and a hunting style that's all hover-and-plunge. Casco Bay's island colonies are actively managed, and August has adults ferrying fish back to nearly-grown young. If a bird looks like a gull that went to ballet school, it's a tern.
+      <span class="where">Look: over the water at Fort Williams and from the ferry</span></div>
+    <div class="sp"><b>Monarch butterfly</b> <span class="lat">Danaus plexippus</span> — early August is the <b>last resident generation</b> before the ones that fly to Mexico. They'll be on milkweed and seaside goldenrod along the Fort Williams cliff walk. The generation being laid this week is the one that makes the 2,500-mile trip — a butterfly that will outlive its parents' entire lifespans several times over.
+      <span class="where">Look: the meadow edges at Fort Williams, Greenwood Garden on Peaks</span></div>
+    <div class="sp"><b>Double-crested cormorant</b> — the black birds on every ledge off the Cape. Their guano is what bleaches the tops of the offshore rocks white; that's how you spot a colony from a mile away.</div>
+    <div class="sp"><b>Osprey</b> — nest platforms are scattered around the Cape Elizabeth marshes and Casco Bay islands. Same show as Tuesday, better backdrop.</div>
+  </div>
+
+  <div class="dcard" id="w5">
+    <div class="dhead">Saturday, Aug 8</div>
+    <div class="dwhere">The wedding &middot; oceanfront, Cape Elizabeth &middot; 3:30–10 PM</div>
+    <div class="note hot">
+      <b>The practical one: greenhead flies.</b> Mid-July to mid-August is peak season for salt-marsh greenheads on the southern Maine coast, they bite hard, they hunt in <b>daylight</b> rather than at dusk, and they are drawn to dark colors and movement. An oceanfront ceremony near any marsh at 4:00 PM is exactly their hour. This is worth a discreet travel-size repellent in a jacket pocket or clutch — not a bottle on the bar, just insurance. They fade fast once the sun drops.
+    </div>
+    <div class="sp top"><b>Tree swallow &amp; chimney swift</b> — cocktail hour, 3:30 to 5:00, is when swallows work the field edges for insects at head height. Swifts are the ones that look like <b>flying cigars</b> with stiff, flickering wingbeats and never seem to glide. Free entertainment during the part of a wedding where you're holding a drink and nodding.</div>
+    <div class="sp"><b>Little &amp; big brown bat</b> <span class="lat">Myotis lucifugus / Eptesicus fuscus</span> — as the reception lights come on, bats take over the airspace the swallows just left. Maine's little brown bat was gutted by white-nose syndrome and is now state-endangered, so a bat over the lawn is a better sighting than it used to be. They're eating the mosquitoes; be glad they're there.</div>
+    <div class="sp"><b>Firefly</b> — early August is the tail end of the season in Maine, but field edges and hedgerows will still have a scattering after full dark. Late reception, dark lawn, worth a look away from the lights.</div>
+    <div class="sp"><b>Herring gull</b> — outdoor hors d'oeuvres, oceanfront, 3:30 PM. You know how this goes.</div>
+  </div>
+
+  <div class="dcard" id="w6">
+    <div class="dhead">Sunday, Aug 9</div>
+    <div class="dwhere">Portland &middot; South Portland &middot; the coastal loop</div>
+    <div class="sp top"><b>Migrating shorebirds</b> — here's the thing most visitors miss: <b>&quot;fall&quot; shorebird migration peaks in early August</b>, not in fall. Semipalmated sandpipers, short-billed dowitchers and greater yellowlegs are already streaming south from the Arctic, and every mudflat you pass this weekend is a refueling stop. A flock of small brown birds working a flat at low tide is not background — those birds hatched above the tree line six weeks ago.
+      <span class="where">Look: any exposed mudflat at low tide, Greenbelt marsh crossings</span></div>
+    <div class="sp"><b>Snowy egret</b> <span class="lat">Egretta thula</span> — bright white, black bill, black legs and <b>absurd yellow feet</b>, which it uses to stir the mud and flush prey. The larger all-white one with a yellow bill is a great egret. Both work the South Portland and Cape marshes.</div>
+    <div class="sp"><b>Harbor seal at Spring Point Ledge</b> — the ledge and breakwater there hold seals on a dropping tide, and it's an easy stop with a lighthouse attached.</div>
+    <div class="sp"><b>Osprey</b> — nest platforms along the Greenbelt and Scarborough side. Adults are still provisioning fledglings this week.</div>
+    <div class="sp"><b>Woodchuck</b> <span class="lat">Marmota monax</span> — the fat brown thing that waddles off a rail-trail verge. Unglamorous, but if you're on e-bikes you'll see several.</div>
+  </div>
+
+  <div class="dcard" id="w7">
+    <div class="dhead">Monday, Aug 10</div>
+    <div class="dwhere">Old Port &middot; Scarborough Marsh &middot; Kennebunkport &middot; Timber Point</div>
+    <div class="sp top"><b>Saltmarsh sparrow</b> <span class="lat">Ammospiza caudacuta</span> — if the Option B ride happens, this is the most significant animal of your whole trip. It nests <b>only</b> in Atlantic salt marsh, times its nesting to the gap between monthly high tides, and is losing that gap to sea-level rise. Populations are falling fast enough that credible projections put it near extinction within a few decades. Orange-buff face, grey cheek patch, streaky breast, and it skulks — you'll get a flash as it drops back into the grass.
+      <span class="where">Look: Scarborough Marsh, the tall <i>Spartina</i> away from the road</span></div>
+    <div class="sp"><b>Glossy ibis</b> <span class="lat">Plegadis falcinellus</span> — dark, long down-curved bill, and in good light it isn't black at all but iridescent bronze-green. Scarborough is one of the northernmost places they reliably breed. A genuinely tropical-looking bird in a Maine marsh.
+      <span class="where">Look: Scarborough Marsh, wading in the shallow pannes</span></div>
+    <div class="sp"><b>Willet</b> <span class="lat">Tringa semipalmata</span> — a plain grey wader that looks like nothing until it opens its wings and flashes a <b>bold black-and-white stripe</b>, screaming its own name. The loudest and most obvious bird in the marsh once it moves.</div>
+    <div class="sp"><b>Piping plover</b> <span class="lat">Charadrius melodus</span> — federally threatened, nests on the southern Maine beaches, and the roped-off symbolic fencing you'll see at Timber Point and the Kennebunkport beaches is protecting them. Sand-colored, runs in short bursts and stops dead. <span class="warn">Stay outside the fencing and keep well clear of chicks on the open sand</span> — they don't fly yet.
+      <span class="where">Look: Timber Point, roped beach sections</span></div>
+    <div class="sp"><b>Scarborough Marsh itself</b> — 3,100 acres, the largest salt marsh in Maine, and one of the state's top birding sites. The Audubon center on Pine Point Road rents canoes and is the standard way in. Worth an hour if the day has one.</div>
+  </div>
+
+  <h2 class="sect" id="miss">What you won't see — honestly</h2>
+  <div class="dcard">
+    <div class="sp"><b>Moose.</b> Wrong part of the state and wrong week. Maine's moose are inland and north — Baxter, Rangeley, the Moosehead region — and the coastal strip you're on has effectively none. Anyone promising you a coastal moose is selling a T-shirt.</div>
+    <div class="sp"><b>Puffins — unless you make a decision.</b> Atlantic puffins are on offshore rocks like Eastern Egg Rock, reachable only by dedicated boat trips out of Boothbay Harbor, New Harbor or Bar Harbor. <span class="warn">The birds leave the nesting islands around mid-August</span>, so this week is genuinely the closing window for the season, and it costs a half day. It's the one wildlife thing on this list that requires a real trade-off against the itinerary — flagging it rather than deciding it.</div>
+    <div class="sp"><b>Whales.</b> Humpbacks, finbacks and minkes are out there, but they're 20+ miles offshore on the feeding banks. It's a 4–5 hour committed trip out of Bar Harbor or Boothbay, not something you glimpse from the Ocean Path. Harbor porpoise is your realistic cetacean.</div>
+    <div class="sp"><b>Black bear.</b> Maine has roughly 35,000 of them, more than any state east of the Mississippi, and you will not see one. They're inland, nocturnal and want nothing to do with you.</div>
+    <div class="sp"><b>Warbler waves.</b> Spring migration is the famous one. By August the songbirds have stopped singing, are in drab plumage, and are hard to find even for people who care a lot. Don't feel bad about the quiet woods.</div>
+  </div>
+
+  <div class="note">
+    <b>The one piece of kit worth packing:</b> a single small pair of binoculars for the three of you. Eagles from the Olad, peregrines at the Precipice, seals from the ferry and the whole Scarborough marsh are all binocular-scale, not naked-eye-scale. Anything 8x32 or 8x42 fits in the Jeep door pocket and turns four of these days from &quot;there's a bird&quot; into an actual sighting.
+  </div>
+
+  <a class="nb-swap" href="plants.html">🌿 Plant life &rarr;</a><br>
+  <a class="nb-back" href="index.html">&larr; back to itinerary</a>
+</div>
+</body>
+</html>
