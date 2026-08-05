@@ -70,9 +70,9 @@
         ['12:45p', 'Bikes back', '🚲', 0, BIKESHOP],
         ['1:30p', 'The Beehive', '🥾', W('Acadia national park sand beach z.JPG'),
           'Sand Beach Park Loop Rd Bar Harbor ME 04609'],
-        ['3:30p', 'Thunder Hole', '🌊', W('Thunder hole, Acadia National Park, Maine.jpg'),
+        ['3:20p', 'Thunder Hole', '🌊', W('Thunder hole, Acadia National Park, Maine.jpg'),
           'Thunder Hole Acadia'],
-        ['3:45p', 'Cadillac summit', '⛰', W('Cadillac Mountain.jpg'),
+        ['4:00p', 'Cadillac summit', '⛰', W('Cadillac Mountain.jpg'),
           'Cadillac Summit Road Acadia National Park Bar Harbor ME 04609', 'k'],
         ['', 'Harraseeket Inn, Freeport', '🏨', 0,
           'Harraseeket Inn 162 Main St Freeport ME 04032', 'w']
