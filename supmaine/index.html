@@ -74,12 +74,29 @@ img,svg,video,iframe{max-width:100%}
 /* Food page chip (2026-08-04) */
 .crew a.food-chip{background:rgba(201,69,45,.1);border-color:var(--buoy)}
 
-/* Nature field-guide chips (2026-08-05) */
-.crew a.wild-chip{background:rgba(22,41,59,.07);border-color:var(--ink)}
-.crew a.plant-chip{background:rgba(94,143,126,.3);border-color:var(--seaglass)}
-
 /* v3 photo album chip (2026-08-04) */
 .crew a.album-chip{background:rgba(22,41,59,.9);border-color:#16293B;color:#F3EFE7}
+
+/* ---------- FIELD GUIDE BUTTONS (2026-08-05) ----------
+   Promoted out of the .crew chip row so they read as real, thumb-sized
+   tap targets on a phone. Inline for the same reason as the overflow
+   guards above: index.html carries no ?v= and is always fetched fresh. */
+.fieldbtns{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 0}
+.fieldbtn{flex:1 1 210px;min-width:0;display:flex;align-items:center;gap:12px;
+  text-decoration:none;color:var(--ink);padding:13px 16px;border-radius:16px;
+  border:1.5px solid var(--ink);background:var(--paper);
+  box-shadow:0 6px 18px -14px rgba(22,41,59,.85);
+  transition:transform .15s ease,box-shadow .15s ease}
+.fieldbtn:hover{transform:translateY(-1px);box-shadow:0 11px 22px -14px rgba(22,41,59,.95)}
+.fieldbtn .ic{font-size:25px;line-height:1;flex:0 0 auto}
+.fieldbtn .tx{min-width:0}
+.fieldbtn .lb{display:block;font-family:"Bricolage Grotesque",serif;font-weight:800;
+  font-size:16.5px;line-height:1.1;letter-spacing:-.01em}
+.fieldbtn .sb{display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;
+  font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);
+  overflow-wrap:anywhere}
+.fieldbtn.wild{background:linear-gradient(180deg,#F7F8F4,#E7EDEA);border-color:#16293B}
+.fieldbtn.plant{background:rgba(94,143,126,.16);border-color:var(--seaglass)}
 </style>
 </head>
 <body>
@@ -88,7 +105,11 @@ img,svg,video,iframe{max-width:100%}
 <header>
   <div class="eyebrow">Tide chart · Aug 4 – 11, 2026</div>
   <h1>MAINE<span class="thin">wedding weekend + coastal adventure</span></h1>
-  <div class="crew"><a href="#pack-vlad">Vlad</a><a href="#pack-allison">Allison</a><a href="#pack-sean">Sean</a><a href="reservation.html" target="_blank" rel="noopener">🚙 Jeep Wrangler</a><a class="acadia-chip" href="acadia.html">🌲 Acadia · Thursday</a><a class="stay-chip" href="stays.html">🛏️ Stays</a><a class="food-chip" href="food.html">🍽 Food</a><a class="wild-chip" href="wildlife.html">🦭 Wildlife</a><a class="plant-chip" href="plants.html">🌿 Plants</a><a class="album-chip" href="v3.html">V3 (my wife 👍 👍)</a></div>
+  <div class="crew"><a href="#pack-vlad">Vlad</a><a href="#pack-allison">Allison</a><a href="#pack-sean">Sean</a><a href="reservation.html" target="_blank" rel="noopener">🚙 Jeep Wrangler</a><a class="acadia-chip" href="acadia.html">🌲 Acadia · Thursday</a><a class="stay-chip" href="stays.html">🛏️ Stays</a><a class="food-chip" href="food.html">🍽 Food</a><a class="album-chip" href="v3.html">V3 (my wife 👍 👍)</a></div>
+  <div class="fieldbtns">
+    <a class="fieldbtn wild" href="wildlife.html"><span class="ic">🦭</span><span class="tx"><span class="lb">Wildlife</span><span class="sb">what to watch for, by day</span></span></a>
+    <a class="fieldbtn plant" href="plants.html"><span class="ic">🌿</span><span class="tx"><span class="lb">Plant life</span><span class="sb">what you're walking through</span></span></a>
+  </div>
   <a class="v2beta" href="v2.html"><span class="dot"></span>SupMaine v2 Beta<span class="arrow">&rarr;</span></a>
   <div class="countdown" id="countdown"><b id="cd-num">—</b><small id="cd-label">days to wheels-up</small></div>
   <div class="weather-chip" id="weather-chip"><span class="wemoji">🌤️</span><span><b id="wx-temp">—</b> <small id="wx-label">checking Portland, ME…</small></span></div>
