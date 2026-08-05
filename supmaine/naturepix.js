@@ -1,20 +1,35 @@
-/* naturepix.js (2026-08-05) - lead photos for wildlife.html + plants.html.
+/* naturepix.js (2026-08-05 rev b) - lead photos for wildlife.html + plants.html.
 
-   WHY NOT THE PLACES API: the Places browser key is HTTP-referrer-restricted
-   to supmaine.mikeside.com/* and quota-capped. Incident 5 in the maintenance
-   doc is the whole argument - a referrer mismatch kills every image silently
-   while the rest of the page keeps working, which is the hardest failure to
-   diagnose. Wikipedia's REST summary endpoint is keyless, CORS-open, has no
-   referrer restriction, no quota and no billing.
+   ---- REV B FIXES: "images flash then disappear" ----
+   Symptom: a grey 104px box appears per entry and is then deleted. That is
+   NOT a photo vanishing - it is .np-img's placeholder background rendering
+   while the request is in flight, then onerror tearing the element out.
+   So the real fault is always "the image request failed", and rev A had no
+   way to tell you that. Three changes:
 
-   HOW IT WORKS: each species entry on those pages is a .sp whose first <b>
-   holds the common name. We normalise that text, look it up in TITLES below,
-   and fetch the article's lead image. No data- attributes in the HTML, so the
-   two pages stay pure content and this file is the only thing to edit when a
-   photo is wrong. Unmapped or image-less entries simply render text-only.
+   1. SERVICE-WORKER SWEEP (the likely root cause). Incident 1: a root-scoped
+      worker from the v2 offline experiment intercepts cross-origin image
+      requests and breaks them. Every other page survives because photos.js
+      sweeps workers on load - these two pages don't load photos.js, so they
+      had NO sweep. Now they do. Load-bearing; never remove.
+   2. NO URL REWRITING. Rev A rewrote the thumbnail width token to 400px for
+      retina. Wikimedia refuses to upscale past a file's native width, so any
+      small original 404'd. We now use the API's URL verbatim - one fewer
+      variable, and the API URL is always known-good.
+   3. RETRY, THEN QUIET. A failure retries once before the element is removed,
+      and every failure is logged with a [naturepix] prefix so the console
+      says which species and which URL rather than silently emptying.
 
-   FAILURES ARE NEVER PERSISTED (the photos.js lesson): only successes are
-   cached, so a flaky moment on hotel wifi cannot poison the cache. */
+   WHY NOT THE PLACES API: that browser key is referrer-restricted to
+   supmaine.mikeside.com/* and quota-capped - incident 5 is the whole
+   argument. Wikipedia's REST endpoint is keyless, CORS-open, unrestricted.
+
+   HOW IT WORKS: each entry is a .sp whose first <b> holds the common name.
+   Normalise it, look it up in TITLES, fetch the article's lead image. No
+   data- attributes in the HTML, so this file is the only thing to edit when
+   a photo is wrong. Unmapped entries render text-only.
+
+   FAILURES ARE NEVER PERSISTED (the photos.js lesson): successes only. */
 (function () {
   'use strict';
 
@@ -91,11 +106,40 @@
     'spruce vs fir': 'Picea_rubens'
   };
 
-  var CACHE_KEY = 'supmaine-naturepix-v1';
-  var TTL = 30 * 24 * 60 * 60 * 1000;   /* 30 days - species photos do not move */
-  var POOL = 5;                          /* be polite to Wikipedia */
+  var CACHE_KEY = 'supmaine-naturepix-v2';
+  var OLD_KEYS = ['supmaine-naturepix-v1'];
+  var TTL = 30 * 24 * 60 * 60 * 1000;
+  var POOL = 5;
+  var TAG = '[naturepix]';
+  var stats = { want: 0, ok: 0, fail: 0 };
 
-  /* ---------- styles (injected, so the two pages need no CSS edits) ---------- */
+  /* ---------- 1. SERVICE-WORKER SWEEP (incident 1) ----------
+     A root-scoped worker left over from the v2 offline experiment controls
+     every page on this origin and mangles cross-origin image requests.
+     photos.js does this on the itinerary pages; these pages need their own. */
+  function sweep() {
+    try {
+      if (navigator.serviceWorker && navigator.serviceWorker.getRegistrations) {
+        navigator.serviceWorker.getRegistrations().then(function (regs) {
+          if (regs && regs.length) {
+            console.warn(TAG, 'unregistering', regs.length,
+              'service worker(s) - these break cross-origin images (incident 1).' +
+              ' Reload once after this.');
+            regs.forEach(function (r) { r.unregister(); });
+          }
+        }).catch(function () {});
+      }
+      if (window.caches && caches.keys) {
+        caches.keys().then(function (keys) {
+          keys.forEach(function (k) {
+            if (k.indexOf('supmaine-v2-') === 0) caches.delete(k);
+          });
+        }).catch(function () {});
+      }
+    } catch (e) {}
+  }
+
+  /* ---------- styles (injected; the two pages need no CSS edits) ---------- */
   function style() {
     var c = document.createElement('style');
     c.textContent =
@@ -113,6 +157,7 @@
   /* ---------- cache ---------- */
   function readCache() {
     try {
+      OLD_KEYS.forEach(function (k) { localStorage.removeItem(k); });
       var raw = localStorage.getItem(CACHE_KEY);
       if (!raw) return {};
       var o = JSON.parse(raw);
@@ -139,27 +184,35 @@
       .toLowerCase();
   }
 
-  /* Wikipedia thumbnails arrive around 320px wide; ask for a sharper one for
-     retina by rewriting the NNNpx- token. Purely cosmetic - if the URL shape
-     is unexpected we leave it alone. */
-  function sharpen(u) {
-    return u.replace(/\/(\d{2,4})px-/, function (m, w) {
-      return (+w < 400) ? '/400px-' : m;
-    });
-  }
-
+  /* ---------- 3. attach with one retry, then a loud failure ---------- */
   function attach(sp, src, page, alt) {
     var a = document.createElement('a');
     a.className = 'np-fig';
     a.href = page || '#';
     a.target = '_blank';
     a.rel = 'noopener';
+
     var img = document.createElement('img');
     img.className = 'np-img';
     img.loading = 'lazy';
     img.decoding = 'async';
+    img.referrerPolicy = 'no-referrer';
     img.alt = alt || '';
-    img.onerror = function () { if (a.parentNode) a.parentNode.removeChild(a); };
+
+    var tries = 0;
+    img.onload = function () { stats.ok++; };
+    img.onerror = function () {
+      tries++;
+      if (tries === 1) {
+        /* one clean retry - transient wifi is the common case on a road trip */
+        setTimeout(function () { img.src = src + (src.indexOf('?') < 0 ? '?r=1' : '&r=1'); }, 600);
+        return;
+      }
+      stats.fail++;
+      console.warn(TAG, 'image failed for', alt, '->', src);
+      if (a.parentNode) a.parentNode.removeChild(a);
+    };
+
     img.src = src;
     a.appendChild(img);
     sp.insertBefore(a, sp.firstChild);
@@ -168,6 +221,7 @@
   function boot() {
     var nodes = document.querySelectorAll('.sp');
     if (!nodes.length) return;
+    sweep();
     style();
 
     var cache = readCache();
@@ -180,6 +234,7 @@
       if (!b) return;
       var title = TITLES[norm(b.textContent)];
       if (!title) return;
+      stats.want++;
       var hit = cache[title];
       if (hit && hit.s && (now - hit.t) < TTL) {
         attach(sp, hit.s, hit.u, b.textContent);
@@ -188,26 +243,36 @@
       }
     });
 
-    if (!queue.length || !window.fetch) return;
+    if (!queue.length || !window.fetch) {
+      console.info(TAG, 'entries', stats.want, '| all from cache');
+      return;
+    }
 
     var i = 0;
     function next() {
       if (i >= queue.length) {
         if (dirty) { writeCache(cache); dirty = false; }
+        console.info(TAG, 'entries', stats.want, '| api done');
         return;
       }
       var job = queue[i++];
       fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(job.title))
         .then(function (r) { return r.ok ? r.json() : null; })
         .then(function (j) {
-          if (!j || !j.thumbnail || !j.thumbnail.source) return;
-          var src = sharpen(j.thumbnail.source);
+          if (!j || !j.thumbnail || !j.thumbnail.source) {
+            console.warn(TAG, 'no lead image for', job.title);
+            return;
+          }
+          /* 2. verbatim API URL - no width rewriting, nothing to 404 on */
+          var src = j.thumbnail.source;
           var page = (j.content_urls && j.content_urls.desktop && j.content_urls.desktop.page) || '';
           attach(job.sp, src, page, job.alt);
           cache[job.title] = { s: src, u: page, t: Date.now() };
           dirty = true;
         })
-        .catch(function () { /* text-only entry; no cache write */ })
+        .catch(function (e) {
+          console.warn(TAG, 'api fetch failed for', job.title, e && e.message);
+        })
         .then(next, next);
     }
     for (var p = 0; p < POOL; p++) next();
