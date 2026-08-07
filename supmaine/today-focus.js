@@ -10,6 +10,11 @@
    Standalone + self-injecting by design: revert = delete the one <script> tag
    in index.html. Styles are injected here so supmaine.css needs no version bump.
 
+   Note: day fragments emit .drive connector divs as direct children of #route,
+   BETWEEN sections (e.g. the tail of day-5-satsun.html). A connector describes
+   the travel out of the day above it, so it is hidden with that day — otherwise
+   orphan drive strips float at the top of the route.
+
    Edge cases handled: before the trip (nothing is past → no change); after the
    trip (everything is past → no change, whole trip stays browsable); a day with
    two dates (data-date + data-date2) counts as past only once BOTH have gone by.
@@ -44,7 +49,7 @@
     var s = document.createElement("style");
     s.id = "pf-style";
     s.textContent = [
-      "body.pf-hide .day.pf-past{display:none!important}",
+      "body.pf-hide .pf-past{display:none!important}",
       ".pf-bar{display:flex;justify-content:center;margin:2px 0 20px}",
       ".pf-btn{display:inline-flex;align-items:center;gap:9px;cursor:pointer;",
       "padding:12px 20px;border-radius:100px;background:var(--paper,#F7F8F4);",
@@ -93,6 +98,12 @@
       pastCount = past.length;
       past.forEach(function (d) {
         d.classList.add("pf-past");
+        // trailing connectors belong to the day above them
+        var n = d.nextElementSibling;
+        while (n && !n.classList.contains("day")) {
+          n.classList.add("pf-past");
+          n = n.nextElementSibling;
+        }
         var chip = document.querySelector('nav .chip[href="#' + d.id + '"]');
         if (chip) chip.classList.add("pf-done");
       });
