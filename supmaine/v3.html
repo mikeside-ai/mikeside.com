@@ -2,20 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<script>
-/* CANONICAL HOST GUARD — must stay first in <head> on every page in supmaine/.
-   The site answers on both supmaine.mikeside.com (canonical) and
-   mikeside.com/supmaine/. Keeping every page on the canonical host keeps
-   referrer-restricted assets working and bookmarks honest. */
-(function () {
-  var h = location.hostname;
-  if (h === 'mikeside.com' || h === 'www.mikeside.com') {
-    var p = location.pathname.replace(/^\/supmaine(\/|$)/, '/');
-    location.replace('https://supmaine.mikeside.com' + p + location.search + location.hash);
-  }
-})();
-</script>
-<link rel="canonical" href="https://supmaine.mikeside.com/v3.html">
+<!-- CANONICAL HOST GUARD REMOVED 2026-08-22 — supmaine.mikeside.com was retired
+     with the old Porkbun subdomain hosting. This site now lives only at
+     mikeside.com/supmaine/. NOTE: the Google Places key is still HTTP-referrer
+     restricted to supmaine.mikeside.com/*, so photo strips will not load until
+     that restriction is updated to mikeside.com/* in Google Cloud. -->
+<link rel="canonical" href="https://mikeside.com/supmaine/v3.html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0B1F2A">
 <title>Maine, in pictures · Aug 4–11, 2026</title>
