@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mikeside — stage left side of life</title>
-  <meta name="description" content="Mikeside — a personal project space. Tools and experiments built with AI, from the stage left side of life." />
+  <meta name="description" content="Mikeside — a personal project space. Setlist bots, tools and experiments built with AI, from the stage left side of life. Home of @SetlistLizard and @SetlistHound." />
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="/css/devlog.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,14 +14,20 @@
 
   <!--
     ============================================================
-    HIDDEN SECTIONS — 2026-07-27
-    Photos, Videos, Blog, the Encore placeholder, and the old
-    "Setlist / Site updates" section are commented out, not deleted.
-    The /photos/, /videos/ and /blog/ folders are all still in the
-    repo and still live at their URLs — they're just unlinked.
-    To bring any of them back: delete the comment wrapper around it
-    here AND its <li> in the nav/footer below. Nothing else needed.
-    Site updates was retired because the Dev Log replaces it.
+    FRONT PAGE, 2026-08-22 — the Set I / Set II / Encore project
+    listing moved HERE from /projects/ (that page now redirects).
+    Set I = current, Set II = future, Encore = archived. Move a
+    card between sections as a project ships or retires; do not
+    invent new sections — the show metaphor is the whole bit.
+
+    TICKER: the marquee under the header is fed by
+    /data/lizard-feed.json (hand-curated from @SetlistLizard).
+    Edit that file to change the crawl; js/main.js renders it and
+    computes the Dick's countdown from countdown.date.
+
+    HIDDEN SECTIONS — 2026-07-27: Photos, Videos, Blog stay
+    unlinked while empty; their folders are still live at their
+    URLs. Restore the <li>s here + the CSS switch in style.css.
     ============================================================
   -->
 
@@ -36,22 +42,33 @@
         <li><a href="/videos/">Videos</a></li>
         <li><a href="/blog/">Blog</a></li>
         -->
-        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/#set-i">Sets</a></li>
+        <li><a href="/#lot">The Bots</a></li>
+        <li><a href="/#devlog">Dev Log</a></li>
       </ul>
     </div>
   </header>
+
+  <!-- Venue-marquee crawl. Populated from /data/lizard-feed.json by js/main.js;
+       content is duplicated in JS for a seamless loop. Pauses on hover. -->
+  <div class="ticker" aria-label="Latest from Setlist Lizard on X">
+    <span class="ticker-badge">🦎 ON&nbsp;AIR</span>
+    <div class="ticker-viewport"><div class="ticker-track" id="ticker-track"></div></div>
+  </div>
 
   <main>
     <section class="hero container">
       <div class="hero-grid">
         <div>
-          <!-- Slogan, 2026-07-27. "Stage left" renders in jumpsuit yellow
-               (--jumpsuit in style.css), not the usual brick red — the em
-               carries class="jumpsuit" to opt into it. Send in the clones. -->
+          <span class="kicker">A Mikeside.AI production</span>
+          <!-- Slogan: "Stage left" renders in jumpsuit yellow (--jumpsuit in
+               style.css) via class="jumpsuit". Send in the clones. -->
           <h1><em class="jumpsuit">Stage&nbsp;left</em><br />side of life.</h1>
+          <p class="lede">Setlist bots, tools and experiments built with AI — chasing Phish, Billy Strings, and Dogs in a Pile, one song at a time.</p>
           <div class="cta-row">
-            <a class="btn primary" href="/projects/">Set I</a>
-            <!-- HIDDEN <a class="btn" href="/blog/">Liner notes</a> -->
+            <a class="btn primary" href="#set-i">Set I</a>
+            <a class="btn" href="https://x.com/SetlistLizard">🦎 @SetlistLizard</a>
+            <a class="btn" href="https://x.com/SetlistHound">🐶 @SetlistHound</a>
           </div>
         </div>
         <figure class="hero-photo">
@@ -60,51 +77,126 @@
       </div>
     </section>
 
+    <!-- Fishman donuts — navy room, red rings. They breathe like stage lights. -->
     <div class="groove" aria-hidden="true">
       <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
     </div>
 
-    <section class="block">
+    <section class="block" id="set-i">
       <div class="container">
         <div class="section-head">
           <span class="setno">Set I</span>
-          <h2>Projects</h2>
+          <h2>Current projects</h2>
+          <p>Live now. Each one has its own page under this site.</p>
         </div>
+        <!--
+          HOW PROJECT HOSTING WORKS:
+          Each project gets its own folder, e.g. /projects/budget-tool/index.html,
+          then a card here linking to it. Self-contained HTML apps drop right in.
+
+          PRIVATE PROJECTS: the tile is public but the destination requires
+          Google sign-in via Cloudflare Access (Zero Trust -> Access -> Apps).
+          Access protects the URL, NOT this repo — the repo is public, so never
+          commit an unredacted variant of a private project here.
+
+          RENAMES/moves history lives in the git log and in
+          /projects/setlistlizard_with/index.html (redirect stubs — keep them).
+        -->
         <div class="grid">
-          <a class="card" href="/projects/">
-            <h3>Projects</h3>
+          <a class="card" href="/projects/dashboard/">
+            <h3>Personal Dashboard</h3>
+            <span class="tag">&#128274; Private</span>
           </a>
-          <!-- HIDDEN
-          <a class="card" href="/photos/">
-            <h3>Photos</h3>
+          <a class="card" href="/setlistlizard-with/">
+            <h3>Setlist Lizard ... With</h3>
+            <span class="tag live">&#9679; Live</span>
           </a>
-          <a class="card" href="/videos/">
-            <h3>Videos</h3>
+          <a class="card" href="/projects/setlist-predictions/">
+            <h3>Setlist Prophet</h3>
+            <span class="tag live">&#9679; Live</span>
           </a>
-          -->
+          <a class="card" href="https://danglemystash.mikeside.com">
+            <h3>Dangle My Stash</h3>
+            <span class="tag">&#128274; Private</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- HIDDEN — Set II. Blog was its only real card (one post); Encore was a
-         placeholder. Restore this whole block when there's writing to point at.
-    <section class="block">
+    <section class="block" id="set-ii">
       <div class="container">
         <div class="section-head">
           <span class="setno">Set II</span>
-          <h2>Writing &amp; elsewhere</h2>
+          <h2>Future projects</h2>
+          <p>On deck. Nothing here is live yet &mdash; these are the ones with a name and a reason to exist.</p>
         </div>
         <div class="grid">
-          <a class="card" href="/blog/">
-            <h3>Blog</h3>
+          <a class="card" href="https://go-set.net/setlists/dogs-in-a-pile">
+            <h3>Setlist Hound</h3>
+            <p>Live setlists for Dogs in a Pile, posting as <strong>@SetlistHound</strong>.</p>
+            <span class="tag">Planned</span>
           </a>
           <div class="card">
-            <h3>Encore</h3>
+            <h3>&#128679; Next project loading&hellip;</h3>
+            <span class="tag">Coming soon</span>
           </div>
         </div>
       </div>
     </section>
-    -->
+
+    <section class="block" id="encore">
+      <div class="container">
+        <div class="section-head">
+          <span class="setno">Encore</span>
+          <h2>Archived projects</h2>
+          <p>Finished, retired, or superseded &mdash; kept online because they are still worth a look, and because the next version usually starts here.</p>
+        </div>
+        <div class="grid">
+          <a class="card" href="/supmaine/">
+            <h3>SUP Maine</h3>
+            <span class="tag">Archived</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="groove" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+
+    <section class="block" id="lot">
+      <div class="container">
+        <div class="section-head">
+          <span class="setno">The Lot</span>
+          <h2>Follow the bots</h2>
+          <p>Two accounts, one job: the setlist, as it happens.</p>
+        </div>
+        <div class="grid bots">
+          <a class="card bot" href="https://x.com/SetlistLizard">
+            <span class="bot-emoji">&#129422;</span>
+            <div>
+              <h3>Setlist Lizard</h3>
+              <p>Live Phish setlists on X, song by song &mdash; plus daily Dick&rsquo;s countdown lore. Data via Phish.net.</p>
+              <span class="tag live">&#9679; @SetlistLizard</span>
+            </div>
+          </a>
+          <a class="card bot" href="https://x.com/SetlistHound">
+            <span class="bot-emoji">&#128054;</span>
+            <div>
+              <h3>Setlist Hound</h3>
+              <p>Dogs in a Pile setlists, coming to a rail near you. In the yard warming up &mdash; first bark soon.</p>
+              <span class="tag">@SetlistHound</span>
+            </div>
+          </a>
+        </div>
+        <div class="rotation" aria-label="Bands in rotation">
+          <span class="rotation-label">In rotation</span>
+          <a class="chip" href="https://phish.net">Phish</a>
+          <a class="chip" href="https://www.billystrings.com">Billy Strings</a>
+          <a class="chip" href="https://go-set.net/setlists/dogs-in-a-pile">Dogs in a Pile</a>
+        </div>
+      </div>
+    </section>
 
     <section class="block" id="devlog">
       <div class="container">
@@ -120,37 +212,6 @@
         </div>
       </div>
     </section>
-
-    <!-- HIDDEN — old "Setlist / Site updates" section. Superseded by the Dev Log
-         above, which carries these same milestones plus everything since.
-         Kept here only so the original three entries aren't lost.
-    <div class="groove" aria-hidden="true">
-      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-    </div>
-
-    <section class="block" id="setlist">
-      <div class="container">
-        <div class="section-head">
-          <span class="setno">Setlist</span>
-          <h2>Site updates</h2>
-        </div>
-        <div class="post-list">
-          <div class="post-item">
-            <span>Setlist section added</span>
-            <time datetime="2026-07-22">7/22/26</time>
-          </div>
-          <div class="post-item">
-            <span>SUP Maine trip app live — <a href="https://supmaine.mikeside.com">supmaine.mikeside.com</a></span>
-            <time datetime="2026-07-21">7/21/26</time>
-          </div>
-          <div class="post-item">
-            <span>mikeside.com opens — domain, hosting, SSL</span>
-            <time datetime="2026-07-18">7/18/26</time>
-          </div>
-        </div>
-      </div>
-    </section>
-    -->
   </main>
 
   <footer>
@@ -162,7 +223,9 @@
         <a href="/videos/">Videos</a>
         <a href="/blog/">Blog</a>
         -->
-        <a href="/projects/">Projects</a>
+        <a href="/#set-i">Sets</a>
+        <a href="https://x.com/SetlistLizard">&#129422; Lizard</a>
+        <a href="https://x.com/SetlistHound">&#128054; Hound</a>
       </div>
     </div>
   </footer>
