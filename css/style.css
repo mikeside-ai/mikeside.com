@@ -206,3 +206,102 @@ footer {
   .nav ul.open { display: flex; }
   .nav-toggle { display: block; }
 }
+
+/* ============================================
+   2026-08-22 additions — front-page redesign
+   ticker marquee · bot cards · rotation chips
+   ============================================ */
+
+/* ---------- Lizard ticker (venue marquee) ---------- */
+.ticker {
+  display: flex; align-items: center; gap: 0;
+  background: #070b18;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.ticker-badge {
+  flex: none; padding: 0.45rem 0.9rem;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+  color: var(--jumpsuit); background: rgba(245, 197, 66, 0.08);
+  border-right: 1px solid var(--border); white-space: nowrap;
+}
+.ticker-viewport { flex: 1; overflow: hidden; }
+.ticker-track {
+  display: inline-flex; gap: 3rem; padding: 0.45rem 0;
+  white-space: nowrap; will-change: transform;
+  animation: ticker-scroll 80s linear infinite;
+}
+.ticker:hover .ticker-track { animation-play-state: paused; }
+.ticker-track a {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.78rem; letter-spacing: 0.04em;
+  color: var(--jumpsuit); opacity: 0.92; text-decoration: none;
+  text-shadow: 0 0 12px rgba(245, 197, 66, 0.35);
+}
+.ticker-track a:hover { opacity: 1; text-decoration: underline; }
+.ticker-track .tick-sep { color: var(--accent-soft); opacity: 0.7; }
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+}
+
+/* ---------- Hero stage-light glow ---------- */
+.hero {
+  background:
+    radial-gradient(60% 80% at 20% 0%, rgba(245, 197, 66, 0.06), transparent 60%),
+    radial-gradient(50% 70% at 85% 10%, rgba(193, 75, 52, 0.10), transparent 65%);
+}
+
+/* ---------- Fishman donuts breathe ---------- */
+.groove i { animation: donut-breathe 4s ease-in-out infinite; }
+.groove i:nth-child(3n)  { animation-delay: 1.2s; }
+.groove i:nth-child(3n+1){ animation-delay: 2.4s; }
+@keyframes donut-breathe {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50%      { opacity: 0.2;  transform: scale(0.82); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .groove i { animation: none; }
+}
+
+/* ---------- Live tag (soundboard green) ---------- */
+.card .tag.live {
+  color: #7fe08f; border-color: rgba(127, 224, 143, 0.35);
+  text-shadow: 0 0 10px rgba(127, 224, 143, 0.4);
+}
+
+/* ---------- Bot cards (The Lot) ---------- */
+.grid.bots { grid-template-columns: repeat(2, 1fr); }
+.card.bot { display: flex; gap: 1.1rem; align-items: flex-start; }
+.card.bot .bot-emoji {
+  font-size: 2.3rem; line-height: 1; flex: none;
+  filter: drop-shadow(0 0 14px rgba(245, 197, 66, 0.25));
+}
+.card.bot:hover { border-color: var(--jumpsuit); }
+.card.bot h3 { margin-bottom: 0.3rem; }
+
+/* ---------- In rotation chips ---------- */
+.rotation {
+  margin-top: 2rem; display: flex; align-items: center;
+  gap: 0.7rem; flex-wrap: wrap;
+}
+.rotation-label {
+  color: var(--muted); font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.14em;
+}
+.chip {
+  padding: 0.35rem 0.95rem; border-radius: 999px;
+  border: 1px solid var(--border); color: var(--text);
+  font-size: 0.85rem; font-weight: 600; background: var(--bg-soft);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.chip:hover { text-decoration: none; transform: translateY(-2px); border-color: var(--accent); }
+
+@media (max-width: 780px) {
+  .grid.bots { grid-template-columns: 1fr; }
+  .ticker-badge { padding: 0.45rem 0.6rem; }
+}
