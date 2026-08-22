@@ -307,3 +307,33 @@ footer {
   .ticker-track { padding: 0.85rem 0; animation-duration: 55s; }
   .ticker-track a { font-size: 1.05rem; }
 }
+
+/* ---------- Poster wall (The Lot), 2026-08-22 ---------- */
+.posters { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2.2rem; }
+.poster {
+  display: flex; flex-direction: column;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.poster:hover { transform: translateY(-4px) rotate(-0.4deg); border-color: var(--accent); box-shadow: 0 22px 44px -24px rgba(0,0,0,0.9); }
+.poster > a:first-child { display: block; overflow: hidden; }
+.poster img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 0.35s ease; }
+.poster:hover img { transform: scale(1.045); }
+.poster-meta { padding: 1rem 1.2rem 0.2rem; }
+.poster-meta h3 { font-size: 1.2rem; }
+.poster-meta h3 a { color: var(--text); }
+.poster-meta p { color: var(--muted); font-size: 0.9rem; margin-top: 0.2rem; }
+.poster-credit { display: block; padding: 0.55rem 1.2rem 0.9rem; font-size: 0.66rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); opacity: 0.75; }
+.poster-credit a { color: inherit; }
+a.poster-dogart {
+  display: flex; align-items: center; justify-content: center;
+  aspect-ratio: 4 / 3; font-size: 5.5rem; text-decoration: none;
+  transition: font-size 0.25s ease;
+  background:
+    radial-gradient(55% 70% at 50% 32%, rgba(245, 197, 66, 0.16), transparent 70%),
+    linear-gradient(160deg, #1a2248, #0d1330);
+}
+a.poster-dogart:hover { text-decoration: none; }
+.poster:hover a.poster-dogart { font-size: 6rem; }
+@media (max-width: 780px) { .posters { grid-template-columns: 1fr; } }
