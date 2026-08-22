@@ -2,16 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<script>
-/* CANONICAL HOST GUARD — must stay first in <head>. See index.html for why. */
-(function () {
-  var h = location.hostname;
-  if (h === 'mikeside.com' || h === 'www.mikeside.com') {
-    var p = location.pathname.replace(/^\/supmaine(\/|$)/, '/');
-    location.replace('https://supmaine.mikeside.com' + p + location.search + location.hash);
-  }
-})();
-</script>
+<!-- CANONICAL HOST GUARD REMOVED 2026-08-22 — supmaine.mikeside.com was retired
+     with the old Porkbun subdomain hosting. This site now lives only at
+     mikeside.com/supmaine/. NOTE: the Google Places key is still HTTP-referrer
+     restricted to supmaine.mikeside.com/*, so photo strips will not load until
+     that restriction is updated to mikeside.com/* in Google Cloud. -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carriage Roads — Thursday morning · turn by turn + live tracker</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -202,7 +197,7 @@ img,svg{max-width:100%}
 
   <div class="take warn">
     <h4>Three things that will break this if you don't do them tonight</h4>
-    <p><b>1. Allow location for supmaine.mikeside.com</b> — tap Start once tonight and accept the prompt. If you first hit it at post 6 with no signal, iOS may not surface the permission dialog cleanly.<br>
+    <p><b>1. Allow location for mikeside.com</b> — tap Start once tonight and accept the prompt. If you first hit it at post 6 with no signal, iOS may not surface the permission dialog cleanly.<br>
     <b>2. Press "Cache map for offline"</b> on hotel wifi, and don't clear browsing data before Thursday.<br>
     <b>3. Screenshot the signpost chain below.</b> A screenshot survives everything. This page won't reload out there.</p>
   </div>
