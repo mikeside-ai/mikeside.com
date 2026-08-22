@@ -1,164 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<!-- CANONICAL HOST GUARD REMOVED 2026-08-22 — supmaine.mikeside.com was retired
-     with the old Porkbun subdomain hosting. This site now lives only at
-     mikeside.com/supmaine/. NOTE: the Google Places key is still HTTP-referrer
-     restricted to supmaine.mikeside.com/*, so photo strips will not load until
-     that restriction is updated to mikeside.com/* in Google Cloud. -->
-<link rel="canonical" href="https://mikeside.com/supmaine/">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maine — Wedding + Coastal Adventure · Aug 4–11, 2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-<link rel="stylesheet" href="supmaine.css?v=20260724g">
-<style>
-/* v2 beta link — inline so supmaine.css needs no version bump */
-.v2beta{display:inline-flex;align-items:center;gap:9px;margin:16px 0 0;padding:10px 18px;
-  border-radius:100px;text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:11.5px;
-  letter-spacing:.15em;text-transform:uppercase;font-weight:600;color:#F3EFE7;
-  background:linear-gradient(100deg,#16293B,#254058);border:1px solid #FF7A2F;
-  box-shadow:0 0 0 rgba(255,122,47,.55),0 8px 24px -12px rgba(22,41,59,.5);
-  animation:v2glow 2.8s ease-in-out infinite;transition:transform .18s ease}
-.v2beta:hover{transform:translateY(-1px);background:linear-gradient(100deg,#FF7A2F,#C9452D);
-  border-color:#FF7A2F;animation-play-state:paused}
-.v2beta .dot{width:6px;height:6px;border-radius:50%;background:#FF7A2F;flex:0 0 auto;
-  box-shadow:0 0 8px 2px rgba(255,122,47,.9)}
-.v2beta .arrow{font-size:13px;opacity:.85}
-@keyframes v2glow{
-  0%,100%{box-shadow:0 0 0 0 rgba(255,122,47,.42),0 8px 24px -12px rgba(22,41,59,.5)}
-  50%{box-shadow:0 0 22px 3px rgba(255,122,47,.42),0 8px 24px -12px rgba(22,41,59,.5)}
-}
-@media (prefers-reduced-motion:reduce){.v2beta{animation:none;box-shadow:0 0 16px 2px rgba(255,122,47,.38)}}
-
-/* ---------- MOBILE OVERFLOW GUARDS (2026-08-03) ----------
-   Inline on purpose: index.html carries no ?v= and is always fetched fresh,
-   so this ships instantly with no cache-bust risk the night before travel.
-   Cause class: flex/grid children default to min-width:auto, so a long
-   unbreakable string (place name, address, mono time string, directions
-   chip) sets a min size the row cannot shrink below. Inside .card that gets
-   clipped by overflow:hidden (text simply cut off at the right edge, no
-   scrollbar); outside .card — the .drive connectors in #route — it widens
-   the whole document. Both read as "cut off on the right."
-   overflow-x:clip (NOT hidden) is the backstop: clip does not create a
-   scroll container, so the sticky day-nav keeps working. */
-html,body{overflow-x:clip}
-img,svg,video,iframe{max-width:100%}
-.stop,.stop>div,.flight>div,.wx-line,.wx-tip,.todo,.pk{min-width:0}
-.leg,.drive{flex-wrap:wrap}
-.leg a.leg-dir,.drive a.leg-dir{flex-wrap:wrap;min-width:0}
-.stop-name,.stop-note,.day-intro,.alt-head,.stay,.stay .addr,.todo-text,
-.flight .tm,.wx-meta,.opt-index a,footer span{overflow-wrap:anywhere}
-
-/* Acadia briefing chip (2026-08-03) */
-.crew a.acadia-chip{background:rgba(94,143,126,.16);border-color:var(--seaglass)}
-
-/* Lodging page chip (2026-08-04) */
-.crew a.stay-chip{background:rgba(228,215,184,.45);border-color:var(--sand)}
-
-/* Food page chip (2026-08-04) */
-.crew a.food-chip{background:rgba(201,69,45,.1);border-color:var(--buoy)}
-
-/* v3 photo album chip (2026-08-04) */
-.crew a.album-chip{background:rgba(22,41,59,.9);border-color:#16293B;color:#F3EFE7}
-
-/* Carriage roads chip (2026-08-05) */
-.crew a.carriage-chip{background:rgba(201,69,45,.16);border-color:var(--buoy);font-weight:600}
-
-/* Portland city page chip (2026-08-08) */
-.crew a.port-chip{background:rgba(22,41,59,.08);border-color:var(--ink);font-weight:600}
-
-/* ---------- FIELD GUIDE BUTTONS (2026-08-05) ----------
-   Promoted out of the .crew chip row so they read as real, thumb-sized
-   tap targets on a phone. Inline for the same reason as the overflow
-   guards above: index.html carries no ?v= and is always fetched fresh. */
-.fieldbtns{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 0}
-.fieldbtn{flex:1 1 210px;min-width:0;display:flex;align-items:center;gap:12px;
-  text-decoration:none;color:var(--ink);padding:13px 16px;border-radius:16px;
-  border:1.5px solid var(--ink);background:var(--paper);
-  box-shadow:0 6px 18px -14px rgba(22,41,59,.85);
-  transition:transform .15s ease,box-shadow .15s ease}
-.fieldbtn:hover{transform:translateY(-1px);box-shadow:0 11px 22px -14px rgba(22,41,59,.95)}
-.fieldbtn .ic{font-size:25px;line-height:1;flex:0 0 auto}
-.fieldbtn .tx{min-width:0}
-.fieldbtn .lb{display:block;font-family:"Bricolage Grotesque",serif;font-weight:800;
-  font-size:16.5px;line-height:1.1;letter-spacing:-.01em}
-.fieldbtn .sb{display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;
-  font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);
-  overflow-wrap:anywhere}
-.fieldbtn.wild{background:linear-gradient(180deg,#F7F8F4,#E7EDEA);border-color:#16293B}
-.fieldbtn.plant{background:rgba(94,143,126,.16);border-color:var(--seaglass)}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mikeside — stage left side of life</title>
+  <meta name="description" content="Mikeside — a personal project space. Tools and experiments built with AI, from the stage left side of life." />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/devlog.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-<div class="wrap">
 
-<header>
-  <div class="eyebrow">Tide chart · Aug 4 – 11, 2026</div>
-  <h1>MAINE<span class="thin">wedding weekend + coastal adventure</span></h1>
-  <div class="crew"><a href="#pack-vlad">Vlad</a><a href="#pack-allison">Allison</a><a href="#pack-sean">Sean</a><a href="reservation.html" target="_blank" rel="noopener">🚙 Jeep Wrangler</a><a class="acadia-chip" href="acadia.html">🌲 Acadia · Thursday</a><a class="carriage-chip" href="carriage.html">🚲 Carriage roads</a><a class="stay-chip" href="stays.html">🛏️ Stays</a><a class="food-chip" href="food.html">🍽 Food</a><a class="port-chip" href="portland.html">🏙 Portland &middot; e-bikes</a><a class="album-chip" href="v3.html">V3 (my wife 👍 👍)</a></div>
-  <div class="fieldbtns">
-    <a class="fieldbtn wild" href="wildlife.html"><span class="ic">🦭</span><span class="tx"><span class="lb">Wildlife</span><span class="sb">what to watch for, by day</span></span></a>
-    <a class="fieldbtn plant" href="plants.html"><span class="ic">🌿</span><span class="tx"><span class="lb">Plant life</span><span class="sb">what you're walking through</span></span></a>
-  </div>
-  <a class="v2beta" href="v2.html"><span class="dot"></span>SupMaine v2 Beta<span class="arrow">&rarr;</span></a>
-  <div class="countdown" id="countdown"><b id="cd-num">—</b><small id="cd-label">days to wheels-up</small></div>
-  <div class="weather-chip" id="weather-chip"><span class="wemoji">🌤️</span><span><b id="wx-temp">—</b> <small id="wx-label">checking Portland, ME…</small></span></div>
-  <div class="hero-img" style="height:240px;margin-top:18px"><svg class="fill" viewBox="0 0 900 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img">
-<rect width="900" height="300" fill="#DCE8E3"/>
-<circle cx="740" cy="70" r="38" fill="#E4D7B8"/>
-<path d="M0 210 Q120 195 240 210 T480 210 T720 210 T900 205 V300 H0 Z" fill="#5E8F7E"/>
-<path d="M0 225 Q150 212 300 225 T600 225 T900 220" stroke="#EFF2ED" stroke-width="3" fill="none" opacity=".5"/>
-<path d="M320 300 L360 215 L470 200 L560 230 L620 300 Z" fill="#16293B"/>
-<path d="M430 205 L445 90 L475 90 L490 205 Z" fill="#EFF2ED" stroke="#16293B" stroke-width="4"/>
-<rect x="440" y="70" width="40" height="24" fill="#C9452D"/>
-<path d="M444 70 L460 52 L476 70 Z" fill="#16293B"/>
-<rect x="447" y="96" width="26" height="14" fill="#16293B" opacity=".85"/>
-<path d="M440 82 L330 60 L330 96 Z" fill="#E4D7B8" opacity=".55"/>
-<path d="M480 82 L590 60 L590 96 Z" fill="#E4D7B8" opacity=".55"/>
-<path d="M120 84 q8 -10 16 0 q8 -10 16 0" stroke="#3E5266" stroke-width="3" fill="none"/>
-<path d="M180 60 q8 -10 16 0 q8 -10 16 0" stroke="#3E5266" stroke-width="3" fill="none"/>
-</svg><img class="fill lightboxable" loading="lazy" onerror="this.remove()" alt="Portland Head Light on the Cape Elizabeth coast" data-cap="Portland Head Light on the Cape Elizabeth coast" src="https://commons.wikimedia.org/wiki/Special:FilePath/Portland%20Headlight%201.JPG?width=900"></div>
-</header>
+  <!--
+    ============================================================
+    HIDDEN SECTIONS — 2026-07-27
+    Photos, Videos, Blog, the Encore placeholder, and the old
+    "Setlist / Site updates" section are commented out, not deleted.
+    The /photos/, /videos/ and /blog/ folders are all still in the
+    repo and still live at their URLs — they're just unlinked.
+    To bring any of them back: delete the comment wrapper around it
+    here AND its <li> in the nav/footer below. Nothing else needed.
+    Site updates was retired because the Dev Log replaces it.
+    ============================================================
+  -->
 
-<nav aria-label="Jump to day">
-  <div class="chips">
-    <a class="chip" href="#d1">Tue 4</a>
-    <a class="chip" href="#d2">Wed 5</a>
-    <a class="chip" href="#d3">Thu 6</a>
-    <a class="chip" href="#d4">Fri 7</a>
-    <a class="chip" href="#d5">Sat 8</a>
-    <a class="chip" href="#d5b">Sun 9</a>
-    <a class="chip" href="#d6">Mon 10</a>
-    <a class="chip" href="#d7">Tue 11</a>
-  </div>
-</nav>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="/">mike<span>side</span></a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <!-- HIDDEN
+        <li><a href="/photos/">Photos</a></li>
+        <li><a href="/videos/">Videos</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        -->
+        <li><a href="/projects/">Projects</a></li>
+      </ul>
+    </div>
+  </header>
 
-<div class="route" id="route"></div>
+  <main>
+    <section class="hero container">
+      <div class="hero-grid">
+        <div>
+          <!-- Slogan, 2026-07-27. "Stage left" renders in jumpsuit yellow
+               (--jumpsuit in style.css), not the usual brick red — the em
+               carries class="jumpsuit" to opt into it. Send in the clones. -->
+          <h1><em class="jumpsuit">Stage&nbsp;left</em><br />side of life.</h1>
+          <div class="cta-row">
+            <a class="btn primary" href="/projects/">Set I</a>
+            <!-- HIDDEN <a class="btn" href="/blog/">Liner notes</a> -->
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <img src="/img/mike-wall.jpg" alt="A man in profile before a plaster wall broken open to the brick beneath" />
+        </figure>
+      </div>
+    </section>
 
-<div class="map-section">
-  <h2>The whole route</h2>
-  <div id="route-map"></div>
-  <div class="map-legend" id="map-legend"></div>
-</div>
-<div class="todo-section" id="todo-section"></div>
-<div class="pack-section" id="pack-section"></div>
-<footer>
-  <span>Kravchuk / Moffett expedition</span>
-  <span>chart no. 2026-ME · archived at mikeside.com/supmaine</span>
-</footer>
+    <div class="groove" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
 
-</div>
-<script src="main.js?v=20260724g" defer></script>
-<script src="weather.js?v=20260723a" defer></script>
-<script src="tides.js?v=20260724a" defer></script>
-<script src="photos.js?v=20260726d" defer></script>
-<script src="directions.js?v=20260724c" defer></script>
-<script src="checkoff.js?v=20260804a" defer></script>
-<script src="thu-patch.js?v=20260804a" defer></script>
-<script src="today-focus.js?v=20260807b" defer></script>
+    <section class="block">
+      <div class="container">
+        <div class="section-head">
+          <span class="setno">Set I</span>
+          <h2>Projects</h2>
+        </div>
+        <div class="grid">
+          <a class="card" href="/projects/">
+            <h3>Projects</h3>
+          </a>
+          <!-- HIDDEN
+          <a class="card" href="/photos/">
+            <h3>Photos</h3>
+          </a>
+          <a class="card" href="/videos/">
+            <h3>Videos</h3>
+          </a>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- HIDDEN — Set II. Blog was its only real card (one post); Encore was a
+         placeholder. Restore this whole block when there's writing to point at.
+    <section class="block">
+      <div class="container">
+        <div class="section-head">
+          <span class="setno">Set II</span>
+          <h2>Writing &amp; elsewhere</h2>
+        </div>
+        <div class="grid">
+          <a class="card" href="/blog/">
+            <h3>Blog</h3>
+          </a>
+          <div class="card">
+            <h3>Encore</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <section class="block" id="devlog">
+      <div class="container">
+        <div class="section-head">
+          <span class="setno">Soundcheck</span>
+          <h2>Dev Log</h2>
+          <p>Patch notes and dev notes from every public project on the site. Tap a tile to filter.</p>
+        </div>
+        <div class="grid devlog-tiles" id="devlog-tiles"></div>
+        <div class="post-list" id="devlog-entries"></div>
+        <div class="devlog-more" id="devlog-more" hidden>
+          <button class="btn" type="button">More from the archive</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIDDEN — old "Setlist / Site updates" section. Superseded by the Dev Log
+         above, which carries these same milestones plus everything since.
+         Kept here only so the original three entries aren't lost.
+    <div class="groove" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+
+    <section class="block" id="setlist">
+      <div class="container">
+        <div class="section-head">
+          <span class="setno">Setlist</span>
+          <h2>Site updates</h2>
+        </div>
+        <div class="post-list">
+          <div class="post-item">
+            <span>Setlist section added</span>
+            <time datetime="2026-07-22">7/22/26</time>
+          </div>
+          <div class="post-item">
+            <span>SUP Maine trip app live — <a href="https://supmaine.mikeside.com">supmaine.mikeside.com</a></span>
+            <time datetime="2026-07-21">7/21/26</time>
+          </div>
+          <div class="post-item">
+            <span>mikeside.com opens — domain, hosting, SSL</span>
+            <time datetime="2026-07-18">7/18/26</time>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> mikeside.com</div>
+      <div>
+        <!-- HIDDEN
+        <a href="/photos/">Photos</a>
+        <a href="/videos/">Videos</a>
+        <a href="/blog/">Blog</a>
+        -->
+        <a href="/projects/">Projects</a>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/main.js"></script>
+  <script src="/js/devlog.js"></script>
 </body>
 </html>
