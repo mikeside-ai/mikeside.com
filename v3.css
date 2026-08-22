@@ -1,0 +1,99 @@
+/* SupMaine v3 — "The Album". Photo-first, near-textless itinerary.
+   Palette pulled from the trip's own materials: harbor water, wet granite,
+   sea fog, buoy paint, brass. Type reuses index.html's three faces on
+   purpose, so the fonts are already in cache when this page opens. */
+:root{
+  --tide:#0B1F2A;      /* deep harbor water — page ground */
+  --deep:#132C3C;      /* wet granite — tile ground */
+  --fog:#E9EFEB;       /* sea fog — primary type */
+  --mist:#8CA3B0;      /* secondary type */
+  --buoy:#E4572E;      /* buoy paint — the single accent */
+  --brass:#C9A227;     /* brass / rope — wedding day only */
+  --sand:#E4D7B8;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;overflow-x:clip;background:var(--tide)}
+body{
+  color:var(--fog);
+  font-family:'Instrument Sans',system-ui,-apple-system,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:64px;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--buoy);outline-offset:3px;border-radius:6px}
+
+/* ---- SIGNATURE: the rope spine. A hairline down the left edge of the
+   viewport that fills with buoy orange as the trip scrolls past. It turns
+   the scrollbar into a progress reading of the week itself. ---- */
+#rope{position:fixed;left:0;top:0;bottom:0;width:3px;background:rgba(233,239,235,.1);z-index:40}
+#rope i{display:block;width:100%;height:0;background:linear-gradient(180deg,var(--brass),var(--buoy));
+  box-shadow:0 0 10px rgba(228,87,46,.55)}
+
+/* ---- top rail: eight numerals, nothing else ---- */
+header{position:sticky;top:0;z-index:30;background:rgba(11,31,42,.86);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(233,239,235,.09)}
+#rail{display:flex;gap:4px;justify-content:center;padding:9px 12px;max-width:720px;margin:0 auto}
+#rail a{flex:1;max-width:52px;text-align:center;padding:7px 0;border-radius:9px;
+  font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--mist);
+  border:1px solid transparent;transition:color .15s,background .15s}
+#rail a.now{color:var(--tide);background:var(--buoy);font-weight:700}
+#rail a:hover{color:var(--fog);background:rgba(233,239,235,.08)}
+
+main{max-width:720px;margin:0 auto;padding:0 12px}
+
+/* ---- day hero ---- */
+.day{scroll-margin-top:60px;padding-top:26px}
+.hero{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:16/10;background:var(--deep)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  opacity:0;transition:opacity .5s ease}
+.hero img.in{opacity:1}
+.hero .scrim{position:absolute;inset:0;
+  background:linear-gradient(0deg,rgba(11,31,42,.94) 4%,rgba(11,31,42,.36) 42%,rgba(11,31,42,.06) 78%)}
+.hero .plate{position:absolute;left:20px;right:20px;bottom:16px;display:flex;align-items:flex-end;gap:14px}
+.dow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--buoy);font-weight:600}
+.num{font-family:'Bricolage Grotesque','Instrument Sans',sans-serif;font-weight:800;
+  font-size:clamp(40px,13vw,68px);line-height:.84;letter-spacing:-.03em;color:var(--fog)}
+.mon{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--fog);opacity:.75;margin-bottom:6px}
+.hed{font-size:14px;font-weight:500;color:var(--fog);opacity:.9;padding:11px 4px 0;line-height:1.35}
+.day.wed .dow{color:var(--brass)}
+.day.wed .hero{box-shadow:0 0 0 2px var(--brass)}
+
+/* ---- the tile grid: two squares across, photos wherever a photo exists ---- */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
+.t{position:relative;aspect-ratio:1;border-radius:17px;overflow:hidden;
+  background:linear-gradient(150deg,#1B394C,var(--deep));display:block;
+  border:1px solid rgba(233,239,235,.07);transition:transform .16s ease}
+.t:active{transform:scale(.975)}
+.t.wide{grid-column:1/-1;aspect-ratio:2.1}
+.t img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  opacity:0;transition:opacity .45s ease}
+.t img.in{opacity:1}
+.t .g,.hero .g{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:46px;line-height:1;opacity:.92}
+.t .veil{position:absolute;inset:0;
+  background:linear-gradient(0deg,rgba(11,31,42,.9) 2%,rgba(11,31,42,.3) 46%,transparent 72%)}
+.t .tm{position:absolute;top:9px;left:9px;padding:3px 8px;border-radius:100px;
+  font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.04em;
+  color:var(--fog);background:rgba(11,31,42,.6);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.t .lb{position:absolute;left:11px;right:11px;bottom:10px;font-size:12.5px;font-weight:600;
+  line-height:1.25;letter-spacing:-.01em;overflow-wrap:anywhere}
+.t .pin{position:absolute;top:9px;right:9px;font-size:11px;opacity:.8}
+.t.key{border-color:rgba(228,87,46,.55)}
+.t.key .tm{background:var(--buoy);color:#12222C}
+
+footer{max-width:720px;margin:34px auto 0;padding:0 16px;display:flex;justify-content:space-between;
+  font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--mist)}
+footer a{border-bottom:1px solid rgba(140,163,176,.4)}
+
+@media (max-width:360px){.grid{gap:7px}.t .lb{font-size:11.5px}}
+@media (prefers-reduced-motion:reduce){
+  .hero img,.t img{transition:none;opacity:1}
+  #rope i{box-shadow:none}
+  .t:active{transform:none}
+}

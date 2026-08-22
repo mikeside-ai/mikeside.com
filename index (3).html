@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Mikeside</title>
+  <meta name="description" content="Tools, experiments, and apps built with Claude and other AI." />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="/">mike<span>side</span></a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <!-- HIDDEN 2026-07-27 — Photos, Videos and Blog are unlinked site-wide
+             while they're empty. Restore here and on the front page together.
+        <li><a href="/photos/">Photos</a></li>
+        <li><a href="/videos/">Videos</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        -->
+        <li><a href="/projects/">Projects</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-top:none;">
+      <div class="container">
+        <div class="section-head">
+          <span class="setno">Set I</span>
+          <h2>Current projects</h2>
+          <p>Tools, experiments, and apps built with Claude and other AI — each one lives at its own page under this site.</p>
+        </div>
+        <!--
+          HOW PROJECT HOSTING WORKS:
+          Each project gets its own folder, e.g. /projects/budget-tool/index.html
+          Then add a card below linking to it. Self-contained HTML apps drop right in.
+
+          PRIVATE PROJECTS:
+          The tile is public but the destination requires Google sign-in, enforced by
+          Cloudflare Access. mikeside.com is proxied through Cloudflare, so Access can
+          gate either a whole subdomain (Dangle My Stash) or a single path on this site
+          (Personal Dashboard -> mikeside.com/projects/dashboard/*). Configure it under
+          Zero Trust -> Access -> Applications.
+
+          IMPORTANT: Cloudflare Access protects the URL, NOT this repository. This repo
+          is public, so anything committed here is readable on GitHub by anyone whether
+          or not the page it lives on is gated. Never commit an unredacted variant of a
+          private project into this repo — publish only the redacted build.
+
+          RENAMES:
+          "Phish Live Setlist" became "Setlist Lizard ... With" and moved from
+          /projects/setlist/ to /projects/setlistlizard_with/. The old folder still
+          holds redirect stubs so shared links keep working — don't delete it.
+
+          Then on 2026-07-27 it moved again, up to the site root: /setlistlizard-with/.
+          It outgrew being one card in a list, and the short address reads better.
+          A subdomain was tried first and abandoned — setlistlizard.with.mikeside.com
+          is two levels deep, which Cloudflare's free Universal SSL does not cover, and
+          Porkbun's static hosting rejects hyphens in a subdomain name, so
+          setlistlizard-with.mikeside.com could not be mapped either. See
+          /projects/setlistlizard_with/index.html for the stub left behind. The bot
+          diagram deliberately stayed at its old address.
+
+          Also 2026-07-27: "Phish Setlist Predictions" was renamed "Setlist Prophet"
+          (same folder, /projects/setlist-predictions/). Its models are named
+          Forbin v5–v10. The v1 site design is archived at
+          /projects/setlist-predictions/v1/.
+        -->
+        <div class="grid">
+          <a class="card" href="/projects/dashboard/">
+            <h3>Personal Dashboard</h3>
+            <span class="tag">&#128274; Private</span>
+          </a>
+          <a class="card" href="/setlistlizard-with/">
+            <h3>Setlist Lizard ... With</h3>
+            <span class="tag">Live</span>
+          </a>
+          <a class="card" href="/projects/setlist-predictions/">
+            <h3>Setlist Prophet</h3>
+            <span class="tag">Live</span>
+          </a>
+          <!-- HIDDEN 2026-07-27 (Vlad, until further notice) — the Phish Setlist Bot
+               integration diagram is unlisted. The page still exists at
+               /projects/setlistlizard_with/integration-diagram.html and now carries
+               robots noindex; the "how the bot works" link in the Setlist Lizard
+               footer was removed in the same change. Restore all three together.
+          <a class="card" href="/projects/setlistlizard_with/integration-diagram.html">
+            <h3>Phish Setlist Bot</h3>
+            <span class="tag">Diagram</span>
+          </a>
+          -->
+          <a class="card" href="https://danglemystash.mikeside.com">
+            <h3>Dangle My Stash</h3>
+            <span class="tag">&#128274; Private</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="container">
+        <div class="section-head">
+          <span class="setno">Set II</span>
+          <h2>Future projects</h2>
+          <p>On deck. Nothing here is live yet &mdash; these are the ones with a name and a reason to exist.</p>
+        </div>
+        <div class="grid">
+          <a class="card" href="https://go-set.net/setlists/dogs-in-a-pile">
+            <h3>Setlist Hound</h3>
+            <span class="tag">Planned</span>
+          </a>
+          <div class="card">
+            <h3>&#128679; Next project loading&hellip;</h3>
+            <span class="tag">Coming soon</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="container">
+        <div class="section-head">
+          <span class="setno">Encore</span>
+          <h2>Archived projects</h2>
+          <p>Finished, retired, or superseded &mdash; kept online because they are still worth a look, and because the next version usually starts here.</p>
+        </div>
+        <div class="grid">
+          <a class="card" href="/supmaine/">
+            <h3>SUP Maine</h3>
+            <span class="tag">Archived</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> mikeside.com</div>
+      <div><a href="/">Home</a></div>
+    </div>
+  </footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>

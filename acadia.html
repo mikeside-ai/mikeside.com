@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- CANONICAL HOST GUARD REMOVED 2026-08-22 — supmaine.mikeside.com was retired
+     with the old Porkbun subdomain hosting. This site now lives only at
+     mikeside.com/supmaine/. NOTE: the Google Places key is still HTTP-referrer
+     restricted to supmaine.mikeside.com/*, so photo strips will not load until
+     that restriction is updated to mikeside.com/* in Google Cloud. -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acadia — Thursday Aug 6 · routes, places, photo ops</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="supmaine.css?v=20260724g">
+<style>
+html,body{overflow-x:clip}
+img,svg{max-width:100%}
+
+.back{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--seaglass);text-decoration:none;font-weight:600;margin-bottom:16px}
+.back:hover{color:var(--buoy)}
+.sub{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-soft);margin-top:14px;line-height:1.65}
+
+.jump{display:flex;gap:7px;flex-wrap:wrap;margin:20px 0 0}
+.jump a{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;text-decoration:none;
+  color:var(--ink);border:1.5px solid var(--line);border-radius:999px;padding:6px 13px;background:var(--paper)}
+.jump a:hover{border-color:var(--seaglass);color:var(--seaglass)}
+.jump a.crjump{background:rgba(201,69,45,.13);border-color:var(--buoy);color:var(--buoy)}
+.jump a.crjump:hover{background:var(--buoy);color:#fff;border-color:var(--buoy)}
+
+.alarm{background:var(--buoy);color:#fff;border-radius:var(--radius);padding:17px 19px;margin:26px 0 12px}
+.alarm .k{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;opacity:.85}
+.alarm h3{font-family:"Bricolage Grotesque",serif;font-weight:800;font-size:20px;margin:5px 0 8px;line-height:1.2}
+.alarm p{font-size:14px;line-height:1.55;margin-bottom:9px}
+.alarm p:last-child{margin-bottom:0}
+.alarm a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.alarm b{color:var(--sand)}
+
+.sec{margin-top:46px;scroll-margin-top:20px}
+.sec>h2{font-family:"Bricolage Grotesque",serif;font-weight:800;font-size:25px;display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.sec>h2::after{content:"";flex:1;border-top:2px solid var(--ink)}
+.lede{font-size:14px;color:var(--ink-soft);line-height:1.65;margin-bottom:18px}
+.lede b{color:var(--ink)}
+
+.take{background:var(--paper);border:1.5px solid var(--line);border-left:5px solid var(--seaglass);
+  border-radius:12px;padding:15px 17px;margin-bottom:11px}
+.take h4{font-family:"Bricolage Grotesque",serif;font-size:16.5px;font-weight:700;margin-bottom:5px}
+.take p{font-size:14px;line-height:1.6;color:var(--ink-soft)}
+.take p b{color:var(--ink)}
+.take.warn{border-left-color:var(--buoy)}
+.take.warn h4::before{content:"⚠ ";color:var(--buoy)}
+
+.pl{background:var(--paper);border:1.5px solid var(--line);border-radius:var(--radius);
+  margin-bottom:14px;overflow:hidden}
+.pl.star{border-color:var(--buoy)}
+.shot{width:100%;height:180px;object-fit:cover;display:block;border-bottom:1.5px solid var(--line)}
+.pl-in{padding:15px 17px}
+.pl-top{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:9px}
+.pl-nm{font-family:"Bricolage Grotesque",serif;font-weight:700;font-size:18.5px;line-height:1.15;min-width:0;overflow-wrap:anywhere}
+.pl-nm a{color:inherit;text-decoration:none;border-bottom:2px solid var(--seaglass)}
+.pl-nm a:hover{color:var(--seaglass)}
+.pin{font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;letter-spacing:.09em;
+  text-transform:uppercase;border-radius:5px;padding:3px 8px;background:rgba(94,143,126,.16);color:var(--seaglass)}
+.pin.b{background:rgba(201,69,45,.13);color:var(--buoy)}
+.pin.s{background:var(--sand);color:var(--ink)}
+.meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-bottom:11px}
+@media(min-width:560px){.meta{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.meta div{background:var(--fog);border:1px solid var(--line);border-radius:8px;padding:6px 9px;min-width:0}
+.meta .lb{display:block;font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-soft);margin-bottom:1px}
+.meta .vl{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:600;overflow-wrap:anywhere}
+.pl p{font-size:14px;line-height:1.62;color:var(--ink-soft);margin-bottom:8px;overflow-wrap:anywhere}
+.pl p:last-child{margin-bottom:0}
+.pl p b{color:var(--ink)}
+.pl a{color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--seaglass)}
+.pl a:hover{color:var(--seaglass)}
+.inopt{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--seaglass);font-weight:600;
+  border-top:1px dashed var(--line);padding-top:9px;margin-top:11px;letter-spacing:.03em;line-height:1.5}
+
+/* signpost chain + numbered steps */
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin:2px 0 6px}
+.chain b{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:700;min-width:31px;height:31px;
+  padding:0 6px;border-radius:16px;background:var(--ink);color:var(--fog);display:flex;align-items:center;
+  justify-content:center;flex:0 0 auto}
+.chain b.hi{background:var(--buoy)}
+.chain b.gd{background:var(--seaglass)}
+.chain i{color:var(--ink-soft);font-style:normal;font-size:13px;flex:0 0 auto}
+.ckey{font-family:"IBM Plex Mono",monospace;font-size:9.5px;color:var(--ink-soft);letter-spacing:.05em;
+  margin-bottom:12px;line-height:1.6}
+.ckey em{font-style:normal;color:var(--buoy);font-weight:700}
+.ckey s{text-decoration:none;color:var(--seaglass);font-weight:700}
+.steps{counter-reset:st;margin:4px 0 0}
+.steps li{list-style:none;position:relative;padding:0 0 12px 31px;font-size:13.5px;line-height:1.6;
+  color:var(--ink-soft);overflow-wrap:anywhere}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{counter-increment:st;content:counter(st);position:absolute;left:0;top:1px;width:22px;height:22px;
+  border-radius:50%;border:1.5px solid var(--seaglass);color:var(--seaglass);font-family:"IBM Plex Mono",monospace;
+  font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.steps li b{color:var(--ink)}
+.steps li a{color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--seaglass)}
+
+.po{border-bottom:1px dotted var(--line);padding:14px 0}
+.po:last-child{border-bottom:none}
+.po h4{font-family:"Bricolage Grotesque",serif;font-size:16.5px;font-weight:700;margin-bottom:4px}
+.po .clock{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--buoy);font-weight:600;display:block;margin-bottom:3px}
+.po p{font-size:13.5px;line-height:1.62;color:var(--ink-soft)}
+.po p b{color:var(--ink)}
+
+.ol{display:flex;gap:11px;align-items:flex-start;padding:12px 0;border-bottom:1px dotted var(--line)}
+.ol:last-child{border-bottom:none}
+.ol .let{font-family:"Bricolage Grotesque",serif;font-weight:800;font-size:22px;color:var(--buoy);
+  flex:0 0 26px;line-height:1.1}
+.ol div:last-child{min-width:0;font-size:13.5px;line-height:1.55;color:var(--ink-soft);overflow-wrap:anywhere}
+.ol b{color:var(--ink)}
+.ol .tm{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--seaglass);font-weight:600;display:block;margin-top:3px}
+
+.tl{margin:4px 0 0}
+.tl-row{display:flex;gap:12px;padding:9px 2px;border-bottom:1px dotted var(--line)}
+.tl-row:last-child{border-bottom:none}
+.tl-t{flex:0 0 60px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--ink-soft);line-height:1.45}
+.tl-b{min-width:0;font-size:13.5px;line-height:1.55;color:var(--ink-soft);overflow-wrap:anywhere}
+.tl-b b{color:var(--ink)}
+.tl-row.key{background:rgba(201,69,45,.08);border-radius:8px;padding-left:8px;padding-right:8px;border-bottom:none;margin:2px 0}
+.tl-row.key .tl-t{color:var(--buoy)}
+
+.fn{display:flex;gap:11px;padding:10px 0;border-bottom:1px dotted var(--line);font-size:13.5px;line-height:1.55;color:var(--ink-soft)}
+.fn:last-child{border-bottom:none}
+.fn span:first-child{flex:0 0 auto;font-size:17px}
+.fn b{color:var(--ink)}
+.fn div{min-width:0;overflow-wrap:anywhere}
+.fn a,.po a,.take a{color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--seaglass)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header style="padding:32px 0 22px">
+  <a class="back" href="index.html">← back to the itinerary</a>
+  <div class="eyebrow">Thursday · August 6, 2026 · Mount Desert Island</div>
+  <h1>ACADIA<span class="thin">everything worth your one day, sorted</span></h1>
+  <p class="sub">Wake in Union, 2 hrs west · sleep in Freeport, 3 hrs south<br>
+  Sunrise 5:29a · low tide 10:48a · <b>high tide 5:05p</b> · sunset ~7:55p<br>
+  <b>Your only day on the island. There is no second window.</b></p>
+  <div class="jump">
+    <a class="crjump" href="carriage.html">🚲 Carriage roads · full page ↗</a>
+    <a href="#clock">🕒 The clock</a>
+    <a href="#do">🥾 Things to do</a>
+    <a href="#routes">🧭 Routes, step by step</a>
+    <a href="#see">🗻 Places to see</a>
+    <a href="#photo">📷 Photo ops</a>
+    <a href="#eat">🦞 Eat</a>
+    <a href="#opts">🗺 The five options</a>
+    <a href="#notes">📌 Field notes</a>
+  </div>
+</header>
+
+<div class="alarm">
+  <div class="k">Tonight, in Union — before you drive anywhere</div>
+  <h3>✅ Cadillac slot is booked. Now get it off the internet.</h3>
+  <p><b>There is no cell signal on the summit road</b> and rangers scan at the gate. A reservation that only exists inside the <a href="https://www.recreation.gov/timed-entry/10086931" target="_blank" rel="noopener">recreation.gov</a> app is a reservation you cannot show. <b>Screenshot the QR tonight on wifi and put a copy on a second phone</b> — one dead battery should not cost all three of you the summit.</p>
+  <p><b>You are holding two windows — 4:00p and 5:00p.</b> You can only ever use one; the reservation is per vehicle and you have one Jeep. <b>Pick one tonight and cancel the other on recreation.gov</b> so it goes back in the pool for someone else's only day on the island. Which one, and why, is in <a href="#clock">the clock</a>.</p>
+  <p><b>Whichever you keep, arrive inside it.</b> Entry is checked at the gate on the way in only; once you are through you can stay as long as you like, including past sunset. Turning up late is a forfeited ticket, and there is no grace period.</p>
+  <p><b>Screenshot these too, same sitting:</b> the park entrance pass QR (<a href="pass.html">pass page</a> — a separate thing from this reservation, and cyclists need it as well), the bike reservation, and the Harraseeket address.</p>
+  <p><b>The wind layer lives in the Jeep, not the hotel.</b> The summit runs ten to fifteen degrees cooler than sea level and a great deal windier. Nobody wants to walk back down to the lot for a jacket.</p>
+</div>
+
+<div class="take warn">
+  <h4>If the day slips and you miss your window</h4>
+  <p><b>Go late.</b> The reservation covers daytime entry only — roughly 9:00a–4:30p — and outside that window the road is open to anyone with no ticket at all. A 4:45p drive-up needs no ticket and puts you on the summit in the best light of the day. Confirm the cutoff on recreation.gov before betting on it; the hours have shifted between seasons.<br>
+  <b>Walk up.</b> The reservation is for <i>vehicles</i>. On foot the North Ridge Trail is open any time — 4.4 mi round trip, ~1,100 ft, open granite the whole way. That's a 2½-hour commitment, so it's a different day rather than a swap — but the summit is never actually closed to you.</p>
+</div>
+
+<div class="take">
+  <h4>The short version of my advice</h4>
+  <p><b>Keep Option B</b> — the bikes are booked and the carriage roads are the one thing Acadia has that no other park in the country does. Three amendments: <b>Thunder Hole has to land between 3:15 and 4:15</b> (high tide is 5:05p — that's the only hour all week it actually booms), so build the afternoon around your booked summit time and that window; <b>decide the ride length at the shop</b>; and <b>name the Beehive bail-out in the parking lot</b>, not on the rungs.</p>
+</div>
+
+<!-- ============ THE CLOCK ============ -->
+<div class="sec" id="clock">
+  <h2>🕒 The clock</h2>
+  <p class="lede">Approximate times for the booked day — Option B, bikes at 9:00a. <b>Everything before 1:00p is fixed by the bike return</b> and everything after it is fixed by the tide and your summit window. Treat these as a spine, not a schedule: if you are 20 minutes down at post 8, you take the time out of Otter Cliff, not out of the Beehive.</p>
+
+  <div class="take warn">
+    <h4>Two summit windows booked. Keep the 5:00, release the 4:00.</h4>
+    <p><b>The 5:00 is the better fit and it is not close.</b> Three reasons. The afternoon currently has no slack anywhere — bike return at 1:00, an unknown 15 minutes in the Sand Beach lot, and a one-way committed climb you cannot hurry; the 5:00 gives you an hour of margin the 4:00 does not. <b>Thunder Hole lands at 3:45 instead of 3:20</b>, which is 80 minutes before the 5:05p high rather than 105 — materially more likely to actually boom, and that stop is worthless otherwise. And 5:00–6:00 is the good half of the summit's best light, with sunset not until 7:55.</p>
+    <p><b>The cost is real: you reach Freeport around 10:00p instead of 9:00p</b>, after a 16.5-mile ride and a cliff climb. If that lands badly — or if anyone wants a proper sit-down dinner in Camden rather than a fast one — take the 4:00 and swap the Beehive for Gorham Mountain. <b>What the summit time really decides is which mountain you climb.</b></p>
+  </div>
+
+  <div class="pl star">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm">Thursday on the 5:00 summit</span><span class="pin b">recommended</span></div>
+      <div class="tl">
+      <div class="tl-row"><div class="tl-t">5:45a</div><div class="tl-b">Up at Come Spring Farm. Load the Jeep tonight, not now.</div></div>
+      <div class="tl-row"><div class="tl-t">6:45a</div><div class="tl-b"><b>Roll.</b> Two hours to Bar Harbor. Check the marine layer, not the inland forecast.</div></div>
+      <div class="tl-row"><div class="tl-t">8:45a</div><div class="tl-b">Into town. Park near Cottage St and walk.</div></div>
+      <div class="tl-row key"><div class="tl-t">9:00a</div><div class="tl-b"><b>Bar Harbor Bicycle Shop, 141 Cottage St.</b> Fitting, waivers already signed, ask the four questions.</div></div>
+      <div class="tl-row"><div class="tl-t">9:20a</div><div class="tl-b">Rolling west on ME-233. 2.8 mi of pavement, the only traffic of the day.</div></div>
+      <div class="tl-row"><div class="tl-t">9:40a</div><div class="tl-b"><b>Post 6, Eagle Lake Bridge.</b> Gravel starts. Follow the arrow for post 7.</div></div>
+      <div class="tl-row"><div class="tl-t">10:15a</div><div class="tl-b">Bubble Pond. Ten minutes on the rocks — quietest place on the loop.</div></div>
+      <div class="tl-row"><div class="tl-t">11:00a</div><div class="tl-b"><b>Jordan Pond House, post 15.</b> Water, toilets, walk to the north shore. No wait list.</div></div>
+      <div class="tl-row"><div class="tl-t">11:25a</div><div class="tl-b">Back on the bikes. The climb to 10 and 8.</div></div>
+      <div class="tl-row"><div class="tl-t">11:55a</div><div class="tl-b">Post 8, high point. Everything from here is downhill.</div></div>
+      <div class="tl-row"><div class="tl-t">12:45p</div><div class="tl-b">Back at the shop with 15 minutes in hand.</div></div>
+      <div class="tl-row key"><div class="tl-t">1:00p</div><div class="tl-b"><b>Bikes returned.</b> Lunch grabbed as a bag and eaten in the Jeep — this is what buys the afternoon.</div></div>
+      <div class="tl-row"><div class="tl-t">1:20p</div><div class="tl-b">Drive to Sand Beach. <b>Budget 15 minutes for the lot</b>, not zero.</div></div>
+      <div class="tl-row key"><div class="tl-t">1:45p</div><div class="tl-b"><b>Beehive.</b> Have the rungs conversation in the parking lot. Down via The Bowl.</div></div>
+      <div class="tl-row"><div class="tl-t">3:15p</div><div class="tl-b">Off the mountain, back at the Jeep.</div></div>
+      <div class="tl-row key"><div class="tl-t">3:45p</div><div class="tl-b"><b>Thunder Hole.</b> Eighty minutes before the 5:05p high — the best window all week.</div></div>
+      <div class="tl-row"><div class="tl-t">4:10p</div><div class="tl-b">South on Park Loop: Monument Cove, Otter Cliff. Both are 5-minute stops.</div></div>
+      <div class="tl-row"><div class="tl-t">4:45p</div><div class="tl-b">Cadillac Summit Road gate. Screenshot QR out and ready before you reach the ranger.</div></div>
+      <div class="tl-row key"><div class="tl-t">5:00p</div><div class="tl-b"><b>Summit.</b> Your window. Wind layer out of the Jeep, walk fifty yards off the loop.</div></div>
+      <div class="tl-row"><div class="tl-t">6:00p</div><div class="tl-b">Down and off the island by 6:30.</div></div>
+      <div class="tl-row"><div class="tl-t">7:45p</div><div class="tl-b">Dinner in Camden or Rockland. <b>Don’t book it</b> — you will not know your real ETA.</div></div>
+      <div class="tl-row"><div class="tl-t">10:00p</div><div class="tl-b">Harraseeket, Freeport. Late, and the price of the 5:00.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pl">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm">If you keep the 4:00 instead</span><span class="pin">home an hour earlier</span></div>
+      <p>Identical up to 1:20p. From there the hour has to come out of something, and the honest place to take it is the Beehive — trying to fit the rungs in before a 4:00 gate is exactly how people end up rushing an exposed climb.</p>
+      <div class="tl">
+      <div class="tl-row key"><div class="tl-t">1:45p</div><div class="tl-b"><b>Gorham Mountain instead of the Beehive</b> — 1 hour, not 2, and no rungs.</div></div>
+      <div class="tl-row"><div class="tl-t">2:45p</div><div class="tl-b">Off the ridge.</div></div>
+      <div class="tl-row"><div class="tl-t">3:15p</div><div class="tl-b">Thunder Hole, at the early edge of the tide window.</div></div>
+      <div class="tl-row"><div class="tl-t">3:45p</div><div class="tl-b">Summit road gate.</div></div>
+      <div class="tl-row key"><div class="tl-t">4:00p</div><div class="tl-b"><b>Summit.</b></div></div>
+      <div class="tl-row"><div class="tl-t">5:30p</div><div class="tl-b">Off the island · dinner ~6:45p · <b>Freeport by ~9:00p</b>.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ THINGS TO DO ============ -->
+<div class="sec" id="do">
+  <h2>🥾 Things to do</h2>
+  <p class="lede">Ranked by what you'd regret missing. <b>Nothing here takes more than two hours</b>, which is the whole trick to a one-day island — pick three, not six. Turn-by-turn for all of it is in <a href="#routes" style="color:var(--ink);border-bottom:1.5px solid var(--seaglass);text-decoration:none">Routes</a>.</p>
+
+  <div class="pl star">
+    <img class="shot" loading="lazy" onerror="this.remove()" alt="Duck Brook Bridge, Acadia carriage roads" src="https://commons.wikimedia.org/wiki/Special:FilePath/Acadia%20National%20Park%20Duck%20Brook%20Bridge.jpg?width=900">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm">Ride the carriage roads</span><span class="pin">✅ booked</span><span class="pin s">the reason to come</span></div>
+      <div class="meta">
+        <div><span class="lb">Time</span><span class="vl">3–4 hrs</span></div>
+        <div><span class="lb">Distance</span><span class="vl">8 or 16.5 mi</span></div>
+        <div><span class="lb">Effort</span><span class="vl">easy on e-bike</span></div>
+      </div>
+      <p>Forty-five miles of crushed stone that Rockefeller built between 1913 and 1940, with seventeen stone bridges and not one car. Gravel is smooth enough for any bike; the motor turns the 350-ft climb out of town into nothing. <b>Class 1 e-bikes only</b> — Class 2 and 3 are banned — 20 mph limit, and you yield to walkers, horses and carriages. Don't ring a bell at a horse.</p>
+      <p><b>Good news on the numbers.</b> The Thursday card calls the long ride "~21 mi." Measured against the park's own route lengths it's <b>closer to 16.5</b> — the Tri-Lakes Loop is 10.9 miles and ME-233 adds 5.6 round trip. That's a meaningfully easier day than the card implies.</p>
+      <p><b>Stay north of Jordan Pond.</b> The Land &amp; Garden Preserve carriage roads around Little Long Pond ban bikes of every kind, e- or otherwise.</p>
+      <div class="inopt">In: B only · 9:00a pickup, 1:00p return · Bar Harbor Bicycle Shop, 141 Cottage St<br>Turn-by-turn + live tracker: <a href="carriage.html">carriage roads page ↗</a></div>
+    </div>
+  </div>
+
+  <div class="pl star">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm">Climb the Beehive</span><span class="pin b">iron rungs · exposed</span></div>
+      <div class="meta">
+        <div><span class="lb">Time</span><span class="vl">1½–2 hrs</span></div>
+        <div><span class="lb">Stats</span><span class="vl">1.6 mi · 508 ft</span></div>
+        <div><span class="lb">Grade</span><span class="vl">Hard</span></div>
+      </div>
+      <p>Iron rungs and ladders bolted across open cliff face four hundred feet above Sand Beach, with no guardrails. More psychological than physical — the moves are easy, the exposure is not. <b>It is one-way up.</b> No turning around, no passing, no talking someone down once they've started.</p>
+      <p><b>Have the conversation in the parking lot.</b> Anyone even slightly unsure takes Gorham Mountain instead. And the answer changes entirely if the granite is wet — do not attempt it in rain or within a couple of hours of it.</p>
+      <p><b>Not a peregrine closure.</b> The 2026 closures are Precipice, Jordan Cliffs and Valley Cove only, whatever half the hiking blogs say. Confirm same-day at <a href="https://www.nps.gov/acad/planyourvisit/conditions.htm" target="_blank" rel="noopener">nps.gov/acad conditions ↗</a>. Dogs not allowed.</p>
+      <div class="inopt">In: B · 1:45p on the 5:00 summit · park at Sand Beach, trailhead via the Bowl Trail</div>
+    </div>
+  </div>
+
+  <div class="pl">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm">Gorham Mountain</span><span class="pin">the Beehive swap</span></div>
+      <div class="meta">
+        <div><span class="lb">Time</span><span class="vl">~1 hr</span></div>
+        <div><span class="lb">Stats</span><span class="vl">1.8 mi · 525 ft</span></div>
+        <div><span class="lb">Grade</span><span class="vl">Moderate</span></div>
+      </div>
+      <p>Open granite ridge with the ocean on your right the entire way up and no exposure at all. Same stretch of Park Loop, own parking lot, and honestly the better <i>view</i> of the two — you're looking <i>at</i> the Beehive and Sand Beach rather than standing on top of them. <b>Not a consolation prize</b>, and if anyone is on the fence about rungs, taking Gorham as a group beats splitting up.</p>
+      <div class="inopt">The swap that makes a 4:00 summit work · saves ~1 hr</div>
+    </div>
+  </div>
+
+  <div class="pl">
+    <img class="shot" loading="lazy" onerror="this.remove()" alt="Sand Beach, Acadia National Park" src="https://commons.wikimedia.org/wiki/Special:FilePath/Acadia%20national%20park%20sand%20beach%20z.JPG?width=900">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm">Walk the Ocean Path</span><span class="pin">easy · flat</span></div>
+      <div class="meta">
+        <div><span class="lb">Time</span><span class="vl">30 min–2 hrs</span></div>
+        <div><span class="lb">Stats</span><span class="vl">0.6–2 mi each way</span></div>
+        <div><span class="lb">Grade</span><span class="vl">Easy</span></div>
+      </div>
+      <p>The most spectacular easy mile on the Eastern seaboard, running along the cliff edge from Sand Beach past Thunder Hole to Otter Point. Flat, wide, and it never leaves the water. Push on to <b>Otter Cliff</b> — 110 feet of sheer pink granite straight out of the Atlantic.</p>
+      <div class="inopt">In: A, D, E · morning · in B it becomes the 3:45 Thunder Hole stop</div>
+    </div>
+  </div>
+
+  <div class="pl">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm">South Bubble &amp; Bubble Rock</span><span class="pin b">read the correction</span></div>
+      <div class="meta">
+        <div><span class="lb">From Bubble lot</span><span class="vl">1.2 mi · 40 min</span></div>
+        <div><span class="lb">From Jordan Pond</span><span class="vl">~2.8 mi · 1½ hr</span></div>
+        <div><span class="lb">Grade</span><span class="vl">Moderate</span></div>
+      </div>
+      <p>A glacial erratic the size of a car balanced on the lip of a cliff, carried here from forty miles away and dropped when the ice melted. Everyone takes the same photo of someone pretending to push it off, and everyone should.</p>
+      <p><b>Correction to the Thursday card:</b> this is a 40-minute detour <i>from the Bubble Rock parking lot on Park Loop Road</i>. From the Jordan Pond House end — where the bikes put you — you first walk a mile up the pond before you start climbing, which makes it 90 minutes, not 40. <b>On the bike day, treat it as out of reach</b> unless the ride finished very early.</p>
+      <div class="inopt">Realistic in A or D by car · a stretch in B</div>
+    </div>
+  </div>
+
+  <div class="pl">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm">Tidepool the quiet side</span><span class="pin">low tide 10:48a</span></div>
+      <div class="meta">
+        <div><span class="lb">Time</span><span class="vl">30–60 min</span></div>
+        <div><span class="lb">Stats</span><span class="vl">1.3–1.5 mi loops</span></div>
+        <div><span class="lb">Grade</span><span class="vl">Easy</span></div>
+      </div>
+      <p>Ship Harbor and Wonderland, two flat loops a mile apart that both end on open granite shore. <b>Thursday's 10:48a low is close to ideal timing</b> — sea stars, green crabs, urchins, anemones in the pools. Rockweed on wet granite is genuinely slick; step on bare rock, not the seaweed.</p>
+      <div class="inopt">In: C, D, E · not reachable in B</div>
+    </div>
+  </div>
+
+  <div class="pl">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm">Swim — Echo Lake, not the ponds</span><span class="pin b">rules matter here</span></div>
+      <div class="meta">
+        <div><span class="lb">Time</span><span class="vl">45 min</span></div>
+        <div><span class="lb">Water</span><span class="vl">~70°F</span></div>
+        <div><span class="lb">Where</span><span class="vl">west side</span></div>
+      </div>
+      <p><b>Eagle Lake, Bubble Pond and Jordan Pond are drinking-water supplies — swimming and wading are prohibited and rangers enforce it.</b> On a hot ride day this catches people out constantly. Echo Lake is the swimming lake. Sand Beach itself is ocean at about 55°F, which is a plunge, not a swim.</p>
+      <div class="inopt">Realistically only fits C or E</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ROUTES ============ -->
+<div class="sec" id="routes">
+  <h2>🧭 Routes, step by step</h2>
+  <p class="lede">The carriage roads have <b>no street names and no GPS</b>. Every junction has a wooden signpost with a number on it and arrows to named destinations, and those numbers match the free map. You navigate by post number and nothing else — which is why the paper map is not optional. Sequences and distances below are the park's own.</p>
+
+  <div class="take">
+    <h4>The ride has its own page now</h4>
+    <p><b><a href="carriage.html">Carriage roads — turn by turn ↗</a></b> takes the Tri-Lakes sequence below and expands it into leg-by-leg directions with clock times, photo stops in riding order, ranked add-ons if you're running early, and the bail-out points. It also carries a <b>live GPS tracker</b> — distance and bearing to ten verified landmarks, which keeps working with no cell signal. <b>Open it tonight</b> to grant location permission and cache the map tiles; both need wifi.</p>
+  </div>
+
+  <div class="take warn">
+    <h4>Get the map before you ride</h4>
+    <p>Free carriage road maps live in a brochure box at the carriage road entrance, at Hulls Cove Visitor Center, and behind the counter at most bike shops — <b>ask for one when you pick up the bikes.</b> There is no signal out there, so also screenshot the route sequences below. Official maps and elevation profiles: <a href="https://www.nps.gov/thingstodo/hike-carriage-roads.htm" target="_blank" rel="noopener">nps.gov carriage roads ↗</a></p>
+  </div>
+
+  <div class="pl star">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm">The long ride — Tri-Lakes Loop</span><span class="pin b">the full day</span></div>
+      <div class="meta">
+        <div><span class="lb">Loop</span><span class="vl">10.9 mi</span></div>
+        <div><span class="lb">+ road</span><span class="vl">5.6 mi</span></div>
+        <div><span class="lb">Total time</span><span class="vl">2½–3 hrs</span></div>
+      </div>
+      <div class="chain"><b>6</b><i>→</i><b>7</b><i>→</i><b>17</b><i>→</i><b>16</b><i>→</i><b class="gd">15</b><i>→</i><b>14</b><i>→</i><b class="hi">10</b><i>→</i><b class="hi">8</b><i>→</i><b>9</b><i>→</i><b>6</b></div>
+      <div class="ckey"><em>●</em> high point · <s>●</s> Jordan Pond House</div>
+      <ol class="steps">
+        <li><b>Out of town on ME-233 west</b> — 2.8 mi, paved, ~350 ft of climb, the only traffic of the day. Gravel starts at the Eagle Lake Bridge parking area. This is <b>post 6</b>.</li>
+        <li><b>At 6, head south down the east shore</b> of Eagle Lake toward post 7. This is the flat, scenic half, with Cadillac and Pemetic rising straight out of the far shore. Best water views of the ride.</li>
+        <li><b>At 7, continue south to 17</b> (Wildwood Stables), passing <b>Bubble Pond</b> on the way — the carriage road runs right along the waterline under Cadillac's west cliffs. Ten minutes here is the quietest stop on the loop and most riders blow straight past it.</li>
+        <li><b>17 → 16 → 15.</b> Post 15 is the <b>Jordan Pond House</b> — bike racks out front, roughly two-thirds of the way round. Turnaround, stretch, popovers from the outdoor window only if there's no line. Walk to the <b>north shore</b> for the Bubbles reflected in the water.</li>
+        <li><b>15 → 14 → 10.</b> Here's where the day gets earned: 10N/10S is a high point and the climb starts. On an e-bike it's a non-event; on a manual bike it's the hard part.</li>
+        <li><b>10 → 8</b> — the second high point, on the southwest corner of Eagle Lake. From 8 it's downhill.</li>
+        <li><b>8 → 9 → 6</b>, back under the Eagle Lake Bridge, then <b>ME-233 downhill into town.</b> The road leg home is fast and mostly coasting.</li>
+      </ol>
+      <div class="inopt">Official route + elevation profile: <a href="https://www.nps.gov/articles/000/tri-lakes-loop.htm" target="_blank" rel="noopener">nps.gov Tri-Lakes Loop ↗</a></div>
+    </div>
+  </div>
+
+  <div class="pl">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm">The short ride — Witch Hole Pond Loop</span><span class="pin">banks an hour</span></div>
+      <div class="meta">
+        <div><span class="lb">Loop</span><span class="vl">4.7 mi</span></div>
+        <div><span class="lb">+ road</span><span class="vl">~3 mi</span></div>
+        <div><span class="lb">Total time</span><span class="vl">1¼–1½ hrs</span></div>
+      </div>
+      <div class="chain"><b>1</b><i>→</i><b>2</b><i>→</i><b>4</b><i>→</i><b class="gd">5</b><i>→</i><b>3</b><i>→</i><b>2</b><i>→</i><b>1</b></div>
+      <div class="ckey"><s>●</s> Duck Brook Bridge</div>
+      <ol class="steps">
+        <li><b>Out Duck Brook Road</b> from town — about a mile and a half, and it drops you straight onto the carriage road at <b>Duck Brook Bridge</b>, near post 5. Far gentler than the ME-233 climb.</li>
+        <li><b>Walk down to the brook first.</b> Three granite arches, viewing platforms built into the parapet on top — but from up there you can't see the thing you came for. Shoot it from below, looking upstream.</li>
+        <li><b>Ride the loop 5 → 3 → 2 → 4 → 5</b>, or the reverse. Nearly flat the whole way, past Witch Hole Pond and the Breakneck ponds — beaver lodges, one pond full of standing dead trees, wild blueberries along the edges in August.</li>
+        <li><b>The one hill</b> is just past Witch Hole on the stretch up to post 4. Short, and the motor eats it.</li>
+        <li><b>Feeling good at post 4?</b> Signs from there point to post 6 and Eagle Lake — the connector runs past the Breakneck ponds and <i>under</i> the Eagle Lake Bridge. Tack on the Eagle Lake loop and you've built the ride to about 14 miles without committing to it in advance.</li>
+        <li><b>Back the way you came</b> down Duck Brook Road. If you instead drop to the Hulls Cove Visitor Center at post 2, note the connector is steep enough that the park tells you to <b>dismount</b>.</li>
+      </ol>
+      <div class="inopt">Official route: <a href="https://www.nps.gov/articles/000/witch-hole-pond-loop.htm" target="_blank" rel="noopener">nps.gov Witch Hole Pond Loop ↗</a></div>
+    </div>
+  </div>
+
+  <div class="pl">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm">The middle ride — Eagle Lake Loop</span><span class="pin">if the morning slips</span></div>
+      <div class="meta">
+        <div><span class="lb">Loop</span><span class="vl">5.9 mi</span></div>
+        <div><span class="lb">+ road</span><span class="vl">5.6 mi</span></div>
+        <div><span class="lb">Total time</span><span class="vl">~1¾ hrs</span></div>
+      </div>
+      <div class="chain"><b>6</b><i>→</i><b>9</b><i>→</i><b class="hi">8</b><i>→</i><b>7</b><i>→</i><b>6</b></div>
+      <div class="ckey"><em>●</em> high point</div>
+      <ol class="steps">
+        <li><b>ME-233 west to post 6</b>, same as the long ride.</li>
+        <li><b>Direction matters here.</b> The park's own wayside at the bridge spells it out: after passing under Eagle Lake Bridge, <b>straight ahead is a longer, gradual climb; left is shorter and steeper.</b> On e-bikes take either — on legs, take the gradual one.</li>
+        <li><b>6 → 9 → 8.</b> Post 8 is the high point of the loop, on the southwest corner. Everything after it is downhill or flat.</li>
+        <li><b>8 → 7 → 6</b> along the east and north shores — the level, open-water half. Ride this side unhurried; it's the reason the loop is worth doing.</li>
+        <li><b>At post 8 you can go up instead</b> — it connects to the Around the Mountain and Jordan Pond loops if the group is flying and wants more.</li>
+      </ol>
+      <div class="inopt">Official route: <a href="https://www.nps.gov/articles/000/eagle-lake-loop.htm" target="_blank" rel="noopener">nps.gov Eagle Lake Loop ↗</a></div>
+    </div>
+  </div>
+
+  <div class="pl">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm">The Beehive — step by step</span><span class="pin b">one-way up</span></div>
+      <ol class="steps">
+        <li><b>Park at Sand Beach</b> and cross Park Loop Road carefully. The trailhead sign is on the west side.</li>
+        <li><b>Start on the Bowl Trail</b> — easy woods walking for about 0.2 mi.</li>
+        <li><b>Beehive Trail splits right.</b> This is the decision point and the last one you get. Everything above here is committed: iron rungs, ladders and narrow ledges across open cliff, roughly 500 feet of climbing with the drop under your right shoulder.</li>
+        <li><b>Summit</b> — the whole crescent of Sand Beach and Newport Cove below you, open Atlantic behind. Sit down, drink something. This is the payoff.</li>
+        <li><b>Descend north-west to The Bowl</b>, a small mountain pond in a granite basin. The descent is a normal trail — no rungs.</li>
+        <li><b>Bowl Trail back down</b> to where you started. Loop total 1.4–1.6 mi, 1½–2 hrs unhurried with photo stops.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="pl">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm">Gorham Mountain — step by step</span><span class="pin">no exposure</span></div>
+      <ol class="steps">
+        <li><b>Gorham Mountain parking lot</b> on Park Loop Road, south of Thunder Hole just past Monument Cove. Its own lot, usually easier than Sand Beach.</li>
+        <li><b>Climb the ridge</b> — steady, open granite, cairns marking the way, ocean on your right almost continuously.</li>
+        <li><b>Optional near the bottom:</b> the <b>Cadillac Cliffs Trail</b> branches off and rejoins higher up — it threads under an overhanging ancient sea cliff. Slower and rockier, worth it if you're not chasing a clock.</li>
+        <li><b>Summit at 525 ft</b> — and this is the view <i>of</i> the Beehive, with Sand Beach beyond it. Arguably the better photograph of the two hikes.</li>
+        <li><b>Back the way you came.</b> 1.8 mi round trip, about an hour. Or continue north to The Bowl and down the Bowl Trail to link up with anyone who took the rungs.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="pl">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm">Ocean Path — step by step</span><span class="pin">flat · turn back anywhere</span></div>
+      <ol class="steps">
+        <li><b>Start at the far end of the Sand Beach lot</b>, above the beach steps.</li>
+        <li><b>0.6 mi to Thunder Hole</b> — wide gravel path along the cliff edge, never out of sight of the water.</li>
+        <li><b>0.2 mi further to Monument Cove</b>, a pocket beach of round cobbles with a granite spire standing offshore. Most people walk past it; look down and to your right.</li>
+        <li><b>1.4 mi to Otter Cliff</b> — 110 feet of sheer pink granite. Rock climbers are usually roped up on it in summer.</li>
+        <li><b>2 mi to Otter Point</b> and the end of the path. <b>Turn around whenever you like</b> — this is the rare Acadia walk with no commitment at all.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="pl">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm">Ship Harbor — step by step</span><span class="pin">time it to the 10:48a low</span></div>
+      <ol class="steps">
+        <li><b>Ship Harbor lot on ME-102A</b>, a couple of miles east of Bass Harbor Head Light.</li>
+        <li><b>Take the figure-eight</b> — signed, flat, gravel, stroller-friendly. Either lobe works; the outer one reaches the shore sooner.</li>
+        <li><b>Out to the open granite ledge</b> at the harbor mouth. This is the tidepool ground — sea stars, green crabs, urchins, anemones in the deeper pools.</li>
+        <li><b>Step on bare rock, never rockweed.</b> Wet seaweed on sloping granite is the single most common injury on this coast.</li>
+        <li><b>Loop back through the spruce.</b> 1.3–1.5 mi, 30 minutes, and Wonderland is a mile up the road if you want the better ledge too.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PLACES TO SEE ============ -->
+<div class="sec" id="see">
+  <h2>🗻 Places to see</h2>
+  <p class="lede">Short stops — park, look, go. The east side of the island is the famous half; the quiet side is where you go to be alone. <b>You cannot do both well in one day</b>, and pretending otherwise is how people end up spending Thursday in a Jeep.</p>
+
+  <div class="pl star">
+    <img class="shot" loading="lazy" onerror="this.remove()" alt="Cadillac Mountain summit" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cadillac%20Mountain.jpg?width=900">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm"><a href="https://www.google.com/maps/search/?api=1&query=Cadillac+Summit+Road+Acadia+National+Park+Bar+Harbor+ME+04609" target="_blank" rel="noopener">Cadillac Mountain</a></span><span class="pin b">✅ slot booked</span></div>
+      <div class="meta">
+        <div><span class="lb">Stop length</span><span class="vl">45–60 min</span></div>
+        <div><span class="lb">Summit loop</span><span class="vl">0.4 mi paved</span></div>
+        <div><span class="lb">Your window</span><span class="vl">4:00 or 5:00p</span></div>
+      </div>
+      <p>1,530 feet, the highest point on the North Atlantic seaboard, and you drive to the top of it. The paved summit loop is wheelchair-accessible and takes eleven minutes; the good part is walking fifty yards off it onto open granite and sitting down. Frenchman Bay, the Porcupine Islands, and on a clear day Katahdin 120 miles north.</p>
+      <p><b>Midday is the weakest hour up there</b> — flat light, haze, full lot. Late afternoon has softer light on the bay and half the crowd. If your window is an early one, budget the full hour and walk further off the loop — the crowd thins with every fifty yards.</p>
+      <p>Ten to fifteen degrees cooler than sea level and much windier. The wind layer lives in the Jeep, not the hotel.</p>
+      <div class="inopt">Both 4:00 and 5:00 held — <a href="#clock">release one</a> · QR must be a screenshot, not the app</div>
+    </div>
+  </div>
+
+  <div class="pl star">
+    <img class="shot" loading="lazy" onerror="this.remove()" alt="Jordan Pond and the Bubbles, Acadia National Park" src="https://commons.wikimedia.org/wiki/Special:FilePath/Jordan%20Pond%2C%20Acadia%20National%20Park.JPG?width=900">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm"><a href="https://www.google.com/maps/search/?api=1&query=Jordan+Pond+House+2928+Park+Loop+Rd+Seal+Harbor+ME+04675" target="_blank" rel="noopener">Jordan Pond &amp; the Bubbles</a></span><span class="pin">post 15</span></div>
+      <div class="meta">
+        <div><span class="lb">Stop length</span><span class="vl">20 min</span></div>
+        <div><span class="lb">Full loop</span><span class="vl">3.3 mi flat</span></div>
+        <div><span class="lb">Best light</span><span class="vl">calm mornings</span></div>
+      </div>
+      <p>Twin rounded peaks reflected in water so clear you can see forty feet down — the most photographed view in Maine and it earns it. Stand on the <b>north shore</b>, not the lawn, for the clean reflection. The reflection needs still water, so a breezy afternoon gives you the view without the mirror.</p>
+      <p><b>Do not join the restaurant wait list.</b> August sit-down waits run 30–60 minutes and will eat your entire return buffer. Popovers from the outdoor window only if there's no line.</p>
+      <div class="inopt">In: A, B (bike turnaround, post 15) · dropped in D</div>
+    </div>
+  </div>
+
+  <div class="pl">
+    <img class="shot" loading="lazy" onerror="this.remove()" alt="Thunder Hole, Acadia National Park" src="https://commons.wikimedia.org/wiki/Special:FilePath/Thunder%20Hole%2C%20Acadia%20National%20Park%2C%20Maine.jpg?width=900">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm"><a href="https://www.google.com/maps/search/?api=1&query=Thunder+Hole+Park+Loop+Rd+Bar+Harbor+ME+04609" target="_blank" rel="noopener">Thunder Hole</a></span><span class="pin b">3:15–4:15p only</span></div>
+      <div class="meta">
+        <div><span class="lb">Stop length</span><span class="vl">15 min</span></div>
+        <div><span class="lb">High tide</span><span class="vl">5:05p</span></div>
+        <div><span class="lb">Your slot</span><span class="vl">3:45p</span></div>
+      </div>
+      <p>A narrow granite chamber that traps air under an incoming wave and claps like a cannon, throwing spray over the railing. <b>It only performs one to two hours before high water with a swell running.</b> Thursday that is 3:15 to 4:15 in the afternoon — and it sits directly on the one-way Park Loop between Sand Beach and the summit road, so on Option B you drive past it anyway.</p>
+      <p>At any other hour, including the 9:45a slot on the current Option A card, it is a scenic crack in the rocks. Manage expectations or move the stop.</p>
+      <div class="inopt">3:45p on the 5:00 summit · 3:15p on the 4:00 · in A/D/E it lands at the wrong tide</div>
+    </div>
+  </div>
+
+  <div class="pl">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm"><a href="https://www.google.com/maps/search/?api=1&query=Bass+Harbor+Head+Light+Station+Acadia+ME" target="_blank" rel="noopener">Bass Harbor Head Light</a></span><span class="pin s">afternoon light only</span></div>
+      <div class="meta">
+        <div><span class="lb">Stop length</span><span class="vl">30 min</span></div>
+        <div><span class="lb">Walk</span><span class="vl">0.4 mi · 62 ft</span></div>
+        <div><span class="lb">Best light</span><span class="vl">late afternoon</span></div>
+      </div>
+      <p>Acadia's only lighthouse, bolted to a granite headland since 1858. Take the stairway down the cliff face to the rocks — the view from the parking lot is nothing, the view from below is the postcard.</p>
+      <p><b>Here's the thing nobody tells you: it faces southwest.</b> The morning slot on Option C at 9:30a is the worst light of the day — flat and backlit. This is an afternoon or sunset subject. The tiny lot is the trade-off: calm at 9:30, gridlocked at sunset. No buses, trailers or RVs; the road is too narrow.</p>
+      <div class="inopt">In: C, D, E · 45 min each way from the east side</div>
+    </div>
+  </div>
+
+  <div class="pl">
+    <img class="shot" loading="lazy" onerror="this.remove()" alt="Eagle Lake, Acadia National Park" src="https://commons.wikimedia.org/wiki/Special:FilePath/Eagle%20Lake%2C%20Acadia%20National%20Park.jpg?width=900">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm"><a href="https://www.google.com/maps/search/?api=1&query=Eagle+Lake+Bridge+487+Eagle+Lake+Rd+Bar+Harbor+ME+04609" target="_blank" rel="noopener">Eagle Lake &amp; Bubble Pond</a></span><span class="pin">posts 6–9</span></div>
+      <div class="meta">
+        <div><span class="lb">Loop</span><span class="vl">5.9 mi</span></div>
+        <div><span class="lb">Stop length</span><span class="vl">10 min each</span></div>
+        <div><span class="lb">Access</span><span class="vl">bike or foot</span></div>
+      </div>
+      <p>436 acres, the biggest lake on the island, with Cadillac and Pemetic rising straight out of the far shore. Ride the <b>east shore</b> (posts 7–9) for that view — it's also the flat half. Bubble Pond is south of post 7 and quieter; the carriage road runs right along the waterline under Cadillac's west cliffs and most riders blow straight past it.</p>
+      <div class="inopt">In: B · both the middle and long rides</div>
+    </div>
+  </div>
+
+  <div class="pl">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm"><a href="https://www.google.com/maps/search/?api=1&query=Duck+Brook+Bridge+Bar+Harbor+ME+04609" target="_blank" rel="noopener">Duck Brook Bridge</a></span><span class="pin s">underrated</span></div>
+      <div class="meta">
+        <div><span class="lb">Stop length</span><span class="vl">15 min</span></div>
+        <div><span class="lb">From town</span><span class="vl">~1.5 mi</span></div>
+        <div><span class="lb">Post</span><span class="vl">near 5</span></div>
+      </div>
+      <p>Three granite arches over a wooded stream, with viewing platforms built into the parapet on top — the showpiece of Rockefeller's seventeen bridges and barely a mile and a half from Cottage Street. <b>Walk down to the brook and shoot it from below</b>; from on top you can't see the thing you came for.</p>
+      <div class="inopt">In: B · the short ride · 9:25a</div>
+    </div>
+  </div>
+
+  <div class="pl">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm"><a href="https://www.google.com/maps/search/?api=1&query=Ship+Harbor+Trail+Acadia+Tremont+ME" target="_blank" rel="noopener">Ship Harbor</a> &amp; <a href="https://www.google.com/maps/search/?api=1&query=Wonderland+Trail+Acadia+Tremont+ME" target="_blank" rel="noopener">Wonderland</a></span><span class="pin">nobody photographs this</span></div>
+      <div class="meta">
+        <div><span class="lb">Stop length</span><span class="vl">30 min each</span></div>
+        <div><span class="lb">Stats</span><span class="vl">1.5 / 1.3 mi</span></div>
+        <div><span class="lb">Grade</span><span class="vl">Easy · flat</span></div>
+      </div>
+      <p>Spruce, ledge, and nothing but open water south of you until Nova Scotia. Ship Harbor is a figure-eight with the better tidepools and is stroller-friendly; Wonderland is a straight out-and-back to a better slab of shore. On a busy August Thursday the emptiness is the point.</p>
+      <div class="inopt">In: C, D, E</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PHOTO OPS ============ -->
+<div class="sec" id="photo">
+  <h2>📷 Photo ops</h2>
+  <p class="lede">One rule organizes all of this: <b>the east side of the island wants morning light, the quiet side wants afternoon.</b> Option B does the east side in the afternoon, which means the cliffs sit in shadow — not a disaster, but shoot <i>with</i> the sun behind you looking south along the coast rather than north into it, and the water goes deep blue instead of blown out.</p>
+
+  <div class="po">
+    <span class="clock">3:45p · the money shot of the day</span>
+    <h4>Thunder Hole, mid-flood</h4>
+    <p>Ninety minutes before the 5:05p high with a swell running is when the chamber actually claps. Shoot from the <b>upper platform</b>, not the lower one — you'll stay dry and you get the whole plume against the granite. Burst mode; the spray peaks for under a second. If it's running hard, the lower railing soaks people and the rock gets slick.</p>
+  </div>
+
+  <div class="po">
+    <span class="clock">5:00–6:00p · Cadillac summit</span>
+    <h4>Frenchman Bay and the Porcupines</h4>
+    <p>Walk the summit loop to the <b>north-facing ledges</b> and look down on the Porcupine Islands scattered across the bay with Bar Harbor tucked in at the left. Late afternoon side-light picks out the islands; at noon they flatten into haze. A person standing on the bare pink granite gives it scale — without one it reads as a postcard of nothing.</p>
+  </div>
+
+  <div class="po">
+    <span class="clock">11:00a · Jordan Pond, post 15</span>
+    <h4>The Bubbles, reflected</h4>
+    <p>Get to the <b>north shore</b> path, not the lawn by the restaurant — the classic frame puts the two rounded peaks dead center at the far end with the mirror below them. It only mirrors when the water is still, so it's a morning subject; by late morning in August there's usually a ripple. Shoot it anyway and take the reflection as a bonus.</p>
+  </div>
+
+  <div class="po">
+    <span class="clock">2:45–3:15p · from the Beehive summit</span>
+    <h4>Sand Beach from above</h4>
+    <p>The single best frame on the east side: the whole crescent of Sand Beach and Newport Cove four hundred feet below with the open Atlantic behind it. Afternoon puts the sun to the southwest, so you're shooting slightly into it — expose for the water, let the granite go dark, and it works. <b>Same view without the rungs</b> from the Gorham Mountain ridge, which also gets the Beehive itself in the frame.</p>
+  </div>
+
+  <div class="po">
+    <span class="clock">9:25a · Duck Brook, post 5</span>
+    <h4>Three arches from the streambed</h4>
+    <p>Scramble down to the brook on the downstream side and shoot back up through the arches. Deep shade at that hour, so it's a slow exposure — brace the phone on a rock. This is the shot almost nobody who visits Acadia comes home with, because almost nobody rides the short loop.</p>
+  </div>
+
+  <div class="po">
+    <span class="clock">9:55a · the carriage roads themselves</span>
+    <h4>Three bikes, no cars, receding gravel</h4>
+    <p>The one that will actually mean something in ten years. Get ahead, crouch low in the middle of the road, and shoot the other two riding toward you with the tunnel of trees closing overhead. The east shore of Eagle Lake between posts 7 and 9 is the prettiest stretch for it.</p>
+  </div>
+
+  <div class="po">
+    <span class="clock">late afternoon only</span>
+    <h4>Bass Harbor Head Light from the rocks below</h4>
+    <p>Down the cliff stairway, then right onto the granite. The lighthouse faces southwest, so this is a <b>4:00p-to-sunset subject and a waste of a morning</b> — which is worth knowing before Option C schedules it at 9:30a. At sunset expect twenty photographers on the same slab, and expect to have arrived an hour early to get a spot.</p>
+  </div>
+</div>
+
+<!-- ============ EAT ============ -->
+<div class="sec" id="eat">
+  <h2>🦞 Eat</h2>
+  <p class="lede">The rule for this day: <b>the sightseeing sets the clock and food fits around it.</b> You're on an island covered in places to eat — the mistake is spending ninety minutes of daylight driving to one specific pound.</p>
+
+  <div class="pl">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm"><a href="https://www.google.com/maps/search/?api=1&query=Bar+Harbor+Lobster+Pound+414+ME-3+Bar+Harbor+ME" target="_blank" rel="noopener">Bar Harbor Lobster Pound</a></span><span class="pin">opens 11:00 · fastest</span></div>
+      <p>414 ME-3 by the Hulls Cove entrance — <b>ten minutes from the east-side stops instead of forty-five.</b> Order at the window, line moves, 11:00 is the zero-wait slot. Rolls $30–33. This is the answer that costs you twenty minutes of daylight instead of ninety.</p>
+    </div>
+  </div>
+
+  <div class="pl">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm"><a href="https://www.google.com/maps/search/?api=1&query=Thurston's+Lobster+Pound+9+Thurston+Rd+Bernard+ME" target="_blank" rel="noopener">Thurston's, Bernard</a></span><span class="pin s">only on C, D or E</span></div>
+      <p>Awning-covered decks over Bass Harbor with boats unloading the catch you're about to eat. It <i>is</i> the better room, no argument — but from the east side it's 45 minutes each way plus a 75-minute sit. Take it only if the day already puts you on the quiet side. Some seasons they open at noon with a queue already formed; be there 11:45 or slide to 12:30.</p>
+    </div>
+  </div>
+
+  <div class="pl">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm">On Option B: lunch is a bag</span><span class="pin b">1:00p, not a stop</span></div>
+      <p>Grab something in town on the walk back from the bike shop and eat it in the Jeep. That single decision is what buys the 1:45 Beehive start — and therefore the whole afternoon. <b>Two bottles of water each, minimum, plus something salty:</b> there is no water anywhere on the carriage roads until Jordan Pond House at post 15.</p>
+    </div>
+  </div>
+
+  <div class="pl">
+    <div class="pl-in">
+      <div class="pl-top"><span class="pl-nm">Dinner — don't book it</span><span class="pin">~7:45p on the 5:00</span></div>
+      <p>Camden or Rockland is the natural break on the drive south — around 7:45p if you keep the 5:00 summit, closer to 6:45p on the 4:00. Young's in Belfast is on the route but posted hours conflict badly across sources and one recent listing closes them at 3pm — call <a href="tel:+12073381160">207-338-1160</a> if it matters. Otherwise the Harraseeket's own Broad Arrow Tavern runs late and is downstairs from your bed, which on a 10:00p arrival is the realistic answer.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ THE FIVE OPTIONS ============ -->
+<div class="sec" id="opts">
+  <h2>🗺 The five options, in one line each</h2>
+  <p class="lede">Full timings live on the <a href="index.html#d3" style="color:var(--ink);border-bottom:1.5px solid var(--seaglass);text-decoration:none">Thursday card</a>. Every one of these is really the same question: <b>what time does the alarm go off in Union?</b></p>
+
+  <div class="ol"><div class="let">B</div><div><b>Carriage roads by e-bike — ✅ booked, the live plan.</b> Ride, Beehive, Thunder Hole, summit. The most physical version and the most memorable. Gives up the quiet side and all slack.<span class="tm">On the 5:00 summit: leave Union 6:45a · off island ~6:30p · Freeport ~10:00p · see <a href="#clock" style="color:var(--seaglass)">the clock</a></span></div></div>
+  <div class="ol"><div class="let">E</div><div><b>Cadillac first, day reversed — the best-engineered day on the card.</b> Every piece lands at its best hour and nothing chases you. Academic now that the bikes are paid for.<span class="tm">Leave Union 6:45a · off island 2:00p · Freeport ~5:30p</span></div></div>
+  <div class="ol"><div class="let">A</div><div><b>Coastal classic.</b> Sand Beach, Ocean Path, Jordan Pond, summit at 2:00. Greatest hits, no hiking, and Thunder Hole lands at the wrong tide.<span class="tm">Leave Union 7:00a · off island 3:15p · Freeport ~6:45p</span></div></div>
+  <div class="ol"><div class="let">C</div><div><b>The quiet side.</b> Lighthouse, Ship Harbor, Wonderland. The softest day of the five and the right call if anyone is done being marched around — but it skips the entire east side.<span class="tm">Leave Union 7:15a · off island 3:15p · Freeport ~6:45p</span></div></div>
+  <div class="ol"><div class="let">D</div><div><b>Both coasts.</b> A and C welded together. Most ground covered without a bike or a summit hike, at the cost of forty minutes spent crossing the island.<span class="tm">Leave Union 6:45a · off island 3:15p · Freeport ~6:45p</span></div></div>
+</div>
+
+<!-- ============ FIELD NOTES ============ -->
+<div class="sec" id="notes">
+  <h2>📌 Field notes</h2>
+  <div class="fn"><span>🗺️</span><div><b>Grab the free carriage road map at the bike shop</b> — the numbered signposts are the only navigation out there and there's no signal to fall back on. Screenshot the route sequences above too.</div></div>
+  <div class="fn"><span>🎫</span><div><b>Park entrance pass</b> — $35/vehicle, seven days, separate from the Cadillac reservation. Your QR is on the <a href="pass.html">pass page</a>. <b>Cyclists need it too</b> and can be asked to show it on the carriage roads.</div></div>
+  <div class="fn"><span>🅿️</span><div><b>Sand Beach parking, honestly:</b> that lot runs full from about 9:30a to 3:00p in August and turns over one car at a time. The 1:20p arrival on the clock above is the tight moment of the afternoon. Roadside in the marked right lane of Park Loop past the beach is legal and normal; Gorham Mountain lot is the backup. <b>Budget fifteen minutes, not zero.</b></div></div>
+  <div class="fn"><span>📵</span><div><b>Cell service is unreliable park-wide</b> and absent on the summit road. Screenshot the Cadillac QR, the bike reservation and the Harraseeket address before you leave Union. Download offline maps for MDI tonight.</div></div>
+  <div class="fn"><span>👟</span><div><b>Pack hiking shoes where you can reach them</b> in the Jeep, not buried. You're changing in a parking lot with a reservation clock running.</div></div>
+  <div class="fn"><span>🚲</span><div><b>Ask the bike shop two things:</b> is "half day" a hard 1:00 return or a rolling four hours — that answer alone decides whether the Beehive is comfortable or rushed — and <b>do you have locks</b>, because bikes are banned from every hiking trail. Sign all three waivers in the customer portal tonight.</div></div>
+  <div class="fn"><span>🌫️</span><div><b>Check the fog before you leave Union,</b> not the inland forecast. If the summit is socked in, the carriage roads are usually below the fog layer and completely unaffected — Eagle Lake in mist is better than Eagle Lake in sun.</div></div>
+  <div class="fn"><span>🦅</span><div><b>2026 peregrine closures: Precipice, Jordan Cliffs, Valley Cove.</b> The Beehive is not among them. Confirm same-day at <a href="https://www.nps.gov/acad/planyourvisit/conditions.htm" target="_blank" rel="noopener">nps.gov/acad conditions ↗</a>.</div></div>
+  <div class="fn"><span>🐜</span><div><b>Ticks are active in August</b> along grassy carriage-road edges and the Bowl Trail. Check at the hotel — deer ticks here are small enough to miss.</div></div>
+  <div class="fn"><span>🚌</span><div><b>The Island Explorer shuttle is free</b> and stops at Sand Beach, Jordan Pond and the visitor center. Worth knowing if a lot is a circus — but it won't carry e-bikes.</div></div>
+</div>
+
+<footer style="margin-top:46px">
+  <span>Acadia briefing · Thu Aug 6</span>
+  <span><a href="index.html" style="color:var(--ink-soft)">← full itinerary</a></span>
+</footer>
+
+</div>
+<script src="carriage-maps.js?v=20260804a" defer></script>
+</body>
+</html>
