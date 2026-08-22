@@ -435,7 +435,7 @@
       out.push('Stay: ' + (nm ? nm.textContent.trim() : '') + (ad ? ' — ' + ad.textContent.replace(/\s+/g, ' ').trim() : ''));
     });
     out.push('');
-    out.push('supmaine.mikeside.com/v2.html');
+    out.push('mikeside.com/supmaine/v2.html');
     return out.join('\n');
   }
 
