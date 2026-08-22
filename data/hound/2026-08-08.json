@@ -1,0 +1,150 @@
+{
+ "show_date": "2026-08-08",
+ "slug": "2026-08-08",
+ "venue": "The Stone Pony Summer Stage",
+ "city": "Asbury Park",
+ "state": "NJ",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-august-8-2026-the-stone-pony-summer-stage-asbury-park-nj-usa.html",
+ "shownotes": "Opening Band(s): Reality Check Experiment. Soundboard recordings available on Bandcamp and Nugs.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Unfocused",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "I Got You",
+     "transition": "",
+     "position": 3,
+     "footnote": "Debut",
+     "length_secs": null
+    },
+    {
+     "title": "Grease",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "You've Got a Friend in Me",
+     "transition": "",
+     "position": 5,
+     "footnote": "Randy Newman",
+     "length_secs": null
+    },
+    {
+     "title": "Appleseed",
+     "transition": "->",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Throw It Away",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "The Day The Music Came To Me",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Jack & Coke",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Psychobilly Freakout",
+     "transition": "",
+     "position": 10,
+     "footnote": "The Reverend Horton Heat",
+     "length_secs": null
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Asbury Park",
+     "transition": "",
+     "position": 12,
+     "footnote": "Debut",
+     "length_secs": null
+    },
+    {
+     "title": "Tillie",
+     "transition": "->",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Cherub Rock",
+     "transition": "",
+     "position": 14,
+     "footnote": "FTP, Smashing Pumpkins",
+     "length_secs": null
+    },
+    {
+     "title": "6 Little Lies",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Let's Dance",
+     "transition": "",
+     "position": 16,
+     "footnote": "David Bowie",
+     "length_secs": null
+    },
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

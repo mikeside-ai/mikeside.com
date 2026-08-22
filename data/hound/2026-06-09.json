@@ -1,0 +1,143 @@
+{
+ "show_date": "2026-06-09",
+ "slug": "2026-06-09",
+ "venue": "The Junction",
+ "city": "Santa Rosa",
+ "state": "CA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-9-2026-the-junction-santa-rosa-ca-usa.html",
+ "shownotes": null,
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Crazy",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bring It On Up",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Chocolate Milk",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "The Ballad of Ms. Pepper and Ms. Paige",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Craig and Pat",
+     "transition": "->",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Pinball Wizard",
+     "transition": "->",
+     "position": 10,
+     "footnote": "The Who",
+     "length_secs": null
+    },
+    {
+     "title": "Earthbound Man",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Lattice",
+     "transition": "->",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 13,
+     "footnote": "Vince Guaraldi",
+     "length_secs": null
+    },
+    {
+     "title": "Power Trip",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Today",
+     "transition": "->",
+     "position": 15,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Stadium Rave",
+     "transition": "",
+     "position": 16,
+     "footnote": "Glenn Nishida and Mark Governor",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

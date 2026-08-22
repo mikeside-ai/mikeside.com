@@ -1,0 +1,150 @@
+{
+ "show_date": "2026-04-10",
+ "slug": "2026-04-10",
+ "venue": "Sherman Theater",
+ "city": "Stroudsburg",
+ "state": "PA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-10-2026-sherman-theater-stroudsburg-pa-usa.html",
+ "shownotes": "Verified setlist. Opening Band: John Morgan Kimock. Soundboard recording available on Bandcamp and Nugs.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Earthbound Man",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Space Captain",
+     "transition": "",
+     "position": 6,
+     "footnote": "Joe Cocker",
+     "length_secs": null
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "You Didn't Hear It From Me",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Snake Oil",
+     "transition": "",
+     "position": 11,
+     "footnote": "FTP, The New Tony Williams Lifetime",
+     "length_secs": null
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "->",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Criminal",
+     "transition": ">",
+     "position": 13,
+     "footnote": "Fiona Apple",
+     "length_secs": null
+    },
+    {
+     "title": "Let U Go",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "EDM Song",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "The Day The Music Came To Me",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

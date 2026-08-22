@@ -1,0 +1,164 @@
+{
+ "show_date": "2026-07-14",
+ "slug": "2026-07-14",
+ "venue": "Van Hoy Farms",
+ "city": "Harmony",
+ "state": "NC",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-14-2026-van-hoy-farms-harmony-nc-usa.html",
+ "shownotes": "Performed at Ziggy's Summer Campout Concert Series.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Yum T. Dum",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bring It On Up",
+     "transition": "->",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Cabbage Alley",
+     "transition": ">",
+     "position": 4,
+     "footnote": "The Meters",
+     "length_secs": null
+    },
+    {
+     "title": "Westward",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "I Feel the Earth Move",
+     "transition": "",
+     "position": 6,
+     "footnote": "FTP, Carole King, with Natalie Brooke",
+     "length_secs": null
+    },
+    {
+     "title": "Creep",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Lazy Susan",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "116 Days",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Let U Go",
+     "transition": "->",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Rabbit",
+     "transition": ">",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Old Folks Boogie",
+     "transition": "",
+     "position": 14,
+     "footnote": "Little Feat",
+     "length_secs": null
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": "->",
+     "position": 15,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 17,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Fire",
+     "transition": "",
+     "position": 19,
+     "footnote": "The Jimi Hendrix Experience",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

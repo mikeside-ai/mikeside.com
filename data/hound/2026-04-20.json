@@ -1,0 +1,164 @@
+{
+ "show_date": "2026-04-20",
+ "slug": "2026-04-20",
+ "venue": "Ardmore Music Hall",
+ "city": "Ardmore",
+ "state": "PA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-20-2026-ardmore-music-hall-ardmore-pa-usa.html",
+ "shownotes": "This show was billed as \"Dogs Play Dead\" and served as the launch party for \"Play Dead.\" Help on the Way was interrupted to address a medical emergency in the crowd.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Feel Like A Stranger",
+     "transition": "",
+     "position": 1,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Jack Straw",
+     "transition": "",
+     "position": 2,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Mr. Charlie",
+     "transition": "",
+     "position": 3,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Dupree's Diamond Blues",
+     "transition": "",
+     "position": 4,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Bird Song",
+     "transition": "",
+     "position": 5,
+     "footnote": "Jerry Garcia",
+     "length_secs": null
+    },
+    {
+     "title": "China Cat Sunflower",
+     "transition": "->",
+     "position": 6,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Cassidy",
+     "transition": "",
+     "position": 7,
+     "footnote": "Bob Weir",
+     "length_secs": null
+    },
+    {
+     "title": "Let it Grow",
+     "transition": "",
+     "position": 8,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Help on the Way / Slipknot!",
+     "transition": ">",
+     "position": 9,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Viola Lee Blues",
+     "transition": "->",
+     "position": 10,
+     "footnote": "FTP, Noah Lewis",
+     "length_secs": null
+    },
+    {
+     "title": "New Speedway Boogie",
+     "transition": "",
+     "position": 11,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Cumberland Blues",
+     "transition": "",
+     "position": 12,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "The Other One",
+     "transition": "->",
+     "position": 13,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Drums",
+     "transition": "->",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "The Other One",
+     "transition": "",
+     "position": 15,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Ship Of Fools",
+     "transition": "",
+     "position": 16,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Blow Away",
+     "transition": "",
+     "position": 17,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "The Music Never Stopped",
+     "transition": "",
+     "position": 18,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Brokedown Palace",
+     "transition": "",
+     "position": 19,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

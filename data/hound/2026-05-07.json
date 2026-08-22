@@ -1,0 +1,75 @@
+{
+ "show_date": "2026-05-07",
+ "slug": "2026-05-07",
+ "venue": "El Ganzo Oasis",
+ "city": "San José del Cabo",
+ "state": "BCS, Mexico",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-7-2026-el-ganzo-oasis-san-jose-del-cabo-bcs-mexico.html",
+ "shownotes": "Performed at Viva El Gonzo.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Throw It Away",
+     "transition": "",
+     "position": 3,
+     "footnote": "Debut",
+     "length_secs": null
+    },
+    {
+     "title": "Lazy Susan",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "6 Little Lies",
+     "transition": "->",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "EDM Song",
+     "transition": "->",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 7,
+     "footnote": "Ending only",
+     "length_secs": null
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

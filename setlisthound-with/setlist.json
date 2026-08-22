@@ -1,0 +1,125 @@
+{
+ "show_date": "2026-08-15",
+ "slug": "2026-08-15",
+ "venue": "The Pines Music Park",
+ "city": "Eau Claire",
+ "state": "WI",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-august-15-2026-the-pines-music-park-eau-claire-wi-usa.html",
+ "shownotes": "Performed at Campout in the Pines.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Go Set",
+     "transition": "->",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "6 Little Lies",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Tell Me Something Good",
+     "transition": "",
+     "position": 4,
+     "footnote": "Rufus & Chaka Khan",
+     "length_secs": null
+    },
+    {
+     "title": "Little Things",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Cabbage Alley",
+     "transition": "->",
+     "position": 6,
+     "footnote": "The Meters",
+     "length_secs": null
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bubble",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "EDM Song",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": ">",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Rabbit",
+     "transition": "->",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "White Rabbit",
+     "transition": ">",
+     "position": 14,
+     "footnote": "Jefferson Airplane",
+     "length_secs": null
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ],
+ "updated_at": "2026-08-16T04:00:00+00:00"
+}

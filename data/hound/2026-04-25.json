@@ -1,0 +1,129 @@
+{
+ "show_date": "2026-04-25",
+ "slug": "2026-04-25",
+ "venue": "Kenny's Westside Pub",
+ "city": "Peoria",
+ "state": "IL",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-25-2026-kennys-westside-pub-peoria-il-usa.html",
+ "shownotes": null,
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Westward",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Earthbound Man",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Feelin' Alright",
+     "transition": "",
+     "position": 4,
+     "footnote": "FTP, Traffic",
+     "length_secs": null
+    },
+    {
+     "title": "The Ballad of Ms. Pepper and Ms. Paige",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Charlie",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "In Your Eyes",
+     "transition": "",
+     "position": 10,
+     "footnote": "Peter Gabriel",
+     "length_secs": null
+    },
+    {
+     "title": "Criminal",
+     "transition": ">",
+     "position": 11,
+     "footnote": "Fiona Apple",
+     "length_secs": null
+    },
+    {
+     "title": "Rabbit",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "White Rabbit",
+     "transition": "",
+     "position": 13,
+     "footnote": "Jefferson Airplane",
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

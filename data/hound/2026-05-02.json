@@ -1,0 +1,185 @@
+{
+ "show_date": "2026-05-02",
+ "slug": "2026-05-02",
+ "venue": "Deep Ellum Art Co.",
+ "city": "Dallas",
+ "state": "TX",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-2-2026-deep-ellum-art-co-dallas-tx-usa.html",
+ "shownotes": "Soundcheck included Blues for Brian, Night Life, Funky Junk, and Freeze-Dried Brain. Verified setlist.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Rinky Dink Rag",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "King of the Hill Theme",
+     "transition": "",
+     "position": 2,
+     "footnote": "The Refreshments",
+     "length_secs": null
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "You Didn't Hear It From Me",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Let Me Go",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Funky Junk",
+     "transition": "",
+     "position": 6,
+     "footnote": "FTP, Chet Atkins",
+     "length_secs": null
+    },
+    {
+     "title": "Grease",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Let U Go",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Shenanigans",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "116 Days",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Rabbit",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "->",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": "->",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "The Day The Music Came To Me",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Lattice",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Last Train",
+     "transition": "",
+     "position": 18,
+     "footnote": "Allen Toussaint",
+     "length_secs": null
+    },
+    {
+     "title": "Charlie",
+     "transition": "->",
+     "position": 19,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Battenkill Breakdown",
+     "transition": ">",
+     "position": 20,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 21,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Night Life",
+     "transition": "",
+     "position": 22,
+     "footnote": "FTP, Willie Nelson",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

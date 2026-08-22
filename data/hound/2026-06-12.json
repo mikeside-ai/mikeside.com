@@ -1,0 +1,136 @@
+{
+ "show_date": "2026-06-12",
+ "slug": "2026-06-12",
+ "venue": "SLO Brew",
+ "city": "San Luis Obispo",
+ "state": "CA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-12-2026-slo-brew-san-luis-obispo-ca-usa.html",
+ "shownotes": null,
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Unfocused",
+     "transition": "->",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Go Set",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "116 Days",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Yum T. Dum",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bennie and the Jets",
+     "transition": "",
+     "position": 5,
+     "footnote": "Elton John",
+     "length_secs": null
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Spun",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "->",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Happy Song",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "This Little Light of Mine",
+     "transition": "",
+     "position": 10,
+     "footnote": "Harry Dixon Loes",
+     "length_secs": null
+    },
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": "->",
+     "position": 12,
+     "footnote": "Stevie Wonder",
+     "length_secs": null
+    },
+    {
+     "title": "Inchworm",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Lucia's Secret",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

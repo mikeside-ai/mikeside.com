@@ -1,0 +1,68 @@
+{
+ "show_date": "2026-05-08",
+ "slug": "2026-05-08",
+ "venue": "El Ganzo Oasis",
+ "city": "San José del Cabo",
+ "state": "BCS, Mexico",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-8-2026-el-ganzo-oasis-san-jose-del-cabo-bcs-mexico.html",
+ "shownotes": "Performed at Viva El Gonzo.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Appleseed",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Nicolette",
+     "transition": "->",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": "->",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Weightless",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Spun",
+     "transition": "->",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Freeze Dried Brain",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Say Something",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

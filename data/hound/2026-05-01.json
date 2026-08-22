@@ -1,0 +1,136 @@
+{
+ "show_date": "2026-05-01",
+ "slug": "2026-05-01",
+ "venue": "The Bronze Peacock at House of Blues",
+ "city": "Houston",
+ "state": "TX",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-1-2026-the-bronze-peacock-at-house-of-blues-houston-tx-usa.html",
+ "shownotes": "Soundboard recording available on Bandcamp and Nugs. Verified setlist.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Frosty",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Time Stands Still",
+     "transition": ">",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "It Gets Better",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "->",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Ghost Riders in the Sky",
+     "transition": "->",
+     "position": 6,
+     "footnote": "Stan Jones; Bustout (49 shows)",
+     "length_secs": null
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Lucia's Secret",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 10,
+     "footnote": "Get Up, Stand Up\" and \"4th of July\" teases",
+     "length_secs": null
+    },
+    {
+     "title": "Earthbound Man",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "None",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Shine a Light",
+     "transition": "",
+     "position": 15,
+     "footnote": "Rolling Stones; Bustout (53 shows)",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

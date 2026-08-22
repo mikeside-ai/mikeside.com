@@ -1,0 +1,102 @@
+{
+ "show_date": "2026-07-15",
+ "slug": "2026-07-15",
+ "venue": "24th Street Park",
+ "city": "Virginia Beach",
+ "state": "VA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-15-2026-24th-street-park-virginia-beach-va-usa.html",
+ "shownotes": "Performed at Oceanfront Music Series.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Mr. Charlie",
+     "transition": "",
+     "position": 2,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Throw It Away",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "You Didn't Hear It From Me",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Let Me Go",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "The Bag",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Pinball Wizard",
+     "transition": ">",
+     "position": 9,
+     "footnote": "The Who",
+     "length_secs": null
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Let's Dance",
+     "transition": "",
+     "position": 11,
+     "footnote": "David Bowie, with Eggy",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

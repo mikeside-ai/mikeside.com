@@ -1,0 +1,136 @@
+{
+ "show_date": "2026-01-18",
+ "slug": "2026-01-18",
+ "venue": "Belly Up",
+ "city": "Solana Beach",
+ "state": "CA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-january-18-2026-belly-up-solana-beach-ca-usa.html",
+ "shownotes": "Nicolette was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Nicolette",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Chocolate Milk",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Minnie the Moocher",
+     "transition": "",
+     "position": 5,
+     "footnote": "Cab Calloway",
+     "length_secs": null
+    },
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Chop Shop",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Freeze Dried Brain",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "6 Little Lies",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Truckin'",
+     "transition": ">",
+     "position": 11,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Appleseed",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bulls on Parade",
+     "transition": "",
+     "position": 15,
+     "footnote": "Rage Against The Machine",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

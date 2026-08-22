@@ -1,0 +1,136 @@
+{
+ "show_date": "2026-06-07",
+ "slug": "2026-06-07",
+ "venue": "Felton Music Hall",
+ "city": "Felton",
+ "state": "CA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-7-2026-felton-music-hall-felton-ca-usa.html",
+ "shownotes": null,
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Ophelia",
+     "transition": ">",
+     "position": 2,
+     "footnote": "The Band",
+     "length_secs": null
+    },
+    {
+     "title": "Appleseed",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Grease",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Happy Song",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Cats Under the Stars",
+     "transition": "",
+     "position": 8,
+     "footnote": "Jerry Garcia Band",
+     "length_secs": null
+    },
+    {
+     "title": "Rabbit",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "White Rabbit",
+     "transition": "->",
+     "position": 10,
+     "footnote": "Jefferson Airplane",
+     "length_secs": null
+    },
+    {
+     "title": "6 Little Lies",
+     "transition": ">",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "The Bag",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Lazy Day",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Will It Go 'Round In Circles?",
+     "transition": "",
+     "position": 15,
+     "footnote": "Billy Preston",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

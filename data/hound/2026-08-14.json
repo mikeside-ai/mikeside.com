@@ -1,0 +1,116 @@
+{
+ "show_date": "2026-08-14",
+ "slug": "2026-08-14",
+ "venue": "Turner Hall Ballroom",
+ "city": "Milwaukee",
+ "state": "WI",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-august-14-2026-turner-hall-ballroom-milwaukee-wi-usa.html",
+ "shownotes": "Verified setlist. Soundboard recording available on Bandcamp and Nugs. \"Breathe (In the Air)\" tease in G Song.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Can't Wait for Tonight",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Let U Go",
+     "transition": "->",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Rockn' Me",
+     "transition": "->",
+     "position": 4,
+     "footnote": "FTP, Steve Miller Band",
+     "length_secs": null
+    },
+    {
+     "title": "Burning Daylight",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Lazy Susan",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Love Gravy",
+     "transition": ">",
+     "position": 9,
+     "footnote": "FTP, Ike Turner & Rick James",
+     "length_secs": null
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Applesauce",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bulls on Parade",
+     "transition": "",
+     "position": 13,
+     "footnote": "Rage Against The Machine",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

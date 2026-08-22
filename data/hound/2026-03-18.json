@@ -1,0 +1,96 @@
+{
+ "show_date": "2026-03-18",
+ "slug": "2026-03-18",
+ "venue": "Private Event",
+ "city": "",
+ "state": "",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-march-18-2026-private-event-private-venue-usa.html",
+ "shownotes": "Private event, private venue.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Jack Straw",
+     "transition": "",
+     "position": 1,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "China Cat Sunflower",
+     "transition": "->",
+     "position": 2,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Cassidy",
+     "transition": "->",
+     "position": 3,
+     "footnote": "Bob Weir",
+     "length_secs": null
+    },
+    {
+     "title": "Estimated Prophet",
+     "transition": "",
+     "position": 4,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Help on the Way / Slipknot!",
+     "transition": ">",
+     "position": 5,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Green Earrings",
+     "transition": "->",
+     "position": 6,
+     "footnote": "Steely Dan",
+     "length_secs": null
+    },
+    {
+     "title": "Franklin's Tower",
+     "transition": ">",
+     "position": 7,
+     "footnote": "FTP, Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Jessica",
+     "transition": "",
+     "position": 8,
+     "footnote": "The Allman Brothers Band",
+     "length_secs": null
+    },
+    {
+     "title": "Brokedown Palace",
+     "transition": "",
+     "position": 9,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Shakedown Street",
+     "transition": "->",
+     "position": 10,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Good Lovin'",
+     "transition": "",
+     "position": 11,
+     "footnote": "Young Rascals",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

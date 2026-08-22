@@ -1,0 +1,122 @@
+{
+ "show_date": "2026-04-24",
+ "slug": "2026-04-24",
+ "venue": "Madison Theatre",
+ "city": "Covington",
+ "state": "KY",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-24-2026-madison-theatre-covington-ky-usa.html",
+ "shownotes": "\"Fame\" tease in Let U Go; \"Davis Jett was a nice guy\" lyric change and \"Little Drummer Boy\" tease in Bugle on the Shelf. Verified setlist; soundboard on Bandcamp and Nugs.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Power Trip",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Hesitate",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Let U Go",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Nicolette",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Snake Oil",
+     "transition": "",
+     "position": 9,
+     "footnote": "The New Tony Williams Lifetime",
+     "length_secs": null
+    },
+    {
+     "title": "Burning Daylight",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Spun",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

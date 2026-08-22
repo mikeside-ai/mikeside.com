@@ -1,0 +1,136 @@
+{
+ "show_date": "2026-01-24",
+ "slug": "2026-01-24",
+ "venue": "Wonder Ballroom",
+ "city": "Portland",
+ "state": "OR",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-january-24-2026-wonder-ballroom-portland-or-usa.html",
+ "shownotes": "Opening Band(s): Family Mystic. Soundboard recording available on bandcamp and nugs. Verified setlist.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Westward",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Nicolette",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Big Man",
+     "transition": "->",
+     "position": 5,
+     "footnote": "Ben Schwartzman",
+     "length_secs": null
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 6,
+     "footnote": "Ending only.",
+     "length_secs": null
+    },
+    {
+     "title": "Shenanigans",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Stadium Rave",
+     "transition": "",
+     "position": 8,
+     "footnote": "Glenn Nishida and Mark Governor",
+     "length_secs": null
+    },
+    {
+     "title": "Go Set",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Lucia's Secret",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Rabbit",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "The Bag",
+     "transition": "->",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Tillie",
+     "transition": "->",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "The Bag",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "One More Saturday Night",
+     "transition": "",
+     "position": 15,
+     "footnote": "Bob Weir",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

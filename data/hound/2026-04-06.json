@@ -1,0 +1,122 @@
+{
+ "show_date": "2026-04-06",
+ "slug": "2026-04-06",
+ "venue": "5 Points Music Sanctuary",
+ "city": "Roanoke",
+ "state": "VA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-6-2026-5-points-music-sanctuary-roanoke-va-usa.html",
+ "shownotes": "Opening Band(s): Natalie Brooke. Soundboard recordings available on Bandcamp and Nugs.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Chocolate Milk",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Nicolette",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Time Loves A Hero",
+     "transition": "->",
+     "position": 4,
+     "footnote": "Little Feat",
+     "length_secs": null
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Power Trip",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Yum T. Dum",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Can't Wait for Tonight",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Rabbit",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Waiting for the Train",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

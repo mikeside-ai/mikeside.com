@@ -1,0 +1,129 @@
+{
+ "show_date": "2026-04-03",
+ "slug": "2026-04-03",
+ "venue": "Jefferson Theater",
+ "city": "Charlottesville",
+ "state": "VA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-3-2026-jefferson-theater-charlottesville-va-usa.html",
+ "shownotes": "Opening Band(s): Natalie Brooke. Soundboard recording available on bandcamp and nugs. Verified setlist.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Lattice",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Appleseed",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Westward",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "6 Little Lies",
+     "transition": "->",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "The Music Never Stopped",
+     "transition": "",
+     "position": 9,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Spun",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": "->",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "No Quarter",
+     "transition": "",
+     "position": 14,
+     "footnote": "Led Zeppelin",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

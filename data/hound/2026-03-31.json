@@ -1,0 +1,136 @@
+{
+ "show_date": "2026-03-31",
+ "slug": "2026-03-31",
+ "venue": "The Pour House",
+ "city": "Charleston",
+ "state": "SC",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-march-31-2026-the-pour-house-charleston-sc-usa.html",
+ "shownotes": "Opening Band(s): Kanika Moore & The Brown Eyed Bois. Soundboard recording available on bandcamp and nugs.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Craig and Pat",
+     "transition": "->",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "You Didn't Hear It From Me",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Hesitate",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Rehab",
+     "transition": "",
+     "position": 5,
+     "footnote": "FTP, Amy Winehouse, with Kanika Moore",
+     "length_secs": null
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Fire",
+     "transition": "",
+     "position": 7,
+     "footnote": "The Jimi Hendrix Experience",
+     "length_secs": null
+    },
+    {
+     "title": "Frosty",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "It Gets Better",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Pinball Wizard",
+     "transition": "->",
+     "position": 11,
+     "footnote": "The Who",
+     "length_secs": null
+    },
+    {
+     "title": "Mercy, Mercy, Mercy",
+     "transition": "",
+     "position": 12,
+     "footnote": "Cannonball Adderley",
+     "length_secs": null
+    },
+    {
+     "title": "Creep",
+     "transition": ">",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Space Captain",
+     "transition": "",
+     "position": 15,
+     "footnote": "Joe Cocker",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

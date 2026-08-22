@@ -1,0 +1,102 @@
+{
+ "show_date": "2026-06-05",
+ "slug": "2026-06-05",
+ "venue": "The Hangar",
+ "city": "South Lake Tahoe",
+ "state": "CA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-5-2026-the-hangar-south-lake-tahoe-ca-usa.html",
+ "shownotes": "Soundcheck: Blues for Brian, Craig and Pat. Soundboard recording available on bandcamp and nugs.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "I Know A Little",
+     "transition": "",
+     "position": 2,
+     "footnote": "Lynyrd Skynyrd",
+     "length_secs": null
+    },
+    {
+     "title": "Freeze Dried Brain",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Time Loves A Hero",
+     "transition": "->",
+     "position": 4,
+     "footnote": "Little Feat",
+     "length_secs": null
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Apeman",
+     "transition": "",
+     "position": 7,
+     "footnote": "The Kinks",
+     "length_secs": null
+    },
+    {
+     "title": "Tillie",
+     "transition": "->",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Throw It Away",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Fenway",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Space Captain",
+     "transition": "",
+     "position": 11,
+     "footnote": "Joe Cocker",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

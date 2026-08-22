@@ -1,0 +1,136 @@
+{
+ "show_date": "2026-04-18",
+ "slug": "2026-04-18",
+ "venue": "Empire Live",
+ "city": "Albany",
+ "state": "NY",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-18-2026-empire-live-albany-ny-usa.html",
+ "shownotes": "Verified setlist with soundboard recording available on bandcamp and nugs.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "The Bag",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Chocolate Milk",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Tempted",
+     "transition": "",
+     "position": 5,
+     "footnote": "FTP, Squeeze",
+     "length_secs": null
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Craig and Pat",
+     "transition": "->",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Hot Dog",
+     "transition": "->",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Little Things",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Lattice",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Lazy Susan",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Tookin' Around",
+     "transition": "",
+     "position": 15,
+     "footnote": "with Kieran Tooker on vocals",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

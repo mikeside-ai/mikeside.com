@@ -1,0 +1,136 @@
+{
+ "show_date": "2026-04-11",
+ "slug": "2026-04-11",
+ "venue": "Sherman Theater",
+ "city": "Stroudsburg",
+ "state": "PA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-11-2026-sherman-theater-stroudsburg-pa-usa.html",
+ "shownotes": "The Bag was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Appleseed",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "The Bag",
+     "transition": "->",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bennie and the Jets",
+     "transition": "",
+     "position": 3,
+     "footnote": "Elton John",
+     "length_secs": null
+    },
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Let Me Go",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Nicolette",
+     "transition": "->",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "This Little Light of Mine",
+     "transition": "->",
+     "position": 7,
+     "footnote": "Harry Dixon Loes",
+     "length_secs": null
+    },
+    {
+     "title": "Postcard",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Little Things",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Lucia's Secret",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

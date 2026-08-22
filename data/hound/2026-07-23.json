@@ -1,0 +1,136 @@
+{
+ "show_date": "2026-07-23",
+ "slug": "2026-07-23",
+ "venue": "Hartwell Park",
+ "city": "Ridgway",
+ "state": "CO",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-23-2026-hartwell-park-ridgway-co-usa.html",
+ "shownotes": "Performed at Ridgway Concert Series.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Throw It Away",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "116 Days",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Can't Wait for Tonight",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "It Gets Better",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Will It Go 'Round In Circles?",
+     "transition": "",
+     "position": 5,
+     "footnote": "Billy Preston",
+     "length_secs": null
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Time Loves A Hero",
+     "transition": "->",
+     "position": 8,
+     "footnote": "Little Feat",
+     "length_secs": null
+    },
+    {
+     "title": "Charlie",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Nicolette",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Let U Go",
+     "transition": "->",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "EDM Song",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": "->",
+     "position": 14,
+     "footnote": "Stevie Wonder",
+     "length_secs": null
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 15,
+     "footnote": "Vince Guaraldi",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

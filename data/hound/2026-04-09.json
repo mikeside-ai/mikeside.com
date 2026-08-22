@@ -1,0 +1,108 @@
+{
+ "show_date": "2026-04-09",
+ "slug": "2026-04-09",
+ "venue": "Mr. Smalls Theatre",
+ "city": "Millvale",
+ "state": "PA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-9-2026-mr-smalls-theatre-millvale-pa-usa.html",
+ "shownotes": "Look Johnny was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "116 Days",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "G Song",
+     "transition": "->",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Mr. Charlie",
+     "transition": "",
+     "position": 3,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Hesitate",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Happy Song",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Look Johnny",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Stevie Lew",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Time Stands Still",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "The Bag",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Takin' It To The Streets",
+     "transition": "",
+     "position": 11,
+     "footnote": "FTP, Doobie Brothers, with Natalie Brooke and her band",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

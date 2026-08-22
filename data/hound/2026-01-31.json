@@ -1,0 +1,143 @@
+{
+ "show_date": "2026-01-31",
+ "slug": "2026-01-31",
+ "venue": "Ogden Theatre",
+ "city": "Denver",
+ "state": "CO",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-january-31-2026-ogden-theatre-denver-co-usa.html",
+ "shownotes": "Verified setlist. Opening band: Casey Russell Band. Soundboard recordings available on Bandcamp and Nugs. \"Purple Haze\" tease in Jack & Coke.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Hell in a Bucket",
+     "transition": "",
+     "position": 1,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Nicolette",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Spun",
+     "transition": "->",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "None",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "The Bag",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Criminal",
+     "transition": "->",
+     "position": 10,
+     "footnote": "Fiona Apple",
+     "length_secs": null
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Lazy Susan",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "6 Little Lies",
+     "transition": ">",
+     "position": 15,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "EDM Song",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

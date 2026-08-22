@@ -1,0 +1,116 @@
+{
+ "show_date": "2026-06-06",
+ "slug": "2026-06-06",
+ "venue": "Delfino Farms",
+ "city": "Camino",
+ "state": "CA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-6-2026-delfino-farms-camino-ca-usa.html",
+ "shownotes": null,
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Lazy Susan",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Burning Daylight",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Hesitate",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "4th of July",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": "->",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Everything I Do Gonh Be Funky (From Now On)",
+     "transition": "",
+     "position": 7,
+     "footnote": "FTP, Lee Dorsey",
+     "length_secs": null
+    },
+    {
+     "title": "Creep",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Let U Go",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Let Me Go",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Applesauce",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Greta",
+     "transition": "",
+     "position": 12,
+     "footnote": "Widespread Panic",
+     "length_secs": null
+    },
+    {
+     "title": "Say Something",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

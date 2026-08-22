@@ -1,0 +1,129 @@
+{
+ "show_date": "2026-05-30",
+ "slug": "2026-05-30",
+ "venue": "Pine Creek Lodge",
+ "city": "Livingston",
+ "state": "MT",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-30-2026-pine-creek-lodge-livingston-mt-usa.html",
+ "shownotes": "Charlie was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Freeze Dried Brain",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "The Day The Music Came To Me",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Say Something",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Throw It Away",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "You Didn't Hear It From Me",
+     "transition": "->",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Old Folks Boogie",
+     "transition": "",
+     "position": 9,
+     "footnote": "Little Feat",
+     "length_secs": null
+    },
+    {
+     "title": "Postcard",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Rabbit",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Spun",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "No Quarter",
+     "transition": "",
+     "position": 14,
+     "footnote": "Led Zeppelin",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

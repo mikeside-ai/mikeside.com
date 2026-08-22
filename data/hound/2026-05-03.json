@@ -1,0 +1,54 @@
+{
+ "show_date": "2026-05-03",
+ "slug": "2026-05-03",
+ "venue": "Tom Lee Park",
+ "city": "Memphis",
+ "state": "TN",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-3-2026-tom-lee-park-memphis-tn-usa.html",
+ "shownotes": "Performed at RIVERBEAT Music Festival.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Lazy Susan",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bubble",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 5,
+     "footnote": "People Say\" tease",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

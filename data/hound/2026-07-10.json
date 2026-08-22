@@ -1,0 +1,115 @@
+{
+ "show_date": "2026-07-10",
+ "slug": "2026-07-10",
+ "venue": "Lincoln Hill Farms",
+ "city": "Canandaigua",
+ "state": "NY",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-10-2026-lincoln-hill-farms-canandaigua-ny-usa.html",
+ "shownotes": "NONE. (Verified: \"None\" is a real song — it links to go-set.net/song/none.)",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Appleseed",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Nicolette",
+     "transition": "->",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Applesauce",
+     "transition": "->",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "None",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Apeman",
+     "transition": "",
+     "position": 7,
+     "footnote": "The Kinks",
+     "length_secs": null
+    },
+    {
+     "title": "In Your Eyes",
+     "transition": "->",
+     "position": 8,
+     "footnote": "Peter Gabriel",
+     "length_secs": null
+    },
+    {
+     "title": "Go Set",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Unfocused",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "All The Same",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "You Didn't Hear It From Me",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,144 @@
+{
+ "show_date": "2026-06-02",
+ "slug": "2026-06-02",
+ "venue": "Silver Moon Brewing",
+ "city": "Bend",
+ "state": "OR",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-2-2026-silver-moon-brewing-bend-or-usa.html",
+ "shownotes": "During Bent Strange, a power outage occurred. After restoration, the band played some jazz to ensure everything was working before resuming the end of Bent Strange.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Night Train Jam",
+     "transition": "",
+     "position": 2,
+     "footnote": "Jimmy Forrest",
+     "length_secs": null
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Cabbage Alley",
+     "transition": "",
+     "position": 5,
+     "footnote": "The Meters",
+     "length_secs": null
+    },
+    {
+     "title": "Nicolette",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Westward",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Grease",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Appleseed",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Pinball Wizard",
+     "transition": "->",
+     "position": 11,
+     "footnote": "The Who",
+     "length_secs": null
+    },
+    {
+     "title": "Lucia's Secret",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Minnie the Moocher",
+     "transition": "->",
+     "position": 14,
+     "footnote": "Cab Calloway",
+     "length_secs": null
+    },
+    {
+     "title": "Bubble",
+     "transition": "->",
+     "position": 15,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Spain",
+     "transition": "",
+     "position": 16,
+     "footnote": "Chick Corea",
+     "length_secs": null
+    },
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

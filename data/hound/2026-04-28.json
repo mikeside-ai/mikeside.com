@@ -1,0 +1,109 @@
+{
+ "show_date": "2026-04-28",
+ "slug": "2026-04-28",
+ "venue": "Toulouse Theatre",
+ "city": "New Orleans",
+ "state": "LA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-28-2026-toulouse-theatre-new-orleans-la-usa.html",
+ "shownotes": "Soundboard recording available on Bandcamp and Nugs.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Unfocused",
+     "transition": "->",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "The Bag",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Cabbage Alley",
+     "transition": "",
+     "position": 3,
+     "footnote": "FTP, The Meters; \"Hey Pocky A-Way\" tease",
+     "length_secs": null
+    },
+    {
+     "title": "Grease",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Last Train",
+     "transition": "",
+     "position": 7,
+     "footnote": "FTP, Allen Toussaint",
+     "length_secs": null
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Love Having You Around",
+     "transition": "",
+     "position": 9,
+     "footnote": "FTP, Stevie Wonder",
+     "length_secs": null
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 10,
+     "footnote": "When the Saints Go Marching In\" tease",
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "This Little Light of Mine",
+     "transition": "",
+     "position": 11,
+     "footnote": "Harry Dixon Loes",
+     "length_secs": null
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

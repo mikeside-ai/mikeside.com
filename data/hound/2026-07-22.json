@@ -1,0 +1,110 @@
+{
+ "show_date": "2026-07-22",
+ "slug": "2026-07-22",
+ "venue": "Avon Pavilion at Harry A. Nottingham Park",
+ "city": "Avon",
+ "state": "CO",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-22-2026-avon-pavilion-at-harry-a-nottingham-park-avon-co-usa.html",
+ "shownotes": "Performed at AvonLIVE! Concerts in the Park.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Cats Under the Stars",
+     "transition": ">",
+     "position": 3,
+     "footnote": "Jerry Garcia Band",
+     "length_secs": null
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Didn't You Know?",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Lucia's Secret",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Stevie Lew",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "6 Little Lies",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bring It On Up",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Happy Song",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Space Captain",
+     "transition": "",
+     "position": 13,
+     "footnote": "Joe Cocker",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

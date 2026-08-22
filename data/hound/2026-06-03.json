@@ -1,0 +1,130 @@
+{
+ "show_date": "2026-06-03",
+ "slug": "2026-06-03",
+ "venue": "The Ruins",
+ "city": "Hood River",
+ "state": "OR",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-3-2026-the-ruins-hood-river-or-usa.html",
+ "shownotes": "The Bag was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Go Set",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Unfocused",
+     "transition": "->",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Criminal",
+     "transition": "->",
+     "position": 4,
+     "footnote": "Fiona Apple",
+     "length_secs": null
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "116 Days",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Shenanigans",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Walkin' on the Sun",
+     "transition": ">",
+     "position": 8,
+     "footnote": "Smash Mouth",
+     "length_secs": null
+    },
+    {
+     "title": "Spun",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "All The Same",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": "->",
+     "position": 11,
+     "footnote": "Stevie Wonder",
+     "length_secs": null
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 12,
+     "footnote": "Vince Guaraldi",
+     "length_secs": null
+    },
+    {
+     "title": "The Bag",
+     "transition": ">",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Fire",
+     "transition": "",
+     "position": 15,
+     "footnote": "The Jimi Hendrix Experience",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

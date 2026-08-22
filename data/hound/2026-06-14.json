@@ -1,0 +1,103 @@
+{
+ "show_date": "2026-06-14",
+ "slug": "2026-06-14",
+ "venue": "Ventura Music Hall",
+ "city": "Ventura",
+ "state": "CA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-14-2026-ventura-music-hall-ventura-ca-usa.html",
+ "shownotes": null,
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Appleseed",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Hell in a Bucket",
+     "transition": "",
+     "position": 2,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Grease",
+     "transition": ">",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Stranger",
+     "transition": "->",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Around The World",
+     "transition": "->",
+     "position": 7,
+     "footnote": "Daft Punk",
+     "length_secs": null
+    },
+    {
+     "title": "Tillie",
+     "transition": "->",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Criminal",
+     "transition": "->",
+     "position": 9,
+     "footnote": "Fiona Apple",
+     "length_secs": null
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Back to Black",
+     "transition": "",
+     "position": 11,
+     "footnote": "FTP, Amy Winehouse, with Erin Lucid",
+     "length_secs": null
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

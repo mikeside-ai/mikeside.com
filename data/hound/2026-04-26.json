@@ -1,0 +1,143 @@
+{
+ "show_date": "2026-04-26",
+ "slug": "2026-04-26",
+ "venue": "Delmar Hall",
+ "city": "St. Louis",
+ "state": "MO",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-26-2026-delmar-hall-st-louis-mo-usa.html",
+ "shownotes": "Verified setlist; soundboard recording on bandcamp, nugs, and YouTube.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Today",
+     "transition": "->",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "You Didn't Hear It From Me",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "6 Little Lies",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Green Earrings",
+     "transition": "",
+     "position": 5,
+     "footnote": "Steely Dan",
+     "length_secs": null
+    },
+    {
+     "title": "Waiting for the Train",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Tillie",
+     "transition": "->",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bring It On Up",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "So What",
+     "transition": "->",
+     "position": 10,
+     "footnote": "Miles Davis",
+     "length_secs": null
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": ">",
+     "position": 12,
+     "footnote": "Vince Guaraldi",
+     "length_secs": null
+    },
+    {
+     "title": "Lucia's Secret",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Yum T. Dum",
+     "transition": ">",
+     "position": 15,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Fire",
+     "transition": "",
+     "position": 16,
+     "footnote": "The Jimi Hendrix Experience",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

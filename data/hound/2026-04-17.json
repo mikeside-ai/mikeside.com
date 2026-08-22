@@ -1,0 +1,109 @@
+{
+ "show_date": "2026-04-17",
+ "slug": "2026-04-17",
+ "venue": "Aura",
+ "city": "Portland",
+ "state": "ME",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-17-2026-aura-portland-me-usa.html",
+ "shownotes": "Verified setlist. Soundboard recording available on bandcamp and YouTube.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Westward",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Watermelon Man",
+     "transition": "",
+     "position": 3,
+     "footnote": "Herbie Hancock",
+     "length_secs": null
+    },
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 5,
+     "footnote": "Layla\" tease",
+     "length_secs": null
+    },
+    {
+     "title": "Lucia's Secret",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Minnie the Moocher",
+     "transition": "",
+     "position": 7,
+     "footnote": "Cab Calloway",
+     "length_secs": null
+    },
+    {
+     "title": "Creep",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "You Didn't Hear It From Me",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": ">",
+     "position": 10,
+     "footnote": "Ween; \"Play That Funky Music\" tease",
+     "length_secs": null
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "All The Same",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

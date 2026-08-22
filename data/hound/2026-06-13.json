@@ -1,0 +1,143 @@
+{
+ "show_date": "2026-06-13",
+ "slug": "2026-06-13",
+ "venue": "The Guild Theatre",
+ "city": "Menlo Park",
+ "state": "CA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-13-2026-the-guild-theatre-menlo-park-ca-usa.html",
+ "shownotes": "As news of the New York Knicks' 2026 NBA championship victory hit the stage, the band paused its jam to play the iconic theme from New York, New York before seamlessly slipping back into Four More Days.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "The Bag",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Four More Days",
+     "transition": "->",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Theme from New York, New York",
+     "transition": "->",
+     "position": 4,
+     "footnote": "FTP, Liza Minnelli",
+     "length_secs": null
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Fenway",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Men of Steel",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Ugly Song",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Let U Go",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Let Me Go",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Big Man",
+     "transition": "",
+     "position": 12,
+     "footnote": "Ben Schwartzman",
+     "length_secs": null
+    },
+    {
+     "title": "None",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Minnie the Moocher",
+     "transition": "",
+     "position": 14,
+     "footnote": "Cab Calloway",
+     "length_secs": null
+    },
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "show_date": "2026-07-24",
+ "slug": "2026-07-24-2",
+ "venue": "Devil's Craft",
+ "city": "Winter Park",
+ "state": "CO",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-24-2026-devil039s-craft-winter-park-co-usa-2.html",
+ "shownotes": "Performed at Revel After Dark. Late show — second of two this day.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Appleseed",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Cool Water",
+     "transition": "",
+     "position": 3,
+     "footnote": "Bob Nolan",
+     "length_secs": null
+    },
+    {
+     "title": "The Bag",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Unfocused",
+     "transition": "->",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Creep",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Your Party",
+     "transition": "",
+     "position": 9,
+     "footnote": "Ween, featuring Brendan Dowd",
+     "length_secs": null
+    },
+    {
+     "title": "Weightless",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Joseph's Dream",
+     "transition": "",
+     "position": 11,
+     "footnote": "John Hartford, with Torrin Daniels",
+     "length_secs": null
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Spun",
+     "transition": "->",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Stadium Rave",
+     "transition": "",
+     "position": 14,
+     "footnote": "Glenn Nishida and Mark Governor",
+     "length_secs": null
+    },
+    {
+     "title": "Bulls on Parade",
+     "transition": "",
+     "position": 15,
+     "footnote": "Rage Against The Machine, with Torrin Daniels",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

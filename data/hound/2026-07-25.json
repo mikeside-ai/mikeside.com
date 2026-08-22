@@ -1,0 +1,158 @@
+{
+ "show_date": "2026-07-25",
+ "slug": "2026-07-25",
+ "venue": "Arvada Center for the Arts and Humanities",
+ "city": "Arvada",
+ "state": "CO",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-25-2026-arvada-center-for-the-arts-and-humanities-arvada-co-usa.html",
+ "shownotes": null,
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bring It On Up",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "You Didn't Hear It From Me",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Men of Steel",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Little Things",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Happy Song",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Say Something",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Craig and Pat",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Ghost Riders in the Sky",
+     "transition": "->",
+     "position": 10,
+     "footnote": "Stan Jones",
+     "length_secs": null
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Fenway",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "White Rabbit",
+     "transition": ">",
+     "position": 14,
+     "footnote": "Jefferson Airplane",
+     "length_secs": null
+    },
+    {
+     "title": "6 Little Lies",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Drive My Car",
+     "transition": "",
+     "position": 16,
+     "footnote": "The Beatles",
+     "length_secs": null
+    },
+    {
+     "title": "Moon of Colorado",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Westward",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 19,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,129 @@
+{
+ "show_date": "2026-01-17",
+ "slug": "2026-01-17",
+ "venue": "Belly Up",
+ "city": "Solana Beach",
+ "state": "CA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-january-17-2026-belly-up-solana-beach-ca-usa.html",
+ "shownotes": "Verified setlist. Opening Band(s): Where's West? Soundboard recording available on bandcamp and nugs.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "The Music Never Stopped",
+     "transition": ">",
+     "position": 1,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Happy Song",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": "",
+     "position": 6,
+     "footnote": "Ween",
+     "length_secs": null
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Psychobilly Freakout",
+     "transition": "",
+     "position": 10,
+     "footnote": "The Reverend Horton Heat",
+     "length_secs": null
+    },
+    {
+     "title": "Earthbound Man",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Tillie",
+     "transition": "->",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Say Something",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

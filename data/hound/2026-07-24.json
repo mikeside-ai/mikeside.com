@@ -1,0 +1,54 @@
+{
+ "show_date": "2026-07-24",
+ "slug": "2026-07-24",
+ "venue": "Rendezvous Event Center",
+ "city": "Winter Park",
+ "state": "CO",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-24-2026-rendezvous-event-center-winter-park-co-usa.html",
+ "shownotes": "Performed at Revel in the Park. Early show — first of two this day.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Shenanigans",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Greta",
+     "transition": ">",
+     "position": 3,
+     "footnote": "Widespread Panic",
+     "length_secs": null
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "The Day The Music Came To Me",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

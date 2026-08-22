@@ -1,0 +1,137 @@
+{
+ "show_date": "2026-06-10",
+ "slug": "2026-06-10",
+ "venue": "The Junction",
+ "city": "Mill Valley",
+ "state": "CA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-10-2026-the-junction-mill-valley-ca-usa.html",
+ "shownotes": "Nicolette was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Can't Wait for Tonight",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Throw It Away",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Nicolette",
+     "transition": "->",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Old Folks Boogie",
+     "transition": "",
+     "position": 4,
+     "footnote": "Little Feat",
+     "length_secs": null
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "The Day The Music Came To Me",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "G Song",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Say Something",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Westward",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "You Didn't Hear It From Me",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Shenanigans",
+     "transition": "",
+     "position": 12,
+     "footnote": "With Jason Crosby",
+     "length_secs": null
+    },
+    {
+     "title": "Cassidy",
+     "transition": "",
+     "position": 13,
+     "footnote": "Bob Weir, with Jason Crosby",
+     "length_secs": null
+    },
+    {
+     "title": "The Devil Went Down to Georgia",
+     "transition": "",
+     "position": 14,
+     "footnote": "The Charlie Daniels Band, with Jason Crosby",
+     "length_secs": null
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Jessica",
+     "transition": "",
+     "position": 16,
+     "footnote": "The Allman Brothers Band",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

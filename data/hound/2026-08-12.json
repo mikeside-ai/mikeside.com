@@ -1,0 +1,129 @@
+{
+ "show_date": "2026-08-12",
+ "slug": "2026-08-12",
+ "venue": "Redstone Room",
+ "city": "Davenport",
+ "state": "IA",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-august-12-2026-redstone-room-davenport-ia-usa.html",
+ "shownotes": null,
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Happy Song",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bring It On Up",
+     "transition": "->",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Samson and Delilah",
+     "transition": "",
+     "position": 4,
+     "footnote": "Traditional",
+     "length_secs": null
+    },
+    {
+     "title": "116 Days",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Rabbit",
+     "transition": "->",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Smokestack Lightning",
+     "transition": "->",
+     "position": 8,
+     "footnote": "Howlin' Wolf",
+     "length_secs": null
+    },
+    {
+     "title": "Fever",
+     "transition": ">",
+     "position": 9,
+     "footnote": "The Cramps",
+     "length_secs": null
+    },
+    {
+     "title": "Earthbound Man",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "It Gets Better",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Lucia's Secret",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,122 @@
+{
+ "show_date": "2026-04-23",
+ "slug": "2026-04-23",
+ "venue": "Bell's Eccentric Cafe",
+ "city": "Kalamazoo",
+ "state": "MI",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-23-2026-bells-eccentric-cafe-kalamazoo-mi-usa.html",
+ "shownotes": "Verified setlist. Soundboard recordings available on Bandcamp, Nugs, and YouTube.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Crazy",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "->",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": ">",
+     "position": 8,
+     "footnote": "Bugle on the Shelf\" tease",
+     "length_secs": null
+    },
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Grease",
+     "transition": "",
+     "position": 10,
+     "footnote": "HOT TO GO!\" tease in Appleseed",
+     "length_secs": null
+    },
+    {
+     "title": "Appleseed",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Fire",
+     "transition": "",
+     "position": 12,
+     "footnote": "The Jimi Hendrix Experience",
+     "length_secs": null
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Inchworm",
+     "transition": "",
+     "position": 13,
+     "footnote": "Bustout (22 shows)",
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}

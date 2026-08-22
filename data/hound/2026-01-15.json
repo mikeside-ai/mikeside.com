@@ -1,0 +1,82 @@
+{
+ "show_date": "2026-01-15",
+ "slug": "2026-01-15",
+ "venue": "La Rosa",
+ "city": "Tucson",
+ "state": "AZ",
+ "complete": true,
+ "transcribed": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-january-15-2026-la-rosa-tucson-az-usa.html",
+ "shownotes": "Opening for Leftover Salmon.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Jack Straw",
+     "transition": "",
+     "position": 1,
+     "footnote": "Grateful Dead",
+     "length_secs": null
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Let U Go",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Lucia's Secret",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null
+    },
+    {
+     "title": "Joseph's Dream",
+     "transition": "",
+     "position": 8,
+     "footnote": "John Hartford, with Vince Herman",
+     "length_secs": null
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null
+    }
+   ]
+  }
+ ]
+}
