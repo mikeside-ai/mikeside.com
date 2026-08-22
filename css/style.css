@@ -220,22 +220,22 @@ footer {
   overflow: hidden;
 }
 .ticker-badge {
-  flex: none; padding: 0.45rem 0.9rem;
+  flex: none; padding: 0.7rem 1rem;
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+  font-size: 0.85rem; font-weight: 700; letter-spacing: 0.14em;
   color: var(--jumpsuit); background: rgba(245, 197, 66, 0.08);
   border-right: 1px solid var(--border); white-space: nowrap;
 }
 .ticker-viewport { flex: 1; overflow: hidden; }
 .ticker-track {
-  display: inline-flex; gap: 3rem; padding: 0.45rem 0;
+  display: inline-flex; gap: 3rem; padding: 0.7rem 0;
   white-space: nowrap; will-change: transform;
   animation: ticker-scroll 80s linear infinite;
 }
 .ticker:hover .ticker-track { animation-play-state: paused; }
 .ticker-track a {
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-  font-size: 0.78rem; letter-spacing: 0.04em;
+  font-size: 0.95rem; letter-spacing: 0.04em;
   color: var(--jumpsuit); opacity: 0.92; text-decoration: none;
   text-shadow: 0 0 12px rgba(245, 197, 66, 0.35);
 }
@@ -303,5 +303,7 @@ footer {
 
 @media (max-width: 780px) {
   .grid.bots { grid-template-columns: 1fr; }
-  .ticker-badge { padding: 0.45rem 0.6rem; }
+  .ticker-badge { padding: 0.8rem 0.7rem; font-size: 0.9rem; }
+  .ticker-track { padding: 0.85rem 0; animation-duration: 55s; }
+  .ticker-track a { font-size: 1.05rem; }
 }
