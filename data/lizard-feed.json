@@ -1,0 +1,13 @@
+{
+  "_comment": "Feed for the front-page ticker. The countdown item is computed by js/main.js from countdown.date. To refresh the ticker, edit items[] here - each item is one marquee entry. Keep texts short (one line). This file is hand-curated from @SetlistLizard posts for now; the bot could write it directly some day.",
+  "updated": "2026-08-22",
+  "countdown": { "label": "DAYS TO DICK'S", "date": "2026-09-04", "href": "https://x.com/SetlistLizard" },
+  "items": [
+    { "text": "Remember when Phish fans rigged a Rolling Stone poll and voted LUSHINGTON the greatest Phish song? 8/29/14 at Dick's: L-U-S-H-I-N-G-T-O-N", "href": "https://x.com/SetlistLizard" },
+    { "text": "8/31/12 - Phish opened Dick's with 12 songs that spelled out a message. Look it up.", "href": "https://x.com/SetlistLizard" },
+    { "text": "#16DaysToDicks #Camelwalk #HumpDay", "href": "https://x.com/SetlistLizard" },
+    { "text": "Follow @SetlistLizard for live Phish setlists, one song at a time - data via Phish.net", "href": "https://x.com/SetlistLizard" },
+    { "text": "@SetlistHound is in the yard warming up - Dogs in a Pile setlists, first bark soon", "href": "https://x.com/SetlistHound" },
+    { "text": "Billy Strings: always doin' things", "href": "https://www.billystrings.com" }
+  ]
+}
