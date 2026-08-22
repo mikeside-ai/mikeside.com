@@ -2,24 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<script>
-/* CANONICAL HOST GUARD (2026-07-26) — must stay first in <head>.
-   This site answers on TWO URLs: supmaine.mikeside.com (canonical) and
-   mikeside.com/supmaine/. The Google Places key is HTTP-referrer-restricted
-   to supmaine.mikeside.com/*, so on the mikeside.com/supmaine/ path EVERY
-   photo request is rejected ("Requests from referer https://mikeside.com/
-   are blocked") while the rest of the page works perfectly — which is
-   exactly what "the photos are gone" looked like. Bookmarks on the wrong
-   URL are now redirected instead of silently losing all imagery. */
-(function () {
-  var h = location.hostname;
-  if (h === 'mikeside.com' || h === 'www.mikeside.com') {
-    var p = location.pathname.replace(/^\/supmaine(\/|$)/, '/');
-    location.replace('https://supmaine.mikeside.com' + p + location.search + location.hash);
-  }
-})();
-</script>
-<link rel="canonical" href="https://supmaine.mikeside.com/">
+<!-- CANONICAL HOST GUARD REMOVED 2026-08-22 — supmaine.mikeside.com was retired
+     with the old Porkbun subdomain hosting. This site now lives only at
+     mikeside.com/supmaine/. NOTE: the Google Places key is still HTTP-referrer
+     restricted to supmaine.mikeside.com/*, so photo strips will not load until
+     that restriction is updated to mikeside.com/* in Google Cloud. -->
+<link rel="canonical" href="https://mikeside.com/supmaine/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maine — Wedding + Coastal Adventure · Aug 4–11, 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -160,7 +148,7 @@ img,svg,video,iframe{max-width:100%}
 <div class="pack-section" id="pack-section"></div>
 <footer>
   <span>Kravchuk / Moffett expedition</span>
-  <span>chart no. 2026-ME · live at supmaine.mikeside.com</span>
+  <span>chart no. 2026-ME · archived at mikeside.com/supmaine</span>
 </footer>
 
 </div>
