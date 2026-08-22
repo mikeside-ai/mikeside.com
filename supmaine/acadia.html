@@ -2,16 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<script>
-/* CANONICAL HOST GUARD — must stay first in <head>. See index.html for why. */
-(function () {
-  var h = location.hostname;
-  if (h === 'mikeside.com' || h === 'www.mikeside.com') {
-    var p = location.pathname.replace(/^\/supmaine(\/|$)/, '/');
-    location.replace('https://supmaine.mikeside.com' + p + location.search + location.hash);
-  }
-})();
-</script>
+<!-- CANONICAL HOST GUARD REMOVED 2026-08-22 — supmaine.mikeside.com was retired
+     with the old Porkbun subdomain hosting. This site now lives only at
+     mikeside.com/supmaine/. NOTE: the Google Places key is still HTTP-referrer
+     restricted to supmaine.mikeside.com/*, so photo strips will not load until
+     that restriction is updated to mikeside.com/* in Google Cloud. -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Acadia — Thursday Aug 6 · routes, places, photo ops</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
