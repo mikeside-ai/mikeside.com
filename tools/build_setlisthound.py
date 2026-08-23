@@ -204,7 +204,7 @@ def render_show(p: dict, prev: dict | None, nxt: dict | None) -> str:
 
     body = f"""    <section class="block" style="border-top:none;">
       <div class="container">
-        <div class="crumb"><a href="/setlisthound-with/">Setlist Hound</a> · Dogs in a Pile</div>
+        <div class="crumb"><a href="/setlisthound-with/">Setlist Hound</a> · <a href="/setlisthound-with/stats/">Stats</a> · Dogs in a Pile</div>
         <div class="section-head">
           <span class="setno">{e(d_long(p["show_date"]))}</span>
           <h2>{e(p.get("venue", ""))}</h2>
@@ -253,7 +253,7 @@ def render_index(payloads: list[dict]) -> str:
 
     body = f"""    <section class="block" style="border-top:none;">
       <div class="container">
-        <div class="crumb"><a href="/#set-ii">Set II</a> · Setlist Hound</div>
+        <div class="crumb"><a href="/#set-ii">Set II</a> · Setlist Hound · <a href="/setlisthound-with/stats/">Stats</a></div>
         <div class="section-head">
           <span class="setno">Setlist Hound</span>
           <h2>Dogs in a Pile, song by song</h2>
@@ -347,6 +347,142 @@ def render_index(payloads: list[dict]) -> str:
     return shell(title, desc, "https://mikeside.com/setlisthound-with/", body, og_type="website")
 
 
+STATS_EXCLUDED = {"2026-03-18", "2026-04-20"}   # all-Dead specials; see page note
+
+
+def compute_stats(payloads: list) -> dict:
+    """Counts this archive can honestly claim. Nothing here replicates go-set's
+    own gap chart or play-count stats — those are the band's, computed from
+    their full history; these are counts of THIS year's 74 tracked shows."""
+    import collections
+    import re as _re
+
+    plays = collections.Counter()
+    covers = collections.Counter()
+    openers = collections.Counter()
+    closers = collections.Counter()
+    dead_special = 0
+    total_songs = total_sand = 0
+    venues = set()
+    months = collections.Counter()
+    biggest = ("", "", 0)
+
+    for p in payloads:
+        excluded = p["show_date"] in STATS_EXCLUDED
+        months[datetime.strptime(p["show_date"], "%Y-%m-%d").strftime("%b")] += 1
+        venues.add(p.get("venue", ""))
+        n = 0
+        for st in p["sets"]:
+            songs = st["songs"]
+            n += len(songs)
+            for s in songs:
+                plays[s["title"]] += 1
+                fn = s.get("footnote") or ""
+                if fn and not _re.search(r"tease|ending only|unfinished|with |featuring|debut$", fn, _re.I):
+                    artist = _re.sub(r"^FTP,\s*", "", fn)
+                    artist = _re.sub(r"[;,]\s*(with|featuring).*$", "", artist, flags=_re.I)
+                    artist = _re.sub(r";.*$", "", artist).strip()
+                    if excluded and artist in ("Grateful Dead", "Bob Weir", "Jerry Garcia"):
+                        dead_special += 1
+                    else:
+                        covers[artist] += 1
+        first = p["sets"][0]["songs"]
+        last = p["sets"][-1]["songs"]
+        if first:
+            openers[first[0]["title"]] += 1
+        if last:
+            closers[last[-1]["title"]] += 1
+        if n > biggest[2]:
+            biggest = (p["show_date"], p.get("venue", ""), n)
+        total_songs += n
+        total_sand += sandwiches(p)
+
+    return {
+        "shows": len(payloads), "performances": total_songs,
+        "unique": len(plays), "venues": len(venues), "sandwiches": total_sand,
+        "plays": plays.most_common(15), "covers": covers.most_common(12),
+        "openers": openers.most_common(8), "closers": closers.most_common(8),
+        "months": months, "biggest": biggest, "dead_special": dead_special,
+    }
+
+
+def _bars(rows: list, total_label: str) -> str:
+    """The site's own .plc bar pattern — label, proportional bar, count."""
+    if not rows:
+        return ""
+    top = rows[0][1]
+    out = ""
+    for name, n in rows:
+        pct = max(4, round(100 * n / top))
+        out += (f'<div class="plc"><span class="pl" style="width:11rem;'
+                f'text-transform:none;letter-spacing:0;font-size:.88rem;">{e(name)}</span>'
+                f'<span class="pbar"><i style="width:{pct}%"></i></span>'
+                f'<span class="pn">{n}</span></div>')
+    return (f'<div class="tube" style="width:100%"><span class="lab">{e(total_label)}</span>{out}</div>')
+
+
+def render_stats(payloads: list) -> str:
+    s = compute_stats(payloads)
+    glance_html = '<div class="glance">' + "".join(
+        f'<div class="stat"><div class="n">{v}</div><div class="l">{l}</div></div>'
+        for v, l in [
+            (s["shows"], "Shows"), (s["performances"], "Song performances"),
+            (s["unique"], "Different songs"), (s["venues"], "Venues"),
+            (s["sandwiches"], "Sandwiches"),
+        ]) + "</div>"
+
+    months_order = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug",
+                    "Sep", "Oct", "Nov", "Dec"]
+    month_rows = [(m, s["months"][m]) for m in months_order if s["months"].get(m)]
+    top_m = max(n for _, n in month_rows)
+    months_html = '<div class="tube" style="width:100%"><span class="lab">Shows per month</span>' + "".join(
+        f'<div class="plc"><span class="pl">{m}</span>'
+        f'<span class="pbar"><i style="width:{max(4, round(100 * n / top_m))}%"></i></span>'
+        f'<span class="pn">{n}</span></div>' for m, n in month_rows) + (
+        f'<p class="cav">Biggest night: {e(d_long(s["biggest"][0]))} at '
+        f'{e(s["biggest"][1])} — {s["biggest"][2]} songs.</p></div>')
+
+    covers_note = (
+        f'<p class="cav">Counted from cover credits on each show page. Two special '
+        f'shows are excluded — the 4/20 "Dogs Play Dead" launch party and a private '
+        f'all-Dead set ({s["dead_special"]} more Dead-family covers between them) — '
+        f'because leaving them in would say more about two setlists than about a year '
+        f'of shows.</p>')
+
+    body = f"""    <section class="block" style="border-top:none;">
+      <div class="container">
+        <div class="crumb"><a href="/setlisthound-with/">Setlist Hound</a> · Stats</div>
+        <div class="section-head">
+          <span class="setno">2026 in numbers</span>
+          <h2>A year of Dogs in a Pile, counted</h2>
+          <p>Every number below comes from the {s["shows"]} shows in this archive —
+             transcribed from <a href="https://go-set.net" rel="noopener">go-set.net</a>,
+             which is run by the band. For all-time play counts and gap charts, go-set
+             itself is the authority; this page counts <em>this year</em>.</p>
+        </div>
+        {glance_html}
+        <div style="display:flex;flex-direction:column;gap:1rem;max-width:820px;margin:1.4rem auto 0;">
+          {_bars(s["plays"], "Most played, 2026")}
+          <div>{_bars(s["covers"], "Most covered artists")}{covers_note}</div>
+          {_bars(s["openers"], "Favorite openers")}
+          {_bars(s["closers"], "Favorite closers")}
+          {months_html}
+        </div>
+        <div class="srcline">
+          Setlist data: <a href="https://go-set.net" rel="noopener">go-set.net</a> ·
+          counts regenerate as shows are added<br />
+          <a href="https://x.com/SetlistHound" rel="noopener">🐕 @SetlistHound on X</a> ·
+          <a href="/setlisthound-with/">all shows</a> · <a href="/#set-ii">← Set II</a><br />
+          A fan project — not affiliated with Dogs in a Pile.
+        </div>
+      </div>
+    </section>"""
+    return shell("Setlist Hound — 2026 tour stats",
+                 "Dogs in a Pile 2026 by the numbers: most played songs, most covered "
+                 "artists, openers, closers, sandwiches — from 74 tracked shows.",
+                 "https://mikeside.com/setlisthound-with/stats/", body)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=str(ROOT))
@@ -370,6 +506,10 @@ def main() -> int:
         out.write_text(render_show(p, prev, nxt))
 
     (out_root / "index.html").write_text(render_index(payloads))
+
+    stats_dir = out_root / "stats"
+    stats_dir.mkdir(parents=True, exist_ok=True)
+    (stats_dir / "index.html").write_text(render_stats(payloads))
 
     # The live-feed target. Ships as the latest archived show (complete:true,
     # so the board renders FINAL); the bot overwrites it during shows.
