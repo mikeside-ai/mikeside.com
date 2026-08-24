@@ -159,8 +159,12 @@ def song_line(song: dict, notes: list[str]) -> str:
         tr_html = ' <span class="tr">-&gt;</span>'
     t = (f'<a class="song-t" href="/setlisthound-with/song/{slug(song["title"])}/">'
          f'{e(song["title"])}</a>')
+    ln = ""
+    if song.get("length_secs"):
+        m, s = divmod(int(song["length_secs"]), 60)
+        ln = f'<span class="len">{m}:{s:02d}</span>'
     return (f'<li class="srow"><div class="sline">'
-            f'<span>{t}{mark}{tr_html}</span>'
+            f'<span>{t}{mark}{tr_html}</span>{ln}'
             f"</div></li>")
 
 
@@ -219,7 +223,10 @@ def render_show(p: dict, prev: dict | None, nxt: dict | None) -> str:
 
     prov = ""
     src = p.get("source_url", "https://go-set.net")
-    if p.get("transcribed"):
+    if p.get("api_captured"):
+        prov = (f'from the band’s own data at <a href="{e(src)}" rel="noopener">go-set.net</a> · '
+                f"song lengths, where shown, are the band’s timings")
+    elif p.get("transcribed"):
         prov = (f'transcribed from the public setlist at <a href="{e(src)}" rel="noopener">go-set.net</a>, '
                 f"which is run by the band · lengths appear once the bot tracks shows live")
     else:
@@ -673,10 +680,11 @@ def render_credits(n_shows: int) -> str:
             <p>The band's crew types each song into go-set during the show; the bot picks it up and
                posts. So the honest answer is: as live as a human typing plus a short delay. Song
                times shown anywhere are when a song reached the feed, not the downbeat.</p></div>
-          <div class="qa"><h3>Why no song lengths?</h3>
-            <p>Shows archived before the bot went live carry no lengths because nobody measured
-               them — and we won't invent numbers. Once the bot tracks shows live, lengths appear
-               as estimates, clearly marked.</p></div>
+          <div class="qa"><h3>Where do song lengths come from?</h3>
+            <p>Where a length is shown on an archived show, it's the band's own timing from
+               go-set — we display it, we never invent it. Songs without a timing simply show
+               none. Once the bot tracks shows live, live lengths appear as estimates, clearly
+               marked.</p></div>
           <div class="qa"><h3>Something's wrong on a page.</h3>
             <p>Every show page links its go-set source — the band's page is the authority. Pre-bot
                pages were transcribed and a transcription can carry a typo; tell us and we'll fix
