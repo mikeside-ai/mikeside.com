@@ -35,6 +35,28 @@ FONTS = ('<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wgh
 SUPS = "¹²³⁴⁵⁶⁷⁸⁹"
 
 
+def slug(title: str) -> str:
+    """Internal song slug. Our own namespace (/setlisthound-with/song/<slug>/),
+    not go-set's — theirs is unverified; ours only has to be stable."""
+    s = title.lower()
+    s = re.sub(r"[\u2018\u2019']", "", s)
+    s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
+    return s or "untitled"
+
+
+def cover_credit(fn: str):
+    """A footnote that reads as a cover credit, normalised — or None.
+    Same conventions as the stats page: skip teases/endings/guest-only notes."""
+    if not fn or re.search(r"tease|ending only|unfinished|^with |^featuring", fn, re.I):
+        return None
+    artist = re.sub(r"^FTP,\s*", "", fn)
+    artist = re.sub(r"[;,]\s*(with|featuring).*$", "", artist, flags=re.I)
+    artist = re.sub(r";.*$", "", artist).strip()
+    if not artist or len(artist) > 40 or re.search(r'[.!?"]', artist):
+        return None
+    return artist
+
+
 def sup(n: int) -> str:
     return SUPS[n - 1] if 1 <= n <= 9 else f"({n})"
 
@@ -135,8 +157,10 @@ def song_line(song: dict, notes: list[str]) -> str:
         tr_html = ' <span class="tr">&gt;</span>'
     elif tr == "->":
         tr_html = ' <span class="tr">-&gt;</span>'
+    t = (f'<a class="song-t" href="/setlisthound-with/song/{slug(song["title"])}/">'
+         f'{e(song["title"])}</a>')
     return (f'<li class="srow"><div class="sline">'
-            f'<span>{e(song["title"])}{mark}{tr_html}</span>'
+            f'<span>{t}{mark}{tr_html}</span>'
             f"</div></li>")
 
 
@@ -204,7 +228,7 @@ def render_show(p: dict, prev: dict | None, nxt: dict | None) -> str:
 
     body = f"""    <section class="block" style="border-top:none;">
       <div class="container">
-        <div class="crumb"><a href="/setlisthound-with/">Setlist Hound</a> · <a href="/setlisthound-with/stats/">Stats</a> · Dogs in a Pile</div>
+        <div class="crumb"><a href="/setlisthound-with/">Setlist Hound</a> · <a href="/setlisthound-with/stats/">Stats</a> · <a href="/setlisthound-with/credits/">Credits &amp; FAQ</a></div>
         <div class="section-head">
           <span class="setno">{e(d_long(p["show_date"]))}</span>
           <h2>{e(p.get("venue", ""))}</h2>
@@ -214,6 +238,12 @@ def render_show(p: dict, prev: dict | None, nxt: dict | None) -> str:
         {pager(prev, nxt, top=True)}
         <div class="board">{blocks}{fnlist}{shownote}</div>
         {pager(prev, nxt)}
+        <div class="srcs" style="margin-top:2rem;">
+          <a href="{e(src)}" rel="noopener">go-set.net<span class="w">The band's own setlist page — the source</span></a>
+          <a href="https://dogsinapile.bandcamp.com" rel="noopener">Bandcamp<span class="w">Soundboards, when the band posts them</span></a>
+          <a href="https://www.nugs.net/artist/dogs-in-a-pile" rel="noopener">nugs.net<span class="w">Official live recordings</span></a>
+          <a href="https://jampicks.net" rel="noopener">JamPicks<span class="w">Play the setlist game</span></a>
+        </div>
         <div class="srcline">
           Setlist data: <a href="https://go-set.net" rel="noopener">go-set.net</a> · {prov}<br />
           <a href="https://x.com/SetlistHound" rel="noopener">🐕 @SetlistHound on X</a> ·
@@ -483,6 +513,126 @@ def render_stats(payloads: list) -> str:
                  "https://mikeside.com/setlisthound-with/stats/", body)
 
 
+def collect_songs(payloads: list) -> dict:
+    """slug -> {title, plays: [(payload, set_display, position_in_set)], covers}."""
+    songs: dict = {}
+    for pay in reversed(payloads):          # chronological
+        for st in pay["sets"]:
+            for i, s in enumerate(st["songs"], start=1):
+                sl = slug(s["title"])
+                entry = songs.setdefault(sl, {"title": s["title"], "plays": [], "credits": set()})
+                entry["plays"].append((pay, st.get("display") or st.get("label"), i))
+                c = cover_credit(s.get("footnote") or "")
+                if c:
+                    entry["credits"].add(c)
+    return songs
+
+
+def render_song(sl: str, info: dict) -> str:
+    title = info["title"]
+    n = len(info["plays"])
+    first = info["plays"][0][0]
+    last = info["plays"][-1][0]
+    credit = ""
+    if info["credits"]:
+        names = sorted(info["credits"])
+        credit = (f'<p style="color:var(--muted);">Originally performed by '
+                  f'{e(" / ".join(names))}.</p>')
+
+    rows = ""
+    for pay, set_disp, pos in reversed(info["plays"]):     # newest first
+        pslug = pay.get("slug", pay["show_date"])
+        rows += (f'<a class="vrow" href="/setlisthound-with/{pslug}/"><div class="vtop">'
+                 f'<span class="vd">{e(d_short(pay["show_date"]))}</span>'
+                 f'<span class="vv">{e(pay.get("venue", ""))} — {e(loc(pay))}</span>'
+                 f'<span class="vs">{e(set_disp)} · #{pos}</span>'
+                 f"</div></a>")
+
+    body = f"""    <section class="block" style="border-top:none;">
+      <div class="container">
+        <div class="crumb"><a href="/setlisthound-with/">Setlist Hound</a> · Songs · {e(title)}</div>
+        <div class="section-head">
+          <span class="setno">Song</span>
+          <h2>{e(title)}</h2>
+          <p>Played <strong>{n}</strong> time{"s" if n != 1 else ""} in 2026 —
+             first {e(d_short(first["show_date"]))}, most recently {e(d_short(last["show_date"]))}.
+             Counts are from this archive; all-time numbers live at
+             <a href="https://go-set.net">go-set.net</a>.</p>
+        </div>
+        {credit}
+        <div class="board" style="margin-top:1rem;"><div class="vlist">{rows}</div></div>
+        <div class="srcline">
+          <a href="/setlisthound-with/">all shows</a> ·
+          <a href="/setlisthound-with/stats/">stats</a> ·
+          <a href="https://x.com/SetlistHound" rel="noopener">@SetlistHound on X</a>
+        </div>
+      </div>
+    </section>"""
+    return shell(f"{title} — Setlist Hound",
+                 f"Every 2026 Dogs in a Pile performance of {title}, one row per show.",
+                 f"https://mikeside.com/setlisthound-with/song/{sl}/", body)
+
+
+def render_credits(n_shows: int) -> str:
+    body = f"""    <section class="block" style="border-top:none;">
+      <div class="container">
+        <div class="crumb"><a href="/setlisthound-with/">Setlist Hound</a> · Credits &amp; FAQ</div>
+        <div class="section-head">
+          <span class="setno">Credits</span>
+          <h2>Who makes this possible</h2>
+        </div>
+        <div class="credit">
+          <div class="credit-k">The source</div>
+          <a class="credit-n" href="https://go-set.net" rel="noopener">go-set.net</a>
+          <p>Run by Dogs in a Pile themselves. Every setlist here comes from it, and during
+             shows their crew enters songs in real time — which is the single fact that makes
+             a live bot possible. If you like this, thank them, not us.</p>
+        </div>
+        <div class="credit">
+          <div class="credit-k">The band</div>
+          <a class="credit-n" href="https://dogsinapileofficial.com" rel="noopener">Dogs in a Pile</a>
+          <p>This is a fan project and is not affiliated with the band. Buy a ticket, buy the
+             soundboards on <a href="https://dogsinapile.bandcamp.com" rel="noopener">Bandcamp</a>
+             and <a href="https://www.nugs.net/artist/dogs-in-a-pile" rel="noopener">nugs</a>.</p>
+        </div>
+        <div class="section-head" style="margin-top:2.5rem;">
+          <span class="setno">FAQ</span>
+          <h2>Fair questions</h2>
+        </div>
+        <div class="faq">
+          <div class="qa"><h3>What is this?</h3>
+            <p>{n_shows} Dogs in a Pile shows from 2026, one page per show — and a bot,
+               <a href="https://x.com/SetlistHound" rel="noopener">@SetlistHound</a>, that will post
+               each song to X as it's played, the way its sibling
+               <a href="https://x.com/SetlistLizard" rel="noopener">@SetlistLizard</a> does for Phish.</p></div>
+          <div class="qa"><h3>How live is "live"?</h3>
+            <p>The band's crew types each song into go-set during the show; the bot picks it up and
+               posts. So the honest answer is: as live as a human typing plus a short delay. Song
+               times shown anywhere are when a song reached the feed, not the downbeat.</p></div>
+          <div class="qa"><h3>Why no song lengths?</h3>
+            <p>Shows archived before the bot went live carry no lengths because nobody measured
+               them — and we won't invent numbers. Once the bot tracks shows live, lengths appear
+               as estimates, clearly marked.</p></div>
+          <div class="qa"><h3>Something's wrong on a page.</h3>
+            <p>Every show page links its go-set source — the band's page is the authority. Pre-bot
+               pages were transcribed and a transcription can carry a typo; tell us and we'll fix
+               it against the source.</p></div>
+          <div class="qa"><h3>Can I play along?</h3>
+            <p>Yes — <a href="https://jampicks.net" rel="noopener">JamPicks</a> is the setlist
+               prediction game. Pick your songs before the show and see how you did.</p></div>
+        </div>
+        <div class="srcline">
+          <a href="/setlisthound-with/">all shows</a> ·
+          <a href="/setlisthound-with/stats/">stats</a> ·
+          <a href="/#set-ii">← Set II</a>
+        </div>
+      </div>
+    </section>"""
+    return shell("Setlist Hound — credits & FAQ",
+                 "Who makes the Dogs in a Pile setlist bot possible, and fair questions answered.",
+                 "https://mikeside.com/setlisthound-with/credits/", body)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=str(ROOT))
@@ -492,7 +642,7 @@ def main() -> int:
 
     payloads = []
     for f in sorted(DATA.glob("*.json")):
-        p = json.loads(f.read_text())
+        p = json.loads(f.read_text(encoding="utf-8"))
         if p.get("show_date") and p.get("sets"):
             payloads.append(p)
     payloads.sort(key=lambda p: (p["show_date"], p.get("slug", p["show_date"])), reverse=True)
@@ -503,19 +653,30 @@ def main() -> int:
         nxt = chrono[i + 1] if i + 1 < len(chrono) else None
         out = out_root / p.get("slug", p["show_date"]) / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(render_show(p, prev, nxt))
+        out.write_text(render_show(p, prev, nxt), encoding="utf-8")
 
-    (out_root / "index.html").write_text(render_index(payloads))
+    (out_root / "index.html").write_text(render_index(payloads), encoding="utf-8")
 
     stats_dir = out_root / "stats"
     stats_dir.mkdir(parents=True, exist_ok=True)
-    (stats_dir / "index.html").write_text(render_stats(payloads))
+    (stats_dir / "index.html").write_text(render_stats(payloads), encoding="utf-8")
+
+    songs = collect_songs(payloads)
+    for sl, info in songs.items():
+        d = out_root / "song" / sl
+        d.mkdir(parents=True, exist_ok=True)
+        (d / "index.html").write_text(render_song(sl, info), encoding="utf-8")
+
+    cr = out_root / "credits"
+    cr.mkdir(parents=True, exist_ok=True)
+    (cr / "index.html").write_text(render_credits(len(payloads)), encoding="utf-8")
+    print(f"  + {len(songs)} song pages, credits page")
 
     # The live-feed target. Ships as the latest archived show (complete:true,
     # so the board renders FINAL); the bot overwrites it during shows.
     latest = dict(payloads[0])
     latest["updated_at"] = "2026-08-16T04:00:00+00:00"
-    (out_root / "setlist.json").write_text(json.dumps(latest, indent=1, ensure_ascii=False))
+    (out_root / "setlist.json").write_text(json.dumps(latest, indent=1, ensure_ascii=False), encoding="utf-8")
 
     print(f"built {len(payloads)} show pages + index + setlist.json into {out_root}")
     return 0
