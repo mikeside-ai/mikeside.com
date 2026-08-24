@@ -44,8 +44,39 @@ def slug(title: str) -> str:
     return s or "untitled"
 
 
+CUSTOM = "_custom_"   # go-set's free-text entry (song_id 1): real, not repertoire
+
+
+def song_key(song: dict):
+    """The stable key for a song, or None if it should not get a song page.
+
+    go-set's own ``slug`` is 1:1 with its ``song_id`` (verified across 4000
+    rows) and survives title typos -- "Bend Strange" and "Bent Strange" share
+    slug ``bent-strange``. Prefer it. Fall back to a title slug only for
+    payloads captured before we carried the field.
+    """
+    gs = song.get("song_slug")
+    if gs == CUSTOM:
+        return None                      # one-offs: shown, never aggregated
+    return gs or slug(song["title"])
+
+
+def cover_artist(song: dict):
+    """The original artist for a cover, or None.
+
+    go-set carries this as a FIELD (``original_artist``), verified populated on
+    1132 of 1138 covers across the archive. Prefer it absolutely: the footnote
+    regex below is guesswork that survives only for pre-API transcriptions.
+    """
+    a = song.get("original_artist")
+    if a:
+        return str(a).strip() or None
+    return cover_credit(song.get("footnote") or "")
+
+
 def cover_credit(fn: str):
-    """A footnote that reads as a cover credit, normalised — or None.
+    """FALLBACK ONLY: read a cover credit out of footnote prose.
+    Used for payloads captured before ``original_artist`` was available.
     Same conventions as the stats page: skip teases/endings/guest-only notes."""
     if not fn or re.search(r"tease|ending only|unfinished|^with |^featuring", fn, re.I):
         return None
@@ -157,8 +188,9 @@ def song_line(song: dict, notes: list[str]) -> str:
         tr_html = ' <span class="tr">&gt;</span>'
     elif tr == "->":
         tr_html = ' <span class="tr">-&gt;</span>'
-    t = (f'<a class="song-t" href="/setlisthound-with/song/{slug(song["title"])}/">'
-         f'{e(song["title"])}</a>')
+    k = song_key(song)
+    t = (f'<a class="song-t" href="/setlisthound-with/song/{k}/">{e(song["title"])}</a>'
+         if k else e(song["title"]))
     ln = ""
     if song.get("length_secs"):
         m, s = divmod(int(song["length_secs"]), 60)
@@ -456,7 +488,8 @@ def compute_stats(payloads: list) -> dict:
     import collections
     import re as _re
 
-    plays = collections.Counter()
+    plays = collections.Counter()                    # song_key -> play count
+    play_titles = collections.defaultdict(collections.Counter)   # song_key -> spellings
     covers = collections.Counter()
     openers = collections.Counter()
     closers = collections.Counter()
@@ -475,12 +508,14 @@ def compute_stats(payloads: list) -> dict:
             songs = st["songs"]
             n += len(songs)
             for s in songs:
-                plays[s["title"]] += 1
-                fn = s.get("footnote") or ""
-                if fn and not _re.search(r"tease|ending only|unfinished|with |featuring|debut$", fn, _re.I):
-                    artist = _re.sub(r"^FTP,\s*", "", fn)
-                    artist = _re.sub(r"[;,]\s*(with|featuring).*$", "", artist, flags=_re.I)
-                    artist = _re.sub(r";.*$", "", artist).strip()
+                # Count plays per SONG, not per spelling: song_key merges the
+                # title variants go-set corrects over time.
+                k = song_key(s)
+                if k is not None:
+                    plays[k] += 1
+                    play_titles[k][s["title"]] += 1
+                artist = cover_artist(s)
+                if artist:
                     if excluded and artist in ("Grateful Dead", "Bob Weir", "Jerry Garcia"):
                         dead_special += 1
                     else:
@@ -499,7 +534,8 @@ def compute_stats(payloads: list) -> dict:
     return {
         "shows": len(payloads), "performances": total_songs,
         "unique": len(plays), "venues": len(venues), "sandwiches": total_sand,
-        "plays": plays.most_common(15), "covers": covers.most_common(12),
+        "plays": [(play_titles[k].most_common(1)[0][0], n) for k, n in plays.most_common(15)],
+        "covers": covers.most_common(12),
         "openers": openers.most_common(8), "closers": closers.most_common(8),
         "months": months, "biggest": biggest, "dead_special": dead_special,
     }
@@ -584,16 +620,24 @@ def render_stats(payloads: list) -> str:
 
 def collect_songs(payloads: list) -> dict:
     """slug -> {title, plays: [(payload, set_display, position_in_set)], covers}."""
+    import collections
     songs: dict = {}
     for pay in reversed(payloads):          # chronological
         for st in pay["sets"]:
-            for i, s in enumerate(st["songs"], start=1):
-                sl = slug(s["title"])
-                entry = songs.setdefault(sl, {"title": s["title"], "plays": [], "credits": set()})
+            for i, sg in enumerate(st["songs"], start=1):
+                sl = song_key(sg)
+                if sl is None:              # go-set one-off, no song page
+                    continue
+                entry = songs.setdefault(sl, {"plays": [], "credits": set(),
+                                              "titles": collections.Counter()})
+                entry["titles"][sg["title"]] += 1
                 entry["plays"].append((pay, st.get("display") or st.get("label"), i))
-                c = cover_credit(s.get("footnote") or "")
+                c = cover_artist(sg)
                 if c:
                     entry["credits"].add(c)
+    # Canonical title = most-played spelling; a typo corrected once never wins.
+    for entry in songs.values():
+        entry["title"] = entry["titles"].most_common(1)[0][0]
     return songs
 
 

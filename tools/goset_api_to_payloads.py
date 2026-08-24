@@ -113,12 +113,25 @@ def payload_from_rows(show_rows: list[dict], slug: str) -> dict:
                     fn = "; ".join(str(x) for x in parts)
             except (ValueError, TypeError):
                 pass
+        # song_slug is go-set's OWN stable song key: verified 1:1 with song_id
+        # across 4000 rows, and it survives title typos ("Bend Strange" ->
+        # "Bent Strange" share slug "bent-strange"). Never key on the title.
+        # slug "_custom_" (song_id 1) is go-set's free-text entry: a real
+        # performance, but not repertoire -- see docs/09.
         sets[-1]["songs"].append({
             "title": r["songname"],
             "transition": norm_transition(r.get("transition")),
             "position": r["position"],
             "footnote": fn,
             "length_secs": secs(r.get("tracktime")),
+            "song_id": r.get("song_id"),
+            "song_slug": r.get("slug") or None,
+            # Structured cover attribution: 1132 of 1138 covers name their
+            # artist in this field, so the footnote regex is a fallback only.
+            # 70 rows contradict themselves (isoriginal=1 WITH an artist) --
+            # trust the artist, and the site logs nothing silently.
+            "original_artist": (r.get("original_artist") or None),
+            "is_cover": (not r.get("isoriginal")) or bool(r.get("original_artist")),
         })
     shownotes = re.sub(r"\s*\r?\n\s*", " ", (r0.get("shownotes") or "")).strip()
     return {
