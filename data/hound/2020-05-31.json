@@ -1,0 +1,141 @@
+{
+ "show_date": "2020-05-31",
+ "slug": "2020-05-31",
+ "show_id": 1671819644,
+ "venue": "High Peaks Studio",
+ "city": "Saratoga Springs",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-31-2020-high-peaks-studio-saratoga-springs-ny-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Can't Wait for Tonight",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 54,
+     "song_slug": "cant-wait-for-tonight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "->",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Feel Like A Stranger",
+     "transition": "",
+     "position": 3,
+     "footnote": "Grateful Dead",
+     "length_secs": null,
+     "song_id": 41,
+     "song_slug": "feel-like-a-stranger",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Rinky Dink Rag",
+     "transition": "->",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 35,
+     "song_slug": "snow-day",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": ">",
+     "position": 8,
+     "footnote": "Stevie Wonder",
+     "length_secs": null,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": ">",
+     "position": 9,
+     "footnote": "Vince Guaraldi",
+     "length_secs": null,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

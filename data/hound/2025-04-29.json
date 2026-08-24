@@ -1,0 +1,125 @@
+{
+ "show_date": "2025-04-29",
+ "slug": "2025-04-29",
+ "show_id": 1734458471,
+ "venue": "Chickie Wah Wah",
+ "city": "New Orleans",
+ "state": "LA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-29-2025-chickie-wah-wah-new-orleans-la-usa.html",
+ "shownotes": "In Voodoo Lady, Jeremy sang from the center of the stage, while Brian played the keyboards. Jeremy grabbed Brian’s guitar and they jammed on alternative instruments for a bit before going back to their usual spots for the end of Thomas Duncan, Pt. 2.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Rinky Dink Rag",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Nicolette",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "->",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": "->",
+     "position": 7,
+     "footnote": "Ween",
+     "length_secs": null,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

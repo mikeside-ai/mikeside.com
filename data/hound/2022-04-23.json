@@ -1,0 +1,196 @@
+{
+ "show_date": "2022-04-23",
+ "slug": "2022-04-23",
+ "show_id": 1669835825,
+ "venue": "Hill Country Barbeque",
+ "city": "New York",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-23-2022-hill-country-barbeque-new-york-ny-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 559,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 789,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 255,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 642,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 555,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 1027,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": ">",
+     "position": 7,
+     "footnote": "Stevie Wonder",
+     "length_secs": 262,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Fenway",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 776,
+     "song_id": 13,
+     "song_slug": "fenway",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 898,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "EDM Song",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 202,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 224,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 1091,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 654,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 499,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": ">",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 584,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 142,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

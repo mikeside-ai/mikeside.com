@@ -1,11 +1,12 @@
 {
  "show_date": "2026-03-27",
  "slug": "2026-03-27",
+ "show_id": 1766948455,
  "venue": "Westside Motor Lounge",
  "city": "Atlanta",
  "state": "GA",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-march-27-2026-westside-motor-lounge-atlanta-ga-usa.html",
  "shownotes": "Performed at Mental Awakening Festival",
  "sets": [
@@ -18,84 +19,132 @@
      "transition": ">",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 424,
+     "song_id": 58,
+     "song_slug": "crazy",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Look Johnny II",
-     "transition": ">",
+     "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 276,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Ophelia",
      "transition": ">",
      "position": 3,
      "footnote": "The Band",
-     "length_secs": null
+     "length_secs": 306,
+     "song_id": 94,
+     "song_slug": "ophelia",
+     "original_artist": "The Band",
+     "is_cover": true
     },
     {
      "title": "Craig and Pat",
      "transition": "",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1148,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Rum and Roses",
      "transition": "",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 396,
+     "song_id": 72,
+     "song_slug": "rum-and-roses",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Bent Strange",
      "transition": "",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 801,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Gumball",
      "transition": "",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 911,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Rinky Dink Rag",
      "transition": "",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 152,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Look Johnny",
      "transition": "",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1017,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Soulshine",
      "transition": "",
      "position": 10,
      "footnote": "Warren Haynes",
-     "length_secs": null
+     "length_secs": 475,
+     "song_id": 359,
+     "song_slug": "soulshine",
+     "original_artist": "The Allman Brothers Band",
+     "is_cover": true
     },
     {
      "title": "Applesauce",
      "transition": "",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 958,
+     "song_id": 192,
+     "song_slug": "applesauce",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "EDM Song",
      "transition": "",
      "position": 12,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 263,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -108,7 +157,11 @@
      "transition": "",
      "position": 13,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 917,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   }

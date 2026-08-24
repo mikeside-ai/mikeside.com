@@ -1,0 +1,108 @@
+{
+ "show_date": "2024-09-14",
+ "slug": "2024-09-14",
+ "show_id": 1725570610,
+ "venue": "Westgate Las Vegas",
+ "city": "Las Vegas",
+ "state": "NV",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-september-14-2024-westgate-las-vegas-las-vegas-nv-usa.html",
+ "shownotes": "Performed at Bender Jamboree on the L4LM Stage.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 295,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 707,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 567,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 515,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 793,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stadium Rave",
+     "transition": "",
+     "position": 6,
+     "footnote": "Glenn Nishida and Mark Governer",
+     "length_secs": 679,
+     "song_id": 181,
+     "song_slug": "stadium-rave",
+     "original_artist": "Glenn Nishida and Mark Governor",
+     "is_cover": true
+    },
+    {
+     "title": "Bird Song",
+     "transition": ">",
+     "position": 7,
+     "footnote": "Jerry Garcia",
+     "length_secs": 868,
+     "song_id": 117,
+     "song_slug": "bird-song",
+     "original_artist": "Jerry Garcia",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 768,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,213 @@
+{
+ "show_date": "2023-02-23",
+ "slug": "2023-02-23",
+ "show_id": 1677216903,
+ "venue": "Tumbleroot Brewery &amp; Distillery",
+ "city": "Santa Fe",
+ "state": "NM",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-february-23-2023-tumbleroot-brewery-amp-distillery-santa-fe-nm-usa.html",
+ "shownotes": "This was a free show. Power Trip was played for the first time in 223 shows.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 286,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Frosty",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 345,
+     "song_id": 5,
+     "song_slug": "frosty",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 1120,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 463,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Power Trip",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 332,
+     "song_id": 190,
+     "song_slug": "power-trip",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Time Loves A Hero",
+     "transition": "",
+     "position": 6,
+     "footnote": "Little Feat",
+     "length_secs": 241,
+     "song_id": 47,
+     "song_slug": "time-loves-a-hero",
+     "original_artist": "Little Feat",
+     "is_cover": true
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 1200,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 676,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 289,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 163,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "El Sonidito",
+     "transition": ">",
+     "position": 11,
+     "footnote": "Hechizeros Band",
+     "length_secs": 127,
+     "song_id": 15,
+     "song_slug": "el-sonidito",
+     "original_artist": "Hechizeros Band",
+     "is_cover": true
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 892,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 543,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ghost Riders in the Sky",
+     "transition": ">",
+     "position": 14,
+     "footnote": "Stan Jones",
+     "length_secs": 213,
+     "song_id": 121,
+     "song_slug": "ghost-riders-in-the-sky-2",
+     "original_artist": "Stan Jones",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 313,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 739,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Say Something",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 538,
+     "song_id": 113,
+     "song_slug": "say-something",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

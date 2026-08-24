@@ -1,0 +1,180 @@
+{
+ "show_date": "2025-06-20",
+ "slug": "2025-06-20",
+ "show_id": 1742916408,
+ "venue": "Levitt Pavilion",
+ "city": "Westport",
+ "state": "CT",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-20-2025-levitt-pavilion-westport-ct-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 925,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 348,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Frosty",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 361,
+     "song_id": 5,
+     "song_slug": "frosty",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 319,
+     "song_id": 445,
+     "song_slug": "dangers-of-rah-rah",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chocolate Milk",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 329,
+     "song_id": 250,
+     "song_slug": "chocolate-milk",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Gumball",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 482,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mr. Charlie",
+     "transition": "",
+     "position": 7,
+     "footnote": "Grateful Dead",
+     "length_secs": 428,
+     "song_id": 48,
+     "song_slug": "mr-charlie-2",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 690,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 598,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 818,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Minnie the Moocher",
+     "transition": "",
+     "position": 11,
+     "footnote": "Cab Calloway",
+     "length_secs": 351,
+     "song_id": 287,
+     "song_slug": "minnie-the-moocher",
+     "original_artist": "Cabell “Cab” Calloway",
+     "is_cover": true
+    },
+    {
+     "title": "Fenway",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 696,
+     "song_id": 13,
+     "song_slug": "fenway",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Power Trip",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 406,
+     "song_id": 190,
+     "song_slug": "power-trip",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 978,
+     "song_id": 327,
+     "song_slug": "thomas-duncan-pt-3",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

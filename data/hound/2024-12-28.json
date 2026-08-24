@@ -1,0 +1,197 @@
+{
+ "show_date": "2024-12-28",
+ "slug": "2024-12-28",
+ "show_id": 1723567318,
+ "venue": "Putnam Place",
+ "city": "Saratoga Springs",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-december-28-2024-putnam-place-saratoga-springs-ny-usa.html",
+ "shownotes": "Samba for Sam was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Shakedown Street",
+     "transition": "",
+     "position": 1,
+     "footnote": "Grateful Dead",
+     "length_secs": 1404,
+     "song_id": 85,
+     "song_slug": "shakedown-street",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 362,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 655,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": "->",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 734,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 481,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Will It Go 'Round In Circles?",
+     "transition": "",
+     "position": 6,
+     "footnote": "Billy Preston",
+     "length_secs": 419,
+     "song_id": 21,
+     "song_slug": "will-it-go-round-in-circles",
+     "original_artist": "Billy Preston",
+     "is_cover": true
+    },
+    {
+     "title": "Chocolate Milk",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 694,
+     "song_id": 250,
+     "song_slug": "chocolate-milk",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Little Things",
+     "transition": "->",
+     "position": 8,
+     "footnote": "Original arrangement",
+     "length_secs": 721,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 1003,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 461,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 878,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Creep",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 401,
+     "song_id": 93,
+     "song_slug": "cr",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 290,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 792,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Crazy",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 501,
+     "song_id": 58,
+     "song_slug": "crazy",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

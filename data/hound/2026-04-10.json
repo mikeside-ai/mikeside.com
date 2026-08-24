@@ -1,13 +1,14 @@
 {
  "show_date": "2026-04-10",
  "slug": "2026-04-10",
+ "show_id": 1766949121,
  "venue": "Sherman Theater",
  "city": "Stroudsburg",
  "state": "PA",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-10-2026-sherman-theater-stroudsburg-pa-usa.html",
- "shownotes": "Verified setlist. Opening Band: John Morgan Kimock. Soundboard recording available on Bandcamp and Nugs.",
+ "shownotes": "",
  "sets": [
   {
    "label": "1",
@@ -18,49 +19,77 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 387,
+     "song_id": 4,
+     "song_slug": "earthbound-man",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Stranger",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 703,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "My Disguise",
      "transition": "",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 370,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Four More Days",
      "transition": "",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 707,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Dangers of Rah Rah",
      "transition": "",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1043,
+     "song_id": 445,
+     "song_slug": "dangers-of-rah-rah",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Space Captain",
      "transition": "",
      "position": 6,
      "footnote": "Joe Cocker",
-     "length_secs": null
+     "length_secs": 478,
+     "song_id": 76,
+     "song_slug": "space-captain",
+     "original_artist": "Joe Cocker",
+     "is_cover": true
     },
     {
      "title": "Mr. Tooker",
      "transition": "",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 327,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -73,56 +102,88 @@
      "transition": "",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 258,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
     },
     {
-     "title": "You Didn't Hear It From Me",
+     "title": "You Didn’t Hear It From Me",
      "transition": "",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1027,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Chop Shop",
      "transition": "",
      "position": 10,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 817,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Snake Oil",
      "transition": "",
      "position": 11,
      "footnote": "FTP, The New Tony Williams Lifetime",
-     "length_secs": null
+     "length_secs": 384,
+     "song_id": 557,
+     "song_slug": "snake-oil",
+     "original_artist": "The New Tony Williams Lifetime",
+     "is_cover": true
     },
     {
      "title": "Samba for Sam",
      "transition": "->",
      "position": 12,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 931,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Criminal",
      "transition": ">",
      "position": 13,
      "footnote": "Fiona Apple",
-     "length_secs": null
+     "length_secs": 354,
+     "song_id": 498,
+     "song_slug": "criminal",
+     "original_artist": "Fiona Apple",
+     "is_cover": true
     },
     {
      "title": "Let U Go",
      "transition": ">",
      "position": 14,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 329,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "EDM Song",
      "transition": "",
      "position": 15,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 227,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -135,14 +196,22 @@
      "transition": "",
      "position": 16,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 331,
+     "song_id": 551,
+     "song_slug": "the-day-the-music-came-to-me",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Trunk Rum",
      "transition": "",
      "position": 17,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 655,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   }

@@ -1,0 +1,119 @@
+{
+ "show_date": "2020-08-16",
+ "slug": "2020-08-16",
+ "show_id": 1671821721,
+ "venue": "High Peaks Studio",
+ "city": "Saratoga Springs",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-august-16-2020-high-peaks-studio-saratoga-springs-ny-usa.html",
+ "shownotes": "This show was a Tree of Forgiveness livestream",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Way To Be",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "I Am The Slime",
+     "transition": "->",
+     "position": 5,
+     "footnote": "Frank Zappa",
+     "length_secs": null,
+     "song_id": 139,
+     "song_slug": "i-am-the-slime",
+     "original_artist": "Frank Zappa",
+     "is_cover": true
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The Music Never Stopped",
+     "transition": "",
+     "position": 8,
+     "footnote": "Grateful Dead",
+     "length_secs": null,
+     "song_id": 63,
+     "song_slug": "the-music-never-stopped",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Lazy Day",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 104,
+     "song_slug": "lazy-day",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

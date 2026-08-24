@@ -1,0 +1,191 @@
+{
+ "show_date": "2021-11-05",
+ "slug": "2021-11-05",
+ "show_id": 1673463541,
+ "venue": "Garcia's",
+ "city": "Port Chester",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-november-5-2021-garcias-port-chester-ny-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Cats Under the Stars",
+     "transition": "",
+     "position": 1,
+     "footnote": "Jerry Garcia Band",
+     "length_secs": 461,
+     "song_id": 66,
+     "song_slug": "cats-under-the-stars",
+     "original_artist": "Jerry Garcia Band",
+     "is_cover": true
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": "->",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 440,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Hesitate",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 572,
+     "song_id": 22,
+     "song_slug": "hesitate",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 1172,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 539,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 282,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 539,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Renaissance Man",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 357,
+     "song_id": 92,
+     "song_slug": "renaissance-ma",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Madhuvan",
+     "transition": ">",
+     "position": 9,
+     "footnote": "Goose",
+     "length_secs": 311,
+     "song_id": 143,
+     "song_slug": "madhuvan-2",
+     "original_artist": "Goose",
+     "is_cover": true
+    },
+    {
+     "title": "Melting Lights",
+     "transition": ">",
+     "position": 10,
+     "footnote": "Pigeons Playing Ping Pong",
+     "length_secs": 1162,
+     "song_id": 89,
+     "song_slug": "melting-lights",
+     "original_artist": "Pigeons Playing Ping Pong",
+     "is_cover": true
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 903,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "People Say",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 344,
+     "song_id": 23,
+     "song_slug": "people-say",
+     "original_artist": "The Meters",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Crazy",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 349,
+     "song_id": 58,
+     "song_slug": "crazy",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Say Something",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 522,
+     "song_id": 113,
+     "song_slug": "say-something",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The Music Never Stopped",
+     "transition": "",
+     "position": 15,
+     "footnote": "Grateful Dead",
+     "length_secs": 723,
+     "song_id": 63,
+     "song_slug": "the-music-never-stopped",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

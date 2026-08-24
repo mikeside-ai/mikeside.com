@@ -1,0 +1,230 @@
+{
+ "show_date": "2025-12-18",
+ "slug": "2025-12-18-2",
+ "show_id": 1756868378,
+ "venue": "Ardmore Music Hall",
+ "city": "Ardmore",
+ "state": "PA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-december-18-2025-ardmore-music-hall-ardmore-pa-usa-2.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "EDM Song",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 273,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 1448,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 309,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "->",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 1252,
+     "song_id": 445,
+     "song_slug": "dangers-of-rah-rah",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Royals",
+     "transition": "",
+     "position": 5,
+     "footnote": "Lorde",
+     "length_secs": 558,
+     "song_id": 31,
+     "song_slug": "royals",
+     "original_artist": "Lorde",
+     "is_cover": true
+    },
+    {
+     "title": "Let 'Em In",
+     "transition": "",
+     "position": 6,
+     "footnote": "Wings. With Ian Gray",
+     "length_secs": 334,
+     "song_id": 518,
+     "song_slug": "let-em-in",
+     "original_artist": "Wings",
+     "is_cover": true
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 552,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Christmas Wrapping",
+     "transition": "",
+     "position": 8,
+     "footnote": "FTP, The Waitresses",
+     "length_secs": 307,
+     "song_id": 531,
+     "song_slug": "christmas-wrapping",
+     "original_artist": "The Waitresses",
+     "is_cover": true
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 9,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 351,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 748,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 703,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Got To Get You Into My Life",
+     "transition": "",
+     "position": 12,
+     "footnote": "The Beatles",
+     "length_secs": 305,
+     "song_id": 490,
+     "song_slug": "got-to-get-you-into-my-life",
+     "original_artist": "The Beatles",
+     "is_cover": true
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 350,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Minnie the Moocher",
+     "transition": "",
+     "position": 14,
+     "footnote": "Cab Calloway",
+     "length_secs": 465,
+     "song_id": 287,
+     "song_slug": "minnie-the-moocher",
+     "original_artist": "Cabell “Cab” Calloway",
+     "is_cover": true
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 339,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 1200,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Funky Fanfare",
+     "transition": ">",
+     "position": 17,
+     "footnote": "FTP, Keith Mansfield",
+     "length_secs": 210,
+     "song_id": 539,
+     "song_slug": "funky-fanfare",
+     "original_artist": "Keith Mansfield",
+     "is_cover": true
+    },
+    {
+     "title": "Say Something",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 568,
+     "song_id": 113,
+     "song_slug": "say-something",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

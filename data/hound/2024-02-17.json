@@ -1,0 +1,230 @@
+{
+ "show_date": "2024-02-17",
+ "slug": "2024-02-17",
+ "show_id": 1699990156,
+ "venue": "Bluebird Theater",
+ "city": "Denver",
+ "state": "CO",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-february-17-2024-bluebird-theater-denver-co-usa.html",
+ "shownotes": "Samba for Sam was unfinished. Craig and Pat was unfinished. Bugle on the Shelf had a lyric change to reference Nik Lopomo.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 573,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 501,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Apeman",
+     "transition": "",
+     "position": 3,
+     "footnote": "The Kinks",
+     "length_secs": 254,
+     "song_id": 182,
+     "song_slug": "apeman",
+     "original_artist": "The Kinks",
+     "is_cover": true
+    },
+    {
+     "title": "Nicolette",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 543,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Old Folks Boogie",
+     "transition": "",
+     "position": 5,
+     "footnote": "Little Feat",
+     "length_secs": 328,
+     "song_id": 321,
+     "song_slug": "old-folks-boogie",
+     "original_artist": "Little Feat",
+     "is_cover": true
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 6,
+     "footnote": "with Nick Gerlach on saxophone",
+     "length_secs": 320,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 869,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Whipping Post",
+     "transition": "",
+     "position": 8,
+     "footnote": "The Allman Brothers Band. With Sam Walker on vocals.",
+     "length_secs": 421,
+     "song_id": 342,
+     "song_slug": "whipping-post",
+     "original_artist": "The Allman Brothers Band",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Samba for Sam",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 795,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 297,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 931,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lucia’s Secret",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 263,
+     "song_id": 247,
+     "song_slug": "lucias-secret",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Cassidy",
+     "transition": "",
+     "position": 13,
+     "footnote": "Bob Weir",
+     "length_secs": 468,
+     "song_id": 168,
+     "song_slug": "cassidy",
+     "original_artist": "Bob Weir",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "->",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 1047,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 834,
+     "song_id": 327,
+     "song_slug": "thomas-duncan-pt-3",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 1038,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Such a Night",
+     "transition": "",
+     "position": 17,
+     "footnote": "Dr. John",
+     "length_secs": 441,
+     "song_id": 34,
+     "song_slug": "such-a-night",
+     "original_artist": "Dr. John",
+     "is_cover": true
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 263,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

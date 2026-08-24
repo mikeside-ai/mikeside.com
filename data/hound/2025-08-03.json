@@ -1,0 +1,213 @@
+{
+ "show_date": "2025-08-03",
+ "slug": "2025-08-03",
+ "show_id": 1747840599,
+ "venue": "The Mishawaka",
+ "city": "Bellvue",
+ "state": "CO",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-august-3-2025-the-mishawaka-bellvue-co-usa.html",
+ "shownotes": "Look Johnny was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 523,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Nicolette",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 717,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chocolate Milk",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 331,
+     "song_id": 250,
+     "song_slug": "chocolate-milk",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 869,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Pinball Wizard",
+     "transition": "->",
+     "position": 5,
+     "footnote": "The Who",
+     "length_secs": 291,
+     "song_id": 367,
+     "song_slug": "pinball-wizard",
+     "original_artist": "The Who",
+     "is_cover": true
+    },
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 710,
+     "song_id": 445,
+     "song_slug": "dangers-of-rah-rah",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Happy Song",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 335,
+     "song_id": 389,
+     "song_slug": "happy-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Shenanigans",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 609,
+     "song_id": 335,
+     "song_slug": "shenanigans",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Look Johnny",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 977,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "6 Little Lies",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 727,
+     "song_id": 395,
+     "song_slug": "6-little-lies",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Burning Daylight",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 707,
+     "song_id": 416,
+     "song_slug": "burning-daylight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lazy Susan",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 445,
+     "song_id": 414,
+     "song_slug": "lazy-susan",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 882,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    },
+    {
+     "title": "Moon of Colorado",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 685,
+     "song_id": 442,
+     "song_slug": "moon-of-colorado",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "->",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 347,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ghost Riders in the Sky",
+     "transition": "->",
+     "position": 16,
+     "footnote": "Stan Jones",
+     "length_secs": 178,
+     "song_id": 121,
+     "song_slug": "ghost-riders-in-the-sky-2",
+     "original_artist": "Stan Jones",
+     "is_cover": true
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 176,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

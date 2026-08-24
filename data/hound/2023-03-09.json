@@ -1,0 +1,274 @@
+{
+ "show_date": "2023-03-09",
+ "slug": "2023-03-09",
+ "show_id": 1671032952,
+ "venue": "Mahall's",
+ "city": "Lakewood",
+ "state": "OH",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-march-9-2023-mahalls-lakewood-oh-usa.html",
+ "shownotes": "The first set was performed with Hayley Jane. Jam featured Jimmy on the bass and Brian on the synth (Sam left the stage briefly). The band walked off the stage for Jack & Coke ending, Jeremy finished the set with a solo.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Little Bird",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 201,
+     "song_slug": "little-bird",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Swim to the Middle",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 198,
+     "song_slug": "swim-to-the-middle",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Crazy Fingers",
+     "transition": "",
+     "position": 3,
+     "footnote": "Grateful Dead",
+     "length_secs": null,
+     "song_id": 194,
+     "song_slug": "crazy-fingers",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Cosmic Katrina",
+     "transition": "",
+     "position": 4,
+     "footnote": "FTP, Hayley Jane and the Primates",
+     "length_secs": null,
+     "song_id": 204,
+     "song_slug": "cosmic-katrina",
+     "original_artist": "Hayley Jane and the Primates",
+     "is_cover": true
+    },
+    {
+     "title": "Paper Fly",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 200,
+     "song_slug": "paper-fly",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Brand New Key",
+     "transition": ">",
+     "position": 6,
+     "footnote": "Melanie",
+     "length_secs": null,
+     "song_id": 202,
+     "song_slug": "brand-new-key",
+     "original_artist": "Melanie",
+     "is_cover": true
+    },
+    {
+     "title": "Hey Pocky A-Way",
+     "transition": "",
+     "position": 7,
+     "footnote": "The Meters",
+     "length_secs": null,
+     "song_id": 203,
+     "song_slug": "hey-pocky-a-way",
+     "original_artist": "The Meters",
+     "is_cover": true
+    },
+    {
+     "title": "This Woman",
+     "transition": "",
+     "position": 8,
+     "footnote": "Debut",
+     "length_secs": null,
+     "song_id": 205,
+     "song_slug": "this-woman",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Frosty",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 354,
+     "song_id": 5,
+     "song_slug": "frosty",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 1468,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Today",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 384,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stevie Lew",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 393,
+     "song_id": 59,
+     "song_slug": "stevie-lew",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 262,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 895,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Green Earrings",
+     "transition": ">",
+     "position": 15,
+     "footnote": "Steely Dan",
+     "length_secs": 420,
+     "song_id": 64,
+     "song_slug": "green-earrings",
+     "original_artist": "Steely Dan",
+     "is_cover": true
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 151,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Royals",
+     "transition": "",
+     "position": 17,
+     "footnote": "Lorde",
+     "length_secs": 1007,
+     "song_id": 31,
+     "song_slug": "royals",
+     "original_artist": "Lorde",
+     "is_cover": true
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": ">",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 762,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": ">",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 295,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 20,
+     "footnote": null,
+     "length_secs": 179,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": "",
+     "position": 21,
+     "footnote": null,
+     "length_secs": 414,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "All The Same",
+     "transition": "",
+     "position": 22,
+     "footnote": null,
+     "length_secs": 307,
+     "song_id": 32,
+     "song_slug": "all-the-same",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,412 @@
+{
+ "show_date": "2023-04-19",
+ "slug": "2023-04-19",
+ "show_id": 1673482908,
+ "venue": "Lost Lake Lounge",
+ "city": "Denver",
+ "state": "CO",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-19-2023-lost-lake-lounge-denver-co-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Blues for Brian",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 114,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Southbound",
+     "transition": ">",
+     "position": 2,
+     "footnote": "The Allman Brothers Band",
+     "length_secs": 136,
+     "song_id": 234,
+     "song_slug": "southbound",
+     "original_artist": "The Allman Brothers Band",
+     "is_cover": true
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": ">",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 246,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Funky Bitch",
+     "transition": ">",
+     "position": 4,
+     "footnote": "Son Seals",
+     "length_secs": 112,
+     "song_id": 235,
+     "song_slug": "funky-bitch",
+     "original_artist": "Son Seals",
+     "is_cover": true
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 212,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "4th of July",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 127,
+     "song_id": 55,
+     "song_slug": "4th-of-july",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trickery",
+     "transition": ">",
+     "position": 7,
+     "footnote": "Dopapod",
+     "length_secs": 139,
+     "song_id": 131,
+     "song_slug": "trickery",
+     "original_artist": "Dopapod",
+     "is_cover": true
+    },
+    {
+     "title": "G Song",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 826,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Run-Around",
+     "transition": ">",
+     "position": 9,
+     "footnote": "Blues Traveler, with Nick Codina on harmonica",
+     "length_secs": 204,
+     "song_id": 236,
+     "song_slug": "run-around",
+     "original_artist": "Blues Traveler",
+     "is_cover": true
+    },
+    {
+     "title": "China Cat Sunflower",
+     "transition": ">",
+     "position": 10,
+     "footnote": "Grateful Dead",
+     "length_secs": 417,
+     "song_id": 49,
+     "song_slug": "china-cat-sunflower",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 631,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Home Again",
+     "transition": ">",
+     "position": 12,
+     "footnote": "The Disco Biscuits",
+     "length_secs": 120,
+     "song_id": 238,
+     "song_slug": "home-again",
+     "original_artist": "Disco Biscuits",
+     "is_cover": true
+    },
+    {
+     "title": "Run-Around",
+     "transition": ">",
+     "position": 13,
+     "footnote": "Blues Traveler, with Nick Codina on harmonica",
+     "length_secs": 83,
+     "song_id": 236,
+     "song_slug": "run-around",
+     "original_artist": "Blues Traveler",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 117,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": ">",
+     "position": 15,
+     "footnote": "Ween",
+     "length_secs": 389,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": ">",
+     "position": 16,
+     "footnote": "Stevie Wonder",
+     "length_secs": 875,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 17,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 782,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Jack & Coke",
+     "transition": ">",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 652,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let it Grow",
+     "transition": ">",
+     "position": 19,
+     "footnote": "Grateful Dead",
+     "length_secs": 643,
+     "song_id": 97,
+     "song_slug": "let-it-grow",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Creep",
+     "transition": ">",
+     "position": 20,
+     "footnote": null,
+     "length_secs": 353,
+     "song_id": 93,
+     "song_slug": "cr",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Uncle John's Band",
+     "transition": ">",
+     "position": 21,
+     "footnote": "Grateful Dead, Ending only",
+     "length_secs": 81,
+     "song_id": 239,
+     "song_slug": "uncle-johns-band",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Free",
+     "transition": ">",
+     "position": 22,
+     "footnote": "Phish",
+     "length_secs": 719,
+     "song_id": 40,
+     "song_slug": "free",
+     "original_artist": "Phish",
+     "is_cover": true
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": ">",
+     "position": 23,
+     "footnote": null,
+     "length_secs": 493,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Harry Hood",
+     "transition": ">",
+     "position": 24,
+     "footnote": "Phish, Ending only",
+     "length_secs": 201,
+     "song_id": 323,
+     "song_slug": "harry-hood",
+     "original_artist": "Phish",
+     "is_cover": true
+    },
+    {
+     "title": "Nebraska",
+     "transition": ">",
+     "position": 25,
+     "footnote": "moe.",
+     "length_secs": 285,
+     "song_id": 111,
+     "song_slug": "nebraska",
+     "original_artist": "moe.",
+     "is_cover": true
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": ">",
+     "position": 26,
+     "footnote": null,
+     "length_secs": 179,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Madhuvan",
+     "transition": ">",
+     "position": 27,
+     "footnote": "Goose",
+     "length_secs": 299,
+     "song_id": 143,
+     "song_slug": "madhuvan-2",
+     "original_artist": "Goose",
+     "is_cover": true
+    },
+    {
+     "title": "Melting Lights",
+     "transition": ">",
+     "position": 28,
+     "footnote": "Pigeons Playing Ping Pong, with Josh Fairman on Bass",
+     "length_secs": 362,
+     "song_id": 89,
+     "song_slug": "melting-lights",
+     "original_artist": "Pigeons Playing Ping Pong",
+     "is_cover": true
+    },
+    {
+     "title": "Madhuvan",
+     "transition": ">",
+     "position": 29,
+     "footnote": "Goose",
+     "length_secs": 1459,
+     "song_id": 143,
+     "song_slug": "madhuvan-2",
+     "original_artist": "Goose",
+     "is_cover": true
+    },
+    {
+     "title": "Charlie",
+     "transition": ">",
+     "position": 30,
+     "footnote": null,
+     "length_secs": 733,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Helter Dust Skelter Torture",
+     "transition": "",
+     "position": 31,
+     "footnote": null,
+     "length_secs": 754,
+     "song_id": 156,
+     "song_slug": "helter-dust-skelter-torture",
+     "original_artist": null,
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Phish Kids",
+     "transition": "",
+     "position": 32,
+     "footnote": null,
+     "length_secs": 273,
+     "song_id": 106,
+     "song_slug": "phish-kids",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Julius",
+     "transition": "",
+     "position": 33,
+     "footnote": "Phish",
+     "length_secs": 598,
+     "song_id": 75,
+     "song_slug": "julius",
+     "original_artist": "Phish",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "e2",
+   "display": "Encore 2",
+   "songs": [
+    {
+     "title": "Going to California",
+     "transition": "",
+     "position": 34,
+     "footnote": "Led Zeppelin, with Brian Murray on acoustic guitar and Jimmy Law on mandolin",
+     "length_secs": 359,
+     "song_id": 240,
+     "song_slug": "going-to-california",
+     "original_artist": "Led Zeppelin",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

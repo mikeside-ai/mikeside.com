@@ -1,0 +1,136 @@
+{
+ "show_date": "2025-10-04",
+ "slug": "2025-10-04",
+ "show_id": 1750876019,
+ "venue": "The Vortex",
+ "city": "Catonsville",
+ "state": "MD",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-october-4-2025-the-vortex-catonsville-md-usa.html",
+ "shownotes": "Performed at Oktoberfest.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 386,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 575,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 578,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Nicolette",
+     "transition": "->",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 803,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 911,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 1042,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": "",
+     "position": 7,
+     "footnote": "Stevie Wonder, with Rob Compa",
+     "length_secs": 1249,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Cool Water",
+     "transition": "",
+     "position": 8,
+     "footnote": "Bob Nolan",
+     "length_secs": 221,
+     "song_id": 478,
+     "song_slug": "cool-water",
+     "original_artist": "Bob Nolan",
+     "is_cover": true
+    },
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 967,
+     "song_id": 327,
+     "song_slug": "thomas-duncan-pt-3",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 348,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

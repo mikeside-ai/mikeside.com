@@ -1,0 +1,1046 @@
+{
+ "_what": "transcription (2026-08-22 HTML walk) vs go-set API v2 (2026-08-24 capture), per house rule: log, never silently pick",
+ "_resolution": "the API is first-party and wins in the payloads; these rows are kept so a wrong call stays reviewable",
+ "rows": [
+  {
+   "slug": "2026-01-15",
+   "set": "1",
+   "position": 7,
+   "kind": "typography",
+   "transcription": [
+    "1",
+    7,
+    "Lucia's Secret",
+    "",
+    null
+   ],
+   "api": [
+    "1",
+    7,
+    "Lucia’s Secret",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-01-16",
+   "set": "2",
+   "position": 9,
+   "kind": "typography",
+   "transcription": [
+    "2",
+    9,
+    "You Didn't Hear It From Me",
+    "",
+    null
+   ],
+   "api": [
+    "2",
+    9,
+    "You Didn’t Hear It From Me",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-01-18",
+   "set": "2",
+   "position": 11,
+   "kind": "typography",
+   "transcription": [
+    "2",
+    11,
+    "Truckin'",
+    ">",
+    "Grateful Dead"
+   ],
+   "api": [
+    "2",
+    11,
+    "Truckin’",
+    ">",
+    "Grateful Dead"
+   ]
+  },
+  {
+   "slug": "2026-01-23",
+   "set": "2",
+   "position": 10,
+   "kind": "typography",
+   "transcription": [
+    "2",
+    10,
+    "You Didn't Hear It From Me",
+    "",
+    null
+   ],
+   "api": [
+    "2",
+    10,
+    "You Didn’t Hear It From Me",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-01-23",
+   "set": "2",
+   "position": 14,
+   "kind": "substantive",
+   "transcription": [
+    "2",
+    14,
+    "Enter Sandman",
+    "->",
+    "FTP, Metallica"
+   ],
+   "api": [
+    "2",
+    14,
+    "Enter Sandman",
+    "->",
+    "FTP, Metallica."
+   ]
+  },
+  {
+   "slug": "2026-01-23",
+   "set": "e",
+   "position": 16,
+   "kind": "substantive",
+   "transcription": [
+    "e",
+    16,
+    "Fire",
+    "",
+    "The Jimi Hendrix Experience"
+   ],
+   "api": [
+    "e",
+    16,
+    "Fire",
+    "",
+    "The Jimi Hendrix Experience."
+   ]
+  },
+  {
+   "slug": "2026-01-24",
+   "set": "2",
+   "position": 10,
+   "kind": "typography",
+   "transcription": [
+    "2",
+    10,
+    "Lucia's Secret",
+    "",
+    null
+   ],
+   "api": [
+    "2",
+    10,
+    "Lucia’s Secret",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-01-30",
+   "set": "2",
+   "position": 15,
+   "kind": "typography",
+   "transcription": [
+    "2",
+    15,
+    "Lucia's Secret",
+    "",
+    null
+   ],
+   "api": [
+    "2",
+    15,
+    "Lucia’s Secret",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-03-21",
+   "set": "1",
+   "position": 3,
+   "kind": "typography",
+   "transcription": [
+    "1",
+    3,
+    "You Didn't Hear It From Me",
+    ">",
+    null
+   ],
+   "api": [
+    "1",
+    3,
+    "You Didn’t Hear It From Me",
+    ">",
+    null
+   ]
+  },
+  {
+   "slug": "2026-03-26",
+   "set": "2",
+   "position": 15,
+   "kind": "typography",
+   "transcription": [
+    "2",
+    15,
+    "Lucia's Secret",
+    "",
+    null
+   ],
+   "api": [
+    "2",
+    15,
+    "Lucia’s Secret",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-03-27",
+   "set": "1",
+   "position": 2,
+   "kind": "substantive",
+   "transcription": [
+    "1",
+    2,
+    "Look Johnny II",
+    ">",
+    null
+   ],
+   "api": [
+    "1",
+    2,
+    "Look Johnny II",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-03-28",
+   "set": "1",
+   "position": 5,
+   "kind": "substantive",
+   "transcription": [
+    "1",
+    5,
+    "Come Together",
+    ">",
+    "FTP, The Beatles, with Miles Connor"
+   ],
+   "api": [
+    "1",
+    5,
+    "Come Together",
+    "",
+    "FTP, The Beatles, with Miles Connor"
+   ]
+  },
+  {
+   "slug": "2026-03-31",
+   "set": "1",
+   "position": 2,
+   "kind": "typography",
+   "transcription": [
+    "1",
+    2,
+    "You Didn't Hear It From Me",
+    "",
+    null
+   ],
+   "api": [
+    "1",
+    2,
+    "You Didn’t Hear It From Me",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-04-02",
+   "set": "1",
+   "position": 5,
+   "kind": "typography",
+   "transcription": [
+    "1",
+    5,
+    "Lucia's Secret",
+    "",
+    null
+   ],
+   "api": [
+    "1",
+    5,
+    "Lucia’s Secret",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-04-04",
+   "set": "1",
+   "position": 1,
+   "kind": "typography",
+   "transcription": [
+    "1",
+    1,
+    "You Didn't Hear It From Me",
+    "",
+    null
+   ],
+   "api": [
+    "1",
+    1,
+    "You Didn’t Hear It From Me",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-04-04",
+   "set": "1",
+   "position": 4,
+   "kind": "substantive",
+   "transcription": [
+    "1",
+    4,
+    "Thomas Duncan, Pt. 2",
+    "",
+    "The Sound of Music\" tease"
+   ],
+   "api": [
+    "1",
+    4,
+    "Thomas Duncan, Pt. 2",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-04-04",
+   "set": "2",
+   "position": 9,
+   "kind": "substantive",
+   "transcription": [
+    "2",
+    9,
+    "Wook Song",
+    "",
+    "Wook Song was unfinished"
+   ],
+   "api": [
+    "2",
+    9,
+    "Wook Song",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-04-04",
+   "set": "2",
+   "position": 12,
+   "kind": "substantive",
+   "transcription": [
+    "2",
+    12,
+    "Let U Go",
+    ">",
+    "Funkytown\" tease"
+   ],
+   "api": [
+    "2",
+    12,
+    "Let U Go",
+    ">",
+    null
+   ]
+  },
+  {
+   "slug": "2026-04-10",
+   "set": "2",
+   "position": 9,
+   "kind": "typography",
+   "transcription": [
+    "2",
+    9,
+    "You Didn't Hear It From Me",
+    "",
+    null
+   ],
+   "api": [
+    "2",
+    9,
+    "You Didn’t Hear It From Me",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-04-11",
+   "set": "2",
+   "position": 12,
+   "kind": "typography",
+   "transcription": [
+    "2",
+    12,
+    "Lucia's Secret",
+    "",
+    null
+   ],
+   "api": [
+    "2",
+    12,
+    "Lucia’s Secret",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-04-17",
+   "set": "1",
+   "position": 5,
+   "kind": "substantive",
+   "transcription": [
+    "1",
+    5,
+    "Way To Be",
+    "",
+    "Layla\" tease"
+   ],
+   "api": [
+    "1",
+    5,
+    "Way To Be",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-04-17",
+   "set": "1",
+   "position": 6,
+   "kind": "typography",
+   "transcription": [
+    "1",
+    6,
+    "Lucia's Secret",
+    "",
+    null
+   ],
+   "api": [
+    "1",
+    6,
+    "Lucia’s Secret",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-04-17",
+   "set": "1",
+   "position": 9,
+   "kind": "typography",
+   "transcription": [
+    "1",
+    9,
+    "You Didn't Hear It From Me",
+    "",
+    null
+   ],
+   "api": [
+    "1",
+    9,
+    "You Didn’t Hear It From Me",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-04-17",
+   "set": "1",
+   "position": 10,
+   "kind": "substantive",
+   "transcription": [
+    "1",
+    10,
+    "Voodoo Lady",
+    ">",
+    "Ween; \"Play That Funky Music\" tease"
+   ],
+   "api": [
+    "1",
+    10,
+    "Voodoo Lady",
+    ">",
+    "Ween"
+   ]
+  },
+  {
+   "slug": "2026-04-23",
+   "set": "2",
+   "position": 8,
+   "kind": "substantive",
+   "transcription": [
+    "2",
+    8,
+    "Samba for Sam",
+    ">",
+    "Bugle on the Shelf\" tease"
+   ],
+   "api": [
+    "2",
+    8,
+    "Samba for Sam",
+    ">",
+    null
+   ]
+  },
+  {
+   "slug": "2026-04-23",
+   "set": "2",
+   "position": 10,
+   "kind": "substantive",
+   "transcription": [
+    "2",
+    10,
+    "Grease",
+    "",
+    "HOT TO GO!\" tease in Appleseed"
+   ],
+   "api": [
+    "2",
+    10,
+    "Grease",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-04-23",
+   "set": "e",
+   "position": 13,
+   "kind": "substantive",
+   "transcription": [
+    "e",
+    13,
+    "Inchworm",
+    "",
+    "Bustout (22 shows)"
+   ],
+   "api": [
+    "e",
+    13,
+    "Inchworm",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-04-26",
+   "set": "1",
+   "position": 3,
+   "kind": "typography",
+   "transcription": [
+    "1",
+    3,
+    "You Didn't Hear It From Me",
+    "",
+    null
+   ],
+   "api": [
+    "1",
+    3,
+    "You Didn’t Hear It From Me",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-04-26",
+   "set": "2",
+   "position": 13,
+   "kind": "typography",
+   "transcription": [
+    "2",
+    13,
+    "Lucia's Secret",
+    "",
+    null
+   ],
+   "api": [
+    "2",
+    13,
+    "Lucia’s Secret",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-04-28",
+   "set": "1",
+   "position": 3,
+   "kind": "substantive",
+   "transcription": [
+    "1",
+    3,
+    "Cabbage Alley",
+    "",
+    "FTP, The Meters; \"Hey Pocky A-Way\" tease"
+   ],
+   "api": [
+    "1",
+    3,
+    "Cabbage Alley",
+    "",
+    "FTP, The Meters"
+   ]
+  },
+  {
+   "slug": "2026-04-28",
+   "set": "1",
+   "position": 10,
+   "kind": "substantive",
+   "transcription": [
+    "1",
+    10,
+    "Trunk Rum",
+    "",
+    "When the Saints Go Marching In\" tease"
+   ],
+   "api": [
+    "1",
+    10,
+    "Trunk Rum",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-05-01",
+   "set": "1",
+   "position": 6,
+   "kind": "substantive",
+   "transcription": [
+    "1",
+    6,
+    "Ghost Riders in the Sky",
+    "->",
+    "Stan Jones; Bustout (49 shows)"
+   ],
+   "api": [
+    "1",
+    6,
+    "Ghost Riders in the Sky",
+    "->",
+    "Stan Jones"
+   ]
+  },
+  {
+   "slug": "2026-05-01",
+   "set": "2",
+   "position": 8,
+   "kind": "typography",
+   "transcription": [
+    "2",
+    8,
+    "Lucia's Secret",
+    "",
+    null
+   ],
+   "api": [
+    "2",
+    8,
+    "Lucia’s Secret",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-05-01",
+   "set": "2",
+   "position": 10,
+   "kind": "substantive",
+   "transcription": [
+    "2",
+    10,
+    "Spun",
+    ">",
+    "Get Up, Stand Up\" and \"4th of July\" teases"
+   ],
+   "api": [
+    "2",
+    10,
+    "Spun",
+    ">",
+    null
+   ]
+  },
+  {
+   "slug": "2026-05-01",
+   "set": "e",
+   "position": 15,
+   "kind": "substantive",
+   "transcription": [
+    "e",
+    15,
+    "Shine a Light",
+    "",
+    "Rolling Stones; Bustout (53 shows)"
+   ],
+   "api": [
+    "e",
+    15,
+    "Shine a Light",
+    "",
+    "Rolling Stones"
+   ]
+  },
+  {
+   "slug": "2026-05-02",
+   "set": "1",
+   "position": 4,
+   "kind": "typography",
+   "transcription": [
+    "1",
+    4,
+    "You Didn't Hear It From Me",
+    "",
+    null
+   ],
+   "api": [
+    "1",
+    4,
+    "You Didn’t Hear It From Me",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-05-03",
+   "set": "1",
+   "position": 5,
+   "kind": "substantive",
+   "transcription": [
+    "1",
+    5,
+    "Chop Shop",
+    "",
+    "People Say\" tease"
+   ],
+   "api": [
+    "1",
+    5,
+    "Chop Shop",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-05-30",
+   "set": "2",
+   "position": 8,
+   "kind": "typography",
+   "transcription": [
+    "2",
+    8,
+    "You Didn't Hear It From Me",
+    "->",
+    null
+   ],
+   "api": [
+    "2",
+    8,
+    "You Didn’t Hear It From Me",
+    "->",
+    null
+   ]
+  },
+  {
+   "slug": "2026-06-02",
+   "set": "2",
+   "position": 12,
+   "kind": "typography",
+   "transcription": [
+    "2",
+    12,
+    "Lucia's Secret",
+    ">",
+    null
+   ],
+   "api": [
+    "2",
+    12,
+    "Lucia’s Secret",
+    ">",
+    null
+   ]
+  },
+  {
+   "slug": "2026-06-10",
+   "set": "2",
+   "position": 10,
+   "kind": "typography",
+   "transcription": [
+    "2",
+    10,
+    "You Didn't Hear It From Me",
+    "",
+    null
+   ],
+   "api": [
+    "2",
+    10,
+    "You Didn’t Hear It From Me",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-06-12",
+   "set": "e",
+   "position": 14,
+   "kind": "typography",
+   "transcription": [
+    "e",
+    14,
+    "Lucia's Secret",
+    "",
+    null
+   ],
+   "api": [
+    "e",
+    14,
+    "Lucia’s Secret",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-07-10",
+   "set": "e",
+   "position": 12,
+   "kind": "typography",
+   "transcription": [
+    "e",
+    12,
+    "You Didn't Hear It From Me",
+    "",
+    null
+   ],
+   "api": [
+    "e",
+    12,
+    "You Didn’t Hear It From Me",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-07-11",
+   "set": "1",
+   "position": 2,
+   "kind": "substantive",
+   "transcription": [
+    "1",
+    2,
+    "Grease",
+    ">",
+    null
+   ],
+   "api": [
+    "1",
+    2,
+    "Grease",
+    "->",
+    null
+   ]
+  },
+  {
+   "slug": "2026-07-11",
+   "set": "e",
+   "position": 12,
+   "kind": "typography",
+   "transcription": [
+    "e",
+    12,
+    "Lucia's Secret",
+    "",
+    null
+   ],
+   "api": [
+    "e",
+    12,
+    "Lucia’s Secret",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-07-15",
+   "set": "1",
+   "position": 4,
+   "kind": "typography",
+   "transcription": [
+    "1",
+    4,
+    "You Didn't Hear It From Me",
+    ">",
+    null
+   ],
+   "api": [
+    "1",
+    4,
+    "You Didn’t Hear It From Me",
+    ">",
+    null
+   ]
+  },
+  {
+   "slug": "2026-07-15",
+   "set": "e",
+   "position": 11,
+   "kind": "typography",
+   "transcription": [
+    "e",
+    11,
+    "Let's Dance",
+    "",
+    "David Bowie, with Eggy"
+   ],
+   "api": [
+    "e",
+    11,
+    "Let’s Dance",
+    "",
+    "David Bowie, with Eggy"
+   ]
+  },
+  {
+   "slug": "2026-07-22",
+   "set": "1",
+   "position": 6,
+   "kind": "typography",
+   "transcription": [
+    "1",
+    6,
+    "Lucia's Secret",
+    "",
+    null
+   ],
+   "api": [
+    "1",
+    6,
+    "Lucia’s Secret",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-07-23",
+   "set": "2",
+   "position": 9,
+   "kind": "substantive",
+   "transcription": [
+    "2",
+    9,
+    "Charlie",
+    "->",
+    null
+   ],
+   "api": [
+    "2",
+    9,
+    "Charlie",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-07-25",
+   "set": "1",
+   "position": 3,
+   "kind": "typography",
+   "transcription": [
+    "1",
+    3,
+    "You Didn't Hear It From Me",
+    "",
+    null
+   ],
+   "api": [
+    "1",
+    3,
+    "You Didn’t Hear It From Me",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-08-08",
+   "set": "e",
+   "position": 16,
+   "kind": "typography",
+   "transcription": [
+    "e",
+    16,
+    "Let's Dance",
+    "",
+    "David Bowie"
+   ],
+   "api": [
+    "e",
+    16,
+    "Let’s Dance",
+    "",
+    "David Bowie"
+   ]
+  },
+  {
+   "slug": "2026-08-12",
+   "set": "2",
+   "position": 12,
+   "kind": "typography",
+   "transcription": [
+    "2",
+    12,
+    "Lucia's Secret",
+    "",
+    null
+   ],
+   "api": [
+    "2",
+    12,
+    "Lucia’s Secret",
+    "",
+    null
+   ]
+  },
+  {
+   "slug": "2026-08-13",
+   "set": "1",
+   "position": 4,
+   "kind": "typography",
+   "transcription": [
+    "1",
+    4,
+    "You Didn't Hear It From Me",
+    "",
+    null
+   ],
+   "api": [
+    "1",
+    4,
+    "You Didn’t Hear It From Me",
+    "",
+    null
+   ]
+  }
+ ]
+}

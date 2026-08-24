@@ -1,0 +1,97 @@
+{
+ "show_date": "2025-03-20",
+ "slug": "2025-03-20",
+ "show_id": 1742776859,
+ "venue": "Old Town Pub",
+ "city": "Steamboat Springs",
+ "state": "CO",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/cats-in-a-stack-march-20-2025-old-town-pub-steamboat-springs-co-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Solar",
+     "transition": "",
+     "position": 1,
+     "footnote": "Miles Davis",
+     "length_secs": 444,
+     "song_id": 368,
+     "song_slug": "so",
+     "original_artist": "Miles Davis",
+     "is_cover": true
+    },
+    {
+     "title": "On the Sunny Side of the Street",
+     "transition": "",
+     "position": 2,
+     "footnote": "Ted Lewis",
+     "length_secs": 441,
+     "song_id": 503,
+     "song_slug": "on-the-sunny-side-of-the-street",
+     "original_artist": "Ted Lewis",
+     "is_cover": true
+    },
+    {
+     "title": "Ain't That a Shame",
+     "transition": "",
+     "position": 3,
+     "footnote": "Fats Domino",
+     "length_secs": 321,
+     "song_id": 499,
+     "song_slug": "aint-that-a-shame",
+     "original_artist": "Fats Domino",
+     "is_cover": true
+    },
+    {
+     "title": "Spain",
+     "transition": "",
+     "position": 4,
+     "footnote": "Chick Corea",
+     "length_secs": 589,
+     "song_id": 8,
+     "song_slug": "spain",
+     "original_artist": "Chick Corea",
+     "is_cover": true
+    },
+    {
+     "title": "Any Way the Wind Blows",
+     "transition": "",
+     "position": 5,
+     "footnote": "The Mothers of Invention",
+     "length_secs": 286,
+     "song_id": 504,
+     "song_slug": "any-way-the-wind-blows",
+     "original_artist": "The Mothers of Invention",
+     "is_cover": true
+    },
+    {
+     "title": "Them Changes",
+     "transition": "",
+     "position": 6,
+     "footnote": "Thundercat",
+     "length_secs": 286,
+     "song_id": 171,
+     "song_slug": "them-changes",
+     "original_artist": "Thundercat",
+     "is_cover": true
+    },
+    {
+     "title": "L's Bop",
+     "transition": "",
+     "position": 7,
+     "footnote": "Lenny White",
+     "length_secs": 306,
+     "song_id": 175,
+     "song_slug": "ls-bop",
+     "original_artist": "Lenny White",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

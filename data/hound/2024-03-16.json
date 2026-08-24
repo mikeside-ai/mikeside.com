@@ -1,0 +1,274 @@
+{
+ "show_date": "2024-03-16",
+ "slug": "2024-03-16",
+ "show_id": 1699990501,
+ "venue": "Nectar&#039;s",
+ "city": "Burlington",
+ "state": "VT",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-march-16-2024-nectar039s-burlington-vt-usa.html",
+ "shownotes": "Jeremy played Brian's guitar during the end of Royals; Brian sat at the keys",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Westward",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 261,
+     "song_id": 6,
+     "song_slug": "westward",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Frosty",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 368,
+     "song_id": 5,
+     "song_slug": "frosty",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": ">",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 679,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 740,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Greta",
+     "transition": ">",
+     "position": 5,
+     "footnote": "Widespread Panic",
+     "length_secs": 351,
+     "song_id": 50,
+     "song_slug": "greta",
+     "original_artist": "Widespread Panic",
+     "is_cover": true
+    },
+    {
+     "title": "Frettin' Fingers",
+     "transition": ">",
+     "position": 6,
+     "footnote": "Jimmy Bryant and Speedy West",
+     "length_secs": 214,
+     "song_id": 295,
+     "song_slug": "frettin-fingers",
+     "original_artist": "Jimmy Bryant and Speedy West",
+     "is_cover": true
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 7,
+     "footnote": "Ending only",
+     "length_secs": 514,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Didn't You Know?",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 408,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thriller",
+     "transition": ">",
+     "position": 9,
+     "footnote": "Michael Jackson",
+     "length_secs": 521,
+     "song_id": 86,
+     "song_slug": "thriller",
+     "original_artist": "Michael Jackson",
+     "is_cover": true
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 724,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "EDM Song",
+     "transition": ">",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 215,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Simon Says",
+     "transition": ">",
+     "position": 12,
+     "footnote": "Pharoahe Monch",
+     "length_secs": 63,
+     "song_id": 260,
+     "song_slug": "simon-says",
+     "original_artist": "Pharoahe Monch",
+     "is_cover": true
+    },
+    {
+     "title": "China Cat Sunflower",
+     "transition": ">",
+     "position": 13,
+     "footnote": "Grateful Dead",
+     "length_secs": 502,
+     "song_id": 49,
+     "song_slug": "china-cat-sunflower",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 651,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ghost Riders in the Sky",
+     "transition": ">",
+     "position": 15,
+     "footnote": "Stan Jones",
+     "length_secs": 139,
+     "song_id": 121,
+     "song_slug": "ghost-riders-in-the-sky-2",
+     "original_artist": "Stan Jones",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 651,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Minnie the Moocher",
+     "transition": "",
+     "position": 17,
+     "footnote": "Cab Calloway",
+     "length_secs": 296,
+     "song_id": 287,
+     "song_slug": "minnie-the-moocher",
+     "original_artist": "Cabell “Cab” Calloway",
+     "is_cover": true
+    },
+    {
+     "title": "Lucia’s Secret",
+     "transition": ">",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 256,
+     "song_id": 247,
+     "song_slug": "lucias-secret",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Royals",
+     "transition": ">",
+     "position": 19,
+     "footnote": "Lorde",
+     "length_secs": 692,
+     "song_id": 31,
+     "song_slug": "royals",
+     "original_artist": "Lorde",
+     "is_cover": true
+    },
+    {
+     "title": "The Bag",
+     "transition": ">",
+     "position": 20,
+     "footnote": null,
+     "length_secs": 493,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 21,
+     "footnote": "Original ending only, LTP: 9/24/22",
+     "length_secs": 101,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "One More Saturday Night",
+     "transition": "",
+     "position": 22,
+     "footnote": "Bob Weir",
+     "length_secs": 286,
+     "song_id": 68,
+     "song_slug": "one-more-saturday-night",
+     "original_artist": "Bob Weir",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

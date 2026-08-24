@@ -1,0 +1,141 @@
+{
+ "show_date": "2019-05-25",
+ "slug": "2019-05-25",
+ "show_id": 1673391634,
+ "venue": "Garcia's",
+ "city": "Port Chester",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-25-2019-garcias-port-chester-ny-usa.html",
+ "shownotes": "Pre-show for The String Cheese Incident.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Thriller",
+     "transition": "->",
+     "position": 1,
+     "footnote": "Michael Jackson",
+     "length_secs": 607,
+     "song_id": 86,
+     "song_slug": "thriller",
+     "original_artist": "Michael Jackson",
+     "is_cover": true
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 577,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": "->",
+     "position": 3,
+     "footnote": "Stevie Wonder",
+     "length_secs": 485,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 4,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 330,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    },
+    {
+     "title": "Time Stands Still",
+     "transition": "->",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 622,
+     "song_id": 102,
+     "song_slug": "time-stands-still",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Creep",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 318,
+     "song_id": 93,
+     "song_slug": "cr",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 597,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "That's What Love Will Make You Do",
+     "transition": "",
+     "position": 8,
+     "footnote": "Little Milton",
+     "length_secs": 507,
+     "song_id": 136,
+     "song_slug": "thats-what-love-will-make-you-do",
+     "original_artist": "Little Milton",
+     "is_cover": true
+    },
+    {
+     "title": "Help on the Way / Slipknot!",
+     "transition": ">",
+     "position": 9,
+     "footnote": "Grateful Dead",
+     "length_secs": 678,
+     "song_id": 69,
+     "song_slug": "help-on-the-way-slipknot",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 514,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    },
+    {
+     "title": "Spain",
+     "transition": "",
+     "position": 11,
+     "footnote": "Chick Corea",
+     "length_secs": 417,
+     "song_id": 8,
+     "song_slug": "spain",
+     "original_artist": "Chick Corea",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

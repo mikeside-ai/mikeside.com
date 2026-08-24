@@ -1,0 +1,180 @@
+{
+ "show_date": "2025-01-11",
+ "slug": "2025-01-11",
+ "show_id": 1736537737,
+ "venue": "Winstons",
+ "city": "San Diego",
+ "state": "CA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-january-11-2025-winstons-san-diego-ca-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Crazy",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 421,
+     "song_id": 58,
+     "song_slug": "crazy",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 711,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 733,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Walkin' on the Sun",
+     "transition": "",
+     "position": 4,
+     "footnote": "Smash Mouth",
+     "length_secs": 318,
+     "song_id": 70,
+     "song_slug": "walkin-on-the-sun",
+     "original_artist": "Smash Mouth",
+     "is_cover": true
+    },
+    {
+     "title": "The Bag",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 561,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The Ballad of Ms. Pepper and Ms. Paige",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 376,
+     "song_id": 438,
+     "song_slug": "the-ballad-of-ms-pepper-and-ms-paige",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 1078,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Burning Daylight",
+     "transition": "->",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 793,
+     "song_id": 416,
+     "song_slug": "burning-daylight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tillie",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 1215,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "White Rabbit",
+     "transition": "",
+     "position": 10,
+     "footnote": "Jefferson Airplane",
+     "length_secs": 190,
+     "song_id": 392,
+     "song_slug": "white-rabitt",
+     "original_artist": "Jefferson Airplane",
+     "is_cover": true
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 1165,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 330,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Happy Song",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 388,
+     "song_id": 389,
+     "song_slug": "happy-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "One More Saturday Night",
+     "transition": "",
+     "position": 14,
+     "footnote": "Bob Weir",
+     "length_secs": 488,
+     "song_id": 68,
+     "song_slug": "one-more-saturday-night",
+     "original_artist": "Bob Weir",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

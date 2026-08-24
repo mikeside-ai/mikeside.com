@@ -1,0 +1,86 @@
+{
+ "show_date": "2022-11-10",
+ "slug": "2022-11-10",
+ "show_id": 1670949105,
+ "venue": "Park West",
+ "city": "Chicago",
+ "state": "IL",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-november-10-2022-park-west-chicago-il-usa.html",
+ "shownotes": "Opening for Twiddle.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Crazy",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 58,
+     "song_slug": "crazy",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 3,
+     "footnote": "with Mihali",
+     "length_secs": null,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Gumbo",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 7,
+     "song_slug": "gumbo",
+     "original_artist": "Phish",
+     "is_cover": true
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Say Something",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 113,
+     "song_slug": "say-something",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

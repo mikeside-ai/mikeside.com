@@ -1,0 +1,208 @@
+{
+ "show_date": "2025-12-05",
+ "slug": "2025-12-05",
+ "show_id": 1756868327,
+ "venue": "Paradise Rock Club",
+ "city": "Boston",
+ "state": "MA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-december-5-2025-paradise-rock-club-boston-ma-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Didn't You Know?",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 433,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 692,
+     "song_id": 445,
+     "song_slug": "dangers-of-rah-rah",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 3,
+     "footnote": "Unfinished",
+     "length_secs": 1104,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 383,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 824,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Gumball",
+     "transition": "->",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 667,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 7,
+     "footnote": "Ending only",
+     "length_secs": 158,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 832,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The Bag",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 451,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Criminal",
+     "transition": "->",
+     "position": 10,
+     "footnote": "Fiona Apple",
+     "length_secs": 378,
+     "song_id": 498,
+     "song_slug": "criminal",
+     "original_artist": "Fiona Apple",
+     "is_cover": true
+    },
+    {
+     "title": "The Bag",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 66,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Applesauce",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 821,
+     "song_id": 192,
+     "song_slug": "applesauce",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 684,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 644,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Bennie and the Jets",
+     "transition": "",
+     "position": 15,
+     "footnote": "Elton John",
+     "length_secs": 441,
+     "song_id": 232,
+     "song_slug": "bennie-and-the-jets",
+     "original_artist": "Elton John",
+     "is_cover": true
+    },
+    {
+     "title": "Say Something",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 577,
+     "song_id": 113,
+     "song_slug": "say-something",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

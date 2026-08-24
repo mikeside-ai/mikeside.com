@@ -1,0 +1,119 @@
+{
+ "show_date": "2019-06-22",
+ "slug": "2019-06-22",
+ "show_id": 1673392121,
+ "venue": "Mountain Sky",
+ "city": "Scott Township",
+ "state": "PA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-22-2019-mountain-sky-scott-township-pa-usa.html",
+ "shownotes": "Performed at Stonehenge Music Festival.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "China Cat Sunflower",
+     "transition": "->",
+     "position": 1,
+     "footnote": "Grateful Dead",
+     "length_secs": 504,
+     "song_id": 49,
+     "song_slug": "china-cat-sunflower",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Free",
+     "transition": ">",
+     "position": 2,
+     "footnote": "Phish",
+     "length_secs": 852,
+     "song_id": 40,
+     "song_slug": "free",
+     "original_artist": "Phish",
+     "is_cover": true
+    },
+    {
+     "title": "Time Stands Still",
+     "transition": "->",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 488,
+     "song_id": 102,
+     "song_slug": "time-stands-still",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 536,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": "->",
+     "position": 5,
+     "footnote": "Stevie Wonder",
+     "length_secs": 593,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 6,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 382,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 622,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Green Earrings",
+     "transition": "->",
+     "position": 8,
+     "footnote": "Steely Dan",
+     "length_secs": 638,
+     "song_id": 64,
+     "song_slug": "green-earrings",
+     "original_artist": "Steely Dan",
+     "is_cover": true
+    },
+    {
+     "title": "Too High",
+     "transition": "",
+     "position": 9,
+     "footnote": "Stevie Wonder",
+     "length_secs": 514,
+     "song_id": 161,
+     "song_slug": "too-high",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

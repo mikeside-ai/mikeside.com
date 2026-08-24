@@ -1,0 +1,97 @@
+{
+ "show_date": "2021-11-24",
+ "slug": "2021-11-24",
+ "show_id": 1673463609,
+ "venue": "XL Live",
+ "city": "Harrisburg",
+ "state": "PA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-november-24-2021-xl-live-harrisburg-pa-usa.html",
+ "shownotes": "Opening for Yam Yam.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Jam",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 112,
+     "song_slug": "jam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": ">",
+     "position": 3,
+     "footnote": "Stevie Wonder",
+     "length_secs": null,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 4,
+     "footnote": "Vince Guaraldi",
+     "length_secs": null,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

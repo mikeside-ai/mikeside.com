@@ -1,0 +1,241 @@
+{
+ "show_date": "2025-01-31",
+ "slug": "2025-01-31",
+ "show_id": 1732047197,
+ "venue": "Cervantes' Masterpiece Ballroom",
+ "city": "Denver",
+ "state": "CO",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-january-31-2025-cervantes-masterpiece-ballroom-denver-co-usa.html",
+ "shownotes": "Craig and Pat contained a Jellyfish Jam.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "The Bag",
+     "transition": "->",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 441,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Nicolette",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 740,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 356,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stranger",
+     "transition": "->",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 390,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Around The World",
+     "transition": "->",
+     "position": 5,
+     "footnote": "Daft Punk",
+     "length_secs": 208,
+     "song_id": 166,
+     "song_slug": "around-the-world",
+     "original_artist": "Daft Punk",
+     "is_cover": true
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 390,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 7,
+     "footnote": "with Nick Gerlach on saxophone",
+     "length_secs": 724,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 823,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": "",
+     "position": 9,
+     "footnote": "Stevie Wonder",
+     "length_secs": 611,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 10,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 525,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Let U Go",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 739,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 1621,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "->",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 689,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Gumball",
+     "transition": "->",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 583,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 689,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Talk About It",
+     "transition": "->",
+     "position": 16,
+     "footnote": "Andy Frasco & The U.N., with Nick Gerlach on saxophone - Shawn Eckels on guitar - and Andy Frasco on vocals and keyboards",
+     "length_secs": 617,
+     "song_id": 243,
+     "song_slug": "talk-about-it",
+     "original_artist": "Andy Frasco & The U.N.",
+     "is_cover": true
+    },
+    {
+     "title": "Break Stuff",
+     "transition": "",
+     "position": 17,
+     "footnote": "Limp Bizkit, with Nick Gerlach on saxophone - Shawn Eckels on guitar - Andy Frasco on vocals and keyboards - Brian Murray on bass",
+     "length_secs": 223,
+     "song_id": 228,
+     "song_slug": "break-stuff",
+     "original_artist": "Limp Bizkit",
+     "is_cover": true
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 1153,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Lazy Susan",
+     "transition": "",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 426,
+     "song_id": 414,
+     "song_slug": "lazy-susan",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,263 @@
+{
+ "show_date": "2025-11-20",
+ "slug": "2025-11-20",
+ "show_id": 1741638814,
+ "venue": "Garcia's",
+ "city": "Chicago",
+ "state": "IL",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-november-20-2025-garcias-chicago-il-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Yum T. Dum",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 263,
+     "song_id": 225,
+     "song_slug": "yum-t-dum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Song for the Dumped",
+     "transition": "",
+     "position": 2,
+     "footnote": "Ben Folds",
+     "length_secs": 227,
+     "song_id": 274,
+     "song_slug": "song-for-the-dumped-2",
+     "original_artist": "Ben Folds",
+     "is_cover": true
+    },
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 1263,
+     "song_id": 445,
+     "song_slug": "dangers-of-rah-rah",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The OG",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 300,
+     "song_id": 394,
+     "song_slug": "the-og",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Time Stands Still",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 978,
+     "song_id": 102,
+     "song_slug": "time-stands-still",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Happy Song",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 348,
+     "song_id": 389,
+     "song_slug": "happy-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 785,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "White Rabbit",
+     "transition": "",
+     "position": 8,
+     "footnote": "Jefferson Airplane",
+     "length_secs": 249,
+     "song_id": 392,
+     "song_slug": "white-rabitt",
+     "original_artist": "Jefferson Airplane",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Let it Grow",
+     "transition": "",
+     "position": 9,
+     "footnote": "Grateful Dead",
+     "length_secs": 673,
+     "song_id": 97,
+     "song_slug": "let-it-grow",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Lazy Susan",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 409,
+     "song_id": 414,
+     "song_slug": "lazy-susan",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": ">",
+     "position": 11,
+     "footnote": "Stevie Wonder",
+     "length_secs": 889,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Inchworm",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 396,
+     "song_id": 33,
+     "song_slug": "inchworm",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Renaissance Man",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 366,
+     "song_id": 92,
+     "song_slug": "renaissance-ma",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 591,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "EDM Song",
+     "transition": ">",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 202,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 153,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bennie and the Jets",
+     "transition": "",
+     "position": 17,
+     "footnote": "Elton John",
+     "length_secs": 447,
+     "song_id": 232,
+     "song_slug": "bennie-and-the-jets",
+     "original_artist": "Elton John",
+     "is_cover": true
+    },
+    {
+     "title": "Big Man",
+     "transition": ">",
+     "position": 18,
+     "footnote": "Ben Schwartzman",
+     "length_secs": 368,
+     "song_id": 455,
+     "song_slug": "big-man",
+     "original_artist": "Ben Schwartzman",
+     "is_cover": true
+    },
+    {
+     "title": "Jessica",
+     "transition": "",
+     "position": 19,
+     "footnote": "The Allman Brothers Band",
+     "length_secs": 517,
+     "song_id": 83,
+     "song_slug": "jessica",
+     "original_artist": "The Allman Brothers Band",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Bulls on Parade",
+     "transition": "",
+     "position": 20,
+     "footnote": "Rage Against The Machine",
+     "length_secs": 335,
+     "song_id": 432,
+     "song_slug": "bulls-on-parade",
+     "original_artist": "Rage Against the Machine",
+     "is_cover": true
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 21,
+     "footnote": null,
+     "length_secs": 665,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

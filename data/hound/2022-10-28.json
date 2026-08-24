@@ -1,0 +1,86 @@
+{
+ "show_date": "2022-10-28",
+ "slug": "2022-10-28",
+ "show_id": 1670948894,
+ "venue": "Tipitina's",
+ "city": "New Orleans",
+ "state": "LA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-october-28-2022-tipitinas-new-orleans-la-usa.html",
+ "shownotes": "Opening for Twiddle.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 899,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 423,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Royals",
+     "transition": "",
+     "position": 3,
+     "footnote": "Lorde",
+     "length_secs": 688,
+     "song_id": 31,
+     "song_slug": "royals",
+     "original_artist": "Lorde",
+     "is_cover": true
+    },
+    {
+     "title": "Fenway",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 468,
+     "song_id": 13,
+     "song_slug": "fenway",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Great Balls of Fire",
+     "transition": "",
+     "position": 5,
+     "footnote": "Jerry Lee Lewis",
+     "length_secs": 176,
+     "song_id": 129,
+     "song_slug": "great-balls-of-fire",
+     "original_artist": "Jerry Lee Lewis",
+     "is_cover": true
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 649,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

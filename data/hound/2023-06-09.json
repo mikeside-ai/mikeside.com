@@ -1,0 +1,202 @@
+{
+ "show_date": "2023-06-09",
+ "slug": "2023-06-09",
+ "show_id": 1678228875,
+ "venue": "Domino Room",
+ "city": "Bend",
+ "state": "OR",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-9-2023-domino-room-bend-or-usa.html",
+ "shownotes": "This show was performed on FOH Engineer Brian Masella's Birthday and dedicated to him. Twister Jam was performed with Jeremy on Brian’s guitar & Jimmy and Brian on the keyboards.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Westward",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 292,
+     "song_id": 6,
+     "song_slug": "westward",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 556,
+     "song_id": 35,
+     "song_slug": "snow-day",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mr. Charlie",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 368,
+     "song_id": 48,
+     "song_slug": "mr-charlie-2",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "It Gets Better",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 515,
+     "song_id": 226,
+     "song_slug": "it-gets-better",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 636,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 1040,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Green Earrings",
+     "transition": ">",
+     "position": 7,
+     "footnote": "Steely Dan",
+     "length_secs": 363,
+     "song_id": 64,
+     "song_slug": "green-earrings",
+     "original_artist": "Steely Dan",
+     "is_cover": true
+    },
+    {
+     "title": "Bend Strange",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 712,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 337,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Gumball",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 509,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Power Trip",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 338,
+     "song_id": 190,
+     "song_slug": "power-trip",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": ">",
+     "position": 12,
+     "footnote": "Stevie Wonder",
+     "length_secs": 321,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Drums/Bass",
+     "transition": ">",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 170,
+     "song_id": 255,
+     "song_slug": "drumsbass",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Twister Jam",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 499,
+     "song_id": 256,
+     "song_slug": "twister-jam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 15,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 431,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "All The Same",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 309,
+     "song_id": 32,
+     "song_slug": "all-the-same",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,186 @@
+{
+ "show_date": "2025-11-05",
+ "slug": "2025-11-05",
+ "show_id": 1753848431,
+ "venue": "Garcia's",
+ "city": "Chicago",
+ "state": "IL",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-november-5-2025-garcia039s-chicago-il-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Westward",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 257,
+     "song_id": 6,
+     "song_slug": "westward",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mr. Charlie",
+     "transition": "",
+     "position": 2,
+     "footnote": "Grateful Dead",
+     "length_secs": 371,
+     "song_id": 48,
+     "song_slug": "mr-charlie-2",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": "->",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 1369,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 769,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "116 Days",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 301,
+     "song_id": 440,
+     "song_slug": "116-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 1524,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 654,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": "->",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 655,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Hesitate",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 796,
+     "song_id": 22,
+     "song_slug": "hesitate",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Green Earrings",
+     "transition": "->",
+     "position": 10,
+     "footnote": "Steely Dan",
+     "length_secs": 549,
+     "song_id": 64,
+     "song_slug": "green-earrings",
+     "original_artist": "Steely Dan",
+     "is_cover": true
+    },
+    {
+     "title": "Hesitate",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 393,
+     "song_id": 22,
+     "song_slug": "hesitate",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Power Trip",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 421,
+     "song_id": 190,
+     "song_slug": "power-trip",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 1340,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 365,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,13 +1,14 @@
 {
  "show_date": "2026-07-17",
  "slug": "2026-07-17",
+ "show_id": 1776978604,
  "venue": "Levitt Pavilion",
  "city": "Westport",
  "state": "CT",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-17-2026-levitt-pavilion-westport-ct-usa.html",
- "shownotes": null,
+ "shownotes": "",
  "sets": [
   {
    "label": "1",
@@ -18,49 +19,77 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 422,
+     "song_id": 414,
+     "song_slug": "lazy-susan",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Grease",
      "transition": ">",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 497,
+     "song_id": 544,
+     "song_slug": "grease",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Bubble",
      "transition": "",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 900,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Hesitate",
      "transition": "",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 907,
+     "song_id": 22,
+     "song_slug": "hesitate",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Bennie and the Jets",
      "transition": "",
      "position": 5,
      "footnote": "Elton John",
-     "length_secs": null
+     "length_secs": 452,
+     "song_id": 232,
+     "song_slug": "bennie-and-the-jets",
+     "original_artist": "Elton John",
+     "is_cover": true
     },
     {
      "title": "Four More Days",
      "transition": ">",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 761,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Trunk Rum",
      "transition": "",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 627,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -73,49 +102,77 @@
      "transition": "",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 720,
+     "song_id": 545,
+     "song_slug": "freeze-dried-brain",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Thomas Duncan, Pt. 2",
      "transition": "",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1046,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Samba for Sam",
      "transition": "->",
      "position": 10,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 783,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "¿Por Que, Pedro?",
      "transition": "->",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 329,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Samba for Sam",
      "transition": "",
      "position": 12,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 206,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Boogie on Reggae Woman",
      "transition": ">",
      "position": 13,
      "footnote": "Stevie Wonder",
-     "length_secs": null
+     "length_secs": 668,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
     },
     {
      "title": "Thomas Duncan, Pt. 3",
      "transition": "",
      "position": 14,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 942,
+     "song_id": 327,
+     "song_slug": "thomas-duncan-pt-3",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -128,7 +185,11 @@
      "transition": "",
      "position": 15,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 324,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   }

@@ -1,0 +1,141 @@
+{
+ "show_date": "2024-12-22",
+ "slug": "2024-12-22",
+ "show_id": 1734909368,
+ "venue": "Transparent Clinch Gallery",
+ "city": "Asbury Park",
+ "state": "NJ",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-december-22-2024-transparent-clinch-gallery-asbury-park-nj-usa.html",
+ "shownotes": "This was a private performance billed as Dogs In Space. Sun Ra Arkestra members appearing include: Michael Ray - Trumpet Kneol Scott - Sax Brent White - Trombone Elson Nascimento - Percussion",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 506,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Apeman",
+     "transition": "",
+     "position": 2,
+     "footnote": "The Kinks",
+     "length_secs": 271,
+     "song_id": 182,
+     "song_slug": "apeman",
+     "original_artist": "The Kinks",
+     "is_cover": true
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 357,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 878,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "That's What Love Will Make You Do",
+     "transition": "",
+     "position": 5,
+     "footnote": "Little Milton, with Danny Clinch on Harmonica",
+     "length_secs": 548,
+     "song_id": 136,
+     "song_slug": "thats-what-love-will-make-you-do",
+     "original_artist": "Little Milton",
+     "is_cover": true
+    },
+    {
+     "title": "Power Trip",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 380,
+     "song_id": 190,
+     "song_slug": "power-trip",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Jam",
+     "transition": ">",
+     "position": 7,
+     "footnote": "with members of Sun Ra Arkestra",
+     "length_secs": 1066,
+     "song_id": 112,
+     "song_slug": "jam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 8,
+     "footnote": "with members of Sun Ra Arkestra",
+     "length_secs": 411,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Nuclear War",
+     "transition": "",
+     "position": 9,
+     "footnote": "Sun Ra Arkestra, with members of Sun Ra Arkestra",
+     "length_secs": 949,
+     "song_id": 1,
+     "song_slug": "_custom_",
+     "original_artist": null,
+     "is_cover": true
+    },
+    {
+     "title": "Watermelon Man",
+     "transition": ">",
+     "position": 10,
+     "footnote": "Herbie Hancock, with members of Sun Ra Arkestra",
+     "length_secs": 638,
+     "song_id": 148,
+     "song_slug": "watermelon-man",
+     "original_artist": "Herbie Hancock",
+     "is_cover": true
+    },
+    {
+     "title": "Hey Jude",
+     "transition": "",
+     "position": 11,
+     "footnote": "The Beatles, with members of Sun Ra Arkestra",
+     "length_secs": 231,
+     "song_id": 1,
+     "song_slug": "_custom_",
+     "original_artist": null,
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,208 @@
+{
+ "show_date": "2025-11-06",
+ "slug": "2025-11-06",
+ "show_id": 1741638661,
+ "venue": "Garcia's",
+ "city": "Chicago",
+ "state": "IL",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-november-6-2025-garcia039s-chicago-il-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 484,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Crazy",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 466,
+     "song_id": 58,
+     "song_slug": "crazy",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bring It On Up",
+     "transition": "->",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 914,
+     "song_id": 116,
+     "song_slug": "bring-it-on-up",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 690,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 379,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Will It Go 'Round In Circles?",
+     "transition": "",
+     "position": 6,
+     "footnote": "Billy Preston",
+     "length_secs": 372,
+     "song_id": 21,
+     "song_slug": "will-it-go-round-in-circles",
+     "original_artist": "Billy Preston",
+     "is_cover": true
+    },
+    {
+     "title": "Way To Be",
+     "transition": "->",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 813,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    },
+    {
+     "title": "Royals",
+     "transition": "",
+     "position": 8,
+     "footnote": "Lorde",
+     "length_secs": 644,
+     "song_id": 31,
+     "song_slug": "royals",
+     "original_artist": "Lorde",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Dancing in the Street",
+     "transition": "->",
+     "position": 9,
+     "footnote": "Martha Reeves and the Vandellas",
+     "length_secs": 1478,
+     "song_id": 100,
+     "song_slug": "dancing-in-the-street",
+     "original_artist": "Martha Reeves and the Vandellas",
+     "is_cover": true
+    },
+    {
+     "title": "Psychobilly Freakout",
+     "transition": "",
+     "position": 10,
+     "footnote": "The Reverend Horton Heat",
+     "length_secs": 729,
+     "song_id": 477,
+     "song_slug": "psychobilly-freakout",
+     "original_artist": "The Reverend Horton Heat",
+     "is_cover": true
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 289,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 822,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Men of Steel",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 462,
+     "song_id": 347,
+     "song_slug": "men-of-steel",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "->",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 1013,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 149,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Rinky Dink Rag",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 183,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

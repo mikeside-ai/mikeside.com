@@ -1,0 +1,274 @@
+{
+ "show_date": "2021-09-25",
+ "slug": "2021-09-25",
+ "show_id": 1671503837,
+ "venue": "Snipes Farm",
+ "city": "Morrisville",
+ "state": "PA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-september-25-2021-snipes-farm-morrisville-pa-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Hesitate",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 22,
+     "song_slug": "hesitate",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Renaissance Man",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 92,
+     "song_slug": "renaissance-ma",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Royals",
+     "transition": "",
+     "position": 7,
+     "footnote": "Lorde",
+     "length_secs": null,
+     "song_id": 31,
+     "song_slug": "royals",
+     "original_artist": "Lorde",
+     "is_cover": true
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Rinky Dink Rag",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "King of the Hill Theme",
+     "transition": "",
+     "position": 11,
+     "footnote": "The Refreshments",
+     "length_secs": null,
+     "song_id": 73,
+     "song_slug": "king-of-the-hill-theme",
+     "original_artist": "The Refreshments",
+     "is_cover": true
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Help on the Way / Slipknot!",
+     "transition": ">",
+     "position": 13,
+     "footnote": "Grateful Dead",
+     "length_secs": null,
+     "song_id": 69,
+     "song_slug": "help-on-the-way-slipknot",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Bent Strange",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Back to the Start",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 20,
+     "song_slug": "back-to-the-start",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 18,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Helter Dust Skelter Torture",
+     "transition": "",
+     "position": 19,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 156,
+     "song_slug": "helter-dust-skelter-torture",
+     "original_artist": null,
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Stevie Lew",
+     "transition": "",
+     "position": 20,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 59,
+     "song_slug": "stevie-lew",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "One More Saturday Night",
+     "transition": "",
+     "position": 21,
+     "footnote": "Bob Weir",
+     "length_secs": null,
+     "song_id": 68,
+     "song_slug": "one-more-saturday-night",
+     "original_artist": "Bob Weir",
+     "is_cover": true
+    },
+    {
+     "title": "Such a Night",
+     "transition": "",
+     "position": 22,
+     "footnote": "Dr. John",
+     "length_secs": null,
+     "song_id": 34,
+     "song_slug": "such-a-night",
+     "original_artist": "Dr. John",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

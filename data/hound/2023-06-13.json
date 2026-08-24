@@ -1,0 +1,158 @@
+{
+ "show_date": "2023-06-13",
+ "slug": "2023-06-13",
+ "show_id": 1686681101,
+ "venue": "Bruno&#039;s Cavern",
+ "city": "Cave Junction",
+ "state": "OR",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-13-2023-bruno039s-cavern-cave-junction-or-usa.html",
+ "shownotes": "Charlie was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 1277,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 288,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Time Stands Still",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 662,
+     "song_id": 102,
+     "song_slug": "time-stands-still",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 635,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 800,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Creep",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 386,
+     "song_id": 93,
+     "song_slug": "cr",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 1117,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bring It On Up",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 612,
+     "song_id": 116,
+     "song_slug": "bring-it-on-up",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "This Little Light of Mine",
+     "transition": "",
+     "position": 9,
+     "footnote": "Harry Dixon Loes",
+     "length_secs": 319,
+     "song_id": 258,
+     "song_slug": "this-little-light-of-mine",
+     "original_artist": "Harry Dixon Loes",
+     "is_cover": true
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 1025,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Greta",
+     "transition": "",
+     "position": 11,
+     "footnote": "Widespread Panic",
+     "length_secs": 388,
+     "song_id": 50,
+     "song_slug": "greta",
+     "original_artist": "Widespread Panic",
+     "is_cover": true
+    },
+    {
+     "title": "Help on the Way / Slipknot!",
+     "transition": "",
+     "position": 12,
+     "footnote": "Grateful Dead, Ending only.",
+     "length_secs": 161,
+     "song_id": 69,
+     "song_slug": "help-on-the-way-slipknot",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

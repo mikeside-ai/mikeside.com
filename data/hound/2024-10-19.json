@@ -1,0 +1,279 @@
+{
+ "show_date": "2024-10-19",
+ "slug": "2024-10-19",
+ "show_id": 1729524509,
+ "venue": "Great Divide Campground",
+ "city": "Newton",
+ "state": "NJ",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-october-19-2024-great-divide-campground-newton-nj-usa.html",
+ "shownotes": "This show was a private wedding celebration.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "White Wedding",
+     "transition": "",
+     "position": 1,
+     "footnote": "FTP, Billy Idol",
+     "length_secs": 297,
+     "song_id": 508,
+     "song_slug": "white-wedding",
+     "original_artist": "Billy Idol",
+     "is_cover": true
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 311,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Down the Water Line",
+     "transition": "",
+     "position": 3,
+     "footnote": "FTP, Dire Straits",
+     "length_secs": 229,
+     "song_id": 509,
+     "song_slug": "down-the-water-line",
+     "original_artist": "Dire Straits",
+     "is_cover": true
+    },
+    {
+     "title": "Burning Down the House",
+     "transition": "",
+     "position": 4,
+     "footnote": "FTP, Talking Heads",
+     "length_secs": 561,
+     "song_id": 421,
+     "song_slug": "burning-down-the-house",
+     "original_artist": "Talking Heads",
+     "is_cover": true
+    },
+    {
+     "title": "Your Party",
+     "transition": "",
+     "position": 5,
+     "footnote": "FTP, Ween - Groom on vocals",
+     "length_secs": 308,
+     "song_id": 510,
+     "song_slug": "your-party",
+     "original_artist": "Ween",
+     "is_cover": true
+    },
+    {
+     "title": "Video Killed the Radio Star",
+     "transition": "",
+     "position": 6,
+     "footnote": "FTP, The Buggles",
+     "length_secs": 272,
+     "song_id": 513,
+     "song_slug": "video-killed-the-radio-star",
+     "original_artist": "The Buggles",
+     "is_cover": true
+    },
+    {
+     "title": "Psycho Killer",
+     "transition": "",
+     "position": 7,
+     "footnote": "FTP, Talking Heads",
+     "length_secs": 398,
+     "song_id": 511,
+     "song_slug": "psycho-killer",
+     "original_artist": "Talking Heads",
+     "is_cover": true
+    },
+    {
+     "title": "Eyes of the World",
+     "transition": "",
+     "position": 8,
+     "footnote": "Grateful Dead, Father of the Bride on guitar and vocals",
+     "length_secs": 708,
+     "song_id": 28,
+     "song_slug": "eyes-of-the-world",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Paradise By the Dashboard Light",
+     "transition": "",
+     "position": 9,
+     "footnote": "FTP, Meatloaf - Nick Codina on vocals",
+     "length_secs": 561,
+     "song_id": 512,
+     "song_slug": "paradise-by-the-dashboard-light",
+     "original_artist": "Meatloaf",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Blues for Brian",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 595,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Also Sprach Zarathustra (2001)",
+     "transition": ">",
+     "position": 11,
+     "footnote": "Richard Strauss",
+     "length_secs": 472,
+     "song_id": 145,
+     "song_slug": "also-sprach-zarathustra-2001",
+     "original_artist": "Richard Strauss",
+     "is_cover": true
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 247,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": "",
+     "position": 13,
+     "footnote": "Jeremy substituted a flute",
+     "length_secs": 334,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Pinball Wizard",
+     "transition": "",
+     "position": 14,
+     "footnote": "The Who",
+     "length_secs": 559,
+     "song_id": 367,
+     "song_slug": "pinball-wizard",
+     "original_artist": "The Who",
+     "is_cover": true
+    },
+    {
+     "title": "Let U Go",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 678,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Uncle Remus",
+     "transition": "",
+     "position": 16,
+     "footnote": "FTP, Frank Zappa",
+     "length_secs": 223,
+     "song_id": 507,
+     "song_slug": "uncle-remus",
+     "original_artist": "Frank Zappa",
+     "is_cover": true
+    },
+    {
+     "title": "Amos Moses",
+     "transition": "",
+     "position": 17,
+     "footnote": "FTP, Jerry Reed",
+     "length_secs": 210,
+     "song_id": 422,
+     "song_slug": "amos-moses",
+     "original_artist": "Jerry Reed",
+     "is_cover": true
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 767,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "White Rabbit",
+     "transition": "",
+     "position": 19,
+     "footnote": "Jefferson Airplane",
+     "length_secs": 198,
+     "song_id": 392,
+     "song_slug": "white-rabitt",
+     "original_artist": "Jefferson Airplane",
+     "is_cover": true
+    },
+    {
+     "title": "Dancing in the Street",
+     "transition": "",
+     "position": 20,
+     "footnote": "Martha Reeves and the Vandellas",
+     "length_secs": 965,
+     "song_id": 100,
+     "song_slug": "dancing-in-the-street",
+     "original_artist": "Martha Reeves and the Vandellas",
+     "is_cover": true
+    },
+    {
+     "title": "Help on the Way / Slipknot!",
+     "transition": ">",
+     "position": 21,
+     "footnote": "Grateful Dead",
+     "length_secs": 784,
+     "song_id": 69,
+     "song_slug": "help-on-the-way-slipknot",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 22,
+     "footnote": "Ending only",
+     "length_secs": 191,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Good Lovin'",
+     "transition": "",
+     "position": 23,
+     "footnote": "Young Rascals",
+     "length_secs": 405,
+     "song_id": 90,
+     "song_slug": "good-lovin",
+     "original_artist": "Young Rascals",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

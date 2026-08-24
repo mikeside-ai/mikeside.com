@@ -1,0 +1,141 @@
+{
+ "show_date": "2025-07-24",
+ "slug": "2025-07-24",
+ "show_id": 1744645202,
+ "venue": "Martin Luther King Jr Memorial Park at Manhattan Square",
+ "city": "Rochester",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-24-2025-martin-luther-king-jr-memorial-park-at-manhattan-square-rochester-ny-usa.html",
+ "shownotes": "Performed as part of the \"Party in the Park\" series. The band quoted  “Hide and Seek” several times during the show to honor Chuck Mangione, a Rochester native who passed away days before.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 409,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 258,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "->",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 635,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": "->",
+     "position": 4,
+     "footnote": "Ween",
+     "length_secs": 341,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "->",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 749,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 640,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Rinky Dink Rag",
+     "transition": "->",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 162,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": ">",
+     "position": 8,
+     "footnote": "Ending only",
+     "length_secs": 188,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 867,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 629,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 371,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

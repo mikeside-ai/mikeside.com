@@ -1,0 +1,86 @@
+{
+ "show_date": "2019-05-19",
+ "slug": "2019-05-19",
+ "show_id": 1673391577,
+ "venue": "Brighton Bar",
+ "city": "Long Branch",
+ "state": "NJ",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-19-2019-brighton-bar-long-branch-nj-usa.html",
+ "shownotes": "Performed at the Makin Waves Jam 'n' Groove Fest.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 715,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Time Stands Still",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 422,
+     "song_id": 102,
+     "song_slug": "time-stands-still",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 525,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Time Loves A Hero",
+     "transition": "->",
+     "position": 4,
+     "footnote": "Little Feat",
+     "length_secs": 283,
+     "song_id": 47,
+     "song_slug": "time-loves-a-hero",
+     "original_artist": "Little Feat",
+     "is_cover": true
+    },
+    {
+     "title": "That's What Love Will Make You Do",
+     "transition": "",
+     "position": 5,
+     "footnote": "Little Milton",
+     "length_secs": 520,
+     "song_id": 136,
+     "song_slug": "thats-what-love-will-make-you-do",
+     "original_artist": "Little Milton",
+     "is_cover": true
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 641,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

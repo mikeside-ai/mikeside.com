@@ -1,13 +1,14 @@
 {
  "show_date": "2026-06-06",
  "slug": "2026-06-06",
+ "show_id": 1776978050,
  "venue": "Delfino Farms",
  "city": "Camino",
  "state": "CA",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-6-2026-delfino-farms-camino-ca-usa.html",
- "shownotes": null,
+ "shownotes": "",
  "sets": [
   {
    "label": "1",
@@ -18,77 +19,121 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 427,
+     "song_id": 414,
+     "song_slug": "lazy-susan",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Burning Daylight",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 733,
+     "song_id": 416,
+     "song_slug": "burning-daylight",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Hesitate",
      "transition": "",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1140,
+     "song_id": 22,
+     "song_slug": "hesitate",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "4th of July",
      "transition": "",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 134,
+     "song_id": 55,
+     "song_slug": "4th-of-july",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Four More Days",
      "transition": "",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 562,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Jack & Coke",
      "transition": "->",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 658,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Everything I Do Gonh Be Funky (From Now On)",
      "transition": "",
      "position": 7,
      "footnote": "FTP, Lee Dorsey",
-     "length_secs": null
+     "length_secs": 247,
+     "song_id": 572,
+     "song_slug": "everything-i-do-gonna-be-funky-from-now-on",
+     "original_artist": "Lee Dorsey",
+     "is_cover": true
     },
     {
      "title": "Creep",
      "transition": "",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 369,
+     "song_id": 93,
+     "song_slug": "cr",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Let U Go",
      "transition": "->",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 911,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Let Me Go",
      "transition": "",
      "position": 10,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 319,
+     "song_id": 547,
+     "song_slug": "let-me-go",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Applesauce",
      "transition": "",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 864,
+     "song_id": 192,
+     "song_slug": "applesauce",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -101,14 +146,22 @@
      "transition": "",
      "position": 12,
      "footnote": "Widespread Panic",
-     "length_secs": null
+     "length_secs": 390,
+     "song_id": 50,
+     "song_slug": "greta",
+     "original_artist": "Widespread Panic",
+     "is_cover": true
     },
     {
      "title": "Say Something",
      "transition": "",
      "position": 13,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 602,
+     "song_id": 113,
+     "song_slug": "say-something",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   }

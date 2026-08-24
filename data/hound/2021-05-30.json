@@ -1,0 +1,296 @@
+{
+ "show_date": "2021-05-30",
+ "slug": "2021-05-30",
+ "show_id": 1669836056,
+ "venue": "Moog's Joint",
+ "city": "Johnson",
+ "state": "VT",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-30-2021-moogs-joint-morrisville-vt-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Time Stands Still",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 102,
+     "song_slug": "time-stands-still",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 35,
+     "song_slug": "snow-day",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Cats Under the Stars",
+     "transition": ">",
+     "position": 3,
+     "footnote": "Jerry Garcia Band",
+     "length_secs": null,
+     "song_id": 66,
+     "song_slug": "cats-under-the-stars",
+     "original_artist": "Jerry Garcia Band",
+     "is_cover": true
+    },
+    {
+     "title": "Also Sprach Zarathustra (2001)",
+     "transition": ">",
+     "position": 4,
+     "footnote": "Richard Strauss",
+     "length_secs": null,
+     "song_id": 145,
+     "song_slug": "also-sprach-zarathustra-2001",
+     "original_artist": "Richard Strauss",
+     "is_cover": true
+    },
+    {
+     "title": "Renaissance Man",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 92,
+     "song_slug": "renaissance-ma",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The Other One",
+     "transition": ">",
+     "position": 8,
+     "footnote": "Grateful Dead",
+     "length_secs": null,
+     "song_id": 62,
+     "song_slug": "the-other-one",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Earthbound Man",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 4,
+     "song_slug": "earthbound-man",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Walkin' on the Sun",
+     "transition": "",
+     "position": 12,
+     "footnote": "Smash Mouth",
+     "length_secs": null,
+     "song_id": 70,
+     "song_slug": "walkin-on-the-sun",
+     "original_artist": "Smash Mouth",
+     "is_cover": true
+    },
+    {
+     "title": "Phish Kids",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 106,
+     "song_slug": "phish-kids",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spider Song",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 157,
+     "song_slug": "spider-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": ">",
+     "position": 15,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samson and Delilah",
+     "transition": "",
+     "position": 16,
+     "footnote": "Traditional",
+     "length_secs": null,
+     "song_id": 61,
+     "song_slug": "samson-and-delilah",
+     "original_artist": "Traditional",
+     "is_cover": true
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": ">",
+     "position": 18,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": ">",
+     "position": 19,
+     "footnote": "Stevie Wonder",
+     "length_secs": null,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 20,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 21,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Rum and Roses",
+     "transition": "",
+     "position": 22,
+     "footnote": "Full Band Debut",
+     "length_secs": null,
+     "song_id": 72,
+     "song_slug": "rum-and-roses",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 23,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    },
+    {
+     "title": "Such a Night",
+     "transition": "",
+     "position": 24,
+     "footnote": "Dr. John",
+     "length_secs": null,
+     "song_id": 34,
+     "song_slug": "such-a-night",
+     "original_artist": "Dr. John",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

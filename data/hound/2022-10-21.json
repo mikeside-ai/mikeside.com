@@ -1,0 +1,141 @@
+{
+ "show_date": "2022-10-21",
+ "slug": "2022-10-21",
+ "show_id": 1670949209,
+ "venue": "Mo's Irish Pub",
+ "city": "Milwaukee",
+ "state": "WI",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-october-21-2022-mos-irish-pub-milwaukee-wi-usa.html",
+ "shownotes": "Widespread Panic after-show.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Good Lovin'",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 90,
+     "song_slug": "good-lovin",
+     "original_artist": "Young Rascals",
+     "is_cover": true
+    },
+    {
+     "title": "Crazy",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 58,
+     "song_slug": "crazy",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": ">",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "4th of July",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 55,
+     "song_slug": "4th-of-july",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": ">",
+     "position": 6,
+     "footnote": "Stevie Wonder",
+     "length_secs": null,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "People Say",
+     "transition": ">",
+     "position": 7,
+     "footnote": "The Meters",
+     "length_secs": null,
+     "song_id": 23,
+     "song_slug": "people-say",
+     "original_artist": "The Meters",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Julius",
+     "transition": "",
+     "position": 11,
+     "footnote": "Phish",
+     "length_secs": null,
+     "song_id": 75,
+     "song_slug": "julius",
+     "original_artist": "Phish",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

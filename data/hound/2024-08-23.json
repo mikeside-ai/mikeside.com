@@ -1,0 +1,119 @@
+{
+ "show_date": "2024-08-23",
+ "slug": "2024-08-23",
+ "show_id": 1711552326,
+ "venue": "The Caverns",
+ "city": "Pelham",
+ "state": "TN",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-august-23-2024-the-caverns-pelham-tn-usa.html",
+ "shownotes": "Show was part of a joint Pigeons Playing Ping Pong, Andy Frasco & The U.N., and Dogs In A Pile Tour.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 782,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 279,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Applesauce",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 974,
+     "song_id": 192,
+     "song_slug": "applesauce",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Nicolette",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 428,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Also Sprach Zarathustra (2001)",
+     "transition": "",
+     "position": 5,
+     "footnote": "Richard Strauss",
+     "length_secs": 462,
+     "song_id": 145,
+     "song_slug": "also-sprach-zarathustra-2001",
+     "original_artist": "Richard Strauss",
+     "is_cover": true
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 692,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 305,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Pinball Wizard",
+     "transition": ">",
+     "position": 8,
+     "footnote": "The Who",
+     "length_secs": 310,
+     "song_id": 367,
+     "song_slug": "pinball-wizard",
+     "original_artist": "The Who",
+     "is_cover": true
+    },
+    {
+     "title": "EDM Song",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 260,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,180 @@
+{
+ "show_date": "2022-07-28",
+ "slug": "2022-07-28",
+ "show_id": 1670952139,
+ "venue": "Outer Banks Brewing Station",
+ "city": "Kill Devil Hills",
+ "state": "NC",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-28-2022-outer-banks-brewing-station-kill-devil-hills-nc-usa.html",
+ "shownotes": "Bugle on the Shelf was dedicated to John Thomas, Wil Creech, and Sam Bradley for being in attendance.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Jam",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 163,
+     "song_id": 112,
+     "song_slug": "jam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mr. Charlie",
+     "transition": "",
+     "position": 2,
+     "footnote": "Grateful Dead",
+     "length_secs": 356,
+     "song_id": 48,
+     "song_slug": "mr-charlie-2",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Back to the Start",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 393,
+     "song_id": 20,
+     "song_slug": "back-to-the-start",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Today",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 405,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 733,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Royals",
+     "transition": "",
+     "position": 6,
+     "footnote": "Lorde",
+     "length_secs": 1216,
+     "song_id": 31,
+     "song_slug": "royals",
+     "original_artist": "Lorde",
+     "is_cover": true
+    },
+    {
+     "title": "Bubble",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 550,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "EDM Song",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 188,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 178,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 951,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": ">",
+     "position": 11,
+     "footnote": "Stevie Wonder",
+     "length_secs": 835,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 12,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 431,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 1104,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 523,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

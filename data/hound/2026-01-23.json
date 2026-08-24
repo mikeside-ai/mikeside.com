@@ -1,11 +1,12 @@
 {
  "show_date": "2026-01-23",
  "slug": "2026-01-23",
+ "show_id": 1759518261,
  "venue": "Nectar Lounge",
  "city": "Seattle",
  "state": "WA",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-january-23-2026-nectar-lounge-seattle-wa-usa.html",
  "shownotes": "Enter Sandman was unfinished.",
  "sets": [
@@ -18,49 +19,77 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 860,
+     "song_id": 395,
+     "song_slug": "6-little-lies",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Bubble",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 889,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Ugly Song",
      "transition": "",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 362,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Earthbound Man",
      "transition": "",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 426,
+     "song_id": 4,
+     "song_slug": "earthbound-man",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Let Me Go",
      "transition": "",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 320,
+     "song_id": 547,
+     "song_slug": "let-me-go",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Let U Go",
      "transition": "->",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 735,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Samba for Sam",
      "transition": "",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 941,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -73,56 +102,88 @@
      "transition": "",
      "position": 8,
      "footnote": "Bob Weir",
-     "length_secs": null
+     "length_secs": 779,
+     "song_id": 168,
+     "song_slug": "cassidy",
+     "original_artist": "Bob Weir",
+     "is_cover": true
     },
     {
      "title": "Creep",
      "transition": ">",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 386,
+     "song_id": 93,
+     "song_slug": "cr",
+     "original_artist": null,
+     "is_cover": false
     },
     {
-     "title": "You Didn't Hear It From Me",
+     "title": "You Didn’t Hear It From Me",
      "transition": "",
      "position": 10,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 857,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Look Johnny II",
      "transition": "",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 275,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Spun",
      "transition": "->",
      "position": 12,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 580,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Jack & Coke",
      "transition": "->",
      "position": 13,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 713,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Enter Sandman",
      "transition": "->",
      "position": 14,
-     "footnote": "FTP, Metallica",
-     "length_secs": null
+     "footnote": "FTP, Metallica.",
+     "length_secs": 139,
+     "song_id": 548,
+     "song_slug": "enter-sandman",
+     "original_artist": "Metallica",
+     "is_cover": true
     },
     {
      "title": "Look Johnny",
      "transition": "",
      "position": 15,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 808,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -134,8 +195,12 @@
      "title": "Fire",
      "transition": "",
      "position": 16,
-     "footnote": "The Jimi Hendrix Experience",
-     "length_secs": null
+     "footnote": "The Jimi Hendrix Experience.",
+     "length_secs": 258,
+     "song_id": 360,
+     "song_slug": "fire",
+     "original_artist": "The Jimi Hendrix Experience",
+     "is_cover": true
     }
    ]
   }

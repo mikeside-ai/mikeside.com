@@ -1,13 +1,14 @@
 {
  "show_date": "2026-01-29",
  "slug": "2026-01-29",
+ "show_id": 1759518307,
  "venue": "Shrine Social Club (Ballroom)",
  "city": "Boise",
  "state": "ID",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-january-29-2026-shrine-social-club-ballroom-boise-id-usa.html",
- "shownotes": "Opening Band(s): RUDY. Soundboard recording available on Bandcamp and Nugs. Verified setlist.",
+ "shownotes": "",
  "sets": [
   {
    "label": "1",
@@ -18,42 +19,66 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 809,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Look Johnny II",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 258,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "116 Days",
      "transition": "",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 320,
+     "song_id": 440,
+     "song_slug": "116-days",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Four More Days",
      "transition": "",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 827,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Black-Throated Wind",
      "transition": "",
      "position": 5,
      "footnote": "Bob Weir",
-     "length_secs": null
+     "length_secs": 418,
+     "song_id": 349,
+     "song_slug": "black-throated-wind",
+     "original_artist": "Bob Weir",
+     "is_cover": true
     },
     {
      "title": "Bent Strange",
      "transition": "",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1114,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -66,42 +91,66 @@
      "transition": "",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 566,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Lattice",
      "transition": ">",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 714,
+     "song_id": 269,
+     "song_slug": "lattice",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Inchworm",
      "transition": "",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 379,
+     "song_id": 33,
+     "song_slug": "inchworm",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Spun",
      "transition": "",
      "position": 10,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 835,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Bugle on the Shelf",
      "transition": "",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1054,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Way To Be",
      "transition": "",
      "position": 12,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1032,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
     }
    ]
   },
@@ -114,21 +163,33 @@
      "transition": ">",
      "position": 13,
      "footnote": "Widespread Panic",
-     "length_secs": null
+     "length_secs": 349,
+     "song_id": 50,
+     "song_slug": "greta",
+     "original_artist": "Widespread Panic",
+     "is_cover": true
     },
     {
      "title": "Gumball",
      "transition": ">",
      "position": 14,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 412,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Bennie and the Jets",
      "transition": "",
      "position": 15,
      "footnote": "Elton John",
-     "length_secs": null
+     "length_secs": 466,
+     "song_id": 232,
+     "song_slug": "bennie-and-the-jets",
+     "original_artist": "Elton John",
+     "is_cover": true
     }
    ]
   }

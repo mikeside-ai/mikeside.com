@@ -1,0 +1,274 @@
+{
+ "show_date": "2025-10-31",
+ "slug": "2025-10-31",
+ "show_id": 1756868969,
+ "venue": "From the Earth Brewing Company",
+ "city": "Roswell",
+ "state": "GA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-october-31-2025-from-the-earth-brewing-company-roswell-ga-usa.html",
+ "shownotes": "“Got to Get You Into My Life” was performed in the arrangement as covered by Earth, Wind & Fire",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "The 1970s",
+     "transition": "",
+     "position": 1,
+     "footnote": "FTP, Talc",
+     "length_secs": 267,
+     "song_id": 485,
+     "song_slug": "the-1970s",
+     "original_artist": "Talc",
+     "is_cover": true
+    },
+    {
+     "title": "I Know A Little",
+     "transition": "->",
+     "position": 2,
+     "footnote": "FTP, Lynyrd Skynyrd",
+     "length_secs": 190,
+     "song_id": 486,
+     "song_slug": "i-know-a-little",
+     "original_artist": "Lynyrd Skynyrd",
+     "is_cover": true
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 318,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Black Sabbath",
+     "transition": "",
+     "position": 4,
+     "footnote": "FTP, Black Sabbath",
+     "length_secs": 412,
+     "song_id": 487,
+     "song_slug": "black-sabbath",
+     "original_artist": "Black Sabbath",
+     "is_cover": true
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 311,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Fly Like An Eagle",
+     "transition": "->",
+     "position": 6,
+     "footnote": "Steve Miller Band",
+     "length_secs": 377,
+     "song_id": 307,
+     "song_slug": "fly-like-an-eagle",
+     "original_artist": "Steve Miller Band",
+     "is_cover": true
+    },
+    {
+     "title": "Gumball",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 629,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "I Don’t Know About You",
+     "transition": "",
+     "position": 8,
+     "footnote": "FTP, Jerry Reed",
+     "length_secs": 160,
+     "song_id": 488,
+     "song_slug": "i-dont-know-about-you",
+     "original_artist": "Jerry Reed",
+     "is_cover": true
+    },
+    {
+     "title": "Reminiscing",
+     "transition": "",
+     "position": 9,
+     "footnote": "FTP, Little River Band",
+     "length_secs": 373,
+     "song_id": 489,
+     "song_slug": "reminisic",
+     "original_artist": "Little River Band",
+     "is_cover": true
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 659,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 638,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Got To Get You Into My Life",
+     "transition": "",
+     "position": 12,
+     "footnote": "FTP, The Beatles",
+     "length_secs": 263,
+     "song_id": 490,
+     "song_slug": "got-to-get-you-into-my-life",
+     "original_artist": "The Beatles",
+     "is_cover": true
+    },
+    {
+     "title": "The Bag",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 517,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Black Cow",
+     "transition": "",
+     "position": 14,
+     "footnote": "FTP, Steely Dan",
+     "length_secs": 318,
+     "song_id": 491,
+     "song_slug": "black-cow",
+     "original_artist": "Steely Dan",
+     "is_cover": true
+    },
+    {
+     "title": "Moby Dick",
+     "transition": "->",
+     "position": 15,
+     "footnote": "FTP, Led Zeppelin",
+     "length_secs": 224,
+     "song_id": 492,
+     "song_slug": "moby-di",
+     "original_artist": "Led Zeppelin ",
+     "is_cover": true
+    },
+    {
+     "title": "Any Colour You Like",
+     "transition": "",
+     "position": 16,
+     "footnote": "FTP, Pink Floyd",
+     "length_secs": 227,
+     "song_id": 493,
+     "song_slug": "any-colour-you-li",
+     "original_artist": "Pink Floyd",
+     "is_cover": true
+    },
+    {
+     "title": "Tell Me Something Good",
+     "transition": "",
+     "position": 17,
+     "footnote": "FTP, Rufus & Chaka Khan",
+     "length_secs": 304,
+     "song_id": 494,
+     "song_slug": "tell-me-something-good",
+     "original_artist": "Rufus & Chaka Khan",
+     "is_cover": true
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 629,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Up For The Down Stroke",
+     "transition": "",
+     "position": 19,
+     "footnote": "FTP, Parliament",
+     "length_secs": 299,
+     "song_id": 495,
+     "song_slug": "up-for-the-down-stroke",
+     "original_artist": "Parliament",
+     "is_cover": true
+    },
+    {
+     "title": "Appleseed",
+     "transition": "",
+     "position": 20,
+     "footnote": null,
+     "length_secs": 782,
+     "song_id": 109,
+     "song_slug": "appleseed",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Do You Feel Like We Do",
+     "transition": "",
+     "position": 21,
+     "footnote": "FTP, Peter Frampton",
+     "length_secs": 823,
+     "song_id": 496,
+     "song_slug": "do-you-feel-like-we-do",
+     "original_artist": "Peter Frampton",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 22,
+     "footnote": null,
+     "length_secs": 584,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

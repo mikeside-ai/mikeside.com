@@ -1,0 +1,97 @@
+{
+ "show_date": "2019-01-05",
+ "slug": "2019-01-05",
+ "show_id": 1749834121,
+ "venue": "The Stone Pony",
+ "city": "Asbury Park",
+ "state": "NJ",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-january-5-2019-the-stone-pony-asbury-park-nj-usa.html",
+ "shownotes": "Opening for The Englishtown Project. This show featured Erick Villalobos on guitar and vocals. This setlist may be incomplete.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Watermelon Man",
+     "transition": "",
+     "position": 2,
+     "footnote": "Herbie Hancock",
+     "length_secs": null,
+     "song_id": 148,
+     "song_slug": "watermelon-man",
+     "original_artist": "Herbie Hancock",
+     "is_cover": true
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": "",
+     "position": 3,
+     "footnote": "Stevie Wonder",
+     "length_secs": null,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Chocolate Milk",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 250,
+     "song_slug": "chocolate-milk",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "That's What Love Will Make You Do",
+     "transition": "",
+     "position": 5,
+     "footnote": "Little Milton, with Waynard Scheller on keys",
+     "length_secs": null,
+     "song_id": 136,
+     "song_slug": "thats-what-love-will-make-you-do",
+     "original_artist": "Little Milton",
+     "is_cover": true
+    },
+    {
+     "title": "Help on the Way / Slipknot!",
+     "transition": "",
+     "position": 6,
+     "footnote": "Grateful Dead",
+     "length_secs": null,
+     "song_id": 69,
+     "song_slug": "help-on-the-way-slipknot",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Also Sprach Zarathustra (2001)",
+     "transition": "",
+     "position": 7,
+     "footnote": "Richard Strauss",
+     "length_secs": null,
+     "song_id": 145,
+     "song_slug": "also-sprach-zarathustra-2001",
+     "original_artist": "Richard Strauss",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

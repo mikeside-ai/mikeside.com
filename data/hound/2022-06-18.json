@@ -1,0 +1,125 @@
+{
+ "show_date": "2022-06-18",
+ "slug": "2022-06-18",
+ "show_id": 1670951851,
+ "venue": "Paradise Lakes Campground",
+ "city": "Hammonton",
+ "state": "NJ",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-18-2022-paradise-lakes-campground-hammonton-nj-usa.html",
+ "shownotes": "Performed at Beardfest. Dogs Play Dead Set.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Mr. Charlie",
+     "transition": "",
+     "position": 1,
+     "footnote": "Grateful Dead",
+     "length_secs": 339,
+     "song_id": 48,
+     "song_slug": "mr-charlie-2",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "China Cat Sunflower",
+     "transition": "",
+     "position": 2,
+     "footnote": "Grateful Dead",
+     "length_secs": 597,
+     "song_id": 49,
+     "song_slug": "china-cat-sunflower",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Dupree's Diamond Blues",
+     "transition": "",
+     "position": 3,
+     "footnote": "Grateful Dead",
+     "length_secs": 345,
+     "song_id": 108,
+     "song_slug": "duprees-diamond-blues",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Lost Sailor",
+     "transition": ">",
+     "position": 4,
+     "footnote": "Grateful Dead",
+     "length_secs": 364,
+     "song_id": 138,
+     "song_slug": "lost-sailor",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Saint of Circumstance",
+     "transition": "",
+     "position": 5,
+     "footnote": "Grateful Dead",
+     "length_secs": 307,
+     "song_id": 137,
+     "song_slug": "saint-of-circumstance",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Help on the Way / Slipknot!",
+     "transition": ">",
+     "position": 6,
+     "footnote": "Grateful Dead",
+     "length_secs": 812,
+     "song_id": 69,
+     "song_slug": "help-on-the-way-slipknot",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Let it Grow",
+     "transition": "",
+     "position": 7,
+     "footnote": "Grateful Dead",
+     "length_secs": 585,
+     "song_id": 97,
+     "song_slug": "let-it-grow",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Jack Straw",
+     "transition": "",
+     "position": 8,
+     "footnote": "Grateful Dead",
+     "length_secs": 396,
+     "song_id": 140,
+     "song_slug": "jack-straw",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "One More Saturday Night",
+     "transition": "",
+     "position": 9,
+     "footnote": "Bob Weir",
+     "length_secs": 281,
+     "song_id": 68,
+     "song_slug": "one-more-saturday-night",
+     "original_artist": "Bob Weir",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,296 @@
+{
+ "show_date": "2023-03-11",
+ "slug": "2023-03-11",
+ "show_id": 1671032977,
+ "venue": "Club Cafe",
+ "city": "Pittsburgh",
+ "state": "PA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-march-11-2023-club-cafe-pittsburgh-pa-usa.html",
+ "shownotes": "The first set was performed with Hayley Jane. The Go Set Jam featured Jimmy on bass and Sam on guitar.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Jungle Foot",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 196,
+     "song_slug": "jungle-foot",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Bird",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 201,
+     "song_slug": "little-bird",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ramble On Rose",
+     "transition": "",
+     "position": 3,
+     "footnote": "Grateful Dead",
+     "length_secs": null,
+     "song_id": 195,
+     "song_slug": "ramble-on-rose",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "This Woman",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 205,
+     "song_slug": "this-woman",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Paper Fly",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 200,
+     "song_slug": "paper-fly",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "That’s Life",
+     "transition": "",
+     "position": 6,
+     "footnote": "FTP, Frank Sinatra",
+     "length_secs": null,
+     "song_id": 208,
+     "song_slug": "thats-life",
+     "original_artist": "Frank Sinatra",
+     "is_cover": true
+    },
+    {
+     "title": "Cosmic Katrina",
+     "transition": "",
+     "position": 7,
+     "footnote": "Hayley Jane and the Primates",
+     "length_secs": null,
+     "song_id": 204,
+     "song_slug": "cosmic-katrina",
+     "original_artist": "Hayley Jane and the Primates",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Rinky Dink Rag",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 133,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "King of the Hill Theme",
+     "transition": ">",
+     "position": 9,
+     "footnote": "The Refreshments",
+     "length_secs": 33,
+     "song_id": 73,
+     "song_slug": "king-of-the-hill-theme",
+     "original_artist": "The Refreshments",
+     "is_cover": true
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 563,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "4th of July",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 127,
+     "song_id": 55,
+     "song_slug": "4th-of-july",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 716,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Dupree's Diamond Blues",
+     "transition": "",
+     "position": 13,
+     "footnote": "Grateful Dead",
+     "length_secs": 351,
+     "song_id": 108,
+     "song_slug": "duprees-diamond-blues",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Appleseed",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 674,
+     "song_id": 109,
+     "song_slug": "appleseed",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Applesauce",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 511,
+     "song_id": 192,
+     "song_slug": "applesauce",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Go Set Jam",
+     "transition": ">",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 463,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Drums",
+     "transition": "->",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 75,
+     "song_id": 186,
+     "song_slug": "drums",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Greta",
+     "transition": ">",
+     "position": 18,
+     "footnote": "Widespread Panic",
+     "length_secs": 352,
+     "song_id": 50,
+     "song_slug": "greta",
+     "original_artist": "Widespread Panic",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 1073,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 20,
+     "footnote": null,
+     "length_secs": 532,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 21,
+     "footnote": null,
+     "length_secs": 863,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 22,
+     "footnote": null,
+     "length_secs": 589,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Space Captain",
+     "transition": ">",
+     "position": 23,
+     "footnote": "Joe Cocker",
+     "length_secs": 435,
+     "song_id": 76,
+     "song_slug": "space-captain",
+     "original_artist": "Joe Cocker",
+     "is_cover": true
+    },
+    {
+     "title": "One More Saturday Night",
+     "transition": "",
+     "position": 24,
+     "footnote": "Bob Weir",
+     "length_secs": 310,
+     "song_id": 68,
+     "song_slug": "one-more-saturday-night",
+     "original_artist": "Bob Weir",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

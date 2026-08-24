@@ -1,0 +1,108 @@
+{
+ "show_date": "2023-10-08",
+ "slug": "2023-10-08",
+ "show_id": 1692678046,
+ "venue": "Camp Ramblewood",
+ "city": "Darlington",
+ "state": "MD",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-october-8-2023-camp-ramblewood-darlington-md-usa.html",
+ "shownotes": "Performed at The Ramble Festival.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Yum T. Dum",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 195,
+     "song_id": 225,
+     "song_slug": "yum-t-dum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Westward",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 253,
+     "song_id": 6,
+     "song_slug": "westward",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 533,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Give Me One Reason",
+     "transition": "",
+     "position": 4,
+     "footnote": "Tracy Chapman, with Kanika Moore on vocals",
+     "length_secs": 466,
+     "song_id": 266,
+     "song_slug": "give-me-one-reason",
+     "original_artist": "Tracy Chapman",
+     "is_cover": true
+    },
+    {
+     "title": "Frosty",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 346,
+     "song_id": 5,
+     "song_slug": "frosty",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ghost Riders in the Sky",
+     "transition": ">",
+     "position": 6,
+     "footnote": "Stan Jones",
+     "length_secs": 820,
+     "song_id": 121,
+     "song_slug": "ghost-riders-in-the-sky-2",
+     "original_artist": "Stan Jones",
+     "is_cover": true
+    },
+    {
+     "title": "Spun",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 727,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 1155,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

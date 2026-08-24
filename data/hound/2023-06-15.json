@@ -1,0 +1,130 @@
+{
+ "show_date": "2023-06-15",
+ "slug": "2023-06-15",
+ "show_id": 1681144492,
+ "venue": "Burlap n Buds Flower Farm",
+ "city": "Weiser",
+ "state": "ID",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-15-2023-burlap-n-buds-flower-farm-weiser-id-usa.html",
+ "shownotes": "Performed at Weiser River Music Festival.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Back to the Start",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 403,
+     "song_id": 20,
+     "song_slug": "back-to-the-start",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Today",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 388,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Frosty",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 342,
+     "song_id": 5,
+     "song_slug": "frosty",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ophelia",
+     "transition": "",
+     "position": 4,
+     "footnote": "The Band",
+     "length_secs": 282,
+     "song_id": 94,
+     "song_slug": "ophelia",
+     "original_artist": "The Band",
+     "is_cover": true
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 458,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 1010,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "New Speedway Boogie",
+     "transition": "",
+     "position": 7,
+     "footnote": "Grateful Dead",
+     "length_secs": 507,
+     "song_id": 141,
+     "song_slug": "new-speedway-boogie",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "All The Same",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 294,
+     "song_id": 32,
+     "song_slug": "all-the-same",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 247,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 490,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "show_date": "2023-11-30",
+ "slug": "2023-11-30",
+ "show_id": 1694632107,
+ "venue": "Town Ballroom",
+ "city": "Buffalo",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-november-30-2023-town-ballroom-buffalo-ny-usa.html",
+ "shownotes": "Opening for Andy Frasco & The U.N.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 611,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 836,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bring It On Up",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 935,
+     "song_id": 116,
+     "song_slug": "bring-it-on-up",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Dirty Old Town",
+     "transition": "",
+     "position": 4,
+     "footnote": "The Pogues",
+     "length_secs": 241,
+     "song_id": 216,
+     "song_slug": "dirty-old-town",
+     "original_artist": "The Pogues",
+     "is_cover": true
+    },
+    {
+     "title": "Immigrant Song",
+     "transition": "",
+     "position": 5,
+     "footnote": "Led Zeppelin, with Shawn Eckels on guitar",
+     "length_secs": 266,
+     "song_id": 277,
+     "song_slug": "immigrant-song",
+     "original_artist": "Led Zeppelin",
+     "is_cover": true
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 650,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

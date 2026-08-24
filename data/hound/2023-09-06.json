@@ -1,0 +1,186 @@
+{
+ "show_date": "2023-09-06",
+ "slug": "2023-09-06",
+ "show_id": 1689102991,
+ "venue": "High Noon Saloon",
+ "city": "Madison",
+ "state": "WI",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-september-6-2023-high-noon-saloon-madison-wi-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Westward",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 259,
+     "song_id": 6,
+     "song_slug": "westward",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 688,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Cats Under the Stars",
+     "transition": ">",
+     "position": 3,
+     "footnote": "Jerry Garcia Band",
+     "length_secs": 755,
+     "song_id": 66,
+     "song_slug": "cats-under-the-stars",
+     "original_artist": "Jerry Garcia Band",
+     "is_cover": true
+    },
+    {
+     "title": "Hesitate",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 645,
+     "song_id": 22,
+     "song_slug": "hesitate",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 1107,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 1072,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Stevie Lew",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 419,
+     "song_id": 59,
+     "song_slug": "stevie-lew",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "It Gets Better",
+     "transition": "->",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 1344,
+     "song_id": 226,
+     "song_slug": "it-gets-better",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 865,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Applesauce",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 778,
+     "song_id": 192,
+     "song_slug": "applesauce",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Fenway",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 662,
+     "song_id": 13,
+     "song_slug": "fenway",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 746,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": ">",
+     "position": 13,
+     "footnote": "Stevie Wonder",
+     "length_secs": 752,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 14,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 407,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

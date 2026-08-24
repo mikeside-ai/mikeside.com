@@ -1,0 +1,42 @@
+{
+ "show_date": "2019-05-15",
+ "slug": "2019-05-15",
+ "show_id": 1749925446,
+ "venue": "Brookdale Community College",
+ "city": "Lincroft",
+ "state": "NJ",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-15-2019-brookdale-community-college-lincroft-nj-usa.html",
+ "shownotes": "Performed live on Brookdale Public Radio 90.5's \"THE NIGHT with Stu Coogan\" with Jimmy on acoustic guitar and the rest of the band with reduced equipment.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 420,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": "",
+     "position": 2,
+     "footnote": "Stevie Wonder",
+     "length_secs": 316,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

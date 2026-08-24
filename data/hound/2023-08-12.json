@@ -1,0 +1,97 @@
+{
+ "show_date": "2023-08-12",
+ "slug": "2023-08-12",
+ "show_id": 1678228622,
+ "venue": "Brown's Island",
+ "city": "Richmond",
+ "state": "VA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-august-12-2023-browns-island-richmond-va-usa.html",
+ "shownotes": "Performed at JamPacked Craft Beer and Music Festival. Craig & Pat was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Rinky Dink Rag",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 173,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 258,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 546,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Today",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 418,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stadium Rave",
+     "transition": "",
+     "position": 5,
+     "footnote": "Glenn Nishida and Mark Governor",
+     "length_secs": 677,
+     "song_id": 181,
+     "song_slug": "stadium-rave",
+     "original_artist": "Glenn Nishida and Mark Governor",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 901,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 608,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

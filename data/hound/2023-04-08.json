@@ -1,0 +1,235 @@
+{
+ "show_date": "2023-04-08",
+ "slug": "2023-04-08",
+ "show_id": 1673482864,
+ "venue": "Aggie Theatre",
+ "city": "Ft. Collins",
+ "state": "CO",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-8-2023-aggie-theatre-ft-collins-co-usa.html",
+ "shownotes": "Didn't Ya Know featured Jimmy on lead vocals for the first time. Sam dedicated Didn't Ya Know to John Thomas.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Crazy",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 374,
+     "song_id": 58,
+     "song_slug": "crazy",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mr. Charlie",
+     "transition": "",
+     "position": 2,
+     "footnote": "Grateful Dead",
+     "length_secs": 364,
+     "song_id": 48,
+     "song_slug": "mr-charlie-2",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Stranger",
+     "transition": "->",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 289,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Around The World",
+     "transition": "->",
+     "position": 4,
+     "footnote": "Daft Punk",
+     "length_secs": 319,
+     "song_id": 166,
+     "song_slug": "around-the-world",
+     "original_artist": "Daft Punk",
+     "is_cover": true
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 537,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 346,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 437,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trickery",
+     "transition": ">",
+     "position": 8,
+     "footnote": "Dopapod",
+     "length_secs": 148,
+     "song_id": 131,
+     "song_slug": "trickery",
+     "original_artist": "Dopapod",
+     "is_cover": true
+    },
+    {
+     "title": "Nicolette",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 610,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": ">",
+     "position": 10,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 334,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    },
+    {
+     "title": "Time Stands Still",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 669,
+     "song_id": 102,
+     "song_slug": "time-stands-still",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 542,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let it Grow",
+     "transition": "",
+     "position": 13,
+     "footnote": "Grateful Dead",
+     "length_secs": 665,
+     "song_id": 97,
+     "song_slug": "let-it-grow",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Bubble",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 783,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "EDM Song",
+     "transition": ">",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 195,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 94,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Suddenly, Seymour",
+     "transition": "",
+     "position": 17,
+     "footnote": "FTP, Little Shop of Horrors Cast",
+     "length_secs": 108,
+     "song_id": 227,
+     "song_slug": "suddenly-seymour",
+     "original_artist": "Little Shop of Horrors Cast",
+     "is_cover": true
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": ">",
+     "position": 18,
+     "footnote": "Ween",
+     "length_secs": 379,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 763,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

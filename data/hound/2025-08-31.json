@@ -1,0 +1,230 @@
+{
+ "show_date": "2025-08-31",
+ "slug": "2025-08-31",
+ "show_id": 1743693086,
+ "venue": "The Stone Pony Summer Stage",
+ "city": "Asbury Park",
+ "state": "NJ",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-august-31-2025-stone-pony-summer-stage-asbury-park-nj-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 458,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Burning Daylight",
+     "transition": "->",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 547,
+     "song_id": 416,
+     "song_slug": "burning-daylight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 642,
+     "song_id": 445,
+     "song_slug": "dangers-of-rah-rah",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lazy Susan",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 444,
+     "song_id": 414,
+     "song_slug": "lazy-susan",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 5,
+     "footnote": "with the Ocean Avenue Stompers",
+     "length_secs": 395,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 6,
+     "footnote": "with the Ocean Avenue Stompers",
+     "length_secs": 568,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": ">",
+     "position": 7,
+     "footnote": "with the Ocean Avenue Stompers",
+     "length_secs": 301,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "EDM Song",
+     "transition": "",
+     "position": 8,
+     "footnote": "with the Ocean Avenue Stompers",
+     "length_secs": 216,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "The Bag",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 479,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tillie",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 865,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 677,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 259,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Go Set",
+     "transition": "->",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 527,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Dancing in the Street",
+     "transition": "->",
+     "position": 14,
+     "footnote": "Martha Reeves and the Vandellas",
+     "length_secs": 89,
+     "song_id": 100,
+     "song_slug": "dancing-in-the-street",
+     "original_artist": "Martha Reeves and the Vandellas",
+     "is_cover": true
+    },
+    {
+     "title": "Go Set",
+     "transition": ">",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 79,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 396,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Bulls on Parade",
+     "transition": "",
+     "position": 17,
+     "footnote": "Rage Against The Machine",
+     "length_secs": 305,
+     "song_id": 432,
+     "song_slug": "bulls-on-parade",
+     "original_artist": "Rage Against the Machine",
+     "is_cover": true
+    },
+    {
+     "title": "Tookin' Around",
+     "transition": "",
+     "position": 18,
+     "footnote": "with Kieran Tooker on vocals",
+     "length_secs": 503,
+     "song_id": 52,
+     "song_slug": "tookin-around",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,13 +1,14 @@
 {
  "show_date": "2026-02-14",
  "slug": "2026-02-14",
+ "show_id": 1760489637,
  "venue": "The Capitol Theatre",
  "city": "Port Chester",
  "state": "NY",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-february-14-2026-the-capitol-theatre-port-chester-ny-usa.html",
- "shownotes": "Opening Band(s): Sam Grisman Project. Soundboard recording available on bandcamp and nugs. \"I Can See Clearly Now\" tease in Nicolette.",
+ "shownotes": "",
  "sets": [
   {
    "label": "1",
@@ -18,49 +19,77 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 342,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Dangers of Rah Rah",
      "transition": ">",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 594,
+     "song_id": 445,
+     "song_slug": "dangers-of-rah-rah",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "The Bag",
      "transition": ">",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 446,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "My Disguise",
      "transition": "",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 404,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Nicolette",
      "transition": "",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 995,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "The Ballad of Ms. Pepper and Ms. Paige",
      "transition": "",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 391,
+     "song_id": 438,
+     "song_slug": "the-ballad-of-ms-pepper-and-ms-paige",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Chop Shop",
      "transition": "",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 745,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -73,42 +102,66 @@
      "transition": ">",
      "position": 8,
      "footnote": "Young Rascals",
-     "length_secs": null
+     "length_secs": 452,
+     "song_id": 90,
+     "song_slug": "good-lovin",
+     "original_artist": "Young Rascals",
+     "is_cover": true
     },
     {
      "title": "Tillie",
      "transition": "",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1234,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Look Johnny",
      "transition": "",
      "position": 10,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 888,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Lazy Susan",
      "transition": "",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 452,
+     "song_id": 414,
+     "song_slug": "lazy-susan",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Spun",
      "transition": "",
      "position": 12,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 645,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "The Day The Music Came To Me",
      "transition": "",
      "position": 13,
      "footnote": "Debut",
-     "length_secs": null
+     "length_secs": 308,
+     "song_id": 551,
+     "song_slug": "the-day-the-music-came-to-me",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -121,7 +174,11 @@
      "transition": "",
      "position": 14,
      "footnote": "The Jimi Hendrix Experience",
-     "length_secs": null
+     "length_secs": 289,
+     "song_id": 360,
+     "song_slug": "fire",
+     "original_artist": "The Jimi Hendrix Experience",
+     "is_cover": true
     }
    ]
   }

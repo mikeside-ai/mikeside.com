@@ -1,0 +1,136 @@
+{
+ "show_date": "2025-02-03",
+ "slug": "2025-02-03",
+ "show_id": 1732047269,
+ "venue": "Redstone Room",
+ "city": "Davenport",
+ "state": "IA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-february-3-2025-redstone-room-davenport-ia-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Mercy, Mercy, Mercy",
+     "transition": "",
+     "position": 1,
+     "footnote": "Cannonball Adderley",
+     "length_secs": 280,
+     "song_id": 338,
+     "song_slug": "mercy-mercy-mercy",
+     "original_artist": "Cannonball Adderley",
+     "is_cover": true
+    },
+    {
+     "title": "Frosty",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 390,
+     "song_id": 5,
+     "song_slug": "frosty",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 368,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Cats Under the Stars",
+     "transition": "->",
+     "position": 4,
+     "footnote": "Jerry Garcia Band",
+     "length_secs": 432,
+     "song_id": 66,
+     "song_slug": "cats-under-the-stars",
+     "original_artist": "Jerry Garcia Band",
+     "is_cover": true
+    },
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 918,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Applesauce",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 879,
+     "song_id": 192,
+     "song_slug": "applesauce",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 772,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Green Earrings",
+     "transition": "->",
+     "position": 8,
+     "footnote": "Steely Dan",
+     "length_secs": 511,
+     "song_id": 64,
+     "song_slug": "green-earrings",
+     "original_artist": "Steely Dan",
+     "is_cover": true
+    },
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 826,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 323,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

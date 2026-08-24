@@ -1,0 +1,208 @@
+{
+ "show_date": "2025-01-24",
+ "slug": "2025-01-24",
+ "show_id": 1729704292,
+ "venue": "Nectar Lounge",
+ "city": "Seattle",
+ "state": "WA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-january-24-2025-nectar-lounge-seattle-wa-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Look Johnny II",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 263,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 832,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bring It On Up",
+     "transition": "->",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 716,
+     "song_id": 116,
+     "song_slug": "bring-it-on-up",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Gumball",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 851,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Green Earrings",
+     "transition": "->",
+     "position": 5,
+     "footnote": "Steely Dan",
+     "length_secs": 582,
+     "song_id": 64,
+     "song_slug": "green-earrings",
+     "original_artist": "Steely Dan",
+     "is_cover": true
+    },
+    {
+     "title": "Earthbound Man",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 432,
+     "song_id": 4,
+     "song_slug": "earthbound-man",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 778,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Today",
+     "transition": "->",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 607,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 750,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 868,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Peaches III",
+     "transition": "",
+     "position": 11,
+     "footnote": "Frank Zappa",
+     "length_secs": 236,
+     "song_id": 437,
+     "song_slug": "peaches-iii",
+     "original_artist": "Frank Zappa",
+     "is_cover": true
+    },
+    {
+     "title": "None",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 365,
+     "song_id": 447,
+     "song_slug": "none",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 960,
+     "song_id": 327,
+     "song_slug": "thomas-duncan-pt-3",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": "->",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 293,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "EDM Song",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 206,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Space Captain",
+     "transition": "",
+     "position": 16,
+     "footnote": "Joe Cocker",
+     "length_secs": 481,
+     "song_id": 76,
+     "song_slug": "space-captain",
+     "original_artist": "Joe Cocker",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

@@ -1,11 +1,12 @@
 {
  "show_date": "2026-04-09",
  "slug": "2026-04-09",
+ "show_id": 1766949120,
  "venue": "Mr. Smalls Theatre",
  "city": "Millvale",
  "state": "PA",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-9-2026-mr-smalls-theatre-millvale-pa-usa.html",
  "shownotes": "Look Johnny was unfinished.",
  "sets": [
@@ -18,42 +19,66 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 306,
+     "song_id": 440,
+     "song_slug": "116-days",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "G Song",
      "transition": "->",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1314,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Mr. Charlie",
      "transition": "",
      "position": 3,
      "footnote": "Grateful Dead",
-     "length_secs": null
+     "length_secs": 370,
+     "song_id": 48,
+     "song_slug": "mr-charlie-2",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
     },
     {
      "title": "Hesitate",
      "transition": "",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 945,
+     "song_id": 22,
+     "song_slug": "hesitate",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Happy Song",
      "transition": ">",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 381,
+     "song_id": 389,
+     "song_slug": "happy-song",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Writing on the Wall",
      "transition": "",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 759,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -66,28 +91,44 @@
      "transition": ">",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1550,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Stevie Lew",
      "transition": "",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 412,
+     "song_id": 59,
+     "song_slug": "stevie-lew",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Time Stands Still",
      "transition": "->",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 711,
+     "song_id": 102,
+     "song_slug": "time-stands-still",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "The Bag",
      "transition": "",
      "position": 10,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 518,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -100,7 +141,11 @@
      "transition": "",
      "position": 11,
      "footnote": "FTP, Doobie Brothers, with Natalie Brooke and her band",
-     "length_secs": null
+     "length_secs": 460,
+     "song_id": 556,
+     "song_slug": "takin-it-to-the-streets",
+     "original_artist": "The Doobie Brothers",
+     "is_cover": true
     }
    ]
   }

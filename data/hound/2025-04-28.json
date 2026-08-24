@@ -1,0 +1,86 @@
+{
+ "show_date": "2025-04-28",
+ "slug": "2025-04-28",
+ "show_id": 1740085814,
+ "venue": "Tipitina's",
+ "city": "New Orleans",
+ "state": "LA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-28-2025-tipitinas-new-orleans-la-usa.html",
+ "shownotes": "Performed at Shorty Fest.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Burning Daylight",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 416,
+     "song_slug": "burning-daylight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Say Something",
+     "transition": "",
+     "position": 3,
+     "footnote": "with Robert Randolph on Pedal Steel",
+     "length_secs": null,
+     "song_id": 113,
+     "song_slug": "say-something",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Sick, Broke & Broken",
+     "transition": "",
+     "position": 4,
+     "footnote": "FTP, Jake Clemons. With Robert Randolph on Pedal Steel and Jake Clemons on Saxophone and Vocals",
+     "length_secs": null,
+     "song_id": 562,
+     "song_slug": "sick-broke-broken",
+     "original_artist": "Jake Clemons",
+     "is_cover": true
+    },
+    {
+     "title": "Song for Hope",
+     "transition": "",
+     "position": 5,
+     "footnote": "FTP, Jake Clemons. With Jake Clemons on Saxophone and Vocals",
+     "length_secs": null,
+     "song_id": 563,
+     "song_slug": "song-for-hope",
+     "original_artist": "Jake Clemons",
+     "is_cover": true
+    },
+    {
+     "title": "Tenth Avenue Freeze-Out",
+     "transition": "",
+     "position": 6,
+     "footnote": "FTP, Bruce Springsteen. With Jake Clemons on Vocals and the Trombone Shorty Academy on various brass instruments",
+     "length_secs": null,
+     "song_id": 564,
+     "song_slug": "tenth-avenue-freeze-out",
+     "original_artist": "Bruce Springsteen",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,235 @@
+{
+ "show_date": "2022-12-30",
+ "slug": "2022-12-30",
+ "show_id": 1671031874,
+ "venue": "The Cutting Room",
+ "city": "New York",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-december-30-2022-the-cutting-room-new-york-ny-usa.html",
+ "shownotes": "Phish after-show. Phish Kids was played for the first time in 124 shows and featured Brian playing a “Phred” Languedoc replica.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 478,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 773,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 254,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 866,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "People Say",
+     "transition": ">",
+     "position": 5,
+     "footnote": "The Meters",
+     "length_secs": 306,
+     "song_id": 23,
+     "song_slug": "people-say",
+     "original_artist": "The Meters",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 904,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "El Sonidito",
+     "transition": ">",
+     "position": 7,
+     "footnote": "Hechizeros Band",
+     "length_secs": 238,
+     "song_id": 15,
+     "song_slug": "el-sonidito",
+     "original_artist": "Hechizeros Band",
+     "is_cover": true
+    },
+    {
+     "title": "Appleseed",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 611,
+     "song_id": 109,
+     "song_slug": "appleseed",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Fenway",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 647,
+     "song_id": 13,
+     "song_slug": "fenway",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 823,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Rock & Roll Pt. 2",
+     "transition": ">",
+     "position": 11,
+     "footnote": "FTP, Gary Glitter",
+     "length_secs": 119,
+     "song_id": 162,
+     "song_slug": "rock",
+     "original_artist": "Gary Glitter",
+     "is_cover": true
+    },
+    {
+     "title": "Happy Coffee Song",
+     "transition": ">",
+     "position": 12,
+     "footnote": "FTP, Trey Anastasio",
+     "length_secs": 217,
+     "song_id": 163,
+     "song_slug": "happy-coffee-song",
+     "original_artist": "Trey Anastasio",
+     "is_cover": true
+    },
+    {
+     "title": "Lixomydian Blues on Nitrous",
+     "transition": "",
+     "position": 13,
+     "footnote": "Debut",
+     "length_secs": 212,
+     "song_id": 165,
+     "song_slug": "lydian-mode-on-nitrous",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": ">",
+     "position": 14,
+     "footnote": "with Pat Lehosky on percussion",
+     "length_secs": 450,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Drums",
+     "transition": ">",
+     "position": 15,
+     "footnote": "with Pat Lehosky on percussion",
+     "length_secs": 127,
+     "song_id": 186,
+     "song_slug": "drums",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": ">",
+     "position": 16,
+     "footnote": "FTP, Ween, with Pat Lehosky on percussion",
+     "length_secs": 382,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 17,
+     "footnote": "Ending only, with Pat Lehosky on percussion",
+     "length_secs": 243,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Phish Kids",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 379,
+     "song_id": 106,
+     "song_slug": "phish-kids",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 633,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

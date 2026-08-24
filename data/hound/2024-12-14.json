@@ -1,0 +1,208 @@
+{
+ "show_date": "2024-12-14",
+ "slug": "2024-12-14",
+ "show_id": 1726583568,
+ "venue": "The Sinclair",
+ "city": "Cambridge",
+ "state": "MA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-december-14-2024-the-sinclair-cambridge-ma-usa.html",
+ "shownotes": "Nicolette was unfinished. You Didn’t Hear It From Me contained a Kashmir jam.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Westward",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 274,
+     "song_id": 6,
+     "song_slug": "westward",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Nicolette",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 603,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": ">",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 657,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "4th of July",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 134,
+     "song_id": 55,
+     "song_slug": "4th-of-july",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 639,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 358,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Burning Daylight",
+     "transition": "->",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 933,
+     "song_id": 416,
+     "song_slug": "burning-daylight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let it Grow",
+     "transition": "",
+     "position": 8,
+     "footnote": "Grateful Dead",
+     "length_secs": 828,
+     "song_id": 97,
+     "song_slug": "let-it-grow",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Apeman",
+     "transition": "",
+     "position": 9,
+     "footnote": "The Kinks",
+     "length_secs": 259,
+     "song_id": 182,
+     "song_slug": "apeman",
+     "original_artist": "The Kinks",
+     "is_cover": true
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 759,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": ">",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 327,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 185,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 768,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Rabbit",
+     "transition": "->",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 590,
+     "song_id": 391,
+     "song_slug": "rabbit",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Fenway",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 635,
+     "song_id": 13,
+     "song_slug": "fenway",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "All The Same",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 352,
+     "song_id": 32,
+     "song_slug": "all-the-same",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

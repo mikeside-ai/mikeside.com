@@ -1,0 +1,241 @@
+{
+ "show_date": "2025-03-22",
+ "slug": "2025-03-22",
+ "show_id": 1741961691,
+ "venue": "Old Town Pub",
+ "city": "Steamboat Springs",
+ "state": "CO",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-march-22-2025-old-town-pub-steamboat-springs-co-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Westward",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 263,
+     "song_id": 6,
+     "song_slug": "westward",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 269,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Today",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 487,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Nicolette",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 1003,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 782,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Minnie the Moocher",
+     "transition": "",
+     "position": 6,
+     "footnote": "Cab Calloway",
+     "length_secs": 307,
+     "song_id": 287,
+     "song_slug": "minnie-the-moocher",
+     "original_artist": "Cabell “Cab” Calloway",
+     "is_cover": true
+    },
+    {
+     "title": "Shenanigans",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 618,
+     "song_id": 335,
+     "song_slug": "shenanigans",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Happy Song",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 351,
+     "song_id": 389,
+     "song_slug": "happy-song",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 344,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 571,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 912,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Unfocused",
+     "transition": "->",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 871,
+     "song_id": 441,
+     "song_slug": "unfocused",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The Other One",
+     "transition": "->",
+     "position": 13,
+     "footnote": "Grateful Dead",
+     "length_secs": 601,
+     "song_id": 62,
+     "song_slug": "the-other-one",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Rabbit",
+     "transition": "->",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 575,
+     "song_id": 391,
+     "song_slug": "rabbit",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The Other One",
+     "transition": "",
+     "position": 15,
+     "footnote": "Grateful Dead",
+     "length_secs": 392,
+     "song_id": 62,
+     "song_slug": "the-other-one",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 523,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Bubble",
+     "transition": "->",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 652,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "EDM Song",
+     "transition": "->",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 198,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 19,
+     "footnote": "Ending only",
+     "length_secs": 134,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

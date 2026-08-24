@@ -1,0 +1,75 @@
+{
+ "show_date": "2023-11-17",
+ "slug": "2023-11-17",
+ "show_id": 1686705423,
+ "venue": "Troubadour",
+ "city": "West Hollywood",
+ "state": "CA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-november-17-2023-troubador-west-hollywood-ca-usa.html",
+ "shownotes": "Opening for Pigeons Playing Ping Pong. David Hoffman joined on vocals during Space Captain",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 717,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": ">",
+     "position": 2,
+     "footnote": "Ween",
+     "length_secs": 539,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 1458,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Space Captain",
+     "transition": "",
+     "position": 4,
+     "footnote": "Joe Cocker",
+     "length_secs": 415,
+     "song_id": 76,
+     "song_slug": "space-captain",
+     "original_artist": "Joe Cocker",
+     "is_cover": true
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 603,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

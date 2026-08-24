@@ -1,0 +1,252 @@
+{
+ "show_date": "2025-11-19",
+ "slug": "2025-11-19",
+ "show_id": 1753848468,
+ "venue": "Garcia's",
+ "city": "Chicago",
+ "state": "IL",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-november-19-2025-garcias-chicago-il-usa.html",
+ "shownotes": "This show was performed on the day the Dog’s third studio album, “Distroid,” was released. To celebrate, they played the entire album as set two.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Bent Strange",
+     "transition": "->",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 993,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ghost Riders in the Sky",
+     "transition": "->",
+     "position": 2,
+     "footnote": "Stan Jones",
+     "length_secs": 154,
+     "song_id": 121,
+     "song_slug": "ghost-riders-in-the-sky-2",
+     "original_artist": "Stan Jones",
+     "is_cover": true
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 409,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Help on the Way / Slipknot!",
+     "transition": ">",
+     "position": 4,
+     "footnote": "Grateful Dead",
+     "length_secs": 744,
+     "song_id": 69,
+     "song_slug": "help-on-the-way-slipknot",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Creep",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 393,
+     "song_id": 93,
+     "song_slug": "cr",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lazy Day",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 347,
+     "song_id": 104,
+     "song_slug": "lazy-day",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Minnie the Moocher",
+     "transition": "",
+     "position": 7,
+     "footnote": "Cab Calloway",
+     "length_secs": 330,
+     "song_id": 287,
+     "song_slug": "minnie-the-moocher",
+     "original_artist": "Cabell “Cab” Calloway",
+     "is_cover": true
+    },
+    {
+     "title": "Unfocused",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 555,
+     "song_id": 441,
+     "song_slug": "unfocused",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 437,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Go Set",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 918,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lucia’s Secret",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 290,
+     "song_id": 247,
+     "song_slug": "lucias-secret",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 326,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Nicolette",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 474,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Shenanigans",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 512,
+     "song_id": 335,
+     "song_slug": "shenanigans",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 950,
+     "song_id": 327,
+     "song_slug": "thomas-duncan-pt-3",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The Bag",
+     "transition": "->",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 443,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "->",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 641,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": "->",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 316,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 258,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Space Captain",
+     "transition": "",
+     "position": 20,
+     "footnote": "Joe Cocker",
+     "length_secs": 417,
+     "song_id": 76,
+     "song_slug": "space-captain",
+     "original_artist": "Joe Cocker",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

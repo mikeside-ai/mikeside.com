@@ -30,6 +30,24 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "hound"
 
 
+def fix_mojibake(s):
+    """Undo UTF-8-read-as-Latin-1 double encoding.
+
+    PowerShell 5.1's Invoke-WebRequest decodes a response with no charset in
+    its Content-Type as Latin-1, so ``Lucia\u2019s`` arrived on disk as
+    ``Luciaâ\x80\x99s``. The damage is deterministic and reversible: encode
+    back to Latin-1, decode as UTF-8. Safe because already-correct text either
+    fails the Latin-1 encode (non-Latin-1 codepoints) or round-trips unchanged
+    (pure ASCII), and the repair is idempotent -- both verified before use.
+    """
+    if not isinstance(s, str):
+        return s
+    try:
+        return s.encode("latin-1").decode("utf-8")
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        return s
+
+
 def norm_transition(t) -> str:
     t = (t or "").strip()
     if t in {",", ""}:
@@ -84,7 +102,7 @@ def load_rows(raw: Path) -> list[dict]:
             if key in seen:
                 continue
             seen.add(key)
-            rows.append(r)
+            rows.append({k: fix_mojibake(v) for k, v in r.items()})
 
     bulk = raw / "setlists-all-by-artist_id.json"
     if bulk.exists():
@@ -119,7 +137,9 @@ def payload_from_rows(show_rows: list[dict], slug: str) -> dict:
         # slug "_custom_" (song_id 1) is go-set's free-text entry: a real
         # performance, but not repertoire -- see docs/09.
         sets[-1]["songs"].append({
-            "title": r["songname"],
+            # go-set has at least one row with a trailing space in songname
+            # ("Time Stands Still "). Strip, or the same song renders twice.
+            "title": (r["songname"] or "").strip(),
             "transition": norm_transition(r.get("transition")),
             "position": r["position"],
             "footnote": fn,
@@ -147,6 +167,20 @@ def payload_from_rows(show_rows: list[dict], slug: str) -> dict:
         "shownotes": shownotes,
         "sets": sets,
     }
+
+
+QUOTES = str.maketrans({"\u2018": "'", "\u2019": "'", "\u201c": '"', "\u201d": '"'})
+
+
+def classify(t, a) -> str:
+    """"typography" when the only difference is quote style -- a transcription
+    artifact, not a factual conflict. Anything else is "substantive" and wants
+    human eyes: a differing transition or title is a claim about what happened.
+    """
+    if t is None or a is None:
+        return "substantive"
+    flat = lambda r: tuple(x.translate(QUOTES) if isinstance(x, str) else x for x in r)
+    return "typography" if flat(t) == flat(a) else "substantive"
 
 
 def summarize(p: dict) -> list[tuple]:
@@ -182,6 +216,7 @@ def main() -> int:
             slugs[sid] = date if i == 0 else f"{date}-{i + 1}"
 
     written = replaced = disagreements = 0
+    log: list = []
     for sid, srows in sorted(by_show.items(), key=lambda kv: kv[1][0]["showdate"]):
         p = payload_from_rows(srows, slugs[sid])
         dest = DATA / f"{p['slug']}.json"
@@ -196,6 +231,14 @@ def main() -> int:
                     print(f"  transcript only: {row}")
                 for row in sorted(sb - sa)[:6]:
                     print(f"  api only:        {row}")
+                # pair them up by (set, position) so the log shows the conflict
+                ai = {(r[0], r[1]): r for r in a}
+                bi = {(r[0], r[1]): r for r in b}
+                for pos in sorted(set(ai) | set(bi)):
+                    if ai.get(pos) != bi.get(pos):
+                        log.append({"slug": p["slug"], "set": pos[0], "position": pos[1],
+                                    "kind": classify(ai.get(pos), bi.get(pos)),
+                                    "transcription": ai.get(pos), "api": bi.get(pos)})
             replaced += 1
         if args.write:
             dest.write_text(json.dumps(p, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -203,6 +246,21 @@ def main() -> int:
 
     print(f"shows: {len(by_show)} | written: {written} | replacing existing: {replaced} "
           f"| content disagreements: {disagreements}")
+    if log:
+        dest = ROOT / "data" / "hound-disagreements.json"
+        subs = [r for r in log if r["kind"] == "substantive"]
+        print(f"  of those, SUBSTANTIVE (not just quote style): {len(subs)}")
+        for r in subs:
+            print(f"    {r['slug']} set{r['set']} pos{r['position']}: "
+                  f"transcript={r['transcription']} api={r['api']}")
+        dest.write_text(json.dumps({
+            "_what": "transcription (2026-08-22 HTML walk) vs go-set API v2 "
+                     "(2026-08-24 capture), per house rule: log, never silently pick",
+            "_resolution": "the API is first-party and wins in the payloads; "
+                           "these rows are kept so a wrong call stays reviewable",
+            "rows": log,
+        }, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+        print(f"logged {len(log)} disagreeing rows -> {dest}")
     return 0
 
 

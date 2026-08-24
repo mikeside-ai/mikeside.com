@@ -1,13 +1,14 @@
 {
  "show_date": "2026-04-26",
  "slug": "2026-04-26",
+ "show_id": 1766949126,
  "venue": "Delmar Hall",
  "city": "St. Louis",
  "state": "MO",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-26-2026-delmar-hall-st-louis-mo-usa.html",
- "shownotes": "Verified setlist; soundboard recording on bandcamp, nugs, and YouTube.",
+ "shownotes": "",
  "sets": [
   {
    "label": "1",
@@ -18,49 +19,77 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 367,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Today",
      "transition": "->",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 472,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
     },
     {
-     "title": "You Didn't Hear It From Me",
+     "title": "You Didn’t Hear It From Me",
      "transition": "",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1004,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "6 Little Lies",
      "transition": ">",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 968,
+     "song_id": 395,
+     "song_slug": "6-little-lies",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Green Earrings",
      "transition": "",
      "position": 5,
      "footnote": "Steely Dan",
-     "length_secs": null
+     "length_secs": 580,
+     "song_id": 64,
+     "song_slug": "green-earrings",
+     "original_artist": "Steely Dan",
+     "is_cover": true
     },
     {
      "title": "Waiting for the Train",
      "transition": "",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 359,
+     "song_id": 546,
+     "song_slug": "waiting-for-the-train",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "G Song",
      "transition": "",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1011,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -73,49 +102,77 @@
      "transition": "->",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 886,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Bring It On Up",
      "transition": "",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 784,
+     "song_id": 116,
+     "song_slug": "bring-it-on-up",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "So What",
      "transition": "->",
      "position": 10,
      "footnote": "Miles Davis",
-     "length_secs": null
+     "length_secs": 408,
+     "song_id": 167,
+     "song_slug": "so-what",
+     "original_artist": "Miles Davis",
+     "is_cover": true
     },
     {
      "title": "Writing on the Wall",
      "transition": "",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 798,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Linus and Lucy",
      "transition": ">",
      "position": 12,
      "footnote": "Vince Guaraldi",
-     "length_secs": null
+     "length_secs": 451,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
     },
     {
-     "title": "Lucia's Secret",
+     "title": "Lucia’s Secret",
      "transition": "",
      "position": 13,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 311,
+     "song_id": 247,
+     "song_slug": "lucias-secret",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Thomas Duncan, Pt. 3",
      "transition": "",
      "position": 14,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 902,
+     "song_id": 327,
+     "song_slug": "thomas-duncan-pt-3",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -128,14 +185,22 @@
      "transition": ">",
      "position": 15,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 276,
+     "song_id": 225,
+     "song_slug": "yum-t-dum",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Fire",
      "transition": "",
      "position": 16,
      "footnote": "The Jimi Hendrix Experience",
-     "length_secs": null
+     "length_secs": 255,
+     "song_id": 360,
+     "song_slug": "fire",
+     "original_artist": "The Jimi Hendrix Experience",
+     "is_cover": true
     }
    ]
   }

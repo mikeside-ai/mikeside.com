@@ -1,0 +1,241 @@
+{
+ "show_date": "2025-01-28",
+ "slug": "2025-01-28",
+ "show_id": 1732047136,
+ "venue": "The State Room",
+ "city": "Salt Lake City",
+ "state": "UT",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-january-28-2025-the-state-room-salt-lake-city-ut-usa.html",
+ "shownotes": "Applesauce was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Westward",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 279,
+     "song_id": 6,
+     "song_slug": "westward",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mr. Charlie",
+     "transition": "",
+     "position": 2,
+     "footnote": "Grateful Dead",
+     "length_secs": 363,
+     "song_id": 48,
+     "song_slug": "mr-charlie-2",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 799,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Today",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 459,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Applesauce",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 658,
+     "song_id": 192,
+     "song_slug": "applesauce",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Minnie the Moocher",
+     "transition": "",
+     "position": 6,
+     "footnote": "Cab Calloway",
+     "length_secs": 334,
+     "song_id": 287,
+     "song_slug": "minnie-the-moocher",
+     "original_artist": "Cabell “Cab” Calloway",
+     "is_cover": true
+    },
+    {
+     "title": "Lazy Susan",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 415,
+     "song_id": 414,
+     "song_slug": "lazy-susan",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lattice",
+     "transition": "->",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 715,
+     "song_id": 269,
+     "song_slug": "lattice",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 9,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 359,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Yum T. Dum",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 225,
+     "song_id": 225,
+     "song_slug": "yum-t-dum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Unfocused",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 750,
+     "song_id": 441,
+     "song_slug": "unfocused",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 846,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 520,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Help on the Way / Slipknot!",
+     "transition": "->",
+     "position": 14,
+     "footnote": "Grateful Dead",
+     "length_secs": 886,
+     "song_id": 69,
+     "song_slug": "help-on-the-way-slipknot",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Appleseed",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 750,
+     "song_id": 109,
+     "song_slug": "appleseed",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 975,
+     "song_id": 327,
+     "song_slug": "thomas-duncan-pt-3",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": "->",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 512,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": "",
+     "position": 18,
+     "footnote": "Ween",
+     "length_secs": 512,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Power Trip",
+     "transition": "",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 414,
+     "song_id": 190,
+     "song_slug": "power-trip",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

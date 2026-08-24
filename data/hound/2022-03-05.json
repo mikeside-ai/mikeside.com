@@ -1,0 +1,241 @@
+{
+ "show_date": "2022-03-05",
+ "slug": "2022-03-05",
+ "show_id": 1670694609,
+ "venue": "The Upstairs",
+ "city": "Ithaca",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-march-5-2022-the-upstairs-ithaca-ny-usa.html",
+ "shownotes": "This show was performed on Jimmy Law's birthday",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Jam",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 112,
+     "song_slug": "jam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": ">",
+     "position": 5,
+     "footnote": "Stevie Wonder",
+     "length_secs": null,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 6,
+     "footnote": "Vince Guaraldi",
+     "length_secs": null,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Earthbound Man",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 4,
+     "song_slug": "earthbound-man",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Happy Birthday Everyone",
+     "transition": "",
+     "position": 11,
+     "footnote": "Sam wished a Happy Birthday to several fans and crew members in attendance",
+     "length_secs": null,
+     "song_id": 1,
+     "song_slug": "_custom_",
+     "original_artist": null,
+     "is_cover": true
+    },
+    {
+     "title": "Go Set",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Help on the Way / Slipknot!",
+     "transition": ">",
+     "position": 13,
+     "footnote": "Grateful Dead",
+     "length_secs": null,
+     "song_id": 69,
+     "song_slug": "help-on-the-way-slipknot",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Jam",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 112,
+     "song_slug": "jam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tequila",
+     "transition": ">",
+     "position": 16,
+     "footnote": "The Champs",
+     "length_secs": null,
+     "song_id": 122,
+     "song_slug": "tequila",
+     "original_artist": "The Champs",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Say Something",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 113,
+     "song_slug": "say-something",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "One More Saturday Night",
+     "transition": "",
+     "position": 19,
+     "footnote": "Bob Weir",
+     "length_secs": null,
+     "song_id": 68,
+     "song_slug": "one-more-saturday-night",
+     "original_artist": "Bob Weir",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

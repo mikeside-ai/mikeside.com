@@ -1,0 +1,119 @@
+{
+ "show_date": "2021-10-16",
+ "slug": "2021-10-16",
+ "show_id": 1673463509,
+ "venue": "Garcia's",
+ "city": "Port Chester",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-october-16-2021-garcias-port-chester-ny-usa.html",
+ "shownotes": "Pigeons Playing Ping Pong pre-show.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 555,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Crazy",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 355,
+     "song_id": 58,
+     "song_slug": "crazy",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 900,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 365,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Royals",
+     "transition": "",
+     "position": 5,
+     "footnote": "Lorde",
+     "length_secs": 808,
+     "song_id": 31,
+     "song_slug": "royals",
+     "original_artist": "Lorde",
+     "is_cover": true
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 323,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "->",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 465,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 598,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Clint Eastwood",
+     "transition": "",
+     "position": 9,
+     "footnote": "Gorrilaz",
+     "length_secs": 319,
+     "song_id": 77,
+     "song_slug": "clint-eastwood",
+     "original_artist": "Gorillaz",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

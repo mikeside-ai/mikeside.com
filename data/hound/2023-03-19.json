@@ -1,0 +1,346 @@
+{
+ "show_date": "2023-03-19",
+ "slug": "2023-03-19",
+ "show_id": 1671034318,
+ "venue": "Soundcheck Studios",
+ "city": "Pembroke",
+ "state": "MA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-march-19-2023-soundcheck-studios-pembroke-ma-usa.html",
+ "shownotes": "The first set was performed with Hayley Jane. Go Set was performed with lyrics and dedicated to Nik Lopomo. Jack & Coke was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Jungle Foot",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 196,
+     "song_slug": "jungle-foot",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Swim to the Middle",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 198,
+     "song_slug": "swim-to-the-middle",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Bird",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 201,
+     "song_slug": "little-bird",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Brand New Key",
+     "transition": ">",
+     "position": 4,
+     "footnote": "Melanie",
+     "length_secs": null,
+     "song_id": 202,
+     "song_slug": "brand-new-key",
+     "original_artist": "Melanie",
+     "is_cover": true
+    },
+    {
+     "title": "Hey Pocky A-Way",
+     "transition": ">",
+     "position": 5,
+     "footnote": "The Meters",
+     "length_secs": null,
+     "song_id": 203,
+     "song_slug": "hey-pocky-a-way",
+     "original_artist": "The Meters",
+     "is_cover": true
+    },
+    {
+     "title": "Brand New Key",
+     "transition": "",
+     "position": 6,
+     "footnote": "Melanie",
+     "length_secs": null,
+     "song_id": 202,
+     "song_slug": "brand-new-key",
+     "original_artist": "Melanie",
+     "is_cover": true
+    },
+    {
+     "title": "Paper Fly",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 200,
+     "song_slug": "paper-fly",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "This Woman",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 205,
+     "song_slug": "this-woman",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Cosmic Katrina",
+     "transition": "",
+     "position": 9,
+     "footnote": "Hayley Jane and the Primates",
+     "length_secs": null,
+     "song_id": 204,
+     "song_slug": "cosmic-katrina",
+     "original_artist": "Hayley Jane and the Primates",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Stevie Lew",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 402,
+     "song_id": 59,
+     "song_slug": "stevie-lew",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Nicolette",
+     "transition": ">",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 541,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tillie",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 641,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": ">",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 517,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "EDM Song",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 204,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Applesauce",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 589,
+     "song_id": 192,
+     "song_slug": "applesauce",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Fenway",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 566,
+     "song_id": 13,
+     "song_slug": "fenway",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Watermelon Man",
+     "transition": "",
+     "position": 17,
+     "footnote": "Herbie Hancock, with Cory Schechtman on saxophone",
+     "length_secs": 545,
+     "song_id": 148,
+     "song_slug": "watermelon-man",
+     "original_artist": "Herbie Hancock",
+     "is_cover": true
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 660,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "3",
+   "display": "Set 3",
+   "songs": [
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 635,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Clint Eastwood",
+     "transition": "",
+     "position": 20,
+     "footnote": "Gorillaz",
+     "length_secs": 341,
+     "song_id": 77,
+     "song_slug": "clint-eastwood",
+     "original_artist": "Gorillaz",
+     "is_cover": true
+    },
+    {
+     "title": "Apeman",
+     "transition": "",
+     "position": 21,
+     "footnote": "The Kinks",
+     "length_secs": 230,
+     "song_id": 182,
+     "song_slug": "apeman",
+     "original_artist": "The Kinks",
+     "is_cover": true
+    },
+    {
+     "title": "Rinky Dink Rag",
+     "transition": "",
+     "position": 22,
+     "footnote": null,
+     "length_secs": 149,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "All The Same",
+     "transition": "",
+     "position": 23,
+     "footnote": null,
+     "length_secs": 294,
+     "song_id": 32,
+     "song_slug": "all-the-same",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": ">",
+     "position": 24,
+     "footnote": null,
+     "length_secs": 424,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Creep",
+     "transition": ">",
+     "position": 25,
+     "footnote": null,
+     "length_secs": 349,
+     "song_id": 93,
+     "song_slug": "cr",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 26,
+     "footnote": null,
+     "length_secs": 1316,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "The Music Never Stopped",
+     "transition": "",
+     "position": 27,
+     "footnote": "Grateful Dead",
+     "length_secs": 586,
+     "song_id": 63,
+     "song_slug": "the-music-never-stopped",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "On the Road Again",
+     "transition": "",
+     "position": 28,
+     "footnote": "FTP, Willie Nelson, with Hayley Jane",
+     "length_secs": 232,
+     "song_id": 217,
+     "song_slug": "on-the-road-again",
+     "original_artist": "Willie Nelson",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

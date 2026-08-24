@@ -1,0 +1,75 @@
+{
+ "show_date": "2019-03-01",
+ "slug": "2019-03-01",
+ "show_id": 1749859888,
+ "venue": "Ted House",
+ "city": "Allston",
+ "state": "MA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-march-1-2019-ted-house-allston-ma-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 546,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    },
+    {
+     "title": "Chocolate Milk",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 330,
+     "song_id": 250,
+     "song_slug": "chocolate-milk",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": "->",
+     "position": 3,
+     "footnote": "Stevie Wonder",
+     "length_secs": 455,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 4,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 380,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 587,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

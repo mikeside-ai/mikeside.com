@@ -1,0 +1,180 @@
+{
+ "show_date": "2025-10-30",
+ "slug": "2025-10-30",
+ "show_id": 1756868904,
+ "venue": "Visulite Theatre",
+ "city": "Charlotte",
+ "state": "NC",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-october-30-2025-visulite-theatre-charlotte-nc-usa.html",
+ "shownotes": "In honor of Pierre Robert from WMMR, who recently passed away, Stevie Lew’s lyric changed last night to: “Thank God we had Pierre Robert on the radio. Philadelphia to Charlotte, we got quite a ways to go.” Craig and Pat was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 924,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Crazy",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 438,
+     "song_id": 58,
+     "song_slug": "crazy",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Song for the Dumped",
+     "transition": "",
+     "position": 3,
+     "footnote": "Ben Folds",
+     "length_secs": 228,
+     "song_id": 274,
+     "song_slug": "song-for-the-dumped-2",
+     "original_artist": "Ben Folds",
+     "is_cover": true
+    },
+    {
+     "title": "Today",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 656,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 793,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    },
+    {
+     "title": "Happy Song",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 424,
+     "song_id": 389,
+     "song_slug": "happy-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 887,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Stevie Lew",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 411,
+     "song_id": 59,
+     "song_slug": "stevie-lew",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 1065,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 944,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": ">",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 1177,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 787,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "6 Little Lies",
+     "transition": "->",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 541,
+     "song_id": 395,
+     "song_slug": "6-little-lies",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 14,
+     "footnote": "Ending only",
+     "length_secs": 139,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

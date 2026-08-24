@@ -1,0 +1,158 @@
+{
+ "show_date": "2025-06-13",
+ "slug": "2025-06-13",
+ "show_id": 1742916059,
+ "venue": "Pisgah Brewing Company",
+ "city": "Black Mountain",
+ "state": "NC",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-13-2025-pisgah-brewing-company-black-mountain-nc-usa.html",
+ "shownotes": "The show, originally planned for the outdoor stage, was moved indoors last minute due to inclement weather. The band played with minimal gear. Mr. Charlie was performed by Sam, Brian, and Jimmy. Joey and Jeremy joined the stage prior to Didn’t You Know?. Jeremy played bass for Bulls in Parade, while Brian played a verse on keys.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Mr. Charlie",
+     "transition": "",
+     "position": 1,
+     "footnote": "Grateful Dead",
+     "length_secs": null,
+     "song_id": 48,
+     "song_slug": "mr-charlie-2",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Song for the Dumped",
+     "transition": "",
+     "position": 3,
+     "footnote": "Ben Folds",
+     "length_secs": 230,
+     "song_id": 274,
+     "song_slug": "song-for-the-dumped-2",
+     "original_artist": "Ben Folds",
+     "is_cover": true
+    },
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 362,
+     "song_id": 445,
+     "song_slug": "dangers-of-rah-rah",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stevie Lew",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 537,
+     "song_id": 59,
+     "song_slug": "stevie-lew",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The Distance",
+     "transition": ">",
+     "position": 6,
+     "footnote": "FTP, Cake",
+     "length_secs": 306,
+     "song_id": 467,
+     "song_slug": "the-distance",
+     "original_artist": "Cake",
+     "is_cover": true
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 313,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bennie and the Jets",
+     "transition": "",
+     "position": 8,
+     "footnote": "Elton John",
+     "length_secs": 430,
+     "song_id": 232,
+     "song_slug": "bennie-and-the-jets",
+     "original_artist": "Elton John",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 876,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 10,
+     "footnote": "Ending only",
+     "length_secs": 92,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Lucia’s Secret",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 363,
+     "song_id": 247,
+     "song_slug": "lucias-secret",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bulls on Parade",
+     "transition": "",
+     "position": 12,
+     "footnote": "Rage Against the Machine",
+     "length_secs": 292,
+     "song_id": 432,
+     "song_slug": "bulls-on-parade",
+     "original_artist": "Rage Against the Machine",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

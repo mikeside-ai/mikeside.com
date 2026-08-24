@@ -1,0 +1,42 @@
+{
+ "show_date": "2019-01-19",
+ "slug": "2019-01-19",
+ "show_id": 1749830812,
+ "venue": "Wonder Bar",
+ "city": "Asbury Park",
+ "state": "NJ",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-january-19-2019-wonder-bar-asbury-park-nj-usa.html",
+ "shownotes": "This show was performed as part of Light of Day WinterFest 2019. This is the first show to feature Brian Murray. This setlist is incomplete.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 1,
+     "footnote": "with Brian Murray on guitar",
+     "length_secs": null,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 2,
+     "footnote": "with Brian Murray on guitar",
+     "length_secs": null,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

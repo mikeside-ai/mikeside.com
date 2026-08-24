@@ -1,0 +1,86 @@
+{
+ "show_date": "2022-10-29",
+ "slug": "2022-10-29",
+ "show_id": 1670948923,
+ "venue": "Druid City Music Hall",
+ "city": "Tuscaloosa",
+ "state": "AL",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-october-29-2022-druid-city-music-hall-tuscaloosa-al-usa.html",
+ "shownotes": "Opening for Twiddle.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Frosty",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 341,
+     "song_id": 5,
+     "song_slug": "frosty",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 545,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 385,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Walkin' on the Sun",
+     "transition": ">",
+     "position": 4,
+     "footnote": "Smash Mouth",
+     "length_secs": 285,
+     "song_id": 70,
+     "song_slug": "walkin-on-the-sun",
+     "original_artist": "Smash Mouth",
+     "is_cover": true
+    },
+    {
+     "title": "Spun",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 494,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 453,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

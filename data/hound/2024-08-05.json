@@ -1,0 +1,263 @@
+{
+ "show_date": "2024-08-05",
+ "slug": "2024-08-05",
+ "show_id": 1708361454,
+ "venue": "Great Divide Campground",
+ "city": "Newton",
+ "state": "NJ",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-august-5-2024-great-divide-campground-newton-nj-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Little Things",
+     "transition": ">",
+     "position": 1,
+     "footnote": "Original arrangement",
+     "length_secs": 532,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": "->",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 683,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Apeman",
+     "transition": "",
+     "position": 3,
+     "footnote": "The Kinks",
+     "length_secs": 250,
+     "song_id": 182,
+     "song_slug": "apeman",
+     "original_artist": "The Kinks",
+     "is_cover": true
+    },
+    {
+     "title": "Andy Greenberg",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 290,
+     "song_id": 370,
+     "song_slug": "andy-greenberg",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Applesauce",
+     "transition": "->",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 744,
+     "song_id": 192,
+     "song_slug": "applesauce",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 915,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Happy Song",
+     "transition": "",
+     "position": 7,
+     "footnote": "Debut",
+     "length_secs": 320,
+     "song_id": 389,
+     "song_slug": "happy-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 1276,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Phish Kids",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 242,
+     "song_id": 106,
+     "song_slug": "phish-kids",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The Wedge",
+     "transition": "",
+     "position": 10,
+     "footnote": "FTP, Phish",
+     "length_secs": 314,
+     "song_id": 390,
+     "song_slug": "the-wedge",
+     "original_artist": "Phish",
+     "is_cover": true
+    },
+    {
+     "title": "Go Set",
+     "transition": ">",
+     "position": 11,
+     "footnote": "Instrumental version",
+     "length_secs": 698,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": ">",
+     "position": 12,
+     "footnote": "Ween",
+     "length_secs": 439,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
+    },
+    {
+     "title": "Gumball",
+     "transition": "->",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 623,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Strangest Dreams",
+     "transition": "->",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 681,
+     "song_id": 336,
+     "song_slug": "strangest-dreams",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 509,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Rabbit",
+     "transition": ">",
+     "position": 16,
+     "footnote": "Debut",
+     "length_secs": 517,
+     "song_id": 391,
+     "song_slug": "rabbit",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "White Rabbit",
+     "transition": "",
+     "position": 17,
+     "footnote": "FTP, Jefferson Airplane",
+     "length_secs": 256,
+     "song_id": 392,
+     "song_slug": "white-rabitt",
+     "original_artist": "Jefferson Airplane",
+     "is_cover": true
+    },
+    {
+     "title": "Tennessee Whiskey",
+     "transition": "",
+     "position": 18,
+     "footnote": "FTP, Chris Stapleton",
+     "length_secs": 426,
+     "song_id": 393,
+     "song_slug": "tennessee-whiskey",
+     "original_artist": "Chris Stapleton",
+     "is_cover": true
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 19,
+     "footnote": "Bluegrass style",
+     "length_secs": 393,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 20,
+     "footnote": null,
+     "length_secs": 657,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "December, 1963 (Oh What a Night)",
+     "transition": "",
+     "position": 21,
+     "footnote": "The Four Seasons, Brian Murray on Bass",
+     "length_secs": 262,
+     "song_id": 328,
+     "song_slug": "december-1963-oh-what-a-night",
+     "original_artist": "The Four Seasons",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

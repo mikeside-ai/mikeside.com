@@ -1,0 +1,186 @@
+{
+ "show_date": "2024-12-13",
+ "slug": "2024-12-13",
+ "show_id": 1726583556,
+ "venue": "The Sinclair",
+ "city": "Cambridge",
+ "state": "MA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-december-13-2024-the-sinclair-cambridge-ma-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 459,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Yum T. Dum",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 214,
+     "song_id": 225,
+     "song_slug": "yum-t-dum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 1199,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "That's What Love Will Make You Do",
+     "transition": "",
+     "position": 4,
+     "footnote": "Little Milton",
+     "length_secs": 518,
+     "song_id": 136,
+     "song_slug": "thats-what-love-will-make-you-do",
+     "original_artist": "Little Milton",
+     "is_cover": true
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 256,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 867,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 744,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Tillie",
+     "transition": "->",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 1438,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 313,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 1001,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Gumball",
+     "transition": ">",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 559,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 176,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Pinball Wizard",
+     "transition": ">",
+     "position": 13,
+     "footnote": "The Who",
+     "length_secs": 236,
+     "song_id": 367,
+     "song_slug": "pinball-wizard",
+     "original_artist": "The Who",
+     "is_cover": true
+    },
+    {
+     "title": "Earthbound Man",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 430,
+     "song_id": 4,
+     "song_slug": "earthbound-man",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

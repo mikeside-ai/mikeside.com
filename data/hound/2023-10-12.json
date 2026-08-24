@@ -1,0 +1,180 @@
+{
+ "show_date": "2023-10-12",
+ "slug": "2023-10-12",
+ "show_id": 1686069968,
+ "venue": "Elevation 27",
+ "city": "Virginia Beach",
+ "state": "VA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-october-12-2023-elevation-27-virginia-beach-va-usa.html",
+ "shownotes": "Stranger was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 509,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Cats Under the Stars",
+     "transition": ">",
+     "position": 2,
+     "footnote": "Jerry Garcia Band",
+     "length_secs": 1031,
+     "song_id": 66,
+     "song_slug": "cats-under-the-stars",
+     "original_artist": "Jerry Garcia Band",
+     "is_cover": true
+    },
+    {
+     "title": "Bring It On Up",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 1245,
+     "song_id": 116,
+     "song_slug": "bring-it-on-up",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stranger",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 304,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Around The World",
+     "transition": "->",
+     "position": 5,
+     "footnote": "Daft Punk",
+     "length_secs": 464,
+     "song_id": 166,
+     "song_slug": "around-the-world",
+     "original_artist": "Daft Punk",
+     "is_cover": true
+    },
+    {
+     "title": "Gumball",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 421,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Creep",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 352,
+     "song_id": 93,
+     "song_slug": "cr",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 811,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "It Gets Better",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 1137,
+     "song_id": 226,
+     "song_slug": "it-gets-better",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 755,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Battenkill Breakdown",
+     "transition": ">",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 341,
+     "song_id": 263,
+     "song_slug": "battenkill-breakdown",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 166,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 288,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Space Captain",
+     "transition": "",
+     "position": 14,
+     "footnote": "Joe Cocker",
+     "length_secs": 502,
+     "song_id": 76,
+     "song_slug": "space-captain",
+     "original_artist": "Joe Cocker",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

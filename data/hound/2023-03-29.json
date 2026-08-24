@@ -1,0 +1,263 @@
+{
+ "show_date": "2023-03-29",
+ "slug": "2023-03-29",
+ "show_id": 1673482791,
+ "venue": "Lost Lake Lounge",
+ "city": "Denver",
+ "state": "CO",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-march-29-2023-lost-lake-lounge-denver-co-usa.html",
+ "shownotes": "The band came out one by one to perform with BKellz. The entire band was on stage by Respect and there was no break in between the sets. Go Set was performed with lyrics.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Respect",
+     "transition": ">",
+     "position": 1,
+     "footnote": "FTP, Aretha Franklin, with BKellz",
+     "length_secs": 970,
+     "song_id": 218,
+     "song_slug": "respect",
+     "original_artist": "Aretha Franklin",
+     "is_cover": true
+    },
+    {
+     "title": "Jam",
+     "transition": "",
+     "position": 2,
+     "footnote": "with BKellz",
+     "length_secs": 616,
+     "song_id": 112,
+     "song_slug": "jam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 639,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Nicolette",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 532,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Today",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 404,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 568,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 808,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Appleseed",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 644,
+     "song_id": 109,
+     "song_slug": "appleseed",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": "->",
+     "position": 9,
+     "footnote": "Stevie Wonder",
+     "length_secs": 345,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Dancing in the Street",
+     "transition": ">",
+     "position": 10,
+     "footnote": "Martha Reeves & the Vandellas",
+     "length_secs": 540,
+     "song_id": 100,
+     "song_slug": "dancing-in-the-street",
+     "original_artist": "Martha Reeves and the Vandellas",
+     "is_cover": true
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 83,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Little Things",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 429,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Royals",
+     "transition": "",
+     "position": 13,
+     "footnote": "Lorde",
+     "length_secs": 712,
+     "song_id": 31,
+     "song_slug": "royals",
+     "original_artist": "Lorde",
+     "is_cover": true
+    },
+    {
+     "title": "Hesitate",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 614,
+     "song_id": 22,
+     "song_slug": "hesitate",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stadium Rave",
+     "transition": "",
+     "position": 15,
+     "footnote": "Glenn Nishida and Mark Governor",
+     "length_secs": 481,
+     "song_id": 181,
+     "song_slug": "stadium-rave",
+     "original_artist": "Glenn Nishida and Mark Governor",
+     "is_cover": true
+    },
+    {
+     "title": "G Song",
+     "transition": ">",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 708,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": ">",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 372,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": ">",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 518,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "EDM Song",
+     "transition": ">",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 202,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 20,
+     "footnote": null,
+     "length_secs": 88,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 21,
+     "footnote": null,
+     "length_secs": 275,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

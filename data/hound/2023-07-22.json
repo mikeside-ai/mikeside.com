@@ -1,0 +1,197 @@
+{
+ "show_date": "2023-07-22",
+ "slug": "2023-07-22",
+ "show_id": 1686706889,
+ "venue": "Lincoln Hill Farms",
+ "city": "Canandaigua",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-22-2023-lincoln-hill-farms-canandaigua-ny-usa.html",
+ "shownotes": "Bugle on the Shelf and Thomas Duncan, Pt. 2 were unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 397,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "4th of July",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 127,
+     "song_id": 55,
+     "song_slug": "4th-of-july",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Nicolette",
+     "transition": ">",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 867,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 1006,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 655,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "->",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 592,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Gumball",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 511,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 8,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 373,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 764,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bring It On Up",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 646,
+     "song_id": 116,
+     "song_slug": "bring-it-on-up",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Walkin' on the Sun",
+     "transition": ">",
+     "position": 11,
+     "footnote": "Smash Mouth",
+     "length_secs": 292,
+     "song_id": 70,
+     "song_slug": "walkin-on-the-sun",
+     "original_artist": "Smash Mouth",
+     "is_cover": true
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 432,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 904,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 1045,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Say Something",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 519,
+     "song_id": 113,
+     "song_slug": "say-something",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,186 @@
+{
+ "show_date": "2024-06-19",
+ "slug": "2024-06-19",
+ "show_id": 1712085083,
+ "venue": "The Mishawaka",
+ "city": "Bellvue",
+ "state": "CO",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-19-2024-the-mishawaka-bellvue-co-usa.html",
+ "shownotes": "Harry Hood was dedicated to the Tour Bus Driver Harry Reese, in addition to Mr. Tooker & Nik Lopomo.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Stevie Lew",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 406,
+     "song_id": 59,
+     "song_slug": "stevie-lew",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 697,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 505,
+     "song_id": 35,
+     "song_slug": "snow-day",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Gumball",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 506,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lattice",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 559,
+     "song_id": 269,
+     "song_slug": "lattice",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 6,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 482,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    },
+    {
+     "title": "The Music Never Stopped",
+     "transition": "",
+     "position": 7,
+     "footnote": "Grateful Dead",
+     "length_secs": 542,
+     "song_id": 63,
+     "song_slug": "the-music-never-stopped",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 614,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Samba for Sam",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 970,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "People Say",
+     "transition": ">",
+     "position": 10,
+     "footnote": "The Meters",
+     "length_secs": 357,
+     "song_id": 23,
+     "song_slug": "people-say",
+     "original_artist": "The Meters",
+     "is_cover": true
+    },
+    {
+     "title": "Tillie",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 799,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 883,
+     "song_id": 327,
+     "song_slug": "thomas-duncan-pt-3",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Harry Hood",
+     "transition": "",
+     "position": 13,
+     "footnote": "Phish",
+     "length_secs": 666,
+     "song_id": 323,
+     "song_slug": "harry-hood",
+     "original_artist": "Phish",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "The Bag",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 550,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

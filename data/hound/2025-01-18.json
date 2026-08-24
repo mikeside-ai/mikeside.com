@@ -1,0 +1,208 @@
+{
+ "show_date": "2025-01-18",
+ "slug": "2025-01-18",
+ "show_id": 1729704112,
+ "venue": "Lost on Main",
+ "city": "Chico",
+ "state": "CA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-january-18-2025-lost-on-main-chico-ca-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Stevie Lew",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 409,
+     "song_id": 59,
+     "song_slug": "stevie-lew",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 889,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "116 Days",
+     "transition": ">",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 281,
+     "song_id": 440,
+     "song_slug": "116-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 1186,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "None",
+     "transition": ">",
+     "position": 5,
+     "footnote": "Debut",
+     "length_secs": 324,
+     "song_id": 447,
+     "song_slug": "none",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "->",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 904,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": "->",
+     "position": 7,
+     "footnote": "Ween",
+     "length_secs": 447,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 163,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 777,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Unfocused",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 980,
+     "song_id": 441,
+     "song_slug": "unfocused",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Yum T. Dum",
+     "transition": ">",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 236,
+     "song_id": 225,
+     "song_slug": "yum-t-dum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Royals",
+     "transition": "->",
+     "position": 12,
+     "footnote": "Lorde",
+     "length_secs": 699,
+     "song_id": 31,
+     "song_slug": "royals",
+     "original_artist": "Lorde",
+     "is_cover": true
+    },
+    {
+     "title": "Spun",
+     "transition": "->",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 791,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lucia’s Secret",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 357,
+     "song_id": 247,
+     "song_slug": "lucias-secret",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lazy Susan",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 421,
+     "song_id": 414,
+     "song_slug": "lazy-susan",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 490,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

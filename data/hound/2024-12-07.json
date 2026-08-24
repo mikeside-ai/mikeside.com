@@ -1,0 +1,230 @@
+{
+ "show_date": "2024-12-07",
+ "slug": "2024-12-07",
+ "show_id": 1726583543,
+ "venue": "The 8x10",
+ "city": "Baltimore",
+ "state": "MD",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-december-7-2024-the-8x10-baltimore-md-usa.html",
+ "shownotes": "Happy Birthday to You was performed in honor of Jeremy Kaplan's upcoming birthday.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Stevie Lew",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 394,
+     "song_id": 59,
+     "song_slug": "stevie-lew",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stranger",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 653,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Song for the Dumped",
+     "transition": ">",
+     "position": 3,
+     "footnote": "Ben Folds",
+     "length_secs": 228,
+     "song_id": 274,
+     "song_slug": "song-for-the-dumped-2",
+     "original_artist": "Ben Folds",
+     "is_cover": true
+    },
+    {
+     "title": "Tillie",
+     "transition": "->",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 786,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Today",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 677,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 334,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "China Cat Sunflower",
+     "transition": "->",
+     "position": 7,
+     "footnote": "Grateful Dead",
+     "length_secs": 552,
+     "song_id": 49,
+     "song_slug": "china-cat-sunflower",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "->",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 1168,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 495,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Ophelia",
+     "transition": ">",
+     "position": 10,
+     "footnote": "The Band",
+     "length_secs": 315,
+     "song_id": 94,
+     "song_slug": "ophelia",
+     "original_artist": "The Band",
+     "is_cover": true
+    },
+    {
+     "title": "Go Set",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 1102,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 918,
+     "song_id": 327,
+     "song_slug": "thomas-duncan-pt-3",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Happy Birthday Jeremy",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 126,
+     "song_id": 1,
+     "song_slug": "_custom_",
+     "original_artist": null,
+     "is_cover": true
+    },
+    {
+     "title": "Spun",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 779,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Minnie the Moocher",
+     "transition": "",
+     "position": 15,
+     "footnote": "Cab Calloway",
+     "length_secs": 339,
+     "song_id": 287,
+     "song_slug": "minnie-the-moocher",
+     "original_artist": "Cabell “Cab” Calloway",
+     "is_cover": true
+    },
+    {
+     "title": "Lazy Susan",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 412,
+     "song_id": 414,
+     "song_slug": "lazy-susan",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 869,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Stadium Rave",
+     "transition": "",
+     "position": 18,
+     "footnote": "Glenn Nishida and Mark Governor",
+     "length_secs": 704,
+     "song_id": 181,
+     "song_slug": "stadium-rave",
+     "original_artist": "Glenn Nishida and Mark Governor",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

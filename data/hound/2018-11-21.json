@@ -1,0 +1,97 @@
+{
+ "show_date": "2018-11-21",
+ "slug": "2018-11-21",
+ "show_id": 1749833218,
+ "venue": "The Stone Pony",
+ "city": "Asbury Park",
+ "state": "NJ",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-november-21-2018-the-stone-pony-asbury-park-nj-usa.html",
+ "shownotes": "Opening for Tillie Stardust. This show featured Erick Villalobos on guitar and vocals. This setlist is incomplete.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Also Sprach Zarathustra (2001)",
+     "transition": "->",
+     "position": 1,
+     "footnote": "Richard Strauss",
+     "length_secs": null,
+     "song_id": 145,
+     "song_slug": "also-sprach-zarathustra-2001",
+     "original_artist": "Richard Strauss",
+     "is_cover": true
+    },
+    {
+     "title": "Shakedown Street",
+     "transition": "",
+     "position": 2,
+     "footnote": "Grateful Dead, with Sandy Mack on harmonica",
+     "length_secs": null,
+     "song_id": 85,
+     "song_slug": "shakedown-street",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    },
+    {
+     "title": "Something Like Olivia",
+     "transition": "",
+     "position": 4,
+     "footnote": "John Mayer",
+     "length_secs": null,
+     "song_id": 101,
+     "song_slug": "something-like-olivia",
+     "original_artist": "John Mayer",
+     "is_cover": true
+    },
+    {
+     "title": "Help on the Way / Slipknot!",
+     "transition": "",
+     "position": 5,
+     "footnote": "Grateful Dead",
+     "length_secs": null,
+     "song_id": 69,
+     "song_slug": "help-on-the-way-slipknot",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Feel Like A Stranger",
+     "transition": "",
+     "position": 6,
+     "footnote": "Grateful Dead",
+     "length_secs": null,
+     "song_id": 41,
+     "song_slug": "feel-like-a-stranger",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "The OG",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 394,
+     "song_slug": "the-og",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

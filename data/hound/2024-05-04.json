@@ -1,0 +1,108 @@
+{
+ "show_date": "2024-05-04",
+ "slug": "2024-05-04",
+ "show_id": 1700068718,
+ "venue": "Miami Beach BandShell",
+ "city": "Miami Beach",
+ "state": "FL",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-4-2024-miami-beach-bandshell-miami-beach-fl-usa.html",
+ "shownotes": "Opening for Andy Frasco & The U.N. This show was performed on May the 4th, known as Star Wars day.  Star Wars theme music was played throughout the show including \"Duel of the Fates\" in Look Johnny, \"Cantina\" theme in Craig and Pat, and \"Force Theme\" in Spun.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 788,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Eastbound and Down",
+     "transition": "",
+     "position": 2,
+     "footnote": "Jerry Reed",
+     "length_secs": 215,
+     "song_id": 188,
+     "song_slug": "eastbound-and-down",
+     "original_artist": "Jerry Reed",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 562,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ghost Riders in the Sky",
+     "transition": ">",
+     "position": 4,
+     "footnote": "Stan Jones",
+     "length_secs": 165,
+     "song_id": 121,
+     "song_slug": "ghost-riders-in-the-sky-2",
+     "original_artist": "Stan Jones",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 315,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 382,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 619,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 446,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

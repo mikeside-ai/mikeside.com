@@ -1,0 +1,130 @@
+{
+ "show_date": "2024-08-25",
+ "slug": "2024-08-25",
+ "show_id": 1711552590,
+ "venue": "Avondale Brewing Company",
+ "city": "Birmingham",
+ "state": "AL",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-august-25-2024-avondale-brewing-company-birmingham-al-usa.html",
+ "shownotes": "Show was part of a joint Pigeons Playing Ping Pong, Andy Frasco & The U.N., and Dogs In A Pile Tour.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Rinky Dink Rag",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 156,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 295,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ophelia",
+     "transition": ">",
+     "position": 3,
+     "footnote": "The Band",
+     "length_secs": 299,
+     "song_id": 94,
+     "song_slug": "ophelia",
+     "original_artist": "The Band",
+     "is_cover": true
+    },
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 395,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 656,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Greta",
+     "transition": ">",
+     "position": 6,
+     "footnote": "Widespread Panic",
+     "length_secs": 447,
+     "song_id": 50,
+     "song_slug": "greta",
+     "original_artist": "Widespread Panic",
+     "is_cover": true
+    },
+    {
+     "title": "Gumball",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 515,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 794,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 736,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "",
+     "position": 10,
+     "footnote": "Ending only",
+     "length_secs": 208,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

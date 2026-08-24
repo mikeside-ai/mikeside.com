@@ -1,0 +1,257 @@
+{
+ "show_date": "2019-05-18",
+ "slug": "2019-05-18",
+ "show_id": 1673391554,
+ "venue": "Olde Village Pub",
+ "city": "Middletown",
+ "state": "NJ",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-18-2019-olde-village-pub-middletown-nj-usa.html",
+ "shownotes": "Wook Song was performed without lyrics.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Watermelon Man",
+     "transition": ">",
+     "position": 1,
+     "footnote": "Herbie Hancock",
+     "length_secs": 682,
+     "song_id": 148,
+     "song_slug": "watermelon-man",
+     "original_artist": "Herbie Hancock",
+     "is_cover": true
+    },
+    {
+     "title": "China Cat Sunflower",
+     "transition": "->",
+     "position": 2,
+     "footnote": "Grateful Dead",
+     "length_secs": 410,
+     "song_id": 49,
+     "song_slug": "china-cat-sunflower",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "I Know You Rider",
+     "transition": "",
+     "position": 3,
+     "footnote": "Traditional",
+     "length_secs": 540,
+     "song_id": 158,
+     "song_slug": "i-know-you-rider",
+     "original_artist": "Traditional",
+     "is_cover": true
+    },
+    {
+     "title": "Time Stands Still",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 436,
+     "song_id": 102,
+     "song_slug": "time-stands-still",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 561,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "That's What Love Will Make You Do",
+     "transition": "",
+     "position": 6,
+     "footnote": "Little Milton",
+     "length_secs": 454,
+     "song_id": 136,
+     "song_slug": "thats-what-love-will-make-you-do",
+     "original_artist": "Little Milton",
+     "is_cover": true
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": "->",
+     "position": 7,
+     "footnote": "Stevie Wonder",
+     "length_secs": 817,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 8,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 263,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Look Johnny",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 540,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Power Trip",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 346,
+     "song_id": 190,
+     "song_slug": "power-trip",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Time Loves A Hero",
+     "transition": "->",
+     "position": 11,
+     "footnote": "Little Feat",
+     "length_secs": 443,
+     "song_id": 47,
+     "song_slug": "time-loves-a-hero",
+     "original_artist": "Little Feat",
+     "is_cover": true
+    },
+    {
+     "title": "Scarlet Begonias",
+     "transition": "->",
+     "position": 12,
+     "footnote": "Grateful Dead",
+     "length_secs": 730,
+     "song_id": 169,
+     "song_slug": "scarlet-begonias",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Free",
+     "transition": "",
+     "position": 13,
+     "footnote": "Phish",
+     "length_secs": 756,
+     "song_id": 40,
+     "song_slug": "free",
+     "original_artist": "Phish",
+     "is_cover": true
+    },
+    {
+     "title": "Chocolate Milk",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 358,
+     "song_id": 250,
+     "song_slug": "chocolate-milk",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Wook Song",
+     "transition": "->",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 176,
+     "song_id": 403,
+     "song_slug": "wook-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Estimated Prophet",
+     "transition": ">",
+     "position": 16,
+     "footnote": "Grateful Dead",
+     "length_secs": 662,
+     "song_id": 99,
+     "song_slug": "estimated-prophet",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Eyes of the World",
+     "transition": "->",
+     "position": 17,
+     "footnote": "Grateful Dead",
+     "length_secs": 1001,
+     "song_id": 28,
+     "song_slug": "eyes-of-the-world",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "The Other One",
+     "transition": "->",
+     "position": 18,
+     "footnote": "Grateful Dead",
+     "length_secs": 714,
+     "song_id": 62,
+     "song_slug": "the-other-one",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Creep",
+     "transition": "->",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 356,
+     "song_id": 93,
+     "song_slug": "cr",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 20,
+     "footnote": null,
+     "length_secs": 607,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    },
+    {
+     "title": "Whipping Post",
+     "transition": "",
+     "position": 21,
+     "footnote": "The Allman Brothers Band",
+     "length_secs": 606,
+     "song_id": 342,
+     "song_slug": "whipping-post",
+     "original_artist": "The Allman Brothers Band",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

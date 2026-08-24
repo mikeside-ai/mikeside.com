@@ -1,0 +1,197 @@
+{
+ "show_date": "2025-12-30",
+ "slug": "2025-12-30",
+ "show_id": 1756868530,
+ "venue": "Bearsville Theater",
+ "city": "Woodstock",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-december-30-2025-bearsville-theater-woodstock-ny-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": "->",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 865,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 679,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 697,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 866,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "All The Same",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 316,
+     "song_id": 32,
+     "song_slug": "all-the-same",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ophelia",
+     "transition": ">",
+     "position": 6,
+     "footnote": "The Band. With Jay Collins and Scott Sharard",
+     "length_secs": 351,
+     "song_id": 94,
+     "song_slug": "ophelia",
+     "original_artist": "The Band",
+     "is_cover": true
+    },
+    {
+     "title": "Spanish Moon",
+     "transition": "",
+     "position": 7,
+     "footnote": "Little Feat. With Jay Collins and Scott Sharard",
+     "length_secs": 499,
+     "song_id": 475,
+     "song_slug": "spanish-moon",
+     "original_artist": "Little Feat",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 906,
+     "song_id": 445,
+     "song_slug": "dangers-of-rah-rah",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 679,
+     "song_id": 35,
+     "song_slug": "snow-day",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": ">",
+     "position": 10,
+     "footnote": "Ween",
+     "length_secs": 624,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 730,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lucia’s Secret",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 291,
+     "song_id": 247,
+     "song_slug": "lucias-secret",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Unfocused",
+     "transition": ">",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 959,
+     "song_id": 441,
+     "song_slug": "unfocused",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Moon of Colorado",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 584,
+     "song_id": 442,
+     "song_slug": "moon-of-colorado",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Such a Night",
+     "transition": "",
+     "position": 15,
+     "footnote": "Dr. John",
+     "length_secs": 482,
+     "song_id": 34,
+     "song_slug": "such-a-night",
+     "original_artist": "Dr. John",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

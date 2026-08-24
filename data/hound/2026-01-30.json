@@ -1,13 +1,14 @@
 {
  "show_date": "2026-01-30",
  "slug": "2026-01-30",
+ "show_id": 1759518327,
  "venue": "The Commonwealth Room",
  "city": "Salt Lake City",
  "state": "UT",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-january-30-2026-the-commonwealth-room-salt-lake-city-ut-usa.html",
- "shownotes": "Verified setlist with soundboard recording available on Bandcamp and Nugs.",
+ "shownotes": "",
  "sets": [
   {
    "label": "1",
@@ -18,56 +19,88 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 260,
+     "song_id": 6,
+     "song_slug": "westward",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Today",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 449,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "My Disguise",
      "transition": "",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 368,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Craig and Pat",
      "transition": "->",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 832,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Hot Dog",
      "transition": "->",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 332,
+     "song_id": 125,
+     "song_slug": "hot-dog",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Craig and Pat",
      "transition": "",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 199,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Rum and Roses",
      "transition": "",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 393,
+     "song_id": 72,
+     "song_slug": "rum-and-roses",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Samson and Delilah",
      "transition": "",
      "position": 8,
      "footnote": "Traditional",
-     "length_secs": null
+     "length_secs": 252,
+     "song_id": 61,
+     "song_slug": "samson-and-delilah",
+     "original_artist": "Traditional",
+     "is_cover": true
     }
    ]
   },
@@ -80,56 +113,88 @@
      "transition": "",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 385,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Ophelia",
      "transition": "",
      "position": 10,
      "footnote": "The Band",
-     "length_secs": null
+     "length_secs": 318,
+     "song_id": 94,
+     "song_slug": "ophelia",
+     "original_artist": "The Band",
+     "is_cover": true
     },
     {
      "title": "Thomas Duncan, Pt. 2",
      "transition": "->",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1006,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Burning Daylight",
      "transition": "->",
      "position": 12,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 822,
+     "song_id": 416,
+     "song_slug": "burning-daylight",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Charlie",
      "transition": "",
      "position": 13,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1316,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Appleseed",
      "transition": "",
      "position": 14,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 752,
+     "song_id": 109,
+     "song_slug": "appleseed",
+     "original_artist": null,
+     "is_cover": false
     },
     {
-     "title": "Lucia's Secret",
+     "title": "Lucia’s Secret",
      "transition": "",
      "position": 15,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 274,
+     "song_id": 247,
+     "song_slug": "lucias-secret",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Linus and Lucy",
      "transition": "",
      "position": 16,
      "footnote": "Vince Guaraldi",
-     "length_secs": null
+     "length_secs": 516,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
     }
    ]
   },
@@ -142,7 +207,11 @@
      "transition": "",
      "position": 17,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 450,
+     "song_id": 190,
+     "song_slug": "power-trip",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   }

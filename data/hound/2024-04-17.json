@@ -1,0 +1,274 @@
+{
+ "show_date": "2024-04-17",
+ "slug": "2024-04-17",
+ "show_id": 1701799307,
+ "venue": "The Venice West",
+ "city": "Venice",
+ "state": "CA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-17-2024-the-venice-west-venice-ca-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Frosty",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 398,
+     "song_id": 5,
+     "song_slug": "frosty",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Rinky Dink Rag",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 123,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "King of the Hill Theme",
+     "transition": ">",
+     "position": 3,
+     "footnote": "The Refreshments",
+     "length_secs": 35,
+     "song_id": 73,
+     "song_slug": "king-of-the-hill-theme",
+     "original_artist": "The Refreshments",
+     "is_cover": true
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 682,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "It Gets Better",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 727,
+     "song_id": 226,
+     "song_slug": "it-gets-better",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "People Say",
+     "transition": "",
+     "position": 6,
+     "footnote": "The Meters",
+     "length_secs": 346,
+     "song_id": 23,
+     "song_slug": "people-say",
+     "original_artist": "The Meters",
+     "is_cover": true
+    },
+    {
+     "title": "Nicolette",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 567,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Earthbound Man",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 426,
+     "song_id": 4,
+     "song_slug": "earthbound-man",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chocolate Milk",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 353,
+     "song_id": 250,
+     "song_slug": "chocolate-milk",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Hesitate",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 997,
+     "song_id": 22,
+     "song_slug": "hesitate",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 310,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 713,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "American Boy",
+     "transition": "",
+     "position": 13,
+     "footnote": "FTP, Estelle - instrumental only",
+     "length_secs": 378,
+     "song_id": 369,
+     "song_slug": "american-boy",
+     "original_artist": "Estelle ft Kanye West",
+     "is_cover": true
+    },
+    {
+     "title": "Go Set",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 641,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Harry Hood",
+     "transition": "",
+     "position": 15,
+     "footnote": "Phish",
+     "length_secs": 588,
+     "song_id": 323,
+     "song_slug": "harry-hood",
+     "original_artist": "Phish",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 986,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Minnie the Moocher",
+     "transition": "",
+     "position": 17,
+     "footnote": "Cab Calloway",
+     "length_secs": 305,
+     "song_id": 287,
+     "song_slug": "minnie-the-moocher",
+     "original_artist": "Cabell “Cab” Calloway",
+     "is_cover": true
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 1122,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 587,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Drums",
+     "transition": "",
+     "position": 20,
+     "footnote": null,
+     "length_secs": 173,
+     "song_id": 186,
+     "song_slug": "drums",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": "",
+     "position": 21,
+     "footnote": null,
+     "length_secs": 249,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "The Music Never Stopped",
+     "transition": "",
+     "position": 22,
+     "footnote": "Grateful Dead",
+     "length_secs": 498,
+     "song_id": 63,
+     "song_slug": "the-music-never-stopped",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

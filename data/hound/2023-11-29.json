@@ -1,0 +1,86 @@
+{
+ "show_date": "2023-11-29",
+ "slug": "2023-11-29",
+ "show_id": 1689014126,
+ "venue": "Harrisburg Midtown Arts Center",
+ "city": "Harrisburg",
+ "state": "PA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-november-29-2023-hmac-harrisburg-pa-usa.html",
+ "shownotes": "Opening for Andy Frasco & The U.N.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 642,
+     "song_id": 35,
+     "song_slug": "snow-day",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 719,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": ">",
+     "position": 3,
+     "footnote": "Stevie Wonder",
+     "length_secs": 788,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Lattice",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 590,
+     "song_id": 269,
+     "song_slug": "lattice",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 559,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 234,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,252 @@
+{
+ "show_date": "2024-03-02",
+ "slug": "2024-03-02",
+ "show_id": 1699990213,
+ "venue": "Colony",
+ "city": "Woodstock",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-march-2-2024-colony-woodstock-ny-usa.html",
+ "shownotes": "Bent Strange was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Green Earrings",
+     "transition": "",
+     "position": 1,
+     "footnote": "Steely Dan",
+     "length_secs": 582,
+     "song_id": 64,
+     "song_slug": "green-earrings",
+     "original_artist": "Steely Dan",
+     "is_cover": true
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 404,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 653,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 902,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Feel Like A Stranger",
+     "transition": "",
+     "position": 5,
+     "footnote": "Grateful Dead",
+     "length_secs": 685,
+     "song_id": 41,
+     "song_slug": "feel-like-a-stranger",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Strangest Dreams",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 519,
+     "song_id": 336,
+     "song_slug": "strangest-dreams",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 561,
+     "song_id": 35,
+     "song_slug": "snow-day",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Fire",
+     "transition": "",
+     "position": 8,
+     "footnote": "FTP, The Jimi Hendrix Experience",
+     "length_secs": 197,
+     "song_id": 360,
+     "song_slug": "fire",
+     "original_artist": "The Jimi Hendrix Experience",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 491,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 845,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Gumball",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 650,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Fire",
+     "transition": "",
+     "position": 12,
+     "footnote": "The Jimi Hendrix Experience. Ending only.",
+     "length_secs": null,
+     "song_id": 360,
+     "song_slug": "fire",
+     "original_artist": "The Jimi Hendrix Experience",
+     "is_cover": true
+    },
+    {
+     "title": "Shenanigans",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 557,
+     "song_id": 335,
+     "song_slug": "shenanigans",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The Bag",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 454,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": ">",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 718,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": ">",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 295,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 239,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 378,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 477,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Gumbo",
+     "transition": "",
+     "position": 20,
+     "footnote": "Phish",
+     "length_secs": 346,
+     "song_id": 7,
+     "song_slug": "gumbo",
+     "original_artist": "Phish",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

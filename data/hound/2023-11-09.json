@@ -1,0 +1,75 @@
+{
+ "show_date": "2023-11-09",
+ "slug": "2023-11-09",
+ "show_id": 1686705343,
+ "venue": "Knitting Factory",
+ "city": "Boise",
+ "state": "ID",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-november-9-2023-knitting-factory-boise-id-usa.html",
+ "shownotes": "Opening for Pigeons Playing Ping Pong.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Nicolette",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 667,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Frettin' Fingers",
+     "transition": "",
+     "position": 2,
+     "footnote": "Jimmy Bryant and Speedy West",
+     "length_secs": 165,
+     "song_id": 295,
+     "song_slug": "frettin-fingers",
+     "original_artist": "Jimmy Bryant and Speedy West",
+     "is_cover": true
+    },
+    {
+     "title": "It Gets Better",
+     "transition": ">",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 914,
+     "song_id": 226,
+     "song_slug": "it-gets-better",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The Other One",
+     "transition": "",
+     "position": 4,
+     "footnote": "Grateful Dead",
+     "length_secs": 800,
+     "song_id": 62,
+     "song_slug": "the-other-one",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 1085,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

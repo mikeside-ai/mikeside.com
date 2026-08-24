@@ -1,66 +1,95 @@
 {
  "show_date": "2026-04-04",
  "slug": "2026-04-04",
+ "show_id": 1766949117,
  "venue": "Lincoln Theatre",
  "city": "Raleigh",
  "state": "NC",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-4-2026-lincoln-theatre-raleigh-nc-usa.html",
- "shownotes": "Opening Band: Natalie Brooke. Soundboard recording available on Bandcamp and Nugs.",
+ "shownotes": "Wook Song was unfinished.",
  "sets": [
   {
    "label": "1",
    "display": "Set 1",
    "songs": [
     {
-     "title": "You Didn't Hear It From Me",
+     "title": "You Didn’t Hear It From Me",
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1008,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Look Johnny II",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 249,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "The Ballad of Ms. Pepper and Ms. Paige",
      "transition": "",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 379,
+     "song_id": 438,
+     "song_slug": "the-ballad-of-ms-pepper-and-ms-paige",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Thomas Duncan, Pt. 2",
      "transition": "",
      "position": 4,
-     "footnote": "The Sound of Music\" tease",
-     "length_secs": null
+     "footnote": null,
+     "length_secs": 1056,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Gumball",
      "transition": "->",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 614,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Crazy",
      "transition": "",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 410,
+     "song_id": 58,
+     "song_slug": "crazy",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Mr. Tooker",
      "transition": "",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 360,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -73,42 +102,66 @@
      "transition": "->",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 543,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Wook Song",
      "transition": "",
      "position": 9,
-     "footnote": "Wook Song was unfinished",
-     "length_secs": null
+     "footnote": null,
+     "length_secs": 298,
+     "song_id": 403,
+     "song_slug": "wook-song",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Go Set",
      "transition": "",
      "position": 10,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1656,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Fenway",
      "transition": "",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 620,
+     "song_id": 13,
+     "song_slug": "fenway",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Let U Go",
      "transition": ">",
      "position": 12,
-     "footnote": "Funkytown\" tease",
-     "length_secs": null
+     "footnote": null,
+     "length_secs": 650,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "EDM Song",
      "transition": "",
      "position": 13,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 258,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -121,7 +174,11 @@
      "transition": "",
      "position": 14,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 374,
+     "song_id": 551,
+     "song_slug": "the-day-the-music-came-to-me",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   }

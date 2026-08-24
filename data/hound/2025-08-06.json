@@ -1,0 +1,241 @@
+{
+ "show_date": "2025-08-06",
+ "slug": "2025-08-06",
+ "show_id": 1751907444,
+ "venue": "Pine Creek Lodge",
+ "city": "Livingston",
+ "state": "MT",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-august-6-2025-pine-creek-lodge-livingston-mt-usa.html",
+ "shownotes": "Charlie was unfinished. There was a brief power outage during You Didn't Hear It From Me, the band resumed the song when it was restored.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Stevie Lew",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 471,
+     "song_id": 59,
+     "song_slug": "stevie-lew",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 641,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 374,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Today",
+     "transition": "->",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 472,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "->",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 909,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Too High",
+     "transition": "",
+     "position": 6,
+     "footnote": "Stevie Wonder",
+     "length_secs": 381,
+     "song_id": 161,
+     "song_slug": "too-high",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Charlie",
+     "transition": "->",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 969,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 830,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 267,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "It Gets Better",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 548,
+     "song_id": 226,
+     "song_slug": "it-gets-better",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 783,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Earthbound Man",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 416,
+     "song_id": 4,
+     "song_slug": "earthbound-man",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Montana",
+     "transition": "->",
+     "position": 13,
+     "footnote": "Frank Zappa",
+     "length_secs": 522,
+     "song_id": 310,
+     "song_slug": "montana",
+     "original_artist": "Frank Zappa",
+     "is_cover": true
+    },
+    {
+     "title": "Charlie",
+     "transition": "->",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 876,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Burning Daylight",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 720,
+     "song_id": 416,
+     "song_slug": "burning-daylight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lucia’s Secret",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 291,
+     "song_id": 247,
+     "song_slug": "lucias-secret",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 934,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Inchworm",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 481,
+     "song_id": 33,
+     "song_slug": "inchworm",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 582,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "show_date": "2024-04-24",
+ "slug": "2024-04-24",
+ "show_id": 1700068434,
+ "venue": "The Ramkat",
+ "city": "Winston-Salem",
+ "state": "NC",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-24-2024-the-ramkat-winston-salem-nc-usa.html",
+ "shownotes": "Opening for Andy Frasco & The U.N.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 299,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 731,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Shenanigans",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 534,
+     "song_id": 335,
+     "song_slug": "shenanigans",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 610,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 746,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 734,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Say Something",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 534,
+     "song_id": 113,
+     "song_slug": "say-something",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

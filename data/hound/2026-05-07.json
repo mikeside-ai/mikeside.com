@@ -1,11 +1,12 @@
 {
  "show_date": "2026-05-07",
  "slug": "2026-05-07",
+ "show_id": 1759518647,
  "venue": "El Ganzo Oasis",
  "city": "San José del Cabo",
- "state": "BCS, Mexico",
+ "state": "BCS",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-7-2026-el-ganzo-oasis-san-jose-del-cabo-bcs-mexico.html",
  "shownotes": "Performed at Viva El Gonzo.",
  "sets": [
@@ -18,56 +19,88 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 467,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Dangers of Rah Rah",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 618,
+     "song_id": 445,
+     "song_slug": "dangers-of-rah-rah",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Throw It Away",
      "transition": "",
      "position": 3,
      "footnote": "Debut",
-     "length_secs": null
+     "length_secs": 507,
+     "song_id": 571,
+     "song_slug": "throw-it-away",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Lazy Susan",
      "transition": "",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 428,
+     "song_id": 414,
+     "song_slug": "lazy-susan",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "6 Little Lies",
      "transition": "->",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 580,
+     "song_id": 395,
+     "song_slug": "6-little-lies",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "EDM Song",
      "transition": "->",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 193,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Bubble",
      "transition": "",
      "position": 7,
      "footnote": "Ending only",
-     "length_secs": null
+     "length_secs": 68,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Chop Shop",
      "transition": "",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 671,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   }

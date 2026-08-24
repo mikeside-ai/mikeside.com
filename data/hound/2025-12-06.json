@@ -1,0 +1,263 @@
+{
+ "show_date": "2025-12-06",
+ "slug": "2025-12-06",
+ "show_id": 1756868355,
+ "venue": "Paradise Rock Club",
+ "city": "Boston",
+ "state": "MA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-december-6-2025-paradise-rock-club-boston-ma-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Craig and Pat",
+     "transition": "->",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 1178,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Hot Dog",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 125,
+     "song_slug": "hot-dog",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Song for the Dumped",
+     "transition": "",
+     "position": 3,
+     "footnote": "Ben Folds",
+     "length_secs": 271,
+     "song_id": 274,
+     "song_slug": "song-for-the-dumped-2",
+     "original_artist": "Ben Folds",
+     "is_cover": true
+    },
+    {
+     "title": "116 Days",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 309,
+     "song_id": 440,
+     "song_slug": "116-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 663,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Rinky Dink Rag",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 178,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "I Know A Little",
+     "transition": "",
+     "position": 7,
+     "footnote": "Lynyrd Skynyrd",
+     "length_secs": 211,
+     "song_id": 486,
+     "song_slug": "i-know-a-little",
+     "original_artist": "Lynyrd Skynyrd",
+     "is_cover": true
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 910,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Go Set",
+     "transition": "->",
+     "position": 9,
+     "footnote": "Instrumental",
+     "length_secs": 891,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 10,
+     "footnote": "Ending only",
+     "length_secs": 146,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lucia’s Secret",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 278,
+     "song_id": 247,
+     "song_slug": "lucias-secret",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chocolate Milk",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 350,
+     "song_id": 250,
+     "song_slug": "chocolate-milk",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "I'm Shipping Up To Boston",
+     "transition": "->",
+     "position": 13,
+     "footnote": "FTP, Intro only. Dropkick Murphys",
+     "length_secs": 39,
+     "song_id": 521,
+     "song_slug": "im-shipping-up-to-boston",
+     "original_artist": "Dropkick Murphys",
+     "is_cover": true
+    },
+    {
+     "title": "The Other One",
+     "transition": "",
+     "position": 14,
+     "footnote": "Grateful Dead",
+     "length_secs": 619,
+     "song_id": 62,
+     "song_slug": "the-other-one",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Fenway",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 758,
+     "song_id": 13,
+     "song_slug": "fenway",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spain",
+     "transition": ">",
+     "position": 16,
+     "footnote": "Chick Corea",
+     "length_secs": 429,
+     "song_id": 8,
+     "song_slug": "spain",
+     "original_artist": "Chick Corea",
+     "is_cover": true
+    },
+    {
+     "title": "Bubble",
+     "transition": ">",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 577,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "EDM Song",
+     "transition": ">",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 204,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 196,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Happy Birthday Jeremy",
+     "transition": "",
+     "position": 20,
+     "footnote": null,
+     "length_secs": 70,
+     "song_id": 1,
+     "song_slug": "_custom_",
+     "original_artist": null,
+     "is_cover": true
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 21,
+     "footnote": null,
+     "length_secs": 789,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

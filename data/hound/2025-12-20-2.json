@@ -1,0 +1,230 @@
+{
+ "show_date": "2025-12-20",
+ "slug": "2025-12-20-2",
+ "show_id": 1756868465,
+ "venue": "Ardmore Music Hall",
+ "city": "Ardmore",
+ "state": "PA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-december-20-2025-ardmore-music-hall-ardmore-pa-usa-2.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Fire",
+     "transition": "",
+     "position": 1,
+     "footnote": "The Jimi Hendrix Experience",
+     "length_secs": 261,
+     "song_id": 360,
+     "song_slug": "fire",
+     "original_artist": "The Jimi Hendrix Experience",
+     "is_cover": true
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 535,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Song for the Dumped",
+     "transition": "",
+     "position": 3,
+     "footnote": "Ben Folds",
+     "length_secs": 242,
+     "song_id": 274,
+     "song_slug": "song-for-the-dumped-2",
+     "original_artist": "Ben Folds",
+     "is_cover": true
+    },
+    {
+     "title": "Burning Daylight",
+     "transition": "->",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 1132,
+     "song_id": 416,
+     "song_slug": "burning-daylight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": "->",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 809,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Battenkill Breakdown",
+     "transition": "->",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 371,
+     "song_id": 263,
+     "song_slug": "battenkill-breakdown",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 127,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Happy Song",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 377,
+     "song_id": 389,
+     "song_slug": "happy-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 695,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Moon of Colorado",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 816,
+     "song_id": 442,
+     "song_slug": "moon-of-colorado",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "6 Little Lies",
+     "transition": ">",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 1070,
+     "song_id": 395,
+     "song_slug": "6-little-lies",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Will It Go 'Round In Circles?",
+     "transition": "->",
+     "position": 12,
+     "footnote": "Billy Preston",
+     "length_secs": 354,
+     "song_id": 21,
+     "song_slug": "will-it-go-round-in-circles",
+     "original_artist": "Billy Preston",
+     "is_cover": true
+    },
+    {
+     "title": "Lattice",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 607,
+     "song_id": 269,
+     "song_slug": "lattice",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Psychobilly Freakout",
+     "transition": ">",
+     "position": 14,
+     "footnote": "The Reverend Horton Heat",
+     "length_secs": 578,
+     "song_id": 477,
+     "song_slug": "psychobilly-freakout",
+     "original_artist": "The Reverend Horton Heat",
+     "is_cover": true
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "->",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 1115,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 744,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Christmas Town",
+     "transition": "",
+     "position": 17,
+     "footnote": "With Nick Codina on vocals",
+     "length_secs": 277,
+     "song_id": 439,
+     "song_slug": "christmas-town",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lazy Susan",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 514,
+     "song_id": 414,
+     "song_slug": "lazy-susan",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

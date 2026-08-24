@@ -1,0 +1,75 @@
+{
+ "show_date": "2023-11-15",
+ "slug": "2023-11-15",
+ "show_id": 1686705409,
+ "venue": "The Regency Ballroom",
+ "city": "San Francisco",
+ "state": "CA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-november-15-2023-the-regency-ballroom-san-francisco-ca-usa.html",
+ "shownotes": "Opening for Pigeons Playing Ping Pong.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 867,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 356,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lattice",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 549,
+     "song_id": 269,
+     "song_slug": "lattice",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Help on the Way / Slipknot!",
+     "transition": ">",
+     "position": 4,
+     "footnote": "Grateful Dead",
+     "length_secs": 405,
+     "song_id": 69,
+     "song_slug": "help-on-the-way-slipknot",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 859,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

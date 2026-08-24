@@ -1,0 +1,108 @@
+{
+ "show_date": "2023-06-24",
+ "slug": "2023-06-24",
+ "show_id": 1687537559,
+ "venue": "Main Street",
+ "city": "New Martinsville",
+ "state": "WV",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-24-2023-main-street-new-martinsville-wv-usa.html",
+ "shownotes": "Performed at Back Home Festival.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Blues for Brian",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 508,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Hesitate",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 994,
+     "song_id": 22,
+     "song_slug": "hesitate",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 289,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Simon Says",
+     "transition": ">",
+     "position": 4,
+     "footnote": "FTP, Pharoahe Monch",
+     "length_secs": null,
+     "song_id": 260,
+     "song_slug": "simon-says",
+     "original_artist": "Pharoahe Monch",
+     "is_cover": true
+    },
+    {
+     "title": "Dupree's Diamond Blues",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 370,
+     "song_id": 108,
+     "song_slug": "duprees-diamond-blues",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Fenway",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 618,
+     "song_id": 13,
+     "song_slug": "fenway",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "All The Same",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 278,
+     "song_id": 32,
+     "song_slug": "all-the-same",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 731,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

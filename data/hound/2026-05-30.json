@@ -1,11 +1,12 @@
 {
  "show_date": "2026-05-30",
  "slug": "2026-05-30",
+ "show_id": 1776712904,
  "venue": "Pine Creek Lodge",
  "city": "Livingston",
  "state": "MT",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-30-2026-pine-creek-lodge-livingston-mt-usa.html",
  "shownotes": "Charlie was unfinished.",
  "sets": [
@@ -18,42 +19,66 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1117,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Didn't You Know?",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 406,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Look Johnny",
      "transition": "",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1189,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Freeze Dried Brain",
      "transition": ">",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 662,
+     "song_id": 545,
+     "song_slug": "freeze-dried-brain",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "The Day The Music Came To Me",
      "transition": "",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 330,
+     "song_id": 551,
+     "song_slug": "the-day-the-music-came-to-me",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Say Something",
      "transition": "",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 637,
+     "song_id": 113,
+     "song_slug": "say-something",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -66,49 +91,77 @@
      "transition": "",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 658,
+     "song_id": 571,
+     "song_slug": "throw-it-away",
+     "original_artist": null,
+     "is_cover": false
     },
     {
-     "title": "You Didn't Hear It From Me",
+     "title": "You Didn’t Hear It From Me",
      "transition": "->",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1088,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Old Folks Boogie",
      "transition": "",
      "position": 9,
      "footnote": "Little Feat",
-     "length_secs": null
+     "length_secs": 301,
+     "song_id": 321,
+     "song_slug": "old-folks-boogie",
+     "original_artist": "Little Feat",
+     "is_cover": true
     },
     {
      "title": "Postcard",
      "transition": "",
      "position": 10,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 388,
+     "song_id": 533,
+     "song_slug": "postcard",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Rabbit",
      "transition": "->",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 940,
+     "song_id": 391,
+     "song_slug": "rabbit",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Bugle on the Shelf",
      "transition": ">",
      "position": 12,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 932,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Spun",
      "transition": "",
      "position": 13,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1010,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -121,7 +174,11 @@
      "transition": "",
      "position": 14,
      "footnote": "Led Zeppelin",
-     "length_secs": null
+     "length_secs": 619,
+     "song_id": 183,
+     "song_slug": "no-quarter",
+     "original_artist": "Led Zeppelin ",
+     "is_cover": true
     }
    ]
   }

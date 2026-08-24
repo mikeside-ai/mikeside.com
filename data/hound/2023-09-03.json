@@ -1,0 +1,119 @@
+{
+ "show_date": "2023-09-03",
+ "slug": "2023-09-03",
+ "show_id": 1687804737,
+ "venue": "Nelson Ledges Quarry Park",
+ "city": "Garrettsville",
+ "state": "OH",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-september-3-2023-nelson-ledges-quarry-park-garrettsville-oh-usa.html",
+ "shownotes": "Performed at Lotus' Summerdance.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 571,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 284,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 890,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ghost Riders in the Sky",
+     "transition": ">",
+     "position": 4,
+     "footnote": "Stan Jones",
+     "length_secs": 116,
+     "song_id": 121,
+     "song_slug": "ghost-riders-in-the-sky-2",
+     "original_artist": "Stan Jones",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 728,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Hesitate",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 623,
+     "song_id": 22,
+     "song_slug": "hesitate",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Appleseed",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 690,
+     "song_id": 109,
+     "song_slug": "appleseed",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Gumball",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 350,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 9,
+     "footnote": "Ending Only",
+     "length_secs": 201,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,241 @@
+{
+ "show_date": "2024-11-21",
+ "slug": "2024-11-21",
+ "show_id": 1723060517,
+ "venue": "The Basement East",
+ "city": "Nashville",
+ "state": "TN",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-november-21-2024-the-basement-east-nashville-tn-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Westward",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 282,
+     "song_id": 6,
+     "song_slug": "westward",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 481,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 697,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Today",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 536,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Happy Song",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 334,
+     "song_id": 389,
+     "song_slug": "happy-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 354,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 805,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Men of Steel",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 420,
+     "song_id": 347,
+     "song_slug": "men-of-steel",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 902,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bennie and the Jets",
+     "transition": "",
+     "position": 10,
+     "footnote": "Elton John",
+     "length_secs": 467,
+     "song_id": 232,
+     "song_slug": "bennie-and-the-jets",
+     "original_artist": "Elton John",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Dupree's Diamond Blues",
+     "transition": ">",
+     "position": 12,
+     "footnote": "Grateful Dead",
+     "length_secs": 352,
+     "song_id": 108,
+     "song_slug": "duprees-diamond-blues",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 1159,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": "->",
+     "position": 14,
+     "footnote": "Stevie Wonder, with Wes Bailey on keys",
+     "length_secs": 790,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Lucia’s Secret",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 336,
+     "song_id": 247,
+     "song_slug": "lucias-secret",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Burning Daylight",
+     "transition": ">",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 700,
+     "song_id": 416,
+     "song_slug": "burning-daylight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Power Trip",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 371,
+     "song_id": 190,
+     "song_slug": "power-trip",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Lazy Susan",
+     "transition": "",
+     "position": 18,
+     "footnote": "FTP, full band debut",
+     "length_secs": 361,
+     "song_id": 414,
+     "song_slug": "lazy-susan",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 291,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

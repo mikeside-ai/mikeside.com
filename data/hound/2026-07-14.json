@@ -1,11 +1,12 @@
 {
  "show_date": "2026-07-14",
  "slug": "2026-07-14",
+ "show_id": 1776978592,
  "venue": "Van Hoy Farms",
  "city": "Harmony",
  "state": "NC",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-14-2026-van-hoy-farms-harmony-nc-usa.html",
  "shownotes": "Performed at Ziggy's Summer Campout Concert Series.",
  "sets": [
@@ -18,70 +19,110 @@
      "transition": ">",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 220,
+     "song_id": 225,
+     "song_slug": "yum-t-dum",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Look Johnny II",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 267,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Bring It On Up",
      "transition": "->",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 661,
+     "song_id": 116,
+     "song_slug": "bring-it-on-up",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Cabbage Alley",
      "transition": ">",
      "position": 4,
      "footnote": "The Meters",
-     "length_secs": null
+     "length_secs": 408,
+     "song_id": 565,
+     "song_slug": "cabbage-alley",
+     "original_artist": "The Meters",
+     "is_cover": true
     },
     {
      "title": "Westward",
      "transition": "",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 341,
+     "song_id": 6,
+     "song_slug": "westward",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "I Feel the Earth Move",
      "transition": "",
      "position": 6,
      "footnote": "FTP, Carole King, with Natalie Brooke",
-     "length_secs": null
+     "length_secs": 260,
+     "song_id": 577,
+     "song_slug": "i-feel-the-earth-move",
+     "original_artist": "Carole King",
+     "is_cover": true
     },
     {
      "title": "Creep",
      "transition": "",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 387,
+     "song_id": 93,
+     "song_slug": "cr",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Craig and Pat",
      "transition": ">",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1284,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "My Disguise",
      "transition": "",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 397,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Lazy Susan",
      "transition": "",
      "position": 10,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 419,
+     "song_id": 414,
+     "song_slug": "lazy-susan",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -94,56 +135,88 @@
      "transition": "",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 299,
+     "song_id": 440,
+     "song_slug": "116-days",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Let U Go",
      "transition": "->",
      "position": 12,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 705,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Rabbit",
      "transition": ">",
      "position": 13,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 727,
+     "song_id": 391,
+     "song_slug": "rabbit",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Old Folks Boogie",
      "transition": "",
      "position": 14,
      "footnote": "Little Feat",
-     "length_secs": null
+     "length_secs": 347,
+     "song_id": 321,
+     "song_slug": "old-folks-boogie",
+     "original_artist": "Little Feat",
+     "is_cover": true
     },
     {
      "title": "Jack & Coke",
      "transition": "->",
      "position": 15,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 704,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Snow Day",
      "transition": "",
      "position": 16,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 651,
+     "song_id": 35,
+     "song_slug": "snow-day",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Spun",
      "transition": ">",
      "position": 17,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 462,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Trunk Rum",
      "transition": "",
      "position": 18,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 576,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -156,7 +229,11 @@
      "transition": "",
      "position": 19,
      "footnote": "The Jimi Hendrix Experience",
-     "length_secs": null
+     "length_secs": 222,
+     "song_id": 360,
+     "song_slug": "fire",
+     "original_artist": "The Jimi Hendrix Experience",
+     "is_cover": true
     }
    ]
   }

@@ -1,0 +1,119 @@
+{
+ "show_date": "2024-06-08",
+ "slug": "2024-06-08",
+ "show_id": 1708022534,
+ "venue": "Driftless Music Gardens",
+ "city": "Yuba",
+ "state": "WI",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-8-2024-driftless-music-gardens-yuba-wi-usa.html",
+ "shownotes": "Show was part of a joint Pigeons Playing Ping Pong, Andy Frasco & The U.N., and Dogs In A Pile Tour. Performed at Bonfire Music and Arts Festival.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "China Cat Sunflower",
+     "transition": ">",
+     "position": 1,
+     "footnote": "Grateful Dead",
+     "length_secs": 598,
+     "song_id": 49,
+     "song_slug": "china-cat-sunflower",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 292,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": ">",
+     "position": 3,
+     "footnote": "Original arrangement",
+     "length_secs": 492,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 874,
+     "song_id": 327,
+     "song_slug": "thomas-duncan-pt-3",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stevie Lew",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 373,
+     "song_id": 59,
+     "song_slug": "stevie-lew",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 724,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Inchworm",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 403,
+     "song_id": 33,
+     "song_slug": "inchworm",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 641,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

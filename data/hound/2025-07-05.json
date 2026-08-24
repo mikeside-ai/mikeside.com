@@ -1,0 +1,108 @@
+{
+ "show_date": "2025-07-05",
+ "slug": "2025-07-05",
+ "show_id": 1750172066,
+ "venue": "Missoula County Fairgrounds",
+ "city": "Missoula",
+ "state": "MT",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-5-2025-missoula-county-fairgrounds-missoula-mt-usa.html",
+ "shownotes": "Performed at Zootown Festival.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 261,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 983,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Royals",
+     "transition": "",
+     "position": 3,
+     "footnote": "Lorde",
+     "length_secs": 609,
+     "song_id": 31,
+     "song_slug": "royals",
+     "original_artist": "Lorde",
+     "is_cover": true
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 693,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bennie and the Jets",
+     "transition": "",
+     "position": 5,
+     "footnote": "Elton John",
+     "length_secs": 358,
+     "song_id": 232,
+     "song_slug": "bennie-and-the-jets",
+     "original_artist": "Elton John",
+     "is_cover": true
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "->",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 322,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ghost Riders in the Sky",
+     "transition": ">",
+     "position": 7,
+     "footnote": "Stan Jones",
+     "length_secs": 128,
+     "song_id": 121,
+     "song_slug": "ghost-riders-in-the-sky-2",
+     "original_artist": "Stan Jones",
+     "is_cover": true
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 128,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

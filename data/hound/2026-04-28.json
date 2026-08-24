@@ -1,13 +1,14 @@
 {
  "show_date": "2026-04-28",
  "slug": "2026-04-28",
+ "show_id": 1766949241,
  "venue": "Toulouse Theatre",
  "city": "New Orleans",
  "state": "LA",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-28-2026-toulouse-theatre-new-orleans-la-usa.html",
- "shownotes": "Soundboard recording available on Bandcamp and Nugs.",
+ "shownotes": "",
  "sets": [
   {
    "label": "1",
@@ -18,70 +19,110 @@
      "transition": "->",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 628,
+     "song_id": 441,
+     "song_slug": "unfocused",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "The Bag",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 490,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Cabbage Alley",
      "transition": "",
      "position": 3,
-     "footnote": "FTP, The Meters; \"Hey Pocky A-Way\" tease",
-     "length_secs": null
+     "footnote": "FTP, The Meters",
+     "length_secs": 437,
+     "song_id": 565,
+     "song_slug": "cabbage-alley",
+     "original_artist": "The Meters",
+     "is_cover": true
     },
     {
      "title": "Grease",
      "transition": ">",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 481,
+     "song_id": 544,
+     "song_slug": "grease",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Four More Days",
      "transition": "",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 651,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Samba for Sam",
      "transition": "",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1088,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Last Train",
      "transition": "",
      "position": 7,
      "footnote": "FTP, Allen Toussaint",
-     "length_secs": null
+     "length_secs": 278,
+     "song_id": 566,
+     "song_slug": "last-train",
+     "original_artist": "Allen Toussaint",
+     "is_cover": true
     },
     {
      "title": "Go Set",
      "transition": "",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1868,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Love Having You Around",
      "transition": "",
      "position": 9,
      "footnote": "FTP, Stevie Wonder",
-     "length_secs": null
+     "length_secs": 781,
+     "song_id": 567,
+     "song_slug": "love-having-you-around",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
     },
     {
      "title": "Trunk Rum",
      "transition": "",
      "position": 10,
-     "footnote": "When the Saints Go Marching In\" tease",
-     "length_secs": null
+     "footnote": null,
+     "length_secs": 641,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -94,14 +135,22 @@
      "transition": "",
      "position": 11,
      "footnote": "Harry Dixon Loes",
-     "length_secs": null
+     "length_secs": 295,
+     "song_id": 258,
+     "song_slug": "this-little-light-of-mine",
+     "original_artist": "Harry Dixon Loes",
+     "is_cover": true
     },
     {
      "title": "Chop Shop",
      "transition": "",
      "position": 12,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 775,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   }

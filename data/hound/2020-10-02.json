@@ -1,0 +1,202 @@
+{
+ "show_date": "2020-10-02",
+ "slug": "2020-10-02",
+ "show_id": 1671672913,
+ "venue": "Yasgur's Farm",
+ "city": "Bethel",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-october-2-2020-yasgurs-farm-bethel-ny-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 514,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 885,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 582,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Can't Wait for Tonight",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 338,
+     "song_id": 54,
+     "song_slug": "cant-wait-for-tonight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 641,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mr. Charlie",
+     "transition": "->",
+     "position": 6,
+     "footnote": "Grateful Dead",
+     "length_secs": 370,
+     "song_id": 48,
+     "song_slug": "mr-charlie-2",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Rinky Dink Rag",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 157,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stevie Lew",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 428,
+     "song_id": 59,
+     "song_slug": "stevie-lew",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 893,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Jam",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 291,
+     "song_id": 112,
+     "song_slug": "jam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 385,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 1020,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Hot Dog",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 240,
+     "song_id": 125,
+     "song_slug": "hot-dog",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 79,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 1151,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

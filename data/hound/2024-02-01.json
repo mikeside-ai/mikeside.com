@@ -1,0 +1,158 @@
+{
+ "show_date": "2024-02-01",
+ "slug": "2024-02-01",
+ "show_id": 1699989540,
+ "venue": "Last Concert Cafe",
+ "city": "Houston",
+ "state": "TX",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-february-1-2024-last-concert-cafe-houston-tx-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Westward",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 265,
+     "song_id": 6,
+     "song_slug": "westward",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 893,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Magic Carpet Ride",
+     "transition": "",
+     "position": 3,
+     "footnote": "Steppenwolf",
+     "length_secs": 333,
+     "song_id": 65,
+     "song_slug": "magic-carpet-ride",
+     "original_artist": "Steppenwolf",
+     "is_cover": true
+    },
+    {
+     "title": "Yum T. Dum",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 207,
+     "song_id": 225,
+     "song_slug": "yum-t-dum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 332,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 809,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": "->",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 497,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Royals",
+     "transition": "",
+     "position": 8,
+     "footnote": "Lorde",
+     "length_secs": 892,
+     "song_id": 31,
+     "song_slug": "royals",
+     "original_artist": "Lorde",
+     "is_cover": true
+    },
+    {
+     "title": "All The Same",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 332,
+     "song_id": 32,
+     "song_slug": "all-the-same",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Shenanigans",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 525,
+     "song_id": 335,
+     "song_slug": "shenanigans",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 1235,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Shakedown Street",
+     "transition": "",
+     "position": 12,
+     "footnote": "Grateful Dead",
+     "length_secs": 1385,
+     "song_id": 85,
+     "song_slug": "shakedown-street",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

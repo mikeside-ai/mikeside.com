@@ -1,0 +1,191 @@
+{
+ "show_date": "2023-06-23",
+ "slug": "2023-06-23",
+ "show_id": 1687537600,
+ "venue": "Paradise Lakes Campground",
+ "city": "Hammonton",
+ "state": "NJ",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-23-2023-paradise-lakes-campground-hammonton-nj-usa.html",
+ "shownotes": "Performed at Beardfest. This show was released on major streaming platforms as \"Live 6.23.23 (Hammonton, NJ)\".",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": ">",
+     "position": 1,
+     "footnote": "Unfinished",
+     "length_secs": 933,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Apeman",
+     "transition": "",
+     "position": 2,
+     "footnote": "The Kinks",
+     "length_secs": 230,
+     "song_id": 182,
+     "song_slug": "apeman",
+     "original_artist": "The Kinks",
+     "is_cover": true
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 562,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Today",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 419,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Yum T. Dum",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 193,
+     "song_id": 225,
+     "song_slug": "yum-t-dum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 1105,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Applesauce",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 628,
+     "song_id": 192,
+     "song_slug": "applesauce",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 338,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Cats Under the Stars",
+     "transition": ">",
+     "position": 9,
+     "footnote": "Jerry Garcia Band",
+     "length_secs": 715,
+     "song_id": 66,
+     "song_slug": "cats-under-the-stars",
+     "original_artist": "Jerry Garcia Band",
+     "is_cover": true
+    },
+    {
+     "title": "EDM Song",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 214,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tillie",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 524,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Appleseed",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 601,
+     "song_id": 109,
+     "song_slug": "appleseed",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "No Quarter",
+     "transition": "",
+     "position": 13,
+     "footnote": "Led Zeppelin",
+     "length_secs": 504,
+     "song_id": 183,
+     "song_slug": "no-quarter",
+     "original_artist": "Led Zeppelin ",
+     "is_cover": true
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 736,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 15,
+     "footnote": "with Kieran Tooker",
+     "length_secs": 254,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

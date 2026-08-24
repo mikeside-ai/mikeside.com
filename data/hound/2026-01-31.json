@@ -1,13 +1,14 @@
 {
  "show_date": "2026-01-31",
  "slug": "2026-01-31",
+ "show_id": 1759518427,
  "venue": "Ogden Theatre",
  "city": "Denver",
  "state": "CO",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-january-31-2026-ogden-theatre-denver-co-usa.html",
- "shownotes": "Verified setlist. Opening band: Casey Russell Band. Soundboard recordings available on Bandcamp and Nugs. \"Purple Haze\" tease in Jack & Coke.",
+ "shownotes": "",
  "sets": [
   {
    "label": "1",
@@ -18,49 +19,77 @@
      "transition": "",
      "position": 1,
      "footnote": "Grateful Dead",
-     "length_secs": null
+     "length_secs": 495,
+     "song_id": 220,
+     "song_slug": "hell-in-a-bucket",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
     },
     {
      "title": "Chop Shop",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 670,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Nicolette",
      "transition": "",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 686,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Dangers of Rah Rah",
      "transition": "",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 727,
+     "song_id": 445,
+     "song_slug": "dangers-of-rah-rah",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Spun",
      "transition": "->",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 780,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "None",
      "transition": "",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 374,
+     "song_id": 447,
+     "song_slug": "none",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Bubble",
      "transition": "",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 819,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -73,49 +102,77 @@
      "transition": "",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 519,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "The Bag",
      "transition": "->",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 441,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Criminal",
      "transition": "->",
      "position": 10,
      "footnote": "Fiona Apple",
-     "length_secs": null
+     "length_secs": 707,
+     "song_id": 498,
+     "song_slug": "criminal",
+     "original_artist": "Fiona Apple",
+     "is_cover": true
     },
     {
      "title": "Jack & Coke",
      "transition": "",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1035,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Go Set",
      "transition": "",
      "position": 12,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1121,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Look Johnny",
      "transition": "",
      "position": 13,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 887,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Lazy Susan",
      "transition": "",
      "position": 14,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 434,
+     "song_id": 414,
+     "song_slug": "lazy-susan",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -128,14 +185,22 @@
      "transition": ">",
      "position": 15,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 321,
+     "song_id": 395,
+     "song_slug": "6-little-lies",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "EDM Song",
      "transition": "",
      "position": 16,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 246,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   }

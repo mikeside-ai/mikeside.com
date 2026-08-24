@@ -1,0 +1,207 @@
+{
+ "show_date": "2023-02-19",
+ "slug": "2023-02-19",
+ "show_id": 1671032120,
+ "venue": "Stickyz Rock 'n' Roll Chicken Shack",
+ "city": "Little Rock",
+ "state": "AR",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-february-19-2023-stickyz-rock-n-roll-chicken-shack-little-rock-ar-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 729,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "China Cat Sunflower",
+     "transition": ">",
+     "position": 2,
+     "footnote": "Grateful Dead",
+     "length_secs": 634,
+     "song_id": 49,
+     "song_slug": "china-cat-sunflower",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 764,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Time Stands Still",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 506,
+     "song_id": 102,
+     "song_slug": "time-stands-still",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Back At The Chicken Shack",
+     "transition": ">",
+     "position": 5,
+     "footnote": "FTP, Jimmy Smith",
+     "length_secs": 229,
+     "song_id": 189,
+     "song_slug": "back-at-the-chicken-shack",
+     "original_artist": "Jimmy Smith",
+     "is_cover": true
+    },
+    {
+     "title": "Stevie Lew",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 462,
+     "song_id": 59,
+     "song_slug": "stevie-lew",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Today",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 358,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 458,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 703,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 850,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Hesitate",
+     "transition": ">",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 632,
+     "song_id": 22,
+     "song_slug": "hesitate",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Creep",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 426,
+     "song_id": 93,
+     "song_slug": "cr",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Free",
+     "transition": ">",
+     "position": 13,
+     "footnote": "Phish",
+     "length_secs": 535,
+     "song_id": 40,
+     "song_slug": "free",
+     "original_artist": "Phish",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 400,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tookin' Around",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 527,
+     "song_id": 52,
+     "song_slug": "tookin-around",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Free Bird",
+     "transition": "",
+     "position": 16,
+     "footnote": "FTP, Lynyrd Skynyrd",
+     "length_secs": 666,
+     "song_id": 187,
+     "song_slug": "free-bird",
+     "original_artist": "Lynyrd Skynyrd",
+     "is_cover": true
+    },
+    {
+     "title": "Eastbound and Down",
+     "transition": "",
+     "position": 17,
+     "footnote": "FTP, Jerry Reed",
+     "length_secs": 233,
+     "song_id": 188,
+     "song_slug": "eastbound-and-down",
+     "original_artist": "Jerry Reed",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

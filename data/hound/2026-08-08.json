@@ -1,13 +1,14 @@
 {
  "show_date": "2026-08-08",
  "slug": "2026-08-08",
+ "show_id": 1776979044,
  "venue": "The Stone Pony Summer Stage",
  "city": "Asbury Park",
  "state": "NJ",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-august-8-2026-the-stone-pony-summer-stage-asbury-park-nj-usa.html",
- "shownotes": "Opening Band(s): Reality Check Experiment. Soundboard recordings available on Bandcamp and Nugs.",
+ "shownotes": "",
  "sets": [
   {
    "label": "1",
@@ -18,56 +19,88 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 781,
+     "song_id": 441,
+     "song_slug": "unfocused",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Ugly Song",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 373,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "I Got You",
      "transition": "",
      "position": 3,
      "footnote": "Debut",
-     "length_secs": null
+     "length_secs": 202,
+     "song_id": 585,
+     "song_slug": "i-got-you",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Grease",
      "transition": "",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 515,
+     "song_id": 544,
+     "song_slug": "grease",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "You've Got a Friend in Me",
      "transition": "",
      "position": 5,
      "footnote": "Randy Newman",
-     "length_secs": null
+     "length_secs": 149,
+     "song_id": 127,
+     "song_slug": "youve-got-a-friend-in-me",
+     "original_artist": "Randy Newman",
+     "is_cover": true
     },
     {
      "title": "Appleseed",
      "transition": "->",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 945,
+     "song_id": 109,
+     "song_slug": "appleseed",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Throw It Away",
      "transition": "",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 914,
+     "song_id": 571,
+     "song_slug": "throw-it-away",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "The Day The Music Came To Me",
      "transition": "",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 372,
+     "song_id": 551,
+     "song_slug": "the-day-the-music-came-to-me",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -80,49 +113,77 @@
      "transition": ">",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 811,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Psychobilly Freakout",
      "transition": "",
      "position": 10,
      "footnote": "The Reverend Horton Heat",
-     "length_secs": null
+     "length_secs": 921,
+     "song_id": 477,
+     "song_slug": "psychobilly-freakout",
+     "original_artist": "The Reverend Horton Heat",
+     "is_cover": true
     },
     {
      "title": "Chop Shop",
      "transition": "",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1030,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Asbury Park",
      "transition": "",
      "position": 12,
      "footnote": "Debut",
-     "length_secs": null
+     "length_secs": 289,
+     "song_id": 586,
+     "song_slug": "asbury-park",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Tillie",
      "transition": "->",
      "position": 13,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1397,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Cherub Rock",
      "transition": "",
      "position": 14,
      "footnote": "FTP, Smashing Pumpkins",
-     "length_secs": null
+     "length_secs": 299,
+     "song_id": 584,
+     "song_slug": "cherub-rock",
+     "original_artist": "Smashing Pumpkins",
+     "is_cover": true
     },
     {
      "title": "6 Little Lies",
      "transition": "",
      "position": 15,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 362,
+     "song_id": 395,
+     "song_slug": "6-little-lies",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -131,18 +192,26 @@
    "display": "Encore",
    "songs": [
     {
-     "title": "Let's Dance",
+     "title": "Let’s Dance",
      "transition": "",
      "position": 16,
      "footnote": "David Bowie",
-     "length_secs": null
+     "length_secs": 549,
+     "song_id": 468,
+     "song_slug": "lets-dance",
+     "original_artist": "David Bowie",
+     "is_cover": true
     },
     {
      "title": "Thomas Duncan, Pt. 3",
      "transition": "",
      "position": 17,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 712,
+     "song_id": 327,
+     "song_slug": "thomas-duncan-pt-3",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   }

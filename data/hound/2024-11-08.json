@@ -1,0 +1,230 @@
+{
+ "show_date": "2024-11-08",
+ "slug": "2024-11-08",
+ "show_id": 1723060144,
+ "venue": "Aggie Theatre",
+ "city": "Ft. Collins",
+ "state": "CO",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-november-8-2024-aggie-theatre-ft-collins-co-usa.html",
+ "shownotes": "Bugle on the Shelf was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Cold Rain and Snow",
+     "transition": "",
+     "position": 1,
+     "footnote": "Traditional",
+     "length_secs": 427,
+     "song_id": 435,
+     "song_slug": "cold-rain-and-snow",
+     "original_artist": "Traditional",
+     "is_cover": true
+    },
+    {
+     "title": "Nicolette",
+     "transition": "->",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 692,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Happy Song",
+     "transition": ">",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 368,
+     "song_id": 389,
+     "song_slug": "happy-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 402,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 773,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 878,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Fever",
+     "transition": "->",
+     "position": 7,
+     "footnote": "The Cramps",
+     "length_secs": 353,
+     "song_id": 411,
+     "song_slug": "fever",
+     "original_artist": "The Cramps",
+     "is_cover": true
+    },
+    {
+     "title": "Nicolette",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 26,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Applesauce",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 494,
+     "song_id": 192,
+     "song_slug": "applesauce",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Crazy",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 379,
+     "song_id": 58,
+     "song_slug": "crazy",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Go Set",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 715,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 723,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Fenway",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 807,
+     "song_id": 13,
+     "song_slug": "fenway",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 372,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 507,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 1205,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Bugle on the Shelf",
+     "transition": ">",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 604,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 213,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

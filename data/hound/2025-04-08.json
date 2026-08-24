@@ -1,0 +1,197 @@
+{
+ "show_date": "2025-04-08",
+ "slug": "2025-04-08",
+ "show_id": 1734457865,
+ "venue": "The Magic Bag",
+ "city": "Ferndale",
+ "state": "MI",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-8-2025-the-magic-bag-ferndale-mi-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Westward",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 274,
+     "song_id": 6,
+     "song_slug": "westward",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 357,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": "->",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 687,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Magic Carpet Ride",
+     "transition": ">",
+     "position": 4,
+     "footnote": "Steppenwolf",
+     "length_secs": 639,
+     "song_id": 65,
+     "song_slug": "magic-carpet-ride",
+     "original_artist": "Steppenwolf",
+     "is_cover": true
+    },
+    {
+     "title": "The Bag",
+     "transition": "->",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 454,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 1305,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 339,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 568,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 906,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Gumball",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 449,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Dancing in the Street",
+     "transition": "",
+     "position": 11,
+     "footnote": "Martha Reeves and the Vandellas",
+     "length_secs": 897,
+     "song_id": 100,
+     "song_slug": "dancing-in-the-street",
+     "original_artist": "Martha Reeves and the Vandellas",
+     "is_cover": true
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 537,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Too High",
+     "transition": ">",
+     "position": 13,
+     "footnote": "Stevie Wonder",
+     "length_secs": 473,
+     "song_id": 161,
+     "song_slug": "too-high",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 976,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Drive My Car",
+     "transition": "",
+     "position": 15,
+     "footnote": "The Beatles",
+     "length_secs": 311,
+     "song_id": 333,
+     "song_slug": "drive-my-car",
+     "original_artist": "The Beatles",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

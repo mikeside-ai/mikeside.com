@@ -1,11 +1,12 @@
 {
  "show_date": "2026-01-18",
  "slug": "2026-01-18",
+ "show_id": 1759518144,
  "venue": "Belly Up",
  "city": "Solana Beach",
  "state": "CA",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-january-18-2026-belly-up-solana-beach-ca-usa.html",
  "shownotes": "Nicolette was unfinished.",
  "sets": [
@@ -18,49 +19,77 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 370,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Nicolette",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 804,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Chocolate Milk",
      "transition": "",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 335,
+     "song_id": 250,
+     "song_slug": "chocolate-milk",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Dangers of Rah Rah",
      "transition": "",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 956,
+     "song_id": 445,
+     "song_slug": "dangers-of-rah-rah",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Minnie the Moocher",
      "transition": "",
      "position": 5,
      "footnote": "Cab Calloway",
-     "length_secs": null
+     "length_secs": 312,
+     "song_id": 287,
+     "song_slug": "minnie-the-moocher",
+     "original_artist": "Cabell “Cab” Calloway",
+     "is_cover": true
     },
     {
      "title": "Snow Day",
      "transition": "",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 658,
+     "song_id": 35,
+     "song_slug": "snow-day",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Writing on the Wall",
      "transition": "",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 773,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -73,42 +102,66 @@
      "transition": ">",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 549,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Freeze Dried Brain",
      "transition": "->",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 707,
+     "song_id": 545,
+     "song_slug": "freeze-dried-brain",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "6 Little Lies",
      "transition": "->",
      "position": 10,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 857,
+     "song_id": 395,
+     "song_slug": "6-little-lies",
+     "original_artist": null,
+     "is_cover": false
     },
     {
-     "title": "Truckin'",
+     "title": "Truckin’",
      "transition": ">",
      "position": 11,
      "footnote": "Grateful Dead",
-     "length_secs": null
+     "length_secs": 829,
+     "song_id": 341,
+     "song_slug": "truckin",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
     },
     {
      "title": "Appleseed",
      "transition": "",
      "position": 12,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 672,
+     "song_id": 109,
+     "song_slug": "appleseed",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Thomas Duncan, Pt. 3",
      "transition": "",
      "position": 13,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 918,
+     "song_id": 327,
+     "song_slug": "thomas-duncan-pt-3",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -121,14 +174,22 @@
      "transition": "",
      "position": 14,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 349,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Bulls on Parade",
      "transition": "",
      "position": 15,
      "footnote": "Rage Against The Machine",
-     "length_secs": null
+     "length_secs": 308,
+     "song_id": 432,
+     "song_slug": "bulls-on-parade",
+     "original_artist": "Rage Against the Machine",
+     "is_cover": true
     }
    ]
   }

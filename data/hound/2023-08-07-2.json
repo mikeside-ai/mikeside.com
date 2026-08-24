@@ -1,0 +1,141 @@
+{
+ "show_date": "2023-08-07",
+ "slug": "2023-08-07-2",
+ "show_id": 1691458242,
+ "venue": "Great Divide Campground",
+ "city": "Newton",
+ "state": "NJ",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-august-7-2023-great-divide-campground-newton-nj-usa-2.html",
+ "shownotes": "Surprise acoustic show in the barn. Mr. Tooker was played in an alternate arrangement & featured improvised lyrics. Jimmy broke a string & Brian switched to mandolin during China Cat Sunflower. Charlie Carrier joined the band for Let U Go through Johnny B. Goode. Before Big River, the band spontaneously changed to Charlie Carrier on electric guitar, Sam Bradley on mandolin, John Thomas on acoustic guitar, Jeremy Kaplan on accordion, Ian Fay on bass, and Joe Babick on cajon.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Barn Set",
+   "songs": [
+    {
+     "title": "Mr. Tooker",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Sneaking Sally Through The Alley",
+     "transition": "",
+     "position": 2,
+     "footnote": "FTP, Robert Palmer",
+     "length_secs": null,
+     "song_id": 273,
+     "song_slug": "sneaking-sally-through-the-alley",
+     "original_artist": "Robert Palmer",
+     "is_cover": true
+    },
+    {
+     "title": "Song for the Dumped",
+     "transition": "",
+     "position": 3,
+     "footnote": "FTP, Ben Folds",
+     "length_secs": null,
+     "song_id": 274,
+     "song_slug": "song-for-the-dumped-2",
+     "original_artist": "Ben Folds",
+     "is_cover": true
+    },
+    {
+     "title": "China Cat Sunflower",
+     "transition": ">",
+     "position": 4,
+     "footnote": "Grateful Dead",
+     "length_secs": null,
+     "song_id": 49,
+     "song_slug": "china-cat-sunflower",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Jam",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 112,
+     "song_slug": "jam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mr. Charlie",
+     "transition": "",
+     "position": 8,
+     "footnote": "Grateful Dead",
+     "length_secs": null,
+     "song_id": 48,
+     "song_slug": "mr-charlie-2",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Big River",
+     "transition": "",
+     "position": 9,
+     "footnote": "FTP, Johnny Cash",
+     "length_secs": null,
+     "song_id": 272,
+     "song_slug": "big-river",
+     "original_artist": "Johnny Cash",
+     "is_cover": true
+    },
+    {
+     "title": "Tweezer",
+     "transition": "",
+     "position": 10,
+     "footnote": "FTP, Phish",
+     "length_secs": null,
+     "song_id": 275,
+     "song_slug": "tweezer",
+     "original_artist": "Phish",
+     "is_cover": true
+    },
+    {
+     "title": "Johnny B. Goode",
+     "transition": "",
+     "position": 11,
+     "footnote": "FTP, Chuck Berry",
+     "length_secs": null,
+     "song_id": 278,
+     "song_slug": "johnny-b-goode",
+     "original_artist": "Chuck Berry",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

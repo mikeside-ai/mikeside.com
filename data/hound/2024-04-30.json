@@ -1,0 +1,97 @@
+{
+ "show_date": "2024-04-30",
+ "slug": "2024-04-30",
+ "show_id": 1706203341,
+ "venue": "Faubourg Brewery",
+ "city": "New Orleans",
+ "state": "LA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-30-2024-faubourg-brewery-new-orleans-la-usa.html",
+ "shownotes": "Performed at Daze Between.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 262,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 985,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": ">",
+     "position": 3,
+     "footnote": "Ween",
+     "length_secs": 419,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
+    },
+    {
+     "title": "Shenanigans",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 492,
+     "song_id": 335,
+     "song_slug": "shenanigans",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 646,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 561,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "EDM Song",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 213,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

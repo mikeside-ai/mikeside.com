@@ -1,0 +1,230 @@
+{
+ "show_date": "2023-05-14",
+ "slug": "2023-05-14",
+ "show_id": 1681144951,
+ "venue": "Shaka&#039;s Beer Garden",
+ "city": "Hampstead",
+ "state": "NC",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-14-2023-shaka039s-beer-garden-hampstead-nc-usa.html",
+ "shownotes": "Jimmy used a lighter as a slide in Earthbound Man. Baseball Guy was performed as a duo of Sam on keys and Brian on guitar. 5 Minutes was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 336,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "4th of July",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 134,
+     "song_id": 55,
+     "song_slug": "4th-of-july",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 682,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 776,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Earthbound Man",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 380,
+     "song_id": 4,
+     "song_slug": "earthbound-man",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 466,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": ">",
+     "position": 7,
+     "footnote": "Ween",
+     "length_secs": 524,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
+    },
+    {
+     "title": "El Sonidito",
+     "transition": ">",
+     "position": 8,
+     "footnote": "Hechizeros Band",
+     "length_secs": 240,
+     "song_id": 15,
+     "song_slug": "el-sonidito",
+     "original_artist": "Hechizeros Band",
+     "is_cover": true
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 723,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Baseball Guy",
+     "transition": "",
+     "position": 10,
+     "footnote": "Debut",
+     "length_secs": 273,
+     "song_id": 249,
+     "song_slug": "baseball-guy",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "5 Minutes",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 88,
+     "song_id": 270,
+     "song_slug": "5-minutes",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 999,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 13,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 443,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    },
+    {
+     "title": "Money for Nothing",
+     "transition": "->",
+     "position": 14,
+     "footnote": "Dire Straits",
+     "length_secs": 684,
+     "song_id": 118,
+     "song_slug": "money-for-nothing",
+     "original_artist": "Dire Straits",
+     "is_cover": true
+    },
+    {
+     "title": "Estimated Prophet",
+     "transition": ">",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 659,
+     "song_id": 99,
+     "song_slug": "estimated-prophet",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "I Am The Slime",
+     "transition": "",
+     "position": 16,
+     "footnote": "Frank Zappa",
+     "length_secs": 349,
+     "song_id": 139,
+     "song_slug": "i-am-the-slime",
+     "original_artist": "Frank Zappa",
+     "is_cover": true
+    },
+    {
+     "title": "Power Trip",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 417,
+     "song_id": 190,
+     "song_slug": "power-trip",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Inchworm",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 494,
+     "song_id": 33,
+     "song_slug": "inchworm",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

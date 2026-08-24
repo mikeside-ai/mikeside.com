@@ -1,0 +1,53 @@
+{
+ "show_date": "2018-07-07",
+ "slug": "2018-07-07",
+ "show_id": 1749963436,
+ "venue": "Private Venue",
+ "city": "Point Pleasant Beach",
+ "state": "NJ",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-7-2018-private-venue-point-pleasant-beach-nj-usa.html",
+ "shownotes": "Private event. This show featured Erick Villalobos on guitar and vocals. This setlist is incomplete.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "China Cat Sunflower",
+     "transition": "->",
+     "position": 1,
+     "footnote": "Grateful Dead",
+     "length_secs": null,
+     "song_id": 49,
+     "song_slug": "china-cat-sunflower",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "I Know You Rider",
+     "transition": "",
+     "position": 2,
+     "footnote": "Traditional",
+     "length_secs": null,
+     "song_id": 158,
+     "song_slug": "i-know-you-rider",
+     "original_artist": "Traditional",
+     "is_cover": true
+    },
+    {
+     "title": "Meatstick",
+     "transition": "",
+     "position": 3,
+     "footnote": "Phish",
+     "length_secs": null,
+     "song_id": 550,
+     "song_slug": "meatstick",
+     "original_artist": "Phish",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

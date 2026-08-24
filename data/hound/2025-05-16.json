@@ -1,0 +1,252 @@
+{
+ "show_date": "2025-05-16",
+ "slug": "2025-05-16",
+ "show_id": 1747419306,
+ "venue": "Landmark on Main Street",
+ "city": "Port Washington",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-16-2025-landmark-on-main-street-port-washington-ny-usa.html",
+ "shownotes": "This show was a private event.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 499,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 390,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "That's What Love Will Make You Do",
+     "transition": "",
+     "position": 3,
+     "footnote": "Little Milton",
+     "length_secs": 551,
+     "song_id": 136,
+     "song_slug": "thats-what-love-will-make-you-do",
+     "original_artist": "Little Milton",
+     "is_cover": true
+    },
+    {
+     "title": "Hesitate",
+     "transition": "->",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 593,
+     "song_id": 22,
+     "song_slug": "hesitate",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Today",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 431,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 751,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    },
+    {
+     "title": "Shenanigans",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 470,
+     "song_id": 335,
+     "song_slug": "shenanigans",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "116 Days",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 313,
+     "song_id": 440,
+     "song_slug": "116-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Go Set",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 322,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Dancing in the Street",
+     "transition": "->",
+     "position": 10,
+     "footnote": "Martha Reeves and the Vandellas",
+     "length_secs": 215,
+     "song_id": 100,
+     "song_slug": "dancing-in-the-street",
+     "original_artist": "Martha Reeves and the Vandellas",
+     "is_cover": true
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 116,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Islands in the Stream",
+     "transition": "",
+     "position": 12,
+     "footnote": "Kenny Rogers & Dolly Parton, featuring Scott and Denise Nadboy",
+     "length_secs": 236,
+     "song_id": 517,
+     "song_slug": "islands-in-the-stream",
+     "original_artist": "Kenny Rogers & Dolly Parton",
+     "is_cover": true
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 833,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Unfocused",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 731,
+     "song_id": 441,
+     "song_slug": "unfocused",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 683,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Time Stands Still",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 517,
+     "song_id": 102,
+     "song_slug": "time-stands-still",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 388,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Say Something",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 575,
+     "song_id": 113,
+     "song_slug": "say-something",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": "",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 568,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Maybe I’m Amazed",
+     "transition": "",
+     "position": 20,
+     "footnote": "Paul McCartney",
+     "length_secs": 359,
+     "song_id": 268,
+     "song_slug": "maybe-im-amaze",
+     "original_artist": "Paul McCartney",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

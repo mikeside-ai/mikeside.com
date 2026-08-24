@@ -1,0 +1,263 @@
+{
+ "show_date": "2023-04-07",
+ "slug": "2023-04-07",
+ "show_id": 1673482851,
+ "venue": "10 Mile Music Hall",
+ "city": "Frisco",
+ "state": "CO",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-7-2023-10-mile-music-hall-frisco-co-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Yum T. Dum",
+     "transition": ">",
+     "position": 1,
+     "footnote": "Debut",
+     "length_secs": 192,
+     "song_id": 225,
+     "song_slug": "yum-t-dum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Westward",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 261,
+     "song_id": 6,
+     "song_slug": "westward",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "It Gets Better",
+     "transition": "",
+     "position": 3,
+     "footnote": "Debut",
+     "length_secs": 561,
+     "song_id": 226,
+     "song_slug": "it-gets-better",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 247,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Power Trip",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 370,
+     "song_id": 190,
+     "song_slug": "power-trip",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Apeman",
+     "transition": ">",
+     "position": 6,
+     "footnote": "The Kinks",
+     "length_secs": 218,
+     "song_id": 182,
+     "song_slug": "apeman",
+     "original_artist": "The Kinks",
+     "is_cover": true
+    },
+    {
+     "title": "Rinky Dink Rag",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 143,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 440,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 821,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Appleseed",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 752,
+     "song_id": 109,
+     "song_slug": "appleseed",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Today",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 374,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 1191,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": ">",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 873,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Walkin' on the Sun",
+     "transition": "->",
+     "position": 14,
+     "footnote": "Smash Mouth",
+     "length_secs": 296,
+     "song_id": 70,
+     "song_slug": "walkin-on-the-sun",
+     "original_artist": "Smash Mouth",
+     "is_cover": true
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 666,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": ">",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 730,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": ">",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 277,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 167,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "No Quarter",
+     "transition": "",
+     "position": 19,
+     "footnote": "Led Zeppelin",
+     "length_secs": 429,
+     "song_id": 183,
+     "song_slug": "no-quarter",
+     "original_artist": "Led Zeppelin ",
+     "is_cover": true
+    },
+    {
+     "title": "All The Same",
+     "transition": "",
+     "position": 20,
+     "footnote": null,
+     "length_secs": 273,
+     "song_id": 32,
+     "song_slug": "all-the-same",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Stadium Rave",
+     "transition": "",
+     "position": 21,
+     "footnote": "Glenn Nishida and Mark Governor",
+     "length_secs": 497,
+     "song_id": 181,
+     "song_slug": "stadium-rave",
+     "original_artist": "Glenn Nishida and Mark Governor",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

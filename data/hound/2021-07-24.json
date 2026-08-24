@@ -1,0 +1,224 @@
+{
+ "show_date": "2021-07-24",
+ "slug": "2021-07-24",
+ "show_id": 1669836032,
+ "venue": "Garcia's",
+ "city": "Port Chester",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-24-2021-garcias-port-chester-ny-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Can't Wait for Tonight",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 54,
+     "song_slug": "cant-wait-for-tonight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": "->",
+     "position": 2,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "4th of July",
+     "transition": "->",
+     "position": 3,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 55,
+     "song_slug": "4th-of-july",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "->",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Walkin' on the Sun",
+     "transition": ">",
+     "position": 5,
+     "footnote": "Smash Mouth",
+     "length_secs": null,
+     "song_id": 70,
+     "song_slug": "walkin-on-the-sun",
+     "original_artist": "Smash Mouth",
+     "is_cover": true
+    },
+    {
+     "title": "Frolic (Theme from Curb Your Enthusiasm)",
+     "transition": ">",
+     "position": 6,
+     "footnote": "FTP, Luciano Michelini",
+     "length_secs": null,
+     "song_id": 172,
+     "song_slug": "frolic-theme-from-curb-your-enthusiasm",
+     "original_artist": "Luciano Michelini",
+     "is_cover": true
+    },
+    {
+     "title": "Earthbound Man",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 4,
+     "song_slug": "earthbound-man",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Royals",
+     "transition": ">",
+     "position": 8,
+     "footnote": "Lorde",
+     "length_secs": null,
+     "song_id": 31,
+     "song_slug": "royals",
+     "original_artist": "Lorde",
+     "is_cover": true
+    },
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 35,
+     "song_slug": "snow-day",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Cats Under the Stars",
+     "transition": "",
+     "position": 10,
+     "footnote": "Jerry Garcia Band",
+     "length_secs": null,
+     "song_id": 66,
+     "song_slug": "cats-under-the-stars",
+     "original_artist": "Jerry Garcia Band",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": ">",
+     "position": 13,
+     "footnote": "Stevie Wonder",
+     "length_secs": null,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Charlie",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The Music Never Stopped",
+     "transition": "",
+     "position": 15,
+     "footnote": "Grateful Dead",
+     "length_secs": null,
+     "song_id": 63,
+     "song_slug": "the-music-never-stopped",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Julius",
+     "transition": "",
+     "position": 18,
+     "footnote": "Phish",
+     "length_secs": null,
+     "song_id": 75,
+     "song_slug": "julius",
+     "original_artist": "Phish",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

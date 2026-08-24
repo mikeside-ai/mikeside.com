@@ -1,0 +1,180 @@
+{
+ "show_date": "2025-04-15",
+ "slug": "2025-04-15",
+ "show_id": 1734458073,
+ "venue": "Hi-Fi",
+ "city": "Indianapolis",
+ "state": "IN",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-15-2025-hi-fi-indianapolis-in-usa.html",
+ "shownotes": "After Big Man Brian Murray addressed the audience with a brief message about the song and it's meaning: \"The last song we just played is called “Big Man”. It was written by a songwriter named Ben Schwartzman. Ben sadly passed a few years ago. He went to Berklee over in Boston just like Sam, Jeremy, and myself. He left behind with him a dozen songs. “Big Man” is beautiful as you just heard and it’s has a great message. Ben’s story can be found online as well as the rest of his music. It’s great today to have this reminder that the lives and spirit of loved ones live on in our hearts and through the airwaves forever thanks to the power of music. On behalf of the band I want to thank Ben’s father Ed for introducing us to Ben’s songs and legacy, and thank you all that are here and listening at home for sharing in this moment with us. One more quick thing. There’s a great charitable organization in Nashville called Centerstone that does a great deal in providing care and raising awareness for mental health. All money generated from the streaming and sales of Ben’s music go directly to this organization as well as others, so please, go and listen to it and help us help Ben bring his music out to the world. Thank you!\" Information about Ben can be found here: https://benschwartzmanmusic.com",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 382,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 612,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 332,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Eastbound and Down",
+     "transition": "",
+     "position": 4,
+     "footnote": "Jerry Reed",
+     "length_secs": 227,
+     "song_id": 188,
+     "song_slug": "eastbound-and-down",
+     "original_artist": "Jerry Reed",
+     "is_cover": true
+    },
+    {
+     "title": "Today",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 530,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 972,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Big Man",
+     "transition": "",
+     "position": 7,
+     "footnote": "FTP, Ben Schwartzman",
+     "length_secs": 333,
+     "song_id": 455,
+     "song_slug": "big-man",
+     "original_artist": "Ben Schwartzman",
+     "is_cover": true
+    },
+    {
+     "title": "Burning Daylight",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 1053,
+     "song_id": 416,
+     "song_slug": "burning-daylight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Go Set",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 1005,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 404,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Taxman",
+     "transition": "->",
+     "position": 11,
+     "footnote": "FTP, The Beatles",
+     "length_secs": 264,
+     "song_id": 456,
+     "song_slug": "taxman",
+     "original_artist": "The Beatles",
+     "is_cover": true
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 294,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Soulshine",
+     "transition": "",
+     "position": 13,
+     "footnote": "Warren Haynes",
+     "length_secs": 453,
+     "song_id": 359,
+     "song_slug": "soulshine",
+     "original_artist": "The Allman Brothers Band",
+     "is_cover": true
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 831,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

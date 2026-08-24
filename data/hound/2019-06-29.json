@@ -1,0 +1,158 @@
+{
+ "show_date": "2019-06-29",
+ "slug": "2019-06-29",
+ "show_id": 1673392181,
+ "venue": "Lee's Park Campground",
+ "city": "Saratoga Springs",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-29-2019-lees-park-campground-saratoga-springs-ny-usa.html",
+ "shownotes": "Performed at the Rye Bread Music Festival. Brian Murray joined the stage prior to Boogie on Reggae Woman and remained through the rest of the show. This setlist is incomplete.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Such a Night",
+     "transition": "",
+     "position": 1,
+     "footnote": "Dr. John",
+     "length_secs": 204,
+     "song_id": 34,
+     "song_slug": "such-a-night",
+     "original_artist": "Dr. John",
+     "is_cover": true
+    },
+    {
+     "title": "Help on the Way / Slipknot!",
+     "transition": "->",
+     "position": 2,
+     "footnote": "Grateful Dead",
+     "length_secs": 916,
+     "song_id": 69,
+     "song_slug": "help-on-the-way-slipknot",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 577,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 535,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Good Lovin'",
+     "transition": "",
+     "position": 5,
+     "footnote": "Young Rascals",
+     "length_secs": 378,
+     "song_id": 90,
+     "song_slug": "good-lovin",
+     "original_artist": "Young Rascals",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": "->",
+     "position": 6,
+     "footnote": "Stevie Wonder",
+     "length_secs": 482,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 7,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 343,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 738,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Green Earrings",
+     "transition": "->",
+     "position": 9,
+     "footnote": "Steely Dan",
+     "length_secs": 397,
+     "song_id": 64,
+     "song_slug": "green-earrings",
+     "original_artist": "Steely Dan",
+     "is_cover": true
+    },
+    {
+     "title": "Too High",
+     "transition": "",
+     "position": 10,
+     "footnote": "Stevie Wonder",
+     "length_secs": 422,
+     "song_id": 161,
+     "song_slug": "too-high",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 656,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    },
+    {
+     "title": "Such a Night",
+     "transition": "",
+     "position": 12,
+     "footnote": "Dr. John",
+     "length_secs": 399,
+     "song_id": 34,
+     "song_slug": "such-a-night",
+     "original_artist": "Dr. John",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

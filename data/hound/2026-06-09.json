@@ -1,13 +1,14 @@
 {
  "show_date": "2026-06-09",
  "slug": "2026-06-09",
+ "show_id": 1776978081,
  "venue": "The Junction",
  "city": "Santa Rosa",
  "state": "CA",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-9-2026-the-junction-santa-rosa-ca-usa.html",
- "shownotes": null,
+ "shownotes": "",
  "sets": [
   {
    "label": "1",
@@ -18,42 +19,66 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 413,
+     "song_id": 58,
+     "song_slug": "crazy",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Bring It On Up",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 860,
+     "song_id": 116,
+     "song_slug": "bring-it-on-up",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Chocolate Milk",
      "transition": "",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 356,
+     "song_id": 250,
+     "song_slug": "chocolate-milk",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "My Disguise",
      "transition": "",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 372,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "The Ballad of Ms. Pepper and Ms. Paige",
      "transition": "",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 395,
+     "song_id": 438,
+     "song_slug": "the-ballad-of-ms-pepper-and-ms-paige",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Way To Be",
      "transition": "",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1007,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
     }
    ]
   },
@@ -66,56 +91,88 @@
      "transition": "->",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 921,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Writing on the Wall",
      "transition": "",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 767,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "¿Por Que, Pedro?",
      "transition": ">",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 314,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Pinball Wizard",
      "transition": "->",
      "position": 10,
      "footnote": "The Who",
-     "length_secs": null
+     "length_secs": 555,
+     "song_id": 367,
+     "song_slug": "pinball-wizard",
+     "original_artist": "The Who",
+     "is_cover": true
     },
     {
      "title": "Earthbound Man",
      "transition": "",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 439,
+     "song_id": 4,
+     "song_slug": "earthbound-man",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Lattice",
      "transition": "->",
      "position": 12,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 625,
+     "song_id": 269,
+     "song_slug": "lattice",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Linus and Lucy",
      "transition": "",
      "position": 13,
      "footnote": "Vince Guaraldi",
-     "length_secs": null
+     "length_secs": 620,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
     },
     {
      "title": "Power Trip",
      "transition": "",
      "position": 14,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 390,
+     "song_id": 190,
+     "song_slug": "power-trip",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -128,14 +185,22 @@
      "transition": "->",
      "position": 15,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 434,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Stadium Rave",
      "transition": "",
      "position": 16,
      "footnote": "Glenn Nishida and Mark Governor",
-     "length_secs": null
+     "length_secs": 517,
+     "song_id": 181,
+     "song_slug": "stadium-rave",
+     "original_artist": "Glenn Nishida and Mark Governor",
+     "is_cover": true
     }
    ]
   }

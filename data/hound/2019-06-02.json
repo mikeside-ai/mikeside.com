@@ -1,0 +1,64 @@
+{
+ "show_date": "2019-06-02",
+ "slug": "2019-06-02",
+ "show_id": 1673391709,
+ "venue": "Moogs Place",
+ "city": "Morrisville",
+ "state": "VT",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-2-2019-moogs-place-morrisville-vt-usa.html",
+ "shownotes": "Performed at Hammer Jam (Outdoor Stage). Early Show.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 635,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    },
+    {
+     "title": "Help on the Way / Slipknot!",
+     "transition": ">",
+     "position": 2,
+     "footnote": "Grateful Dead",
+     "length_secs": 887,
+     "song_id": 69,
+     "song_slug": "help-on-the-way-slipknot",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 538,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "That's What Love Will Make You Do",
+     "transition": "",
+     "position": 4,
+     "footnote": "with Seth Yacovone on guitar",
+     "length_secs": 530,
+     "song_id": 136,
+     "song_slug": "thats-what-love-will-make-you-do",
+     "original_artist": "Little Milton",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

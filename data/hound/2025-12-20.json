@@ -1,0 +1,174 @@
+{
+ "show_date": "2025-12-20",
+ "slug": "2025-12-20",
+ "show_id": 1756868464,
+ "venue": "Ardmore Music Hall",
+ "city": "Ardmore",
+ "state": "PA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-december-20-2025-ardmore-music-hall-ardmore-pa-usa.html",
+ "shownotes": "This set was performed during the lunchtime kid's show.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Fruit Salad",
+     "transition": "",
+     "position": 1,
+     "footnote": "The Wiggles",
+     "length_secs": 273,
+     "song_id": 126,
+     "song_slug": "fruit-salad",
+     "original_artist": "The Wiggles",
+     "is_cover": true
+    },
+    {
+     "title": "Jingle Bell Rock",
+     "transition": "",
+     "position": 2,
+     "footnote": "FTP, Bobby Helms",
+     "length_secs": 171,
+     "song_id": 525,
+     "song_slug": "jingle-bell-rock",
+     "original_artist": "Bobby Helms",
+     "is_cover": true
+    },
+    {
+     "title": "Down by the Bay",
+     "transition": "",
+     "position": 3,
+     "footnote": "Traditional",
+     "length_secs": 406,
+     "song_id": 124,
+     "song_slug": "down-by-the-bay",
+     "original_artist": "Traditional",
+     "is_cover": true
+    },
+    {
+     "title": "Monkey and the Engineer",
+     "transition": "",
+     "position": 4,
+     "footnote": "Jesse Fuller",
+     "length_secs": 259,
+     "song_id": 123,
+     "song_slug": "monkey-and-the-engineer",
+     "original_artist": "Jesse Fuller",
+     "is_cover": true
+    },
+    {
+     "title": "Grandma Got Ran Over By A Reindeer",
+     "transition": "",
+     "position": 5,
+     "footnote": "FTP, Elmo & Patsy",
+     "length_secs": 216,
+     "song_id": 526,
+     "song_slug": "grandma-got-ran-over-by-a-reindeer",
+     "original_artist": "Elmo & Patsy",
+     "is_cover": true
+    },
+    {
+     "title": "SpongeBob SquarePants Theme",
+     "transition": "",
+     "position": 6,
+     "footnote": "Blaise Smith, Mark Harrison, and Stephen Hillenburg",
+     "length_secs": 73,
+     "song_id": 176,
+     "song_slug": "spongebob-squarepants-theme",
+     "original_artist": "Blaise Smith, Mark Harrison, and Stephen Hillenburg",
+     "is_cover": true
+    },
+    {
+     "title": "Bluey Theme Tune",
+     "transition": "",
+     "position": 7,
+     "footnote": "FTP, Joff Bush and Joe Brumm",
+     "length_secs": 108,
+     "song_id": 524,
+     "song_slug": "bluey-theme-tune",
+     "original_artist": "Joff Bush and Joe Brumm",
+     "is_cover": true
+    },
+    {
+     "title": "Cha-Cha Slide",
+     "transition": "",
+     "position": 8,
+     "footnote": "FTP, DJ Casper",
+     "length_secs": 377,
+     "song_id": 523,
+     "song_slug": "cha-cha-slide",
+     "original_artist": "DJ Casper",
+     "is_cover": true
+    },
+    {
+     "title": "Octopus’s Garden",
+     "transition": "",
+     "position": 9,
+     "footnote": "The Beatles",
+     "length_secs": 220,
+     "song_id": 383,
+     "song_slug": "octopuss-garden",
+     "original_artist": "The Beatles",
+     "is_cover": true
+    },
+    {
+     "title": "Hanukkah Oh Hanukkah",
+     "transition": "",
+     "position": 10,
+     "footnote": "FTP, Traditional, led by Ross Peterzell",
+     "length_secs": 315,
+     "song_id": 537,
+     "song_slug": "hanukkah-oh-hanukkah",
+     "original_artist": "Traditional",
+     "is_cover": true
+    },
+    {
+     "title": "Inchworm",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 373,
+     "song_id": 33,
+     "song_slug": "inchworm",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Movin’ Right Along",
+     "transition": "",
+     "position": 12,
+     "footnote": "FTP, The Muppets",
+     "length_secs": 196,
+     "song_id": 530,
+     "song_slug": "movin-right-along",
+     "original_artist": " Kermit the Frog and Fozzie Bear",
+     "is_cover": true
+    },
+    {
+     "title": "Bluey Theme Tune",
+     "transition": "",
+     "position": 13,
+     "footnote": "Joff Bush and Joe Brumm",
+     "length_secs": 112,
+     "song_id": 524,
+     "song_slug": "bluey-theme-tune",
+     "original_artist": "Joff Bush and Joe Brumm",
+     "is_cover": true
+    },
+    {
+     "title": "Limbo Rock",
+     "transition": "",
+     "position": 14,
+     "footnote": "FTP, Chubby Checker",
+     "length_secs": 403,
+     "song_id": 538,
+     "song_slug": "limbo-rock",
+     "original_artist": "Chubby Checker",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

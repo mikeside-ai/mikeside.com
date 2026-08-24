@@ -1,0 +1,224 @@
+{
+ "show_date": "2023-10-05",
+ "slug": "2023-10-05",
+ "show_id": 1692720722,
+ "venue": "Higher Ground",
+ "city": "South Burlington",
+ "state": "VT",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-october-5-2023-higher-ground-south-burlington-vt-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Tillie",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 714,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 918,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bring It On Up",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 987,
+     "song_id": 116,
+     "song_slug": "bring-it-on-up",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Today",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 559,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Renaissance Man",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 423,
+     "song_id": 92,
+     "song_slug": "renaissance-ma",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 484,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 901,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Hot Dog",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 243,
+     "song_id": 125,
+     "song_slug": "hot-dog",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": ">",
+     "position": 10,
+     "footnote": "Ween",
+     "length_secs": 565,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
+    },
+    {
+     "title": "Frettin' Fingers",
+     "transition": ">",
+     "position": 11,
+     "footnote": "Jimmy Bryant and Speedy West",
+     "length_secs": 212,
+     "song_id": 295,
+     "song_slug": "frettin-fingers",
+     "original_artist": "Jimmy Bryant and Speedy West",
+     "is_cover": true
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": ">",
+     "position": 12,
+     "footnote": "Ween",
+     "length_secs": 118,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 13,
+     "footnote": "Ending only",
+     "length_secs": 238,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ugly Song",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 338,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 915,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 738,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Inchworm",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 593,
+     "song_id": 33,
+     "song_slug": "inchworm",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 519,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

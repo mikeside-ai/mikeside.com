@@ -1,0 +1,97 @@
+{
+ "show_date": "2024-05-01",
+ "slug": "2024-05-01",
+ "show_id": 1700068613,
+ "venue": "Vinyl Music Hall",
+ "city": "Pensacola",
+ "state": "FL",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-1-2024-vinyl-music-hall-pensacola-fl-usa.html",
+ "shownotes": "Opening for Andy Frasco & The U.N. Theme from Halloween was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Frosty",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 356,
+     "song_id": 5,
+     "song_slug": "frosty",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 664,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Earthbound Man",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 419,
+     "song_id": 4,
+     "song_slug": "earthbound-man",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 771,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Pinball Wizard",
+     "transition": ">",
+     "position": 5,
+     "footnote": "The Who",
+     "length_secs": 400,
+     "song_id": 367,
+     "song_slug": "pinball-wizard",
+     "original_artist": "The Who",
+     "is_cover": true
+    },
+    {
+     "title": "Halloween Theme (Main Title)",
+     "transition": ">",
+     "position": 6,
+     "footnote": "John Carpenter",
+     "length_secs": 65,
+     "song_id": 309,
+     "song_slug": "halloween-theme-main-title",
+     "original_artist": "John Carpenter",
+     "is_cover": true
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 802,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

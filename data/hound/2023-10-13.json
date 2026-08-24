@@ -1,0 +1,169 @@
+{
+ "show_date": "2023-10-13",
+ "slug": "2023-10-13",
+ "show_id": 1692115222,
+ "venue": "The Broadberry",
+ "city": "Richmond",
+ "state": "VA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-october-13-2023-the-broadberry-richmond-va-usa.html",
+ "shownotes": "Craig and Pat was unfinished. Goosebumps Theme was played for the first time in 134 shows. Nick Codina announced the encore.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 311,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Today",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 502,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": ">",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 739,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 886,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 689,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Being for the Benefit of Mr. Kite!",
+     "transition": "",
+     "position": 6,
+     "footnote": "The Beatles",
+     "length_secs": 281,
+     "song_id": 294,
+     "song_slug": "being-for-the-benefit-of-mr-kite-2",
+     "original_artist": "The Beatles",
+     "is_cover": true
+    },
+    {
+     "title": "Hesitate",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 669,
+     "song_id": 22,
+     "song_slug": "hesitate",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stadium Rave",
+     "transition": "",
+     "position": 8,
+     "footnote": "Glenn Nishida and Mark Governor",
+     "length_secs": 555,
+     "song_id": 181,
+     "song_slug": "stadium-rave",
+     "original_artist": "Glenn Nishida and Mark Governor",
+     "is_cover": true
+    },
+    {
+     "title": "Lattice",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 765,
+     "song_id": 269,
+     "song_slug": "lattice",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 836,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Goosebumps Original Theme Song",
+     "transition": ">",
+     "position": 11,
+     "footnote": "Jack Lenz",
+     "length_secs": 279,
+     "song_id": 130,
+     "song_slug": "goosebumps-original-theme-song",
+     "original_artist": "Jack Lenz",
+     "is_cover": true
+    },
+    {
+     "title": "Frettin' Fingers",
+     "transition": "",
+     "position": 12,
+     "footnote": "Jimmy Bryant and Speedy West",
+     "length_secs": 172,
+     "song_id": 295,
+     "song_slug": "frettin-fingers",
+     "original_artist": "Jimmy Bryant and Speedy West",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 997,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

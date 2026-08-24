@@ -1,0 +1,130 @@
+{
+ "show_date": "2025-02-18",
+ "slug": "2025-02-18",
+ "show_id": 1739724871,
+ "venue": "MSC Divina Cruise Ship",
+ "city": "Atlantic Ocean",
+ "state": "",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-february-18-2025-msc-divina-cruise-ship-atlantic-ocean-usa.html",
+ "shownotes": "Performed at Jam Cruise 21 in the Black & White Lounge.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 698,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 406,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 3,
+     "footnote": "with Nick Gerlach on Saxophone",
+     "length_secs": 473,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 329,
+     "song_id": 35,
+     "song_slug": "snow-day",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ophelia",
+     "transition": "",
+     "position": 5,
+     "footnote": "The Band, with horns",
+     "length_secs": 452,
+     "song_id": 94,
+     "song_slug": "ophelia",
+     "original_artist": "The Band",
+     "is_cover": true
+    },
+    {
+     "title": "Trickery",
+     "transition": "",
+     "position": 6,
+     "footnote": "Dopapod, with Neal &quot;Fro&quot; Evans on drums",
+     "length_secs": 471,
+     "song_id": 131,
+     "song_slug": "trickery",
+     "original_artist": "Dopapod",
+     "is_cover": true
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 334,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "That's What Love Will Make You Do",
+     "transition": "",
+     "position": 8,
+     "footnote": "Little Milton, with Chris Jacobs on guitar",
+     "length_secs": 604,
+     "song_id": 136,
+     "song_slug": "thats-what-love-will-make-you-do",
+     "original_artist": "Little Milton",
+     "is_cover": true
+    },
+    {
+     "title": "Minnie the Moocher",
+     "transition": "",
+     "position": 9,
+     "footnote": "Cab Calloway",
+     "length_secs": 308,
+     "song_id": 287,
+     "song_slug": "minnie-the-moocher",
+     "original_artist": "Cabell “Cab” Calloway",
+     "is_cover": true
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 782,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

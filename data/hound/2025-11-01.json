@@ -1,0 +1,141 @@
+{
+ "show_date": "2025-11-01",
+ "slug": "2025-11-01",
+ "show_id": 1752781250,
+ "venue": "Spirit of the Suwannee Music Park",
+ "city": "Live Oak",
+ "state": "FL",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-november-1-2025-spirit-of-the-suwannee-music-park-live-oak-fl-usa.html",
+ "shownotes": "Performed at Hulaween.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 280,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stadium Rave",
+     "transition": "",
+     "position": 2,
+     "footnote": "Glenn Nishida and Mark Governor",
+     "length_secs": 581,
+     "song_id": 181,
+     "song_slug": "stadium-rave",
+     "original_artist": "Glenn Nishida and Mark Governor",
+     "is_cover": true
+    },
+    {
+     "title": "Nicolette",
+     "transition": ">",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 686,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tillie",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 649,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 372,
+     "song_id": 445,
+     "song_slug": "dangers-of-rah-rah",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": "->",
+     "position": 6,
+     "footnote": "Ween",
+     "length_secs": 403,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
+    },
+    {
+     "title": "6 Little Lies",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 641,
+     "song_id": 395,
+     "song_slug": "6-little-lies",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Rabbit",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 748,
+     "song_id": 391,
+     "song_slug": "rabbit",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 315,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chop Shop",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 475,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "EDM Song",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 225,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

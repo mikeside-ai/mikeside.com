@@ -1,0 +1,208 @@
+{
+ "show_date": "2025-06-19",
+ "slug": "2025-06-19",
+ "show_id": 1742916385,
+ "venue": "Coastal Taproom",
+ "city": "Rehoboth Beach",
+ "state": "DE",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-19-2025-coastal-taproom-rehoboth-beach-de-usa.html",
+ "shownotes": "Let's Dance was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "4th of July",
+     "transition": "->",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 137,
+     "song_id": 55,
+     "song_slug": "4th-of-july",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Nicolette",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 880,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 403,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "116 Days",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 305,
+     "song_id": 440,
+     "song_slug": "116-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Time Stands Still",
+     "transition": "->",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 657,
+     "song_id": 102,
+     "song_slug": "time-stands-still",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 591,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lattice",
+     "transition": "->",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 569,
+     "song_id": 269,
+     "song_slug": "lattice",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 8,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 675,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Let U Go",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 799,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 563,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let’s Dance",
+     "transition": "->",
+     "position": 11,
+     "footnote": "FTP, David Bowie",
+     "length_secs": 97,
+     "song_id": 468,
+     "song_slug": "lets-dance",
+     "original_artist": "David Bowie",
+     "is_cover": true
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 227,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let it Grow",
+     "transition": "",
+     "position": 13,
+     "footnote": "Grateful Dead",
+     "length_secs": 870,
+     "song_id": 97,
+     "song_slug": "let-it-grow",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "->",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 611,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 1212,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Fire",
+     "transition": "",
+     "position": 16,
+     "footnote": "The Jimi Hendrix Experience",
+     "length_secs": 234,
+     "song_id": 360,
+     "song_slug": "fire",
+     "original_artist": "The Jimi Hendrix Experience",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

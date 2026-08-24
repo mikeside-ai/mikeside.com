@@ -1,0 +1,108 @@
+{
+ "show_date": "2023-08-11",
+ "slug": "2023-08-11",
+ "show_id": 1691729737,
+ "venue": "Blackthorne Resort",
+ "city": "East Durham",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-august-11-2023-blackthorne-resort-east-durham-ny-usa.html",
+ "shownotes": "Performed at Catskill Mountain Jubilee.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Trunk Rum",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 713,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Hell in a Bucket",
+     "transition": "",
+     "position": 2,
+     "footnote": "Grateful Dead",
+     "length_secs": 435,
+     "song_id": 220,
+     "song_slug": "hell-in-a-bucket",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 875,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Gumball",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 644,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Didn't You Know?",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 352,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "5 Minutes",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 222,
+     "song_id": 270,
+     "song_slug": "5-minutes",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 1474,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "No Quarter",
+     "transition": "",
+     "position": 8,
+     "footnote": "Led Zeppelin",
+     "length_secs": 625,
+     "song_id": 183,
+     "song_slug": "no-quarter",
+     "original_artist": "Led Zeppelin ",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

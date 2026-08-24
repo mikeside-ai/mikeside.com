@@ -1,0 +1,230 @@
+{
+ "show_date": "2025-04-19",
+ "slug": "2025-04-19",
+ "show_id": 1734458268,
+ "venue": "Lincoln Theatre",
+ "city": "Raleigh",
+ "state": "NC",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-19-2025-lincoln-theatre-raleigh-nc-usa.html",
+ "shownotes": "This show was released on major music streaming platforms as “Live 4.19.25 (Raleigh, NC)”.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Go Set",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 1400,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "116 Days",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 319,
+     "song_id": 440,
+     "song_slug": "116-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 333,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "->",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 781,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Gumball",
+     "transition": "->",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 568,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "King Henry",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 227,
+     "song_id": 444,
+     "song_slug": "king-henry",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Pinball Wizard",
+     "transition": "->",
+     "position": 7,
+     "footnote": "The Who",
+     "length_secs": 382,
+     "song_id": 367,
+     "song_slug": "pinball-wizard",
+     "original_artist": "The Who",
+     "is_cover": true
+    },
+    {
+     "title": "Happy Song",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 358,
+     "song_id": 389,
+     "song_slug": "happy-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Power Trip",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 440,
+     "song_id": 190,
+     "song_slug": "power-trip",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Appleseed",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 715,
+     "song_id": 109,
+     "song_slug": "appleseed",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chocolate Milk",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 397,
+     "song_id": 250,
+     "song_slug": "chocolate-milk",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Burning Daylight",
+     "transition": "->",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 601,
+     "song_id": 416,
+     "song_slug": "burning-daylight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lixomydian Blues on Nitrous",
+     "transition": ">",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 174,
+     "song_id": 165,
+     "song_slug": "lydian-mode-on-nitrous",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stranger",
+     "transition": "->",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 616,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The Other One",
+     "transition": "",
+     "position": 15,
+     "footnote": "Grateful Dead",
+     "length_secs": 541,
+     "song_id": 62,
+     "song_slug": "the-other-one",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 977,
+     "song_id": 327,
+     "song_slug": "thomas-duncan-pt-3",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 738,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 930,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

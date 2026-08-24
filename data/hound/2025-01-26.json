@@ -1,0 +1,252 @@
+{
+ "show_date": "2025-01-26",
+ "slug": "2025-01-26",
+ "show_id": 1729704329,
+ "venue": "The Get Down",
+ "city": "Portland",
+ "state": "OR",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-january-26-2025-the-get-down-portland-or-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Didn't You Know?",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": null,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 702,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 1221,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Happy Song",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 332,
+     "song_id": 389,
+     "song_slug": "happy-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Burning Daylight",
+     "transition": "->",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 630,
+     "song_id": 416,
+     "song_slug": "burning-daylight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Battenkill Breakdown",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 283,
+     "song_id": 263,
+     "song_slug": "battenkill-breakdown",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Song for the Dumped",
+     "transition": "",
+     "position": 7,
+     "footnote": "Ben Folds",
+     "length_secs": 259,
+     "song_id": 274,
+     "song_slug": "song-for-the-dumped-2",
+     "original_artist": "Ben Folds",
+     "is_cover": true
+    },
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 261,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Rinky Dink Rag",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 145,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tillie",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 910,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 867,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ghost Riders in the Sky",
+     "transition": "->",
+     "position": 12,
+     "footnote": "Stan Jones",
+     "length_secs": 212,
+     "song_id": 121,
+     "song_slug": "ghost-riders-in-the-sky-2",
+     "original_artist": "Stan Jones",
+     "is_cover": true
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 613,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 14,
+     "footnote": "Bluegrass style, with Sean McLean on saxophone",
+     "length_secs": 433,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Eyes of the World",
+     "transition": "",
+     "position": 15,
+     "footnote": "Grateful Dead, with Sean McLean on saxophone",
+     "length_secs": 862,
+     "song_id": 28,
+     "song_slug": "eyes-of-the-world",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "None",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 331,
+     "song_id": 447,
+     "song_slug": "none",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "->",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 721,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": "->",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 309,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 195,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Say Something",
+     "transition": "",
+     "position": 20,
+     "footnote": null,
+     "length_secs": 552,
+     "song_id": 113,
+     "song_slug": "say-something",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

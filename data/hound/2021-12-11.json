@@ -1,0 +1,241 @@
+{
+ "show_date": "2021-12-11",
+ "slug": "2021-12-11",
+ "show_id": 1671221093,
+ "venue": "Funk 'n Waffles",
+ "city": "Syracuse",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-december-11-2021-funk-n-waffles-syracuse-ny-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Can't Wait for Tonight",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 340,
+     "song_id": 54,
+     "song_slug": "cant-wait-for-tonight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Crazy",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 380,
+     "song_id": 58,
+     "song_slug": "crazy",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": ">",
+     "position": 3,
+     "footnote": "Stevie Wonder",
+     "length_secs": 814,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 4,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 379,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    },
+    {
+     "title": "Earthbound Man",
+     "transition": "->",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 356,
+     "song_id": 4,
+     "song_slug": "earthbound-man",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 526,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Back to the Start",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 397,
+     "song_id": 20,
+     "song_slug": "back-to-the-start",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 580,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "EDM Song",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 174,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 118,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 813,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 1044,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 1059,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Fenway",
+     "transition": "->",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 556,
+     "song_id": 13,
+     "song_slug": "fenway",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": ">",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 303,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 426,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 483,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 703,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Rum and Roses",
+     "transition": "",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 367,
+     "song_id": 72,
+     "song_slug": "rum-and-roses",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

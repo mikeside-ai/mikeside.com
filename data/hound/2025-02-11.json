@@ -1,0 +1,208 @@
+{
+ "show_date": "2025-02-11",
+ "slug": "2025-02-11",
+ "show_id": 1732047370,
+ "venue": "Proud Larry&#039;s",
+ "city": "Oxford",
+ "state": "MS",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-february-11-2025-proud-larry039s-oxford-ms-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Didn't You Know?",
+     "transition": "->",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 426,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trickery",
+     "transition": "->",
+     "position": 2,
+     "footnote": "Dopapod",
+     "length_secs": 141,
+     "song_id": 131,
+     "song_slug": "trickery",
+     "original_artist": "Dopapod",
+     "is_cover": true
+    },
+    {
+     "title": "Rinky Dink Rag",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 156,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Dupree's Diamond Blues",
+     "transition": ">",
+     "position": 4,
+     "footnote": "Grateful Dead",
+     "length_secs": 353,
+     "song_id": 108,
+     "song_slug": "duprees-diamond-blues",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 1187,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The Chicken",
+     "transition": "",
+     "position": 6,
+     "footnote": "Pee Wee Ellis",
+     "length_secs": 482,
+     "song_id": 372,
+     "song_slug": "the-chicken",
+     "original_artist": "Pee Wee Ellis",
+     "is_cover": true
+    },
+    {
+     "title": "Unfocused",
+     "transition": "->",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 798,
+     "song_id": 441,
+     "song_slug": "unfocused",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 8,
+     "footnote": "Bluegrass style",
+     "length_secs": 393,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Happy Song",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 336,
+     "song_id": 389,
+     "song_slug": "happy-song",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Nicolette",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 1109,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 1195,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Too High",
+     "transition": "",
+     "position": 12,
+     "footnote": "Stevie Wonder",
+     "length_secs": 466,
+     "song_id": 161,
+     "song_slug": "too-high",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Strangest Dreams",
+     "transition": ">",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 562,
+     "song_id": 336,
+     "song_slug": "strangest-dreams",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 881,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Jessica",
+     "transition": ">",
+     "position": 15,
+     "footnote": "The Allman Brothers Band",
+     "length_secs": 529,
+     "song_id": 83,
+     "song_slug": "jessica",
+     "original_artist": "The Allman Brothers Band",
+     "is_cover": true
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "",
+     "position": 16,
+     "footnote": "Ending only",
+     "length_secs": 215,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

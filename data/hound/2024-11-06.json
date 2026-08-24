@@ -1,0 +1,230 @@
+{
+ "show_date": "2024-11-06",
+ "slug": "2024-11-06",
+ "show_id": 1723060126,
+ "venue": "Surf Hotel",
+ "city": "Buena Vista",
+ "state": "CO",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-november-6-2024-surf-hotel-buena-vista-co-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "The OG",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 286,
+     "song_id": 394,
+     "song_slug": "the-og",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 488,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": ">",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 655,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Happy Song",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 339,
+     "song_id": 389,
+     "song_slug": "happy-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Snow Day",
+     "transition": "->",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 343,
+     "song_id": 35,
+     "song_slug": "snow-day",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samson and Delilah",
+     "transition": "",
+     "position": 6,
+     "footnote": "Traditional",
+     "length_secs": 448,
+     "song_id": 61,
+     "song_slug": "samson-and-delilah",
+     "original_artist": "Traditional",
+     "is_cover": true
+    },
+    {
+     "title": "Frosty",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 365,
+     "song_id": 5,
+     "song_slug": "frosty",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 326,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bring It On Up",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 640,
+     "song_id": 116,
+     "song_slug": "bring-it-on-up",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 743,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 884,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    },
+    {
+     "title": "Stranger",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 839,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Shenanigans",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 502,
+     "song_id": 335,
+     "song_slug": "shenanigans",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Minnie the Moocher",
+     "transition": "",
+     "position": 14,
+     "footnote": "Cab Calloway",
+     "length_secs": 279,
+     "song_id": 287,
+     "song_slug": "minnie-the-moocher",
+     "original_artist": "Cabell “Cab” Calloway",
+     "is_cover": true
+    },
+    {
+     "title": "Joseph's Dream",
+     "transition": "",
+     "position": 15,
+     "footnote": "John Hartford",
+     "length_secs": 339,
+     "song_id": 351,
+     "song_slug": "josephs-dream",
+     "original_artist": "John Hartford",
+     "is_cover": true
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 801,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "All The Same",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 341,
+     "song_id": 32,
+     "song_slug": "all-the-same",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Apeman",
+     "transition": "",
+     "position": 18,
+     "footnote": "The Kinks",
+     "length_secs": 324,
+     "song_id": 182,
+     "song_slug": "apeman",
+     "original_artist": "The Kinks",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

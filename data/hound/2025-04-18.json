@@ -1,0 +1,147 @@
+{
+ "show_date": "2025-04-18",
+ "slug": "2025-04-18",
+ "show_id": 1734458135,
+ "venue": "Jefferson Theater",
+ "city": "Charlottesville",
+ "state": "VA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-18-2025-jefferson-theater-charlottesville-va-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Mr. Tooker",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 299,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 278,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Dangers of Rah Rah",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 602,
+     "song_id": 445,
+     "song_slug": "dangers-of-rah-rah",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": "->",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 981,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Unfocused",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 624,
+     "song_id": 441,
+     "song_slug": "unfocused",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Green Earrings",
+     "transition": "->",
+     "position": 6,
+     "footnote": "Steely Dan",
+     "length_secs": 543,
+     "song_id": 64,
+     "song_slug": "green-earrings",
+     "original_artist": "Steely Dan",
+     "is_cover": true
+    },
+    {
+     "title": "The Bag",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 569,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "None",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 381,
+     "song_id": 447,
+     "song_slug": "none",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Nicolette",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 838,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 1517,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Lazy Susan",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 411,
+     "song_id": 414,
+     "song_slug": "lazy-susan",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

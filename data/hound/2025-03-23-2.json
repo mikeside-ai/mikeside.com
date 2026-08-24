@@ -1,0 +1,252 @@
+{
+ "show_date": "2025-03-23",
+ "slug": "2025-03-23-2",
+ "show_id": 1741961724,
+ "venue": "Old Town Pub",
+ "city": "Steamboat Springs",
+ "state": "CO",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-march-23-2025-old-town-pub-steamboat-springs-co-usa-2.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Rinky Dink Rag",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 158,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 455,
+     "song_id": 35,
+     "song_slug": "snow-day",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 1429,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Apeman",
+     "transition": "",
+     "position": 4,
+     "footnote": "The Kinks",
+     "length_secs": 269,
+     "song_id": 182,
+     "song_slug": "apeman",
+     "original_artist": "The Kinks",
+     "is_cover": true
+    },
+    {
+     "title": "Burning Daylight",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 858,
+     "song_id": 416,
+     "song_slug": "burning-daylight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The Bag",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 513,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lazy Day",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 382,
+     "song_id": 104,
+     "song_slug": "lazy-day",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Appleseed",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 736,
+     "song_id": 109,
+     "song_slug": "appleseed",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Jack & Coke",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 641,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Moon of Colorado",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 824,
+     "song_id": 442,
+     "song_slug": "moon-of-colorado",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Theme from Mission: Impossible",
+     "transition": ">",
+     "position": 11,
+     "footnote": "FTP, Lalo Schifrin",
+     "length_secs": 284,
+     "song_id": 452,
+     "song_slug": "theme-from-mission-impossible",
+     "original_artist": "Lalo Schifrin",
+     "is_cover": true
+    },
+    {
+     "title": "Take 5",
+     "transition": ">",
+     "position": 12,
+     "footnote": "FTP, Dave Brubeck",
+     "length_secs": 154,
+     "song_id": 453,
+     "song_slug": "take-5",
+     "original_artist": "Dave Brubeck",
+     "is_cover": true
+    },
+    {
+     "title": "Theme from Mission: Impossible",
+     "transition": ">",
+     "position": 13,
+     "footnote": "FTP, Lalo Schifrin",
+     "length_secs": 61,
+     "song_id": 452,
+     "song_slug": "theme-from-mission-impossible",
+     "original_artist": "Lalo Schifrin",
+     "is_cover": true
+    },
+    {
+     "title": "Spun",
+     "transition": "->",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 552,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Greta",
+     "transition": "->",
+     "position": 15,
+     "footnote": "Widespread Panic",
+     "length_secs": 455,
+     "song_id": 50,
+     "song_slug": "greta",
+     "original_artist": "Widespread Panic",
+     "is_cover": true
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "->",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 763,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": ">",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 327,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 346,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lazy Susan",
+     "transition": "",
+     "position": 19,
+     "footnote": null,
+     "length_secs": 492,
+     "song_id": 414,
+     "song_slug": "lazy-susan",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Soulshine",
+     "transition": "",
+     "position": 20,
+     "footnote": "FTP full band, Warren Haynes",
+     "length_secs": 521,
+     "song_id": 359,
+     "song_slug": "soulshine",
+     "original_artist": "The Allman Brothers Band",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

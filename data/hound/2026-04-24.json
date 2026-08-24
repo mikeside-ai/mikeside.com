@@ -1,13 +1,14 @@
 {
  "show_date": "2026-04-24",
  "slug": "2026-04-24",
+ "show_id": 1766949124,
  "venue": "Madison Theatre",
  "city": "Covington",
  "state": "KY",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-24-2026-madison-theatre-covington-ky-usa.html",
- "shownotes": "\"Fame\" tease in Let U Go; \"Davis Jett was a nice guy\" lyric change and \"Little Drummer Boy\" tease in Bugle on the Shelf. Verified setlist; soundboard on Bandcamp and Nugs.",
+ "shownotes": "",
  "sets": [
   {
    "label": "1",
@@ -18,42 +19,66 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 375,
+     "song_id": 190,
+     "song_slug": "power-trip",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Hesitate",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1188,
+     "song_id": 22,
+     "song_slug": "hesitate",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Little Things",
      "transition": "",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 506,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "My Disguise",
      "transition": "",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 342,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Let U Go",
      "transition": ">",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1122,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Trunk Rum",
      "transition": "",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 547,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -66,42 +91,66 @@
      "transition": "",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 250,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Nicolette",
      "transition": "",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 832,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Snake Oil",
      "transition": "",
      "position": 9,
      "footnote": "The New Tony Williams Lifetime",
-     "length_secs": null
+     "length_secs": 452,
+     "song_id": 557,
+     "song_slug": "snake-oil",
+     "original_artist": "The New Tony Williams Lifetime",
+     "is_cover": true
     },
     {
      "title": "Burning Daylight",
      "transition": ">",
      "position": 10,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1152,
+     "song_id": 416,
+     "song_slug": "burning-daylight",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Snow Day",
      "transition": "",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 756,
+     "song_id": 35,
+     "song_slug": "snow-day",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Spun",
      "transition": "",
      "position": 12,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1114,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -114,7 +163,11 @@
      "transition": "",
      "position": 13,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1293,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   }

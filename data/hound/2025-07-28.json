@@ -1,0 +1,141 @@
+{
+ "show_date": "2025-07-28",
+ "slug": "2025-07-28",
+ "show_id": 1744735602,
+ "venue": "Dillon Amphitheater",
+ "city": "Dillon",
+ "state": "CO",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-28-2025-dillon-amphitheater-dillon-co-usa.html",
+ "shownotes": "Burning Daylight contained an extended Lixomydian Blues on Nitrous tease",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 613,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Go Set",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 1440,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Smokestack Lightning",
+     "transition": "",
+     "position": 3,
+     "footnote": "Howlin’ Wolf",
+     "length_secs": 518,
+     "song_id": 410,
+     "song_slug": "smokestack-lightning",
+     "original_artist": "Howlin' Wolf",
+     "is_cover": true
+    },
+    {
+     "title": "116 Days",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 300,
+     "song_id": 440,
+     "song_slug": "116-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 963,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lazy Day",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 371,
+     "song_id": 104,
+     "song_slug": "lazy-day",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Burning Daylight",
+     "transition": "->",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 1132,
+     "song_id": 416,
+     "song_slug": "burning-daylight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lucia’s Secret",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 313,
+     "song_id": 247,
+     "song_slug": "lucias-secret",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 323,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "In Your Eyes",
+     "transition": "",
+     "position": 10,
+     "footnote": "FTP, Peter Gabriel",
+     "length_secs": 542,
+     "song_id": 474,
+     "song_slug": "in-your-eyes",
+     "original_artist": "Peter Gabriel",
+     "is_cover": true
+    },
+    {
+     "title": "Spun",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 658,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

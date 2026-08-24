@@ -1,0 +1,219 @@
+{
+ "show_date": "2023-12-07",
+ "slug": "2023-12-07",
+ "show_id": 1686068927,
+ "venue": "5 Points Music Sanctuary",
+ "city": "Roanoke",
+ "state": "VA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-december-7-2023-5-points-music-sanctuary-roanoke-va-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Frosty",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 354,
+     "song_id": 5,
+     "song_slug": "frosty",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 414,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "->",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 1090,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Greta",
+     "transition": ">",
+     "position": 4,
+     "footnote": "Widespread Panic",
+     "length_secs": 454,
+     "song_id": 50,
+     "song_slug": "greta",
+     "original_artist": "Widespread Panic",
+     "is_cover": true
+    },
+    {
+     "title": "Gumball",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 720,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 243,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 754,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Little Things",
+     "transition": "->",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 1001,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 504,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lattice",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 510,
+     "song_id": 269,
+     "song_slug": "lattice",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 440,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 854,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Eyes of the World",
+     "transition": "",
+     "position": 13,
+     "footnote": "Grateful Dead",
+     "length_secs": 983,
+     "song_id": 28,
+     "song_slug": "eyes-of-the-world",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": ">",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 1001,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Tequila",
+     "transition": ">",
+     "position": 15,
+     "footnote": "The Champs",
+     "length_secs": 72,
+     "song_id": 122,
+     "song_slug": "tequila",
+     "original_artist": "The Champs",
+     "is_cover": true
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 216,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "All The Same",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 301,
+     "song_id": 32,
+     "song_slug": "all-the-same",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

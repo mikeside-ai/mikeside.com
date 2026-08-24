@@ -1,0 +1,103 @@
+{
+ "show_date": "2024-05-18",
+ "slug": "2024-05-18",
+ "show_id": 1709664996,
+ "venue": "Okemo Mountain",
+ "city": "Ludlow",
+ "state": "VT",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-18-2024-okemo-mountain-ludlow-vt-usa.html",
+ "shownotes": "This show was performed without Sam Lucid. The other band members played bass, switching between songs. Brian played keys during Boogie on Reggae Woman Performed at Music on the Mountain (presented by Trey Anastasio & Divided Sky Foundation).",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 1,
+     "footnote": "Jimmy on Bass",
+     "length_secs": 951,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 2,
+     "footnote": "Brian on Bass",
+     "length_secs": 618,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Men of Steel",
+     "transition": "",
+     "position": 3,
+     "footnote": "Jimmy on Bass",
+     "length_secs": 520,
+     "song_id": 347,
+     "song_slug": "men-of-steel",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 4,
+     "footnote": "Jeremy on Bass",
+     "length_secs": 714,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": "",
+     "position": 5,
+     "footnote": "Jeremy on Bass",
+     "length_secs": 989,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 6,
+     "footnote": "Brian on Bass",
+     "length_secs": 611,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": "",
+     "position": 7,
+     "footnote": "Stevie Wonder. Jeremy on Bass.",
+     "length_secs": 559,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

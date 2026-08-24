@@ -1,0 +1,119 @@
+{
+ "show_date": "2024-08-30",
+ "slug": "2024-08-30",
+ "show_id": 1718639869,
+ "venue": "The Palladium",
+ "city": "Worcester",
+ "state": "MA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-august-30-2024-the-palladium-worcester-ma-usa.html",
+ "shownotes": "Show was part of a joint Pigeons Playing Ping Pong, Andy Frasco & The U.N., and Dogs In A Pile Tour.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Frosty",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 355,
+     "song_id": 5,
+     "song_slug": "frosty",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Four More Days",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 656,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 449,
+     "song_id": 35,
+     "song_slug": "snow-day",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lattice",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 553,
+     "song_id": 269,
+     "song_slug": "lattice",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Fenway",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 585,
+     "song_id": 13,
+     "song_slug": "fenway",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Song for the Dumped",
+     "transition": "->",
+     "position": 6,
+     "footnote": "Ben Folds",
+     "length_secs": 224,
+     "song_id": 274,
+     "song_slug": "song-for-the-dumped-2",
+     "original_artist": "Ben Folds",
+     "is_cover": true
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": "",
+     "position": 7,
+     "footnote": "Ending only",
+     "length_secs": 192,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 850,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 628,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

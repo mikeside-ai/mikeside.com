@@ -1,0 +1,97 @@
+{
+ "show_date": "2019-03-16",
+ "slug": "2019-03-16",
+ "show_id": 1673389755,
+ "venue": "The Soda Bar",
+ "city": "Philadelphia",
+ "state": "PA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-march-16-2019-the-soda-bar-philadelphia-pa-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Thriller",
+     "transition": "->",
+     "position": 1,
+     "footnote": "Michael Jackson",
+     "length_secs": 376,
+     "song_id": 86,
+     "song_slug": "thriller",
+     "original_artist": "Michael Jackson",
+     "is_cover": true
+    },
+    {
+     "title": "Bubble",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 543,
+     "song_id": 9,
+     "song_slug": "bubble",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Boogie on Reggae Woman",
+     "transition": "->",
+     "position": 3,
+     "footnote": "Stevie Wonder",
+     "length_secs": 581,
+     "song_id": 60,
+     "song_slug": "boogie-on-reggae-woman",
+     "original_artist": "Stevie Wonder",
+     "is_cover": true
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 4,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 294,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    },
+    {
+     "title": "Scarlet Begonias",
+     "transition": "",
+     "position": 5,
+     "footnote": "Grateful Dead",
+     "length_secs": 651,
+     "song_id": 169,
+     "song_slug": "scarlet-begonias",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Feel Like A Stranger",
+     "transition": "",
+     "position": 6,
+     "footnote": "Grateful Dead",
+     "length_secs": 408,
+     "song_id": 41,
+     "song_slug": "feel-like-a-stranger",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 577,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    }
+   ]
+  }
+ ]
+}

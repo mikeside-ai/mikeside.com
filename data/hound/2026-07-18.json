@@ -1,13 +1,14 @@
 {
  "show_date": "2026-07-18",
  "slug": "2026-07-18",
+ "show_id": 1776978694,
  "venue": "Beachcomber",
  "city": "Wellfleet",
  "state": "MA",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-18-2026-beachcomber-wellfleet-ma-usa.html",
- "shownotes": null,
+ "shownotes": "",
  "sets": [
   {
    "label": "1",
@@ -18,105 +19,165 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 765,
+     "song_id": 35,
+     "song_slug": "snow-day",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "G Song",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1345,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Crazy",
      "transition": "",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 469,
+     "song_id": 58,
+     "song_slug": "crazy",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Blues for Brian",
      "transition": "->",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 133,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Also Sprach Zarathustra (2001)",
      "transition": "->",
      "position": 5,
      "footnote": "Richard Strauss",
-     "length_secs": null
+     "length_secs": 702,
+     "song_id": 145,
+     "song_slug": "also-sprach-zarathustra-2001",
+     "original_artist": "Richard Strauss",
+     "is_cover": true
     },
     {
      "title": "Blues for Brian",
      "transition": "->",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 235,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "4th of July",
      "transition": ">",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 137,
+     "song_id": 55,
+     "song_slug": "4th-of-july",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Throw It Away",
      "transition": ">",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 819,
+     "song_id": 571,
+     "song_slug": "throw-it-away",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Frosty",
      "transition": "",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 359,
+     "song_id": 5,
+     "song_slug": "frosty",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Earthbound Man",
      "transition": "",
      "position": 10,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 470,
+     "song_id": 4,
+     "song_slug": "earthbound-man",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "It Gets Better",
      "transition": "->",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 586,
+     "song_id": 226,
+     "song_slug": "it-gets-better",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Voodoo Lady",
      "transition": ">",
      "position": 12,
      "footnote": "Ween",
-     "length_secs": null
+     "length_secs": 523,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
     },
     {
      "title": "Power Trip",
      "transition": "",
      "position": 13,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 380,
+     "song_id": 190,
+     "song_slug": "power-trip",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Eyes of the World",
      "transition": "->",
      "position": 14,
      "footnote": "Grateful Dead",
-     "length_secs": null
+     "length_secs": 976,
+     "song_id": 28,
+     "song_slug": "eyes-of-the-world",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
     },
     {
      "title": "Happy Song",
      "transition": "",
      "position": 15,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 378,
+     "song_id": 389,
+     "song_slug": "happy-song",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   }

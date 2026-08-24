@@ -1,11 +1,12 @@
 {
  "show_date": "2026-07-15",
  "slug": "2026-07-15",
+ "show_id": 1779204956,
  "venue": "24th Street Park",
  "city": "Virginia Beach",
  "state": "VA",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-15-2026-24th-street-park-virginia-beach-va-usa.html",
  "shownotes": "Performed at Oceanfront Music Series.",
  "sets": [
@@ -18,70 +19,110 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 409,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Mr. Charlie",
      "transition": "",
      "position": 2,
      "footnote": "Grateful Dead",
-     "length_secs": null
+     "length_secs": 362,
+     "song_id": 48,
+     "song_slug": "mr-charlie-2",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
     },
     {
      "title": "Throw It Away",
      "transition": "",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 601,
+     "song_id": 571,
+     "song_slug": "throw-it-away",
+     "original_artist": null,
+     "is_cover": false
     },
     {
-     "title": "You Didn't Hear It From Me",
+     "title": "You Didn’t Hear It From Me",
      "transition": ">",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 676,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Let Me Go",
      "transition": "",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 352,
+     "song_id": 547,
+     "song_slug": "let-me-go",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Ugly Song",
      "transition": "",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 382,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "The Bag",
      "transition": ">",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 460,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "G Song",
      "transition": "",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1008,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Pinball Wizard",
      "transition": ">",
      "position": 9,
      "footnote": "The Who",
-     "length_secs": null
+     "length_secs": 373,
+     "song_id": 367,
+     "song_slug": "pinball-wizard",
+     "original_artist": "The Who",
+     "is_cover": true
     },
     {
      "title": "Chop Shop",
      "transition": "",
      "position": 10,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 726,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -90,11 +131,15 @@
    "display": "Encore",
    "songs": [
     {
-     "title": "Let's Dance",
+     "title": "Let’s Dance",
      "transition": "",
      "position": 11,
      "footnote": "David Bowie, with Eggy",
-     "length_secs": null
+     "length_secs": 761,
+     "song_id": 468,
+     "song_slug": "lets-dance",
+     "original_artist": "David Bowie",
+     "is_cover": true
     }
    ]
   }

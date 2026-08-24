@@ -1,0 +1,81 @@
+{
+ "show_date": "2025-12-19",
+ "slug": "2025-12-19",
+ "show_id": 1765995738,
+ "venue": "Ardmore Music Hall",
+ "city": "Ardmore",
+ "state": "PA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-december-19-2025-ardmore-music-hall-ardmore-pa-usa.html",
+ "shownotes": "This set was performed during a radio broadcast on WXPN Free at Noon series.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Nicolette",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 944,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 353,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Shenanigans",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 581,
+     "song_id": 335,
+     "song_slug": "shenanigans",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 917,
+     "song_id": 327,
+     "song_slug": "thomas-duncan-pt-3",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Inchworm",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 463,
+     "song_id": 33,
+     "song_slug": "inchworm",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

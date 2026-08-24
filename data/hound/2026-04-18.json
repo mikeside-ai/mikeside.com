@@ -1,13 +1,14 @@
 {
  "show_date": "2026-04-18",
  "slug": "2026-04-18",
+ "show_id": 1775833576,
  "venue": "Empire Live",
  "city": "Albany",
  "state": "NY",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-april-18-2026-empire-live-albany-ny-usa.html",
- "shownotes": "Verified setlist with soundboard recording available on bandcamp and nugs.",
+ "shownotes": "",
  "sets": [
   {
    "label": "1",
@@ -18,42 +19,66 @@
      "transition": ">",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 485,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Trunk Rum",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 635,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Go Set",
      "transition": "",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1062,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Chocolate Milk",
      "transition": "",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 398,
+     "song_id": 250,
+     "song_slug": "chocolate-milk",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Tempted",
      "transition": "",
      "position": 5,
      "footnote": "FTP, Squeeze",
-     "length_secs": null
+     "length_secs": 317,
+     "song_id": 532,
+     "song_slug": "tempted",
+     "original_artist": "Squeeze",
+     "is_cover": true
     },
     {
      "title": "Chop Shop",
      "transition": "",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 868,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -66,49 +91,77 @@
      "transition": "->",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 842,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Hot Dog",
      "transition": "->",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 135,
+     "song_id": 125,
+     "song_slug": "hot-dog",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Craig and Pat",
      "transition": "",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 419,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Little Things",
      "transition": "->",
      "position": 10,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 817,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Lattice",
      "transition": "->",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 657,
+     "song_id": 269,
+     "song_slug": "lattice",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Jack & Coke",
      "transition": ">",
      "position": 12,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 752,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Thomas Duncan, Pt. 3",
      "transition": "",
      "position": 13,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 887,
+     "song_id": 327,
+     "song_slug": "thomas-duncan-pt-3",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -121,14 +174,22 @@
      "transition": "",
      "position": 14,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 366,
+     "song_id": 414,
+     "song_slug": "lazy-susan",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Tookin' Around",
      "transition": "",
      "position": 15,
      "footnote": "with Kieran Tooker on vocals",
-     "length_secs": null
+     "length_secs": 461,
+     "song_id": 52,
+     "song_slug": "tookin-around",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   }

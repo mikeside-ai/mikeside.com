@@ -1,13 +1,14 @@
 {
  "show_date": "2026-05-01",
  "slug": "2026-05-01",
+ "show_id": 1775833550,
  "venue": "The Bronze Peacock at House of Blues",
  "city": "Houston",
  "state": "TX",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-may-1-2026-the-bronze-peacock-at-house-of-blues-houston-tx-usa.html",
- "shownotes": "Soundboard recording available on Bandcamp and Nugs. Verified setlist.",
+ "shownotes": "",
  "sets": [
   {
    "label": "1",
@@ -18,49 +19,77 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 356,
+     "song_id": 5,
+     "song_slug": "frosty",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Little Things",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 906,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Time Stands Still",
      "transition": ">",
      "position": 3,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 739,
+     "song_id": 102,
+     "song_slug": "time-stands-still",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "It Gets Better",
      "transition": "",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 731,
+     "song_id": 226,
+     "song_slug": "it-gets-better",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Craig and Pat",
      "transition": "->",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 692,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Ghost Riders in the Sky",
      "transition": "->",
      "position": 6,
-     "footnote": "Stan Jones; Bustout (49 shows)",
-     "length_secs": null
+     "footnote": "Stan Jones",
+     "length_secs": 153,
+     "song_id": 121,
+     "song_slug": "ghost-riders-in-the-sky-2",
+     "original_artist": "Stan Jones",
+     "is_cover": true
     },
     {
      "title": "Craig and Pat",
      "transition": "",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 433,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -69,53 +98,81 @@
    "display": "Set 2",
    "songs": [
     {
-     "title": "Lucia's Secret",
+     "title": "Lucia’s Secret",
      "transition": "",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 294,
+     "song_id": 247,
+     "song_slug": "lucias-secret",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Stranger",
      "transition": "",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 573,
+     "song_id": 26,
+     "song_slug": "stranger-2",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Spun",
      "transition": ">",
      "position": 10,
-     "footnote": "Get Up, Stand Up\" and \"4th of July\" teases",
-     "length_secs": null
+     "footnote": null,
+     "length_secs": 1345,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Earthbound Man",
      "transition": "",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 427,
+     "song_id": 4,
+     "song_slug": "earthbound-man",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "None",
      "transition": "",
      "position": 12,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 325,
+     "song_id": 447,
+     "song_slug": "none",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Bent Strange",
      "transition": "",
      "position": 13,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 894,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Mr. Tooker",
      "transition": "",
      "position": 14,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 316,
+     "song_id": 18,
+     "song_slug": "mr-tooker",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   },
@@ -127,8 +184,12 @@
      "title": "Shine a Light",
      "transition": "",
      "position": 15,
-     "footnote": "Rolling Stones; Bustout (53 shows)",
-     "length_secs": null
+     "footnote": "Rolling Stones",
+     "length_secs": 323,
+     "song_id": 135,
+     "song_slug": "shine-a-light",
+     "original_artist": "Rolling Stones",
+     "is_cover": true
     }
    ]
   }

@@ -1,0 +1,257 @@
+{
+ "show_date": "2024-03-09",
+ "slug": "2024-03-09",
+ "show_id": 1699990279,
+ "venue": "Sherman Theater",
+ "city": "Stroudsburg",
+ "state": "PA",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-march-9-2024-sherman-theater-stroudsburg-pa-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Stevie Lew",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 405,
+     "song_id": 59,
+     "song_slug": "stevie-lew",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Frosty",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 349,
+     "song_id": 5,
+     "song_slug": "frosty",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 707,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Hot Dog",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 167,
+     "song_id": 125,
+     "song_slug": "hot-dog",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The Devil Went Down to Georgia",
+     "transition": "",
+     "position": 5,
+     "footnote": "FTP, The Charlie Daniels Band",
+     "length_secs": 254,
+     "song_id": 361,
+     "song_slug": "the-devil-went-down-to-georgia",
+     "original_artist": "The Charlie Daniels Band",
+     "is_cover": true
+    },
+    {
+     "title": "My Disguise",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 334,
+     "song_id": 337,
+     "song_slug": "my-disguise",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 648,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Creep",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 404,
+     "song_id": 93,
+     "song_slug": "cr",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 909,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Drums",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 105,
+     "song_id": 186,
+     "song_slug": "drums",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": "",
+     "position": 11,
+     "footnote": "Alternate fast ending",
+     "length_secs": 180,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Samba for Sam",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 448,
+     "song_id": 44,
+     "song_slug": "samba-for-sam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Cumberland Blues",
+     "transition": "",
+     "position": 13,
+     "footnote": "Grateful Dead",
+     "length_secs": 464,
+     "song_id": 222,
+     "song_slug": "cumberland-blues",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Men of Steel",
+     "transition": "",
+     "position": 14,
+     "footnote": "Debut, full band",
+     "length_secs": 427,
+     "song_id": 347,
+     "song_slug": "men-of-steel",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": ">",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 721,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": ">",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 303,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "EDM Song",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 231,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Jam",
+     "transition": ">",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 200,
+     "song_id": 112,
+     "song_slug": "jam",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Go Set",
+     "transition": ">",
+     "position": 19,
+     "footnote": "Ending only",
+     "length_secs": 105,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bennie and the Jets",
+     "transition": ">",
+     "position": 20,
+     "footnote": "Elton John",
+     "length_secs": 341,
+     "song_id": 232,
+     "song_slug": "bennie-and-the-jets",
+     "original_artist": "Elton John",
+     "is_cover": true
+    },
+    {
+     "title": "G Song",
+     "transition": "",
+     "position": 21,
+     "footnote": null,
+     "length_secs": 1039,
+     "song_id": 27,
+     "song_slug": "g-song",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,119 @@
+{
+ "show_date": "2025-02-15",
+ "slug": "2025-02-15",
+ "show_id": 1739724516,
+ "venue": "MSC Divina Cruise Ship",
+ "city": "Atlantic Ocean",
+ "state": "",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-february-15-2025-msc-divina-cruise-ship-atlantic-ocean-usa.html",
+ "shownotes": "Performed at Jam Cruise 21 on the Pool Deck.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Stadium Rave",
+     "transition": "",
+     "position": 1,
+     "footnote": "Glenn Nishida and Mark Governor",
+     "length_secs": 858,
+     "song_id": 181,
+     "song_slug": "stadium-rave",
+     "original_artist": "Glenn Nishida and Mark Governor",
+     "is_cover": true
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 281,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "He’s a Pirate",
+     "transition": "",
+     "position": 3,
+     "footnote": "Geoff Zanelli, Hans Zimmer, and Klaus Badelt",
+     "length_secs": 502,
+     "song_id": 381,
+     "song_slug": "hes-a-pirate",
+     "original_artist": "Geoff Zanelli, Hans Zimmer, and Klaus Badelt",
+     "is_cover": true
+    },
+    {
+     "title": "Go Set",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 996,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 903,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Creep",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 405,
+     "song_id": 93,
+     "song_slug": "cr",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Gumball",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 603,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Octopus’s Garden",
+     "transition": "",
+     "position": 8,
+     "footnote": "The Beatles",
+     "length_secs": 167,
+     "song_id": 383,
+     "song_slug": "octopuss-garden",
+     "original_artist": "The Beatles",
+     "is_cover": true
+    },
+    {
+     "title": "EDM Song",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 232,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

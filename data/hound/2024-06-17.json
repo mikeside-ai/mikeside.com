@@ -1,0 +1,180 @@
+{
+ "show_date": "2024-06-17",
+ "slug": "2024-06-17",
+ "show_id": 1712084999,
+ "venue": "Center for the Arts",
+ "city": "Crested Butte",
+ "state": "CO",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-17-2024-center-for-the-arts-crested-butte-co-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Little Things",
+     "transition": ">",
+     "position": 1,
+     "footnote": "Original arrangement",
+     "length_secs": 470,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 267,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Apeman",
+     "transition": ">",
+     "position": 3,
+     "footnote": "The Kinks",
+     "length_secs": 244,
+     "song_id": 182,
+     "song_slug": "apeman",
+     "original_artist": "The Kinks",
+     "is_cover": true
+    },
+    {
+     "title": "Rinky Dink Rag",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 151,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Way To Be",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 698,
+     "song_id": 24,
+     "song_slug": "way-to-be",
+     "original_artist": "Mad Kings",
+     "is_cover": true
+    },
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 678,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Frosty",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 346,
+     "song_id": 5,
+     "song_slug": "frosty",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chocolate Milk",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 333,
+     "song_id": 250,
+     "song_slug": "chocolate-milk",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Applesauce",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 721,
+     "song_id": 192,
+     "song_slug": "applesauce",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Earthbound Man",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 396,
+     "song_id": 4,
+     "song_slug": "earthbound-man",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 1089,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let it Grow",
+     "transition": "",
+     "position": 12,
+     "footnote": "Grateful Dead",
+     "length_secs": 650,
+     "song_id": 97,
+     "song_slug": "let-it-grow",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 407,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 522,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

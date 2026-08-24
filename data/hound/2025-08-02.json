@@ -1,0 +1,274 @@
+{
+ "show_date": "2025-08-02",
+ "slug": "2025-08-02",
+ "show_id": 1747840569,
+ "venue": "The Public House",
+ "city": "Crested Butte",
+ "state": "CO",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-august-2-2025-the-public-house-crested-butte-co-usa.html",
+ "shownotes": "Writing on the Wall was unfinished. The Bag was unfinished.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Yum T. Dum",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 245,
+     "song_id": 225,
+     "song_slug": "yum-t-dum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Can't Wait for Tonight",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 317,
+     "song_id": 54,
+     "song_slug": "cant-wait-for-tonight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Walkin' on the Sun",
+     "transition": "->",
+     "position": 3,
+     "footnote": "Smash Mouth",
+     "length_secs": 263,
+     "song_id": 70,
+     "song_slug": "walkin-on-the-sun",
+     "original_artist": "Smash Mouth",
+     "is_cover": true
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 710,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 525,
+     "song_id": 35,
+     "song_slug": "snow-day",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Writing on the Wall",
+     "transition": ">",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 774,
+     "song_id": 39,
+     "song_slug": "writing-on-the-wall",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Creep",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 381,
+     "song_id": 93,
+     "song_slug": "cr",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 353,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "EDM Song",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 207,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Craig and Pat",
+     "transition": "->",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 746,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Hot Dog",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 306,
+     "song_id": 125,
+     "song_slug": "hot-dog",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Gumball",
+     "transition": "->",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 422,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Jack & Coke",
+     "transition": "->",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 512,
+     "song_id": 16,
+     "song_slug": "jack",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": "->",
+     "position": 14,
+     "footnote": "Ween",
+     "length_secs": 530,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 15,
+     "footnote": "Ending only",
+     "length_secs": 199,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "The Bag",
+     "transition": "->",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 445,
+     "song_id": 334,
+     "song_slug": "the-bag",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "¿Por Que, Pedro?",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 326,
+     "song_id": 51,
+     "song_slug": "por-que-pedro",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lattice",
+     "transition": "->",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 504,
+     "song_id": 269,
+     "song_slug": "lattice",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Linus and Lucy",
+     "transition": "",
+     "position": 19,
+     "footnote": "Vince Guaraldi",
+     "length_secs": 414,
+     "song_id": 71,
+     "song_slug": "linus-and-lucy",
+     "original_artist": "Vince Guaraldi",
+     "is_cover": true
+    },
+    {
+     "title": "The Distance",
+     "transition": "",
+     "position": 20,
+     "footnote": "Cake",
+     "length_secs": 368,
+     "song_id": 467,
+     "song_slug": "the-distance",
+     "original_artist": "Cake",
+     "is_cover": true
+    },
+    {
+     "title": "Blues for Brian",
+     "transition": "",
+     "position": 21,
+     "footnote": null,
+     "length_secs": 714,
+     "song_id": 36,
+     "song_slug": "blues-for-brian",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 22,
+     "footnote": null,
+     "length_secs": 939,
+     "song_id": 327,
+     "song_slug": "thomas-duncan-pt-3",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

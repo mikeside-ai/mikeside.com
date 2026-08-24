@@ -1,0 +1,108 @@
+{
+ "show_date": "2023-06-17",
+ "slug": "2023-06-17",
+ "show_id": 1678228804,
+ "venue": "Cheshire Fairgrounds",
+ "city": "Swanzey",
+ "state": "NH",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-june-17-2023-cheshire-fairgrounds-swanzey-nh-usa.html",
+ "shownotes": "Performed at Northlands Music & Arts Festival.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 264,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "It Gets Better",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 454,
+     "song_id": 226,
+     "song_slug": "it-gets-better",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Cumberland Blues",
+     "transition": "",
+     "position": 3,
+     "footnote": "Grateful Dead",
+     "length_secs": 449,
+     "song_id": 222,
+     "song_slug": "cumberland-blues",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    },
+    {
+     "title": "Let U Go",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 479,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 638,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Gumball",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 456,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": ">",
+     "position": 7,
+     "footnote": "Ween",
+     "length_secs": 363,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
+    },
+    {
+     "title": "Thomas Duncan, Pt. 2",
+     "transition": "",
+     "position": 8,
+     "footnote": "Ending only",
+     "length_secs": 173,
+     "song_id": 3,
+     "song_slug": "thomas-duncan-pt-2",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

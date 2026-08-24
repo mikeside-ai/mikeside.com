@@ -1,13 +1,14 @@
 {
  "show_date": "2026-07-24",
  "slug": "2026-07-24",
+ "show_id": 1776978836,
  "venue": "Rendezvous Event Center",
  "city": "Winter Park",
  "state": "CO",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-24-2026-rendezvous-event-center-winter-park-co-usa.html",
- "shownotes": "Performed at Revel in the Park. Early show — first of two this day.",
+ "shownotes": "Performed at Revel in the Park.",
  "sets": [
   {
    "label": "1",
@@ -18,35 +19,55 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1042,
+     "song_id": 11,
+     "song_slug": "go-set",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Shenanigans",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 535,
+     "song_id": 335,
+     "song_slug": "shenanigans",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Greta",
      "transition": ">",
      "position": 3,
      "footnote": "Widespread Panic",
-     "length_secs": null
+     "length_secs": 604,
+     "song_id": 50,
+     "song_slug": "greta",
+     "original_artist": "Widespread Panic",
+     "is_cover": true
     },
     {
      "title": "Chop Shop",
      "transition": "",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 930,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "The Day The Music Came To Me",
      "transition": "",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 328,
+     "song_id": 551,
+     "song_slug": "the-day-the-music-came-to-me",
+     "original_artist": null,
+     "is_cover": false
     }
    ]
   }

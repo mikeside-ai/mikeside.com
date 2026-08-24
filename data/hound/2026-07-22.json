@@ -1,11 +1,12 @@
 {
  "show_date": "2026-07-22",
  "slug": "2026-07-22",
+ "show_id": 1780282677,
  "venue": "Avon Pavilion at Harry A. Nottingham Park",
  "city": "Avon",
  "state": "CO",
  "complete": true,
- "transcribed": true,
+ "api_captured": true,
  "source_url": "https://go-set.net/setlists/dogs-in-a-pile-july-22-2026-avon-pavilion-at-harry-a-nottingham-park-avon-co-usa.html",
  "shownotes": "Performed at AvonLIVE! Concerts in the Park.",
  "sets": [
@@ -18,91 +19,143 @@
      "transition": "",
      "position": 1,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 751,
+     "song_id": 445,
+     "song_slug": "dangers-of-rah-rah",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Look Johnny II",
      "transition": "",
      "position": 2,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 277,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Cats Under the Stars",
      "transition": ">",
      "position": 3,
      "footnote": "Jerry Garcia Band",
-     "length_secs": null
+     "length_secs": 797,
+     "song_id": 66,
+     "song_slug": "cats-under-the-stars",
+     "original_artist": "Jerry Garcia Band",
+     "is_cover": true
     },
     {
      "title": "Four More Days",
      "transition": "",
      "position": 4,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 693,
+     "song_id": 150,
+     "song_slug": "four-more-days",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Didn't You Know?",
      "transition": ">",
      "position": 5,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 438,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
     },
     {
-     "title": "Lucia's Secret",
+     "title": "Lucia’s Secret",
      "transition": "",
      "position": 6,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 311,
+     "song_id": 247,
+     "song_slug": "lucias-secret",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Stevie Lew",
      "transition": "",
      "position": 7,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 435,
+     "song_id": 59,
+     "song_slug": "stevie-lew",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Bent Strange",
      "transition": "",
      "position": 8,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 903,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "6 Little Lies",
      "transition": "->",
      "position": 9,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 983,
+     "song_id": 395,
+     "song_slug": "6-little-lies",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Bring It On Up",
      "transition": "->",
      "position": 10,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 873,
+     "song_id": 116,
+     "song_slug": "bring-it-on-up",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Happy Song",
      "transition": "",
      "position": 11,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 416,
+     "song_id": 389,
+     "song_slug": "happy-song",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Tillie",
      "transition": ">",
      "position": 12,
      "footnote": null,
-     "length_secs": null
+     "length_secs": 1593,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
     },
     {
      "title": "Space Captain",
      "transition": "",
      "position": 13,
      "footnote": "Joe Cocker",
-     "length_secs": null
+     "length_secs": 569,
+     "song_id": 76,
+     "song_slug": "space-captain",
+     "original_artist": "Joe Cocker",
+     "is_cover": true
     }
    ]
   }

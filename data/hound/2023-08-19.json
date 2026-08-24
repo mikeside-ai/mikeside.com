@@ -1,0 +1,230 @@
+{
+ "show_date": "2023-08-19",
+ "slug": "2023-08-19",
+ "show_id": 1686706908,
+ "venue": "Sandiwood Farm",
+ "city": "Wolcott",
+ "state": "VT",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-august-19-2023-sandiwood-farm-wolcott-vt-usa.html",
+ "shownotes": "Performed at Oxbow Music Festival. Cassidy was played for the first time in 304 shows.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Today",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 494,
+     "song_id": 37,
+     "song_slug": "today",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Hesitate",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 942,
+     "song_id": 22,
+     "song_slug": "hesitate",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny II",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 268,
+     "song_id": 115,
+     "song_slug": "look-johnny-ii",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Look Johnny",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 996,
+     "song_id": 2,
+     "song_slug": "look-johnny",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Ugly Song",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 366,
+     "song_id": 42,
+     "song_slug": "ugly-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Apeman",
+     "transition": "",
+     "position": 6,
+     "footnote": "The Kinks",
+     "length_secs": 296,
+     "song_id": 182,
+     "song_slug": "apeman",
+     "original_artist": "The Kinks",
+     "is_cover": true
+    },
+    {
+     "title": "Swim to the Middle",
+     "transition": "",
+     "position": 7,
+     "footnote": "with Hayley Jane",
+     "length_secs": 300,
+     "song_id": 198,
+     "song_slug": "swim-to-the-middle",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Brand New Key",
+     "transition": ">",
+     "position": 8,
+     "footnote": "Melanie, with Hayley Jane",
+     "length_secs": 149,
+     "song_id": 202,
+     "song_slug": "brand-new-key",
+     "original_artist": "Melanie",
+     "is_cover": true
+    },
+    {
+     "title": "Hey Pocky A-Way",
+     "transition": ">",
+     "position": 9,
+     "footnote": "The Meters, with Hayley Jane",
+     "length_secs": 291,
+     "song_id": 203,
+     "song_slug": "hey-pocky-a-way",
+     "original_artist": "The Meters",
+     "is_cover": true
+    },
+    {
+     "title": "Brand New Key",
+     "transition": "",
+     "position": 10,
+     "footnote": "Melanie, with Hayley Jane",
+     "length_secs": 95,
+     "song_id": 202,
+     "song_slug": "brand-new-key",
+     "original_artist": "Melanie",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Charlie",
+     "transition": ">",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 1596,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Battenkill Breakdown",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 312,
+     "song_id": 263,
+     "song_slug": "battenkill-breakdown",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 130,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Cassidy",
+     "transition": "",
+     "position": 14,
+     "footnote": "Bob Weir",
+     "length_secs": 660,
+     "song_id": 168,
+     "song_slug": "cassidy",
+     "original_artist": "Bob Weir",
+     "is_cover": true
+    },
+    {
+     "title": "Tillie",
+     "transition": ">",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 912,
+     "song_id": 12,
+     "song_slug": "tillie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bring It On Up",
+     "transition": ">",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 624,
+     "song_id": 116,
+     "song_slug": "bring-it-on-up",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Space Captain",
+     "transition": "",
+     "position": 17,
+     "footnote": "Joe Cocker",
+     "length_secs": 466,
+     "song_id": 76,
+     "song_slug": "space-captain",
+     "original_artist": "Joe Cocker",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "All The Same",
+     "transition": "",
+     "position": 18,
+     "footnote": null,
+     "length_secs": 282,
+     "song_id": 32,
+     "song_slug": "all-the-same",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

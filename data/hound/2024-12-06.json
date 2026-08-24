@@ -1,0 +1,219 @@
+{
+ "show_date": "2024-12-06",
+ "slug": "2024-12-06",
+ "show_id": 1726583525,
+ "venue": "The 8x10",
+ "city": "Baltimore",
+ "state": "MD",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-december-6-2024-the-8x10-baltimore-md-usa.html",
+ "shownotes": "",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Westward",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 259,
+     "song_id": 6,
+     "song_slug": "westward",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Mercy, Mercy, Mercy",
+     "transition": ">",
+     "position": 2,
+     "footnote": "Cannonball Adderley",
+     "length_secs": 279,
+     "song_id": 338,
+     "song_slug": "mercy-mercy-mercy",
+     "original_artist": "Cannonball Adderley",
+     "is_cover": true
+    },
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 508,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "You Didn’t Hear It From Me",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 787,
+     "song_id": 293,
+     "song_slug": "you-didnt-hear-it-from-me",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Green Earrings",
+     "transition": "->",
+     "position": 5,
+     "footnote": "Steely Dan",
+     "length_secs": 650,
+     "song_id": 64,
+     "song_slug": "green-earrings",
+     "original_artist": "Steely Dan",
+     "is_cover": true
+    },
+    {
+     "title": "Bent Strange",
+     "transition": "->",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 977,
+     "song_id": 53,
+     "song_slug": "bent-strange",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Fenway",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 709,
+     "song_id": 13,
+     "song_slug": "fenway",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 604,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "EDM Song",
+     "transition": "",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 207,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Smokestack Lightning",
+     "transition": "->",
+     "position": 10,
+     "footnote": "Howlin’ Wolf",
+     "length_secs": 1043,
+     "song_id": 410,
+     "song_slug": "smokestack-lightning",
+     "original_artist": "Howlin' Wolf",
+     "is_cover": true
+    },
+    {
+     "title": "Earthbound Man",
+     "transition": "",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 419,
+     "song_id": 4,
+     "song_slug": "earthbound-man",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Applesauce",
+     "transition": "->",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 961,
+     "song_id": 192,
+     "song_slug": "applesauce",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Royals",
+     "transition": ">",
+     "position": 13,
+     "footnote": "Lorde",
+     "length_secs": 712,
+     "song_id": 31,
+     "song_slug": "royals",
+     "original_artist": "Lorde",
+     "is_cover": true
+    },
+    {
+     "title": "Happy Song",
+     "transition": "",
+     "position": 14,
+     "footnote": null,
+     "length_secs": 338,
+     "song_id": 389,
+     "song_slug": "happy-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Hesitate",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 636,
+     "song_id": 22,
+     "song_slug": "hesitate",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Chop Shop",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 632,
+     "song_id": 436,
+     "song_slug": "chop-shop",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "All The Same",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 410,
+     "song_id": 32,
+     "song_slug": "all-the-same",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

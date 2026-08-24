@@ -1,0 +1,191 @@
+{
+ "show_date": "2024-03-30",
+ "slug": "2024-03-30",
+ "show_id": 1701798865,
+ "venue": "Club Congress",
+ "city": "Tucson",
+ "state": "AZ",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-march-30-2024-club-congress-tucson-az-usa.html",
+ "shownotes": "Spun contained the Rick and Morty theme song. Jellyfish Jam was played during Craig and Pat.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "One Set",
+   "songs": [
+    {
+     "title": "Frosty",
+     "transition": ">",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 386,
+     "song_id": 5,
+     "song_slug": "frosty",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Let U Go",
+     "transition": ">",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 574,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 441,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Lattice",
+     "transition": "",
+     "position": 4,
+     "footnote": null,
+     "length_secs": 618,
+     "song_id": 269,
+     "song_slug": "lattice",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Little Things",
+     "transition": ">",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 458,
+     "song_id": 19,
+     "song_slug": "little-things",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Royals",
+     "transition": "",
+     "position": 6,
+     "footnote": "Lorde",
+     "length_secs": 756,
+     "song_id": 31,
+     "song_slug": "royals",
+     "original_artist": "Lorde",
+     "is_cover": true
+    },
+    {
+     "title": "Spun",
+     "transition": ">",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 653,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Renaissance Man",
+     "transition": ">",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 354,
+     "song_id": 92,
+     "song_slug": "renaissance-ma",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Craig and Pat",
+     "transition": ">",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 961,
+     "song_id": 29,
+     "song_slug": "craig-and-pa",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "EDM Song",
+     "transition": "",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 212,
+     "song_id": 10,
+     "song_slug": "edm-song",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": ">",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 453,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Battenkill Breakdown",
+     "transition": ">",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 268,
+     "song_id": 263,
+     "song_slug": "battenkill-breakdown",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Charlie",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 122,
+     "song_id": 107,
+     "song_slug": "charlie",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Hell in a Bucket",
+     "transition": "",
+     "position": 14,
+     "footnote": "Grateful Dead",
+     "length_secs": 525,
+     "song_id": 220,
+     "song_slug": "hell-in-a-bucket",
+     "original_artist": "Grateful Dead",
+     "is_cover": true
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Rinky Dink Rag",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 177,
+     "song_id": 38,
+     "song_slug": "rinky-dink-rag",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

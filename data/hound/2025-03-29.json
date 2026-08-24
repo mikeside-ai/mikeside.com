@@ -1,0 +1,230 @@
+{
+ "show_date": "2025-03-29",
+ "slug": "2025-03-29",
+ "show_id": 1734456603,
+ "venue": "Brooklyn Bowl",
+ "city": "Brooklyn",
+ "state": "NY",
+ "complete": true,
+ "api_captured": true,
+ "source_url": "https://go-set.net/setlists/dogs-in-a-pile-march-29-2025-brooklyn-bowl-brooklyn-ny-usa.html",
+ "shownotes": "The band was introduced on stage by Mister Cam.",
+ "sets": [
+  {
+   "label": "1",
+   "display": "Set 1",
+   "songs": [
+    {
+     "title": "Snow Day",
+     "transition": "",
+     "position": 1,
+     "footnote": null,
+     "length_secs": 410,
+     "song_id": 35,
+     "song_slug": "snow-day",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Didn't You Know?",
+     "transition": "",
+     "position": 2,
+     "footnote": null,
+     "length_secs": 389,
+     "song_id": 95,
+     "song_slug": "didnt-you-know",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Nicolette",
+     "transition": "",
+     "position": 3,
+     "footnote": null,
+     "length_secs": 1109,
+     "song_id": 211,
+     "song_slug": "nicolette",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Apeman",
+     "transition": "",
+     "position": 4,
+     "footnote": "The Kinks",
+     "length_secs": 280,
+     "song_id": 182,
+     "song_slug": "apeman",
+     "original_artist": "The Kinks",
+     "is_cover": true
+    },
+    {
+     "title": "Burning Daylight",
+     "transition": "",
+     "position": 5,
+     "footnote": null,
+     "length_secs": 990,
+     "song_id": 416,
+     "song_slug": "burning-daylight",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Thomas Duncan, Pt. 3",
+     "transition": "",
+     "position": 6,
+     "footnote": null,
+     "length_secs": 919,
+     "song_id": 327,
+     "song_slug": "thomas-duncan-pt-3",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "2",
+   "display": "Set 2",
+   "songs": [
+    {
+     "title": "Yum T. Dum",
+     "transition": "",
+     "position": 7,
+     "footnote": null,
+     "length_secs": 264,
+     "song_id": 225,
+     "song_slug": "yum-t-dum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Stevie Lew",
+     "transition": "",
+     "position": 8,
+     "footnote": null,
+     "length_secs": 479,
+     "song_id": 59,
+     "song_slug": "stevie-lew",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Unfocused",
+     "transition": "->",
+     "position": 9,
+     "footnote": null,
+     "length_secs": 945,
+     "song_id": 441,
+     "song_slug": "unfocused",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Gumball",
+     "transition": ">",
+     "position": 10,
+     "footnote": null,
+     "length_secs": 554,
+     "song_id": 251,
+     "song_slug": "gumball",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Rabbit",
+     "transition": "->",
+     "position": 11,
+     "footnote": null,
+     "length_secs": 567,
+     "song_id": 391,
+     "song_slug": "rabbit",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Spun",
+     "transition": "",
+     "position": 12,
+     "footnote": null,
+     "length_secs": 390,
+     "song_id": 14,
+     "song_slug": "spun",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Trunk Rum",
+     "transition": "",
+     "position": 13,
+     "footnote": null,
+     "length_secs": 744,
+     "song_id": 46,
+     "song_slug": "trunk-rum",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Voodoo Lady",
+     "transition": ">",
+     "position": 14,
+     "footnote": "Ween, with Karina Rykman and Michael Goodman on bass",
+     "length_secs": 995,
+     "song_id": 164,
+     "song_slug": "voodoo-lady",
+     "original_artist": "Ween",
+     "is_cover": true
+    },
+    {
+     "title": "Lucia’s Secret",
+     "transition": "",
+     "position": 15,
+     "footnote": null,
+     "length_secs": 295,
+     "song_id": 247,
+     "song_slug": "lucias-secret",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Power Trip",
+     "transition": "",
+     "position": 16,
+     "footnote": null,
+     "length_secs": 393,
+     "song_id": 190,
+     "song_slug": "power-trip",
+     "original_artist": null,
+     "is_cover": false
+    },
+    {
+     "title": "Bugle on the Shelf",
+     "transition": "",
+     "position": 17,
+     "footnote": null,
+     "length_secs": 1211,
+     "song_id": 17,
+     "song_slug": "bugle-on-the-shelf",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "display": "Encore",
+   "songs": [
+    {
+     "title": "Let U Go",
+     "transition": "",
+     "position": 18,
+     "footnote": "with Benny Pinnola on saxophone",
+     "length_secs": 591,
+     "song_id": 120,
+     "song_slug": "let-u-go",
+     "original_artist": null,
+     "is_cover": false
+    }
+   ]
+  }
+ ]
+}

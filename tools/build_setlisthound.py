@@ -558,6 +558,7 @@ def _bars(rows: list, total_label: str) -> str:
 
 def render_stats(payloads: list) -> str:
     s = compute_stats(payloads)
+    yr = payloads[0]["show_date"][:4] if payloads else ""
     glance_html = '<div class="glance">' + "".join(
         f'<div class="stat"><div class="n">{v}</div><div class="l">{l}</div></div>'
         for v, l in [
@@ -589,7 +590,7 @@ def render_stats(payloads: list) -> str:
         <div class="crumb"><a href="/setlisthound-with/">Setlist Hound</a> · Stats</div>
         <div class="section-head">
           <span class="setno">2026 in numbers</span>
-          <h2>A year of Dogs in a Pile, counted</h2>
+          <h2>{e(yr)}, counted</h2>
           <p>Every number below comes from the {s["shows"]} shows in this archive —
              transcribed from <a href="https://go-set.net" rel="noopener">go-set.net</a>,
              which is run by the band. For all-time play counts and gap charts, go-set
@@ -597,12 +598,17 @@ def render_stats(payloads: list) -> str:
         </div>
         {glance_html}
         <div style="display:flex;flex-direction:column;gap:1rem;max-width:820px;margin:1.4rem auto 0;">
-          {_bars(s["plays"], "Most played, 2026")}
+          {_bars(s["plays"], f"Most played, {yr}")}
           <div>{_bars(s["covers"], "Most covered artists")}{covers_note}</div>
           {_bars(s["openers"], "Favorite openers")}
           {_bars(s["closers"], "Favorite closers")}
           {months_html}
         </div>
+        <p class="cav" style="max-width:820px;margin:2rem auto 0;">
+          These counts are <strong>{e(yr)} only</strong> — the archive here goes back to
+          2018. Browse any year from <a href="/setlisthound-with/">the show list</a>.
+          All-time play counts and gaps are the band's, at
+          <a href="https://go-set.net" rel="noopener">go-set.net</a>.</p>
         <div class="srcline">
           Setlist data: <a href="https://go-set.net" rel="noopener">go-set.net</a> ·
           counts regenerate as shows are added<br />
@@ -612,9 +618,9 @@ def render_stats(payloads: list) -> str:
         </div>
       </div>
     </section>"""
-    return shell("Setlist Hound — 2026 tour stats",
-                 "Dogs in a Pile 2026 by the numbers: most played songs, most covered "
-                 "artists, openers, closers, sandwiches — from 74 tracked shows.",
+    return shell(f"Setlist Hound — {yr} tour stats",
+                 f"Dogs in a Pile {yr} by the numbers: most played songs, most covered "
+                 f"artists, openers, closers, sandwiches — from {len(payloads)} shows.",
                  "https://mikeside.com/setlisthound-with/stats/", body)
 
 
