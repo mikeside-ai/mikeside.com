@@ -256,6 +256,80 @@ def render_show(p: dict, prev: dict | None, nxt: dict | None) -> str:
     return shell(title, desc, canonical, body)
 
 
+def by_year(payloads: list[dict]) -> dict[str, list[dict]]:
+    """year -> shows (payloads stay newest-first within the year)."""
+    out: dict[str, list[dict]] = {}
+    for p in payloads:
+        out.setdefault(p["show_date"][:4], []).append(p)
+    return out
+
+
+def year_nav(years: dict[str, list[dict]], current: str) -> str:
+    """One row of year links; the current year renders as text, not a link.
+    Rendered only when the archive spans more than one year."""
+    if len(years) < 2:
+        return ""
+    parts = []
+    for y in sorted(years, reverse=True):
+        n = len(years[y])
+        label = f"{y} <span class=\"sl\">{n}</span>"
+        if y == current:
+            parts.append(f'<span style="color:var(--accent-2);font-weight:600;">{label}</span>')
+        else:
+            href = "/setlisthound-with/" if y == max(years) else f"/setlisthound-with/{y}/"
+            parts.append(f'<a href="{href}">{label}</a>')
+    return ('<div class="setname" style="max-width:820px;margin:2.2rem auto .4rem;">'
+            '<span>Browse by year</span><span class="sl">every show, kept</span></div>'
+            '<div class="srcs" style="max-width:820px;margin:0 auto;">'
+            + "".join(parts) + "</div>")
+
+
+def month_cards(shows: list[dict]) -> str:
+    months: dict[str, list[dict]] = {}
+    for p in shows:
+        months.setdefault(datetime.strptime(p["show_date"], "%Y-%m-%d").strftime("%B %Y"), []).append(p)
+    cards = ""
+    for month, ms in months.items():
+        cards += (f'<div class="setname" style="max-width:820px;margin:1.6rem auto .8rem;">'
+                  f"<span>{e(month)}</span><span class=\"sl\">{len(ms)} show{'s' if len(ms) != 1 else ''}</span></div>"
+                  f'<div class="srcs">')
+        for p in ms:
+            n = sum(len(s.get("songs", [])) for s in p.get("sets", []))
+            pslug = p.get("slug", p["show_date"])
+            extra = " · late show" if pslug.endswith("-2") else ""
+            cards += (f'<a href="/setlisthound-with/{pslug}/">{e(d_short(p["show_date"]))} · {e(p.get("venue", ""))}'
+                      f'<span class="w">{e(loc(p))} · {n} songs{extra}</span></a>')
+        cards += "</div>"
+    return cards
+
+
+def render_year(year: str, shows: list[dict], years: dict[str, list[dict]]) -> str:
+    body = f"""    <section class="block" style="border-top:none;">
+      <div class="container">
+        <div class="crumb"><a href="/setlisthound-with/">Setlist Hound</a> ·
+          <a href="/setlisthound-with/stats/">Stats</a> ·
+          <a href="/setlisthound-with/credits/">Credits &amp; FAQ</a></div>
+        <div class="section-head">
+          <span class="setno">The shows, kept</span>
+          <h2>{e(year)} — {len(shows)} shows</h2>
+          <p>Every Dogs in a Pile setlist of {e(year)}, transcribed from
+             <a href="https://go-set.net" rel="noopener">go-set.net</a>, the band's own setlist site.</p>
+        </div>
+        {year_nav(years, year)}
+        {month_cards(shows)}
+        <div class="srcline">
+          Setlist data: <a href="https://go-set.net" rel="noopener">go-set.net</a>, run by the band ·
+          <a href="/setlisthound-with/">latest shows</a> ·
+          <a href="https://x.com/SetlistHound" rel="noopener">🐕 @SetlistHound on X</a><br />
+          A fan project — not affiliated with Dogs in a Pile.
+        </div>
+      </div>
+    </section>"""
+    return shell(f"Dogs in a Pile {year} setlists — Setlist Hound",
+                 f"All {len(shows)} Dogs in a Pile shows of {year}, one page per show.",
+                 f"https://mikeside.com/setlisthound-with/{year}/", body)
+
+
 def render_index(payloads: list[dict]) -> str:
     latest = payloads[0]
     latest_blocks, latest_notes = set_blocks(latest)
@@ -264,22 +338,10 @@ def render_index(payloads: list[dict]) -> str:
         latest_fn = '<div class="fnlist">' + "".join(
             f"<p>{sup(i + 1)} {e(n)}</p>" for i, n in enumerate(latest_notes)) + "</div>"
 
-    months: dict[str, list[dict]] = {}
-    for p in payloads:
-        months.setdefault(datetime.strptime(p["show_date"], "%Y-%m-%d").strftime("%B %Y"), []).append(p)
-
-    cards = ""
-    for month, shows in months.items():
-        cards += (f'<div class="setname" style="max-width:820px;margin:1.6rem auto .8rem;">'
-                  f"<span>{e(month)}</span><span class=\"sl\">{len(shows)} show{'s' if len(shows) != 1 else ''}</span></div>"
-                  f'<div class="srcs">')
-        for p in shows:
-            n = sum(len(s.get("songs", [])) for s in p.get("sets", []))
-            slug = p.get("slug", p["show_date"])
-            extra = " · late show" if slug.endswith("-2") else ""
-            cards += (f'<a href="/setlisthound-with/{slug}/">{e(d_short(p["show_date"]))} · {e(p.get("venue", ""))}'
-                      f'<span class="w">{e(loc(p))} · {n} songs{extra}</span></a>')
-        cards += "</div>"
+    years = by_year(payloads)
+    this_year = max(years)
+    span = this_year if len(years) == 1 else f"{min(years)}–{max(years)}"
+    cards = year_nav(years, this_year) + month_cards(years[this_year])
 
     body = f"""    <section class="block" style="border-top:none;">
       <div class="container">
@@ -304,10 +366,10 @@ def render_index(payloads: list[dict]) -> str:
 
         <div class="section-head" style="margin-top:3rem;">
           <span class="setno">The shows, kept</span>
-          <h2>2026 — {len(payloads)} shows</h2>
+          <h2>{e(this_year)} — {len(years[this_year])} shows</h2>
           <p>Shows before the bot went live are transcribed from
              <a href="https://go-set.net" rel="noopener">go-set.net</a>; everything after is
-             tracked live, song by song.</p>
+             tracked live, song by song. {len(payloads)} shows archived, {e(span)}.</p>
         </div>
         {cards}
 
@@ -372,8 +434,8 @@ def render_index(payloads: list[dict]) -> str:
     }})();
     </script>"""
     title = "Setlist Hound — Dogs in a Pile setlists"
-    desc = ("Dogs in a Pile setlists, song by song — every 2026 show archived, and live "
-            "updates from @SetlistHound during shows.")
+    desc = (f"Dogs in a Pile setlists, song by song — {len(payloads)} shows archived "
+            f"({span}), and live updates from @SetlistHound during shows.")
     return shell(title, desc, "https://mikeside.com/setlisthound-with/", body, og_type="website")
 
 
@@ -533,6 +595,8 @@ def render_song(sl: str, info: dict) -> str:
     n = len(info["plays"])
     first = info["plays"][0][0]
     last = info["plays"][-1][0]
+    yrs = sorted({p[0]["show_date"][:4] for p in info["plays"]})
+    span_txt = f"in {yrs[0]}" if len(yrs) == 1 else f"between {yrs[0]} and {yrs[-1]}"
     credit = ""
     if info["credits"]:
         names = sorted(info["credits"])
@@ -554,7 +618,7 @@ def render_song(sl: str, info: dict) -> str:
         <div class="section-head">
           <span class="setno">Song</span>
           <h2>{e(title)}</h2>
-          <p>Played <strong>{n}</strong> time{"s" if n != 1 else ""} in 2026 —
+          <p>Played <strong>{n}</strong> time{"s" if n != 1 else ""} {span_txt} —
              first {e(d_short(first["show_date"]))}, most recently {e(d_short(last["show_date"]))}.
              Counts are from this archive; all-time numbers live at
              <a href="https://go-set.net">go-set.net</a>.</p>
@@ -569,7 +633,7 @@ def render_song(sl: str, info: dict) -> str:
       </div>
     </section>"""
     return shell(f"{title} — Setlist Hound",
-                 f"Every 2026 Dogs in a Pile performance of {title}, one row per show.",
+                 f"Every archived Dogs in a Pile performance of {title}, one row per show.",
                  f"https://mikeside.com/setlisthound-with/song/{sl}/", body)
 
 
@@ -601,7 +665,7 @@ def render_credits(n_shows: int) -> str:
         </div>
         <div class="faq">
           <div class="qa"><h3>What is this?</h3>
-            <p>{n_shows} Dogs in a Pile shows from 2026, one page per show — and a bot,
+            <p>{n_shows} Dogs in a Pile shows, one page per show — and a bot,
                <a href="https://x.com/SetlistHound" rel="noopener">@SetlistHound</a>, that will post
                each song to X as it's played, the way its sibling
                <a href="https://x.com/SetlistLizard" rel="noopener">@SetlistLizard</a> does for Phish.</p></div>
@@ -657,9 +721,20 @@ def main() -> int:
 
     (out_root / "index.html").write_text(render_index(payloads), encoding="utf-8")
 
+    # Year archive pages. The newest year lives at the index itself; its
+    # /YYYY/ URL still exists as a page so year links never 404.
+    years = by_year(payloads)
+    for y, shows in years.items():
+        yd = out_root / y
+        yd.mkdir(parents=True, exist_ok=True)
+        (yd / "index.html").write_text(render_year(y, shows, years), encoding="utf-8")
+    print(f"  + {len(years)} year pages ({min(years)}-{max(years)})")
+
+    # Stats stay a single-year claim (the page is titled for it). Feed it only
+    # the newest year so loading older years can never silently blend eras.
     stats_dir = out_root / "stats"
     stats_dir.mkdir(parents=True, exist_ok=True)
-    (stats_dir / "index.html").write_text(render_stats(payloads), encoding="utf-8")
+    (stats_dir / "index.html").write_text(render_stats(years[max(years)]), encoding="utf-8")
 
     songs = collect_songs(payloads)
     for sl, info in songs.items():
