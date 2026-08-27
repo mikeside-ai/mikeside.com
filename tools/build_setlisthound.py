@@ -281,12 +281,12 @@ def render_show(p: dict, prev: dict | None, nxt: dict | None) -> str:
           <a href="{e(src)}" rel="noopener">go-set.net<span class="w">The band's own setlist page — the source</span></a>
           <a href="https://dogsinapile.bandcamp.com" rel="noopener">Bandcamp<span class="w">Soundboards, when the band posts them</span></a>
           <a href="https://www.nugs.net/artist/dogs-in-a-pile" rel="noopener">nugs.net<span class="w">Official live recordings</span></a>
-          <a href="https://jampicks.net" rel="noopener">JamPicks<span class="w">Play the setlist game</span></a>
+          <a href="https://jampicks.com" rel="noopener">JamPicks<span class="w">Play the setlist game</span></a>
         </div>
         <div class="srcline">
           Setlist data: <a href="https://go-set.net" rel="noopener">go-set.net</a> · {prov}<br />
           <a href="https://x.com/SetlistHound" rel="noopener">🐕 @SetlistHound on X</a> ·
-          <a href="https://jampicks.net" rel="noopener">play the setlist game at JamPicks</a> ·
+          <a href="https://jampicks.com" rel="noopener">play the setlist game at JamPicks</a> ·
           <a href="/setlisthound-with/">all shows</a> · <a href="/#set-ii">← Set II</a><br />
           A fan project — not affiliated with Dogs in a Pile.
         </div>
@@ -416,7 +416,7 @@ def render_index(payloads: list[dict]) -> str:
           Setlist data: <a href="https://go-set.net" rel="noopener">go-set.net</a>, which is run by the band ·
           song times are feed-arrival times, not downbeats<br />
           <a href="https://x.com/SetlistHound" rel="noopener">🐕 @SetlistHound on X</a> ·
-          <a href="https://jampicks.net" rel="noopener">play the setlist game at JamPicks</a> ·
+          <a href="https://jampicks.com" rel="noopener">play the setlist game at JamPicks</a> ·
           <a href="/#set-ii">← Set II</a><br />
           A fan project — not affiliated with Dogs in a Pile.
         </div>
@@ -740,7 +740,7 @@ def render_credits(n_shows: int) -> str:
                pages were transcribed and a transcription can carry a typo; tell us and we'll fix
                it against the source.</p></div>
           <div class="qa"><h3>Can I play along?</h3>
-            <p>Yes — <a href="https://jampicks.net" rel="noopener">JamPicks</a> is the setlist
+            <p>Yes — <a href="https://jampicks.com" rel="noopener">JamPicks</a> is the setlist
                prediction game. Pick your songs before the show and see how you did.</p></div>
         </div>
         <div class="srcline">
