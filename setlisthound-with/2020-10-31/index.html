@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://mikeside.com/setlisthound-with/2020-10-31/" />
   <link rel="stylesheet" href="/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/setlistlizard.css?v=8" />
+  <link rel="stylesheet" href="/css/setlistlizard.css?v=9" />
 </head>
 <body>
   <header>
@@ -42,6 +42,7 @@
         <div class="pager top"><a href="/setlisthound-with/2020-10-24/"><span><span class="pg-l">← Previous show</span><span class="pg-v">Oct 24 · Blackthorne Resort</span></span></a><a href="/setlisthound-with/2020-11-05/"><span><span class="pg-l">Next show →</span><span class="pg-v">Nov 5 · High Peaks Studio</span></span></a></div>
         <div class="board"><div class="setblock"><div class="setname"><span>Set 1</span><span class="sl">7 songs &middot; 1:18:37</span></div><ol><li class="srow is-cover"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/thriller/">Thriller</a> <span class="tr">&gt;</span><span class="cov">Michael Jackson</span></span><span class="len">8:12</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/bubble/">Bubble</a></span><span class="len">14:31</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/look-johnny/">Look Johnny</a> <span class="tr">&gt;</span></span><span class="len">15:09</span></div></li><li class="srow is-cover"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/dancin-fool/">Dancin&#x27; Fool</a> <span class="fn">¹</span> <span class="tr">&gt;</span><span class="cov">Frank Zappa</span></span><span class="len">4:37</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/thomas-duncan-pt-2/">Thomas Duncan, Pt. 2</a> <span class="tr">&gt;</span></span><span class="len">18:17</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/blues-for-brian/">Blues for Brian</a></span><span class="len">9:12</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/trunk-rum/">Trunk Rum</a></span><span class="len">8:39</span></div></li></ol></div><div class="setblock"><div class="setname"><span>Set 2</span><span class="sl">7 songs &middot; 1:32:16</span></div><ol><li class="srow is-cover"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/money-for-nothing/">Money for Nothing</a> <span class="tr">&gt;</span><span class="cov">Dire Straits</span></span><span class="len">13:18</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/por-que-pedro/">¿Por Que, Pedro?</a></span><span class="len">4:42</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/spun/">Spun</a> <span class="tr">&gt;</span></span><span class="len">13:50</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/cr/">Creep</a> <span class="tr">&gt;</span></span><span class="len">6:40</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/craig-and-pa/">Craig and Pat</a> <span class="tr">&gt;</span></span><span class="len">23:05</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/samba-for-sam/">Samba for Sam</a> <span class="tr">&gt;</span></span><span class="len">13:48</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/charlie/">Charlie</a></span><span class="len">16:53</span></div></li></ol></div><div class="fnlist"><p>¹ Dancin&#x27; Fool: FTP, Frank Zappa</p></div></div>
         <div class="pager"><a href="/setlisthound-with/2020-10-24/"><span><span class="pg-l">← Previous show</span><span class="pg-v">Oct 24 · Blackthorne Resort</span></span></a><a href="/setlisthound-with/2020-11-05/"><span><span class="pg-l">Next show →</span><span class="pg-v">Nov 5 · High Peaks Studio</span></span></a></div>
+        <p class="keyhint">Tip: <kbd>&larr;</kbd> and <kbd>&rarr;</kbd> walk the run.</p>
         <div class="srcs" style="margin-top:2rem;">
           <a href="https://go-set.net/setlists/dogs-in-a-pile-october-31-2020-the-lords-new-church-huntingdon-valley-pa-usa.html" rel="noopener">go-set.net<span class="w">The band's own setlist page — the source</span></a>
           <a href="https://dogsinapile.bandcamp.com" rel="noopener">Bandcamp<span class="w">Soundboards, when the band posts them</span></a>
@@ -56,7 +57,30 @@
           A fan project — not affiliated with Dogs in a Pile.
         </div>
       </div>
-    </section>
+    </section><script>
+(function () {
+  "use strict";
+  // Left/right arrows walk the run. Anchored to the pager's own links, so
+  // this can never navigate somewhere the buttons do not already go, and the
+  // endpoints (first and last show) simply have nothing to bind.
+  var pager = document.querySelector(".pager");
+  if (!pager) return;
+  var links = pager.querySelectorAll("a");
+  var prev = null, next = null;
+  links.forEach(function (a) {
+    var t = (a.textContent || "");
+    if (t.indexOf("Previous") > -1) prev = a.getAttribute("href");
+    else if (t.indexOf("Next") > -1) next = a.getAttribute("href");
+  });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
+    var el = document.activeElement;
+    if (el && /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName)) return;
+    if (ev.key === "ArrowLeft" && prev) { location.href = prev; }
+    else if (ev.key === "ArrowRight" && next) { location.href = next; }
+  });
+})();
+</script>
   </main>
   <footer>
     <div class="container footer-inner">

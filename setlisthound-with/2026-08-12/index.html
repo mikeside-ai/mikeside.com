@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://mikeside.com/setlisthound-with/2026-08-12/" />
   <link rel="stylesheet" href="/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/setlistlizard.css?v=8" />
+  <link rel="stylesheet" href="/css/setlistlizard.css?v=9" />
 </head>
 <body>
   <header>
@@ -42,6 +42,7 @@
         <div class="pager top"><a href="/setlisthound-with/2026-08-08/"><span><span class="pg-l">← Previous show</span><span class="pg-v">Aug 8 · The Stone Pony Summer Stage</span></span></a><a href="/setlisthound-with/2026-08-13/"><span><span class="pg-l">Next show →</span><span class="pg-v">Aug 13 · LedgeStone Vineyards &amp; Winery</span></span></a></div>
         <div class="board"><div class="setblock"><div class="setname"><span>Set 1</span><span class="sl">7 songs &middot; 1:07:50</span></div><ol><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/happy-song/">Happy Song</a></span><span class="len">5:38</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/bring-it-on-up/">Bring It On Up</a> <span class="tr">-&gt;</span></span><span class="len">13:40</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/little-things/">Little Things</a></span><span class="len">9:47</span></div></li><li class="srow is-cover"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/samson-and-delilah/">Samson and Delilah</a><span class="cov">Traditional</span></span><span class="len">6:46</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/116-days/">116 Days</a> <span class="tr">&gt;</span></span><span class="len">5:13</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/rabbit/">Rabbit</a> <span class="tr">-&gt;</span></span><span class="len">12:27</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/stranger-2/">Stranger</a></span><span class="len">14:19</span></div></li></ol></div><div class="setblock"><div class="setname"><span>Set 2</span><span class="sl">6 songs &middot; 1:09:08</span></div><ol><li class="srow is-cover"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/smokestack-lightning/">Smokestack Lightning</a> <span class="tr">-&gt;</span><span class="cov">Howlin&#x27; Wolf</span></span><span class="len">6:51</span></div></li><li class="srow is-cover"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/fever/">Fever</a> <span class="tr">&gt;</span><span class="cov">The Cramps</span></span><span class="len">14:31</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/earthbound-man/">Earthbound Man</a></span><span class="len">7:06</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/it-gets-better/">It Gets Better</a></span><span class="len">18:35</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/lucias-secret/">Lucia’s Secret</a></span><span class="len">4:14</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/bent-strange/">Bent Strange</a></span><span class="len">17:51</span></div></li></ol></div><div class="setblock"><div class="setname"><span>Encore</span><span class="sl">1 song &middot; 4:47</span></div><ol><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/look-johnny-ii/">Look Johnny II</a></span><span class="len">4:47</span></div></li></ol></div></div>
         <div class="pager"><a href="/setlisthound-with/2026-08-08/"><span><span class="pg-l">← Previous show</span><span class="pg-v">Aug 8 · The Stone Pony Summer Stage</span></span></a><a href="/setlisthound-with/2026-08-13/"><span><span class="pg-l">Next show →</span><span class="pg-v">Aug 13 · LedgeStone Vineyards &amp; Winery</span></span></a></div>
+        <p class="keyhint">Tip: <kbd>&larr;</kbd> and <kbd>&rarr;</kbd> walk the run.</p>
         <div class="srcs" style="margin-top:2rem;">
           <a href="https://go-set.net/setlists/dogs-in-a-pile-august-12-2026-redstone-room-davenport-ia-usa.html" rel="noopener">go-set.net<span class="w">The band's own setlist page — the source</span></a>
           <a href="https://dogsinapile.bandcamp.com" rel="noopener">Bandcamp<span class="w">Soundboards, when the band posts them</span></a>
@@ -56,7 +57,30 @@
           A fan project — not affiliated with Dogs in a Pile.
         </div>
       </div>
-    </section>
+    </section><script>
+(function () {
+  "use strict";
+  // Left/right arrows walk the run. Anchored to the pager's own links, so
+  // this can never navigate somewhere the buttons do not already go, and the
+  // endpoints (first and last show) simply have nothing to bind.
+  var pager = document.querySelector(".pager");
+  if (!pager) return;
+  var links = pager.querySelectorAll("a");
+  var prev = null, next = null;
+  links.forEach(function (a) {
+    var t = (a.textContent || "");
+    if (t.indexOf("Previous") > -1) prev = a.getAttribute("href");
+    else if (t.indexOf("Next") > -1) next = a.getAttribute("href");
+  });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
+    var el = document.activeElement;
+    if (el && /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName)) return;
+    if (ev.key === "ArrowLeft" && prev) { location.href = prev; }
+    else if (ev.key === "ArrowRight" && next) { location.href = next; }
+  });
+})();
+</script>
   </main>
   <footer>
     <div class="container footer-inner">

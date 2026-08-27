@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://mikeside.com/setlisthound-with/2023-12-16/" />
   <link rel="stylesheet" href="/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/setlistlizard.css?v=8" />
+  <link rel="stylesheet" href="/css/setlistlizard.css?v=9" />
 </head>
 <body>
   <header>
@@ -42,6 +42,7 @@
         <div class="pager top"><a href="/setlisthound-with/2023-12-15/"><span><span class="pg-l">← Previous show</span><span class="pg-v">Dec 15 · The Stone Pony</span></span></a><a href="/setlisthound-with/2023-12-16-2/"><span><span class="pg-l">Next show →</span><span class="pg-v">Dec 16 · The Stone Pony</span></span></a></div>
         <div class="board"><div class="setblock"><div class="setname"><span>VIP Set</span><span class="sl">4 songs &middot; 27:39</span></div><ol><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/chocolate-milk/">Chocolate Milk</a></span><span class="len">10:56</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/battenkill-breakdown/">Battenkill Breakdown</a></span><span class="len">5:40</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/5-minutes/">5 Minutes</a></span><span class="len">4:07</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/earthbound-man/">Earthbound Man</a></span><span class="len">6:56</span></div></li></ol></div><div class="shownote">This was a pre-show set performed for VIP attendees.</div></div>
         <div class="pager"><a href="/setlisthound-with/2023-12-15/"><span><span class="pg-l">← Previous show</span><span class="pg-v">Dec 15 · The Stone Pony</span></span></a><a href="/setlisthound-with/2023-12-16-2/"><span><span class="pg-l">Next show →</span><span class="pg-v">Dec 16 · The Stone Pony</span></span></a></div>
+        <p class="keyhint">Tip: <kbd>&larr;</kbd> and <kbd>&rarr;</kbd> walk the run.</p>
         <div class="srcs" style="margin-top:2rem;">
           <a href="https://go-set.net/setlists/dogs-in-a-pile-december-16-2023-the-stone-pony-asbury-park-nj-usa.html" rel="noopener">go-set.net<span class="w">The band's own setlist page — the source</span></a>
           <a href="https://dogsinapile.bandcamp.com" rel="noopener">Bandcamp<span class="w">Soundboards, when the band posts them</span></a>
@@ -56,7 +57,30 @@
           A fan project — not affiliated with Dogs in a Pile.
         </div>
       </div>
-    </section>
+    </section><script>
+(function () {
+  "use strict";
+  // Left/right arrows walk the run. Anchored to the pager's own links, so
+  // this can never navigate somewhere the buttons do not already go, and the
+  // endpoints (first and last show) simply have nothing to bind.
+  var pager = document.querySelector(".pager");
+  if (!pager) return;
+  var links = pager.querySelectorAll("a");
+  var prev = null, next = null;
+  links.forEach(function (a) {
+    var t = (a.textContent || "");
+    if (t.indexOf("Previous") > -1) prev = a.getAttribute("href");
+    else if (t.indexOf("Next") > -1) next = a.getAttribute("href");
+  });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
+    var el = document.activeElement;
+    if (el && /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName)) return;
+    if (ev.key === "ArrowLeft" && prev) { location.href = prev; }
+    else if (ev.key === "ArrowRight" && next) { location.href = next; }
+  });
+})();
+</script>
   </main>
   <footer>
     <div class="container footer-inner">

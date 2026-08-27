@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://mikeside.com/setlisthound-with/2025-09-10/" />
   <link rel="stylesheet" href="/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/setlistlizard.css?v=8" />
+  <link rel="stylesheet" href="/css/setlistlizard.css?v=9" />
 </head>
 <body>
   <header>
@@ -42,6 +42,7 @@
         <div class="pager top"><a href="/setlisthound-with/2025-09-07/"><span><span class="pg-l">← Previous show</span><span class="pg-v">Sep 7 · Gull Lake Park</span></span></a><a href="/setlisthound-with/2025-09-12/"><span><span class="pg-l">Next show →</span><span class="pg-v">Sep 12 · HopMonk Tavern</span></span></a></div>
         <div class="board"><div class="setblock"><div class="setname"><span>One Set</span><span class="sl">6 songs &middot; <span title="5 of 6 songs timed; the rest are not in the band's data">55:38+</span></span></div><ol><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/westward/">Westward</a></span><span class="len">4:43</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/nicolette/">Nicolette</a></span><span class="len">16:26</span></div></li><li class="srow is-cover"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/spanish-moon/">Spanish Moon</a> <span class="fn">¹</span><span class="cov">Little Feat</span></span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/snow-day/">Snow Day</a></span><span class="len">9:05</span></div></li><li class="srow is-cover"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/way-to-be/">Way To Be</a><span class="cov">Mad Kings</span></span><span class="len">14:05</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/chop-shop/">Chop Shop</a></span><span class="len">11:19</span></div></li></ol></div><div class="setblock"><div class="setname"><span>One Set</span><span class="sl">9 songs &middot; 1:21:14</span></div><ol><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/the-bag/">The Bag</a></span><span class="len">8:41</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/jack/">Jack &amp; Coke</a> <span class="tr">&gt;</span></span><span class="len">11:14</span></div></li><li class="srow is-cover"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/minnie-the-moocher/">Minnie the Moocher</a> <span class="fn">²</span><span class="cov">Cabell “Cab” Calloway</span></span><span class="len">5:02</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/rabbit/">Rabbit</a> <span class="tr">-&gt;</span></span><span class="len">10:05</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/tillie/">Tillie</a> <span class="tr">-&gt;</span></span><span class="len">12:05</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/samba-for-sam/">Samba for Sam</a> <span class="tr">-&gt;</span></span><span class="len">12:33</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/por-que-pedro/">¿Por Que, Pedro?</a> <span class="tr">-&gt;</span></span><span class="len">5:12</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/samba-for-sam/">Samba for Sam</a></span><span class="len">3:48</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/look-johnny/">Look Johnny</a></span><span class="len">12:34</span></div></li></ol></div><div class="fnlist"><p>¹ Spanish Moon: Little Feat, with Alex Bailey</p><p>² Minnie the Moocher: Cab Calloway</p></div><div class="shownote">Performed at Bender Jamboree.</div></div>
         <div class="pager"><a href="/setlisthound-with/2025-09-07/"><span><span class="pg-l">← Previous show</span><span class="pg-v">Sep 7 · Gull Lake Park</span></span></a><a href="/setlisthound-with/2025-09-12/"><span><span class="pg-l">Next show →</span><span class="pg-v">Sep 12 · HopMonk Tavern</span></span></a></div>
+        <p class="keyhint">Tip: <kbd>&larr;</kbd> and <kbd>&rarr;</kbd> walk the run.</p>
         <div class="srcs" style="margin-top:2rem;">
           <a href="https://go-set.net/setlists/dogs-in-a-pile-september-10-2025-westgate-las-vegas-las-vegas-nv-usa.html" rel="noopener">go-set.net<span class="w">The band's own setlist page — the source</span></a>
           <a href="https://dogsinapile.bandcamp.com" rel="noopener">Bandcamp<span class="w">Soundboards, when the band posts them</span></a>
@@ -56,7 +57,30 @@
           A fan project — not affiliated with Dogs in a Pile.
         </div>
       </div>
-    </section>
+    </section><script>
+(function () {
+  "use strict";
+  // Left/right arrows walk the run. Anchored to the pager's own links, so
+  // this can never navigate somewhere the buttons do not already go, and the
+  // endpoints (first and last show) simply have nothing to bind.
+  var pager = document.querySelector(".pager");
+  if (!pager) return;
+  var links = pager.querySelectorAll("a");
+  var prev = null, next = null;
+  links.forEach(function (a) {
+    var t = (a.textContent || "");
+    if (t.indexOf("Previous") > -1) prev = a.getAttribute("href");
+    else if (t.indexOf("Next") > -1) next = a.getAttribute("href");
+  });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
+    var el = document.activeElement;
+    if (el && /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName)) return;
+    if (ev.key === "ArrowLeft" && prev) { location.href = prev; }
+    else if (ev.key === "ArrowRight" && next) { location.href = next; }
+  });
+})();
+</script>
   </main>
   <footer>
     <div class="container footer-inner">

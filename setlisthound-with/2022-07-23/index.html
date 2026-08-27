@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://mikeside.com/setlisthound-with/2022-07-23/" />
   <link rel="stylesheet" href="/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/setlistlizard.css?v=8" />
+  <link rel="stylesheet" href="/css/setlistlizard.css?v=9" />
 </head>
 <body>
   <header>
@@ -42,6 +42,7 @@
         <div class="pager top"><a href="/setlisthound-with/2022-07-19/"><span><span class="pg-l">← Previous show</span><span class="pg-v">Jul 19 · Ardmore Music Hall</span></span></a><a href="/setlisthound-with/2022-07-24/"><span><span class="pg-l">Next show →</span><span class="pg-v">Jul 24 · Infinity Music Hall</span></span></a></div>
         <div class="board"><div class="setblock"><div class="setname"><span>Set 1</span><span class="sl">7 songs &middot; 1:10:11</span></div><ol><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/stevie-lew/">Stevie Lew</a></span><span class="len">6:05</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/crazy/">Crazy</a></span><span class="len">6:26</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/little-things/">Little Things</a> <span class="tr">&gt;</span></span><span class="len">11:46</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/stranger-2/">Stranger</a></span><span class="len">7:27</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/thomas-duncan-pt-2/">Thomas Duncan, Pt. 2</a></span><span class="len">20:43</span></div></li><li class="srow is-cover"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/feel-like-a-stranger/">Feel Like A Stranger</a><span class="cov">Grateful Dead</span></span><span class="len">9:41</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/say-something/">Say Something</a> <span class="fn">¹</span></span><span class="len">8:03</span></div></li></ol></div><div class="setblock"><div class="setname"><span>Set 2</span><span class="sl">8 songs &middot; <span title="5 of 8 songs timed; the rest are not in the band's data">49:09+</span></span></div><ol><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/bubble/">Bubble</a> <span class="tr">&gt;</span></span><span class="len">9:46</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/edm-song/">EDM Song</a></span><span class="len">4:44</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/g-song/">G Song</a></span><span class="len">17:27</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/writing-on-the-wall/">Writing on the Wall</a></span><span class="len">11:29</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/all-the-same/">All The Same</a></span><span class="len">5:43</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/fenway/">Fenway</a> <span class="fn">²</span></span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/craig-and-pa/">Craig and Pat</a> <span class="tr">&gt;</span></span></div></li><li class="srow is-cover"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/way-to-be/">Way To Be</a><span class="cov">Mad Kings</span></span></div></li></ol></div><div class="fnlist"><p>¹ Say Something: with Lee Ross</p><p>² Fenway: with Ryan Dempsey</p></div><div class="shownote">Performed at Oxbow Music Festival.</div></div>
         <div class="pager"><a href="/setlisthound-with/2022-07-19/"><span><span class="pg-l">← Previous show</span><span class="pg-v">Jul 19 · Ardmore Music Hall</span></span></a><a href="/setlisthound-with/2022-07-24/"><span><span class="pg-l">Next show →</span><span class="pg-v">Jul 24 · Infinity Music Hall</span></span></a></div>
+        <p class="keyhint">Tip: <kbd>&larr;</kbd> and <kbd>&rarr;</kbd> walk the run.</p>
         <div class="srcs" style="margin-top:2rem;">
           <a href="https://go-set.net/setlists/dogs-in-a-pile-july-23-2022-oxbow-river-park-morrisville-vt-usa.html" rel="noopener">go-set.net<span class="w">The band's own setlist page — the source</span></a>
           <a href="https://dogsinapile.bandcamp.com" rel="noopener">Bandcamp<span class="w">Soundboards, when the band posts them</span></a>
@@ -56,7 +57,30 @@
           A fan project — not affiliated with Dogs in a Pile.
         </div>
       </div>
-    </section>
+    </section><script>
+(function () {
+  "use strict";
+  // Left/right arrows walk the run. Anchored to the pager's own links, so
+  // this can never navigate somewhere the buttons do not already go, and the
+  // endpoints (first and last show) simply have nothing to bind.
+  var pager = document.querySelector(".pager");
+  if (!pager) return;
+  var links = pager.querySelectorAll("a");
+  var prev = null, next = null;
+  links.forEach(function (a) {
+    var t = (a.textContent || "");
+    if (t.indexOf("Previous") > -1) prev = a.getAttribute("href");
+    else if (t.indexOf("Next") > -1) next = a.getAttribute("href");
+  });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
+    var el = document.activeElement;
+    if (el && /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName)) return;
+    if (ev.key === "ArrowLeft" && prev) { location.href = prev; }
+    else if (ev.key === "ArrowRight" && next) { location.href = next; }
+  });
+})();
+</script>
   </main>
   <footer>
     <div class="container footer-inner">

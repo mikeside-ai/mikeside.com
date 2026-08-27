@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://mikeside.com/setlisthound-with/2025-01-17/" />
   <link rel="stylesheet" href="/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/setlistlizard.css?v=8" />
+  <link rel="stylesheet" href="/css/setlistlizard.css?v=9" />
 </head>
 <body>
   <header>
@@ -42,6 +42,7 @@
         <div class="pager top"><a href="/setlisthound-with/2025-01-15/"><span><span class="pg-l">← Previous show</span><span class="pg-v">Jan 15 · Crazy Horse Saloon &amp; Grill</span></span></a><a href="/setlisthound-with/2025-01-18/"><span><span class="pg-l">Next show →</span><span class="pg-v">Jan 18 · Lost on Main</span></span></a></div>
         <div class="board"><div class="setblock"><div class="setname"><span>Set 1</span><span class="sl">7 songs &middot; 1:10:46</span></div><ol><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/little-things/">Little Things</a></span><span class="len">8:35</span></div></li><li class="srow is-cover"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/apeman/">Apeman</a><span class="cov">The Kinks</span></span><span class="len">4:49</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/nicolette/">Nicolette</a></span><span class="len">11:22</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/bubble/">Bubble</a></span><span class="len">16:19</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/ugly-song/">Ugly Song</a></span><span class="len">6:44</span></div></li><li class="srow is-cover"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/thats-what-love-will-make-you-do/">That&#x27;s What Love Will Make You Do</a> <span class="fn">¹</span><span class="cov">Little Milton</span></span><span class="len">10:55</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/chop-shop/">Chop Shop</a></span><span class="len">12:02</span></div></li></ol></div><div class="setblock"><div class="setname"><span>Set 2</span><span class="sl">7 songs &middot; 1:19:33</span></div><ol><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/go-set/">Go Set</a></span><span class="len">22:17</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/look-johnny-ii/">Look Johnny II</a></span><span class="len">4:35</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/it-gets-better/">It Gets Better</a></span><span class="len">10:13</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/burning-daylight/">Burning Daylight</a> <span class="tr">&gt;</span></span><span class="len">13:39</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/rabbit/">Rabbit</a> <span class="tr">&gt;</span></span><span class="len">11:22</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/lattice/">Lattice</a> <span class="tr">-&gt;</span></span><span class="len">7:23</span></div></li><li class="srow is-cover"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/linus-and-lucy/">Linus and Lucy</a><span class="cov">Vince Guaraldi</span></span><span class="len">10:04</span></div></li></ol></div><div class="setblock"><div class="setname"><span>Encore</span><span class="sl">1 song &middot; 7:29</span></div><ol><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/crazy/">Crazy</a></span><span class="len">7:29</span></div></li></ol></div><div class="fnlist"><p>¹ That&#x27;s What Love Will Make You Do: Little Milton, with Matty Michna on guitar</p></div></div>
         <div class="pager"><a href="/setlisthound-with/2025-01-15/"><span><span class="pg-l">← Previous show</span><span class="pg-v">Jan 15 · Crazy Horse Saloon &amp; Grill</span></span></a><a href="/setlisthound-with/2025-01-18/"><span><span class="pg-l">Next show →</span><span class="pg-v">Jan 18 · Lost on Main</span></span></a></div>
+        <p class="keyhint">Tip: <kbd>&larr;</kbd> and <kbd>&rarr;</kbd> walk the run.</p>
         <div class="srcs" style="margin-top:2rem;">
           <a href="https://go-set.net/setlists/dogs-in-a-pile-january-17-2025-rickshaw-stop-san-francisco-ca-usa.html" rel="noopener">go-set.net<span class="w">The band's own setlist page — the source</span></a>
           <a href="https://dogsinapile.bandcamp.com" rel="noopener">Bandcamp<span class="w">Soundboards, when the band posts them</span></a>
@@ -56,7 +57,30 @@
           A fan project — not affiliated with Dogs in a Pile.
         </div>
       </div>
-    </section>
+    </section><script>
+(function () {
+  "use strict";
+  // Left/right arrows walk the run. Anchored to the pager's own links, so
+  // this can never navigate somewhere the buttons do not already go, and the
+  // endpoints (first and last show) simply have nothing to bind.
+  var pager = document.querySelector(".pager");
+  if (!pager) return;
+  var links = pager.querySelectorAll("a");
+  var prev = null, next = null;
+  links.forEach(function (a) {
+    var t = (a.textContent || "");
+    if (t.indexOf("Previous") > -1) prev = a.getAttribute("href");
+    else if (t.indexOf("Next") > -1) next = a.getAttribute("href");
+  });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
+    var el = document.activeElement;
+    if (el && /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName)) return;
+    if (ev.key === "ArrowLeft" && prev) { location.href = prev; }
+    else if (ev.key === "ArrowRight" && next) { location.href = next; }
+  });
+})();
+</script>
   </main>
   <footer>
     <div class="container footer-inner">

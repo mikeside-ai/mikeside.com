@@ -38,6 +38,13 @@
   .srcs a { display:block; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:.8rem 1rem; color:var(--text); font-size:.88rem; transition:border-color .15s ease, transform .15s ease; }
   .srcs a:hover { border-color:var(--accent); transform:translateY(-2px); text-decoration:none; }
   .srcs .w { display:block; font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-top:.2rem; }
+  /* Keyboard-nav hint. Quiet, and hidden on touch where arrow keys do not
+     exist -- a tip you cannot act on is just clutter. */
+  .keyhint { max-width:820px; margin:.7rem auto 0; text-align:center; font-size:.72rem; color:var(--muted); }
+  .keyhint kbd { font-family:inherit; font-size:.7rem; border:1px solid var(--border); border-radius:3px;
+                 padding:.05rem .3rem; margin:0 .1rem; background:var(--card); }
+  @media (hover:none) and (pointer:coarse) { .keyhint { display:none; } }
+
   /* Covers wear their author inline. About a fifth of any DIAP night is
      somebody else's song, so this is the highest-value thing to be able to
      scan for. Kept quiet enough not to compete with the song title -- the

@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://mikeside.com/setlisthound-with/2024-11-23/" />
   <link rel="stylesheet" href="/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/setlistlizard.css?v=8" />
+  <link rel="stylesheet" href="/css/setlistlizard.css?v=9" />
 </head>
 <body>
   <header>
@@ -42,6 +42,7 @@
         <div class="pager top"><a href="/setlisthound-with/2024-11-22/"><span><span class="pg-l">← Previous show</span><span class="pg-v">Nov 22 · Terminal West</span></span></a><a href="/setlisthound-with/2024-11-29/"><span><span class="pg-l">Next show →</span><span class="pg-v">Nov 29 · The Capitol Theatre</span></span></a></div>
         <div class="board"><div class="setblock"><div class="setname"><span>One Set</span><span class="sl">11 songs &middot; 1:26:55</span></div><ol><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/you-didnt-hear-it-from-me/">You Didn’t Hear It From Me</a></span><span class="len">8:15</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/my-disguise/">My Disguise</a></span><span class="len">5:08</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/ugly-song/">Ugly Song</a></span><span class="len">5:46</span></div></li><li class="srow is-cover"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/feel-like-a-stranger/">Feel Like A Stranger</a> <span class="fn">¹</span><span class="cov">Grateful Dead</span></span><span class="len">11:12</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/tillie/">Tillie</a></span><span class="len">13:55</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/samba-for-sam/">Samba for Sam</a></span><span class="len">11:42</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/cr/">Creep</a></span><span class="len">7:03</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/shenanigans/">Shenanigans</a></span><span class="len">8:42</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/jack/">Jack &amp; Coke</a></span><span class="len">9:02</span></div></li><li class="srow is-cover"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/white-rabitt/">White Rabbit</a><span class="cov">Jefferson Airplane</span></span><span class="len">3:15</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/bugle-on-the-shelf/">Bugle on the Shelf</a> <span class="fn">²</span></span><span class="len">2:55</span></div></li></ol></div><div class="fnlist"><p>¹ Feel Like A Stranger: Grateful Dead, with Al Schnier from moe. on guitar</p><p>² Bugle on the Shelf: Ending only</p></div><div class="shownote">Performed at Sunshine Hootenanny Music &amp; Art Festival. Samba for Sam was unfinished.</div></div>
         <div class="pager"><a href="/setlisthound-with/2024-11-22/"><span><span class="pg-l">← Previous show</span><span class="pg-v">Nov 22 · Terminal West</span></span></a><a href="/setlisthound-with/2024-11-29/"><span><span class="pg-l">Next show →</span><span class="pg-v">Nov 29 · The Capitol Theatre</span></span></a></div>
+        <p class="keyhint">Tip: <kbd>&larr;</kbd> and <kbd>&rarr;</kbd> walk the run.</p>
         <div class="srcs" style="margin-top:2rem;">
           <a href="https://go-set.net/setlists/dogs-in-a-pile-november-23-2024-florida-sand-music-ranch-brooksville-fl-usa.html" rel="noopener">go-set.net<span class="w">The band's own setlist page — the source</span></a>
           <a href="https://dogsinapile.bandcamp.com" rel="noopener">Bandcamp<span class="w">Soundboards, when the band posts them</span></a>
@@ -56,7 +57,30 @@
           A fan project — not affiliated with Dogs in a Pile.
         </div>
       </div>
-    </section>
+    </section><script>
+(function () {
+  "use strict";
+  // Left/right arrows walk the run. Anchored to the pager's own links, so
+  // this can never navigate somewhere the buttons do not already go, and the
+  // endpoints (first and last show) simply have nothing to bind.
+  var pager = document.querySelector(".pager");
+  if (!pager) return;
+  var links = pager.querySelectorAll("a");
+  var prev = null, next = null;
+  links.forEach(function (a) {
+    var t = (a.textContent || "");
+    if (t.indexOf("Previous") > -1) prev = a.getAttribute("href");
+    else if (t.indexOf("Next") > -1) next = a.getAttribute("href");
+  });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
+    var el = document.activeElement;
+    if (el && /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName)) return;
+    if (ev.key === "ArrowLeft" && prev) { location.href = prev; }
+    else if (ev.key === "ArrowRight" && next) { location.href = next; }
+  });
+})();
+</script>
   </main>
   <footer>
     <div class="container footer-inner">

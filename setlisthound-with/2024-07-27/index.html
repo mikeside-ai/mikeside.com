@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://mikeside.com/setlisthound-with/2024-07-27/" />
   <link rel="stylesheet" href="/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/setlistlizard.css?v=8" />
+  <link rel="stylesheet" href="/css/setlistlizard.css?v=9" />
 </head>
 <body>
   <header>
@@ -42,6 +42,7 @@
         <div class="pager top"><a href="/setlisthound-with/2024-07-20/"><span><span class="pg-l">← Previous show</span><span class="pg-v">Jul 20 · Shorefront Park</span></span></a><a href="/setlisthound-with/2024-07-28/"><span><span class="pg-l">Next show →</span><span class="pg-v">Jul 28 · Bar A</span></span></a></div>
         <div class="board"><div class="setblock"><div class="setname"><span>One Set</span><span class="sl">10 songs &middot; 1:25:49</span></div><ol><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/hesitate/">Hesitate</a></span><span class="len">12:50</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/bugle-on-the-shelf/">Bugle on the Shelf</a></span><span class="len">13:20</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/didnt-you-know/">Didn&#x27;t You Know?</a></span><span class="len">7:32</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/mr-tooker/">Mr. Tooker</a></span><span class="len">6:46</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/rum-and-roses/">Rum and Roses</a></span><span class="len">6:28</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/chocolate-milk/">Chocolate Milk</a></span><span class="len">5:21</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/appleseed/">Appleseed</a></span><span class="len">11:04</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/samba-for-sam/">Samba for Sam</a></span><span class="len">10:21</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/earthbound-man/">Earthbound Man</a></span><span class="len">6:56</span></div></li><li class="srow"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/you-didnt-hear-it-from-me/">You Didn’t Hear It From Me</a></span><span class="len">5:11</span></div></li></ol></div><div class="setblock"><div class="setname"><span>Encore</span><span class="sl">1 song &middot; 4:53</span></div><ol><li class="srow is-cover"><div class="sline"><span><a class="song-t" href="/setlisthound-with/song/one-more-saturday-night/">One More Saturday Night</a><span class="cov">Bob Weir</span></span><span class="len">4:53</span></div></li></ol></div><div class="shownote">Performed at The Shakedown Festival. Samba for Sam was unfinished.</div></div>
         <div class="pager"><a href="/setlisthound-with/2024-07-20/"><span><span class="pg-l">← Previous show</span><span class="pg-v">Jul 20 · Shorefront Park</span></span></a><a href="/setlisthound-with/2024-07-28/"><span><span class="pg-l">Next show →</span><span class="pg-v">Jul 28 · Bar A</span></span></a></div>
+        <p class="keyhint">Tip: <kbd>&larr;</kbd> and <kbd>&rarr;</kbd> walk the run.</p>
         <div class="srcs" style="margin-top:2rem;">
           <a href="https://go-set.net/setlists/dogs-in-a-pile-july-27-2024-the-vortex-catonsville-md-usa.html" rel="noopener">go-set.net<span class="w">The band's own setlist page — the source</span></a>
           <a href="https://dogsinapile.bandcamp.com" rel="noopener">Bandcamp<span class="w">Soundboards, when the band posts them</span></a>
@@ -56,7 +57,30 @@
           A fan project — not affiliated with Dogs in a Pile.
         </div>
       </div>
-    </section>
+    </section><script>
+(function () {
+  "use strict";
+  // Left/right arrows walk the run. Anchored to the pager's own links, so
+  // this can never navigate somewhere the buttons do not already go, and the
+  // endpoints (first and last show) simply have nothing to bind.
+  var pager = document.querySelector(".pager");
+  if (!pager) return;
+  var links = pager.querySelectorAll("a");
+  var prev = null, next = null;
+  links.forEach(function (a) {
+    var t = (a.textContent || "");
+    if (t.indexOf("Previous") > -1) prev = a.getAttribute("href");
+    else if (t.indexOf("Next") > -1) next = a.getAttribute("href");
+  });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
+    var el = document.activeElement;
+    if (el && /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName)) return;
+    if (ev.key === "ArrowLeft" && prev) { location.href = prev; }
+    else if (ev.key === "ArrowRight" && next) { location.href = next; }
+  });
+})();
+</script>
   </main>
   <footer>
     <div class="container footer-inner">

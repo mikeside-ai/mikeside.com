@@ -146,7 +146,7 @@ def shell(title: str, desc: str, canonical: str, body: str, og_type: str = "arti
   <meta property="og:url" content="{e(canonical)}" />
   <link rel="stylesheet" href="/css/style.css" />
   {FONTS}
-  <link rel="stylesheet" href="/css/setlistlizard.css?v=8" />
+  <link rel="stylesheet" href="/css/setlistlizard.css?v=9" />
 </head>
 <body>
   <header>
@@ -428,6 +428,32 @@ def pager(prev: dict | None, nxt: dict | None, top: bool = False) -> str:
     return f'<div class="pager{" top" if top else ""}">{link(prev, True)}{link(nxt, False)}</div>'
 
 
+KEYNAV = """<script>
+(function () {
+  "use strict";
+  // Left/right arrows walk the run. Anchored to the pager's own links, so
+  // this can never navigate somewhere the buttons do not already go, and the
+  // endpoints (first and last show) simply have nothing to bind.
+  var pager = document.querySelector(".pager");
+  if (!pager) return;
+  var links = pager.querySelectorAll("a");
+  var prev = null, next = null;
+  links.forEach(function (a) {
+    var t = (a.textContent || "");
+    if (t.indexOf("Previous") > -1) prev = a.getAttribute("href");
+    else if (t.indexOf("Next") > -1) next = a.getAttribute("href");
+  });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
+    var el = document.activeElement;
+    if (el && /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName)) return;
+    if (ev.key === "ArrowLeft" && prev) { location.href = prev; }
+    else if (ev.key === "ArrowRight" && next) { location.href = next; }
+  });
+})();
+</script>"""
+
+
 def render_show(p: dict, prev: dict | None, nxt: dict | None,
                 albums: dict | None = None, debut_year: dict | None = None) -> str:
     slug = p.get("slug", p["show_date"])
@@ -470,6 +496,7 @@ def render_show(p: dict, prev: dict | None, nxt: dict | None,
         {pager(prev, nxt, top=True)}
         <div class="board">{blocks}{fnlist}{shownote}</div>
         {pager(prev, nxt)}
+        <p class="keyhint">Tip: <kbd>&larr;</kbd> and <kbd>&rarr;</kbd> walk the run.</p>
         <div class="srcs" style="margin-top:2rem;">
           <a href="{e(src)}" rel="noopener">go-set.net<span class="w">The band's own setlist page — the source</span></a>
           <a href="https://dogsinapile.bandcamp.com" rel="noopener">Bandcamp<span class="w">Soundboards, when the band posts them</span></a>
@@ -484,7 +511,7 @@ def render_show(p: dict, prev: dict | None, nxt: dict | None,
           A fan project — not affiliated with Dogs in a Pile.
         </div>
       </div>
-    </section>"""
+    </section>""" + KEYNAV
     return shell(title, desc, canonical, body)
 
 
@@ -567,6 +594,22 @@ def render_index(payloads: list[dict], albums: dict | None = None,
                  debut_year: dict | None = None) -> str:
     latest = payloads[0]
     index_charts = show_charts(latest, albums or {}, debut_year or {})
+    # The board shows the newest show, so there is no "next" -- but without a
+    # way back you can only reach last night's show by scrolling to the month
+    # cards. One step back, styled as the show pages' pager.
+    board_pager = ""
+    if len(payloads) > 1:
+        prev = payloads[1]
+        pslug = prev.get("slug", prev["show_date"])
+        board_pager = (f'<div class="pager" style="margin-top:1rem;">'
+                       f'<a href="/setlisthound-with/{pslug}/"><span>'
+                       f'<span class="pg-l">&larr; Previous show</span>'
+                       f'<span class="pg-v">{e(d_short(prev["show_date"]))} &middot; '
+                       f'{e(prev.get("venue", ""))}</span></span></a>'
+                       f'<a href="/setlisthound-with/{latest.get("slug", latest["show_date"])}/">'
+                       f'<span><span class="pg-l">This show in full &rarr;</span>'
+                       f'<span class="pg-v">{e(d_short(latest["show_date"]))} &middot; '
+                       f'{e(latest.get("venue", ""))}</span></span></a></div>')
     latest_blocks, latest_notes = set_blocks(latest)
     latest_fn = ""
     if latest_notes:
@@ -598,6 +641,7 @@ def render_index(payloads: list[dict], albums: dict | None = None,
           <p class="cav">The most recent show. During a show this board switches to LIVE and
              updates on its own, about once a minute.</p>
         </div>
+        {board_pager}
 
         {index_charts}
 
