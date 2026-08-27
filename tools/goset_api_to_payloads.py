@@ -21,6 +21,7 @@ printed for review -- when sources disagree, log the disagreement.
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import re
 from collections import defaultdict
@@ -28,6 +29,21 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "hound"
+
+
+def clean_text(s):
+    """Repair encoding damage, then un-escape go-set's HTML entities.
+
+    Order matters: fix the byte-level damage first, then decode entities.
+    go-set HTML-escapes some text on the way out (``Paul&#039;s Tavern``,
+    ``Butternuts Beer &amp; Ale``, ``&quot;`` inside footnotes), so passing it
+    through raw makes the site double-escape it and render the entity
+    literally. Un-escape here; the renderer does the single correct escape.
+    """
+    s = fix_mojibake(s)
+    if isinstance(s, str) and "&" in s:
+        return html.unescape(s)
+    return s
 
 
 def fix_mojibake(s):
@@ -102,7 +118,7 @@ def load_rows(raw: Path) -> list[dict]:
             if key in seen:
                 continue
             seen.add(key)
-            rows.append({k: fix_mojibake(v) for k, v in r.items()})
+            rows.append({k: clean_text(v) for k, v in r.items()})
 
     bulk = raw / "setlists-all-by-artist_id.json"
     if bulk.exists():

@@ -1042,5 +1042,6 @@
     null
    ]
   }
- ]
+ ],
+ "_frozen": "Captured once, 2026-08-24, while the payloads were still hand transcriptions. The payloads are now API-sourced, so re-running the converter can no longer reproduce this comparison -- it is the permanent record of that one-time reconciliation. Source transcriptions live in the bot repo at tmp-transcripts/."
 }
