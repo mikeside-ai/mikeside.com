@@ -188,6 +188,36 @@ def _norm_credit(t: str) -> str:
     return re.sub(r"\s+", " ", t)
 
 
+def hms(secs: int) -> str:
+    """1:57:04 over an hour, 57:04 under it."""
+    h, rem = divmod(int(secs), 3600)
+    m, sec = divmod(rem, 60)
+    return f"{h}:{m:02d}:{sec:02d}" if h else f"{m}:{sec:02d}"
+
+
+def duration(songs: list) -> tuple:
+    """(seconds, timed, total). Only 501 of 691 archived shows are FULLY
+    timed -- 41 are partial and 149 carry no timings at all -- so a caller
+    must never print the sum without saying which of those it is. A partial
+    sum silently understates the set."""
+    tot = len(songs)
+    timed = [s for s in songs if s.get("length_secs")]
+    return sum(int(s["length_secs"]) for s in timed), len(timed), tot
+
+
+def dur_label(songs: list) -> str:
+    """Duration as a display string, honest about completeness, or ''."""
+    secs, timed, tot = duration(songs)
+    if not timed:
+        return ""
+    if timed == tot:
+        return hms(secs)
+    # Partial: a plus sign and a tooltip, never a bare number that reads
+    # like the whole thing.
+    return (f'<span title="{timed} of {tot} songs timed; the rest are not in '
+            f'the band\'s data">{hms(secs)}+</span>')
+
+
 def song_line(song: dict, notes: list[str]) -> str:
     mark = ""
     artist = cover_artist(song)
@@ -225,9 +255,13 @@ def set_blocks(p: dict) -> tuple[str, list[str]]:
     for st in p.get("sets", []):
         rows = "".join(song_line(s, notes) for s in st.get("songs", []))
         count = len(st.get("songs", []))
+        dl = dur_label(st.get("songs", []))
+        meta = f'{count} song{"s" if count != 1 else ""}'
+        if dl:
+            meta += f' &middot; {dl}'
         out += (f'<div class="setblock"><div class="setname">'
                 f'<span>{e(st.get("display") or st.get("label"))}</span>'
-                f'<span class="sl">{count} song{"s" if count != 1 else ""}</span></div>'
+                f'<span class="sl">{meta}</span></div>'
                 f"<ol>{rows}</ol></div>")
     return out, notes
 
@@ -374,6 +408,10 @@ def glance(p: dict) -> str:
     n_notes = sum(1 for st in p.get("sets", []) for s in st.get("songs", []) if s.get("footnote"))
     tiles = [(n_songs, "Songs"), (n_sets, "Sets"), (n_sand, "Sandwiches"),
              (n_ftp, "First-times"), (n_notes, "Notes")]
+    all_songs = [sg for st in p.get("sets", []) for sg in st.get("songs", [])]
+    dl = dur_label(all_songs)
+    if dl:
+        tiles.insert(2, (dl, "Show length"))
     return '<div class="glance">' + "".join(
         f'<div class="stat"><div class="n">{v}</div><div class="l">{l}</div></div>'
         for v, l in tiles) + "</div>"
@@ -525,8 +563,10 @@ def render_year(year: str, shows: list[dict], years: dict[str, list[dict]]) -> s
                  f"https://mikeside.com/setlisthound-with/{year}/", body)
 
 
-def render_index(payloads: list[dict]) -> str:
+def render_index(payloads: list[dict], albums: dict | None = None,
+                 debut_year: dict | None = None) -> str:
     latest = payloads[0]
+    index_charts = show_charts(latest, albums or {}, debut_year or {})
     latest_blocks, latest_notes = set_blocks(latest)
     latest_fn = ""
     if latest_notes:
@@ -559,6 +599,8 @@ def render_index(payloads: list[dict]) -> str:
              updates on its own, about once a minute.</p>
         </div>
 
+        {index_charts}
+
         <div class="section-head" style="margin-top:3rem;">
           <span class="setno">The shows, kept</span>
           <h2>{e(this_year)} — {len(years[this_year])} shows</h2>
@@ -584,6 +626,11 @@ def render_index(payloads: list[dict]) -> str:
       // Live board: swap in setlist.json when it is FRESH (< 40 min) and not
       // complete. Freshness is asserted from the DATA, never from the calendar
       // — existence is not liveness.
+      var fmt = function (n) {{
+        n = Math.round(n); var h = Math.floor(n / 3600), m = Math.floor((n % 3600) / 60), s = n % 60;
+        return h ? (h + ":" + String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0"))
+                 : (m + ":" + String(s).padStart(2, "0"));
+      }};
       var esc = function (s) {{ return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {{
         return {{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}}[c]; }}); }};
       function render(data) {{
@@ -597,15 +644,29 @@ def render_index(payloads: list[dict]) -> str:
           [data.city, data.state].filter(Boolean).join(", ");
         var h = "";
         (data.sets || []).forEach(function (st) {{
+          // Set length only when EVERY song in the set is timed. A partial
+          // sum during a live show would read as the set being shorter than
+          // it is, which is worse than saying nothing.
+          var ss = st.songs || [], td = ss.filter(function (x) {{ return x.length_secs; }});
+          var meta = ss.length + ' songs';
+          if (ss.length && td.length === ss.length) {{
+            var tot = td.reduce(function (a, x) {{ return a + x.length_secs; }}, 0);
+            meta += ' \u00b7 ' + fmt(tot);
+          }}
           h += '<div class="setblock"><div class="setname"><span>' + esc(st.display) +
-               '</span><span class="sl">' + (st.songs || []).length + ' songs</span></div><ol>';
+               '</span><span class="sl">' + meta + '</span></div><ol>';
           (st.songs || []).forEach(function (s, i) {{
             var isNow = st === data.sets[data.sets.length - 1] && i === st.songs.length - 1;
             var tr = (s.transition === ">" || s.transition === "->")
                      ? ' <span class="tr">' + esc(s.transition) + "</span>" : "";
-            h += '<li class="srow"><div class="sline"><span' +
-                 (isNow ? ' style="color:#3fb950;"' : "") + ">" + esc(s.title) + tr +
-                 "</span>" + (isNow ? '<span class="len" style="color:#3fb950;">playing…</span>' : "") +
+            var cov = s.original_artist
+                      ? '<span class="cov">' + esc(s.original_artist) + '</span>' : "";
+            var len = (!isNow && s.length_secs)
+                      ? '<span class="len">' + fmt(s.length_secs) + '</span>' : "";
+            h += '<li class="srow' + (s.original_artist ? ' is-cover' : '') +
+                 '"><div class="sline"><span' +
+                 (isNow ? ' style="color:#3fb950;"' : "") + ">" + esc(s.title) + tr + cov +
+                 "</span>" + (isNow ? '<span class="len" style="color:#3fb950;">playing…</span>' : len) +
                  "</div></li>";
           }});
           h += "</ol></div>";
@@ -947,8 +1008,6 @@ def main() -> int:
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(render_show(p, prev, nxt, albums, debut_year), encoding="utf-8")
 
-    (out_root / "index.html").write_text(render_index(payloads), encoding="utf-8")
-
     # Year archive pages. The newest year lives at the index itself; its
     # /YYYY/ URL still exists as a page so year links never 404.
     years = by_year(payloads)
@@ -957,6 +1016,8 @@ def main() -> int:
         yd.mkdir(parents=True, exist_ok=True)
         (yd / "index.html").write_text(render_year(y, shows, years), encoding="utf-8")
     print(f"  + {len(years)} year pages ({min(years)}-{max(years)})")
+
+    (out_root / "index.html").write_text(render_index(payloads, albums, debut_year), encoding="utf-8")
 
     # Stats stay a single-year claim (the page is titled for it). Feed it only
     # the newest year so loading older years can never silently blend eras.
