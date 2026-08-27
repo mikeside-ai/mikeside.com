@@ -38,6 +38,15 @@
   .srcs a { display:block; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:.8rem 1rem; color:var(--text); font-size:.88rem; transition:border-color .15s ease, transform .15s ease; }
   .srcs a:hover { border-color:var(--accent); transform:translateY(-2px); text-decoration:none; }
   .srcs .w { display:block; font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-top:.2rem; }
+  /* Covers wear their author inline. About a fifth of any DIAP night is
+     somebody else's song, so this is the highest-value thing to be able to
+     scan for. Kept quiet enough not to compete with the song title -- the
+     accent tint is the signal, the size keeps it subordinate. */
+  .srow .cov { margin-left:.5rem; font-size:.74rem; color:var(--accent-soft); opacity:.85;
+               letter-spacing:.02em; white-space:nowrap; }
+  .srow .cov::before { content:"\2022"; margin-right:.4rem; opacity:.5; }
+  @media (max-width:520px) { .srow .cov { white-space:normal; } }
+
   /* Per-show charts. Two cards side by side, stacking on narrow screens.
      Colours live in the generator (validated there against this surface);
      this file only does layout, so a palette change never means a CSS edit. */

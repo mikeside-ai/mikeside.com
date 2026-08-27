@@ -146,7 +146,7 @@ def shell(title: str, desc: str, canonical: str, body: str, og_type: str = "arti
   <meta property="og:url" content="{e(canonical)}" />
   <link rel="stylesheet" href="/css/style.css" />
   {FONTS}
-  <link rel="stylesheet" href="/css/setlistlizard.css?v=7" />
+  <link rel="stylesheet" href="/css/setlistlizard.css?v=8" />
 </head>
 <body>
   <header>
@@ -177,10 +177,25 @@ def shell(title: str, desc: str, canonical: str, body: str, og_type: str = "arti
 """
 
 
+def _norm_credit(t: str) -> str:
+    """Loose compare for 'is this footnote just the artist name again?'.
+    Measured on 2026: 169 of 218 covers have a footnote identical to
+    original_artist, so showing both would be noise on four rows in five.
+    Case, smart quotes and a trailing full stop are not differences;
+    'FTP,' and 'with <guest>' are."""
+    t = re.sub(r"[\u2018\u2019\u201c\u201d\"']", "", (t or "").lower())
+    t = re.sub(r"[.,;:]+$", "", t).strip()
+    return re.sub(r"\s+", " ", t)
+
+
 def song_line(song: dict, notes: list[str]) -> str:
     mark = ""
-    if song.get("footnote"):
-        notes.append(f"{song['title']}: {song['footnote']}")
+    artist = cover_artist(song)
+    fn = song.get("footnote") or ""
+    # Keep the footnote only when it says something the inline credit does not
+    # -- a guest, an FTP flag, a tease.
+    if fn and (not artist or _norm_credit(fn) != _norm_credit(artist)):
+        notes.append(f"{song['title']}: {fn}")
         mark = f' <span class="fn">{sup(len(notes))}</span>'
     tr = (song.get("transition") or "").strip()
     tr_html = ""
@@ -195,8 +210,12 @@ def song_line(song: dict, notes: list[str]) -> str:
     if song.get("length_secs"):
         m, s = divmod(int(song["length_secs"]), 60)
         ln = f'<span class="len">{m}:{s:02d}</span>'
-    return (f'<li class="srow"><div class="sline">'
-            f'<span>{t}{mark}{tr_html}</span>{ln}'
+    # Covers wear their author inline. It is the single most useful thing to
+    # know scanning a DIAP setlist -- roughly a fifth of any night is somebody
+    # else's song -- and the field is the band's own data, not a guess.
+    cov = f'<span class="cov">{e(artist)}</span>' if artist else ""
+    return (f'<li class="srow{" is-cover" if artist else ""}"><div class="sline">'
+            f'<span>{t}{mark}{tr_html}{cov}</span>{ln}'
             f"</div></li>")
 
 
