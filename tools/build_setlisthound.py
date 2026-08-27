@@ -146,7 +146,7 @@ def shell(title: str, desc: str, canonical: str, body: str, og_type: str = "arti
   <meta property="og:url" content="{e(canonical)}" />
   <link rel="stylesheet" href="/css/style.css" />
   {FONTS}
-  <link rel="stylesheet" href="/css/setlistlizard.css?v=5" />
+  <link rel="stylesheet" href="/css/setlistlizard.css?v=6" />
 </head>
 <body>
   <header>
@@ -311,16 +311,17 @@ def year_nav(years: dict[str, list[dict]], current: str) -> str:
     parts = []
     for y in sorted(years, reverse=True):
         n = len(years[y])
-        label = f"{y} <span class=\"sl\">{n}</span>"
+        inner = (f'<span class="yr">{y}</span>'
+                 f'<span class="w">{n} show{"s" if n != 1 else ""}</span>')
         if y == current:
-            parts.append(f'<span style="color:var(--accent-2);font-weight:600;">{label}</span>')
+            parts.append(f'<span class="cur" aria-current="page">{inner}</span>')
         else:
             href = "/setlisthound-with/" if y == max(years) else f"/setlisthound-with/{y}/"
-            parts.append(f'<a href="{href}">{label}</a>')
-    return ('<div class="setname" style="max-width:820px;margin:2.2rem auto .4rem;">'
-            '<span>Browse by year</span><span class="sl">every show, kept</span></div>'
-            '<div class="srcs" style="max-width:820px;margin:0 auto;">'
-            + "".join(parts) + "</div>")
+            parts.append(f'<a href="{href}">{inner}</a>')
+    total = sum(len(v) for v in years.values())
+    return ('<div class="setname" style="max-width:820px;margin:2.2rem auto .6rem;">'
+            f'<span>Browse by year</span><span class="sl">{total} shows kept</span></div>'
+            '<div class="ynav">' + "".join(parts) + "</div>")
 
 
 def month_cards(shows: list[dict]) -> str:
