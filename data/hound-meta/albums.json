@@ -1,0 +1,16 @@
+{
+ "_source": "https://go-set.net/discography/ and the three release pages, read 2026-08-27",
+ "_note": "go-set's discography is the authority for album membership and release dates. Only 27 unique tracks across 3 records, so most of the 270-song repertoire is unreleased originals or covers -- the charts must say so rather than implying a song has no album because we failed to look it up.",
+ "albums": [
+  {"title": "Distroid", "release_date": "2025-11-19", "year": 2025,
+   "tracks": ["Go Set", "Lucia’s Secret", "My Disguise", "Nicolette", "Shenanigans",
+              "Thomas Duncan, Pt. 3", "The Bag", "Samba for Sam", "¿Por Que, Pedro?"]},
+  {"title": "Bloom", "release_date": "2023-02-17", "year": 2023,
+   "tracks": ["Today", "Bent Strange", "All The Same", "Stranger", "Fenway",
+              "Hesitate", "Trunk Rum", "Rum and Roses", "Say Something"]},
+  {"title": "Not Your Average Beagle", "release_date": "2021-05-01", "year": 2021,
+   "tracks": ["Can't Wait for Tonight", "Thomas Duncan, Pt. 2", "Look Johnny",
+              "Renaissance Man", "Snow Day", "Inchworm", "Bubble", "Rinky Dink Rag",
+              "Bugle on the Shelf"]}
+ ]
+}
