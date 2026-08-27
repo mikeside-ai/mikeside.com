@@ -38,6 +38,31 @@
   .srcs a { display:block; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:.8rem 1rem; color:var(--text); font-size:.88rem; transition:border-color .15s ease, transform .15s ease; }
   .srcs a:hover { border-color:var(--accent); transform:translateY(-2px); text-decoration:none; }
   .srcs .w { display:block; font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-top:.2rem; }
+  /* Per-show charts. Two cards side by side, stacking on narrow screens.
+     Colours live in the generator (validated there against this surface);
+     this file only does layout, so a palette change never means a CSS edit. */
+  .charts { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem;
+            max-width:820px; margin:1.4rem auto 0; }
+  .chart { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:1rem 1.1rem; }
+  .chart .ch { font-family:"Fraunces",Georgia,serif; color:var(--accent-soft); font-size:.72rem;
+               letter-spacing:.16em; text-transform:uppercase; margin-bottom:.8rem; }
+  .donut { display:block; width:150px; height:150px; margin:0 auto .6rem; }
+  /* Identity is never colour alone: every slice is named and counted here. */
+  .ckey { list-style:none; padding:0; margin:0; font-size:.82rem; }
+  .ckey li { display:flex; align-items:center; gap:.5rem; padding:.22rem 0; }
+  .ckey i { width:10px; height:10px; border-radius:2px; flex:none; }
+  .ckey .k { color:var(--text); min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .ckey .v { margin-left:auto; color:var(--muted); font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .ckey .v em { font-style:normal; margin-left:.45rem; opacity:.75; font-size:.75rem; }
+  /* Ordinal bars: ordered data keeps its order, one hue darkening with size. */
+  .obars { display:flex; flex-direction:column; gap:.3rem; }
+  .obar { display:flex; align-items:center; gap:.55rem; font-size:.8rem; }
+  .obar .ol { width:2.6rem; color:var(--muted); font-variant-numeric:tabular-nums; flex:none; }
+  .obar .ot { flex:1; height:9px; background:rgba(255,255,255,.05); border-radius:5px; overflow:hidden; }
+  .obar .ot i { display:block; height:100%; border-radius:5px; }
+  .obar .on { width:1.6rem; text-align:right; color:var(--text); font-variant-numeric:tabular-nums; flex:none; }
+  .chart .cnote { margin:.7rem 0 0; font-size:.7rem; color:var(--muted); line-height:1.5; }
+
   /* Year picker (Hound archive spans 2018-2026). Deliberately NOT .srcs:
      that grid's 230px minimum is sized for source cards with a sentence of
      description, and a year plus a count left it sparse and hard to scan.

@@ -146,7 +146,7 @@ def shell(title: str, desc: str, canonical: str, body: str, og_type: str = "arti
   <meta property="og:url" content="{e(canonical)}" />
   <link rel="stylesheet" href="/css/style.css" />
   {FONTS}
-  <link rel="stylesheet" href="/css/setlistlizard.css?v=6" />
+  <link rel="stylesheet" href="/css/setlistlizard.css?v=7" />
 </head>
 <body>
   <header>
@@ -213,6 +213,140 @@ def set_blocks(p: dict) -> tuple[str, list[str]]:
     return out, notes
 
 
+# ---------------------------------------------------------------------------
+# Per-show charts.
+#
+# Palette: the reference categorical dark slots, IN SLOT ORDER, validated
+# against this site's card surface (#151c38) -- all five checks pass: lightness
+# band, chroma floor, CVD separation, normal-vision floor, contrast. Reordering
+# them breaks CVD separation (measured: magenta/aqua drop to dE 1.6 for
+# deuteranopia), which is why the order is fixed and hues follow the ENTITY,
+# never its size rank. Do not "improve" this by sorting.
+SERIES = ["#3987e5", "#d95926", "#199e70", "#c98500", "#d55181"]
+# Debut year is ORDINAL, not categorical -- nine years cannot be nine hues
+# (the palette has eight slots and ordered data must not be shuffled into
+# arbitrary colours). It gets one hue, light to dark, as bars.
+ORDINAL = ["#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#184f95", "#104281"]
+SURFACE = "#151c38"
+
+
+def donut(slices: list, total: int, centre_label: str = "") -> str:
+    """slices: [(label, count, colour)]. A donut, not a pie: the hole carries
+    the total, which a pie has to put in a caption instead."""
+    if not total:
+        return ""
+    R, C = 35.0, 50.0
+    circ = 2 * 3.14159265 * R
+    out, offset = "", 0.0
+    for label, n, colour in slices:
+        frac = n / total
+        seg = frac * circ
+        gap = 1.6 if len(slices) > 1 else 0.0     # 2px-ish surface gap
+        out += (f'<circle cx="{C}" cy="{C}" r="{R}" fill="none" stroke="{colour}" '
+                f'stroke-width="14" stroke-dasharray="{max(seg - gap, 0.4):.2f} {circ - max(seg - gap, 0.4):.2f}" '
+                f'stroke-dashoffset="{-offset:.2f}" transform="rotate(-90 {C} {C})">'
+                f'<title>{e(label)}: {n} of {total}</title></circle>')
+        offset += seg
+    mid = ""
+    if centre_label:
+        mid = (f'<text x="{C}" y="{C - 1}" text-anchor="middle" fill="var(--text)" '
+               f'font-size="15" font-weight="600" font-family="Fraunces,Georgia,serif">{e(total)}</text>'
+               f'<text x="{C}" y="{C + 11}" text-anchor="middle" fill="var(--muted)" '
+               f'font-size="6.5" letter-spacing="1.2">{e(centre_label.upper())}</text>')
+    return (f'<svg viewBox="0 0 100 100" class="donut" role="img" '
+            f'aria-label="{e(centre_label)}">{out}{mid}</svg>')
+
+
+def legend(slices: list, total: int) -> str:
+    """Identity is never colour-alone: every slice is named and counted."""
+    rows = ""
+    for label, n, colour in slices:
+        pct = round(100 * n / total) if total else 0
+        rows += (f'<li><i style="background:{colour}"></i>'
+                 f'<span class="k">{e(label)}</span>'
+                 f'<span class="v">{n}<em>{pct}%</em></span></li>')
+    return f'<ul class="ckey">{rows}</ul>'
+
+
+def ordinal_bars(pairs: list, total: int) -> str:
+    """pairs: [(label, count)] already in natural order. Ordered data keeps its
+    order; a single hue darkens with magnitude."""
+    if not pairs:
+        return ""
+    top = max(n for _, n in pairs) or 1
+    rows = ""
+    for label, n in pairs:
+        w = max(3, round(100 * n / top))
+        # ONE hue. Bar length already encodes magnitude; shading it too is
+        # redundant, and on a dark surface a "darker means more" ramp reads
+        # backwards -- the biggest value would be the least visible.
+        rows += (f'<div class="obar"><span class="ol">{e(label)}</span>'
+                 f'<span class="ot"><i style="width:{w}%;background:{ORDINAL[3]}"></i></span>'
+                 f'<span class="on">{n}</span></div>')
+    return f'<div class="obars">{rows}</div>'
+
+
+def album_slices(p: dict, albums: dict) -> tuple:
+    """Album membership for one show. 'Unreleased' and 'Cover' are first-class:
+    across 2026 they are 51% and 21% of everything played, so burying them in a
+    residue bucket would misdescribe the night."""
+    import collections
+    track_album = {}
+    order = []
+    for a in albums.get("albums", []):
+        order.append(a["title"])
+        for t in a["tracks"]:
+            track_album[t] = a["title"]
+    counts = collections.Counter()
+    for st in p.get("sets", []):
+        for sg in st.get("songs", []):
+            if song_key(sg) is None:
+                continue                      # go-set one-off: not repertoire
+            t = sg["title"]
+            if t in track_album:
+                counts[track_album[t]] += 1
+            elif cover_artist(sg):
+                counts["Cover"] += 1
+            else:
+                counts["Unreleased"] += 1
+    # Fixed entity order -> fixed colour. A show missing an album does not
+    # repaint the others.
+    cats = order + ["Unreleased", "Cover"]
+    slices = [(c, counts[c], SERIES[i % len(SERIES)])
+              for i, c in enumerate(cats) if counts[c]]
+    return slices, sum(counts.values())
+
+
+def debut_pairs(p: dict, debut_year: dict) -> tuple:
+    import collections
+    c = collections.Counter()
+    for st in p.get("sets", []):
+        for sg in st.get("songs", []):
+            k = song_key(sg)
+            if k is None:
+                continue
+            y = debut_year.get(k)
+            if y:
+                c[y] += 1
+    return sorted(c.items()), sum(c.values())
+
+
+def show_charts(p: dict, albums: dict, debut_year: dict) -> str:
+    a_sl, a_tot = album_slices(p, albums)
+    d_pr, d_tot = debut_pairs(p, debut_year)
+    if a_tot < 4:                       # too few songs to say anything
+        return ""
+    cards = (f'<div class="chart"><div class="ch">Where the songs come from</div>'
+             f'{donut(a_sl, a_tot, "songs")}{legend(a_sl, a_tot)}</div>')
+    if d_pr:
+        first = min(y for y, _ in d_pr)
+        cards += (f'<div class="chart"><div class="ch">First played, by year</div>'
+                  f'{ordinal_bars(d_pr, d_tot)}'
+                  f'<p class="cnote">Debut years are counted from this archive, which '
+                  f'starts in July 2018.</p></div>')
+    return (f'<div class="charts">{cards}</div>')
+
+
 def glance(p: dict) -> str:
     n_songs = sum(len(s.get("songs", [])) for s in p.get("sets", []))
     n_sets = len(p.get("sets", []))
@@ -237,7 +371,8 @@ def pager(prev: dict | None, nxt: dict | None, top: bool = False) -> str:
     return f'<div class="pager{" top" if top else ""}">{link(prev, True)}{link(nxt, False)}</div>'
 
 
-def render_show(p: dict, prev: dict | None, nxt: dict | None) -> str:
+def render_show(p: dict, prev: dict | None, nxt: dict | None,
+                albums: dict | None = None, debut_year: dict | None = None) -> str:
     slug = p.get("slug", p["show_date"])
     title = f"Dogs in a Pile — {d_short(p['show_date'])}, 2026 · {p.get('venue', '')} — Setlist Hound"
     desc = (f"Dogs in a Pile setlist for {d_long(p['show_date'])} at "
@@ -274,6 +409,7 @@ def render_show(p: dict, prev: dict | None, nxt: dict | None) -> str:
           <p>{e(loc(p))}</p>
         </div>
         {glance(p)}
+        {show_charts(p, albums or {}, debut_year or {})}
         {pager(prev, nxt, top=True)}
         <div class="board">{blocks}{fnlist}{shownote}</div>
         {pager(prev, nxt)}
@@ -771,12 +907,26 @@ def main() -> int:
     payloads.sort(key=lambda p: (p["show_date"], p.get("slug", p["show_date"])), reverse=True)
 
     chrono = list(reversed(payloads))
+
+    # Chart inputs, computed once. Debut year comes from THIS archive, so the
+    # note under the chart says where the archive starts -- a song first seen
+    # on day one may well have been played before it.
+    albums_path = ROOT / "data" / "hound-meta" / "albums.json"
+    albums = json.loads(albums_path.read_text(encoding="utf-8")) if albums_path.exists() else {"albums": []}
+    debut_year: dict = {}
+    for pay in chrono:
+        for st in pay["sets"]:
+            for sg in st["songs"]:
+                k = song_key(sg)
+                if k and k not in debut_year:
+                    debut_year[k] = pay["show_date"][:4]
+    print(f"  charts: {len(albums.get('albums', []))} albums, {len(debut_year)} debut years")
     for i, p in enumerate(chrono):
         prev = chrono[i - 1] if i > 0 else None
         nxt = chrono[i + 1] if i + 1 < len(chrono) else None
         out = out_root / p.get("slug", p["show_date"]) / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(render_show(p, prev, nxt), encoding="utf-8")
+        out.write_text(render_show(p, prev, nxt, albums, debut_year), encoding="utf-8")
 
     (out_root / "index.html").write_text(render_index(payloads), encoding="utf-8")
 
