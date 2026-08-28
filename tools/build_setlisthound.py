@@ -817,8 +817,146 @@ def _bars(rows: list, total_label: str) -> str:
     return (f'<div class="tube" style="width:100%"><span class="lab">{e(total_label)}</span>{out}</div>')
 
 
-def render_stats(payloads: list) -> str:
+
+# --------------------------------------------------------------- all-time rarity
+
+# Aggregating on this slug would be a lie: go-set's "_custom_" is its free-text
+# entry (always song_id 1), a real performance but not a repertoire song.
+CUSTOM_SLUG = "_custom_"
+
+# What counts as "the band". Vlad's rule, 2026-08-27: anything not by one of
+# these is a cover. Encoded rather than inferred so a future go-set entry
+# crediting a side project does not quietly become a cover.
+#
+# As of this archive the rule changes nothing -- none of these four ever appears
+# as an original_artist credit, so go-set already treats them as originals and
+# so do we. It is here for the day that stops being true.
+#
+# OPEN QUESTION: "Mad Kings" is credited on ONE song, "Way To Be", played 120
+# times in every year from 2018 to 2026. Nothing covers like that -- it behaves
+# exactly like a band staple. It is NOT in the list below, so it currently
+# counts as a cover. Flagged rather than decided: see docs/12's rule about
+# logging a disagreement instead of silently picking a side.
+BAND_FAMILY = {
+    "dogs in a pile",
+    "otherwise useless children",
+    "brian murray solo",
+    "cats in a sack",
+}
+
+
+def is_cover(song: dict) -> bool:
+    """True when a performance is somebody else's song."""
+    artist = (song.get("original_artist") or "").strip()
+    if artist:
+        return artist.lower() not in BAND_FAMILY
+    # No credit named. go-set's own isoriginal flag is the only signal left,
+    # and it is carried into the payload as is_cover.
+    return bool(song.get("is_cover"))
+
+
+def compute_rarity(payloads: list) -> dict:
+    """All-time play counts across the whole archive.
+
+    Deliberately separate from compute_stats, which is scoped to one year. This
+    counts every show we hold. Note what it does NOT do: it derives no gaps. A
+    play count is plain counting and cannot be off by one; a gap depends on a
+    bound and a show universe, and that reconciliation is only validated at n=3
+    so far (docs/17). Rarity ships now; gaps wait for the song-page capture.
+    """
+    shows = sorted(payloads, key=lambda p: (p["show_date"], str(p.get("show_id"))))
+    songs: dict = {}
+    for i, p in enumerate(shows):
+        for st in p["sets"]:
+            for sg in st["songs"]:
+                slug = sg.get("song_slug") or sg.get("song_id")
+                if not slug or slug == CUSTOM_SLUG:
+                    continue
+                e = songs.setdefault(slug, {"title": sg["title"], "plays": 0,
+                                            "shows": [], "cover": None})
+                e["title"] = sg["title"]
+                e["plays"] += 1
+                if not e["shows"] or e["shows"][-1] != i:
+                    e["shows"].append(i)
+                if sg.get("original_artist"):
+                    e["cover"] = sg["original_artist"]
+
+    n = len(shows)
+    # Ordinal buckets. Bars, not a pie: these are ordered magnitude bands, and a
+    # pie of ordered data invites the reader to compare adjacent wedges as if
+    # they were unrelated categories.
+    bands = [("Played once", 1, 1), ("2-5 times", 2, 5), ("6-15", 6, 15),
+             ("16-50", 16, 50), ("51-150", 51, 150), ("151+", 151, 10 ** 9)]
+    dist = [(lab, sum(1 for e in songs.values() if lo <= e["plays"] <= hi))
+            for lab, lo, hi in bands]
+
+    # NOT a bar chart. Ranking by rarity sorts on the tied dimension: the
+    # rarest songs are all tied at two or three shows, so the chart came out as
+    # twelve identical bars in alphabetical order, which is a picture of
+    # nothing. The interesting content here is the song NAMES and when you
+    # could have seen them -- that is a list, so it renders as a list.
+    #
+    # Filtered on distinct SHOWS, not plays: filtering on plays let in songs
+    # played twice on one night and never again, and "Bluey Theme Tune" turned
+    # up in a list of songs "with a history" reading one show.
+    recent_rare = sorted(
+        (e for e in songs.values()
+         if 2 <= len(e["shows"]) <= 12 and (n - 1 - e["shows"][-1]) <= 120),
+        key=lambda e: -e["shows"][-1])[:10]
+
+    overdue = sorted((e for e in songs.values() if e["plays"] >= 5),
+                     key=lambda e: e["shows"][-1])[:10]
+    return {
+        "total_shows": n,
+        "distinct": len(songs),
+        "once": sum(1 for e in songs.values() if e["plays"] == 1),
+        "dist": dist,
+        "recent_rare": [(e["title"], len(e["shows"]),
+                         shows[e["shows"][-1]]["show_date"]) for e in recent_rare],
+        "overdue": [(e["title"], n - 1 - e["shows"][-1]) for e in overdue],
+        "overdue_last": {e["title"]: shows[e["shows"][-1]]["show_date"] for e in overdue},
+    }
+
+
+def render_rarity(payloads: list) -> str:
+    r = compute_rarity(payloads)
+    pct_once = round(100 * r["once"] / r["distinct"])
+    overdue_rows = [(t, g) for t, g in r["overdue"]]
+    rare_list = "".join(
+        f'<li><strong>{e(t)}</strong> — {c} shows ever, last on {e(d_long(d))}</li>'
+        for t, c, d in r["recent_rare"])
+    return f"""
+        <div class="section-head" style="margin-top:3rem;">
+          <span class="setno">All time</span>
+          <h2>How rare is rare?</h2>
+          <p>These count all <strong>{r["total_shows"]}</strong> shows in the archive,
+             2018 to now — not just this year. Across them the band has played
+             <strong>{r["distinct"]}</strong> different songs, and
+             <strong>{r["once"]}</strong> of those ({pct_once}%) exactly once.
+             The repertoire is a small core and a very long tail.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1rem;max-width:820px;margin:1.4rem auto 0;">
+          {_bars(r["dist"], "Songs, by how often they have been played")}
+          <div class="tube" style="width:100%"><span class="lab">Rare sightings, recently</span>
+            <p class="cav" style="margin:.2rem 0 0;">Songs the band has played at only 2–12
+               shows ever, but that turned up in the last 120 — the rare ones you could
+               actually have caught. Deliberately a list and not a chart: the rarest songs
+               are all tied at two or three shows, so bars would be twelve identical
+               lengths in alphabetical order.</p>
+            <ul style="margin:.7rem 0 0;padding-left:1.1rem;line-height:1.9;font-size:.9rem;">
+              {rare_list}
+            </ul></div>
+          <div>{_bars(overdue_rows, "Longest wait (shows since last played)")}
+            <p class="cav">Only songs with at least five lifetime plays, so this reads as
+               "overdue" rather than "played once in 2019 and never again".
+               Counted from this archive, not from go-set's own gap figures.</p></div>
+        </div>
+"""
+
+
+def render_stats(payloads: list, all_payloads: list | None = None) -> str:
     s = compute_stats(payloads)
+    rarity_html = render_rarity(all_payloads) if all_payloads else ""
     yr = payloads[0]["show_date"][:4] if payloads else ""
     glance_html = '<div class="glance">' + "".join(
         f'<div class="stat"><div class="n">{v}</div><div class="l">{l}</div></div>'
@@ -865,6 +1003,7 @@ def render_stats(payloads: list) -> str:
           {_bars(s["closers"], "Favorite closers")}
           {months_html}
         </div>
+        {rarity_html}
         <p class="cav" style="max-width:820px;margin:2rem auto 0;">
           These counts are <strong>{e(yr)} only</strong> — the archive here goes back to
           2018. Browse any year from <a href="/setlisthound-with/">the show list</a>.
@@ -1067,7 +1206,7 @@ def main() -> int:
     # the newest year so loading older years can never silently blend eras.
     stats_dir = out_root / "stats"
     stats_dir.mkdir(parents=True, exist_ok=True)
-    (stats_dir / "index.html").write_text(render_stats(years[max(years)]), encoding="utf-8")
+    (stats_dir / "index.html").write_text(render_stats(years[max(years)], all_payloads=payloads), encoding="utf-8")
 
     songs = collect_songs(payloads)
     for sl, info in songs.items():
