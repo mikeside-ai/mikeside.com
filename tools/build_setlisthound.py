@@ -866,20 +866,27 @@ def compute_rarity(payloads: list) -> dict:
     """
     shows = sorted(payloads, key=lambda p: (p["show_date"], str(p.get("show_id"))))
     songs: dict = {}
+    covers_by_year: dict = {}
     for i, p in enumerate(shows):
+        cv = covers_by_year.setdefault(p["show_date"][:4], [0, 0])
         for st in p["sets"]:
             for sg in st["songs"]:
                 slug = sg.get("song_slug") or sg.get("song_id")
                 if not slug or slug == CUSTOM_SLUG:
                     continue
                 e = songs.setdefault(slug, {"title": sg["title"], "plays": 0,
-                                            "shows": [], "cover": None})
+                                            "shows": [], "cover": None, "lens": []})
                 e["title"] = sg["title"]
                 e["plays"] += 1
                 if not e["shows"] or e["shows"][-1] != i:
                     e["shows"].append(i)
+                if sg.get("length_secs"):
+                    e["lens"].append(sg["length_secs"])
                 if sg.get("original_artist"):
                     e["cover"] = sg["original_artist"]
+                cv[1] += 1
+                if is_cover(sg):
+                    cv[0] += 1
 
     n = len(shows)
     # Ordinal buckets. Bars, not a pie: these are ordered magnitude bands, and a
@@ -906,6 +913,8 @@ def compute_rarity(payloads: list) -> dict:
 
     overdue = sorted((e for e in songs.values() if e["plays"] >= 5),
                      key=lambda e: e["shows"][-1])[:10]
+    jams = sorted((e for e in songs.values() if len(e["lens"]) >= 8),
+                  key=lambda e: -(sum(e["lens"]) / len(e["lens"])))[:10]
     return {
         "total_shows": n,
         "distinct": len(songs),
@@ -915,6 +924,10 @@ def compute_rarity(payloads: list) -> dict:
                          shows[e["shows"][-1]]["show_date"]) for e in recent_rare],
         "overdue": [(e["title"], n - 1 - e["shows"][-1]) for e in overdue],
         "overdue_last": {e["title"]: shows[e["shows"][-1]]["show_date"] for e in overdue},
+        "jams": [(e["title"], round(sum(e["lens"]) / len(e["lens"]) / 60),
+                  len(e["lens"]), max(e["lens"])) for e in jams],
+        "covers_by_year": [(y, round(100 * c / t), c, t)
+                           for y, (c, t) in sorted(covers_by_year.items()) if t],
     }
 
 
@@ -922,6 +935,9 @@ def render_rarity(payloads: list) -> str:
     r = compute_rarity(payloads)
     pct_once = round(100 * r["once"] / r["distinct"])
     overdue_rows = [(t, g) for t, g in r["overdue"]]
+    covers_rows = [(f"{y}", pct) for y, pct, c, t in r["covers_by_year"]]
+    jam_rows = [(t, m) for t, m, cnt, mx in r["jams"]]
+    jam_max = max((mx for _, _, _, mx in r["jams"]), default=0)
     rare_list = "".join(
         f'<li><strong>{e(t)}</strong> — {c} shows ever, last on {e(d_long(d))}</li>'
         for t, c, d in r["recent_rare"])
@@ -950,6 +966,15 @@ def render_rarity(payloads: list) -> str:
             <p class="cav">Only songs with at least five lifetime plays, so this reads as
                "overdue" rather than "played once in 2019 and never again".
                Counted from this archive, not from go-set's own gap figures.</p></div>
+          <div>{_bars(covers_rows, "Covers, as % of songs played each year")}
+            <p class="cav">The story of the band in one chart: {r["covers_by_year"][0][1]}% covers
+               in {r["covers_by_year"][0][0]}, settling around a quarter as the original
+               repertoire took over. Counted with the band-family rule — Dogs in a Pile
+               and its side projects are originals.</p></div>
+          <div>{_bars(jam_rows, "Longest average jams (minutes)")}
+            <p class="cav">Songs with at least eight timed performances; lengths are the
+               band's own track times, recorded consistently since 2023. The longest
+               single version in this set ran {jam_max // 60} minutes.</p></div>
         </div>
 """
 
