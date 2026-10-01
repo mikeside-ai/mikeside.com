@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <meta name="color-scheme" content="dark light">
-<script>document.documentElement.classList.add("checking")</script>
+<script>document.documentElement.classList.add("checking");window.addEventListener("error",function(){document.documentElement.classList.remove("checking");});</script>
 <style>html.checking main,html.checking footer,html.checking header ul{visibility:hidden}</style>
 
 <meta name="theme-color" content="#0b1020" media="(prefers-color-scheme: dark)">
@@ -255,7 +255,7 @@ footer a{color:var(--muted)}
 <footer><div class="container"><p>A <a href="/">mikeside.com</a> project. Go Fireballs.</p></div></footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="/projects/fireballs/games-data.js"></script>
+<script src="/projects/fireballs/games-data.js?v=20261001b"></script>
 <script>
 var API = "/projects/fireballs/api/";
 var team = null, editing = null;
