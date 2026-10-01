@@ -243,6 +243,7 @@ footer a{color:var(--muted)}
       <span class="kicker">Hoover Soccer Club &middot; U7 Boys &middot; Fall 2026</span>
       <h1>Go <em>Fireballs!</em></h1>
       <p class="lede">Games, practices, snack sign-up, who's coming and the rules of the game. Everything a parent needs on a Saturday morning.</p>
+      <div class="callout" id="coach-banner" hidden style="margin-top:1.2rem"><h3>&#128227; From the coaches</h3><p id="coach-banner-text"></p></div>
       <div class="cta-row">
         <a class="cta-snack" href="snacks/">&#127818; Sign up for snacks <small id="cta-open"></small></a>
         <a class="cta-snack cta-practice" href="practices/">&#9917; Practice plan <small>Thursdays 5:30</small></a>
@@ -528,7 +529,9 @@ function renderPrivate(){
   document.getElementById("private-on").hidden=false;
   document.getElementById("roster").innerHTML=team.players.map(function(p){return "<li>"+esc(p.display)+"</li>";}).join("");
   if(team.groupme_url){var a=document.getElementById("chat-link");a.href=team.groupme_url;document.getElementById("chat-wrap").hidden=false;}
-  if(team.coach_note){var c=document.getElementById("coach-note");c.textContent=team.coach_note;c.hidden=false;}
+  if(team.coach_note){document.getElementById("coach-banner-text").textContent=team.coach_note;document.getElementById("coach-banner").hidden=false;}
+  if(team.coaches&&team.coaches.length){var c=document.getElementById("coach-note");c.textContent="Coaches: "+team.coaches.join(" and ");c.hidden=false;}
+  if(team.is_coach){var a=document.createElement("a");a.className="cta-snack";a.href="coach/";a.style.background="var(--bg-soft)";a.style.color="var(--text)";a.style.animation="none";a.style.border="1px solid var(--border)";a.innerHTML="&#128203; Coaches corner";document.querySelector(".cta-row").appendChild(a);}
 }
 
 function post(path,body){

@@ -115,7 +115,13 @@ export async function onRequest({ request, env, params }) {
   const method = request.method;
 
   try {
-    const member = await env.DB.prepare("SELECT email, name, phone FROM members WHERE email = ?").bind(email).first();
+    let member = await env.DB.prepare("SELECT email, name, phone FROM members WHERE email = ?").bind(email).first();
+    const coach = await env.DB.prepare("SELECT email, name FROM coaches WHERE email = ?").bind(email).first();
+    if (coach && !member) {
+      // Coaches skip the team code.
+      await env.DB.prepare("INSERT OR IGNORE INTO members (email, name, joined_at) VALUES (?, ?, datetime('now'))").bind(email, coach.name).run();
+      member = { email, name: coach.name, phone: null };
+    }
 
     if (route === "join" && method === "POST") {
       if (member) return json({ ok: true });
@@ -142,12 +148,13 @@ export async function onRequest({ request, env, params }) {
     if (!member) return json({ error: "not_member", me: email }, 403);
 
     if (route === "team" && method === "GET") {
-      const [players, snacks, rsvps, settings, mine] = await env.DB.batch([
+      const [players, snacks, rsvps, settings, mine, coaches] = await env.DB.batch([
         env.DB.prepare("SELECT id, display FROM players WHERE active = 1 ORDER BY sort, id"),
         env.DB.prepare("SELECT game_date, player_id FROM snacks"),
         env.DB.prepare("SELECT game_date, player_id, status FROM rsvps"),
         env.DB.prepare("SELECT key, value FROM settings WHERE key IN ('groupme_url','coach_note')"),
         env.DB.prepare("SELECT player_id FROM member_players WHERE email = ?").bind(email),
+        env.DB.prepare("SELECT DISTINCT name FROM coaches ORDER BY name"),
       ]);
       const s = Object.fromEntries(settings.results.map((r) => [r.key, r.value]));
       return json({
@@ -155,6 +162,8 @@ export async function onRequest({ request, env, params }) {
         my_name: member.name || null,
         my_phone: member.phone || null,
         my_players: mine.results.map((r) => r.player_id),
+        is_coach: !!coach,
+        coaches: coaches.results.map((r) => r.name).filter(Boolean),
         players: players.results,
         snacks: snacks.results,
         rsvps: rsvps.results,
@@ -177,6 +186,61 @@ export async function onRequest({ request, env, params }) {
         ...valid.map((id) => env.DB.prepare("INSERT INTO member_players (email, player_id) VALUES (?, ?)").bind(email, id)),
       ]);
       return json({ ok: true, name, phone, player_ids: valid });
+    }
+
+    if (route.startsWith("coach/")) {
+      if (!coach) return json({ error: "coaches_only" }, 403);
+
+      if (route === "coach/overview" && method === "GET") {
+        const [members, links, settings] = await env.DB.batch([
+          env.DB.prepare("SELECT email, name, phone, joined_at FROM members ORDER BY name COLLATE NOCASE, email"),
+          env.DB.prepare("SELECT email, player_id FROM member_players"),
+          env.DB.prepare("SELECT key, value FROM settings WHERE key IN ('team_code','groupme_url','coach_note')"),
+        ]);
+        const kids = {};
+        for (const l of links.results) (kids[l.email] = kids[l.email] || []).push(l.player_id);
+        return json({
+          members: members.results.map((m) => ({ ...m, player_ids: kids[m.email] || [] })),
+          settings: Object.fromEntries(settings.results.map((r) => [r.key, r.value])),
+        });
+      }
+
+      if (route === "coach/settings" && method === "POST") {
+        const b = await request.json().catch(() => ({}));
+        const ops = [];
+        if (typeof b.coach_note === "string") {
+          const v = b.coach_note.trim().slice(0, 500);
+          ops.push(v ? env.DB.prepare("INSERT OR REPLACE INTO settings (key, value) VALUES ('coach_note', ?)").bind(v)
+                     : env.DB.prepare("DELETE FROM settings WHERE key = 'coach_note'"));
+        }
+        if (typeof b.team_code === "string") {
+          const v = normCode(b.team_code);
+          if (v.length < 6 || v.length > 40) return json({ error: "code_length" }, 400);
+          ops.push(env.DB.prepare("INSERT OR REPLACE INTO settings (key, value) VALUES ('team_code', ?)").bind(v));
+        }
+        if (typeof b.groupme_url === "string") {
+          const v = b.groupme_url.trim();
+          if (v && !/^https:\/\/(web\.)?groupme\.com\//.test(v)) return json({ error: "bad_url" }, 400);
+          ops.push(env.DB.prepare("INSERT OR REPLACE INTO settings (key, value) VALUES ('groupme_url', ?)").bind(v));
+        }
+        if (ops.length) await env.DB.batch(ops);
+        return json({ ok: true });
+      }
+
+      if (route === "coach/remove-member" && method === "POST") {
+        const b = await request.json().catch(() => ({}));
+        const target = String(b.email || "").toLowerCase();
+        if (!target || target === email) return json({ error: "bad_request" }, 400);
+        const isCoach = await env.DB.prepare("SELECT 1 FROM coaches WHERE email = ?").bind(target).first();
+        if (isCoach) return json({ error: "is_coach" }, 400);
+        await env.DB.batch([
+          env.DB.prepare("DELETE FROM member_players WHERE email = ?").bind(target),
+          env.DB.prepare("DELETE FROM members WHERE email = ?").bind(target),
+        ]);
+        return json({ ok: true });
+      }
+
+      return json({ error: "not_found" }, 404);
     }
 
     if (route === "rsvp" && method === "POST") {
