@@ -300,7 +300,7 @@ document.getElementById("acct").addEventListener("submit",function(e){
   var ids=[].map.call(document.querySelectorAll("#kids input:checked"),function(x){return +x.value;});
   if(!ids.length){ toast("Pick your player"); return; }
   fetch(API+"me",{method:"POST",credentials:"same-origin",headers:{"content-type":"application/json"},body:JSON.stringify({name:document.getElementById("name").value,phone:document.getElementById("phone").value,player_ids:ids})})
-    .then(function(r){ if(!r.ok) throw 0; if(WELCOME){ location.href="../"; return; } toast("Saved"); })
+    .then(function(r){ if(!r.ok) throw 0; toast("Saved"); location.href="../"; })
     .catch(function(){ toast("Couldn't save. Try again."); });
 });
 </script>

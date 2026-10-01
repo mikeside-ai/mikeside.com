@@ -78,6 +78,8 @@ header{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-fil
 .hero p.lede{color:var(--muted);max-width:60ch;font-size:1.02rem}
 
 .next{margin-top:1.6rem;background:linear-gradient(135deg,rgba(255,122,47,.16),rgba(193,75,52,.08));border:1px solid rgba(255,122,47,.4);border-radius:var(--radius);padding:1.1rem 1.25rem;display:grid;gap:.25rem}
+.next{text-decoration:none}
+a.next:hover{text-decoration:none;border-color:rgba(255,122,47,.75)}
 .next .label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fire);font-weight:600}
 .next .big{font-family:"Fraunces",Georgia,serif;font-size:1.5rem;line-height:1.2}
 .next .sub{color:var(--muted);font-size:.92rem}
@@ -248,16 +250,16 @@ footer a{color:var(--muted)}
         <a class="cta-snack" href="snacks/">&#127818; Sign up for snacks <small id="cta-open"></small></a>
         <a class="cta-snack cta-practice" href="practices/">&#9917; Practice plan <small>Thursdays 5:30</small></a>
       </div>
-      <div class="next" id="next-game" hidden>
-        <span class="label">Next game</span>
+      <a class="next" id="next-game" hidden href="games/" style="color:var(--text)">
+        <span class="label">Next game &middot; tap for RSVP and field map &rsaquo;</span>
         <span class="big" id="next-big"></span>
         <span class="sub" id="next-sub"></span>
-      </div>
-      <div class="next" id="next-practice" hidden style="margin-top:.7rem;background:var(--bg-soft);border-color:var(--border)">
-        <span class="label">Next practice</span>
+      </a>
+      <a class="next" id="next-practice" hidden href="practices/" style="margin-top:.7rem;background:var(--bg-soft);border-color:var(--border);color:var(--text)">
+        <span class="label">Next practice &middot; tap for drills &rsaquo;</span>
         <span class="big" id="np-big"></span>
         <span class="sub" id="np-sub"></span>
-      </div>
+      </a>
     </div>
   </div>
 
@@ -472,7 +474,7 @@ function renderGames(){
     var g=GAMES[nextIdx], d=dt(g.d);
     document.getElementById("next-big").textContent=DOW[d.getDay()]+", "+MON[d.getMonth()]+" "+d.getDate()+" · "+g.t+" · Field "+g.f;
     document.getElementById("next-sub").textContent=(g.home?"Home vs ":"Away at ")+g.opp+" · Arrive by "+addMin(g.t,-15)+snackLine(g.d);
-    document.getElementById("next-game").hidden=false;
+    var ng=document.getElementById("next-game"); ng.href="games/?g="+g.d; ng.hidden=false;
   }
 }
 
@@ -592,19 +594,25 @@ document.getElementById("join-form").addEventListener("submit",function(e){
 });
 
 renderGames(); renderPractices();
-fetch(API+"team",{credentials:"same-origin"}).then(function(r){
+function loadTeam(){
+fetch(API+"team",{credentials:"same-origin",cache:"no-store"}).then(function(r){
   if(r.status===401) throw new Error("Sign in with your parent email to see the roster, snacks and RSVPs.");
   if(r.status===403){ showJoin(); return null; }
   if(r.status===503) throw new Error("The parent area isn't switched on yet. Check back soon.");
   if(!r.ok) throw new Error("Couldn't load the parent area. Refresh to try again.");
   return r.json();
 }).then(function(d){ if(!d) return;
-  if(!d.my_name && !(d.my_players||[]).length){ location.replace("account/?welcome=1"); return; }
-  team=d; renderPrivate(); renderGames(); updateCta(); })
+  if(!(d.my_players||[]).length){ location.replace("account/?welcome=1"); return; }
+  team=d; renderPrivate(); keepOpen(renderGames); updateCta(); })
 .catch(function(err){
   document.getElementById("private-msg").textContent=(err&&err.message&&err.message.length<120&&!/fetch/i.test(err.message))?err.message:"Couldn't load the parent area. Refresh to try again.";
   document.querySelector("#private-off h3").textContent="Parent area";
 });
+}
+loadTeam();
+// Coming back from a game or snack page: refresh so RSVPs and snacks match.
+window.addEventListener("pageshow",function(e){ if(e.persisted) loadTeam(); });
+document.addEventListener("visibilitychange",function(){ if(document.visibilityState==="visible" && team) loadTeam(); });
 </script>
 </body>
 </html>

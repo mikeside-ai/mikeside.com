@@ -365,15 +365,16 @@ document.addEventListener("click",function(e){
 });
 
 render();
-fetch(API+"team",{credentials:"same-origin"}).then(function(r){
+fetch(API+"team",{credentials:"same-origin",cache:"no-store"}).then(function(r){
   if(r.status===403) throw new Error("JOIN");
   if(!r.ok) throw new Error("x");
   return r.json();
-}).then(function(d){ team=d; render(); })
+}).then(function(d){ if(!(d.my_players||[]).length){ location.replace("../account/?welcome=1"); return; } team=d; render(); })
 .catch(function(err){
   var n=document.getElementById("note"); n.hidden=false;
   document.getElementById("note-msg").innerHTML = (err&&err.message==="JOIN") ? 'Join the team on the <a href="../#team">team page</a> to RSVP and sign up for snacks.' : 'Couldn\'t load RSVPs and snacks. Refresh to try again.';
 });
+window.addEventListener("pageshow",function(e){ if(e.persisted) location.reload(); });
 </script>
 </body>
 </html>
