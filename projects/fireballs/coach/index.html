@@ -407,8 +407,8 @@ function renderBoards(){
 function renderParents(){
   var ms=ov.members;
   $("par-sub").textContent=ms.length+" signed up.";
-  $("par-tbl").innerHTML="<tr><th>Parent</th><th>Player</th><th>Phone</th><th></th></tr>"+ms.map(function(m){
-    return "<tr><td>"+esc(m.name||"(no name yet)")+"<small>"+esc(m.email)+"</small></td><td>"+esc(m.player_ids.map(pname).join(", ")||"Not picked")+"</td><td>"+(m.phone?"<a href='tel:"+esc(m.phone)+"'>"+esc(m.phone)+"</a>":"")+"</td><td>"+
+  $("par-tbl").innerHTML="<tr><th>Family member</th><th>Player</th><th>Phone</th><th></th></tr>"+ms.map(function(m){
+    return "<tr><td>"+esc(m.name||"(no name yet)")+"<small>"+esc(m.email)+"</small></td><td>"+(m.player_ids.length?m.player_ids.map(function(p){var r=(m.relations||{})[p]||"parent";return esc(pname(p))+(r==="parent"?"":" <small style='display:inline'>("+(r==="grandparent"?"grandparent":"relative")+")</small>");}).join(", "):"Not picked")+"</td><td>"+(m.phone?"<a href='tel:"+esc(m.phone)+"'>"+esc(m.phone)+"</a>":"")+"</td><td>"+
       (m.email===team.me?"<small>You</small>":"<button type='button' class='link' data-remove='"+esc(m.email)+"'>Remove</button>")+"</td></tr>";}).join("");
   var linked={}; ms.forEach(function(m){m.player_ids.forEach(function(p){linked[p]=1;});});
   var none=team.players.filter(function(p){return !linked[p.id];});

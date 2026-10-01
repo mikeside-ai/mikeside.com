@@ -103,6 +103,7 @@ const MAX_JOIN_TRIES = 8; // per email per hour
 
 const GAME_RE = /^\d{4}-\d{2}-\d{2}$/;
 const RSVP = new Set(["yes", "no", "maybe"]);
+const RELATIONS = new Set(["parent", "grandparent", "relative"]);
 
 export async function onRequest({ request, env, params }) {
   if (!env.DB || !env.ACCESS_TEAM_DOMAIN || !env.ACCESS_AUD) {
@@ -153,7 +154,7 @@ export async function onRequest({ request, env, params }) {
         env.DB.prepare("SELECT game_date, player_id FROM snacks"),
         env.DB.prepare("SELECT game_date, player_id, status FROM rsvps"),
         env.DB.prepare("SELECT key, value FROM settings WHERE key IN ('groupme_url','coach_note')"),
-        env.DB.prepare("SELECT player_id FROM member_players WHERE email = ?").bind(email),
+        env.DB.prepare("SELECT player_id, relation FROM member_players WHERE email = ?").bind(email),
         env.DB.prepare("SELECT DISTINCT name FROM coaches ORDER BY name"),
       ]);
       const s = Object.fromEntries(settings.results.map((r) => [r.key, r.value]));
@@ -162,6 +163,7 @@ export async function onRequest({ request, env, params }) {
         my_name: member.name || null,
         my_phone: member.phone || null,
         my_players: mine.results.map((r) => r.player_id),
+        my_relations: Object.fromEntries(mine.results.map((r) => [r.player_id, r.relation || "parent"])),
         is_coach: !!coach,
         coaches: coaches.results.map((r) => r.name).filter(Boolean),
         players: players.results,
@@ -176,16 +178,23 @@ export async function onRequest({ request, env, params }) {
       const b = await request.json().catch(() => ({}));
       const name = String(b.name || "").trim().slice(0, 80) || null;
       const phone = String(b.phone || "").replace(/[^0-9+()\-. ]/g, "").trim().slice(0, 24) || null;
-      const ids = Array.isArray(b.player_ids) ? [...new Set(b.player_ids.map(Number))].filter(Number.isInteger).slice(0, 8) : [];
+      // Accept players: [{id, relation}] (or the older player_ids: [id]).
+      const rel = {};
+      const list = Array.isArray(b.players) ? b.players : (Array.isArray(b.player_ids) ? b.player_ids.map((id) => ({ id })) : []);
+      for (const x of list) {
+        const id = Number(x && x.id);
+        if (Number.isInteger(id)) rel[id] = RELATIONS.has(x.relation) ? x.relation : "parent";
+      }
+      const ids = Object.keys(rel).map(Number).slice(0, 8);
       const valid = ids.length
         ? (await env.DB.prepare(`SELECT id FROM players WHERE active = 1 AND id IN (${ids.map(() => "?").join(",")})`).bind(...ids).all()).results.map((r) => r.id)
         : [];
       await env.DB.batch([
         env.DB.prepare("UPDATE members SET name = ?, phone = ? WHERE email = ?").bind(name, phone, email),
         env.DB.prepare("DELETE FROM member_players WHERE email = ?").bind(email),
-        ...valid.map((id) => env.DB.prepare("INSERT INTO member_players (email, player_id) VALUES (?, ?)").bind(email, id)),
+        ...valid.map((id) => env.DB.prepare("INSERT INTO member_players (email, player_id, relation) VALUES (?, ?, ?)").bind(email, id, rel[id])),
       ]);
-      return json({ ok: true, name, phone, player_ids: valid });
+      return json({ ok: true, name, phone, player_ids: valid, relations: Object.fromEntries(valid.map((id) => [id, rel[id]])) });
     }
 
     if (route.startsWith("coach/")) {
@@ -194,13 +203,16 @@ export async function onRequest({ request, env, params }) {
       if (route === "coach/overview" && method === "GET") {
         const [members, links, settings] = await env.DB.batch([
           env.DB.prepare("SELECT email, name, phone, joined_at FROM members ORDER BY name COLLATE NOCASE, email"),
-          env.DB.prepare("SELECT email, player_id FROM member_players"),
+          env.DB.prepare("SELECT email, player_id, relation FROM member_players"),
           env.DB.prepare("SELECT key, value FROM settings WHERE key IN ('team_code','groupme_url','coach_note')"),
         ]);
-        const kids = {};
-        for (const l of links.results) (kids[l.email] = kids[l.email] || []).push(l.player_id);
+        const kids = {}, rels = {};
+        for (const l of links.results) {
+          (kids[l.email] = kids[l.email] || []).push(l.player_id);
+          (rels[l.email] = rels[l.email] || {})[l.player_id] = l.relation || "parent";
+        }
         return json({
-          members: members.results.map((m) => ({ ...m, player_ids: kids[m.email] || [] })),
+          members: members.results.map((m) => ({ ...m, player_ids: kids[m.email] || [], relations: rels[m.email] || {} })),
           settings: Object.fromEntries(settings.results.map((r) => [r.key, r.value])),
         });
       }

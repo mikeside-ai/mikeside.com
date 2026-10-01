@@ -209,10 +209,13 @@ footer a{color:var(--muted)}
 .acct label.f{display:grid;gap:.35rem;font-size:.85rem;color:var(--muted)}
 .acct input[type=text]{font:inherit;font-size:1rem;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:.6rem .75rem}
 .acct .email{font-weight:600;color:var(--text);word-break:break-all}
-.kids{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.5rem}
-.kids label{display:flex;align-items:center;gap:.55rem;background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:.55rem .7rem;cursor:pointer;font-weight:500}
-.kids input{accent-color:var(--fire);width:18px;height:18px}
-.kids label:has(input:checked){border-color:var(--fire)}
+.kids{display:grid;gap:.5rem}
+.kid{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem;background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:.5rem .7rem}
+.kid:has(input:checked){border-color:var(--fire)}
+.kid label{display:flex;align-items:center;gap:.55rem;cursor:pointer;font-weight:500;flex:1;min-width:8rem}
+.kid input{accent-color:var(--fire);width:18px;height:18px}
+.kid select{font:inherit;font-size:.88rem;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:.3rem .45rem}
+.kid select:disabled{opacity:.4}
 .actions{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center}
 .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--border)}
 .btn.ghost:hover{border-color:var(--bad);color:var(--bad)}
@@ -248,7 +251,7 @@ footer a{color:var(--muted)}
         <label class="f">Mobile phone (only the coach sees this)
           <input type="text" id="phone" inputmode="tel" maxlength="24" autocomplete="tel" placeholder="205-555-0123">
         </label>
-        <div><div class="k" style="margin-bottom:.45rem">Your player (pick all that are yours)</div><div class="kids" id="kids"></div></div>
+        <div><div class="k" style="margin-bottom:.2rem">Your player</div><p class="sub" style="color:var(--muted);font-size:.85rem;margin-bottom:.5rem">Pick every player you're signing up for and how you're related. Moms, dads, grandparents and other family can each have their own login for the same player.</p><div class="kids" id="kids"></div></div>
         <div class="actions">
           <button type="submit" class="btn">Save</button>
           <a class="btn ghost" href="/cdn-cgi/access/logout">Log out</a>
@@ -284,10 +287,17 @@ fetch(API+"team",{credentials:"same-origin"}).then(function(r){
     document.getElementById("lede").textContent="One quick step. Tell the coach who you are and pick your player. You can change this anytime from Account.";
     document.querySelector('#acct button[type=submit]').textContent="Save and continue";
   }
-  var mine=d.my_players||[];
+  var mine=d.my_players||[], rel=d.my_relations||{};
+  var OPTS=[["parent","Parent"],["grandparent","Grandparent"],["relative","Other relative"]];
   document.getElementById("kids").innerHTML=d.players.map(function(p){
-    return '<label><input type="checkbox" value="'+p.id+'"'+(mine.indexOf(p.id)>=0?' checked':'')+'> '+esc(p.display)+'</label>';
+    var on=mine.indexOf(p.id)>=0, r=rel[p.id]||"parent";
+    return '<div class="kid"><label><input type="checkbox" value="'+p.id+'"'+(on?' checked':'')+'> '+esc(p.display)+'</label>'+
+      '<select data-rel="'+p.id+'" aria-label="Your relationship to '+esc(p.display)+'"'+(on?'':' disabled')+'>'+
+      OPTS.map(function(o){return '<option value="'+o[0]+'"'+(o[0]===r?' selected':'')+'>'+o[1]+'</option>';}).join("")+'</select></div>';
   }).join("");
+  document.getElementById("kids").addEventListener("change",function(e){
+    if(e.target.type==="checkbox"){ document.querySelector('select[data-rel="'+e.target.value+'"]').disabled=!e.target.checked; }
+  });
 }).catch(function(err){
   var h=document.querySelector("#state h3"), m=document.getElementById("state-msg");
   document.getElementById("logout-only").hidden=false;
@@ -297,9 +307,9 @@ fetch(API+"team",{credentials:"same-origin"}).then(function(r){
 
 document.getElementById("acct").addEventListener("submit",function(e){
   e.preventDefault();
-  var ids=[].map.call(document.querySelectorAll("#kids input:checked"),function(x){return +x.value;});
-  if(!ids.length){ toast("Pick your player"); return; }
-  fetch(API+"me",{method:"POST",credentials:"same-origin",headers:{"content-type":"application/json"},body:JSON.stringify({name:document.getElementById("name").value,phone:document.getElementById("phone").value,player_ids:ids})})
+  var players=[].map.call(document.querySelectorAll("#kids input:checked"),function(x){return {id:+x.value, relation:document.querySelector('select[data-rel="'+x.value+'"]').value};});
+  if(!players.length){ toast("Pick your player"); return; }
+  fetch(API+"me",{method:"POST",credentials:"same-origin",headers:{"content-type":"application/json"},body:JSON.stringify({name:document.getElementById("name").value,phone:document.getElementById("phone").value,players:players})})
     .then(function(r){ if(!r.ok) throw 0; toast("Saved"); location.href="../"; })
     .catch(function(){ toast("Couldn't save. Try again."); });
 });
