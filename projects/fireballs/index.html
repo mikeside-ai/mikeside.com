@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0b1020" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6f2ea" media="(prefers-color-scheme: light)">
 <title>Fireballs &middot; U7 Boys Soccer &middot; Fall 2026</title>
 <meta name="description" content="Game and practice schedule, snack sign-up, RSVPs and game-day info for the Fireballs, Hoover Soccer Club U7 boys.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +33,25 @@
   --fire:#ff7a2f;          /* this page only */
   --good:#5cc08a; --warn:#f5c542; --bad:#e0644f;
   --border:#262e4e; --radius:14px; --maxw:1080px;
+  --header-bg:rgba(11,16,32,.92); --on-fire:#1a0d05;
+  color-scheme:dark;
+}
+/* Light mode follows the phone or computer setting. Same layout, plaster-light colors. */
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#f6f2ea; --bg-soft:#efe8dc; --card:#ffffff;
+    --text:#1b1f33; --muted:#5d5a6b;
+    --accent:#b33a26; --accent-soft:#b33a26;
+    --jumpsuit:#8a6100;
+    --fire:#c2410c;
+    --good:#2f7d52; --warn:#8a6100; --bad:#b33a26;
+    --border:#ddd3c3;
+    --header-bg:rgba(246,242,234,.92); --on-fire:#ffffff;
+    color-scheme:light;
+  }
+  :root .game,:root .practice,:root .card,:root .tile{box-shadow:0 1px 2px rgba(27,31,51,.05)}
+  :root .snackbox{background:rgba(138,97,0,.06);border-color:rgba(138,97,0,.35)}
+  :root .snackbox.taken{border-color:rgba(138,97,0,.25)}
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -40,7 +62,7 @@ a:hover{text-decoration:underline}
 :focus-visible{outline:2px solid var(--fire);outline-offset:3px;border-radius:4px}
 .container{max-width:var(--maxw);margin:0 auto;padding:0 1rem}
 
-header{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+header{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 0}
 .nav .logo{font-weight:600;font-size:1.15rem;color:var(--text)}
 .nav .logo span{color:var(--accent-soft)}
@@ -147,7 +169,7 @@ details.rsvp[open] summary::before{content:"\2212  ";}
 
 .roster{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.6rem;list-style:none}
 .roster li{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.6rem .8rem;font-weight:500}
-.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.92rem;padding:.65rem 1.1rem;border-radius:999px;background:var(--fire);color:#1a0d05}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.92rem;padding:.65rem 1.1rem;border-radius:999px;background:var(--fire);color:var(--on-fire)}
 .btn:hover{text-decoration:none;filter:brightness(1.08)}
 
 .contacts{width:100%;border-collapse:collapse;font-size:.9rem}
