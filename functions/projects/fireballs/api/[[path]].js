@@ -181,6 +181,10 @@ export async function onRequest({ request, env, params }) {
 
     if (route === "snack" && method === "POST") {
       const b = await request.json().catch(() => ({}));
+      if (GAME_RE.test(b.game_date || "") && (b.player_id === null || b.player_id === "")) {
+        await env.DB.prepare("DELETE FROM snacks WHERE game_date = ?").bind(b.game_date).run();
+        return json({ ok: true });
+      }
       const pid = Number(b.player_id);
       if (!GAME_RE.test(b.game_date || "") || !Number.isInteger(pid)) return json({ error: "bad_request" }, 400);
       const p = await env.DB.prepare("SELECT 1 FROM players WHERE id = ? AND active = 1").bind(pid).first();

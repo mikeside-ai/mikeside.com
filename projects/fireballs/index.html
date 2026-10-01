@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <title>Fireballs &middot; U7 Boys Soccer &middot; Fall 2026</title>
-<meta name="description" content="Game schedule, snack rotation, RSVPs and game-day info for the Fireballs, Hoover Soccer Club U7 boys.">
+<meta name="description" content="Game and practice schedule, snack sign-up, RSVPs and game-day info for the Fireballs, Hoover Soccer Club U7 boys.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -79,8 +79,41 @@ p.intro{color:var(--muted);max-width:68ch;margin-bottom:1.4rem}
 .tag.off{color:var(--jumpsuit);border-color:rgba(245,197,66,.4)}
 .game .extra{margin-top:.7rem;padding-top:.7rem;border-top:1px solid var(--border);display:grid;gap:.6rem;font-size:.88rem}
 .game .extra:empty{display:none}
-.snack b{color:var(--jumpsuit);font-weight:600}
-.snack select{font:inherit;font-size:.82rem;background:var(--bg-soft);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:.15rem .4rem;margin-left:.3rem}
+.game .head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .6rem}
+.game .date{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;width:100%}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;margin-top:.75rem}
+.tile{background:var(--bg-soft);border:1px solid var(--border);border-radius:12px;padding:.6rem .75rem;display:grid;gap:.05rem;color:var(--text)}
+a.tile:hover{text-decoration:none;border-color:rgba(255,122,47,.5)}
+.tile .k{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.tile .v{font-family:"Fraunces",Georgia,serif;font-size:1.65rem;line-height:1.1;color:var(--fire);font-variant-numeric:tabular-nums}
+.tile .s{font-size:.78rem;color:var(--muted)}
+.game.past .tile .v{color:var(--muted)}
+.snackbox{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .7rem;background:rgba(245,197,66,.07);border:1px dashed rgba(245,197,66,.35);border-radius:12px;padding:.6rem .75rem}
+.snackbox.taken{border-style:solid;border-color:rgba(245,197,66,.25)}
+.snackbox .lbl{font-weight:600}
+.snackbox b{color:var(--jumpsuit);font-weight:600}
+.snackbox select{font:inherit;font-size:.9rem;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:.35rem .5rem;max-width:100%}
+.btn.sm{font-size:.82rem;padding:.4rem .85rem}
+button.link{font:inherit;font-size:.82rem;background:none;border:0;color:var(--accent-soft);cursor:pointer;padding:.2rem 0}
+button.btn{border:0;cursor:pointer;font-family:inherit}
+
+.practices{display:grid;gap:.7rem}
+.practice{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.95rem 1.15rem}
+.practice.past{opacity:.5}
+.practice.is-next{border-color:rgba(255,122,47,.6)}
+.practice summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:auto 1fr auto;gap:.2rem .8rem;align-items:center}
+.practice summary::-webkit-details-marker{display:none}
+.practice .pdate{font-family:"Fraunces",Georgia,serif;font-size:1.05rem;white-space:nowrap}
+.practice .ptime{font-size:.8rem;color:var(--fire);font-weight:600;white-space:nowrap}
+.practice .pfocus{font-weight:500;grid-column:1/-1;color:var(--text)}
+.practice .chev{color:var(--muted);transition:transform .15s}
+.practice[open] .chev{transform:rotate(90deg)}
+.drills{list-style:none;display:grid;gap:.1rem;margin-top:.7rem}
+.drills li{display:grid;grid-template-columns:3.4rem 1fr;gap:.8rem;padding:.6rem 0;border-top:1px solid var(--border)}
+.drills .min{color:var(--fire);font-weight:600;font-size:.8rem;font-variant-numeric:tabular-nums;padding-top:.1rem}
+.drills .name{font-weight:600}
+.drills .how{color:var(--muted);font-size:.88rem;margin-top:.1rem}
+.ptip{margin-top:.6rem;font-size:.85rem;color:var(--jumpsuit)}
 .rsvp-sum{color:var(--muted)}
 .rsvp-sum .y{color:var(--good)} .rsvp-sum .n{color:var(--bad)} .rsvp-sum .m{color:var(--warn)}
 details.rsvp summary{cursor:pointer;color:var(--accent-soft);font-weight:500;list-style:none}
@@ -152,6 +185,7 @@ footer a{color:var(--muted)}
     <a class="logo" href="/">mike<span>side</span></a>
     <ul>
       <li><a href="#games">Games</a></li>
+      <li><a href="#practices">Practices</a></li>
       <li><a href="#team">Team</a></li>
       <li><a href="#fields">Field map</a></li>
       <li><a href="#rules">How games work</a></li>
@@ -165,11 +199,16 @@ footer a{color:var(--muted)}
     <div class="container">
       <span class="kicker">Hoover Soccer Club &middot; U7 Boys &middot; Fall 2026</span>
       <h1>Go <em>Fireballs!</em></h1>
-      <p class="lede">Game times, snack duty, who's coming and the rules of the game. Everything a parent needs on a Saturday morning.</p>
+      <p class="lede">Games, practices, snack sign-up, who's coming and the rules of the game. Everything a parent needs on a Saturday morning.</p>
       <div class="next" id="next-game" hidden>
         <span class="label">Next game</span>
         <span class="big" id="next-big"></span>
         <span class="sub" id="next-sub"></span>
+      </div>
+      <div class="next" id="next-practice" hidden style="margin-top:.7rem;background:var(--bg-soft);border-color:var(--border)">
+        <span class="label">Next practice</span>
+        <span class="big" id="np-big"></span>
+        <span class="sub" id="np-sub"></span>
       </div>
     </div>
   </div>
@@ -178,9 +217,22 @@ footer a{color:var(--muted)}
     <div class="container">
       <p class="eyebrow">Saturdays at Trace Crossings</p>
       <h2>Game schedule</h2>
-      <p class="intro">Eight games, all 60 minutes. Plan to arrive 15 minutes early. Tap "Who's coming" to RSVP for your player.</p>
+      <p class="intro">Eight games, all 60 minutes. Plan to arrive 15 minutes early. Tap the field to see where it is. Sign up for snacks and RSVP right on each game.</p>
       <div class="games" id="game-list"></div>
       <p class="intro" style="margin-top:1.2rem;font-size:.85rem">From the league's <a href="https://scheduler.leaguelobster.com/2821580/u4-u8-hoover-soccer-club-little-legends/fall-2026/" rel="noopener">official schedule</a>. If a time changes, the league page wins.</p>
+    </div>
+  </section>
+
+  <section id="practices">
+    <div class="container">
+      <p class="eyebrow">Thursdays, 5:30 to 6:30 PM</p>
+      <h2>Practice plan</h2>
+      <p class="intro">One hour every Thursday. Each practice has a focus and four suggested drills. Every drill uses a ball for every kid where possible, keeps lines short, and ends in a game. Tap a practice to see the plan.</p>
+      <div class="practices" id="practice-list"></div>
+      <div class="callout">
+        <h3>Coach and helper tips</h3>
+        <p>Keep talking short, about 20 seconds, then let them play. Give water breaks between drills. Bring cones, pinnies in two colors, a ball pump and a size 3 ball for every player.</p>
+      </div>
     </div>
   </section>
 
@@ -212,7 +264,7 @@ footer a{color:var(--muted)}
         <ul class="roster" id="roster"></ul>
         <div class="callout">
           <h3>Snack duty</h3>
-          <p>One family per game brings a simple snack and drinks for the team. Your week is on the schedule above. Can't make it? Swap with another family and change the name there.</p>
+          <p>One family per game brings a simple snack and drinks for the team. Sign up on any open game in the schedule above. Can't make it after all? Tap "Change" and pick another family, or "Remove" to open the spot back up.</p>
         </div>
       </div>
     </div>
@@ -342,6 +394,58 @@ var GAMES = [
   {d:"2026-11-14", t:"10:30 AM", f:"1H", opp:"Bodiford", home:false},
   {d:"2026-11-21", t:"1:30 PM",  f:"1H", opp:"Lovelady", home:false}
 ];
+// Practices: Thursdays 5:30-6:30 PM. Suggested plan, builds week to week.
+var PRACTICES = [
+  {d:"2026-10-01", focus:"Dribbling and ball control", drills:[
+    ["10","Red light, green light","Every kid dribbles. Green means go, yellow means slow, red means foot on top of the ball. Add a \"turn around\" color once they get it."],
+    ["15","Sharks and minnows","Minnows dribble across the box. One or two sharks try to kick balls out. If you lose your ball, you become a shark."],
+    ["15","Gate dribble","Set up 8 to 10 cone gates. Kids dribble through as many gates as they can in 60 seconds. Beat your own score."],
+    ["20","Scrimmage 4v4, no goalies","Small goals, lots of touches. Cheer every good dribble."]
+  ], tip:"Goal for the day: keep the ball close, little taps."},
+  {d:"2026-10-08", focus:"Boundaries and throw-ins", drills:[
+    ["10","Stay in the box","Dribble inside a coned square. If the ball goes out, stop and raise a hand. Shrink the box every minute."],
+    ["15","Throw-in partners","Feet on the ground, two hands, ball behind the head, throw over the head to a partner. Five good ones each, then switch."],
+    ["15","Throw-in relay","Teams take turns: proper throw-in, partner traps it and dribbles back. Bad form means do it again, no penalty."],
+    ["20","Scrimmage with sidelines","Ball out over the line means a real throw-in. Coach calls it every time, short and quick."]
+  ], tip:"League rule: throw-ins now count. Teach the form, let them retry."},
+  {d:"2026-10-15", focus:"Passing with the inside of the foot", drills:[
+    ["10","Partner passing","Pairs 5 steps apart. Inside of the foot, plant foot next to the ball, pass to your partner's feet."],
+    ["15","Pass through the gates","Pairs pass through cone gates around the field. One point per gate. How many in 2 minutes?"],
+    ["15","3 vs 1 keep away","Three attackers try to keep the ball from one defender inside a box. Five passes in a row is a point."],
+    ["20","Scrimmage, pass to score","A goal counts double if the team passed before shooting."]
+  ], tip:"Say \"look up\" before every pass."},
+  {d:"2026-10-22", focus:"Shooting", drills:[
+    ["10","Dribble and shoot","Line up, dribble toward an empty goal, shoot with the laces. Short lines, two lines if you have two goals."],
+    ["15","1v1 to goal","Coach rolls the ball out, two players race for it. Whoever gets it attacks, the other defends."],
+    ["15","World Cup","Everyone tries to score in one goal. Score and you're through to the next round. Keep it fast and fun."],
+    ["20","Scrimmage with goalies","Rotate goalies every few minutes so everyone tries it."]
+  ], tip:"Shoot with the laces, toe pointed down."},
+  {d:"2026-10-29", focus:"Goalies, goal kicks and the build-out line", drills:[
+    ["10","Goalie catch and roll","Everyone tries: catch with hands in a W shape, then roll it out to a teammate. Hands only inside the box."],
+    ["15","Goal kick walk-through","Show the build-out line. When our goalie has it or it's a goal kick, the other team jogs back to the half line."],
+    ["15","Retreat race","Coach yells \"goal kick!\" and the defending team races back to the half line. First one there picks the next game."],
+    ["20","Scrimmage with build-out","Play full rules: goal kicks, retreat to half, goalie rotation."]
+  ], tip:"The build-out line confuses kids and parents. Practice it before Saturday."},
+  {d:"2026-11-05", focus:"Defending without fouling", drills:[
+    ["10","Shadow","Partners. One dribbles, the other follows like a shadow staying goal-side, without taking the ball."],
+    ["15","1v1 gates","Attacker tries to dribble through a gate. Defender stays on their feet, side-on, and pokes the ball away."],
+    ["15","2 vs 1","Two attackers, one defender. Defender learns to slow them down and wait for help."],
+    ["20","Scrimmage","Praise good defending out loud. No slide tackles, no pushing."]
+  ], tip:"Stay on your feet. No slide tackles at this age."},
+  {d:"2026-11-12", focus:"Spreading out", drills:[
+    ["10","Bees vs spread","Show what a swarm looks like, then show spreading out. Freeze the scrimmage and ask \"where's the open space?\""],
+    ["15","Four corners","Cone a big square. Pass to a teammate standing in a corner to score. Teaches width."],
+    ["15","Numbers game","Two teams, each kid has a number. Coach calls numbers and those kids play. Call 1v1, 2v2 or 3v2."],
+    ["20","Scrimmage 5v5 with goalies","Game-day setup. Practice subbing and goalie swaps like Saturday."]
+  ], tip:"Spread out means more passing and fewer collisions."},
+  {d:"2026-11-19", focus:"Last practice: favorites and fun", drills:[
+    ["10","Kids pick the warm-up","Let them vote for their favorite drill from the season."],
+    ["15","Coaches vs kids","Parents and coaches play on their knees or walk only. Kids love it."],
+    ["15","Penalty shootout","Everyone takes a shot, everyone tries goalie."],
+    ["20","Final scrimmage and cheer","Finish with a team cheer and a high-five line."]
+  ], tip:"Last game is Saturday, Nov 21. Celebrate the season."}
+];
+
 var API = "/projects/fireballs/api/";
 var team = null;
 
@@ -352,27 +456,53 @@ var MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"
 var DOW=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 function today(){var n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate());}
 
+function addMin(t,m){var x=t.match(/(\d+):(\d+)\s*(AM|PM)/);var h=+x[1]%12+(x[3]==="PM"?12:0),mm=h*60+(+x[2])+m;h=Math.floor(mm/60);mm=mm%60;return ((h%12)||12)+":"+(mm<10?"0":"")+mm+" "+(h>=12?"PM":"AM");}
+
 function renderGames(){
   var now=today(), nextIdx=-1, html="";
   GAMES.forEach(function(g,i){ if(!g.off && nextIdx<0 && dt(g.d)>=now) nextIdx=i; });
   GAMES.forEach(function(g,i){
     var d=dt(g.d), past=d<now;
-    var when='<div class="when"><div class="mon">'+MON[d.getMonth()]+'</div><div class="day">'+d.getDate()+'</div>'+(g.off?'':'<div class="time">'+g.t+'</div>')+'</div>';
+    var date=DOW[d.getDay()]+", "+MON[d.getMonth()]+" "+d.getDate();
     if(g.off){
-      html+='<div class="game'+(past?' past':'')+'">'+when+'<div><h3>No games<span class="tag off">Off week</span></h3><div class="meta">League-wide day off.</div></div></div>';
+      html+='<div class="game'+(past?' past':'')+'" style="display:block"><div class="head"><span class="date">'+date+'</span><h3>No games<span class="tag off">Off week</span></h3></div><div class="meta">League-wide day off. Practice is still on Thursday.</div></div>';
       return;
     }
-    html+='<div class="game'+(past?' past':'')+(i===nextIdx?' is-next':'')+'" data-date="'+g.d+'">'+when+
-      '<div><h3>'+(g.home?'vs ':'at ')+esc(g.opp)+(g.home?'<span class="tag home">Home</span>':'<span class="tag">Away</span>')+'</h3>'+
-      '<div class="meta">Trace Crossings, Field '+g.f+'</div>'+
-      '<div class="extra">'+gameExtra(g,past)+'</div></div></div>';
+    html+='<div class="game'+(past?' past':'')+(i===nextIdx?' is-next':'')+'" style="display:block" data-date="'+g.d+'">'+
+      '<div class="head"><span class="date">'+date+(i===nextIdx?' &middot; <span style="color:var(--fire)">Next game</span>':'')+'</span>'+
+      '<h3>'+(g.home?'vs ':'at ')+esc(g.opp)+(g.home?'<span class="tag home">Home</span>':'<span class="tag">Away</span>')+'</h3></div>'+
+      '<div class="tiles">'+
+        '<div class="tile"><span class="k">Kickoff</span><span class="v">'+g.t+'</span><span class="s">Arrive by '+addMin(g.t,-15)+'</span></div>'+
+        '<a class="tile" href="#fields"><span class="k">Field</span><span class="v">'+g.f+'</span><span class="s">Trace Crossings &middot; map</span></a>'+
+      '</div>'+
+      '<div class="extra">'+gameExtra(g,past)+'</div></div>';
   });
   document.getElementById("game-list").innerHTML=html;
   if(nextIdx>=0){
     var g=GAMES[nextIdx], d=dt(g.d);
-    document.getElementById("next-big").textContent=DOW[d.getDay()]+", "+MON[d.getMonth()]+" "+d.getDate()+" at "+g.t;
-    document.getElementById("next-sub").textContent=(g.home?"Home vs ":"Away at ")+g.opp+" · Trace Crossings, Field "+g.f+snackLine(g.d);
+    document.getElementById("next-big").textContent=DOW[d.getDay()]+", "+MON[d.getMonth()]+" "+d.getDate()+" · "+g.t+" · Field "+g.f;
+    document.getElementById("next-sub").textContent=(g.home?"Home vs ":"Away at ")+g.opp+" · Arrive by "+addMin(g.t,-15)+snackLine(g.d);
     document.getElementById("next-game").hidden=false;
+  }
+}
+
+function renderPractices(){
+  var now=today(), nextIdx=-1, html="";
+  PRACTICES.forEach(function(p,i){ if(nextIdx<0 && dt(p.d)>=now) nextIdx=i; });
+  PRACTICES.forEach(function(p,i){
+    var d=dt(p.d), past=d<now;
+    html+='<details class="practice'+(past?' past':'')+(i===nextIdx?' is-next':'')+'"'+(i===nextIdx?' open':'')+'>'+
+      '<summary><span class="pdate">'+DOW[d.getDay()].slice(0,3)+', '+MON[d.getMonth()]+' '+d.getDate()+'</span><span class="ptime">5:30 to 6:30 PM'+(i===nextIdx?' &middot; Next':'')+'</span><span class="chev" aria-hidden="true">&#9656;</span>'+
+      '<span class="pfocus">Week '+(i+1)+': '+esc(p.focus)+'</span></summary>'+
+      '<ul class="drills">'+p.drills.map(function(x){return '<li><span class="min">'+x[0]+' min</span><span><span class="name">'+esc(x[1])+'</span><span class="how" style="display:block">'+esc(x[2])+'</span></span></li>';}).join("")+'</ul>'+
+      (p.tip?'<p class="ptip">'+esc(p.tip)+'</p>':'')+'</details>';
+  });
+  document.getElementById("practice-list").innerHTML=html;
+  if(nextIdx>=0){
+    var p=PRACTICES[nextIdx], d=dt(p.d);
+    document.getElementById("np-big").textContent=DOW[d.getDay()]+", "+MON[d.getMonth()]+" "+d.getDate()+" · 5:30 to 6:30 PM";
+    document.getElementById("np-sub").textContent="Focus: "+p.focus;
+    document.getElementById("next-practice").hidden=false;
   }
 }
 
@@ -384,8 +514,18 @@ function rsvpFor(date,pid){ for(var i=0;i<team.rsvps.length;i++){var r=team.rsvp
 function gameExtra(g,past){
   if(!team) return "";
   var sid=snackFor(g.d), out="";
-  var opts='<option value="">Nobody yet</option>'+team.players.map(function(p){return '<option value="'+p.id+'"'+(p.id===sid?' selected':'')+'>'+esc(p.display)+'</option>';}).join("");
-  if(!past||sid) out+='<div class="snack">&#127818; Snacks: '+(past?'<b>'+esc(playerName(sid))+'</b>':'<select data-snack="'+g.d+'" aria-label="Snack family for '+g.d+'">'+opts+'</select>')+'</div>';
+  if(past){ if(sid) out+='<div class="snackbox taken">&#127818; Snacks: <b>'+esc(playerName(sid))+'\'s family</b></div>'; }
+  else if(snackEdit===g.d){
+    var opts='<option value="">Pick your player</option>'+team.players.map(function(p){return '<option value="'+p.id+'"'+(p.id===sid?' selected':'')+'>'+esc(p.display)+'\'s family</option>';}).join("");
+    out+='<div class="snackbox"><span class="lbl">&#127818; Who\'s bringing snacks?</span><select data-snack="'+g.d+'" aria-label="Snack family">'+opts+'</select>'+
+      '<button type="button" class="btn sm" data-snack-save="'+g.d+'">Save</button><button type="button" class="link" data-snack-cancel>Cancel</button></div>';
+  }
+  else if(sid){
+    out+='<div class="snackbox taken">&#127818; Snacks: <b>'+esc(playerName(sid))+'\'s family</b> <button type="button" class="link" data-snack-edit="'+g.d+'">Change</button><button type="button" class="link" data-snack-clear="'+g.d+'">Remove</button></div>';
+  }
+  else {
+    out+='<div class="snackbox"><span class="lbl">&#127818; Snacks: open</span><button type="button" class="btn sm" data-snack-edit="'+g.d+'">Sign up to bring snacks</button></div>';
+  }
   var y=0,n=0,m=0;
   team.players.forEach(function(p){var s=rsvpFor(g.d,p.id); if(s==="yes")y++; else if(s==="no")n++; else if(s==="maybe")m++;});
   var sum='<span class="rsvp-sum"><span class="y">'+y+' coming</span> &middot; <span class="m">'+m+' maybe</span> &middot; <span class="n">'+n+' out</span> &middot; '+(team.players.length-y-n-m)+' no reply</span>';
@@ -423,13 +563,22 @@ document.addEventListener("click",function(e){
     toast("Saved");
   }).catch(function(){toast("Couldn't save. Try again.");});
 });
-document.addEventListener("change",function(e){
-  var s=e.target.closest("select[data-snack]"); if(!s||!team) return;
-  var date=s.dataset.snack, pid=+s.value; if(!pid) return;
-  post("snack",{game_date:date,player_id:pid}).then(function(){
-    team.snacks=team.snacks.filter(function(x){return x.game_date!==date;}); team.snacks.push({game_date:date,player_id:pid});
-    renderGames(); toast("Snack duty updated");
+var snackEdit=null;
+function keepOpen(fn){ var open=[].map.call(document.querySelectorAll(".game details[open]"),function(x){return x.closest(".game").dataset.date;}); fn(); open.forEach(function(d){var el=document.querySelector('.game[data-date="'+d+'"] details'); if(el) el.open=true;}); }
+function setSnack(date,pid){
+  return post("snack",{game_date:date,player_id:pid}).then(function(){
+    team.snacks=team.snacks.filter(function(x){return x.game_date!==date;});
+    if(pid) team.snacks.push({game_date:date,player_id:pid});
+    snackEdit=null; keepOpen(renderGames); toast(pid?"Thanks! You're on snacks.":"Snack spot opened up");
   }).catch(function(){toast("Couldn't save. Try again.");});
+}
+document.addEventListener("click",function(e){
+  if(!team) return;
+  var t=e.target.closest("[data-snack-edit],[data-snack-save],[data-snack-cancel],[data-snack-clear]"); if(!t) return;
+  if(t.dataset.snackEdit){ snackEdit=t.dataset.snackEdit; keepOpen(renderGames); var sel=document.querySelector('select[data-snack="'+snackEdit+'"]'); if(sel) sel.focus(); }
+  else if(t.hasAttribute("data-snack-cancel")){ snackEdit=null; keepOpen(renderGames); }
+  else if(t.dataset.snackClear){ setSnack(t.dataset.snackClear,null); }
+  else if(t.dataset.snackSave){ var d=t.dataset.snackSave, sel=document.querySelector('select[data-snack="'+d+'"]'), pid=+(sel&&sel.value); if(!pid){toast("Pick your player first");return;} setSnack(d,pid); }
 });
 
 function showJoin(){
@@ -449,7 +598,7 @@ document.getElementById("join-form").addEventListener("submit",function(e){
     }).catch(function(){ err.textContent="Something went wrong. Try again."; btn.disabled=false; });
 });
 
-renderGames();
+renderGames(); renderPractices();
 fetch(API+"team",{credentials:"same-origin"}).then(function(r){
   if(r.status===401) throw new Error("Sign in with your parent email to see the roster, snacks and RSVPs.");
   if(r.status===403){ showJoin(); return null; }
