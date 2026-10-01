@@ -245,13 +245,17 @@ footer a{color:var(--muted)}
       <div id="state" class="callout muted"><h3>Loading</h3><p id="state-msg">Hang on a second.</p></div>
       <form class="acct" id="acct" hidden>
         <div><div class="k">Signed in as</div><div class="email" id="email"></div></div>
+        <label class="f" id="code-wrap" hidden>Team code (from the team GroupMe or your coach)
+          <input type="text" id="code" maxlength="40" autocomplete="off" autocapitalize="off" spellcheck="false">
+          <span id="code-err" style="color:var(--bad);font-size:.85rem" role="alert"></span>
+        </label>
         <label class="f">Your name
           <input type="text" id="name" maxlength="80" autocomplete="name" placeholder="e.g. Sam Smith" required>
         </label>
         <label class="f">Mobile phone (only the coach sees this)
           <input type="text" id="phone" inputmode="tel" maxlength="24" autocomplete="tel" placeholder="205-555-0123">
         </label>
-        <div><div class="k" style="margin-bottom:.2rem">Your player</div><p class="sub" style="color:var(--muted);font-size:.85rem;margin-bottom:.5rem">Pick every player you're signing up for and how you're related. Moms, dads, grandparents and other family can each have their own login for the same player.</p><div class="kids" id="kids"></div></div>
+        <div id="kids-wrap"><div class="k" style="margin-bottom:.2rem">Your player</div><p class="sub" style="color:var(--muted);font-size:.85rem;margin-bottom:.5rem">Pick every player you're signing up for and how you're related. Moms, dads, grandparents and other family can each have their own login for the same player.</p><div class="kids" id="kids"></div></div>
         <div class="actions">
           <button type="submit" class="btn">Save</button>
           <a class="btn ghost" href="/cdn-cgi/access/logout">Log out</a>
@@ -268,25 +272,27 @@ footer a{color:var(--muted)}
 <script>
 var API = "/projects/fireballs/api/";
 var WELCOME = new URLSearchParams(location.search).has("welcome");
+var NEEDCODE = false;
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
 function toast(m){var t=document.getElementById("toast");t.textContent=m;t.classList.add("show");clearTimeout(toast._t);toast._t=setTimeout(function(){t.classList.remove("show");},1800);}
 
-fetch(API+"team",{credentials:"same-origin"}).then(function(r){
-  if(r.status===403) throw new Error("JOIN");
-  if(r.status===401) throw new Error("Sign in with your parent email first.");
-  if(!r.ok) throw new Error("Couldn't load. Refresh to try again.");
-  return r.json();
-}).then(function(d){
-  document.getElementById("state").hidden=true;
-  document.getElementById("acct").hidden=false;
+function showForm(){ document.getElementById("state").hidden=true; document.getElementById("acct").hidden=false; }
+function welcomeText(){
+  var nav=document.querySelector("header ul"); if(nav) nav.hidden=true;
+  document.getElementById("h1").innerHTML='Welcome to the <em>Fireballs!</em>';
+  document.getElementById("lede").textContent = NEEDCODE
+    ? "Before you can see the team page, enter the team code and tell the coach who you are. This takes a minute and you only do it once."
+    : "One more step. Pick your player and how you're related. You can change this anytime from Account.";
+  document.querySelector('#acct button[type=submit]').textContent = NEEDCODE ? "Join the team" : "Save and continue";
+}
+function renderProfile(d){
+  showForm();
   document.getElementById("email").textContent=d.me;
-  document.getElementById("name").value=d.my_name||"";
-  document.getElementById("phone").value=d.my_phone||"";
-  if(WELCOME){
-    document.getElementById("h1").innerHTML='Welcome to the <em>Fireballs!</em>';
-    document.getElementById("lede").textContent="One quick step. Tell the coach who you are and pick your player. You can change this anytime from Account.";
-    document.querySelector('#acct button[type=submit]').textContent="Save and continue";
-  }
+  if(!document.getElementById("name").value) document.getElementById("name").value=d.my_name||"";
+  if(!document.getElementById("phone").value) document.getElementById("phone").value=d.my_phone||"";
+  document.getElementById("code-wrap").hidden=true;
+  document.getElementById("kids-wrap").hidden=false;
+  if(WELCOME || !(d.my_players||[]).length){ WELCOME=true; welcomeText(); }
   var mine=d.my_players||[], rel=d.my_relations||{};
   var OPTS=[["parent","Parent"],["grandparent","Grandparent"],["relative","Other relative"]];
   document.getElementById("kids").innerHTML=d.players.map(function(p){
@@ -295,18 +301,45 @@ fetch(API+"team",{credentials:"same-origin"}).then(function(r){
       '<select data-rel="'+p.id+'" aria-label="Your relationship to '+esc(p.display)+'"'+(on?'':' disabled')+'>'+
       OPTS.map(function(o){return '<option value="'+o[0]+'"'+(o[0]===r?' selected':'')+'>'+o[1]+'</option>';}).join("")+'</select></div>';
   }).join("");
-  document.getElementById("kids").addEventListener("change",function(e){
-    if(e.target.type==="checkbox"){ document.querySelector('select[data-rel="'+e.target.value+'"]').disabled=!e.target.checked; }
-  });
-}).catch(function(err){
+}
+document.getElementById("kids").addEventListener("change",function(e){
+  if(e.target.type==="checkbox"){ document.querySelector('select[data-rel="'+e.target.value+'"]').disabled=!e.target.checked; }
+});
+function loadProfile(){
+  return fetch(API+"team",{credentials:"same-origin",cache:"no-store"}).then(function(r){
+    if(r.status===403) return r.json().then(function(j){ var e=new Error("JOIN"); e.me=j.me; throw e; });
+    if(r.status===401) throw new Error("Sign in with your parent email first.");
+    if(!r.ok) throw new Error("Couldn't load. Refresh to try again.");
+    return r.json();
+  }).then(renderProfile);
+}
+loadProfile().catch(function(err){
+  if(err&&err.message==="JOIN"){
+    NEEDCODE=true; WELCOME=true; showForm(); welcomeText();
+    document.getElementById("email").textContent=err.me||"";
+    document.getElementById("code-wrap").hidden=false;
+    document.getElementById("kids-wrap").hidden=true;
+    document.getElementById("code").focus();
+    return;
+  }
   var h=document.querySelector("#state h3"), m=document.getElementById("state-msg");
   document.getElementById("logout-only").hidden=false;
-  if(err&&err.message==="JOIN"){ h.textContent="One quick step first"; m.innerHTML='Join the team on the <a href="../#team">team page</a> with the code from the GroupMe.'; return; }
   h.textContent="My account"; m.textContent=(err&&err.message&&err.message.length<100&&!/fetch/i.test(err.message))?err.message:"Couldn't load. Refresh to try again.";
 });
 
 document.getElementById("acct").addEventListener("submit",function(e){
   e.preventDefault();
+  if(NEEDCODE){
+    var err=document.getElementById("code-err"); err.textContent="";
+    if(!document.getElementById("name").value.trim()){ toast("Enter your name"); return; }
+    fetch(API+"join",{method:"POST",credentials:"same-origin",headers:{"content-type":"application/json"},body:JSON.stringify({code:document.getElementById("code").value,name:document.getElementById("name").value})})
+      .then(function(r){
+        if(r.ok){ NEEDCODE=false; return loadProfile().then(function(){ toast("You're in! Now pick your player."); document.getElementById("kids-wrap").scrollIntoView({behavior:"smooth",block:"center"}); }); }
+        err.textContent = r.status===429 ? "Too many tries. Wait an hour and try again." : r.status===403 ? "That code didn't work. Check the GroupMe and try again." : "Something went wrong. Try again.";
+      }).catch(function(){ err.textContent="Something went wrong. Try again."; });
+    return;
+  }
+  if(!document.getElementById("name").value.trim()){ toast("Enter your name"); return; }
   var players=[].map.call(document.querySelectorAll("#kids input:checked"),function(x){return {id:+x.value, relation:document.querySelector('select[data-rel="'+x.value+'"]').value};});
   if(!players.length){ toast("Pick your player"); return; }
   fetch(API+"me",{method:"POST",credentials:"same-origin",headers:{"content-type":"application/json"},body:JSON.stringify({name:document.getElementById("name").value,phone:document.getElementById("phone").value,players:players})})

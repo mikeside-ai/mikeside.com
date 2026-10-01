@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <meta name="color-scheme" content="dark light">
+<script>document.documentElement.classList.add("checking")</script>
+<style>html.checking main,html.checking footer,html.checking header ul{visibility:hidden}</style>
+
 <meta name="theme-color" content="#0b1020" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f6f2ea" media="(prefers-color-scheme: light)">
 <title>Fireballs &middot; U7 Boys Soccer &middot; Fall 2026</title>
@@ -597,14 +600,16 @@ renderGames(); renderPractices();
 function loadTeam(){
 fetch(API+"team",{credentials:"same-origin",cache:"no-store"}).then(function(r){
   if(r.status===401) throw new Error("Sign in with your parent email to see the roster, snacks and RSVPs.");
-  if(r.status===403){ showJoin(); return null; }
+  if(r.status===403){ location.replace("account/?welcome=1"); return null; }
   if(r.status===503) throw new Error("The parent area isn't switched on yet. Check back soon.");
   if(!r.ok) throw new Error("Couldn't load the parent area. Refresh to try again.");
   return r.json();
 }).then(function(d){ if(!d) return;
   if(!(d.my_players||[]).length){ location.replace("account/?welcome=1"); return; }
+  document.documentElement.classList.remove("checking");
   team=d; renderPrivate(); keepOpen(renderGames); updateCta(); })
 .catch(function(err){
+  document.documentElement.classList.remove("checking");
   document.getElementById("private-msg").textContent=(err&&err.message&&err.message.length<120&&!/fetch/i.test(err.message))?err.message:"Couldn't load the parent area. Refresh to try again.";
   document.querySelector("#private-off h3").textContent="Parent area";
 });

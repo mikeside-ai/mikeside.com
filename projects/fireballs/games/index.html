@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <meta name="color-scheme" content="dark light">
+<script>document.documentElement.classList.add("checking")</script>
+<style>html.checking main,html.checking footer,html.checking header ul{visibility:hidden}</style>
+
 <meta name="theme-color" content="#0b1020" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f6f2ea" media="(prefers-color-scheme: light)">
 <title>Games &middot; Fireballs U7</title>
@@ -366,11 +369,11 @@ document.addEventListener("click",function(e){
 
 render();
 fetch(API+"team",{credentials:"same-origin",cache:"no-store"}).then(function(r){
-  if(r.status===403) throw new Error("JOIN");
+  if(r.status===403){ location.replace("../account/?welcome=1"); return new Promise(function(){}); }
   if(!r.ok) throw new Error("x");
   return r.json();
-}).then(function(d){ if(!(d.my_players||[]).length){ location.replace("../account/?welcome=1"); return; } team=d; render(); })
-.catch(function(err){
+}).then(function(d){ if(!(d.my_players||[]).length){ location.replace("../account/?welcome=1"); return; } document.documentElement.classList.remove("checking"); team=d; render(); })
+.catch(function(err){ document.documentElement.classList.remove("checking");
   var n=document.getElementById("note"); n.hidden=false;
   document.getElementById("note-msg").innerHTML = (err&&err.message==="JOIN") ? 'Join the team on the <a href="../#team">team page</a> to RSVP and sign up for snacks.' : 'Couldn\'t load RSVPs and snacks. Refresh to try again.';
 });
