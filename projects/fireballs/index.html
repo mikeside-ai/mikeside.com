@@ -50,8 +50,9 @@
     color-scheme:light;
   }
   :root .game,:root .practice,:root .card,:root .tile{box-shadow:0 1px 2px rgba(27,31,51,.05)}
-  :root .snackbox{background:rgba(138,97,0,.06);border-color:rgba(138,97,0,.35)}
-  :root .snackbox.taken{border-color:rgba(138,97,0,.25)}
+  :root .cta-practice{color:#ffffff}
+  :root .snackbox:not(.taken){background:linear-gradient(135deg,rgba(194,65,12,.10),rgba(138,97,0,.08));border-color:var(--fire)}
+  :root .snackbox.taken{background:rgba(47,125,82,.08);border-color:rgba(47,125,82,.45)}
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -184,6 +185,24 @@ details.rsvp[open] summary::before{content:"\2212  ";}
 .join button{justify-self:start;border:0;cursor:pointer;font:inherit}
 .join .err{color:var(--bad);font-size:.85rem;min-height:1.2em}
 .map{display:block;width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);margin-top:.4rem}
+/* Snack sign-up: make it hard to miss */
+.snackbox{border-width:2px;padding:.75rem .85rem;font-size:.95rem}
+.snackbox:not(.taken){background:linear-gradient(135deg,rgba(255,122,47,.16),rgba(245,197,66,.12));border:2px dashed var(--fire)}
+.snackbox.taken{background:rgba(92,192,138,.10);border:2px solid rgba(92,192,138,.45)}
+.snackbox.taken b{color:var(--good)}
+.snackbox .lbl{font-size:1rem}
+.cta-snack{display:inline-flex;align-items:center;gap:.55rem;margin-top:1.3rem;font-weight:700;font-size:1.05rem;padding:.85rem 1.4rem;border-radius:999px;background:var(--fire);color:var(--on-fire);box-shadow:0 0 0 0 rgba(255,122,47,.7);animation:glow 2.2s ease-in-out infinite}
+.cta-row{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.3rem}
+.cta-row .cta-snack{margin-top:0}
+.cta-practice{background:var(--jumpsuit);color:#1a1405;animation-name:glow-y;animation-delay:1.1s}
+@keyframes glow-y{0%{box-shadow:0 0 0 0 rgba(245,197,66,.6),0 0 14px rgba(245,197,66,.4)}70%{box-shadow:0 0 0 14px rgba(245,197,66,0),0 0 22px rgba(245,197,66,.3)}100%{box-shadow:0 0 0 0 rgba(245,197,66,0),0 0 14px rgba(245,197,66,.4)}}
+@media (prefers-reduced-motion: reduce){.cta-practice{box-shadow:0 0 18px rgba(245,197,66,.5)}}
+.cta-snack:hover{text-decoration:none;filter:brightness(1.08)}
+.cta-snack small{font-weight:600;font-size:.8rem;opacity:.85}
+@keyframes glow{0%{box-shadow:0 0 0 0 rgba(255,122,47,.65),0 0 14px rgba(255,122,47,.45)}70%{box-shadow:0 0 0 14px rgba(255,122,47,0),0 0 22px rgba(255,122,47,.35)}100%{box-shadow:0 0 0 0 rgba(255,122,47,0),0 0 14px rgba(255,122,47,.45)}}
+@media (prefers-reduced-motion: reduce){.cta-snack{animation:none;box-shadow:0 0 18px rgba(255,122,47,.5)}}
+.acct-link{display:none;font-size:.8rem;font-weight:600;color:var(--muted)}
+@media (max-width:560px){.acct-link{display:inline}}
 .toast{position:fixed;left:50%;bottom:1.2rem;transform:translateX(-50%);background:var(--card);border:1px solid var(--border);border-radius:999px;padding:.5rem 1rem;font-size:.85rem;opacity:0;transition:opacity .2s;pointer-events:none}
 .toast.show{opacity:1}
 
@@ -205,6 +224,7 @@ footer a{color:var(--muted)}
 <header>
   <div class="container nav">
     <a class="logo" href="/">mike<span>side</span></a>
+    <a class="acct-link" href="account/">&#128100; Account</a>
     <ul>
       <li><a href="#games">Games</a></li>
       <li><a href="#practices">Practices</a></li>
@@ -212,6 +232,7 @@ footer a{color:var(--muted)}
       <li><a href="#fields">Field map</a></li>
       <li><a href="#rules">How games work</a></li>
       <li><a href="#contacts">Contacts</a></li>
+      <li><a href="account/">Account</a></li>
     </ul>
   </div>
 </header>
@@ -222,6 +243,10 @@ footer a{color:var(--muted)}
       <span class="kicker">Hoover Soccer Club &middot; U7 Boys &middot; Fall 2026</span>
       <h1>Go <em>Fireballs!</em></h1>
       <p class="lede">Games, practices, snack sign-up, who's coming and the rules of the game. Everything a parent needs on a Saturday morning.</p>
+      <div class="cta-row">
+        <a class="cta-snack" href="snacks/">&#127818; Sign up for snacks <small id="cta-open"></small></a>
+        <a class="cta-snack cta-practice" href="practices/">&#9917; Practice plan <small>Thursdays 5:30</small></a>
+      </div>
       <div class="next" id="next-game" hidden>
         <span class="label">Next game</span>
         <span class="big" id="next-big"></span>
@@ -239,7 +264,7 @@ footer a{color:var(--muted)}
     <div class="container">
       <p class="eyebrow">Saturdays at Trace Crossings</p>
       <h2>Game schedule</h2>
-      <p class="intro">Eight games, all 60 minutes. Plan to arrive 15 minutes early. Tap the field to see where it is. Sign up for snacks and RSVP right on each game.</p>
+      <p class="intro">Eight games, all 60 minutes. Plan to arrive 15 minutes early. Tap a game's time or field to RSVP and see your field on the map. Sign up for snacks right here. <a href="games/">See all games</a>.</p>
       <div class="games" id="game-list"></div>
       <p class="intro" style="margin-top:1.2rem;font-size:.85rem">From the league's <a href="https://scheduler.leaguelobster.com/2821580/u4-u8-hoover-soccer-club-little-legends/fall-2026/" rel="noopener">official schedule</a>. If a time changes, the league page wins.</p>
     </div>
@@ -249,8 +274,9 @@ footer a{color:var(--muted)}
     <div class="container">
       <p class="eyebrow">Thursdays, 5:30 to 6:30 PM</p>
       <h2>Practice plan</h2>
-      <p class="intro">One hour every Thursday. Each practice has a focus and four suggested drills. Every drill uses a ball for every kid where possible, keeps lines short, and ends in a game. Tap a practice to see the plan.</p>
+      <p class="intro">One hour every Thursday with a focus and four suggested drills. Here's the next one. See the <a href="practices/">full practice plan</a> for the whole season.</p>
       <div class="practices" id="practice-list"></div>
+      <a class="cta-snack cta-practice" href="practices/" style="margin-top:1rem">&#9917; See all practices and drills</a>
       <div class="callout">
         <h3>Coach and helper tips</h3>
         <p>Keep talking short, about 20 seconds, then let them play. Give water breaks between drills. Bring cones, pinnies in two colors, a ball pump and a size 3 ball for every player.</p>
@@ -403,70 +429,11 @@ footer a{color:var(--muted)}
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+<script src="/projects/fireballs/practices-data.js"></script>
+<script src="/projects/fireballs/games-data.js"></script>
 <script>
-// Public schedule (league data). Times are local, America/Chicago.
-var GAMES = [
-  {d:"2026-09-26", t:"1:30 PM",  f:"1H", opp:"Lovelady", home:true},
-  {d:"2026-10-03", t:"12:00 PM", f:"1G", opp:"Callaway", home:true},
-  {d:"2026-10-10", off:true},
-  {d:"2026-10-17", t:"10:30 AM", f:"2A", opp:"Braden",   home:false},
-  {d:"2026-10-24", t:"1:30 PM",  f:"1H", opp:"Haddad",   home:false},
-  {d:"2026-10-31", t:"12:00 PM", f:"2A", opp:"Bledsoe",  home:true},
-  {d:"2026-11-07", t:"1:30 PM",  f:"1H", opp:"Farley",   home:true},
-  {d:"2026-11-14", t:"10:30 AM", f:"1H", opp:"Bodiford", home:false},
-  {d:"2026-11-21", t:"1:30 PM",  f:"1H", opp:"Lovelady", home:false}
-];
-// Practices: Thursdays 5:30-6:30 PM. Suggested plan, builds week to week.
-var PRACTICES = [
-  {d:"2026-10-01", focus:"Dribbling and ball control", drills:[
-    ["10","Red light, green light","Every kid dribbles. Green means go, yellow means slow, red means foot on top of the ball. Add a \"turn around\" color once they get it."],
-    ["15","Sharks and minnows","Minnows dribble across the box. One or two sharks try to kick balls out. If you lose your ball, you become a shark."],
-    ["15","Gate dribble","Set up 8 to 10 cone gates. Kids dribble through as many gates as they can in 60 seconds. Beat your own score."],
-    ["20","Scrimmage 4v4, no goalies","Small goals, lots of touches. Cheer every good dribble."]
-  ], tip:"Goal for the day: keep the ball close, little taps."},
-  {d:"2026-10-08", focus:"Boundaries and throw-ins", drills:[
-    ["10","Stay in the box","Dribble inside a coned square. If the ball goes out, stop and raise a hand. Shrink the box every minute."],
-    ["15","Throw-in partners","Feet on the ground, two hands, ball behind the head, throw over the head to a partner. Five good ones each, then switch."],
-    ["15","Throw-in relay","Teams take turns: proper throw-in, partner traps it and dribbles back. Bad form means do it again, no penalty."],
-    ["20","Scrimmage with sidelines","Ball out over the line means a real throw-in. Coach calls it every time, short and quick."]
-  ], tip:"League rule: throw-ins now count. Teach the form, let them retry."},
-  {d:"2026-10-15", focus:"Passing with the inside of the foot", drills:[
-    ["10","Partner passing","Pairs 5 steps apart. Inside of the foot, plant foot next to the ball, pass to your partner's feet."],
-    ["15","Pass through the gates","Pairs pass through cone gates around the field. One point per gate. How many in 2 minutes?"],
-    ["15","3 vs 1 keep away","Three attackers try to keep the ball from one defender inside a box. Five passes in a row is a point."],
-    ["20","Scrimmage, pass to score","A goal counts double if the team passed before shooting."]
-  ], tip:"Say \"look up\" before every pass."},
-  {d:"2026-10-22", focus:"Shooting", drills:[
-    ["10","Dribble and shoot","Line up, dribble toward an empty goal, shoot with the laces. Short lines, two lines if you have two goals."],
-    ["15","1v1 to goal","Coach rolls the ball out, two players race for it. Whoever gets it attacks, the other defends."],
-    ["15","World Cup","Everyone tries to score in one goal. Score and you're through to the next round. Keep it fast and fun."],
-    ["20","Scrimmage with goalies","Rotate goalies every few minutes so everyone tries it."]
-  ], tip:"Shoot with the laces, toe pointed down."},
-  {d:"2026-10-29", focus:"Goalies, goal kicks and the build-out line", drills:[
-    ["10","Goalie catch and roll","Everyone tries: catch with hands in a W shape, then roll it out to a teammate. Hands only inside the box."],
-    ["15","Goal kick walk-through","Show the build-out line. When our goalie has it or it's a goal kick, the other team jogs back to the half line."],
-    ["15","Retreat race","Coach yells \"goal kick!\" and the defending team races back to the half line. First one there picks the next game."],
-    ["20","Scrimmage with build-out","Play full rules: goal kicks, retreat to half, goalie rotation."]
-  ], tip:"The build-out line confuses kids and parents. Practice it before Saturday."},
-  {d:"2026-11-05", focus:"Defending without fouling", drills:[
-    ["10","Shadow","Partners. One dribbles, the other follows like a shadow staying goal-side, without taking the ball."],
-    ["15","1v1 gates","Attacker tries to dribble through a gate. Defender stays on their feet, side-on, and pokes the ball away."],
-    ["15","2 vs 1","Two attackers, one defender. Defender learns to slow them down and wait for help."],
-    ["20","Scrimmage","Praise good defending out loud. No slide tackles, no pushing."]
-  ], tip:"Stay on your feet. No slide tackles at this age."},
-  {d:"2026-11-12", focus:"Spreading out", drills:[
-    ["10","Bees vs spread","Show what a swarm looks like, then show spreading out. Freeze the scrimmage and ask \"where's the open space?\""],
-    ["15","Four corners","Cone a big square. Pass to a teammate standing in a corner to score. Teaches width."],
-    ["15","Numbers game","Two teams, each kid has a number. Coach calls numbers and those kids play. Call 1v1, 2v2 or 3v2."],
-    ["20","Scrimmage 5v5 with goalies","Game-day setup. Practice subbing and goalie swaps like Saturday."]
-  ], tip:"Spread out means more passing and fewer collisions."},
-  {d:"2026-11-19", focus:"Last practice: favorites and fun", drills:[
-    ["10","Kids pick the warm-up","Let them vote for their favorite drill from the season."],
-    ["15","Coaches vs kids","Parents and coaches play on their knees or walk only. Kids love it."],
-    ["15","Penalty shootout","Everyone takes a shot, everyone tries goalie."],
-    ["20","Final scrimmage and cheer","Finish with a team cheer and a high-five line."]
-  ], tip:"Last game is Saturday, Nov 21. Celebrate the season."}
-];
+
+
 
 var API = "/projects/fireballs/api/";
 var team = null;
@@ -494,8 +461,8 @@ function renderGames(){
       '<div class="head"><span class="date">'+date+(i===nextIdx?' &middot; <span style="color:var(--fire)">Next game</span>':'')+'</span>'+
       '<h3>'+(g.home?'vs ':'at ')+esc(g.opp)+(g.home?'<span class="tag home">Home</span>':'<span class="tag">Away</span>')+'</h3></div>'+
       '<div class="tiles">'+
-        '<div class="tile"><span class="k">Kickoff</span><span class="v">'+g.t+'</span><span class="s">Arrive by '+addMin(g.t,-15)+'</span></div>'+
-        '<a class="tile" href="#fields"><span class="k">Field</span><span class="v">'+g.f+'</span><span class="s">Trace Crossings &middot; map</span></a>'+
+        '<a class="tile" href="games/?g='+g.d+'"><span class="k">Kickoff</span><span class="v">'+g.t+'</span><span class="s">Arrive by '+addMin(g.t,-15)+'</span></a>'+
+        '<a class="tile" href="games/?g='+g.d+'"><span class="k">Field</span><span class="v">'+g.f+'</span><span class="s">Trace Crossings &middot; map</span></a>'+
       '</div>'+
       '<div class="extra">'+gameExtra(g,past)+'</div></div>';
   });
@@ -508,10 +475,12 @@ function renderGames(){
   }
 }
 
+var SHOW_ALL_PRACTICES=false;
 function renderPractices(){
   var now=today(), nextIdx=-1, html="";
   PRACTICES.forEach(function(p,i){ if(nextIdx<0 && dt(p.d)>=now) nextIdx=i; });
   PRACTICES.forEach(function(p,i){
+    if(!SHOW_ALL_PRACTICES && i!==nextIdx) return;
     var d=dt(p.d), past=d<now;
     html+='<details class="practice'+(past?' past':'')+(i===nextIdx?' is-next':'')+'"'+(i===nextIdx?' open':'')+'>'+
       '<summary><span class="pdate">'+DOW[d.getDay()].slice(0,3)+', '+MON[d.getMonth()]+' '+d.getDate()+'</span><span class="ptime">5:30 to 6:30 PM'+(i===nextIdx?' &middot; Next':'')+'</span><span class="chev" aria-hidden="true">&#9656;</span>'+
@@ -538,7 +507,7 @@ function gameExtra(g,past){
   var sid=snackFor(g.d), out="";
   if(past){ if(sid) out+='<div class="snackbox taken">&#127818; Snacks: <b>'+esc(playerName(sid))+'\'s family</b></div>'; }
   else if(snackEdit===g.d){
-    var opts='<option value="">Pick your player</option>'+team.players.map(function(p){return '<option value="'+p.id+'"'+(p.id===sid?' selected':'')+'>'+esc(p.display)+'\'s family</option>';}).join("");
+    var opts='<option value="">Pick your player</option>'+team.players.map(function(p){var pre=sid?p.id===sid:((team.my_players||[])[0]===p.id);return '<option value="'+p.id+'"'+(pre?' selected':'')+'>'+esc(p.display)+'\'s family</option>';}).join("");
     out+='<div class="snackbox"><span class="lbl">&#127818; Who\'s bringing snacks?</span><select data-snack="'+g.d+'" aria-label="Snack family">'+opts+'</select>'+
       '<button type="button" class="btn sm" data-snack-save="'+g.d+'">Save</button><button type="button" class="link" data-snack-cancel>Cancel</button></div>';
   }
@@ -550,13 +519,7 @@ function gameExtra(g,past){
   }
   var y=0,n=0,m=0;
   team.players.forEach(function(p){var s=rsvpFor(g.d,p.id); if(s==="yes")y++; else if(s==="no")n++; else if(s==="maybe")m++;});
-  var sum='<span class="rsvp-sum"><span class="y">'+y+' coming</span> &middot; <span class="m">'+m+' maybe</span> &middot; <span class="n">'+n+' out</span> &middot; '+(team.players.length-y-n-m)+' no reply</span>';
-  if(past){ out+='<div>'+sum+'</div>'; return out; }
-  out+='<details class="rsvp"><summary>Who\'s coming</summary><div style="margin-top:.4rem">'+sum+'</div><div class="rsvp-list">'+
-    team.players.map(function(p){var s=rsvpFor(g.d,p.id);
-      return '<div class="rsvp-row"><span>'+esc(p.display)+'</span><span class="seg" role="group" aria-label="RSVP for '+esc(p.display)+'">'+
-        ["yes","maybe","no"].map(function(v){return '<button type="button" data-s="'+v+'" data-date="'+g.d+'" data-pid="'+p.id+'" aria-pressed="'+(s===v)+'">'+({yes:"Yes",maybe:"Maybe",no:"No"})[v]+'</button>';}).join("")+
-      '</span></div>';}).join("")+'</div></details>';
+  out+='<a href="games/?g='+g.d+'" class="rsvp-sum" style="display:flex;justify-content:space-between;gap:.5rem"><span><span class="y">'+y+' coming</span> &middot; <span class="m">'+m+' maybe</span> &middot; <span class="n">'+n+' out</span></span><span style="color:var(--accent-soft);font-weight:600">'+(past?'Details':'RSVP &amp; map')+' &rsaquo;</span></a>';
   return out;
 }
 
@@ -587,11 +550,16 @@ document.addEventListener("click",function(e){
 });
 var snackEdit=null;
 function keepOpen(fn){ var open=[].map.call(document.querySelectorAll(".game details[open]"),function(x){return x.closest(".game").dataset.date;}); fn(); open.forEach(function(d){var el=document.querySelector('.game[data-date="'+d+'"] details'); if(el) el.open=true;}); }
+function updateCta(){
+  if(!team) return; var now=today(), open=0;
+  GAMES.forEach(function(g){ if(!g.off && dt(g.d)>=now && !snackFor(g.d)) open++; });
+  document.getElementById("cta-open").textContent = open ? "\u00b7 "+open+" open" : "\u00b7 all covered";
+}
 function setSnack(date,pid){
   return post("snack",{game_date:date,player_id:pid}).then(function(){
     team.snacks=team.snacks.filter(function(x){return x.game_date!==date;});
     if(pid) team.snacks.push({game_date:date,player_id:pid});
-    snackEdit=null; keepOpen(renderGames); toast(pid?"Thanks! You're on snacks.":"Snack spot opened up");
+    snackEdit=null; keepOpen(renderGames); updateCta(); toast(pid?"Thanks! You're on snacks.":"Snack spot opened up");
   }).catch(function(){toast("Couldn't save. Try again.");});
 }
 document.addEventListener("click",function(e){
@@ -614,7 +582,7 @@ document.getElementById("join-form").addEventListener("submit",function(e){
   var btn=f.querySelector("button"); btn.disabled=true;
   fetch(API+"join",{method:"POST",credentials:"same-origin",headers:{"content-type":"application/json"},body:JSON.stringify({name:f.name.value,code:f.code.value})})
     .then(function(r){
-      if(r.ok){ location.reload(); return; }
+      if(r.ok){ location.href="account/?welcome=1"; return; }
       err.textContent = r.status===429 ? "Too many tries. Wait an hour and try again." : r.status===403 ? "That code didn't work. Check the GroupMe and try again." : "Something went wrong. Try again.";
       btn.disabled=false;
     }).catch(function(){ err.textContent="Something went wrong. Try again."; btn.disabled=false; });
@@ -627,7 +595,9 @@ fetch(API+"team",{credentials:"same-origin"}).then(function(r){
   if(r.status===503) throw new Error("The parent area isn't switched on yet. Check back soon.");
   if(!r.ok) throw new Error("Couldn't load the parent area. Refresh to try again.");
   return r.json();
-}).then(function(d){ if(!d) return; team=d; renderPrivate(); renderGames(); })
+}).then(function(d){ if(!d) return;
+  if(!d.my_name && !(d.my_players||[]).length){ location.replace("account/?welcome=1"); return; }
+  team=d; renderPrivate(); renderGames(); updateCta(); })
 .catch(function(err){
   document.getElementById("private-msg").textContent=(err&&err.message&&err.message.length<120&&!/fetch/i.test(err.message))?err.message:"Couldn't load the parent area. Refresh to try again.";
   document.querySelector("#private-off h3").textContent="Parent area";

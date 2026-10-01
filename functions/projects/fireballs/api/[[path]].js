@@ -115,7 +115,7 @@ export async function onRequest({ request, env, params }) {
   const method = request.method;
 
   try {
-    const member = await env.DB.prepare("SELECT email FROM members WHERE email = ?").bind(email).first();
+    const member = await env.DB.prepare("SELECT email, name, phone FROM members WHERE email = ?").bind(email).first();
 
     if (route === "join" && method === "POST") {
       if (member) return json({ ok: true });
@@ -142,21 +142,41 @@ export async function onRequest({ request, env, params }) {
     if (!member) return json({ error: "not_member", me: email }, 403);
 
     if (route === "team" && method === "GET") {
-      const [players, snacks, rsvps, settings] = await env.DB.batch([
+      const [players, snacks, rsvps, settings, mine] = await env.DB.batch([
         env.DB.prepare("SELECT id, display FROM players WHERE active = 1 ORDER BY sort, id"),
         env.DB.prepare("SELECT game_date, player_id FROM snacks"),
         env.DB.prepare("SELECT game_date, player_id, status FROM rsvps"),
         env.DB.prepare("SELECT key, value FROM settings WHERE key IN ('groupme_url','coach_note')"),
+        env.DB.prepare("SELECT player_id FROM member_players WHERE email = ?").bind(email),
       ]);
       const s = Object.fromEntries(settings.results.map((r) => [r.key, r.value]));
       return json({
         me: email,
+        my_name: member.name || null,
+        my_phone: member.phone || null,
+        my_players: mine.results.map((r) => r.player_id),
         players: players.results,
         snacks: snacks.results,
         rsvps: rsvps.results,
         groupme_url: s.groupme_url || null,
         coach_note: s.coach_note || null,
       });
+    }
+
+    if (route === "me" && method === "POST") {
+      const b = await request.json().catch(() => ({}));
+      const name = String(b.name || "").trim().slice(0, 80) || null;
+      const phone = String(b.phone || "").replace(/[^0-9+()\-. ]/g, "").trim().slice(0, 24) || null;
+      const ids = Array.isArray(b.player_ids) ? [...new Set(b.player_ids.map(Number))].filter(Number.isInteger).slice(0, 8) : [];
+      const valid = ids.length
+        ? (await env.DB.prepare(`SELECT id FROM players WHERE active = 1 AND id IN (${ids.map(() => "?").join(",")})`).bind(...ids).all()).results.map((r) => r.id)
+        : [];
+      await env.DB.batch([
+        env.DB.prepare("UPDATE members SET name = ?, phone = ? WHERE email = ?").bind(name, phone, email),
+        env.DB.prepare("DELETE FROM member_players WHERE email = ?").bind(email),
+        ...valid.map((id) => env.DB.prepare("INSERT INTO member_players (email, player_id) VALUES (?, ?)").bind(email, id)),
+      ]);
+      return json({ ok: true, name, phone, player_ids: valid });
     }
 
     if (route === "rsvp" && method === "POST") {
