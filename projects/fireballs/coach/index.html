@@ -356,12 +356,12 @@ var TEMPLATES={
   }},
   rsvp:{label:"RSVP reminder", to:"norsvp", build:function(){
     var g=nextGame(); if(!g) return {s:"Fireballs",b:"No upcoming games."};
-    return {s:"Fireballs: are you coming "+lab(g.d)+"?", b:"Hi Fireballs families,\n\nPlease let us know if your player is coming to "+lab(g.d)+".\n\nKickoff: "+g.t+" (arrive by "+addMin(g.t,-15)+")\nField: "+g.f+" at Trace Crossings\n"+(g.home?"Home vs ":"Away at ")+g.opp+"\n\nRSVP here:\n"+SITE+"games/?g="+g.d+"\n\nThanks!\nCoaches"};
+    return {s:"Fireballs: are you coming "+lab(g.d)+"?", b:"Hi Fireballs families,\n\nPlease let us know if your player is coming to "+lab(g.d)+".\n\nKickoff: "+g.t+" (arrive by "+addMin(g.t,-15)+")\nField: "+g.f+" at Trace Crossings\n"+(g.home?"Home vs ":"Away at ")+g.opp+"\nJersey: "+jerseyFor(g).short+"\n\nRSVP here:\n"+SITE+"games/?g="+g.d+"\n\nThanks!\nCoaches"};
   }},
   gameday:{label:"Game day", to:"all", build:function(){
     var g=nextGame(); if(!g) return {s:"Fireballs",b:"No upcoming games."};
     var sid=snackFor(g.d);
-    return {s:"Fireballs game "+lab(g.d)+" at "+g.t+", Field "+g.f, b:"Hi Fireballs families,\n\nGame day details:\n\n"+lab(g.d)+"\nKickoff: "+g.t+". Please arrive by "+addMin(g.t,-15)+".\nField: "+g.f+" at Trace Crossings (map: "+SITE+"games/?g="+g.d+")\n"+(g.home?"Home vs ":"Away at ")+g.opp+"\nSnacks: "+(sid?pname(sid)+"'s family":"still open, sign up at "+SITE+"snacks/")+"\n\nBring shin guards, a size 3 ball, water and the team jersey.\n\nGo Fireballs!\nCoaches"};
+    return {s:"Fireballs game "+lab(g.d)+" at "+g.t+", Field "+g.f, b:"Hi Fireballs families,\n\nGame day details:\n\n"+lab(g.d)+"\nKickoff: "+g.t+". Please arrive by "+addMin(g.t,-15)+".\nField: "+g.f+" at Trace Crossings (map: "+SITE+"games/?g="+g.d+")\n"+(g.home?"Home vs ":"Away at ")+g.opp+"\nJersey: "+jerseyFor(g).short+"\nSnacks: "+(sid?pname(sid)+"'s family":"still open, sign up at "+SITE+"snacks/")+"\n\nBring shin guards, a size 3 ball and water.\n\nGo Fireballs!\nCoaches"};
   }},
   practice:{label:"Practice reminder", to:"all", build:function(){
     var p=nextPractice(); if(!p) return {s:"Fireballs",b:"No upcoming practices."};
