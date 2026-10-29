@@ -25,28 +25,32 @@ var PRACTICES = [
     ["15","World Cup","Everyone tries to score in one goal. Score and you're through to the next round. Keep it fast and fun."],
     ["20","Scrimmage with goalies","Rotate goalies every few minutes so everyone tries it."]
   ], tip:"Shoot with the laces, toe pointed down."},
-  {d:"2026-10-29", focus:"Goalies, goal kicks and the build-out line", drills:[
-    ["10","Goalie catch and roll","Everyone tries: catch with hands in a W shape, then roll it out to a teammate. Hands only inside the box."],
-    ["15","Goal kick walk-through","Show the build-out line. When our goalie has it or it's a goal kick, the other team jogs back to the half line."],
-    ["15","Retreat race","Coach yells \"goal kick!\" and the defending team races back to the half line. First one there picks the next game."],
-    ["20","Scrimmage with build-out","Play full rules: goal kicks, retreat to half, goalie rotation."]
-  ], tip:"The build-out line confuses kids and parents. Practice it before Saturday."},
-  {d:"2026-11-05", focus:"Defending without fouling", drills:[
-    ["10","Shadow","Partners. One dribbles, the other follows like a shadow staying goal-side, without taking the ball."],
-    ["15","1v1 gates","Attacker tries to dribble through a gate. Defender stays on their feet, side-on, and pokes the ball away."],
-    ["15","2 vs 1","Two attackers, one defender. Defender learns to slow them down and wait for help."],
-    ["20","Scrimmage","Praise good defending out loud. No slide tackles, no pushing."]
-  ], tip:"Stay on your feet. No slide tackles at this age."},
-  {d:"2026-11-12", focus:"Spreading out", drills:[
-    ["10","Bees vs spread","Show what a swarm looks like, then show spreading out. Freeze the scrimmage and ask \"where's the open space?\""],
-    ["15","Four corners","Cone a big square. Pass to a teammate standing in a corner to score. Teaches width."],
-    ["15","Numbers game","Two teams, each kid has a number. Coach calls numbers and those kids play. Call 1v1, 2v2 or 3v2."],
-    ["20","Scrimmage 5v5 with goalies","Game-day setup. Practice subbing and goalie swaps like Saturday."]
-  ], tip:"Spread out means more passing and fewer collisions."},
-  {d:"2026-11-19", focus:"Last practice: favorites and fun", drills:[
-    ["10","Kids pick the warm-up","Let them vote for their favorite drill from the season."],
-    ["15","Coaches vs kids","Parents and coaches play on their knees or walk only. Kids love it."],
-    ["15","Penalty shootout","Everyone takes a shot, everyone tries goalie."],
-    ["20","Final scrimmage and cheer","Finish with a team cheer and a high-five line."]
+  {d:"2026-10-29", focus:"Passing and calling for the ball", drills:[
+    ["8","Name-call passing","Players in a circle. Say a teammate's name, then pass to them. If you don't hear your name, you don't get the ball. Builds the habit of talking before passing."],
+    ["12","Partner passing ladder","Pairs start 3 steps apart. Two good inside-of-the-foot passes in a row and you both take a step back. A bad pass, step forward. Who gets the farthest apart?"],
+    ["12","Pass through the gates","Pairs pass through cone gates around the field and call \"Here!\" to get the ball. One point per gate. Add a defender in the middle after a few minutes."],
+    ["13","3 vs 1 keep away","Three attackers keep the ball from one defender in a small square. Attackers must call \"Open!\" before receiving. Five passes in a row is a point. Rotate the defender every minute."],
+    ["15","Scrimmage: talk to score","5v5 with goalies. A goal counts only if the scorer called for the ball first. Coaches cheer every \"Here!\" and \"Man on!\""]
+  ], tip:"Three words to teach today: \"Here!\" (I'm open), \"Man on!\" (defender behind you), \"Turn!\" (you have space)."},
+  {d:"2026-11-05", focus:"Throw-ins and passing out of them", drills:[
+    ["8","Throw-in form check","Partners 4 steps apart. Feet on the ground, both hands, ball behind the head, throw over the head. Coach says \"Freeze!\" mid-throw to check form. Five good ones each."],
+    ["10","Throw to feet, pass back","Thrower throws to a partner's feet. Partner controls it and passes back with the inside of the foot. Then switch. Teaches the first touch after a throw-in."],
+    ["12","Throw-in, call, go","Sets of three: one thrower, two receivers. Receivers move and call \"Here!\" The thrower picks whoever is open. Receiver controls and passes to the other receiver."],
+    ["15","Sideline game","4v4 with the coach calling \"out!\" on any ball near the line. Every out ball is a real throw-in. Bad form means the other team gets it, just like a game."],
+    ["15","Scrimmage with full restarts","5v5 with goalies. Throw-ins, goal kicks and the build-out line all enforced. Quick, short corrections, then play on."]
+  ], tip:"Most U7 throw-ins go wrong because a foot lifts. Watch the feet first."},
+  {d:"2026-11-12", focus:"Passing to score: shots on goal", drills:[
+    ["8","Dribble, pass, shoot","Two lines at midfield. First player dribbles, passes to the other line's player, who shoots. Switch lines after each turn. Shoot with the laces, toe pointed down."],
+    ["12","Give-and-go to goal","Player passes to a coach or teammate on the side, sprints forward, gets it back and shoots. Teaches passing and moving instead of standing still."],
+    ["12","2 vs 1 to goal","Two attackers against one defender plus a goalie. Attackers must pass at least once before shooting. Defenders stay on their feet."],
+    ["13","Shooting gallery","Balls lined up at the top of the box. On \"Go!\", each player shoots, runs to the back of the line. Goalie rotates every five shots. Count team goals and try to beat it."],
+    ["15","Scrimmage: assists count double","5v5 with goalies. A goal after a pass counts two. Call out good passes as loud as goals."]
+  ], tip:"Look up, pick a corner, shoot hard and low. A pass first makes the goalie move."},
+  {d:"2026-11-19", focus:"Last practice: passing, throw-ins and shooting fun", drills:[
+    ["8","Name-call passing warm-up","Name-call circle from Oct 29. Say the name, then pass. Speed it up with two balls."],
+    ["10","Throw-in relay","Two teams. Proper throw-in to a teammate, who passes it back to the next thrower. First team through the line wins. Bad form means try again."],
+    ["12","Coaches vs kids","Parents and coaches play walking only. Kids must pass twice before shooting."],
+    ["15","Penalty shootout","Everyone takes a shot, everyone tries goalie. Cheer for every save and every goal."],
+    ["15","Final scrimmage and team cheer","5v5 with goalies. End with a high-five line and a big \"Go Fireballs!\""]
   ], tip:"Last game is Saturday, Nov 21. Celebrate the season."}
 ];

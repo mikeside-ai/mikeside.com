@@ -442,8 +442,8 @@ footer a{color:var(--muted)}
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="/projects/fireballs/practices-data.js?v=20261001b"></script>
-<script src="/projects/fireballs/games-data.js?v=20261001b"></script>
+<script src="/projects/fireballs/practices-data.js?v=20261029"></script>
+<script src="/projects/fireballs/games-data.js?v=20261029"></script>
 <script>
 
 
@@ -543,7 +543,7 @@ function renderPrivate(){
   if(team.groupme_url){var a=document.getElementById("chat-link");a.href=team.groupme_url;document.getElementById("chat-wrap").hidden=false;}
   if(team.coach_note){document.getElementById("coach-banner-text").textContent=team.coach_note;document.getElementById("coach-banner").hidden=false;}
   if(team.coaches&&team.coaches.length){var c=document.getElementById("coach-note");c.textContent="Coaches: "+team.coaches.join(" and ");c.hidden=false;}
-  if(team.is_coach){var a=document.createElement("a");a.className="cta-snack";a.href="coach/";a.style.background="var(--bg-soft)";a.style.color="var(--text)";a.style.animation="none";a.style.border="1px solid var(--border)";a.innerHTML="&#128203; Coaches corner";document.querySelector(".cta-row").appendChild(a);}
+  if(team.is_coach && !document.getElementById("coach-cta")){var a=document.createElement("a");a.id="coach-cta";a.className="cta-snack";a.href="coach/";a.style.background="var(--bg-soft)";a.style.color="var(--text)";a.style.animation="none";a.style.border="1px solid var(--border)";a.innerHTML="&#128203; Coaches corner";document.querySelector(".cta-row").appendChild(a);}
 }
 
 function post(path,body){
