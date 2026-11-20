@@ -165,6 +165,21 @@ button.ghost:hover{border-color:var(--accent-soft);color:var(--accent-soft)}
 .today-bar .swapped{color:var(--muted);font-size:.82rem}
 @media print{.swap,.today-bar{display:none}}
 
+/* ---------- PIN gate ---------- */
+body.locked > *:not(#gate){display:none}
+#gate{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:1.5rem;z-index:100}
+#gate[hidden]{display:none}
+.gate-box{width:100%;max-width:22rem;text-align:center}
+.gate-box .logo{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.4rem;display:block;margin-bottom:1.2rem}
+.gate-box .logo span{color:var(--accent-soft)}
+.gate-box h1{font-size:1.5rem;margin-bottom:.4rem}
+.gate-box p{color:var(--muted);font-size:.9rem;margin-bottom:1.2rem}
+.gate-box input{font:inherit;font-size:1.6rem;letter-spacing:.4em;text-align:center;width:100%;padding:.6rem;border-radius:12px;border:1px solid var(--border);background:var(--bg-soft);color:var(--text)}
+.gate-box input:focus{outline:2px solid var(--gulf);border-color:var(--gulf)}
+.gate-box button{margin-top:.9rem;font:inherit;font-weight:600;width:100%;padding:.7rem;border-radius:12px;border:0;background:var(--accent);color:#fff;cursor:pointer}
+.gate-box .err{color:var(--jumpsuit);font-size:.85rem;min-height:1.2em;margin-top:.6rem}
+#private .numbers td:first-child{color:var(--sand)}
+
 footer{padding:2.5rem 0 3.5rem;color:var(--muted);font-size:.85rem}
 footer a{color:var(--muted)}
 
@@ -186,7 +201,18 @@ footer a{color:var(--muted)}
 }
 </style>
 </head>
-<body>
+<body class="locked">
+
+<div id="gate">
+  <form class="gate-box" id="gate-form" autocomplete="off">
+    <span class="logo">mike<span>side</span></span>
+    <h1>Gatlinburg week</h1>
+    <p>Family page. Enter the PIN to open it.</p>
+    <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" aria-label="PIN" autofocus>
+    <button type="submit">Open</button>
+    <div class="err" id="gate-err"></div>
+  </form>
+</div>
 
 <header>
   <div class="container nav">
@@ -198,6 +224,7 @@ footer a{color:var(--muted)}
         <li><a href="#days">Days</a></li>
         <li><a href="#packing">Packing</a></li>
         <li><a href="#bench">Backup plan</a></li>
+        <li><a href="#private">Private</a></li>
         <li><a href="#numbers">Numbers</a></li>
       </ul>
     </nav>
@@ -598,6 +625,16 @@ footer a{color:var(--muted)}
   </div>
 </section>
 
+<!-- ===================== PRIVATE (encrypted) ===================== -->
+<section id="private">
+  <div class="container">
+    <p class="eyebrow">Behind the PIN</p>
+    <h2>Cabin details</h2>
+    <div class="table-wrap" id="private-body"></div>
+  </div>
+</section>
+<script type="application/json" id="private-blob">{"it":250000,"salt":"pmTZbFhpZmKf+pYKEYmnkw==","iv":"yJlbLp04Xcm1dAMa","ct":"ueoaECMR0ScnDNoje9saZhKypdguFh46TuQK+MjwoGYZRDlUOoNXPP4EKeImmOiiSdswPPs6BpezWbUHr+Mbdtwaa8IdPmVa+3RitCIUWWcGmcv3rrMMnOOh5i3T2XX0ggURvCeQ8tXSr29KlGgYgHaGd+MNxkwfCNc0REI0SuNWaArWa+ItoQR59DrWW2FGKP8HL6qzidITsdNWv8g2m4uEeJnw0DW3pTr/LWPWEThPhIKJvw+s3s1JjyFOoGXx8vxiNkJtMoNpc27o2JQx+WaoSTRFpCdYH77RRlWohnjtSdJJiKY8ep54/3DckDtrPIyMUa+vyy1kzTZzBlxkKWp+o9/BOb7YP5P0hHii2dhRL7aHDn5D4/j91FbpQ6WFTOIvkkb0PlVoqJpemKvDEiT/YI4iHyEJ+Pu2MXNWd1l4qC7xpnzYhuJ6v4XBFmDp3jVQ1EuR4q91+dxEjoQTXT4KzUowXTJwcHlNLOZICO9EyWYj6RqfnCqQUvTiD6/Uywn5+CYgw9ZyXnFSrFZpBGvWEYlR1oqy0vFa9rkKayz+akwi3N9Nrw=="}</script>
+
 <!-- ===================== NUMBERS ===================== -->
 <section id="numbers">
   <div class="container">
@@ -643,6 +680,46 @@ footer a{color:var(--muted)}
 </footer>
 
 <script>
+/* PIN gate. The private block is AES-GCM encrypted with a key derived from the PIN (PBKDF2).
+   A correct PIN decrypts it and unlocks the page; the PIN is remembered on this phone. */
+(function(){
+  var KEY = 'gatlinburg-2026-pin';
+  var gate = document.getElementById('gate'), form = document.getElementById('gate-form');
+  var input = document.getElementById('pin'), err = document.getElementById('gate-err');
+  var blob = JSON.parse(document.getElementById('private-blob').textContent);
+  var out = document.getElementById('private-body');
+  function b64(s){ var bin = atob(s), a = new Uint8Array(bin.length); for (var i=0;i<bin.length;i++) a[i] = bin.charCodeAt(i); return a; }
+  function unlock(html){
+    out.innerHTML = html;
+    document.body.classList.remove('locked');
+    gate.hidden = true;
+  }
+  function tryPin(pin){
+    if (!window.crypto || !crypto.subtle) return Promise.reject(new Error('nocrypto'));
+    var enc = new TextEncoder();
+    return crypto.subtle.importKey('raw', enc.encode(pin), 'PBKDF2', false, ['deriveKey']).then(function(km){
+      return crypto.subtle.deriveKey({name:'PBKDF2', salt: b64(blob.salt), iterations: blob.it, hash:'SHA-256'}, km, {name:'AES-GCM', length:256}, false, ['decrypt']);
+    }).then(function(key){
+      return crypto.subtle.decrypt({name:'AES-GCM', iv: b64(blob.iv)}, key, b64(blob.ct));
+    }).then(function(buf){ return new TextDecoder().decode(buf); });
+  }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var pin = input.value.trim(); if (!pin) return;
+    err.textContent = '';
+    tryPin(pin).then(function(html){
+      try { localStorage.setItem(KEY, pin); } catch(x){}
+      unlock(html);
+    }).catch(function(e){
+      err.textContent = e.message === 'nocrypto' ? 'This browser cannot open the page. Use Safari or Chrome.' : 'Wrong PIN.';
+      input.value = ''; input.focus();
+    });
+  });
+  var saved = null; try { saved = localStorage.getItem(KEY); } catch(x){}
+  if (saved) { tryPin(saved).then(unlock).catch(function(){ try { localStorage.removeItem(KEY); } catch(x){} input.focus(); }); }
+  else { input.focus(); }
+})();
+
 /* Packing list: counter, clear, print. Ticks are remembered per phone (localStorage). */
 (function(){
   var KEY = 'gatlinburg-2026-packing';
