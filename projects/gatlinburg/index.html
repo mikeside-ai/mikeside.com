@@ -39,11 +39,11 @@ a:hover{text-decoration:underline}
 
 /* ---------- Nav ---------- */
 header{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 1.25rem}
 .nav .logo{font-weight:600;font-size:1.25rem;letter-spacing:-.01em;color:var(--text)}
 .nav .logo span{color:var(--accent-soft)}
 .nav ul{display:flex;gap:1.2rem;list-style:none;flex-wrap:wrap}
-.nav ul a{color:var(--muted);font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.09em}
+.nav ul a{color:var(--muted);font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.09em;white-space:nowrap}
 .nav ul a:hover{color:var(--text);text-decoration:none}
 
 /* ---------- Hero ---------- */
@@ -89,6 +89,10 @@ section > .container > p.intro{color:var(--muted);max-width:68ch;margin-bottom:1
 .slot time{color:var(--gulf);font-variant-numeric:tabular-nums;font-weight:600;font-size:.85rem;padding-top:.12rem}
 .slot .what{font-weight:500}
 .slot .why{color:var(--muted);font-size:.875rem;margin-top:.15rem}
+.slot .addr{color:var(--sand);font-size:.8rem;margin-top:.1rem}
+a.nav{display:inline-block;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gulf);border:1px solid rgba(124,196,143,.4);border-radius:999px;padding:.08rem .5rem;margin-left:.35rem;vertical-align:middle;white-space:nowrap}
+a.nav:hover{text-decoration:none;border-color:var(--gulf);background:rgba(124,196,143,.1)}
+@media print{a.nav{display:none}}
 
 /* ---------- Packing ---------- */
 .pack-bar{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;background:var(--bg-soft);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.1rem;margin-bottom:1.5rem;position:sticky;top:64px;z-index:20}
@@ -132,6 +136,34 @@ button.ghost:hover{border-color:var(--accent-soft);color:var(--accent-soft)}
 .numbers th{color:var(--muted);font-weight:600;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
 .numbers td:first-child{font-weight:500;white-space:nowrap}
 .numbers td small{display:block;color:var(--muted)}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media (max-width:640px){.numbers td:first-child{white-space:normal;min-width:7rem}.numbers{min-width:36rem}}
+
+/* ---------- Weather strip ---------- */
+.wx{background:var(--bg-soft);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.1rem;margin:0 0 1.5rem}
+.wx-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem;margin-bottom:.7rem}
+.wx-head h3{font-size:1.05rem}
+.wx-note{color:var(--muted);font-size:.8rem;margin-right:auto}
+.wx-link{font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+.wx-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:.4rem}
+.wx-day{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.55rem .45rem;text-align:center;font-size:.8rem;line-height:1.35}
+.wx-day.today{border-color:var(--gulf)}
+.wx-day b{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.wx-day .t{font-weight:600;font-variant-numeric:tabular-nums}
+.wx-day .r{color:var(--muted);font-size:.72rem;font-variant-numeric:tabular-nums}
+.wx-day .snow{color:var(--jumpsuit)}
+@media (max-width:640px){.wx-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* ---------- Today view ---------- */
+.today-bar{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-bottom:1.1rem}
+.today-bar .tag.now{color:var(--jumpsuit);border-color:rgba(245,197,66,.5)}
+.day.is-today{border-color:var(--gulf);box-shadow:0 0 0 1px var(--gulf) inset}
+.day.is-past.collapsed{display:none}
+.swap{margin-left:auto;font:inherit;font-size:.74rem;font-weight:600;color:var(--muted);background:transparent;border:1px solid var(--border);border-radius:999px;padding:.2rem .6rem;cursor:pointer;-webkit-appearance:none;appearance:none}
+.swap:hover{border-color:var(--accent-soft);color:var(--accent-soft)}
+.swap option{color:#000}
+.today-bar .swapped{color:var(--muted);font-size:.82rem}
+@media print{.swap,.today-bar{display:none}}
 
 footer{padding:2.5rem 0 3.5rem;color:var(--muted);font-size:.85rem}
 footer a{color:var(--muted)}
@@ -139,7 +171,10 @@ footer a{color:var(--muted)}
 @media (max-width:640px){
   .slot{grid-template-columns:5rem 1fr;gap:.7rem}
   .pack-bar{position:static}
-  .nav ul{gap:.9rem}
+  .nav{flex-wrap:wrap;gap:.4rem .8rem}
+  .nav .logo{flex:none}
+  .nav ul{gap:.9rem;flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:.1rem;scrollbar-width:none}
+  .nav ul::-webkit-scrollbar{display:none}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 @media print{
@@ -180,9 +215,19 @@ footer a{color:var(--muted)}
       <div class="fact"><dt>Leaving from</dt><dd>Birmingham, AL<small>Sun Nov 22</small></dd></div>
       <div class="fact"><dt>Drive</dt><dd>~330 mi &middot; 5h15m<small>Plan 7h door to door with stops</small></dd></div>
       <div class="fact"><dt>Time zone</dt><dd>Eastern in Gatlinburg<small>You lose an hour going, get it back coming home</small></dd></div>
-      <div class="fact"><dt>Crew</dt><dd>Cash 7 &middot; Slavik 2 &middot; Snejana 1</dd></div>
+      <div class="fact"><dt>Crew</dt><dd>Vlad 40 &middot; Allison 38<small>Cash 7 &middot; Slavik 2 &middot; Snejana 1</small></dd></div>
       <div class="fact"><dt>Sun</dt><dd>7:30a &rarr; 5:25p<small>Dark by 6. Lights start at 5:30</small></dd></div>
     </dl>
+
+    <div class="wx" id="wx" hidden>
+      <div class="wx-head">
+        <h3>Forecast</h3>
+        <span class="wx-note" id="wx-note">Town is the cabin. Ridge is Kuwohi at 6,600 ft. Updates each time you open the page.</span>
+        <a class="wx-link" href="https://www.nps.gov/grsm/planyourvisit/temproadclose.htm">Park road status &rarr;</a>
+        <a class="wx-link" href="https://x.com/SmokiesRoadsNPS">@SmokiesRoadsNPS &rarr;</a>
+      </div>
+      <div class="wx-grid" id="wx-grid"></div>
+    </div>
 
     <div class="callout sun">
       <h3>Read this before anything else</h3>
@@ -200,18 +245,18 @@ footer a{color:var(--muted)}
     <h2>Sunday's drive</h2>
     <p class="intro">I-59 north to Chattanooga, I-75 north to Lenoir City, then US-321 east through Maryville to Townsend and into the park. From the Townsend Wye, Little River Road runs 18 miles along the river to Sugarlands and drops you into Gatlinburg from the park side. That route skips Exit 407, Sevierville and the Pigeon Forge Parkway, which on a holiday Sunday afternoon are the slowest 15 miles in Tennessee. Little River Road is twisty. If anyone in the back gets carsick, take Wears Valley Road to Pigeon Forge instead and accept the Parkway.</p>
 
-    <div class="day">
+    <div class="day" data-date="2026-11-22">
       <div class="day-head"><h3>Birmingham &rarr; Gatlinburg</h3><span class="day-date">Sun, Nov 22</span><span class="tag hot">Long day</span></div>
       <p class="day-note">Load the car Saturday night. Kids ride in pajamas and change at the first stop. Check-in is usually 4pm for cabins, so there is no reason to leave before seven.</p>
       <ul class="slots">
         <li class="slot"><time>7:00a CT</time><div><div class="what">Pull out</div><div class="why">Breakfast in the car. Snejana should sleep the first leg. I-59 north.</div></div></li>
-        <li class="slot"><time>8:40a CT</time><div><div class="what">Fort Payne, first stretch</div><div class="why">Exit 218. Bathrooms, gas, ten minutes of running around. Last stop in Central time.</div></div></li>
-        <li class="slot"><time>10:30a ET</time><div><div class="what">Chattanooga, onto I-75 north</div><div class="why">Clocks jump an hour here. Reset the car clock now so nobody does arrival math wrong later.</div></div></li>
-        <li class="slot"><time>11:20a ET</time><div><div class="what">Athens or Sweetwater, real stop</div><div class="why">Lunch, diapers, let Slavik burn it off. Stay off the interstate exits closer to Knoxville, they are busier and slower.</div></div></li>
-        <li class="slot"><time>12:15p ET</time><div><div class="what">Exit 81, Lenoir City. US-321 east</div><div class="why">Through Maryville to Townsend. About an hour. Townsend is the last easy gas and a decent spot for one more bathroom.</div></div></li>
-        <li class="slot"><time>1:30p ET</time><div><div class="what">Into the park at the Townsend Wye</div><div class="why">Little River Road to Sugarlands, 35 minutes if nobody stops. No cell signal inside the park, so have the cabin directions saved offline before you enter.</div></div></li>
-        <li class="slot"><time>2:15p ET</time><div><div class="what">Food City, 1219 East Parkway</div><div class="why">Full stock-up before the cabin. One adult shops, one adult walks kids around the lot. If you came in via Wears Valley instead, Kroger at 220 Wears Valley Rd in Pigeon Forge is right on the route.</div></div></li>
-        <li class="slot"><time>3:30p ET</time><div><div class="what">Kill time until check-in</div><div class="why">Mynatt Park on Asbury Lane is a real playground with a creek, five minutes from downtown. Don't sit in the car.</div></div></li>
+        <li class="slot"><time>8:40a CT</time><div><div class="what">Fort Payne, first stretch <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=I-59%20Exit%20218%2C%20Fort%20Payne%2C%20AL" target="_blank" rel="noopener">Directions</a></div><div class="why">Exit 218. Bathrooms, gas, ten minutes of running around. Last stop in Central time.</div></div></li>
+        <li class="slot"><time>10:30a ET</time><div><div class="what">Chattanooga, onto I-75 north <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=I-24%20/%20I-75%20interchange%2C%20Chattanooga%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="why">Clocks jump an hour here. Reset the car clock now so nobody does arrival math wrong later.</div></div></li>
+        <li class="slot"><time>11:20a ET</time><div><div class="what">Athens or Sweetwater, real stop <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Athens%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="why">Lunch, diapers, let Slavik burn it off. Stay off the interstate exits closer to Knoxville, they are busier and slower.</div></div></li>
+        <li class="slot"><time>12:15p ET</time><div><div class="what">Exit 81, Lenoir City. US-321 east <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=I-75%20Exit%2081%2C%20Lenoir%20City%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="why">Through Maryville to Townsend. About an hour. Townsend is the last easy gas and a decent spot for one more bathroom.</div></div></li>
+        <li class="slot"><time>1:30p ET</time><div><div class="what">Into the park at the Townsend Wye <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Townsend%20Wye%2C%20Townsend%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="why">Little River Road to Sugarlands, 35 minutes if nobody stops. No cell signal inside the park, so have the cabin directions saved offline before you enter.</div></div></li>
+        <li class="slot"><time>2:15p ET</time><div><div class="what">Food City, 1219 East Parkway <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Food%20City%2C%201219%20East%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="why">Full stock-up before the cabin. One adult shops, one adult walks kids around the lot. If you came in via Wears Valley instead, Kroger at 220 Wears Valley Rd in Pigeon Forge is right on the route.</div></div></li>
+        <li class="slot"><time>3:30p ET</time><div><div class="what">Kill time until check-in <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Mynatt%20Park%2C%20Asbury%20Lane%2C%20Gatlinburg%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="addr">Mynatt Park, Asbury Ln</div><div class="why">Mynatt Park on Asbury Lane is a real playground with a creek, five minutes from downtown. Don't sit in the car.</div></div></li>
         <li class="slot"><time>4:00p ET</time><div><div class="what">Into the cabin. Safety sweep first</div><div class="why">Before anything is unloaded: hot tub cover strapped and locked, deck doors latched, stair gate up, loft rail checked, fireplace blocked. See the note below. Then unload.</div></div></li>
         <li class="slot"><time>5:30p ET</time><div><div class="what">Dinner in. Early</div><div class="why">Frozen pizza night. Everybody is wrecked and it is already dark.</div></div></li>
         <li class="slot"><time>7:00p ET</time><div><div class="what">Everyone down</div><div class="why">Pack-n-play in the darkest room, sound machines on, trash bags over any window facing the porch light. It is 6pm to their bodies, which helps this one night.</div></div></li>
@@ -230,13 +275,19 @@ footer a{color:var(--muted)}
   <div class="container">
     <p class="eyebrow">The week</p>
     <h2>Day by day</h2>
-    <p class="intro">One anchor per day. Out the door by 8:30 while the town is still asleep, back for lunch and naps by 1, one short thing in the dark around 5:30, home by 7. Highs around 60 in town and 15 to 20 degrees colder on the ridge, lows near 40 at the cabin. A third of November days see rain. The bad-weather list below is built for that.</p>
+    <div class="today-bar" id="today-bar">
+      <span class="tag now" id="today-label" hidden>Today</span>
+      <button class="ghost" type="button" id="toggle-past" hidden>Show earlier days</button>
+      <span class="swapped" id="swap-note">Each day card has a swap menu. Swaps are remembered on this phone.</span>
+      <button class="ghost" type="button" id="reset-days" hidden>Reset to original plan</button>
+    </div>
+    <p class="intro">Every stop has a Directions button that opens Google Maps from wherever you are standing, so the cabin address never has to be on this page. One anchor per day. Out the door by 8:30 while the town is still asleep, back for lunch and naps by 1, one short thing in the dark around 5:30, home by 7. Highs around 60 in town and 15 to 20 degrees colder on the ridge, lows near 40 at the cabin. A third of November days see rain. The bad-weather list below is built for that.</p>
 
-    <div class="day">
+    <div class="day" data-date="2026-11-23" data-plan="dollywood">
       <div class="day-head"><h3>Dollywood</h3><span class="day-date">Monday, Nov 23</span><span class="tag hot">Big day</span></div>
       <p class="day-note">Monday before Thanksgiving is the lightest day the park will have all week. Park opens at 10. Be in the lot at 9:15. Parking is $25. Tickets: $94.99 adults, $84.99 for Cash. Slavik and Snejana are free. Buy online tonight, not at the gate.</p>
       <ul class="slots">
-        <li class="slot"><time>9:15a</time><div><div class="what">Park, tram to the gate, measure Cash</div><div class="why">The measuring station on Showstreet gives him a wristband for the day. 42 inches opens Blazing Fury and Sky Rider. 48 opens the real coasters. Don't guess, measure.</div></div></li>
+        <li class="slot"><time>9:15a</time><div><div class="what">Park, tram to the gate, measure Cash <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Dollywood%2C%202700%20Dollywood%20Parks%20Blvd%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></div><div class="addr">2700 Dollywood Parks Blvd, Pigeon Forge</div><div class="why">The measuring station on Showstreet gives him a wristband for the day. 42 inches opens Blazing Fury and Sky Rider. 48 opens the real coasters. Don't guess, measure.</div></div></li>
         <li class="slot"><time>10:00a</time><div><div class="what">Straight to Wildwood Grove</div><div class="why">Back of the park, so go first while everyone else stops at the front. Frogs and Fireflies, Treetop Tower, the Great Tree Swing at 36 inches, and the splash-free Wildwood Creek playground. This is Slavik's whole park.</div></div></li>
         <li class="slot"><time>11:30a</time><div><div class="what">Dollywood Express</div><div class="why">The steam train. No height minimum, twenty minutes sitting down, and the single best thing for Snejana. Ride it before lunch while she's still happy.</div></div></li>
         <li class="slot"><time>12:15p</time><div><div class="what">Lunch, then the Village</div><div class="why">Carousel and Lemon Twist have no minimum. Santa is in the Imagination Playhouse near the train depot. Cash and one adult peel off for Blazing Fury and whatever his wristband allows. Use Parent Swap so nobody waits twice.</div></div></li>
@@ -250,32 +301,32 @@ footer a{color:var(--muted)}
       </div>
     </div>
 
-    <div class="day">
+    <div class="day" data-date="2026-11-24" data-plan="anakeesta">
       <div class="day-head"><h3>Easy morning, Anakeesta at dusk</h3><span class="day-date">Tuesday, Nov 24</span><span class="tag calm">Recovery</span></div>
       <p class="day-note">Nobody drives far today. Short walk in the park, long nap, then the mountaintop for the lights.</p>
       <ul class="slots">
-        <li class="slot"><time>9:00a</time><div><div class="what">Sugarlands Visitor Center</div><div class="why">Two miles south of town on US-441. Buy the <strong>$15 weekly parking tag</strong> here and put it on the dash. Free museum inside with the stuffed animals, which buys you twenty minutes if it's cold.</div></div></li>
-        <li class="slot"><time>9:30a</time><div><div class="what">Cataract Falls</div><div class="why">The trail starts behind the visitor center. Under half a mile, flat, dirt. The shortest walk to a waterfall in the park. Cash walks, Slavik walks most of it, Snejana rides in the carrier.</div></div></li>
-        <li class="slot"><time>10:15a</time><div><div class="what">Sugarlands Valley Nature Trail</div><div class="why">Half a mile, fully paved, flat. The one trail in the park where the stroller actually works. Creek, old chimney, done by eleven.</div></div></li>
+        <li class="slot"><time>9:00a</time><div><div class="what">Sugarlands Visitor Center <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Sugarlands%20Visitor%20Center%2C%201420%20Fighting%20Creek%20Gap%20Rd%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="addr">1420 Fighting Creek Gap Rd (US-441)</div><div class="why">Two miles south of town on US-441. Buy the <strong>$15 weekly parking tag</strong> here and put it on the dash. Free museum inside with the stuffed animals, which buys you twenty minutes if it's cold.</div></div></li>
+        <li class="slot"><time>9:30a</time><div><div class="what">Cataract Falls <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Sugarlands%20Visitor%20Center%2C%20Gatlinburg%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="addr">Starts behind the visitor center</div><div class="why">The trail starts behind the visitor center. Under half a mile, flat, dirt. The shortest walk to a waterfall in the park. Cash walks, Slavik walks most of it, Snejana rides in the carrier.</div></div></li>
+        <li class="slot"><time>10:15a</time><div><div class="what">Sugarlands Valley Nature Trail <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Sugarlands%20Valley%20Nature%20Trail%2C%20Newfound%20Gap%20Rd%2C%20Gatlinburg%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="addr">Newfound Gap Rd, 0.3 mi south of the visitor center</div><div class="why">Half a mile, fully paved, flat. The one trail in the park where the stroller actually works. Creek, old chimney, done by eleven.</div></div></li>
         <li class="slot"><time>11:30a</time><div><div class="what">Home, lunch, naps</div><div class="why">Protect this. Tonight runs late.</div></div></li>
-        <li class="slot"><time>3:15p</time><div><div class="what">Park downtown, Chondola to Anakeesta</div><div class="why">Base is at 576 Parkway. Use the McMahan garage at traffic light #3 or the garage across from the aquarium. The gondola cabins fit a stroller, so bring it up. Adults $34.99, Cash $22.99, the little two free. Buy online.</div></div></li>
+        <li class="slot"><time>3:15p</time><div><div class="what">Park downtown, Chondola to Anakeesta <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=McMahan%20Parking%20Garage%2C%20Gatlinburg%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="addr">Anakeesta base: 576 Parkway. Garage: McMahan, traffic light #3</div><div class="why">Base is at 576 Parkway. Use the McMahan garage at traffic light #3 or the garage across from the aquarium. The gondola cabins fit a stroller, so bring it up. Adults $34.99, Cash $22.99, the little two free. Buy online.</div></div></li>
         <li class="slot"><time>3:45p</time><div><div class="what">Treehouse play area and Vista Gardens in daylight</div><div class="why">The Treehouse Adventure play structure is the toddler payoff. Treetop Skywalk is included but no strollers and no carrying, so one adult does it with Cash while the other stays at the playground.</div></div></li>
         <li class="slot"><time>5:15p</time><div><div class="what">Lights come on</div><div class="why">Enchanted Christmas is the whole mountaintop lit up. Half an hour of walking it is plenty. Cliff Top has food if you'd rather eat up there than fight downtown.</div></div></li>
         <li class="slot"><time>6:15p</time><div><div class="what">Down and home</div><div class="why">The Chondola line down gets long after 6:30. Be in it by 6:15.</div></div></li>
       </ul>
     </div>
 
-    <div class="day">
+    <div class="day" data-date="2026-11-25" data-plan="cades-cove">
       <div class="day-head"><h3>Cades Cove</h3><span class="day-date">Wednesday, Nov 25</span><span class="tag hot">Day trip</span></div>
       <p class="day-note">The 11-mile loop through the valley with the deer, turkeys, old churches and sometimes a bear. An hour-plus each way from the cabin on Little River Road, so you leave early and you are back for naps.</p>
       <ul class="slots">
-        <li class="slot"><time>7:15a</time><div><div class="what">Roll out, breakfast in the car</div><div class="why">Little River Road from Sugarlands. Wildlife is out at this hour and the loop is empty. Leave at nine and you crawl behind forty cars.</div></div></li>
-        <li class="slot"><time>8:30a</time><div><div class="what">Start the loop</div><div class="why">One way, 20 mph, pull-offs everywhere. Get out at John Oliver Cabin, half a mile flat from the road. Cash counts deer.</div></div></li>
-        <li class="slot"><time>10:00a</time><div><div class="what">Cable Mill area, halfway round</div><div class="why">Visitor center, restrooms, a working grist mill and barns on flat gravel. Stroller works here. Thirty minutes of running around, then back in the car.</div></div></li>
-        <li class="slot"><time>11:15a</time><div><div class="what">Finish the loop, head home</div><div class="why">Lunch in the car or at the Metcalf Bottoms picnic area on the way back if it's warm enough.</div></div></li>
+        <li class="slot"><time>7:15a</time><div><div class="what">Roll out, breakfast in the car <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Cades%20Cove%20Loop%20Road%2C%20Townsend%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="addr">Cades Cove Loop Rd via Little River Rd and Laurel Creek Rd</div><div class="why">Little River Road from Sugarlands. Wildlife is out at this hour and the loop is empty. Leave at nine and you crawl behind forty cars.</div></div></li>
+        <li class="slot"><time>8:30a</time><div><div class="what">Start the loop <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=John%20Oliver%20Cabin%2C%20Cades%20Cove%2C%20Townsend%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="why">One way, 20 mph, pull-offs everywhere. Get out at John Oliver Cabin, half a mile flat from the road. Cash counts deer.</div></div></li>
+        <li class="slot"><time>10:00a</time><div><div class="what">Cable Mill area, halfway round <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Cades%20Cove%20Visitor%20Center%2C%20Townsend%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="addr">Cades Cove Visitor Center, Cable Mill</div><div class="why">Visitor center, restrooms, a working grist mill and barns on flat gravel. Stroller works here. Thirty minutes of running around, then back in the car.</div></div></li>
+        <li class="slot"><time>11:15a</time><div><div class="what">Finish the loop, head home <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Metcalf%20Bottoms%20Picnic%20Area%2C%20Little%20River%20Rd%2C%20Gatlinburg%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="addr">Metcalf Bottoms picnic area, Little River Rd</div><div class="why">Lunch in the car or at the Metcalf Bottoms picnic area on the way back if it's warm enough.</div></div></li>
         <li class="slot"><time>1:00p</time><div><div class="what">Home, naps</div><div class="why">Long nap. Everyone, including adults.</div></div></li>
-        <li class="slot"><time>3:30p</time><div><div class="what">Thanksgiving grocery run</div><div class="why">Food City on East Parkway for tomorrow's dinner. Wednesday afternoon is the last sane time to do it. Food City runs holiday hours Thursday.</div></div></li>
-        <li class="slot"><time>5:00p</time><div><div class="what">Optional: the Arts &amp; Crafts show</div><div class="why">Great Smoky Thanksgiving Arts &amp; Crafts Show at the Gatlinburg Convention Center, Nov 24 to 29. Free, indoor, warm, and an easy hour if the kids are restless. Skip it if they aren't.</div></div></li>
+        <li class="slot"><time>3:30p</time><div><div class="what">Thanksgiving grocery run <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Food%20City%2C%201219%20East%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="addr">1219 East Parkway</div><div class="why">Food City on East Parkway for tomorrow's dinner. Wednesday afternoon is the last sane time to do it. Food City runs holiday hours Thursday.</div></div></li>
+        <li class="slot"><time>5:00p</time><div><div class="what">Optional: the Arts &amp; Crafts show <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Gatlinburg%20Convention%20Center%2C%20234%20Historic%20Nature%20Trail%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="addr">234 Historic Nature Trail</div><div class="why">Great Smoky Thanksgiving Arts &amp; Crafts Show at the Gatlinburg Convention Center, Nov 24 to 29. Free, indoor, warm, and an easy hour if the kids are restless. Skip it if they aren't.</div></div></li>
       </ul>
       <div class="callout">
         <h3>Bears are real in the Cove in November</h3>
@@ -283,34 +334,34 @@ footer a{color:var(--muted)}
       </div>
     </div>
 
-    <div class="day">
+    <div class="day" data-date="2026-11-26" data-plan="thanksgiving">
       <div class="day-head"><h3>Thanksgiving</h3><span class="day-date">Thursday, Nov 26</span><span class="tag calm">Holiday</span></div>
       <p class="day-note">Dollywood is closed and most of the town is at a buffet. Ober in the morning, the big meal at the cabin at four, and the chairlift lights if everyone is still standing.</p>
       <ul class="slots">
-        <li class="slot"><time>9:45a</time><div><div class="what">Ober Mountain tram from downtown</div><div class="why">Tram base at 1001 Parkway. $29 round trip for ages 5 and up, Slavik and Snejana ride free. Strollers fold and come aboard. Opening hours vary by day in early season, so check the night before.</div></div></li>
+        <li class="slot"><time>9:45a</time><div><div class="what">Ober Mountain tram from downtown <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Ober%20Mountain%20Tramway%2C%201001%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="why">Tram base at 1001 Parkway. $29 round trip for ages 5 and up, Slavik and Snejana ride free. Strollers fold and come aboard. Opening hours vary by day in early season, so check the night before.</div></div></li>
         <li class="slot"><time>10:30a</time><div><div class="what">Wildlife Habitat first</div><div class="why">Black bears, otters and raccoons behind glass. The one thing up here all three can do, and the bears are most active in the morning.</div></div></li>
         <li class="slot"><time>11:15a</time><div><div class="what">Cash: ice skating, then tubing</div><div class="why">Skating is in the Fun Pass. Snow tubing is $29 and up, and at seven he rides alone, so he has to be 42 inches. Slavik can't tube at all until he's three, and that's December. One adult with Cash, one adult with the little two in the lodge watching the skaters.</div></div></li>
         <li class="slot"><time>12:45p</time><div><div class="what">Tram down, home for naps</div><div class="why">Snack lunch on the way. Everyone down by 1:30.</div></div></li>
         <li class="slot"><time>4:00p</time><div><div class="what">Thanksgiving dinner at the cabin</div><div class="why">A turkey breast, not a turkey. Cabin ovens are small and unreliable. Sides from Food City Wednesday. If you'd rather not cook, the backup is below, and it needs booking before you leave Birmingham.</div></div></li>
-        <li class="slot"><time>5:30p</time><div><div class="what">Lights Over Gatlinburg from the SkyLift</div><div class="why">765 Parkway, 15 minutes from the table. Included with SkyPark admission, runs nightly. Each chair holds three heartbeats and the baby counts, so you're two chairs. No strollers anywhere in the park. Snejana rides in the carrier on a lap. Skip this if dinner ran long. It's a bonus, not a plan.</div></div></li>
+        <li class="slot"><time>5:30p</time><div><div class="what">Lights Over Gatlinburg from the SkyLift <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Gatlinburg%20SkyPark%2C%20765%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="why">765 Parkway, 15 minutes from the table. Included with SkyPark admission, runs nightly. Each chair holds three heartbeats and the baby counts, so you're two chairs. No strollers anywhere in the park. Snejana rides in the carrier on a lap. Skip this if dinner ran long. It's a bonus, not a plan.</div></div></li>
         <li class="slot"><time>7:00p</time><div><div class="what">Home and down</div></div></li>
       </ul>
       <div class="callout sun">
         <h3>If you want someone else to cook</h3>
-        <p><strong>Mama's Farmhouse</strong>, 208 Pickel St, Pigeon Forge. Family-style, all you can eat, a special Thanksgiving menu, open 11 to 9. The right call for this crew because food arrives in bowls immediately and nobody needs a menu. Reservations are encouraged and it fills up. Book it today as the backup even if you plan to cook. <strong>Ober Mountain</strong> runs a Thanksgiving Feast at the top, 11 to 5, which would fold the whole morning into one trip; reservations there too. <strong>Cracker Barrel</strong> on the Pigeon Forge Parkway serves its traditional plate from 11 with no reservation, and <strong>The Park Grill</strong> in Gatlinburg has a special menu 11:30 to 9. The Pigeon Forge trolley doesn't run on Thanksgiving, so whatever you pick, you're driving.</p>
+        <p><strong>Mama's Farmhouse</strong>, 208 Pickel St, Pigeon Forge <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Mama%27s%20Farmhouse%2C%20208%20Pickel%20St%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a>. Family-style, all you can eat, a special Thanksgiving menu, open 11 to 9. The right call for this crew because food arrives in bowls immediately and nobody needs a menu. Reservations are encouraged and it fills up. Book it today as the backup even if you plan to cook. <strong>Ober Mountain</strong> runs a Thanksgiving Feast at the top, 11 to 5, which would fold the whole morning into one trip; reservations there too. <strong>Cracker Barrel</strong> on the Pigeon Forge Parkway serves its traditional plate from 11 with no reservation, and <strong>The Park Grill</strong> in Gatlinburg has a special menu 11:30 to 9. The Pigeon Forge trolley doesn't run on Thanksgiving, so whatever you pick, you're driving.</p>
       </div>
     </div>
 
-    <div class="day">
+    <div class="day" data-date="2026-11-27" data-plan="kuwohi">
       <div class="day-head"><h3>Up the mountain, away from everyone</h3><span class="day-date">Friday, Nov 27</span><span class="tag hot">Black Friday</span></div>
       <p class="day-note">The Parkway, the Island, Dollywood and the outlets will be the busiest they are all year. Do not go near any of it. Kuwohi Road closes Monday for the winter. This is the last chance.</p>
       <ul class="slots">
-        <li class="slot"><time>8:30a</time><div><div class="what">Newfound Gap Road south from Sugarlands</div><div class="why">Thirteen miles climbing to Newfound Gap at 5,046 feet, then seven miles of Kuwohi Road. Dress everyone for 35 degrees and wind regardless of what the cabin thermometer says. If the road is gated for ice, turn around; there's no second route.</div></div></li>
-        <li class="slot"><time>9:30a</time><div><div class="what">Kuwohi (Clingmans Dome)</div><div class="why">Half a mile paved and steep to the tower. Not a stroller walk. Snejana in the carrier, Slavik on shoulders for the second half. The highest point in Tennessee, and Cash can say he walked to it.</div></div></li>
-        <li class="slot"><time>10:45a</time><div><div class="what">Newfound Gap on the way down</div><div class="why">Stand on the state line. Restrooms here. Chimneys picnic area lower down if it's warm enough to sit outside.</div></div></li>
+        <li class="slot"><time>8:30a</time><div><div class="what">Newfound Gap Road south from Sugarlands <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Newfound%20Gap%2C%20Great%20Smoky%20Mountains%20National%20Park" target="_blank" rel="noopener">Directions</a></div><div class="addr">US-441 south from Sugarlands</div><div class="why">Thirteen miles climbing to Newfound Gap at 5,046 feet, then seven miles of Kuwohi Road. Dress everyone for 35 degrees and wind regardless of what the cabin thermometer says. If the road is gated for ice, turn around; there's no second route.</div></div></li>
+        <li class="slot"><time>9:30a</time><div><div class="what">Kuwohi (Clingmans Dome) <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Kuwohi%20%28Clingmans%20Dome%29%20Parking%20Area%2C%20Clingmans%20Dome%20Rd%2C%20Bryson%20City%2C%20NC" target="_blank" rel="noopener">Directions</a></div><div class="addr">End of Kuwohi Rd, 7 mi off Newfound Gap</div><div class="why">Half a mile paved and steep to the tower. Not a stroller walk. Snejana in the carrier, Slavik on shoulders for the second half. The highest point in Tennessee, and Cash can say he walked to it.</div></div></li>
+        <li class="slot"><time>10:45a</time><div><div class="what">Newfound Gap on the way down <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Newfound%20Gap%2C%20Great%20Smoky%20Mountains%20National%20Park" target="_blank" rel="noopener">Directions</a></div><div class="addr">Newfound Gap overlook, state line</div><div class="why">Stand on the state line. Restrooms here. Chimneys picnic area lower down if it's warm enough to sit outside.</div></div></li>
         <li class="slot"><time>12:30p</time><div><div class="what">Home, lunch, naps</div></div></li>
         <li class="slot"><time>3:30p</time><div><div class="what">Start the pack-out</div><div class="why">Pull the muddy gear onto the porch, run laundry, box what won't get used again. Saturday morning gets ugly otherwise.</div></div></li>
-        <li class="slot"><time>5:45p</time><div><div class="what">Shadrack's drive-through lights, Sevierville</div><div class="why">At Soaky Mountain Waterpark, $39.95 per car Friday, opens at 6, rain or shine. Kids stay in their car seats in pajamas with the radio synced to the lights. Forty minutes, then they're asleep before you're back. Sevierville traffic on Black Friday is the price. Leave early or skip it.</div></div></li>
+        <li class="slot"><time>5:45p</time><div><div class="what">Shadrack's drive-through lights, Sevierville <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Soaky%20Mountain%20Waterpark%2C%20Sevierville%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="addr">Soaky Mountain Waterpark, 175 Soaky Way, Sevierville</div><div class="why">At Soaky Mountain Waterpark, $39.95 per car Friday, opens at 6, rain or shine. Kids stay in their car seats in pajamas with the radio synced to the lights. Forty minutes, then they're asleep before you're back. Sevierville traffic on Black Friday is the price. Leave early or skip it.</div></div></li>
       </ul>
       <div class="callout">
         <h3>If the high road is closed</h3>
@@ -318,12 +369,12 @@ footer a{color:var(--muted)}
       </div>
     </div>
 
-    <div class="day">
+    <div class="day" data-date="2026-11-28">
       <div class="day-head"><h3>Home</h3><span class="day-date">Saturday, Nov 28</span></div>
       <ul class="slots">
         <li class="slot"><time>7:00a</time><div><div class="what">Breakfast, load, sweep</div><div class="why">Check under every bed, the hot tub deck, and the loft. Loveys get left in cabins the same way they get left at beach houses.</div></div></li>
-        <li class="slot"><time>8:30a ET</time><div><div class="what">Roll out through the park</div><div class="why">Little River Road to Townsend, US-321 to Lenoir City, I-75 south. Saturday after Thanksgiving is the second heaviest checkout day of the year on the Spur and TN-66. The park route misses all of it.</div></div></li>
-        <li class="slot"><time>11:15a ET</time><div><div class="what">Lunch in Athens or Cleveland</div></div></li>
+        <li class="slot"><time>8:30a ET</time><div><div class="what">Roll out through the park <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Townsend%20Wye%2C%20Townsend%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="addr">Little River Rd to Townsend Wye, then US-321</div><div class="why">Little River Road to Townsend, US-321 to Lenoir City, I-75 south. Saturday after Thanksgiving is the second heaviest checkout day of the year on the Spur and TN-66. The park route misses all of it.</div></div></li>
+        <li class="slot"><time>11:15a ET</time><div><div class="what">Lunch in Athens or Cleveland <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Athens%2C%20TN" target="_blank" rel="noopener">Directions</a></div></div></li>
         <li class="slot"><time>11:45a CT</time><div><div class="what">Chattanooga, back on I-59. You just got an hour back</div></div></li>
         <li class="slot"><time>2:30p CT</time><div><div class="what">Home</div></div></li>
       </ul>
@@ -552,33 +603,35 @@ footer a{color:var(--muted)}
   <div class="container">
     <p class="eyebrow">The lot</p>
     <h2>Addresses and numbers</h2>
+    <div class="table-wrap">
     <table class="numbers">
       <thead><tr><th>Place</th><th>Where</th><th>Notes</th></tr></thead>
       <tbody>
-        <tr><td>LeConte Medical Center ER</td><td>742 Middle Creek Rd, Sevierville &middot; (865) 446-8800</td><td><strong>Open 24 hours, about 30 min from the cabin.</strong> This is the real emergency option</td></tr>
-        <tr><td>Children's Hospital Urgent Care</td><td>502 Winfield Dunn Pkwy, Sevierville</td><td>Pediatric urgent care, East Tennessee Children's. Call for holiday hours</td></tr>
-        <tr><td>AFC Urgent Care, Sevierville</td><td>713 Winfield Dunn Pkwy</td><td>Mon&ndash;Fri 7:30a&ndash;8p, Sat&ndash;Sun 8a&ndash;5p. Backup</td></tr>
-        <tr><td>Access Medical Clinic</td><td>204 Glades Rd, Gatlinburg</td><td>Closest clinic. Mon&ndash;Fri 8:30a&ndash;5p only, closed weekends. Confirm they see kids</td></tr>
+        <tr><td>LeConte Medical Center ER</td><td>742 Middle Creek Rd, Sevierville &middot; (865) 446-8800 <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=LeConte%20Medical%20Center%20Emergency%2C%20742%20Middle%20Creek%20Rd%2C%20Sevierville%2C%20TN%2037862" target="_blank" rel="noopener">Go</a></td><td><strong>Open 24 hours, about 30 min from the cabin.</strong> This is the real emergency option</td></tr>
+        <tr><td>Children's Hospital Urgent Care</td><td>502 Winfield Dunn Pkwy, Sevierville <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Children%27s%20Hospital%20Urgent%20Care%2C%20502%20Winfield%20Dunn%20Pkwy%2C%20Sevierville%2C%20TN%2037876" target="_blank" rel="noopener">Go</a></td><td>Pediatric urgent care, East Tennessee Children's. Call for holiday hours</td></tr>
+        <tr><td>AFC Urgent Care, Sevierville</td><td>713 Winfield Dunn Pkwy <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=AFC%20Urgent%20Care%2C%20713%20Winfield%20Dunn%20Pkwy%2C%20Sevierville%2C%20TN%2037876" target="_blank" rel="noopener">Go</a></td><td>Mon&ndash;Fri 7:30a&ndash;8p, Sat&ndash;Sun 8a&ndash;5p. Backup</td></tr>
+        <tr><td>Access Medical Clinic</td><td>204 Glades Rd, Gatlinburg <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=204%20Glades%20Rd%2C%20Gatlinburg%2C%20TN" target="_blank" rel="noopener">Go</a></td><td>Closest clinic. Mon&ndash;Fri 8:30a&ndash;5p only, closed weekends. Confirm they see kids</td></tr>
         <tr><td>Park emergency</td><td>911, or park dispatch (865) 436-1200</td><td>No cell signal in most of the park. Note the nearest mile marker</td></tr>
-        <tr><td>Food City</td><td>1219 East Parkway, Gatlinburg</td><td>Closest full grocery. Holiday hours Thursday</td></tr>
-        <tr><td>Kroger</td><td>220 Wears Valley Rd, Pigeon Forge</td><td>On the Wears Valley route in. Pharmacy</td></tr>
-        <tr><td>Walmart</td><td>1414 Parkway, Sevierville</td><td>Pharmacy, 30 min. Avoid Fri and Sat</td></tr>
-        <tr><td>Dollywood</td><td>2700 Dollywood Parks Blvd, Pigeon Forge</td><td>Sun&ndash;Wed 10a&ndash;9p. <strong>Closed Thu Nov 26.</strong> Fri&ndash;Sat 9a&ndash;10p. Parking $25. 3 and under free</td></tr>
-        <tr><td>Anakeesta</td><td>576 Parkway, Gatlinburg (Chondola base)</td><td>Open Thanksgiving. Adults $34.99, 4&ndash;11 $22.99, 3 and under free. No guest parking, use city garages</td></tr>
-        <tr><td>Ober Mountain tram</td><td>1001 Parkway, Gatlinburg</td><td>Tram $29 ages 5+, 4 and under free. Tubing 3+ with adult, 42&quot; to ride alone. Skating 4 and under free</td></tr>
-        <tr><td>Gatlinburg SkyPark</td><td>765 Parkway &middot; (865) 436-4307</td><td>9a&ndash;9p daily, weather permitting. Lights nightly, included. No strollers. 3 heartbeats per chair</td></tr>
-        <tr><td>Sugarlands Visitor Center</td><td>1420 Fighting Creek Gap Rd (US-441)</td><td>Parking tags: $5 day, $15 week. Cataract Falls and Gatlinburg Trail start here</td></tr>
-        <tr><td>Cades Cove</td><td>Via Little River Rd to Townsend Wye, then Laurel Creek Rd</td><td>Loop open sunrise to sunset. About 1h15 from the cabin. Cable Mill restrooms halfway</td></tr>
-        <tr><td>Kuwohi / Clingmans Dome</td><td>Newfound Gap Rd, then Kuwohi Rd</td><td><strong>Road closes Nov 30 for winter.</strong> Closes any day for ice. Half-mile paved walk to the tower</td></tr>
-        <tr><td>Ripley's Aquarium of the Smokies</td><td>88 River Rd, Gatlinburg</td><td>From about $40, age 1 and under free. Garage next door</td></tr>
-        <tr><td>Mama's Farmhouse</td><td>208 Pickel St, Pigeon Forge</td><td>Thanksgiving 11a&ndash;9p, family style. Reservations encouraged. <strong>Book now</strong></td></tr>
-        <tr><td>The Park Grill</td><td>1110 Parkway, Gatlinburg</td><td>Thanksgiving menu 11:30a&ndash;9p</td></tr>
-        <tr><td>Cracker Barrel</td><td>2285 Parkway, Pigeon Forge</td><td>Thanksgiving plate from 11a, no reservation</td></tr>
-        <tr><td>Shadrack's Christmas Wonderland</td><td>Soaky Mountain Waterpark, Sevierville</td><td>Nightly from 6p. $39.95 per car Fri&ndash;Sun, $34.95 Mon&ndash;Thu except Nov 26</td></tr>
-        <tr><td>Arts &amp; Crafts Show</td><td>Gatlinburg Convention Center, 234 Historic Nature Trail</td><td>Nov 24&ndash;29, free, indoor</td></tr>
-        <tr><td>Mynatt Park</td><td>Asbury Ln, Gatlinburg</td><td>Playground and creek, 5 min from downtown. The check-in-day stall</td></tr>
+        <tr><td>Food City</td><td>1219 East Parkway, Gatlinburg <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Food%20City%2C%201219%20East%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Go</a></td><td>Closest full grocery. Holiday hours Thursday</td></tr>
+        <tr><td>Kroger</td><td>220 Wears Valley Rd, Pigeon Forge <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=220%20Wears%20Valley%20Rd%2C%20Pigeon%20Forge%2C%20TN" target="_blank" rel="noopener">Go</a></td><td>On the Wears Valley route in. Pharmacy</td></tr>
+        <tr><td>Walmart</td><td>1414 Parkway, Sevierville <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Walmart%2C%201414%20Parkway%2C%20Sevierville%2C%20TN%2037862" target="_blank" rel="noopener">Go</a></td><td>Pharmacy, 30 min. Avoid Fri and Sat</td></tr>
+        <tr><td>Dollywood</td><td>2700 Dollywood Parks Blvd, Pigeon Forge <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Dollywood%2C%202700%20Dollywood%20Parks%20Blvd%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Go</a></td><td>Sun&ndash;Wed 10a&ndash;9p. <strong>Closed Thu Nov 26.</strong> Fri&ndash;Sat 9a&ndash;10p. Parking $25. 3 and under free</td></tr>
+        <tr><td>Anakeesta</td><td>576 Parkway, Gatlinburg (Chondola base) <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Anakeesta%2C%20576%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Go</a></td><td>Open Thanksgiving. Adults $34.99, 4&ndash;11 $22.99, 3 and under free. No guest parking, use city garages</td></tr>
+        <tr><td>Ober Mountain tram</td><td>1001 Parkway, Gatlinburg <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Ober%20Mountain%20Tramway%2C%201001%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Go</a></td><td>Tram $29 ages 5+, 4 and under free. Tubing 3+ with adult, 42&quot; to ride alone. Skating 4 and under free</td></tr>
+        <tr><td>Gatlinburg SkyPark</td><td>765 Parkway &middot; (865) 436-4307 <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Gatlinburg%20SkyPark%2C%20765%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Go</a></td><td>9a&ndash;9p daily, weather permitting. Lights nightly, included. No strollers. 3 heartbeats per chair</td></tr>
+        <tr><td>Sugarlands Visitor Center</td><td>1420 Fighting Creek Gap Rd (US-441) <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Sugarlands%20Visitor%20Center%2C%201420%20Fighting%20Creek%20Gap%20Rd%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Go</a></td><td>Parking tags: $5 day, $15 week. Cataract Falls and Gatlinburg Trail start here</td></tr>
+        <tr><td>Cades Cove</td><td>Via Little River Rd to Townsend Wye, then Laurel Creek Rd <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Cades%20Cove%20Loop%20Road%2C%20Townsend%2C%20TN" target="_blank" rel="noopener">Go</a></td><td>Loop open sunrise to sunset. About 1h15 from the cabin. Cable Mill restrooms halfway</td></tr>
+        <tr><td>Kuwohi / Clingmans Dome</td><td>Newfound Gap Rd, then Kuwohi Rd <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Kuwohi%20%28Clingmans%20Dome%29%20Parking%20Area%2C%20Clingmans%20Dome%20Rd%2C%20Bryson%20City%2C%20NC" target="_blank" rel="noopener">Go</a></td><td><strong>Road closes Nov 30 for winter.</strong> Closes any day for ice. Half-mile paved walk to the tower</td></tr>
+        <tr><td>Ripley's Aquarium of the Smokies</td><td>88 River Rd, Gatlinburg <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=88%20River%20Rd%2C%20Gatlinburg%2C%20TN" target="_blank" rel="noopener">Go</a></td><td>From about $40, age 1 and under free. Garage next door</td></tr>
+        <tr><td>Mama's Farmhouse</td><td>208 Pickel St, Pigeon Forge <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=208%20Pickel%20St%2C%20Pigeon%20Forge%2C%20TN" target="_blank" rel="noopener">Go</a></td><td>Thanksgiving 11a&ndash;9p, family style. Reservations encouraged. <strong>Book now</strong></td></tr>
+        <tr><td>The Park Grill</td><td>1110 Parkway, Gatlinburg <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=The%20Park%20Grill%2C%201110%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Go</a></td><td>Thanksgiving menu 11:30a&ndash;9p</td></tr>
+        <tr><td>Cracker Barrel</td><td>2285 Parkway, Pigeon Forge <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Cracker%20Barrel%2C%202285%20Parkway%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Go</a></td><td>Thanksgiving plate from 11a, no reservation</td></tr>
+        <tr><td>Shadrack's Christmas Wonderland</td><td>Soaky Mountain Waterpark, Sevierville <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Soaky%20Mountain%20Waterpark%2C%20Sevierville%2C%20TN" target="_blank" rel="noopener">Go</a></td><td>Nightly from 6p. $39.95 per car Fri&ndash;Sun, $34.95 Mon&ndash;Thu except Nov 26</td></tr>
+        <tr><td>Arts &amp; Crafts Show</td><td>Gatlinburg Convention Center, 234 Historic Nature Trail <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Gatlinburg%20Convention%20Center%2C%20234%20Historic%20Nature%20Trail%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Go</a></td><td>Nov 24&ndash;29, free, indoor</td></tr>
+        <tr><td>Mynatt Park</td><td>Asbury Ln, Gatlinburg <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Mynatt%20Park%2C%20Asbury%20Lane%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Go</a></td><td>Playground and creek, 5 min from downtown. The check-in-day stall</td></tr>
       </tbody>
     </table>
+    </div>
   </div>
 </section>
 
@@ -590,23 +643,173 @@ footer a{color:var(--muted)}
 </footer>
 
 <script>
+/* Packing list: counter, clear, print. Ticks are remembered per phone (localStorage). */
 (function(){
+  var KEY = 'gatlinburg-2026-packing';
   var boxes = [].slice.call(document.querySelectorAll('#grid input[type=checkbox]'));
   var count = document.getElementById('count');
   var total = document.getElementById('total');
   total.textContent = boxes.length;
+  function label(b){ return b.parentNode.textContent.replace(/\s+/g,' ').trim(); }
+  function load(){ try { return JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e){ return {}; } }
+  function save(){
+    var o = {};
+    boxes.forEach(function(b){ if (b.checked) o[label(b)] = 1; });
+    try { localStorage.setItem(KEY, JSON.stringify(o)); } catch(e){}
+  }
   function tally(){
     var n = 0;
     for (var i=0;i<boxes.length;i++){ if (boxes[i].checked) n++; }
     count.textContent = n;
   }
-  boxes.forEach(function(b){ b.addEventListener('change', tally); });
+  var saved = load();
+  boxes.forEach(function(b){ if (saved[label(b)]) b.checked = true; });
+  boxes.forEach(function(b){ b.addEventListener('change', function(){ tally(); save(); }); });
   document.getElementById('clear').addEventListener('click', function(){
     boxes.forEach(function(b){ b.checked = false; });
-    tally();
+    tally(); save();
   });
   document.getElementById('print').addEventListener('click', function(){ window.print(); });
   tally();
+})();
+
+/* Today view: during the trip, mark today's card, collapse the days already done. */
+(function(){
+  var cards = [].slice.call(document.querySelectorAll('.day[data-date]'));
+  var bar = document.getElementById('today-bar');
+  var btn = document.getElementById('toggle-past');
+  var lbl = document.getElementById('today-label');
+  if (!cards.length || !bar) return;
+  cards = cards.filter(function(c){ return c.closest('#days'); });
+  // Today in Eastern time, as YYYY-MM-DD.
+  var today;
+  try { today = new Intl.DateTimeFormat('en-CA', {timeZone:'America/New_York', year:'numeric', month:'2-digit', day:'2-digit'}).format(new Date()); }
+  catch(e){ today = new Date().toISOString().slice(0,10); }
+  var first = cards[0].getAttribute('data-date'), last = cards[cards.length-1].getAttribute('data-date');
+  if (today < first || today > last) return;
+  var past = 0, todayCard = null;
+  cards.forEach(function(c){
+    var d = c.getAttribute('data-date');
+    if (d < today) { c.classList.add('is-past','collapsed'); past++; }
+    if (d === today) { c.classList.add('is-today'); todayCard = c; }
+  });
+  var names = {'2026-11-22':'Sunday','2026-11-23':'Monday','2026-11-24':'Tuesday','2026-11-25':'Wednesday','2026-11-26':'Thanksgiving','2026-11-27':'Friday','2026-11-28':'Saturday'};
+  lbl.textContent = 'Today: ' + (names[today] || today);
+  lbl.hidden = false;
+  if (past) btn.hidden = false;
+  var shown = false;
+  btn.addEventListener('click', function(){
+    shown = !shown;
+    cards.forEach(function(c){ if (c.classList.contains('is-past')) c.classList.toggle('collapsed', !shown); });
+    btn.textContent = shown ? 'Hide earlier days' : 'Show earlier days';
+  });
+  if (todayCard && !location.hash) {
+    setTimeout(function(){ todayCard.scrollIntoView({block:'start'}); window.scrollBy(0,-72); }, 50);
+  }
+})();
+
+/* Swap days: move a day's plan to another date. Remembered per phone. */
+(function(){
+  var KEY = 'gatlinburg-2026-days';
+  var cards = [].slice.call(document.querySelectorAll('#days .day[data-plan]'));
+  var reset = document.getElementById('reset-days');
+  var note = document.getElementById('swap-note');
+  if (cards.length < 2) return;
+  var short = {'2026-11-23':'Mon 23','2026-11-24':'Tue 24','2026-11-25':'Wed 25','2026-11-26':'Thu 26','2026-11-27':'Fri 27'};
+  function dateSpan(c){ return c.querySelector('.day-date'); }
+  function swap(a, b){
+    if (a === b) return;
+    var da = dateSpan(a).textContent, db = dateSpan(b).textContent;
+    var pa = a.getAttribute('data-plan'), pb = b.getAttribute('data-plan');
+    var ha = a.innerHTML, hb = b.innerHTML;
+    a.innerHTML = hb; b.innerHTML = ha;
+    dateSpan(a).textContent = da; dateSpan(b).textContent = db;
+    a.setAttribute('data-plan', pb); b.setAttribute('data-plan', pa);
+    [a, b].forEach(function(c){ [].slice.call(c.querySelectorAll('select.swap')).forEach(function(x){ x.parentNode.removeChild(x); }); });
+    wire(a); wire(b);
+  }
+  function byPlan(p){ for (var i=0;i<cards.length;i++){ if (cards[i].getAttribute('data-plan') === p) return cards[i]; } return null; }
+  function current(){ var o = {}; cards.forEach(function(c){ o[c.getAttribute('data-date')] = c.getAttribute('data-plan'); }); return o; }
+  var original = current();
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(current())); } catch(e){} refresh(); }
+  function refresh(){
+    var o = current(), changed = 0;
+    for (var d in o) if (o[d] !== original[d]) changed++;
+    reset.hidden = !changed;
+    note.textContent = changed ? 'Plan rearranged on this phone. Dates and forecast stay put; the day plans moved.' : 'Each day card has a swap menu. Swaps are remembered on this phone.';
+  }
+  function wire(c){
+    var head = c.querySelector('.day-head');
+    var sel = document.createElement('select');
+    sel.className = 'swap'; sel.setAttribute('aria-label', 'Swap this day with another');
+    var o0 = document.createElement('option'); o0.value = ''; o0.textContent = 'Swap with\u2026'; sel.appendChild(o0);
+    cards.forEach(function(other){
+      if (other === c) return;
+      var o = document.createElement('option'); o.value = other.getAttribute('data-date'); o.textContent = short[o.value] || o.value; sel.appendChild(o);
+    });
+    sel.addEventListener('change', function(){
+      var target = null; cards.forEach(function(x){ if (x.getAttribute('data-date') === sel.value) target = x; });
+      sel.value = '';
+      if (target) { swap(c, target); save(); }
+    });
+    head.appendChild(sel);
+  }
+  cards.forEach(wire);
+  var saved = null; try { saved = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch(e){}
+  if (saved) {
+    cards.forEach(function(c){
+      var want = saved[c.getAttribute('data-date')];
+      if (want && want !== c.getAttribute('data-plan')) { var holder = byPlan(want); if (holder) swap(c, holder); }
+    });
+  }
+  reset.addEventListener('click', function(){
+    cards.forEach(function(c){
+      var want = original[c.getAttribute('data-date')];
+      if (want !== c.getAttribute('data-plan')) { var holder = byPlan(want); if (holder) swap(c, holder); }
+    });
+    try { localStorage.removeItem(KEY); } catch(e){}
+    refresh();
+  });
+  refresh();
+})();
+
+/* Weather: Open-Meteo, no key. Town = cabin, Ridge = Kuwohi. Fails quietly offline. */
+(function(){
+  var box = document.getElementById('wx'), grid = document.getElementById('wx-grid'), note = document.getElementById('wx-note');
+  if (!box || !window.fetch) return;
+  var base = 'https://api.open-meteo.com/v1/forecast?temperature_unit=fahrenheit&precipitation_unit=inch&timezone=America%2FNew_York&forecast_days=10';
+  var town = base + '&latitude=35.714&longitude=-83.510&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,snowfall_sum';
+  var ridge = base + '&latitude=35.5628&longitude=-83.4985&elevation=2025&daily=temperature_2m_max,temperature_2m_min,snowfall_sum';
+  var START = '2026-11-22', END = '2026-11-28';
+  var dn = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  var today;
+  try { today = new Intl.DateTimeFormat('en-CA', {timeZone:'America/New_York', year:'numeric', month:'2-digit', day:'2-digit'}).format(new Date()); } catch(e){ today = ''; }
+  function j(u){ return fetch(u).then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); }); }
+  Promise.all([j(town), j(ridge)]).then(function(res){
+    var t = res[0].daily, r = res[1].daily, html = '', shown = 0;
+    for (var i = 0; i < t.time.length; i++) {
+      var d = t.time[i];
+      if (d < START || d > END) continue;
+      var ri = r.time.indexOf(d);
+      var dow = dn[new Date(d + 'T12:00:00').getDay()];
+      var snowT = t.snowfall_sum[i] || 0, snowR = ri >= 0 ? (r.snowfall_sum[ri] || 0) : 0;
+      html += '<div class="wx-day' + (d === today ? ' today' : '') + '">'
+        + '<b>' + dow + ' ' + parseInt(d.slice(8),10) + '</b>'
+        + '<div class="t">' + Math.round(t.temperature_2m_max[i]) + '&deg; / ' + Math.round(t.temperature_2m_min[i]) + '&deg;</div>'
+        + '<div class="r">rain ' + (t.precipitation_probability_max[i] == null ? '?' : t.precipitation_probability_max[i] + '%') + '</div>'
+        + (ri >= 0 ? '<div class="r">ridge ' + Math.round(r.temperature_2m_max[ri]) + '&deg; / ' + Math.round(r.temperature_2m_min[ri]) + '&deg;</div>' : '')
+        + ((snowT > 0 || snowR > 0) ? '<div class="r snow">snow' + (snowR > 0 ? ' on ridge' : '') + '</div>' : '')
+        + '</div>';
+      shown++;
+    }
+    if (!shown) { note.textContent = 'Forecast reaches ten days out. Trip days appear here from Nov 13.'; }
+    grid.innerHTML = html;
+    box.hidden = false;
+  }).catch(function(){
+    note.textContent = 'Forecast unavailable right now. Weather.gov for Gatlinburg is the backup.';
+    grid.innerHTML = '';
+    box.hidden = false;
+  });
 })();
 </script>
 </body>
