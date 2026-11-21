@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b1411">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Trails the kids can do · Gatlinburg week</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="site.css?v=4">
+</head>
+<body class="locked day-page trails-page" data-page="trails">
+
+<div id="gate">
+  <form class="gate-box" id="gate-form" autocomplete="off">
+    <span class="logo">mike<span>side</span></span>
+    <h1>Gatlinburg week</h1>
+    <p>Family page. Enter the PIN to open it.</p>
+    <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" aria-label="PIN" autofocus>
+    <button type="submit">Open</button>
+    <div class="err" id="gate-err"></div>
+  </form>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="/">mike<span>side</span></a>
+    <nav aria-label="Trip pages">
+      <ul>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="#list">Trails</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#skip">Not this trip</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="banner" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Little%20River%20Road%20-%20October%202025%20-%20Sarah%20Stierch.jpg?width=1400')">
+  <div class="banner-shade"></div>
+  <div class="container banner-text">
+    <p class="kicker">Walks, not hikes</p>
+    <h1>Trails the whole crew can do</h1>
+    <p class="banner-date">Under five miles round trip, no sustained steep grades, for ages one to seven and knees over sixty</p>
+  </div>
+  <span class="credit">Sarah Stierch · CC0</span>
+</div>
+
+<div class="chips container" aria-label="Days"><a class="chip" href="day-0-sun.html">Sun 22</a><a class="chip" href="day-1-mon.html">Mon 23</a><a class="chip" href="day-2-tue.html">Tue 24</a><a class="chip" href="day-3-wed.html">Wed 25</a><a class="chip" href="day-4-thu.html">Thu 26</a><a class="chip" href="day-5-fri.html">Fri 27</a><a class="chip" href="day-6-sat.html">Sat 28</a><a class="chip" href="bonus-dollywood.html">Bonus</a><a class="chip on" href="trails.html">Trails</a></div>
+
+<section class="daytop">
+  <div class="container">
+    <p class="lede">Every walk here was chosen with the slowest person in mind. The kid-and-grandparent score is ours: five dots means a two-year-old walks most of it and nobody's knees complain; two dots means it's worth it but somebody will be carried or will want to stop. Every one of these needs the $15 weekly parking tag on the dash. Pack the carrier; the stroller only works where it says so.</p>
+  </div>
+</section>
+
+<section id="list">
+  <div class="container">
+    <p class="eyebrow">The list</p>
+    <h2>Thirteen walks, easiest first</h2>
+    <div class="trails">
+      <div class="trail" data-lat="35.6895" data-lng="-83.5388" data-name="Cataract Falls">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Cataract-falls-gsmnp1.jpg?width=480')"><span class="credit">Brian Stansberry · CC BY 3.0</span></div>
+        <div class="trail-body">
+          <h3>Cataract Falls <span class="rate" data-say="Short, flat, pretty. Reviewers are unanimous: do not bring the stroller, the roots eat wheels. One saw a bear in the lot." title="Google rating, 2,350 reviews">&#9733; 4.6<small>2k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6857204%2C-83.5367666" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Sugarlands &middot; 5 min from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Round trip</dt><dd>0.6 mi</dd></div>
+            <div><dt>Climb</dt><dd>40 ft</dd></div>
+            <div><dt>Time</dt><dd>25 min</dd></div>
+            <div><dt>Underfoot</dt><dd>Dirt, roots</dd></div>
+            <div><dt>Stroller</dt><dd>No. Carrier.</dd></div>
+            <div><dt>Restrooms</dt><dd>Visitor center</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for ages 1 to 7 and grandparents">Kid and grandparent score <span>&#9679;&#9679;&#9679;&#9679;&#9679;<i></i></span></p>
+          <p>The shortest walk to a waterfall in the park, starting behind the visitor center. Flat enough for a two-year-old on foot. Reviewers are unanimous that strollers die on the roots, so Snejana rides. One review saw a bear in the lot; look before you unbuckle.</p>
+          <p class="when">Best slot: Tuesday morning</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.6796" data-lng="-83.5313" data-name="Sugarlands Valley Nature Trail">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Sugarlands%20Visitor%20Center%2C%20May%202018--Andrea%20Walton%20%2829111144268%29.jpg?width=480')"><span class="credit">NPS / Andrea Walton · Public domain</span></div>
+        <div class="trail-body">
+          <h3>Sugarlands Valley Nature Trail <span class="rate" data-say="Rangers are the asset. Lends all-terrain wheelchairs. Buy the parking tag inside." title="Google rating, 2,490 reviews">&#9733; 4.7<small>2k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6795863%2C-83.5312772" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Newfound Gap Rd, 0.3 mi past the visitor center &middot; 6 min from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Round trip</dt><dd>0.5 mi loop</dd></div>
+            <div><dt>Climb</dt><dd>Flat</dd></div>
+            <div><dt>Time</dt><dd>20 min</dd></div>
+            <div><dt>Underfoot</dt><dd>Paved</dd></div>
+            <div><dt>Stroller</dt><dd>Yes, the only fully paved trail</dd></div>
+            <div><dt>Restrooms</dt><dd>Visitor center</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for ages 1 to 7 and grandparents">Kid and grandparent score <span>&#9679;&#9679;&#9679;&#9679;&#9679;<i></i></span></p>
+          <p>A paved loop along the West Prong with an old chimney and the river the whole way. Built for wheelchairs, so it works for a stroller and for anyone's knees. The one trail where all five of you move at the same speed.</p>
+          <p class="when">Best slot: Tuesday morning</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.6982" data-lng="-83.5285" data-name="Gatlinburg Trail">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Little%20River%20Road%20-%20October%202025%20-%20Sarah%20Stierch.jpg?width=480')"><span class="credit">Sarah Stierch · CC0</span></div>
+        <div class="trail-body">
+          <h3>Gatlinburg Trail <span class="rate" data-say="Flat gravel along the river from Sugarlands, one of two dog-friendly trails. Easy with a stroller." title="Google rating, 10 reviews">&#9733; 4.6<small>10</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6857204%2C-83.5367666" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Sugarlands to the edge of town &middot; 5 min from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Round trip</dt><dd>Up to 3.8 mi, turn around anywhere</dd></div>
+            <div><dt>Climb</dt><dd>Nearly flat</dd></div>
+            <div><dt>Time</dt><dd>As long as you want</dd></div>
+            <div><dt>Underfoot</dt><dd>Wide gravel, one bridge</dd></div>
+            <div><dt>Stroller</dt><dd>Yes</dd></div>
+            <div><dt>Restrooms</dt><dd>Visitor center</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for ages 1 to 7 and grandparents">Kid and grandparent score <span>&#9679;&#9679;&#9679;&#9679;&#9679;<i></i></span></p>
+          <p>An old road along the Little Pigeon, flat, wide, and one of two trails in the park that take dogs. Walk twenty minutes out and back and you've had a hike; walk the whole thing and you're at the Gatlinburg Bypass. Good on a damp day because gravel doesn't turn to mud.</p>
+          <p class="when">Best slot: Any morning, or Plan B for Wednesday and Friday</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.6578" data-lng="-83.5806" data-name="Elkmont Nature Trail">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Little-river-townsend-y.jpg?width=480')"><span class="credit">Brian Stansberry · CC BY 3.0</span></div>
+        <div class="trail-body">
+          <h3>Elkmont Nature Trail <span class="rate" data-say="Short creekside loop. Reviewers name it for young children and the elderly in the same sentence." title="Google rating, 115 reviews">&#9733; 4.8<small>115</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6578011%2C-83.5805553" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Elkmont, off Little River Rd &middot; 20 min from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Round trip</dt><dd>0.8 mi loop</dd></div>
+            <div><dt>Climb</dt><dd>100 ft</dd></div>
+            <div><dt>Time</dt><dd>40 min</dd></div>
+            <div><dt>Underfoot</dt><dd>Dirt, two small bridges</dd></div>
+            <div><dt>Stroller</dt><dd>No. Carrier.</dd></div>
+            <div><dt>Restrooms</dt><dd>Elkmont campground</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for ages 1 to 7 and grandparents">Kid and grandparent score <span>&#9679;&#9679;&#9679;&#9679;<i>&#9679;</i></span></p>
+          <p>A quiet creekside loop with interpretive signs and bridges the kids will want to stand on. Reviewers call it good for young children and the elderly in the same breath. The old Elkmont cabins at the trailhead are an extra ten minutes of poking around.</p>
+          <p class="when">Best slot: Wednesday afternoon if the Cove was short, or Plan B</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.656" data-lng="-83.579" data-name="Little River Trail from Elkmont">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Little%20River%20Road%20-%20October%202025%20-%20Sarah%20Stierch.jpg?width=480')"><span class="credit">Sarah Stierch · CC0</span></div>
+        <div class="trail-body">
+          <h3>Little River Trail from Elkmont <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6560%2C-83.5790" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Elkmont &middot; 20 min from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Round trip</dt><dd>Up to 4.6 mi to Huskey Branch Falls</dd></div>
+            <div><dt>Climb</dt><dd>300 ft, gradual</dd></div>
+            <div><dt>Time</dt><dd>2 to 3 hours full, or 45 min out and back</dd></div>
+            <div><dt>Underfoot</dt><dd>Old railroad grade, wide gravel</dd></div>
+            <div><dt>Stroller</dt><dd>Yes, a jogging stroller</dd></div>
+            <div><dt>Restrooms</dt><dd>Elkmont campground</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for ages 1 to 7 and grandparents">Kid and grandparent score <span>&#9679;&#9679;&#9679;&#9679;<i>&#9679;</i></span></p>
+          <p>The old logging railbed, so the grade never steepens. Follows the Little River the entire way with pools and boulders to look at. Turn around at any point; the small cascade at Huskey Branch is 2.3 miles in and is the reward if the kids have it in them. Grandparent-friendly footing.</p>
+          <p class="when">Best slot: The spare morning</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.679" data-lng="-83.6473" data-name="Metcalf Bottoms to Little Greenbrier School">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Little%20River%20Road%20-%20October%202025%20-%20Sarah%20Stierch.jpg?width=480')"><span class="credit">Sarah Stierch · CC0</span></div>
+        <div class="trail-body">
+          <h3>Metcalf Bottoms to Little Greenbrier School <span class="rate" data-say="Rolling and rooty to a one-room schoolhouse. The picnic area and shallow river get as much love as the trail." title="Google rating, 125 reviews">&#9733; 4.8<small>125</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6789943%2C-83.6472797" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Little River Rd &middot; 25 min from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Round trip</dt><dd>1.4 mi</dd></div>
+            <div><dt>Climb</dt><dd>150 ft, rolling</dd></div>
+            <div><dt>Time</dt><dd>50 min</dd></div>
+            <div><dt>Underfoot</dt><dd>Dirt, roots, a few short hills</dd></div>
+            <div><dt>Stroller</dt><dd>No. Carrier.</dd></div>
+            <div><dt>Restrooms</dt><dd>Picnic area</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for ages 1 to 7 and grandparents">Kid and grandparent score <span>&#9679;&#9679;&#9679;&#9679;<i>&#9679;</i></span></p>
+          <p>From the picnic tables by the river to a one-room 1882 schoolhouse with a cemetery. Short rolling hills, lots of roots, nothing steep. The picnic area itself, with the shallow river, is worth the stop even if nobody walks. The Walker Sisters cabin adds another 1.1 miles each way; skip it with the little two.</p>
+          <p class="when">Best slot: Wednesday on the way back from Cades Cove</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.6132" data-lng="-83.6503" data-name="Middle Prong Trail to Lynn Camp Prong Cascades">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Little-river-townsend-y.jpg?width=480')"><span class="credit">Brian Stansberry · CC BY 3.0</span></div>
+        <div class="trail-body">
+          <h3>Middle Prong Trail to Lynn Camp Prong Cascades <span class="rate" data-say="Wide, gentle, cascades early. &#x27;Good with children&#x27; is the recurring line. Parking is tight." title="Google rating, 5 reviews">&#9733; 4.6<small>5</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6132417%2C-83.6502738" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Tremont &middot; 40 min via Townsend from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Round trip</dt><dd>1.4 mi to the cascades, up to 4.6 mi</dd></div>
+            <div><dt>Climb</dt><dd>150 ft to the cascades</dd></div>
+            <div><dt>Time</dt><dd>1 hour</dd></div>
+            <div><dt>Underfoot</dt><dd>Wide gravel road</dd></div>
+            <div><dt>Stroller</dt><dd>Yes to the cascades</dd></div>
+            <div><dt>Restrooms</dt><dd>Tremont institute</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for ages 1 to 7 and grandparents">Kid and grandparent score <span>&#9679;&#9679;&#9679;&#9679;<i>&#9679;</i></span></p>
+          <p>The best waterfall-per-effort ratio in the park: a wide old road climbs gently beside the river and the long Lynn Camp Prong cascades start at 0.6 miles. A 1930s Cadillac rusting in the woods sits at 2.3 miles if Cash wants a goal. The last three miles of road to the trailhead are gravel.</p>
+          <p class="when">Best slot: Pairs with Cades Cove, it's on the way, or its own morning</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.6365" data-lng="-83.4922" data-name="Cove Hardwood Nature Trail">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Chimney%20Tops%20viewed%20from%20Chimney%20Tops%20overlook%2C%20May%202017.jpg?width=480')"><span class="credit">Thomson200 · CC0</span></div>
+        <div class="trail-body">
+          <h3>Cove Hardwood Nature Trail <span class="rate" data-say="Old-growth giants on a short loop with one real hill. Usually empty. Grab the 50-cent guide." title="Google rating, 24 reviews">&#9733; 4.7<small>24</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6364531%2C-83.4921509" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Chimneys Picnic Area, Newfound Gap Rd &middot; 20 min from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Round trip</dt><dd>0.75 mi loop</dd></div>
+            <div><dt>Climb</dt><dd>200 ft</dd></div>
+            <div><dt>Time</dt><dd>35 min</dd></div>
+            <div><dt>Underfoot</dt><dd>Dirt, some rock</dd></div>
+            <div><dt>Stroller</dt><dd>No. Carrier.</dd></div>
+            <div><dt>Restrooms</dt><dd>Picnic area</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for ages 1 to 7 and grandparents">Kid and grandparent score <span>&#9679;&#9679;&#9679;<i>&#9679;&#9679;</i></span></p>
+          <p>Old-growth trees as big as anything in the park on a short loop that climbs a hill and comes back down. Reviewers say fine for little hikers; the grade is short but real, so grandparents take it slow. The 50-cent trail guide at the start is worth it. Picnic tables and restrooms at the car.</p>
+          <p class="when">Best slot: Friday on the way down from Kuwohi</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.6817" data-lng="-83.491" data-name="Noah Ogle Place">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Roaring%20Fork%20Motor%20Nature%20Trail%20-%20March%202024%20-%20Sarah%20Stierch%2003.jpg?width=480')"><span class="credit">Sarah Stierch · CC BY 4.0</span></div>
+        <div class="trail-body">
+          <h3>Noah Ogle Place <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6817275%2C-83.4910323" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Cherokee Orchard Rd, 3 mi from downtown &middot; 10 min from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Round trip</dt><dd>0.75 mi loop, or 200 ft to the cabin</dd></div>
+            <div><dt>Climb</dt><dd>100 ft</dd></div>
+            <div><dt>Time</dt><dd>30 min</dd></div>
+            <div><dt>Underfoot</dt><dd>Rocky, wet, uneven on the far side</dd></div>
+            <div><dt>Stroller</dt><dd>No</dd></div>
+            <div><dt>Restrooms</dt><dd>None</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for ages 1 to 7 and grandparents">Kid and grandparent score <span>&#9679;&#9679;<i>&#9679;&#9679;&#9679;</i></span></p>
+          <p>The cabin, barn and tub mill are a hundred yards from the road and good for all three kids. The nature-trail loop beyond is loose wet rock and reviewers found it slippery and harder than it looks; do the cabin, skip the loop with the little two.</p>
+          <p class="when">Best slot: Friday Plan B</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.6969" data-lng="-83.3879" data-name="Porters Creek Trail, first mile">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Grotto-falls-gsmnp1.jpg?width=480')"><span class="credit">Brian Stansberry · CC BY 3.0</span></div>
+        <div class="trail-body">
+          <h3>Porters Creek Trail, first mile <span class="rate" data-say="Locals&#x27; favorite. Easy first mile to the farm site, moderate climb beyond with footlog bridges." title="Google rating, 195 reviews">&#9733; 4.7<small>195</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6969373%2C-83.3879037" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Greenbrier, 6 mi east of town on US-321 &middot; 20 min from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Round trip</dt><dd>2 mi to the farm site, 3.8 mi to Fern Branch Falls</dd></div>
+            <div><dt>Climb</dt><dd>200 ft to the farm site, 650 ft to the falls</dd></div>
+            <div><dt>Time</dt><dd>1 hour to the farm site</dd></div>
+            <div><dt>Underfoot</dt><dd>Old gravel road, then dirt and footlogs</dd></div>
+            <div><dt>Stroller</dt><dd>First mile only</dd></div>
+            <div><dt>Restrooms</dt><dd>At the road</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for ages 1 to 7 and grandparents">Kid and grandparent score <span>&#9679;&#9679;&#9679;<i>&#9679;&#9679;</i></span></p>
+          <p>The first mile is a gravel road along a loud creek to an old cemetery and farm site with a cantilever barn. That's the kid version and it's a good one. The falls beyond are moderate with a real climb and narrow footlog bridges; not for this crew, fine for Cash and one adult another year.</p>
+          <p class="when">Best slot: The spare morning</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.5563" data-lng="-83.4952" data-name="Kuwohi tower">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Observation%20Tower%20in%20Fog%2C%20Clingmans%20Dome%20%28Kuwahi%29%2C%20Great%20Smoky%20Mountains%20National%20Park%2C%20Swain%20County%2C%20NC.jpg?width=480')"><span class="credit">w_lemay · CC BY-SA 2.0</span></div>
+        <div class="trail-body">
+          <h3>Kuwohi tower <span class="rate" data-say="The view is the best in the park. The half-mile ramp is steep, and the lot fills; early is the whole trick." title="Google rating, 3,737 reviews">&#9733; 4.8<small>4k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.5562734%2C-83.495241" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">End of Kuwohi Rd &middot; 45 min from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Round trip</dt><dd>1 mi</dd></div>
+            <div><dt>Climb</dt><dd>330 ft, steep</dd></div>
+            <div><dt>Time</dt><dd>40 min</dd></div>
+            <div><dt>Underfoot</dt><dd>Paved, 13% grade</dd></div>
+            <div><dt>Stroller</dt><dd>Technically yes, but you'll regret it</dd></div>
+            <div><dt>Restrooms</dt><dd>Parking lot only</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for ages 1 to 7 and grandparents">Kid and grandparent score <span>&#9679;&#9679;<i>&#9679;&#9679;&#9679;</i></span></p>
+          <p>The one steep walk on this list, kept because the view is the best in the park and the road closes for the winter the day after you leave. Benches every hundred yards. Grandparents go slow and stop at each one. It is 15 to 20 degrees colder up here than the cabin.</p>
+          <p class="when">Best slot: Friday morning</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.4996" data-lng="-83.3037" data-name="Oconaluftee River Trail">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Elk%20in%20Meadow%2C%20Cataloochee%2C%20NC%20%2831780399217%29.jpg?width=480')"><span class="credit">Warren LeMay · CC0</span></div>
+        <div class="trail-body">
+          <h3>Oconaluftee River Trail <span class="rate" data-say="Flat, benches, river access, and elk crossing the trail some mornings. Big lot across the road." title="Google rating, 431 reviews">&#9733; 4.8<small>431</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.4995569%2C-83.3036613" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Cherokee, NC side &middot; 1h15 over the gap from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Round trip</dt><dd>Up to 3 mi, flat</dd></div>
+            <div><dt>Climb</dt><dd>Flat</dd></div>
+            <div><dt>Time</dt><dd>As long as you want</dd></div>
+            <div><dt>Underfoot</dt><dd>Gravel and paved</dd></div>
+            <div><dt>Stroller</dt><dd>Yes</dd></div>
+            <div><dt>Restrooms</dt><dd>Visitor center</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for ages 1 to 7 and grandparents">Kid and grandparent score <span>&#9679;&#9679;&#9679;&#9679;&#9679;<i></i></span></p>
+          <p>Only if you decide to drive over Newfound Gap into North Carolina: flat river path from the visitor center, benches, and the elk herd that grazes the field by the Mountain Farm Museum most mornings. The farm museum is free and has animals. Not this trip's plan, but the best elk sighting in the park and a stroller trail.</p>
+          <p class="when">Best slot: Only if you go over the gap</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.7878" data-lng="-83.5516" data-name="Pigeon Forge Riverwalk, Patriot Park to The Island">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Old%20Mill%20Dam.%20%282021%29.jpg?width=480')"><span class="credit">Stch2022 · CC BY-SA 4.0</span></div>
+        <div class="trail-body">
+          <h3>Pigeon Forge Riverwalk, Patriot Park to The Island <span class="rate" data-say="Free parking behind the Old Mill, $3-a-person trolley to Dollywood all day, Winterfest light walk to The Island." title="Google rating, 3,575 reviews">&#9733; 4.6<small>4k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Patriot%20Park%2C%20236%20Old%20Mill%20Ave%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Pigeon Forge &middot; 20 min from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Round trip</dt><dd>3 mi</dd></div>
+            <div><dt>Climb</dt><dd>Flat</dd></div>
+            <div><dt>Time</dt><dd>1 hour one way</dd></div>
+            <div><dt>Underfoot</dt><dd>Paved</dd></div>
+            <div><dt>Stroller</dt><dd>Yes</dd></div>
+            <div><dt>Restrooms</dt><dd>Both ends</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for ages 1 to 7 and grandparents">Kid and grandparent score <span>&#9679;&#9679;&#9679;&#9679;&#9679;<i></i></span></p>
+          <p>Not a park trail, but the most useful flat walk in Pigeon Forge: paved along the river from the Old Mill to The Island, lit for Winterfest after dark. Park free at Patriot Park, walk one way, trolley back.</p>
+          <p class="when">Best slot: Monday evening</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="map">
+  <div class="container">
+    <p class="eyebrow">Where they are</p>
+    <h2>Map</h2>
+    <p class="intro">Tap a pin for the name and directions. The cabin side of the park is the top half; Cades Cove and Tremont are left; Kuwohi and Oconaluftee are down the middle.</p>
+    <div id="leaflet" class="map" data-route="[]" data-route-b="[]"></div>
+  </div>
+</section>
+
+<section id="skip">
+  <div class="container">
+    <p class="eyebrow">The bench</p>
+    <h2>Famous, and not this trip</h2>
+    <div class="table-wrap"><table class="numbers">
+      <thead><tr><th>Trail</th><th>Why not</th></tr></thead>
+      <tbody>
+        <tr><td>Laurel Falls</td><td>Closed for rebuild until 2027.</td></tr>
+        <tr><td>Grotto Falls</td><td>2.6 mi, 500 ft of climb, slick near the falls. Cash and one adult, another year.</td></tr>
+        <tr><td>Abrams Falls</td><td>5 mi with three climbs and a dangerous pool at the bottom. No.</td></tr>
+        <tr><td>Alum Cave</td><td>Steep and long. Not with anyone under seven.</td></tr>
+        <tr><td>Andrews Bald</td><td>From Kuwohi, 3.6 mi with a 600 ft climb back out at 6,000 ft. Not with the baby in November.</td></tr>
+        <tr><td>Rainbow Falls, Chimney Tops</td><td>Both closed or rebuilt sections and both too steep for this crew.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="pager"><a href="index.html">&larr; Hub</a><span></span><a href="day-2-tue.html">Tuesday's walks &rarr;</a></div>
+    <p>Distances and climbs are from park signage and trail guides and rounded. Photos from Wikimedia Commons under the licenses shown.</p>
+  </div>
+</footer>
+
+<div class="bear-toast" id="bear-toast" role="status"></div>
+<div class="bear-peek" id="bear-peek" aria-hidden="true"><svg viewBox="0 0 120 100"><g fill="#2b1d14"><ellipse cx="60" cy="78" rx="46" ry="30"/><circle cx="60" cy="44" r="30"/><circle cx="36" cy="22" r="11"/><circle cx="84" cy="22" r="11"/></g><g fill="#6b4a33"><circle cx="36" cy="22" r="5"/><circle cx="84" cy="22" r="5"/><ellipse cx="60" cy="56" rx="14" ry="10"/></g><g fill="#0b1411"><circle cx="48" cy="40" r="3.5"/><circle cx="72" cy="40" r="3.5"/><ellipse cx="60" cy="52" rx="6" ry="4"/></g></svg></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="bear-side" viewBox="0 0 140 90"><g fill="#2b1d14"><ellipse cx="62" cy="50" rx="44" ry="26"/><circle cx="108" cy="36" r="18"/><circle cx="98" cy="22" r="6"/><circle cx="118" cy="22" r="6"/><circle cx="20" cy="50" r="12"/><rect x="30" y="62" width="12" height="26" rx="5"/><rect x="52" y="64" width="12" height="24" rx="5"/><rect x="78" y="64" width="12" height="24" rx="5"/><rect x="96" y="60" width="12" height="28" rx="5"/></g><g fill="#6b4a33"><ellipse cx="122" cy="42" rx="9" ry="6"/></g><circle cx="114" cy="33" r="2.5" fill="#0b1411"/><circle cx="129" cy="41" r="3" fill="#0b1411"/></symbol></svg>
+
+<nav class="tabbar" aria-label="Quick links">
+  <a href="index.html"><span>&#8962;</span>Hub</a>
+  <a href="#list"><span>&#9650;</span>Trails</a>
+  <a href="#map"><span>&#9673;</span>Map</a>
+  <a href="index.html#packing"><span>&#9745;</span>Pack</a>
+  <a href="index.html#numbers"><span>&#9742;</span>Numbers</a>
+</nav>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="site.js?v=4"></script>
+<script src="day.js?v=4"></script>
+</body>
+</html>
