@@ -77,6 +77,8 @@ def page(date):
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <title>{html.escape(title_plain)} — {d['name']} · Gatlinburg week</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,7 +91,7 @@ def page(date):
 
 <div id="gate">
   <form class="gate-box" id="gate-form" autocomplete="off">
-    <span class="logo">mike<span>side</span></span>
+    <span class="logo"><span class="logo-mark big" aria-hidden="true">&#x1F43B;</span></span>
     <h1>Gatlinburg week</h1>
     <p>Family page. Enter the PIN to open it.</p>
     <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" aria-label="PIN" autofocus>
@@ -100,7 +102,7 @@ def page(date):
 
 <header>
   <div class="container nav">
-    <a class="logo" href="/">mike<span>side</span></a>
+    <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">&#x1F43B;</span>Gatlinburg <span>week</span></a>
     <nav aria-label="Trip pages">
       <ul>
         <li><a href="index.html">Hub</a></li>
@@ -290,6 +292,8 @@ def trails_page():
 <meta name="theme-color" content="#0b1411">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <title>Trails the kids can do · Gatlinburg week</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -302,7 +306,7 @@ def trails_page():
 
 <div id="gate">
   <form class="gate-box" id="gate-form" autocomplete="off">
-    <span class="logo">mike<span>side</span></span>
+    <span class="logo"><span class="logo-mark big" aria-hidden="true">&#x1F43B;</span></span>
     <h1>Gatlinburg week</h1>
     <p>Family page. Enter the PIN to open it.</p>
     <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" aria-label="PIN" autofocus>
@@ -313,7 +317,7 @@ def trails_page():
 
 <header>
   <div class="container nav">
-    <a class="logo" href="/">mike<span>side</span></a>
+    <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">&#x1F43B;</span>Gatlinburg <span>week</span></a>
     <nav aria-label="Trip pages">
       <ul>
         <li><a href="index.html">Hub</a></li>
@@ -441,6 +445,8 @@ def packing_page():
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <title>Packing list · Gatlinburg week</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -452,7 +458,7 @@ def packing_page():
 
 <div id="gate">
   <form class="gate-box" id="gate-form" autocomplete="off">
-    <span class="logo">mike<span>side</span></span>
+    <span class="logo"><span class="logo-mark big" aria-hidden="true">&#x1F43B;</span></span>
     <h1>Gatlinburg week</h1>
     <p>Family page. Enter the PIN to open it.</p>
     <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" aria-label="PIN" autofocus>
@@ -463,7 +469,7 @@ def packing_page():
 
 <header>
   <div class="container nav">
-    <a class="logo" href="/">mike<span>side</span></a>
+    <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">&#x1F43B;</span>Gatlinburg <span>week</span></a>
     <nav aria-label="Trip pages">
       <ul>
         <li><a href="index.html">Hub</a></li>
