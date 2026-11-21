@@ -114,9 +114,9 @@
    },
    {
     "t": "11:15a",
-    "what": "Lunch: Pottery House Caf\u00e9",
+    "what": "Lunch: Pottery House Café",
     "why": "3341 Old Mill St, across the footbridge. Opens at 11; be at the door, the wait is 30 minutes by noon. Fresh bread, chicken pot pie, kids' mac. The Old Mill Restaurant next door is the bigger, slower alternative.",
-    "dest": "The Old Mill Pottery House Caf\u00e9, 3341 Old Mill St, Pigeon Forge, TN 37863"
+    "dest": "The Old Mill Pottery House Café, 3341 Old Mill St, Pigeon Forge, TN 37863"
    },
    {
     "t": "12:45p",
@@ -286,7 +286,7 @@
   "date": "Thursday, Nov 26",
   "tag": "Holiday",
   "tagcls": "calm",
-  "note": "Dollywood is closed and most of the town is at a buffet. Ober in the morning, the big meal at the cabin at four, and the chairlift lights if everyone is still standing.",
+  "note": "Dollywood is closed and most of the town is at a buffet. Ober in the morning for the bears and the tubing hill, the big meal at the cabin at four, and the chairlift lights if everyone is still standing.",
   "slots": [
    {
     "t": "9:45a",
@@ -303,16 +303,23 @@
     "dest": ""
    },
    {
-    "t": "11:15a",
-    "what": "Cash: ice skating, then tubing",
-    "why": "Skating is in the Fun Pass. Snow tubing is $29 and up, and at seven he rides alone, so he has to be 42 inches. Slavik can't tube at all until he's three, and that's December. One adult with Cash, one adult with the little two in the lodge watching the skaters.",
+    "t": "11:00a",
+    "what": "Snow tubing: Cash plus one adult",
+    "why": "The tubing park opened for the season Nov 20 and runs all weather. Day tickets are good 11 to 5 with unlimited runs: a 350-foot hill, a 50-foot drop, and a moving carpet back up. At seven Cash rides alone and has to be 42 inches, so measure him first. Slavik is two, and the rule is three and up, so he and Snejana stay with the other adults at the bears and the rink. The adult going with Cash needs a tubing ticket too, and tubing tickets do not include the tram. Thanksgiving is a holiday price, about $50 a head, and it sells out: buy online tonight. Secured shoes, waterproof gloves, no food or drink on the hill.",
+    "addr": "",
+    "dest": "Ober%20Mountain%20Tramway%2C%201001%20Parkway%2C%20Gatlinburg%2C%20TN%2037738"
+   },
+   {
+    "t": "12:15p",
+    "what": "Ice skating if there's time",
+    "why": "Skating is in the Fun Pass, 4 and under free. Twenty minutes on the rink with an adult, or skip it and let tubing have the hour. Slavik watches from the rail with hot chocolate.",
     "addr": "",
     "dest": ""
    },
    {
-    "t": "12:45p",
+    "t": "1:00p",
     "what": "Tram down, home for naps",
-    "why": "Snack lunch on the way. Everyone down by 1:30.",
+    "why": "Snack lunch on the way. Everyone down by 1:45.",
     "addr": "",
     "dest": ""
    },
@@ -449,7 +456,7 @@
  },
  "bonus": {
   "title": "Dollywood",
-  "date": "Bonus \u00b7 any day",
+  "date": "Bonus · any day",
   "tag": "Bonus day",
   "tagcls": "bear",
   "note": "Not on the calendar on purpose. If a day dawns clear, everyone slept, and you want it, swap it in for Monday, Tuesday or Wednesday from the hub. It is closed Thursday and mobbed Friday and Saturday. Park opens at 10, be in the lot at 9:15. Parking $25. $94.99 adults, $84.99 for Cash through Nov 25, the little two free. Buy online the night before.",
