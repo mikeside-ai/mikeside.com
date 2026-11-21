@@ -1,8 +1,8 @@
 /* gatlinburg/site.js — shared by the hub and the day pages. Every block checks for its own elements and bails if they're missing. */
-var GATE_BLOB = {"it":250000,"salt":"pmTZbFhpZmKf+pYKEYmnkw==","iv":"yJlbLp04Xcm1dAMa","ct":"ueoaECMR0ScnDNoje9saZhKypdguFh46TuQK+MjwoGYZRDlUOoNXPP4EKeImmOiiSdswPPs6BpezWbUHr+Mbdtwaa8IdPmVa+3RitCIUWWcGmcv3rrMMnOOh5i3T2XX0ggURvCeQ8tXSr29KlGgYgHaGd+MNxkwfCNc0REI0SuNWaArWa+ItoQR59DrWW2FGKP8HL6qzidITsdNWv8g2m4uEeJnw0DW3pTr/LWPWEThPhIKJvw+s3s1JjyFOoGXx8vxiNkJtMoNpc27o2JQx+WaoSTRFpCdYH77RRlWohnjtSdJJiKY8ep54/3DckDtrPIyMUa+vyy1kzTZzBlxkKWp+o9/BOb7YP5P0hHii2dhRL7aHDn5D4/j91FbpQ6WFTOIvkkb0PlVoqJpemKvDEiT/YI4iHyEJ+Pu2MXNWd1l4qC7xpnzYhuJ6v4XBFmDp3jVQ1EuR4q91+dxEjoQTXT4KzUowXTJwcHlNLOZICO9EyWYj6RqfnCqQUvTiD6/Uywn5+CYgw9ZyXnFSrFZpBGvWEYlR1oqy0vFa9rkKayz+akwi3N9Nrw=="};
+var GATE_BLOB = {"it":250000,"salt":"wGlh1S5EkBSYdkSEYmq25A==","iv":"qp2NjptzRMjuwJfM","ct":"mL3AgUjPYAhrtZ50xyGcs+KpdNXjpZj3WNWmiyoc8r0LMYGHxwJLdW52WuU4fXqHJp9UhoYGSJYCnQU4xdaNvqbWCfsu2DM7gBAn+xEJkBmnJDjsuwo6XyOchfCzqGKVsWwqKL2elWboCL3mj+qBsyxQPh7tbEsBipn3cM+tAFLWHFBDxPnXsWYk8Qfb5IocrLtlQt150fcHIhwomfex9s9v6gwBF1xyC3V5aQ==","keys":[{"iv":"rla4oKEMdq4lIRE0","ct":"gLKAPz5sWrhLD4AIMQl3z2No67IodqNSIc2zHbRfkx6DYS748n/1N7HBy6dmH9A6"},{"iv":"thw/o9NbB3ZovTbB","ct":"z2hffotRG/Q38xUyWQ6m+vEuqjcP0sSqVwREV4gk3vo4saBzCgumwFaTVXwvxoG+"},{"iv":"/BcwoXqWqYZ+l05a","ct":"7gwo2/V34/rug6CVNN0NbDNUdMIzkc0PcnMXwAY3gOAoQseAM/ztEOxDrxV4LcNh"},{"iv":"MC0MSYqeNUEF8dGz","ct":"cTOkC4pYqIig5MC1JhfJdRQM6Hum6ULP88kPYXXCeNqIcdfTl7ArItqrjRm7d/D5"},{"iv":"OtSTTH5nO4G1hd1U","ct":"dg8h039couAVmdUcQIPdqVE+RNwwMJuRqR4B/lW0rbM0mFU31q5lEhAuxEfY1Amf"}]};
 
 /* PIN gate. The private block is AES-GCM encrypted with a key derived from the PIN (PBKDF2).
-   A correct PIN decrypts it and unlocks the page; the PIN is remembered on this phone. */
+   Any of the family PINs decrypts it and unlocks the page; the PIN is remembered on this phone. */
 (function(){
   var KEY = 'gatlinburg-2026-pin';
   var gate = document.getElementById('gate'), form = document.getElementById('gate-form');
@@ -22,6 +22,17 @@ var GATE_BLOB = {"it":250000,"salt":"pmTZbFhpZmKf+pYKEYmnkw==","iv":"yJlbLp04Xcm
     var enc = new TextEncoder();
     return crypto.subtle.importKey('raw', enc.encode(pin), 'PBKDF2', false, ['deriveKey']).then(function(km){
       return crypto.subtle.deriveKey({name:'PBKDF2', salt: b64(blob.salt), iterations: blob.it, hash:'SHA-256'}, km, {name:'AES-GCM', length:256}, false, ['decrypt']);
+    }).then(function(kek){
+      // The content key is wrapped once per family PIN. Try each wrap with this PIN; one of them opens.
+      var i = 0;
+      function next(){
+        if (i >= blob.keys.length) return Promise.reject(new Error('bad'));
+        var w = blob.keys[i++];
+        return crypto.subtle.decrypt({name:'AES-GCM', iv: b64(w.iv)}, kek, b64(w.ct)).catch(next);
+      }
+      return next();
+    }).then(function(raw){
+      return crypto.subtle.importKey('raw', raw, {name:'AES-GCM'}, false, ['decrypt']);
     }).then(function(key){
       return crypto.subtle.decrypt({name:'AES-GCM', iv: b64(blob.iv)}, key, b64(blob.ct));
     }).then(function(buf){ return new TextDecoder().decode(buf); });
