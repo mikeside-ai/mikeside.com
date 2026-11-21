@@ -44,8 +44,11 @@ def slot_html(s, coords=None, idx=None):
     why = '<div class="why">%s</div>' % s['why'] if s.get('why') else ''
     rate = rate_html(s['what'] + ' ' + (s.get('addr') or '') + ' ' + urllib.parse.unquote(dest))
     attrs = ''
+    dq = urllib.parse.unquote(dest)
+    if dq and not re.match(r'^-?\d', dq):
+        attrs += ' data-q="%s"' % html.escape(dq, quote=True)
     if coords is not None and s['what'] in coords:
-        attrs = ' data-lat="%s" data-lng="%s" data-stop="%s"' % (coords[s['what']][0], coords[s['what']][1], html.escape(re.sub('<[^>]+>', '', s['what'])))
+        attrs += ' data-lat="%s" data-lng="%s" data-stop="%s"' % (coords[s['what']][0], coords[s['what']][1], html.escape(re.sub('<[^>]+>', '', s['what'])))
     return '<li class="slot"%s><time>%s</time><div><div class="what">%s%s%s</div>%s%s</div></li>' % (attrs, s['t'], s['what'], rate, nav, addr, why)
 
 def page(date):
@@ -237,6 +240,7 @@ def page(date):
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script src="site.js?v=4"></script>
 <script src="day.js?v=4"></script>
+<script src="photos.js?v=1" defer></script>
 </body>
 </html>
 '''
@@ -257,7 +261,7 @@ def trails_page():
     for t in T['trails']:
         kid = '&#9679;' * t['kid'] + '<i>' + '&#9679;' * (5 - t['kid']) + '</i>'
         g = rate_html(t['g']) if t.get('g') else ''
-        cards.append(f'''      <div class="trail" data-lat="{t['lat']}" data-lng="{t['lng']}" data-name="{html.escape(t['name'], quote=True)}">
+        cards.append(f'''      <div class="trail" data-lat="{t['lat']}" data-lng="{t['lng']}" data-name="{html.escape(t['name'], quote=True)}" data-q="{html.escape(t['name'] + ' Great Smoky Mountains', quote=True)}">
         <div class="trail-photo" style="background-image:url('{commons(t['photo'], 480)}')"><span class="credit">{credit(t['photo'])}</span></div>
         <div class="trail-body">
           <h3>{t['name']}{g} <a class="nav" href="{mapsdir(t['dest'])}" target="_blank" rel="noopener">Directions</a></h3>
@@ -391,6 +395,7 @@ def trails_page():
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script src="site.js?v=4"></script>
 <script src="day.js?v=4"></script>
+<script src="photos.js?v=1" defer></script>
 </body>
 </html>
 '''
