@@ -9,21 +9,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <title>Birmingham → Gatlinburg — Sunday · Gatlinburg week</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-<link rel="stylesheet" href="site.css?v=7">
+<link rel="stylesheet" href="site.css?v=6">
 <script>try{var t=localStorage.getItem("gatlinburg-2026-theme");if(t&&t!=="spruce")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 </head>
 <body class="locked day-page" data-date="2026-11-22" data-page="2026-11-22">
 
 <div id="gate">
   <form class="gate-box" id="gate-form" autocomplete="off">
-    <span class="logo"><span class="logo-mark big" aria-hidden="true">&#x1F43B;</span></span>
+    <span class="logo">mike<span>side</span></span>
     <h1>Gatlinburg week</h1>
     <p>Family page. Enter the PIN to open it.</p>
     <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" aria-label="PIN" autofocus>
@@ -34,7 +32,7 @@
 
 <header>
   <div class="container nav">
-    <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">&#x1F43B;</span>Gatlinburg <span>week</span></a>
+    <a class="logo" href="/">mike<span>side</span></a>
     <nav aria-label="Trip pages">
       <ul>
         <li><a href="index.html">Hub</a></li>
@@ -85,7 +83,7 @@
       </div>
     </div>
     <div class="plan" id="plan-a">
-      <p class="day-note">Load the car Saturday night. Kids ride in pajamas and change at the first stop. Check-in is usually 4pm for cabins, so there is no reason to leave before seven.</p>
+      <p class="day-note">Load the car Saturday night. Kids ride in pajamas and change at the first stop. Check-in is 4pm sharp with a smart lock, so there is no reason to leave before seven. The code comes through the Vrbo app; screenshot it before you enter the park, where there is no signal.</p>
       <ul class="slots" id="slots-a">
         <li class="slot" data-lat="33.5207" data-lng="-86.8025" data-stop="Pull out"><time>7:00a CT</time><div><div class="what">Pull out</div><div class="why">Breakfast in the car. Snejana should sleep the first leg. I-59 north.</div></div></li>
         <li class="slot" data-q="MAPCO, 1401 Glenn Blvd SW, Fort Payne, AL 35968" data-lat="34.4335" data-lng="-85.7399" data-stop="Fort Payne, first stretch"><time>8:40a CT</time><div><div class="what">Fort Payne, first stretch <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=MAPCO%2C%201401%20Glenn%20Blvd%20SW%2C%20Fort%20Payne%2C%20AL%2035968" target="_blank" rel="noopener">Directions</a></div><div class="why">Exit 218, Glenn Blvd. The MAPCO is right off the ramp. Bathrooms, gas, ten minutes of running around. Last stop in Central time.</div></div></li>
@@ -95,11 +93,11 @@
         <li class="slot" data-lat="35.6596" data-lng="-83.7078" data-stop="Into the park at the Townsend Wye"><time>1:30p ET</time><div><div class="what">Into the park at the Townsend Wye <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.659615%2C-83.7077737" target="_blank" rel="noopener">Directions</a></div><div class="why">Little River Road to Sugarlands, 35 minutes if nobody stops. No cell signal inside the park, so have the cabin directions saved offline before you enter.</div></div></li>
         <li class="slot" data-q="Food City, 1219 East Parkway, Gatlinburg, TN 37738" data-lat="35.7216" data-lng="-83.4872" data-stop="Food City, 1219 East Parkway"><time>2:15p ET</time><div><div class="what">Food City, 1219 East Parkway <span class="rate" data-say="Well stocked, open 6am to midnight. Thanksgiving Day closes at 3pm." title="Google rating, 9,391 reviews">&#9733; 4.4<small>9k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Food%20City%2C%201219%20East%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="why">Full stock-up before the cabin. One adult shops, one adult walks kids around the lot. If you came in via Wears Valley instead, Kroger at 220 Wears Valley Rd in Pigeon Forge is right on the route.</div></div></li>
         <li class="slot" data-lat="35.7016" data-lng="-83.5149" data-stop="Kill time until check-in"><time>3:30p ET</time><div><div class="what">Kill time until check-in <span class="rate" data-say="Creek, picnic tables, clean restrooms. Reviewers note there&#x27;s no playground; the creek is the playground." title="Google rating, 878 reviews">&#9733; 4.7<small>878</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7015895%2C-83.5149127" target="_blank" rel="noopener">Directions</a></div><div class="addr">Mynatt Park, Asbury Ln</div><div class="why">Mynatt Park on Airport Rd, five minutes from downtown. Creek, picnic tables, clean restrooms. Reviewers note there's no playground; the creek is the playground. Don't sit in the car.</div></div></li>
-        <li class="slot"><time>4:00p ET</time><div><div class="what">Into the cabin. Safety sweep first</div><div class="why">Before anything is unloaded: hot tub cover strapped and locked, deck doors latched, stair gate up, loft rail checked, fireplace blocked. See the note below. Then unload.</div></div></li>
+        <li class="slot"><time>4:00p ET</time><div><div class="what">Into the cabin. Safety sweep first</div><div class="why">Before anything is unloaded: hot tub cover strapped and locked, deck doors latched, stair gate up, loft rail checked, fireplace blocked. See the note below. Then unload. Parking is two cars at the cabin; the second car goes in the grass at the bottom of the driveway. The cabin is inside the city limits and low, so no mountain road to worry about in weather.</div></div></li>
         <li class="slot"><time>5:30p ET</time><div><div class="what">Dinner in. Early</div><div class="why">Frozen pizza night. Everybody is wrecked and it is already dark.</div></div></li>
         <li class="slot"><time>7:00p ET</time><div><div class="what">Everyone down</div><div class="why">Pack-n-play in the darkest room, sound machines on, trash bags over any window facing the porch light. It is 6pm to their bodies, which helps this one night.</div></div></li>
       </ul>
-
+      <div class="callout sun"><h3>Who sleeps where</h3><p>Three bedrooms, sleeps ten. <strong>Downstairs king</strong> with its own bath and the clawfoot tub: the grandparents, and it doubles as the kids' bath. <strong>Upstairs king</strong>: Vlad and Allison, pack-n-play in the closet corner for Snejana. <strong>Queen log bunk room</strong>: Cash on top, Slavik on the bottom with the stair gate across the door. <strong>Loft futon</strong>: spare, and the loft rail is on the safety sweep. The dining table seats six and there are seven of you, so bring the booster and the travel high chair; neither is listed. Washer and dryer are in the cabin, so pack light on kid clothes. Reviewers see bears from the porch most weeks: trash goes inside, never on the deck, and no kid on the deck alone.</p></div>
     </div>
     <div class="plan" id="plan-b" hidden>
       <div class="callout water"><h3>Plan B: Wears Valley instead of the park road</h3><p>Anyone carsick, Little River Road closed, or you are running late and want four lanes as long as possible.</p></div>
@@ -194,7 +192,7 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script src="site.js?v=6"></script>
-<script src="day.js?v=7"></script>
+<script src="day.js?v=6"></script>
 <script src="photos.js?v=1" defer></script>
 </body>
 </html>
