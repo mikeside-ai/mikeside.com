@@ -1,0 +1,14 @@
+{
+  "name": "Gatlinburg week",
+  "short_name": "Gatlinburg",
+  "description": "Family trip plan, Nov 22 to 28, 2026",
+  "start_url": "/projects/gatlinburg/",
+  "scope": "/projects/gatlinburg/",
+  "display": "standalone",
+  "background_color": "#0b1411",
+  "theme_color": "#0b1411",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}
