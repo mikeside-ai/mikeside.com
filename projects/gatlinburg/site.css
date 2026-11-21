@@ -360,3 +360,11 @@ a,button,select,label,.rate,.chip{touch-action:manipulation;-webkit-tap-highligh
 .trail-body p{font-size:.92rem}
 .trail-body .when{color:var(--sand);font-size:.82rem;margin-top:.5rem}
 @media (max-width:760px){.trail{grid-template-columns:1fr}.trail-photo{min-height:150px}}
+
+/* ============ Google place photos under stops ============ */
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;margin:.6rem 0 .3rem;max-width:36rem}
+.shots figure{margin:0;border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--bg-soft)}
+.shots img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.shots figcaption{font-size:.56rem;color:var(--muted);padding:.15rem .4rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.trail .shots{grid-template-columns:repeat(3,1fr);max-width:none}
+@media print{.shots{display:none}}
