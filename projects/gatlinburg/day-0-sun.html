@@ -4,14 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Birmingham → Gatlinburg — Sunday, Nov 22 · Gatlinburg week</title>
+<meta name="theme-color" content="#0b1411">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Birmingham → Gatlinburg — Sunday · Gatlinburg week</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-<link rel="stylesheet" href="site.css?v=3">
+<link rel="stylesheet" href="site.css?v=4">
 </head>
-<body class="locked day-page" data-date="2026-11-22">
+<body class="locked day-page" data-date="2026-11-22" data-page="2026-11-22">
 
 <div id="gate">
   <form class="gate-box" id="gate-form" autocomplete="off">
@@ -34,6 +39,7 @@
         <li><a href="day-1-mon.html">Mon 23 &rarr;</a></li>
         <li><a href="#plan">Plan</a></li>
         <li><a href="#map">Map</a></li>
+        <li><a href="trails.html">Trails</a></li>
         <li><a href="#journal">Journal</a></li>
       </ul>
     </nav>
@@ -50,7 +56,7 @@
   <span class="credit">Sarah Stierch · CC0</span>
 </div>
 
-<div class="chips container" aria-label="Days"><a class="chip on" href="day-0-sun.html">Sun 22</a><a class="chip" href="day-1-mon.html">Mon 23</a><a class="chip" href="day-2-tue.html">Tue 24</a><a class="chip" href="day-3-wed.html">Wed 25</a><a class="chip" href="day-4-thu.html">Thu 26</a><a class="chip" href="day-5-fri.html">Fri 27</a><a class="chip" href="day-6-sat.html">Sat 28</a></div>
+<div class="chips container" aria-label="Days"><a class="chip on" href="day-0-sun.html">Sun 22</a><a class="chip" href="day-1-mon.html">Mon 23</a><a class="chip" href="day-2-tue.html">Tue 24</a><a class="chip" href="day-3-wed.html">Wed 25</a><a class="chip" href="day-4-thu.html">Thu 26</a><a class="chip" href="day-5-fri.html">Fri 27</a><a class="chip" href="day-6-sat.html">Sat 28</a><a class="chip" href="bonus-dollywood.html">Bonus</a></div>
 
 <section class="daytop">
   <div class="container">
@@ -84,8 +90,8 @@
         <li class="slot" data-lat="35.4682" data-lng="-84.6501" data-stop="Athens or Sweetwater, real stop"><time>11:20a ET</time><div><div class="what">Athens or Sweetwater, real stop <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.4682235%2C-84.6500785" target="_blank" rel="noopener">Directions</a></div><div class="why">Exit 49. Cracker Barrel at the ramp has the fastest kids' lunch on this route and a rocking-chair porch to burn ten minutes on. Stay off the exits closer to Knoxville, they are busier and slower.</div></div></li>
         <li class="slot" data-lat="35.7845" data-lng="-84.2615" data-stop="Exit 81, Lenoir City. US-321 east"><time>12:15p ET</time><div><div class="what">Exit 81, Lenoir City. US-321 east <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Love%27s%20Travel%20Stop%2C%209155%20US-321%2C%20Lenoir%20City%2C%20TN%2037771" target="_blank" rel="noopener">Directions</a></div><div class="why">Love's at the exit for the last cheap tank. Then US-321 through Maryville to Townsend, about an hour.</div></div></li>
         <li class="slot" data-lat="35.6596" data-lng="-83.7078" data-stop="Into the park at the Townsend Wye"><time>1:30p ET</time><div><div class="what">Into the park at the Townsend Wye <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.659615%2C-83.7077737" target="_blank" rel="noopener">Directions</a></div><div class="why">Little River Road to Sugarlands, 35 minutes if nobody stops. No cell signal inside the park, so have the cabin directions saved offline before you enter.</div></div></li>
-        <li class="slot" data-lat="35.7216" data-lng="-83.4872" data-stop="Food City, 1219 East Parkway"><time>2:15p ET</time><div><div class="what">Food City, 1219 East Parkway <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Food%20City%2C%201219%20East%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="why">Full stock-up before the cabin. One adult shops, one adult walks kids around the lot. If you came in via Wears Valley instead, Kroger at 220 Wears Valley Rd in Pigeon Forge is right on the route.</div></div></li>
-        <li class="slot" data-lat="35.7016" data-lng="-83.5149" data-stop="Kill time until check-in"><time>3:30p ET</time><div><div class="what">Kill time until check-in <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7015895%2C-83.5149127" target="_blank" rel="noopener">Directions</a></div><div class="addr">Mynatt Park, Asbury Ln</div><div class="why">Mynatt Park on Asbury Lane is a real playground with a creek, five minutes from downtown. Don't sit in the car.</div></div></li>
+        <li class="slot" data-lat="35.7216" data-lng="-83.4872" data-stop="Food City, 1219 East Parkway"><time>2:15p ET</time><div><div class="what">Food City, 1219 East Parkway <span class="rate" data-say="Well stocked, open 6am to midnight. Thanksgiving Day closes at 3pm." title="Google rating, 9,391 reviews">&#9733; 4.4<small>9k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Food%20City%2C%201219%20East%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="why">Full stock-up before the cabin. One adult shops, one adult walks kids around the lot. If you came in via Wears Valley instead, Kroger at 220 Wears Valley Rd in Pigeon Forge is right on the route.</div></div></li>
+        <li class="slot" data-lat="35.7016" data-lng="-83.5149" data-stop="Kill time until check-in"><time>3:30p ET</time><div><div class="what">Kill time until check-in <span class="rate" data-say="Creek, picnic tables, clean restrooms. Reviewers note there&#x27;s no playground; the creek is the playground." title="Google rating, 878 reviews">&#9733; 4.7<small>878</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7015895%2C-83.5149127" target="_blank" rel="noopener">Directions</a></div><div class="addr">Mynatt Park, Asbury Ln</div><div class="why">Mynatt Park on Airport Rd, five minutes from downtown. Creek, picnic tables, clean restrooms. Reviewers note there's no playground; the creek is the playground. Don't sit in the car.</div></div></li>
         <li class="slot"><time>4:00p ET</time><div><div class="what">Into the cabin. Safety sweep first</div><div class="why">Before anything is unloaded: hot tub cover strapped and locked, deck doors latched, stair gate up, loft rail checked, fireplace blocked. See the note below. Then unload.</div></div></li>
         <li class="slot"><time>5:30p ET</time><div><div class="what">Dinner in. Early</div><div class="why">Frozen pizza night. Everybody is wrecked and it is already dark.</div></div></li>
         <li class="slot"><time>7:00p ET</time><div><div class="what">Everyone down</div><div class="why">Pack-n-play in the darkest room, sound machines on, trash bags over any window facing the porch light. It is 6pm to their bodies, which helps this one night.</div></div></li>
@@ -99,7 +105,7 @@
         <li class="slot"><time>1:20p ET</time><div><div class="what">Townsend, stay on US-321 <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6760%2C-83.7520" target="_blank" rel="noopener">Directions</a></div><div class="why">Do not turn into the park. US-321 becomes Wears Valley Road and climbs over the ridge. Gentler curves, four miles shorter, and cell signal the whole way.</div></div></li>
         <li class="slot"><time>1:50p ET</time><div><div class="what">Kroger, 220 Wears Valley Rd <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Kroger%2C%20220%20Wears%20Valley%20Rd%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></div><div class="why">Right where Wears Valley Road meets Pigeon Forge. Do the full stock-up here instead of Food City.</div></div></li>
         <li class="slot"><time>2:45p ET</time><div><div class="what">Parkway south to the Spur <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7420%2C-83.5210" target="_blank" rel="noopener">Directions</a></div><div class="why">Traffic light #3 in Pigeon Forge. On a holiday Sunday budget 45 minutes for the next 12 miles. Take the Gatlinburg Bypass off the Spur to skip downtown entirely.</div></div></li>
-        <li class="slot"><time>3:30p ET</time><div><div class="what">Mynatt Park until check-in <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7016%2C-83.5149" target="_blank" rel="noopener">Directions</a></div><div class="why">Same stall as Plan A. Playground, creek, bathrooms.</div></div></li>
+        <li class="slot"><time>3:30p ET</time><div><div class="what">Mynatt Park until check-in <span class="rate" data-say="Creek, picnic tables, clean restrooms. Reviewers note there&#x27;s no playground; the creek is the playground." title="Google rating, 878 reviews">&#9733; 4.7<small>878</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7016%2C-83.5149" target="_blank" rel="noopener">Directions</a></div><div class="why">Same stall as Plan A. Playground, creek, bathrooms.</div></div></li>
       </ul>
     </div>
     <div class="bail">
@@ -126,6 +132,8 @@
         <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Little-river-townsend-y.jpg?width=800" alt=""><figcaption>Brian Stansberry · CC BY 3.0</figcaption></figure>
         <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/I75S%20TN%202.jpg?width=800" alt=""><figcaption>Geomaster · CC BY-SA 4.0</figcaption></figure>
         <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sugarlands%20Visitor%20Center--Warren%20Bielenberg%20%2828323974619%29.jpg?width=800" alt=""><figcaption>NPS / Warren Bielenberg · Public domain</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sugarlands%20Visitor%20Center%2C%20May%202018--Andrea%20Walton%20%2829111144268%29.jpg?width=800" alt=""><figcaption>NPS / Andrea Walton · Public domain</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Heavy%20snowfall%20in%20Gatlinburg%2C%20TN.jpg?width=800" alt=""><figcaption>GatewayPolitics · CC BY-SA 4.0</figcaption></figure>
     </div>
   </div>
 </section>
@@ -159,7 +167,7 @@
     <div class="pager">
       <span></span>
       <a href="index.html">Hub</a>
-      <a href="day-1-mon.html">Monday: Dollywood &rarr;</a>
+      <a href="day-1-mon.html">Monday: Forge a knife, ride the wheel &rarr;</a>
     </div>
     <p>Photos are from Wikimedia Commons under the licenses shown. Hours, prices and park roads change with the weather; check the hub's road status link each morning.</p>
   </div>
@@ -173,8 +181,16 @@
   <symbol id="bear-side" viewBox="0 0 140 90"><g fill="#2b1d14"><ellipse cx="62" cy="50" rx="44" ry="26"/><circle cx="108" cy="36" r="18"/><circle cx="98" cy="22" r="6"/><circle cx="118" cy="22" r="6"/><circle cx="20" cy="50" r="12"/><rect x="30" y="62" width="12" height="26" rx="5"/><rect x="52" y="64" width="12" height="24" rx="5"/><rect x="78" y="64" width="12" height="24" rx="5"/><rect x="96" y="60" width="12" height="28" rx="5"/></g><g fill="#6b4a33"><ellipse cx="122" cy="42" rx="9" ry="6"/></g><circle cx="114" cy="33" r="2.5" fill="#0b1411"/><circle cx="129" cy="41" r="3" fill="#0b1411"/></symbol>
 </svg>
 
+<nav class="tabbar" aria-label="Quick links">
+  <a href="index.html"><span>&#8962;</span>Hub</a>
+  <a href="trails.html"><span>&#9650;</span>Trails</a>
+  <a href="#plan"><span>&#9776;</span>Plan</a>
+  <a href="#map"><span>&#9673;</span>Map</a>
+  <a href="day-1-mon.html"><span>&rarr;</span>Mon 23</a>
+</nav>
+
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="site.js?v=3"></script>
-<script src="day.js?v=3"></script>
+<script src="site.js?v=4"></script>
+<script src="day.js?v=4"></script>
 </body>
 </html>
