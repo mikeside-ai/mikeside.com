@@ -11,23 +11,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* ============================================
-   mikeside.com — STAGE LEFT theme
-   navy room · plaster light · brick warmth
-   + evergreen accent for this page only
+   mikeside.com — SMOKY MOUNTAIN variant
+   spruce dark · fog · ember · firefly
+   built on the Stage Left tokens, re-tinted for the ridge
    ============================================ */
 :root{
-  --bg:#0b1020; --bg-soft:#111730; --card:#151c38;
-  --text:#ece5d8; --muted:#9a97a8;
-  --accent:#c14b34; --accent-soft:#d9694f;
-  --jumpsuit:#f5c542;
-  --gulf:#7cc48f;          /* evergreen — this page only */
-  --sand:#e3c9a0;
-  --border:#262e4e; --radius:14px; --maxw:1080px;
+  --bg:#0b1411; --bg-soft:#10201a; --card:#13271f;
+  --text:#ece8dc; --muted:#9fb0a4;
+  --accent:#c4552f; --accent-soft:#e07a4f;   /* ember, campfire */
+  --jumpsuit:#f2c94c;                         /* firefly */
+  --gulf:#8fd0a6;                             /* fog on spruce */
+  --sand:#e6cfa3;                             /* cabin pine */
+  --mist:#5f8f87;
+  --border:#22372d; --radius:14px; --maxw:1080px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  background:var(--bg); color:var(--text);
+  background:var(--bg) radial-gradient(ellipse 80% 40% at 50% -10%, rgba(95,143,135,.22), transparent 60%) no-repeat; color:var(--text);
   font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
   line-height:1.6; -webkit-font-smoothing:antialiased;
 }
@@ -47,7 +48,15 @@ header{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.9);backdrop-fi
 .nav ul a:hover{color:var(--text);text-decoration:none}
 
 /* ---------- Hero ---------- */
-.hero{padding:3.5rem 0 2rem;border-bottom:1px solid var(--border)}
+.hero{padding:3.5rem 0 2rem;position:relative;overflow:hidden}
+.hero > .container{position:relative;z-index:1}
+.ridgeband{position:relative;height:clamp(120px,18vw,220px);background:linear-gradient(180deg, var(--bg), #0e1b16);overflow:hidden;border-bottom:1px solid var(--border)}
+.ridges{position:absolute;left:0;right:0;bottom:-2px;width:100%;height:100%;pointer-events:none}
+.ridges svg{width:100%;height:100%;display:block}
+.mist{position:absolute;left:0;right:0;top:0;height:55%;background:linear-gradient(to bottom, rgba(95,143,135,.18), transparent);pointer-events:none}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 20%, rgba(242,201,76,.10), transparent 30%);pointer-events:none}
+.firefly{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--jumpsuit);box-shadow:0 0 8px 2px rgba(242,201,76,.5);opacity:0;animation:fly 7s ease-in-out infinite;pointer-events:none}
+@keyframes fly{0%{opacity:0;transform:translate(0,0)}20%{opacity:.9}50%{opacity:.2;transform:translate(14px,-18px)}80%{opacity:.8;transform:translate(-10px,-30px)}100%{opacity:0;transform:translate(4px,-44px)}}
 .kicker{color:var(--gulf);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.22em}
 .hero h1{font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.05;margin:.6rem 0 .9rem;letter-spacing:-.02em}
 .hero h1 em{font-style:italic;color:var(--sand)}
@@ -63,6 +72,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.9);backdrop-fi
 /* ---------- Sections ---------- */
 section{padding:3rem 0;border-bottom:1px solid var(--border)}
 .eyebrow{font-family:"Fraunces",Georgia,serif;font-style:italic;color:var(--accent-soft);font-size:1rem;margin-bottom:.2rem}
+.eyebrow::before{content:"";display:inline-block;width:.9em;height:.9em;margin-right:.45em;vertical-align:-.1em;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e07a4f'><ellipse cx='12' cy='15.5' rx='5' ry='4.2'/><circle cx='6' cy='9.5' r='2'/><circle cx='10' cy='6.5' r='2'/><circle cx='14' cy='6.5' r='2'/><circle cx='18' cy='9.5' r='2'/></svg>") center/contain no-repeat;opacity:.9}
+section:nth-of-type(even){background:linear-gradient(180deg, transparent, rgba(95,143,135,.06) 50%, transparent)}
 section h2{font-size:clamp(1.6rem,4vw,2.2rem);letter-spacing:-.015em;margin-bottom:.5rem}
 section > .container > p.intro{color:var(--muted);max-width:68ch;margin-bottom:1.6rem}
 
@@ -81,7 +92,8 @@ section > .container > p.intro{color:var(--muted);max-width:68ch;margin-bottom:1
 .day-date{color:var(--muted);font-size:.85rem;letter-spacing:.04em}
 .tag{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:.2rem .5rem;border-radius:999px;border:1px solid var(--border);color:var(--muted)}
 .tag.hot{color:var(--jumpsuit);border-color:rgba(245,197,66,.4)}
-.tag.calm{color:var(--gulf);border-color:rgba(84,184,168,.4)}
+.tag.calm{color:var(--gulf);border-color:rgba(143,208,166,.4)}
+.tag.bear{color:var(--sand);border-color:rgba(230,207,163,.4)}
 .day-note{color:var(--muted);font-size:.9rem;margin-bottom:1rem}
 .slots{list-style:none;display:grid;gap:.1rem}
 .slot{display:grid;grid-template-columns:6.2rem 1fr;gap:1rem;padding:.6rem 0;border-top:1px solid var(--border)}
@@ -180,6 +192,30 @@ body.locked > *:not(#gate){display:none}
 .gate-box .err{color:var(--jumpsuit);font-size:.85rem;min-height:1.2em;margin-top:.6rem}
 #private .numbers td:first-child{color:var(--sand)}
 
+/* ---------- Bears ---------- */
+.paw-trail{position:absolute;left:14px;top:0;width:28px;pointer-events:none;z-index:5}
+.paw-trail i{position:absolute;left:0;width:22px;height:22px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%239fb0a4'><ellipse cx='12' cy='15.5' rx='5' ry='4.2'/><circle cx='6' cy='9.5' r='2'/><circle cx='10' cy='6.5' r='2'/><circle cx='14' cy='6.5' r='2'/><circle cx='18' cy='9.5' r='2'/></svg>") center/contain no-repeat;opacity:0;transition:opacity .6s}
+.paw-trail i.on{opacity:.35}
+.paw-trail i:nth-child(odd){transform:rotate(-14deg) translateX(6px)}
+.paw-trail i:nth-child(even){transform:rotate(12deg)}
+@media (max-width:1240px){.paw-trail{display:none}}
+.bear-walk{position:fixed;left:-160px;bottom:0;width:140px;height:90px;z-index:60;pointer-events:none;animation:walk 9s linear forwards}
+@keyframes walk{0%{left:-160px}100%{left:110%}}
+.bear-walk svg{width:100%;height:100%;animation:bob .5s ease-in-out infinite alternate}
+@keyframes bob{from{transform:translateY(0)}to{transform:translateY(-3px)}}
+.bear-peek{position:fixed;right:-10px;bottom:-110px;width:120px;height:100px;z-index:60;transition:bottom .7s cubic-bezier(.2,1.3,.4,1);pointer-events:none}
+.bear-peek.up{bottom:-8px}
+.egg{cursor:pointer;color:inherit;border-bottom:1px dotted transparent}
+.egg:hover{border-bottom-color:var(--sand)}
+.egg.found{color:var(--sand)}
+.bear-toast{position:fixed;left:50%;bottom:1.2rem;transform:translate(-50%,20px);background:var(--card);border:1px solid var(--border);border-left:3px solid var(--sand);border-radius:12px;padding:.8rem 1rem;max-width:min(92vw,34rem);font-size:.9rem;z-index:70;opacity:0;transition:all .35s;pointer-events:none}
+.bear-toast.show{opacity:1;transform:translate(-50%,0)}
+.bear-toast b{color:var(--sand)}
+.bear-count{position:fixed;right:1rem;top:4.4rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--bg-soft);border:1px solid var(--border);border-radius:999px;padding:.25rem .6rem;z-index:40;opacity:0;transition:opacity .4s}
+.bear-count.show{opacity:1}
+@media print{.paw-trail,.bear-walk,.bear-peek,.bear-toast,.bear-count,.firefly,.ridges,.mist{display:none}}
+@media (prefers-reduced-motion:reduce){.firefly,.bear-walk svg{animation:none}}
+
 footer{padding:2.5rem 0 3.5rem;color:var(--muted);font-size:.85rem}
 footer a{color:var(--muted)}
 
@@ -232,6 +268,11 @@ footer a{color:var(--muted)}
 </header>
 
 <div class="hero">
+  <i class="firefly" style="left:12%;top:30%;animation-delay:0s"></i>
+  <i class="firefly" style="left:70%;top:22%;animation-delay:2s"></i>
+  <i class="firefly" style="left:84%;top:48%;animation-delay:4s"></i>
+  <i class="firefly" style="left:40%;top:62%;animation-delay:1s"></i>
+  <i class="firefly" style="left:58%;top:40%;animation-delay:5.5s"></i>
   <div class="container">
     <p class="kicker">Family trip &middot; Great Smoky Mountains, Tennessee</p>
     <h1>Thanksgiving week in <em>Gatlinburg</em></h1>
@@ -265,10 +306,22 @@ footer a{color:var(--muted)}
   </div>
 </div>
 
+<div class="ridgeband" aria-hidden="true">
+  <div class="ridges" aria-hidden="true">
+    <svg viewBox="0 0 1440 260" preserveAspectRatio="none">
+      <path fill="#1a3a30" fill-opacity=".55" d="M0 150 L80 120 L160 140 L240 95 L330 125 L420 80 L520 118 L610 70 L700 112 L790 60 L880 104 L980 78 L1070 120 L1160 86 L1250 128 L1340 96 L1440 130 L1440 260 L0 260 Z"/>
+      <path fill="#132c24" fill-opacity=".8" d="M0 190 L90 165 L170 185 L260 150 L350 178 L440 140 L540 172 L640 130 L730 168 L830 125 L920 160 L1010 138 L1100 176 L1200 146 L1300 182 L1380 158 L1440 176 L1440 260 L0 260 Z"/>
+      <path fill="#0f221b" d="M0 225 L100 208 L190 222 L290 196 L380 218 L470 190 L570 216 L660 184 L760 214 L860 180 L950 210 L1050 192 L1150 222 L1240 198 L1330 226 L1440 206 L1440 260 L0 260 Z"/>
+      <g fill="#0f221b" transform="translate(905,158) scale(.9)"><ellipse cx="16" cy="14" rx="14" ry="8"/><circle cx="29" cy="9" r="5"/><circle cx="26" cy="5" r="1.8"/><circle cx="32" cy="5" r="1.8"/><rect x="6" y="18" width="4" height="7" rx="1.5"/><rect x="20" y="18" width="4" height="7" rx="1.5"/></g>
+    </svg>
+  </div>
+  <div class="mist" aria-hidden="true"></div>
+</div>
+
 <!-- ===================== DRIVE ===================== -->
 <section id="drive">
   <div class="container">
-    <p class="eyebrow">Load-in</p>
+    <p class="eyebrow">Trailhead</p>
     <h2>Sunday's drive</h2>
     <p class="intro">I-59 north to Chattanooga, I-75 north to Lenoir City, then US-321 east through Maryville to Townsend and into the park. From the Townsend Wye, Little River Road runs 18 miles along the river to Sugarlands and drops you into Gatlinburg from the park side. That route skips Exit 407, Sevierville and the Pigeon Forge Parkway, which on a holiday Sunday afternoon are the slowest 15 miles in Tennessee. Little River Road is twisty. If anyone in the back gets carsick, take Wears Valley Road to Pigeon Forge instead and accept the Parkway.</p>
 
@@ -277,13 +330,13 @@ footer a{color:var(--muted)}
       <p class="day-note">Load the car Saturday night. Kids ride in pajamas and change at the first stop. Check-in is usually 4pm for cabins, so there is no reason to leave before seven.</p>
       <ul class="slots">
         <li class="slot"><time>7:00a CT</time><div><div class="what">Pull out</div><div class="why">Breakfast in the car. Snejana should sleep the first leg. I-59 north.</div></div></li>
-        <li class="slot"><time>8:40a CT</time><div><div class="what">Fort Payne, first stretch <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=I-59%20Exit%20218%2C%20Fort%20Payne%2C%20AL" target="_blank" rel="noopener">Directions</a></div><div class="why">Exit 218. Bathrooms, gas, ten minutes of running around. Last stop in Central time.</div></div></li>
-        <li class="slot"><time>10:30a ET</time><div><div class="what">Chattanooga, onto I-75 north <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=I-24%20/%20I-75%20interchange%2C%20Chattanooga%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="why">Clocks jump an hour here. Reset the car clock now so nobody does arrival math wrong later.</div></div></li>
-        <li class="slot"><time>11:20a ET</time><div><div class="what">Athens or Sweetwater, real stop <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Athens%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="why">Lunch, diapers, let Slavik burn it off. Stay off the interstate exits closer to Knoxville, they are busier and slower.</div></div></li>
-        <li class="slot"><time>12:15p ET</time><div><div class="what">Exit 81, Lenoir City. US-321 east <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=I-75%20Exit%2081%2C%20Lenoir%20City%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="why">Through Maryville to Townsend. About an hour. Townsend is the last easy gas and a decent spot for one more bathroom.</div></div></li>
-        <li class="slot"><time>1:30p ET</time><div><div class="what">Into the park at the Townsend Wye <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Townsend%20Wye%2C%20Townsend%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="why">Little River Road to Sugarlands, 35 minutes if nobody stops. No cell signal inside the park, so have the cabin directions saved offline before you enter.</div></div></li>
+        <li class="slot"><time>8:40a CT</time><div><div class="what">Fort Payne, first stretch <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=MAPCO%2C%201401%20Glenn%20Blvd%20SW%2C%20Fort%20Payne%2C%20AL%2035968" target="_blank" rel="noopener">Directions</a></div><div class="why">Exit 218, Glenn Blvd. The MAPCO is right off the ramp. Bathrooms, gas, ten minutes of running around. Last stop in Central time.</div></div></li>
+        <li class="slot"><time>10:30a ET</time><div><div class="what">Chattanooga, onto I-75 north</div><div class="why">Clocks jump an hour here. Reset the car clock now so nobody does arrival math wrong later.</div></div></li>
+        <li class="slot"><time>11:20a ET</time><div><div class="what">Athens or Sweetwater, real stop <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.4682235%2C-84.6500785" target="_blank" rel="noopener">Directions</a></div><div class="why">Exit 49. Cracker Barrel at the ramp has the fastest kids' lunch on this route and a rocking-chair porch to burn ten minutes on. Stay off the exits closer to Knoxville, they are busier and slower.</div></div></li>
+        <li class="slot"><time>12:15p ET</time><div><div class="what">Exit 81, Lenoir City. US-321 east <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Love%27s%20Travel%20Stop%2C%209155%20US-321%2C%20Lenoir%20City%2C%20TN%2037771" target="_blank" rel="noopener">Directions</a></div><div class="why">Love's at the exit for the last cheap tank. Then US-321 through Maryville to Townsend, about an hour.</div></div></li>
+        <li class="slot"><time>1:30p ET</time><div><div class="what">Into the park at the Townsend Wye <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.659615%2C-83.7077737" target="_blank" rel="noopener">Directions</a></div><div class="why">Little River Road to Sugarlands, 35 minutes if nobody stops. No cell signal inside the park, so have the cabin directions saved offline before you enter.</div></div></li>
         <li class="slot"><time>2:15p ET</time><div><div class="what">Food City, 1219 East Parkway <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Food%20City%2C%201219%20East%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="why">Full stock-up before the cabin. One adult shops, one adult walks kids around the lot. If you came in via Wears Valley instead, Kroger at 220 Wears Valley Rd in Pigeon Forge is right on the route.</div></div></li>
-        <li class="slot"><time>3:30p ET</time><div><div class="what">Kill time until check-in <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Mynatt%20Park%2C%20Asbury%20Lane%2C%20Gatlinburg%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="addr">Mynatt Park, Asbury Ln</div><div class="why">Mynatt Park on Asbury Lane is a real playground with a creek, five minutes from downtown. Don't sit in the car.</div></div></li>
+        <li class="slot"><time>3:30p ET</time><div><div class="what">Kill time until check-in <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7015895%2C-83.5149127" target="_blank" rel="noopener">Directions</a></div><div class="addr">Mynatt Park, Asbury Ln</div><div class="why">Mynatt Park on Asbury Lane is a real playground with a creek, five minutes from downtown. Don't sit in the car.</div></div></li>
         <li class="slot"><time>4:00p ET</time><div><div class="what">Into the cabin. Safety sweep first</div><div class="why">Before anything is unloaded: hot tub cover strapped and locked, deck doors latched, stair gate up, loft rail checked, fireplace blocked. See the note below. Then unload.</div></div></li>
         <li class="slot"><time>5:30p ET</time><div><div class="what">Dinner in. Early</div><div class="why">Frozen pizza night. Everybody is wrecked and it is already dark.</div></div></li>
         <li class="slot"><time>7:00p ET</time><div><div class="what">Everyone down</div><div class="why">Pack-n-play in the darkest room, sound machines on, trash bags over any window facing the porch light. It is 6pm to their bodies, which helps this one night.</div></div></li>
@@ -300,7 +353,7 @@ footer a{color:var(--muted)}
 <!-- ===================== DAYS ===================== -->
 <section id="days">
   <div class="container">
-    <p class="eyebrow">The week</p>
+    <p class="eyebrow">The ridge, day by day</p>
     <h2>Day by day</h2>
     <div class="today-bar" id="today-bar">
       <span class="tag now" id="today-label" hidden>Today</span>
@@ -332,11 +385,11 @@ footer a{color:var(--muted)}
       <div class="day-head"><h3>Easy morning, Anakeesta at dusk</h3><span class="day-date">Tuesday, Nov 24</span><span class="tag calm">Recovery</span></div>
       <p class="day-note">Nobody drives far today. Short walk in the park, long nap, then the mountaintop for the lights.</p>
       <ul class="slots">
-        <li class="slot"><time>9:00a</time><div><div class="what">Sugarlands Visitor Center <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Sugarlands%20Visitor%20Center%2C%201420%20Fighting%20Creek%20Gap%20Rd%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="addr">1420 Fighting Creek Gap Rd (US-441)</div><div class="why">Two miles south of town on US-441. Buy the <strong>$15 weekly parking tag</strong> here and put it on the dash. Free museum inside with the stuffed animals, which buys you twenty minutes if it's cold.</div></div></li>
-        <li class="slot"><time>9:30a</time><div><div class="what">Cataract Falls <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Sugarlands%20Visitor%20Center%2C%20Gatlinburg%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="addr">Starts behind the visitor center</div><div class="why">The trail starts behind the visitor center. Under half a mile, flat, dirt. The shortest walk to a waterfall in the park. Cash walks, Slavik walks most of it, Snejana rides in the carrier.</div></div></li>
-        <li class="slot"><time>10:15a</time><div><div class="what">Sugarlands Valley Nature Trail <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Sugarlands%20Valley%20Nature%20Trail%2C%20Newfound%20Gap%20Rd%2C%20Gatlinburg%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="addr">Newfound Gap Rd, 0.3 mi south of the visitor center</div><div class="why">Half a mile, fully paved, flat. The one trail in the park where the stroller actually works. Creek, old chimney, done by eleven.</div></div></li>
+        <li class="slot"><time>9:00a</time><div><div class="what">Sugarlands Visitor Center <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6857204%2C-83.5367666" target="_blank" rel="noopener">Directions</a></div><div class="addr">1420 Fighting Creek Gap Rd (US-441)</div><div class="why">Two miles south of town on US-441. Buy the <strong>$15 weekly parking tag</strong> here and put it on the dash. Free museum inside with the stuffed animals, which buys you twenty minutes if it's cold.</div></div></li>
+        <li class="slot"><time>9:30a</time><div><div class="what">Cataract Falls <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6857204%2C-83.5367666" target="_blank" rel="noopener">Directions</a></div><div class="addr">Starts behind the visitor center</div><div class="why">The trail starts behind the visitor center. Under half a mile, flat, dirt. The shortest walk to a waterfall in the park. Cash walks, Slavik walks most of it, Snejana rides in the carrier.</div></div></li>
+        <li class="slot"><time>10:15a</time><div><div class="what">Sugarlands Valley Nature Trail <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6795863%2C-83.5312772" target="_blank" rel="noopener">Directions</a></div><div class="addr">Newfound Gap Rd, 0.3 mi south of the visitor center</div><div class="why">Half a mile, fully paved, flat. The one trail in the park where the stroller actually works. Creek, old chimney, done by eleven.</div></div></li>
         <li class="slot"><time>11:30a</time><div><div class="what">Home, lunch, naps</div><div class="why">Protect this. Tonight runs late.</div></div></li>
-        <li class="slot"><time>3:15p</time><div><div class="what">Park downtown, Chondola to Anakeesta <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=McMahan%20Parking%20Garage%2C%20Gatlinburg%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="addr">Anakeesta base: 576 Parkway. Garage: McMahan, traffic light #3</div><div class="why">Base is at 576 Parkway. Use the McMahan garage at traffic light #3 or the garage across from the aquarium. The gondola cabins fit a stroller, so bring it up. Adults $34.99, Cash $22.99, the little two free. Buy online.</div></div></li>
+        <li class="slot"><time>3:15p</time><div><div class="what">Park downtown, Chondola to Anakeesta <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7141604%2C-83.5103516" target="_blank" rel="noopener">Directions</a></div><div class="addr">Anakeesta base: 576 Parkway. Garage: McMahan, traffic light #3</div><div class="why">Base is at 576 Parkway. Use the McMahan garage at traffic light #3 or the garage across from the aquarium. The gondola cabins fit a stroller, so bring it up. Adults $34.99, Cash $22.99, the little two free. Buy online.</div></div></li>
         <li class="slot"><time>3:45p</time><div><div class="what">Treehouse play area and Vista Gardens in daylight</div><div class="why">The Treehouse Adventure play structure is the toddler payoff. Treetop Skywalk is included but no strollers and no carrying, so one adult does it with Cash while the other stays at the playground.</div></div></li>
         <li class="slot"><time>5:15p</time><div><div class="what">Lights come on</div><div class="why">Enchanted Christmas is the whole mountaintop lit up. Half an hour of walking it is plenty. Cliff Top has food if you'd rather eat up there than fight downtown.</div></div></li>
         <li class="slot"><time>6:15p</time><div><div class="what">Down and home</div><div class="why">The Chondola line down gets long after 6:30. Be in it by 6:15.</div></div></li>
@@ -344,20 +397,20 @@ footer a{color:var(--muted)}
     </div>
 
     <div class="day" data-date="2026-11-25" data-plan="cades-cove">
-      <div class="day-head"><h3>Cades Cove</h3><span class="day-date">Wednesday, Nov 25</span><span class="tag hot">Day trip</span></div>
+      <div class="day-head"><h3>Cades Cove</h3><span class="day-date">Wednesday, Nov 25</span><span class="tag bear">Bear country</span></div>
       <p class="day-note">The 11-mile loop through the valley with the deer, turkeys, old churches and sometimes a bear. An hour-plus each way from the cabin on Little River Road, so you leave early and you are back for naps.</p>
       <ul class="slots">
-        <li class="slot"><time>7:15a</time><div><div class="what">Roll out, breakfast in the car <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Cades%20Cove%20Loop%20Road%2C%20Townsend%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="addr">Cades Cove Loop Rd via Little River Rd and Laurel Creek Rd</div><div class="why">Little River Road from Sugarlands. Wildlife is out at this hour and the loop is empty. Leave at nine and you crawl behind forty cars.</div></div></li>
-        <li class="slot"><time>8:30a</time><div><div class="what">Start the loop <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=John%20Oliver%20Cabin%2C%20Cades%20Cove%2C%20Townsend%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="why">One way, 20 mph, pull-offs everywhere. Get out at John Oliver Cabin, half a mile flat from the road. Cash counts deer.</div></div></li>
-        <li class="slot"><time>10:00a</time><div><div class="what">Cable Mill area, halfway round <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Cades%20Cove%20Visitor%20Center%2C%20Townsend%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="addr">Cades Cove Visitor Center, Cable Mill</div><div class="why">Visitor center, restrooms, a working grist mill and barns on flat gravel. Stroller works here. Thirty minutes of running around, then back in the car.</div></div></li>
-        <li class="slot"><time>11:15a</time><div><div class="what">Finish the loop, head home <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Metcalf%20Bottoms%20Picnic%20Area%2C%20Little%20River%20Rd%2C%20Gatlinburg%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="addr">Metcalf Bottoms picnic area, Little River Rd</div><div class="why">Lunch in the car or at the Metcalf Bottoms picnic area on the way back if it's warm enough.</div></div></li>
+        <li class="slot"><time>7:15a</time><div><div class="what">Roll out, breakfast in the car <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6034301%2C-83.7759481" target="_blank" rel="noopener">Directions</a></div><div class="addr">Cades Cove Loop Rd via Little River Rd and Laurel Creek Rd</div><div class="why">Little River Road from Sugarlands. Wildlife is out at this hour and the loop is empty. Leave at nine and you crawl behind forty cars.</div></div></li>
+        <li class="slot"><time>8:30a</time><div><div class="what">Start the loop <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.609788%2C-83.7951775" target="_blank" rel="noopener">Directions</a></div><div class="why">One way, 20 mph, pull-offs everywhere. Get out at John Oliver Cabin, half a mile flat from the road. Cash counts <span class="egg" data-egg="1">deer</span>.</div></div></li>
+        <li class="slot"><time>10:00a</time><div><div class="what">Cable Mill area, halfway round <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.5849718%2C-83.8431004" target="_blank" rel="noopener">Directions</a></div><div class="addr">Cades Cove Visitor Center, Cable Mill</div><div class="why">Visitor center, restrooms, a working grist mill and barns on flat gravel. Stroller works here. Thirty minutes of running around, then back in the car.</div></div></li>
+        <li class="slot"><time>11:15a</time><div><div class="what">Finish the loop, head home <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6798742%2C-83.648943" target="_blank" rel="noopener">Directions</a></div><div class="addr">Metcalf Bottoms picnic area, Little River Rd</div><div class="why">Lunch in the car or at the Metcalf Bottoms picnic area on the way back if it's warm enough.</div></div></li>
         <li class="slot"><time>1:00p</time><div><div class="what">Home, naps</div><div class="why">Long nap. Everyone, including adults.</div></div></li>
         <li class="slot"><time>3:30p</time><div><div class="what">Thanksgiving grocery run <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Food%20City%2C%201219%20East%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="addr">1219 East Parkway</div><div class="why">Food City on East Parkway for tomorrow's dinner. Wednesday afternoon is the last sane time to do it. Food City runs holiday hours Thursday.</div></div></li>
         <li class="slot"><time>5:00p</time><div><div class="what">Optional: the Arts &amp; Crafts show <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Gatlinburg%20Convention%20Center%2C%20234%20Historic%20Nature%20Trail%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="addr">234 Historic Nature Trail</div><div class="why">Great Smoky Thanksgiving Arts &amp; Crafts Show at the Gatlinburg Convention Center, Nov 24 to 29. Free, indoor, warm, and an easy hour if the kids are restless. Skip it if they aren't.</div></div></li>
       </ul>
       <div class="callout">
         <h3>Bears are real in the Cove in November</h3>
-        <p>They are fattening up before denning and they are on the loop. Fifty yards minimum, nobody gets out of the car for a bear, and no food left out at the picnic area. If a bear jam forms, drive through it. You will see another one.</p>
+        <p>They are fattening up before denning and they are on the loop. Fifty yards minimum, nobody gets out of the car for a bear, and no food left out at the picnic area. If a bear jam forms, drive through it. You will see <span class="egg" data-egg="3">another one</span>.</p>
       </div>
     </div>
 
@@ -366,7 +419,7 @@ footer a{color:var(--muted)}
       <p class="day-note">Dollywood is closed and most of the town is at a buffet. Ober in the morning, the big meal at the cabin at four, and the chairlift lights if everyone is still standing.</p>
       <ul class="slots">
         <li class="slot"><time>9:45a</time><div><div class="what">Ober Mountain tram from downtown <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Ober%20Mountain%20Tramway%2C%201001%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="why">Tram base at 1001 Parkway. $29 round trip for ages 5 and up, Slavik and Snejana ride free. Strollers fold and come aboard. Opening hours vary by day in early season, so check the night before.</div></div></li>
-        <li class="slot"><time>10:30a</time><div><div class="what">Wildlife Habitat first</div><div class="why">Black bears, otters and raccoons behind glass. The one thing up here all three can do, and the bears are most active in the morning.</div></div></li>
+        <li class="slot"><time>10:30a</time><div><div class="what">Wildlife Habitat first</div><div class="why">Black <span class="egg" data-egg="2">bears</span>, otters and raccoons behind glass. The one thing up here all three can do, and the bears are most active in the morning.</div></div></li>
         <li class="slot"><time>11:15a</time><div><div class="what">Cash: ice skating, then tubing</div><div class="why">Skating is in the Fun Pass. Snow tubing is $29 and up, and at seven he rides alone, so he has to be 42 inches. Slavik can't tube at all until he's three, and that's December. One adult with Cash, one adult with the little two in the lodge watching the skaters.</div></div></li>
         <li class="slot"><time>12:45p</time><div><div class="what">Tram down, home for naps</div><div class="why">Snack lunch on the way. Everyone down by 1:30.</div></div></li>
         <li class="slot"><time>4:00p</time><div><div class="what">Thanksgiving dinner at the cabin</div><div class="why">A turkey breast, not a turkey. Cabin ovens are small and unreliable. Sides from Food City Wednesday. If you'd rather not cook, the backup is below, and it needs booking before you leave Birmingham.</div></div></li>
@@ -383,12 +436,12 @@ footer a{color:var(--muted)}
       <div class="day-head"><h3>Up the mountain, away from everyone</h3><span class="day-date">Friday, Nov 27</span><span class="tag hot">Black Friday</span></div>
       <p class="day-note">The Parkway, the Island, Dollywood and the outlets will be the busiest they are all year. Do not go near any of it. Kuwohi Road closes Monday for the winter. This is the last chance.</p>
       <ul class="slots">
-        <li class="slot"><time>8:30a</time><div><div class="what">Newfound Gap Road south from Sugarlands <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Newfound%20Gap%2C%20Great%20Smoky%20Mountains%20National%20Park" target="_blank" rel="noopener">Directions</a></div><div class="addr">US-441 south from Sugarlands</div><div class="why">Thirteen miles climbing to Newfound Gap at 5,046 feet, then seven miles of Kuwohi Road. Dress everyone for 35 degrees and wind regardless of what the cabin thermometer says. If the road is gated for ice, turn around; there's no second route.</div></div></li>
-        <li class="slot"><time>9:30a</time><div><div class="what">Kuwohi (Clingmans Dome) <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Kuwohi%20%28Clingmans%20Dome%29%20Parking%20Area%2C%20Clingmans%20Dome%20Rd%2C%20Bryson%20City%2C%20NC" target="_blank" rel="noopener">Directions</a></div><div class="addr">End of Kuwohi Rd, 7 mi off Newfound Gap</div><div class="why">Half a mile paved and steep to the tower. Not a stroller walk. Snejana in the carrier, Slavik on shoulders for the second half. The highest point in Tennessee, and Cash can say he walked to it.</div></div></li>
-        <li class="slot"><time>10:45a</time><div><div class="what">Newfound Gap on the way down <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Newfound%20Gap%2C%20Great%20Smoky%20Mountains%20National%20Park" target="_blank" rel="noopener">Directions</a></div><div class="addr">Newfound Gap overlook, state line</div><div class="why">Stand on the state line. Restrooms here. Chimneys picnic area lower down if it's warm enough to sit outside.</div></div></li>
+        <li class="slot"><time>8:30a</time><div><div class="what">Newfound Gap Road south from Sugarlands <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6079617%2C-83.4359155" target="_blank" rel="noopener">Directions</a></div><div class="addr">US-441 south from Sugarlands</div><div class="why">Thirteen miles climbing to Newfound Gap at 5,046 feet, then seven miles of Kuwohi Road. Dress everyone for 35 degrees and wind regardless of what the cabin thermometer says. If the road is gated for ice, turn around; there's no second route.</div></div></li>
+        <li class="slot"><time>9:30a</time><div><div class="what">Kuwohi (Clingmans Dome) <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.5562734%2C-83.495241" target="_blank" rel="noopener">Directions</a></div><div class="addr">End of Kuwohi Rd, 7 mi off Newfound Gap</div><div class="why">Half a mile paved and steep to the tower. Not a stroller walk. Snejana in the carrier, Slavik on shoulders for the second half. The highest point in Tennessee, and Cash can say he walked to it.</div></div></li>
+        <li class="slot"><time>10:45a</time><div><div class="what">Newfound Gap on the way down <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6079617%2C-83.4359155" target="_blank" rel="noopener">Directions</a></div><div class="addr">Newfound Gap overlook, state line</div><div class="why">Stand on the state line. Restrooms here. Chimneys picnic area lower down if it's warm enough to sit outside.</div></div></li>
         <li class="slot"><time>12:30p</time><div><div class="what">Home, lunch, naps</div></div></li>
         <li class="slot"><time>3:30p</time><div><div class="what">Start the pack-out</div><div class="why">Pull the muddy gear onto the porch, run laundry, box what won't get used again. Saturday morning gets ugly otherwise.</div></div></li>
-        <li class="slot"><time>5:45p</time><div><div class="what">Shadrack's drive-through lights, Sevierville <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Soaky%20Mountain%20Waterpark%2C%20Sevierville%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="addr">Soaky Mountain Waterpark, 175 Soaky Way, Sevierville</div><div class="why">At Soaky Mountain Waterpark, $39.95 per car Friday, opens at 6, rain or shine. Kids stay in their car seats in pajamas with the radio synced to the lights. Forty minutes, then they're asleep before you're back. Sevierville traffic on Black Friday is the price. Leave early or skip it.</div></div></li>
+        <li class="slot"><time>5:45p</time><div><div class="what">Shadrack's drive-through lights, Sevierville <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.8911839%2C-83.5882943" target="_blank" rel="noopener">Directions</a></div><div class="addr">Soaky Mountain Waterpark, 175 Soaky Way, Sevierville</div><div class="why">At Soaky Mountain Waterpark, $39.95 per car Friday, opens at 6, rain or shine. Kids stay in their car seats in pajamas with the radio synced to the lights. Forty minutes, then they're asleep before you're back. Sevierville traffic on Black Friday is the price. Leave early or skip it.</div></div></li>
       </ul>
       <div class="callout">
         <h3>If the high road is closed</h3>
@@ -399,9 +452,9 @@ footer a{color:var(--muted)}
     <div class="day" data-date="2026-11-28">
       <div class="day-head"><h3>Home</h3><span class="day-date">Saturday, Nov 28</span></div>
       <ul class="slots">
-        <li class="slot"><time>7:00a</time><div><div class="what">Breakfast, load, sweep</div><div class="why">Check under every bed, the hot tub deck, and the loft. Loveys get left in cabins the same way they get left at beach houses.</div></div></li>
-        <li class="slot"><time>8:30a ET</time><div><div class="what">Roll out through the park <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Townsend%20Wye%2C%20Townsend%2C%20TN" target="_blank" rel="noopener">Directions</a></div><div class="addr">Little River Rd to Townsend Wye, then US-321</div><div class="why">Little River Road to Townsend, US-321 to Lenoir City, I-75 south. Saturday after Thanksgiving is the second heaviest checkout day of the year on the Spur and TN-66. The park route misses all of it.</div></div></li>
-        <li class="slot"><time>11:15a ET</time><div><div class="what">Lunch in Athens or Cleveland <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Athens%2C%20TN" target="_blank" rel="noopener">Directions</a></div></div></li>
+        <li class="slot"><time>7:00a</time><div><div class="what">Breakfast, load, sweep</div><div class="why">Check under every bed, the hot tub deck, and the loft. Loveys get left in cabins the same way they get left at beach houses. <span class="egg" data-egg="4">Bears</span> do not take them. Probably.</div></div></li>
+        <li class="slot"><time>8:30a ET</time><div><div class="what">Roll out through the park <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.659615%2C-83.7077737" target="_blank" rel="noopener">Directions</a></div><div class="addr">Little River Rd to Townsend Wye, then US-321</div><div class="why">Little River Road to Townsend, US-321 to Lenoir City, I-75 south. Saturday after Thanksgiving is the second heaviest checkout day of the year on the Spur and TN-66. The park route misses all of it.</div></div></li>
+        <li class="slot"><time>11:15a ET</time><div><div class="what">Lunch in Athens or Cleveland <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.4682235%2C-84.6500785" target="_blank" rel="noopener">Directions</a></div></div></li>
         <li class="slot"><time>11:45a CT</time><div><div class="what">Chattanooga, back on I-59. You just got an hour back</div></div></li>
         <li class="slot"><time>2:30p CT</time><div><div class="what">Home</div></div></li>
       </ul>
@@ -412,7 +465,7 @@ footer a{color:var(--muted)}
 <!-- ===================== BENCH ===================== -->
 <section id="bench">
   <div class="container">
-    <p class="eyebrow">Set II</p>
+    <p class="eyebrow">Backcountry plan</p>
     <h2>When it rains, freezes, or someone's sick</h2>
     <p class="intro">One day in three is wet in November, the high road closes with any ice, and the SkyBridge shuts in wind. Have these in your pocket so nobody has to invent a plan with three tired kids in a cabin.</p>
     <div class="bench">
@@ -429,7 +482,7 @@ footer a{color:var(--muted)}
       <div class="opt">
         <h3>Sugarlands Visitor Center</h3>
         <p class="meta">US-441, 2 mi south of town &middot; free</p>
-        <p>Natural history museum with the mounted animals, a short film, rangers who will talk to a seven-year-old about bears for as long as he wants. Cataract Falls is behind it and fine in light rain.</p>
+        <p>Natural history museum with the mounted animals, a short film, rangers who will talk to a seven-year-old about <span class="egg" data-egg="6">bears</span> for as long as he wants. Cataract Falls is behind it and fine in light rain.</p>
       </div>
       <div class="opt">
         <h3>Winterfest lights from the car</h3>
@@ -453,7 +506,7 @@ footer a{color:var(--muted)}
 <!-- ===================== PACKING ===================== -->
 <section id="packing">
   <div class="container">
-    <p class="eyebrow">Soundcheck</p>
+    <p class="eyebrow">Pack-out</p>
     <h2>Packing list</h2>
     <p class="intro">Tick as you load. <span class="star">&#9733;</span> marks the things that are hard or expensive to replace once you're up there. Nothing on this list is decorative.</p>
 
@@ -522,7 +575,7 @@ footer a{color:var(--muted)}
         <ul>
           <li><label><input type="checkbox"><span>Measured height written on a card in your wallet<em>Dollywood 42 and 48, Ober tubing 42. Decides his whole week.</em></span></label></li>
           <li><label><input type="checkbox"><span>Waterproof gloves for tubing and the skating rink</span></label></li>
-          <li><label><input type="checkbox"><span>Binoculars, cheap ones<em>Deer and turkeys in the Cove. His job.</em></span></label></li>
+          <li><label><input type="checkbox"><span>Binoculars, cheap ones<em>Deer and turkeys in the Cove. His job. <span class="egg" data-egg="5">Bear</span> spotting is everybody's job.</em></span></label></li>
           <li><label><input type="checkbox"><span>Headlamp<em>His job at the cabin after dark.</em></span></label></li>
           <li><label><input type="checkbox"><span>Small notebook<em>Count the deer, count the bears, write down the highest point in Tennessee.</em></span></label></li>
           <li><label><input type="checkbox"><span>Tablet, headphones, downloaded shows<em>Download before you leave. The park has no signal at all.</em></span></label></li>
@@ -587,7 +640,7 @@ footer a{color:var(--muted)}
 <!-- ===================== KIDS ===================== -->
 <section id="kids">
   <div class="container">
-    <p class="eyebrow">Three different trips</p>
+    <p class="eyebrow">Three cubs</p>
     <h2>What each of them actually needs</h2>
     <div class="kids">
       <div class="kid">
@@ -628,7 +681,7 @@ footer a{color:var(--muted)}
 <!-- ===================== PRIVATE (encrypted) ===================== -->
 <section id="private">
   <div class="container">
-    <p class="eyebrow">Behind the PIN</p>
+    <p class="eyebrow">The den</p>
     <h2>Cabin details</h2>
     <div class="table-wrap" id="private-body"></div>
   </div>
@@ -638,7 +691,7 @@ footer a{color:var(--muted)}
 <!-- ===================== NUMBERS ===================== -->
 <section id="numbers">
   <div class="container">
-    <p class="eyebrow">The lot</p>
+    <p class="eyebrow">Ranger station</p>
     <h2>Addresses and numbers</h2>
     <div class="table-wrap">
     <table class="numbers">
@@ -656,25 +709,35 @@ footer a{color:var(--muted)}
         <tr><td>Anakeesta</td><td>576 Parkway, Gatlinburg (Chondola base) <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Anakeesta%2C%20576%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Go</a></td><td>Open Thanksgiving. Adults $34.99, 4&ndash;11 $22.99, 3 and under free. No guest parking, use city garages</td></tr>
         <tr><td>Ober Mountain tram</td><td>1001 Parkway, Gatlinburg <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Ober%20Mountain%20Tramway%2C%201001%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Go</a></td><td>Tram $29 ages 5+, 4 and under free. Tubing 3+ with adult, 42&quot; to ride alone. Skating 4 and under free</td></tr>
         <tr><td>Gatlinburg SkyPark</td><td>765 Parkway &middot; (865) 436-4307 <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Gatlinburg%20SkyPark%2C%20765%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Go</a></td><td>9a&ndash;9p daily, weather permitting. Lights nightly, included. No strollers. 3 heartbeats per chair</td></tr>
-        <tr><td>Sugarlands Visitor Center</td><td>1420 Fighting Creek Gap Rd (US-441) <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Sugarlands%20Visitor%20Center%2C%201420%20Fighting%20Creek%20Gap%20Rd%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Go</a></td><td>Parking tags: $5 day, $15 week. Cataract Falls and Gatlinburg Trail start here</td></tr>
-        <tr><td>Cades Cove</td><td>Via Little River Rd to Townsend Wye, then Laurel Creek Rd <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Cades%20Cove%20Loop%20Road%2C%20Townsend%2C%20TN" target="_blank" rel="noopener">Go</a></td><td>Loop open sunrise to sunset. About 1h15 from the cabin. Cable Mill restrooms halfway</td></tr>
-        <tr><td>Kuwohi / Clingmans Dome</td><td>Newfound Gap Rd, then Kuwohi Rd <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Kuwohi%20%28Clingmans%20Dome%29%20Parking%20Area%2C%20Clingmans%20Dome%20Rd%2C%20Bryson%20City%2C%20NC" target="_blank" rel="noopener">Go</a></td><td><strong>Road closes Nov 30 for winter.</strong> Closes any day for ice. Half-mile paved walk to the tower</td></tr>
+        <tr><td>Sugarlands Visitor Center</td><td>1420 Fighting Creek Gap Rd (US-441) <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6857204%2C-83.5367666" target="_blank" rel="noopener">Go</a></td><td>Parking tags: $5 day, $15 week. Cataract Falls and Gatlinburg Trail start here</td></tr>
+        <tr><td>Cades Cove</td><td>Via Little River Rd to Townsend Wye, then Laurel Creek Rd <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6034301%2C-83.7759481" target="_blank" rel="noopener">Go</a></td><td>Loop open sunrise to sunset. About 1h15 from the cabin. Cable Mill restrooms halfway</td></tr>
+        <tr><td>Kuwohi / Clingmans Dome</td><td>Newfound Gap Rd, then Kuwohi Rd <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.5562734%2C-83.495241" target="_blank" rel="noopener">Go</a></td><td><strong>Road closes Nov 30 for winter.</strong> Closes any day for ice. Half-mile paved walk to the tower</td></tr>
         <tr><td>Ripley's Aquarium of the Smokies</td><td>88 River Rd, Gatlinburg <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=88%20River%20Rd%2C%20Gatlinburg%2C%20TN" target="_blank" rel="noopener">Go</a></td><td>From about $40, age 1 and under free. Garage next door</td></tr>
         <tr><td>Mama's Farmhouse</td><td>208 Pickel St, Pigeon Forge <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=208%20Pickel%20St%2C%20Pigeon%20Forge%2C%20TN" target="_blank" rel="noopener">Go</a></td><td>Thanksgiving 11a&ndash;9p, family style. Reservations encouraged. <strong>Book now</strong></td></tr>
         <tr><td>The Park Grill</td><td>1110 Parkway, Gatlinburg <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=The%20Park%20Grill%2C%201110%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Go</a></td><td>Thanksgiving menu 11:30a&ndash;9p</td></tr>
         <tr><td>Cracker Barrel</td><td>2285 Parkway, Pigeon Forge <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Cracker%20Barrel%2C%202285%20Parkway%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Go</a></td><td>Thanksgiving plate from 11a, no reservation</td></tr>
-        <tr><td>Shadrack's Christmas Wonderland</td><td>Soaky Mountain Waterpark, Sevierville <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Soaky%20Mountain%20Waterpark%2C%20Sevierville%2C%20TN" target="_blank" rel="noopener">Go</a></td><td>Nightly from 6p. $39.95 per car Fri&ndash;Sun, $34.95 Mon&ndash;Thu except Nov 26</td></tr>
+        <tr><td>Shadrack's Christmas Wonderland</td><td>Soaky Mountain Waterpark, Sevierville <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.8911839%2C-83.5882943" target="_blank" rel="noopener">Go</a></td><td>Nightly from 6p. $39.95 per car Fri&ndash;Sun, $34.95 Mon&ndash;Thu except Nov 26</td></tr>
         <tr><td>Arts &amp; Crafts Show</td><td>Gatlinburg Convention Center, 234 Historic Nature Trail <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Gatlinburg%20Convention%20Center%2C%20234%20Historic%20Nature%20Trail%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Go</a></td><td>Nov 24&ndash;29, free, indoor</td></tr>
-        <tr><td>Mynatt Park</td><td>Asbury Ln, Gatlinburg <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Mynatt%20Park%2C%20Asbury%20Lane%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Go</a></td><td>Playground and creek, 5 min from downtown. The check-in-day stall</td></tr>
+        <tr><td>Mynatt Park</td><td>Asbury Ln, Gatlinburg <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7015895%2C-83.5149127%2037738" target="_blank" rel="noopener">Go</a></td><td>Playground and creek, 5 min from downtown. The check-in-day stall</td></tr>
       </tbody>
     </table>
     </div>
   </div>
 </section>
 
+<div class="paw-trail" id="paw-trail" aria-hidden="true"></div>
+<div class="bear-count" id="bear-count" aria-live="polite"></div>
+<div class="bear-toast" id="bear-toast" role="status"></div>
+<div class="bear-peek" id="bear-peek" aria-hidden="true">
+  <svg viewBox="0 0 120 100"><g fill="#2b1d14"><ellipse cx="60" cy="78" rx="46" ry="30"/><circle cx="60" cy="44" r="30"/><circle cx="36" cy="22" r="11"/><circle cx="84" cy="22" r="11"/></g><g fill="#6b4a33"><circle cx="36" cy="22" r="5"/><circle cx="84" cy="22" r="5"/><ellipse cx="60" cy="56" rx="14" ry="10"/></g><g fill="#0b1411"><circle cx="48" cy="40" r="3.5"/><circle cx="72" cy="40" r="3.5"/><ellipse cx="60" cy="52" rx="6" ry="4"/></g><circle cx="49.5" cy="38.5" r="1.2" fill="#fff"/><circle cx="73.5" cy="38.5" r="1.2" fill="#fff"/></svg>
+</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="bear-side" viewBox="0 0 140 90"><g fill="#2b1d14"><ellipse cx="62" cy="50" rx="44" ry="26"/><circle cx="108" cy="36" r="18"/><circle cx="98" cy="22" r="6"/><circle cx="118" cy="22" r="6"/><circle cx="20" cy="50" r="12"/><rect x="30" y="62" width="12" height="26" rx="5"/><rect x="52" y="64" width="12" height="24" rx="5"/><rect x="78" y="64" width="12" height="24" rx="5"/><rect x="96" y="60" width="12" height="28" rx="5"/></g><g fill="#6b4a33"><ellipse cx="122" cy="42" rx="9" ry="6"/></g><circle cx="114" cy="33" r="2.5" fill="#0b1411"/><circle cx="129" cy="41" r="3" fill="#0b1411"/></symbol>
+</svg>
+
 <footer>
   <div class="container">
-    <p>Built for the Nov 22&ndash;28, 2026 trip. Hours, prices and park roads change with the weather. Worth a quick check the night before anything you're driving to, and the park's road status page every morning.</p>
+    <p><span class="egg" data-egg="7">No bears</span> were fed in the making of this page. Built for the Nov 22&ndash;28, 2026 trip. Hours, prices and park roads change with the weather. Worth a quick check the night before anything you're driving to, and the park's road status page every morning.</p>
     <p style="margin-top:.6rem"><a href="/">&larr; mikeside.com</a></p>
   </div>
 </footer>
@@ -848,6 +911,82 @@ footer a{color:var(--muted)}
     refresh();
   });
   refresh();
+})();
+
+/* Bears. Seven hidden in the copy, a trail of paws down the margin on big screens,
+   a walker if you type the word, a peeker if you poke the logo. */
+(function(){
+  var FACTS = {
+    1: 'Cades Cove has about two bears per square mile, the densest population in the park. Deer are the decoys.',
+    2: 'Smokies black bears are not always black. Cinnamon and even blond ones turn up, but here almost all are black.',
+    3: 'Around 1,900 black bears live in the park. Most of what you see in the Cove is the same few families.',
+    4: 'A bear can smell a granola bar through a closed car. Nothing edible sleeps on the deck. Not even the lovey.',
+    5: 'Bears can run 30 mph uphill. Nobody outruns one, so nobody tries. Fifty yards, back away, talk calmly.',
+    6: 'Cubs born in January weigh about half a pound, less than Snejana\'s hat. By Thanksgiving they\'re 40 pounds and still with mom.',
+    7: 'A fed bear is a dead bear. The park euthanizes bears that learn to get food from people. Pack it in, pack it out.'
+  };
+  var KEY = 'gatlinburg-2026-bears';
+  var found = {}; try { found = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e){}
+  var toast = document.getElementById('bear-toast'), count = document.getElementById('bear-count'), peek = document.getElementById('bear-peek');
+  var eggs = [].slice.call(document.querySelectorAll('.egg'));
+  var tmr;
+  function say(html, ms){ toast.innerHTML = html; toast.classList.add('show'); clearTimeout(tmr); tmr = setTimeout(function(){ toast.classList.remove('show'); }, ms || 6000); }
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(found)); } catch(e){} }
+  function tally(){
+    var n = 0; for (var k in found) if (k !== 'done') n++;
+    eggs.forEach(function(e){ if (found[e.getAttribute('data-egg')]) e.classList.add('found'); });
+    if (n) { count.textContent = 'Bears found ' + n + ' of 7'; count.classList.add('show'); }
+    if (n === 7 && !found.done) { found.done = 1; save(); setTimeout(function(){ say('<b>All seven.</b> You found every bear on this page. The real ones are in Cades Cove at 8am Wednesday. Tell Cash.', 9000); walk(); }, 1200); }
+  }
+  eggs.forEach(function(e){
+    e.setAttribute('title', 'There is a bear here');
+    e.addEventListener('click', function(ev){
+      ev.preventDefault();
+      var id = e.getAttribute('data-egg');
+      var first = !found[id];
+      found[id] = 1; save();
+      say('<b>' + (first ? 'Bear spotted.' : 'Same bear.') + '</b> ' + FACTS[id]);
+      tally();
+    });
+  });
+  tally();
+
+  function walk(){
+    if (document.querySelector('.bear-walk')) return;
+    var d = document.createElement('div'); d.className = 'bear-walk';
+    d.innerHTML = '<svg><use href="#bear-side"></use></svg>';
+    document.body.appendChild(d);
+    setTimeout(function(){ if (d.parentNode) d.parentNode.removeChild(d); }, 9500);
+  }
+  var typed = '';
+  document.addEventListener('keydown', function(e){
+    if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA')) return;
+    typed = (typed + (e.key || '')).slice(-4).toLowerCase();
+    if (typed === 'bear') { typed = ''; walk(); say('<b>Bear.</b> You typed it, you got it.'); }
+  });
+
+  var pokes = 0, pokeTmr;
+  var logo = document.querySelector('header .logo');
+  if (logo) logo.addEventListener('click', function(e){
+    pokes++; clearTimeout(pokeTmr); pokeTmr = setTimeout(function(){ pokes = 0; }, 1500);
+    e.preventDefault();
+    if (pokes >= 3) { pokes = 0; peek.classList.add('up'); say('<b>Hey.</b> Three pokes and the bear looks over the deck rail. Hot tub cover on?'); setTimeout(function(){ peek.classList.remove('up'); }, 4000); }
+    else if (pokes === 1) { setTimeout(function(){ if (pokes === 1) { pokes = 0; location.href = '/'; } }, 400); }
+  });
+
+  var trail = document.getElementById('paw-trail');
+  if (trail && window.innerWidth >= 1240) {
+    var H = Math.max(document.body.scrollHeight, 2000), n = Math.floor(H / 160);
+    for (var i = 0; i < n; i++) { var pw = document.createElement('i'); pw.style.top = (i * 160 + 120) + 'px'; trail.appendChild(pw); }
+    var paws = [].slice.call(trail.children);
+    trail.style.height = H + 'px';
+    function reveal(){ var y = window.scrollY + window.innerHeight * 0.8; paws.forEach(function(pp){ if (parseInt(pp.style.top, 10) < y) pp.classList.add('on'); }); }
+    window.addEventListener('scroll', reveal, {passive:true}); reveal();
+  }
+
+  var realTitle = document.title;
+  document.addEventListener('visibilitychange', function(){ document.title = document.hidden ? '\uD83D\uDC3B ' + realTitle : realTitle; });
+  if (window.console && console.log) console.log('%c\uD83D\uDC3B  You found the bear in the console. Type the word bear on the page for another one.', 'font-size:14px');
 })();
 
 /* Weather: Open-Meteo, no key. Town = cabin, Ridge = Kuwohi. Fails quietly offline. */
