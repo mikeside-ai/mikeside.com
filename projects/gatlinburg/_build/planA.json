@@ -1,0 +1,449 @@
+{
+ "2026-11-22": {
+  "title": "Birmingham &rarr; Gatlinburg",
+  "date": "Sun, Nov 22",
+  "tag": "Long day",
+  "tagcls": "hot",
+  "note": "Load the car Saturday night. Kids ride in pajamas and change at the first stop. Check-in is usually 4pm for cabins, so there is no reason to leave before seven.",
+  "slots": [
+   {
+    "t": "7:00a CT",
+    "what": "Pull out",
+    "why": "Breakfast in the car. Snejana should sleep the first leg. I-59 north.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "8:40a CT",
+    "what": "Fort Payne, first stretch",
+    "why": "Exit 218, Glenn Blvd. The MAPCO is right off the ramp. Bathrooms, gas, ten minutes of running around. Last stop in Central time.",
+    "addr": "",
+    "dest": "MAPCO%2C%201401%20Glenn%20Blvd%20SW%2C%20Fort%20Payne%2C%20AL%2035968"
+   },
+   {
+    "t": "10:30a ET",
+    "what": "Chattanooga, onto I-75 north",
+    "why": "Clocks jump an hour here. Reset the car clock now so nobody does arrival math wrong later.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "11:20a ET",
+    "what": "Athens or Sweetwater, real stop",
+    "why": "Exit 49. Cracker Barrel at the ramp has the fastest kids' lunch on this route and a rocking-chair porch to burn ten minutes on. Stay off the exits closer to Knoxville, they are busier and slower.",
+    "addr": "",
+    "dest": "35.4682235%2C-84.6500785"
+   },
+   {
+    "t": "12:15p ET",
+    "what": "Exit 81, Lenoir City. US-321 east",
+    "why": "Love's at the exit for the last cheap tank. Then US-321 through Maryville to Townsend, about an hour.",
+    "addr": "",
+    "dest": "Love%27s%20Travel%20Stop%2C%209155%20US-321%2C%20Lenoir%20City%2C%20TN%2037771"
+   },
+   {
+    "t": "1:30p ET",
+    "what": "Into the park at the Townsend Wye",
+    "why": "Little River Road to Sugarlands, 35 minutes if nobody stops. No cell signal inside the park, so have the cabin directions saved offline before you enter.",
+    "addr": "",
+    "dest": "35.659615%2C-83.7077737"
+   },
+   {
+    "t": "2:15p ET",
+    "what": "Food City, 1219 East Parkway",
+    "why": "Full stock-up before the cabin. One adult shops, one adult walks kids around the lot. If you came in via Wears Valley instead, Kroger at 220 Wears Valley Rd in Pigeon Forge is right on the route.",
+    "addr": "",
+    "dest": "Food%20City%2C%201219%20East%20Parkway%2C%20Gatlinburg%2C%20TN%2037738"
+   },
+   {
+    "t": "3:30p ET",
+    "what": "Kill time until check-in",
+    "why": "Mynatt Park on Asbury Lane is a real playground with a creek, five minutes from downtown. Don't sit in the car.",
+    "addr": "Mynatt Park, Asbury Ln",
+    "dest": "35.7015895%2C-83.5149127"
+   },
+   {
+    "t": "4:00p ET",
+    "what": "Into the cabin. Safety sweep first",
+    "why": "Before anything is unloaded: hot tub cover strapped and locked, deck doors latched, stair gate up, loft rail checked, fireplace blocked. See the note below. Then unload.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "5:30p ET",
+    "what": "Dinner in. Early",
+    "why": "Frozen pizza night. Everybody is wrecked and it is already dark.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "7:00p ET",
+    "what": "Everyone down",
+    "why": "Pack-n-play in the darkest room, sound machines on, trash bags over any window facing the porch light. It is 6pm to their bodies, which helps this one night.",
+    "addr": "",
+    "dest": ""
+   }
+  ],
+  "callouts": []
+ },
+ "2026-11-23": {
+  "title": "Dollywood",
+  "date": "Monday, Nov 23",
+  "tag": "Big day",
+  "tagcls": "hot",
+  "note": "Monday before Thanksgiving is the lightest day the park will have all week. Park opens at 10. Be in the lot at 9:15. Parking is $25. Tickets: $94.99 adults, $84.99 for Cash. Slavik and Snejana are free. Buy online tonight, not at the gate.",
+  "slots": [
+   {
+    "t": "9:15a",
+    "what": "Park, tram to the gate, measure Cash",
+    "why": "The measuring station on Showstreet gives him a wristband for the day. 42 inches opens Blazing Fury and Sky Rider. 48 opens the real coasters. Don't guess, measure.",
+    "addr": "2700 Dollywood Parks Blvd, Pigeon Forge",
+    "dest": "Dollywood%2C%202700%20Dollywood%20Parks%20Blvd%2C%20Pigeon%20Forge%2C%20TN%2037863"
+   },
+   {
+    "t": "10:00a",
+    "what": "Straight to Wildwood Grove",
+    "why": "Back of the park, so go first while everyone else stops at the front. Frogs and Fireflies, Treetop Tower, the Great Tree Swing at 36 inches, and the splash-free Wildwood Creek playground. This is Slavik's whole park.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "11:30a",
+    "what": "Dollywood Express",
+    "why": "The steam train. No height minimum, twenty minutes sitting down, and the single best thing for Snejana. Ride it before lunch while she's still happy.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "12:15p",
+    "what": "Lunch, then the Village",
+    "why": "Carousel and Lemon Twist have no minimum. Santa is in the Imagination Playhouse near the train depot. Cash and one adult peel off for Blazing Fury and whatever his wristband allows. Use Parent Swap so nobody waits twice.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "2:30p",
+    "what": "Stroller nap loop",
+    "why": "Snejana and probably Slavik go down in the stroller. Walk slow through Craftsman's Valley. One adult takes Cash to the Country Fair rides, which are 36 inches and up.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "5:00p",
+    "what": "Dinner in the park, then the lights come on",
+    "why": "Snow in the Grove runs in Wildwood Grove each evening with the characters. Glacier Ridge and Peppermint Valley are the light walks. Get through the Grove first, then Glacier Ridge on the way out.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "6:45p",
+    "what": "Leave before the park does",
+    "why": "The 9pm close is for people without a one-year-old. Out by seven, home by 7:45, bed. Tomorrow is a recovery day on purpose.",
+    "addr": "",
+    "dest": ""
+   }
+  ],
+  "callouts": [
+   {
+    "h": "Heights will decide Cash's day",
+    "body": "<p>No minimum: Dollywood Express, Village Carousel, Lemon Twist, Flying Elephants, Rockin' Roadway. Treetop Tower and Frogs and Fireflies need a 14+ companion under 42 and 36 inches. The Country Fair kiddie rides moved to a 36-inch minimum for 2026, so Slavik may be shut out of Busy Bees and Lucky Ducky. At <strong>42 inches</strong> Cash gets Blazing Fury, Sky Rider and the Waltzing Swinger. At <strong>48 inches</strong> he gets Thunderhead, Mystery Mine and Barnstormer. A seven-year-old is usually right around 48, so measure him at the cabin Sunday night and again at the park.</p>"
+   }
+  ]
+ },
+ "2026-11-24": {
+  "title": "Easy morning, Anakeesta at dusk",
+  "date": "Tuesday, Nov 24",
+  "tag": "Recovery",
+  "tagcls": "calm",
+  "note": "Nobody drives far today. Short walk in the park, long nap, then the mountaintop for the lights.",
+  "slots": [
+   {
+    "t": "9:00a",
+    "what": "Sugarlands Visitor Center",
+    "why": "Two miles south of town on US-441. Buy the <strong>$15 weekly parking tag</strong> here and put it on the dash. Free museum inside with the stuffed animals, which buys you twenty minutes if it's cold.",
+    "addr": "1420 Fighting Creek Gap Rd (US-441)",
+    "dest": "35.6857204%2C-83.5367666"
+   },
+   {
+    "t": "9:30a",
+    "what": "Cataract Falls",
+    "why": "The trail starts behind the visitor center. Under half a mile, flat, dirt. The shortest walk to a waterfall in the park. Cash walks, Slavik walks most of it, Snejana rides in the carrier.",
+    "addr": "Starts behind the visitor center",
+    "dest": "35.6857204%2C-83.5367666"
+   },
+   {
+    "t": "10:15a",
+    "what": "Sugarlands Valley Nature Trail",
+    "why": "Half a mile, fully paved, flat. The one trail in the park where the stroller actually works. Creek, old chimney, done by eleven.",
+    "addr": "Newfound Gap Rd, 0.3 mi south of the visitor center",
+    "dest": "35.6795863%2C-83.5312772"
+   },
+   {
+    "t": "11:30a",
+    "what": "Home, lunch, naps",
+    "why": "Protect this. Tonight runs late.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "3:15p",
+    "what": "Park downtown, Chondola to Anakeesta",
+    "why": "Base is at 576 Parkway. Use the McMahan garage at traffic light #3 or the garage across from the aquarium. The gondola cabins fit a stroller, so bring it up. Adults $34.99, Cash $22.99, the little two free. Buy online.",
+    "addr": "Anakeesta base: 576 Parkway. Garage: McMahan, traffic light #3",
+    "dest": "35.7141604%2C-83.5103516"
+   },
+   {
+    "t": "3:45p",
+    "what": "Treehouse play area and Vista Gardens in daylight",
+    "why": "The Treehouse Adventure play structure is the toddler payoff. Treetop Skywalk is included but no strollers and no carrying, so one adult does it with Cash while the other stays at the playground.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "5:15p",
+    "what": "Lights come on",
+    "why": "Enchanted Christmas is the whole mountaintop lit up. Half an hour of walking it is plenty. Cliff Top has food if you'd rather eat up there than fight downtown.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "6:15p",
+    "what": "Down and home",
+    "why": "The Chondola line down gets long after 6:30. Be in it by 6:15.",
+    "addr": "",
+    "dest": ""
+   }
+  ],
+  "callouts": []
+ },
+ "2026-11-25": {
+  "title": "Cades Cove",
+  "date": "Wednesday, Nov 25",
+  "tag": "Bear country",
+  "tagcls": "bear",
+  "note": "The 11-mile loop through the valley with the deer, turkeys, old churches and sometimes a bear. An hour-plus each way from the cabin on Little River Road, so you leave early and you are back for naps.",
+  "slots": [
+   {
+    "t": "7:15a",
+    "what": "Roll out, breakfast in the car",
+    "why": "Little River Road from Sugarlands. Wildlife is out at this hour and the loop is empty. Leave at nine and you crawl behind forty cars.",
+    "addr": "Cades Cove Loop Rd via Little River Rd and Laurel Creek Rd",
+    "dest": "35.6034301%2C-83.7759481"
+   },
+   {
+    "t": "8:30a",
+    "what": "Start the loop",
+    "why": "One way, 20 mph, pull-offs everywhere. Get out at John Oliver Cabin, half a mile flat from the road. Cash counts <span class=\"egg\" data-egg=\"1\">deer</span>.",
+    "addr": "",
+    "dest": "35.609788%2C-83.7951775"
+   },
+   {
+    "t": "10:00a",
+    "what": "Cable Mill area, halfway round",
+    "why": "Visitor center, restrooms, a working grist mill and barns on flat gravel. Stroller works here. Thirty minutes of running around, then back in the car.",
+    "addr": "Cades Cove Visitor Center, Cable Mill",
+    "dest": "35.5849718%2C-83.8431004"
+   },
+   {
+    "t": "11:15a",
+    "what": "Finish the loop, head home",
+    "why": "Lunch in the car or at the Metcalf Bottoms picnic area on the way back if it's warm enough.",
+    "addr": "Metcalf Bottoms picnic area, Little River Rd",
+    "dest": "35.6798742%2C-83.648943"
+   },
+   {
+    "t": "1:00p",
+    "what": "Home, naps",
+    "why": "Long nap. Everyone, including adults.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "3:30p",
+    "what": "Thanksgiving grocery run",
+    "why": "Food City on East Parkway for tomorrow's dinner. Wednesday afternoon is the last sane time to do it. Food City runs holiday hours Thursday.",
+    "addr": "1219 East Parkway",
+    "dest": "Food%20City%2C%201219%20East%20Parkway%2C%20Gatlinburg%2C%20TN%2037738"
+   },
+   {
+    "t": "5:00p",
+    "what": "Optional: the Arts &amp; Crafts show",
+    "why": "Great Smoky Thanksgiving Arts &amp; Crafts Show at the Gatlinburg Convention Center, Nov 24 to 29. Free, indoor, warm, and an easy hour if the kids are restless. Skip it if they aren't.",
+    "addr": "234 Historic Nature Trail",
+    "dest": "Gatlinburg%20Convention%20Center%2C%20234%20Historic%20Nature%20Trail%2C%20Gatlinburg%2C%20TN%2037738"
+   }
+  ],
+  "callouts": [
+   {
+    "h": "Bears are real in the Cove in November",
+    "body": "<p>They are fattening up before denning and they are on the loop. Fifty yards minimum, nobody gets out of the car for a bear, and no food left out at the picnic area. If a bear jam forms, drive through it. You will see <span class=\"egg\" data-egg=\"3\">another one</span>.</p>"
+   }
+  ]
+ },
+ "2026-11-26": {
+  "title": "Thanksgiving",
+  "date": "Thursday, Nov 26",
+  "tag": "Holiday",
+  "tagcls": "calm",
+  "note": "Dollywood is closed and most of the town is at a buffet. Ober in the morning, the big meal at the cabin at four, and the chairlift lights if everyone is still standing.",
+  "slots": [
+   {
+    "t": "9:45a",
+    "what": "Ober Mountain tram from downtown",
+    "why": "Tram base at 1001 Parkway. $29 round trip for ages 5 and up, Slavik and Snejana ride free. Strollers fold and come aboard. Opening hours vary by day in early season, so check the night before.",
+    "addr": "",
+    "dest": "Ober%20Mountain%20Tramway%2C%201001%20Parkway%2C%20Gatlinburg%2C%20TN%2037738"
+   },
+   {
+    "t": "10:30a",
+    "what": "Wildlife Habitat first",
+    "why": "Black <span class=\"egg\" data-egg=\"2\">bears</span>, otters and raccoons behind glass. The one thing up here all three can do, and the bears are most active in the morning.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "11:15a",
+    "what": "Cash: ice skating, then tubing",
+    "why": "Skating is in the Fun Pass. Snow tubing is $29 and up, and at seven he rides alone, so he has to be 42 inches. Slavik can't tube at all until he's three, and that's December. One adult with Cash, one adult with the little two in the lodge watching the skaters.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "12:45p",
+    "what": "Tram down, home for naps",
+    "why": "Snack lunch on the way. Everyone down by 1:30.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "4:00p",
+    "what": "Thanksgiving dinner at the cabin",
+    "why": "A turkey breast, not a turkey. Cabin ovens are small and unreliable. Sides from Food City Wednesday. If you'd rather not cook, the backup is below, and it needs booking before you leave Birmingham.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "5:30p",
+    "what": "Lights Over Gatlinburg from the SkyLift",
+    "why": "765 Parkway, 15 minutes from the table. Included with SkyPark admission, runs nightly. Each chair holds three heartbeats and the baby counts, so you're two chairs. No strollers anywhere in the park. Snejana rides in the carrier on a lap. Skip this if dinner ran long. It's a bonus, not a plan.",
+    "addr": "",
+    "dest": "Gatlinburg%20SkyPark%2C%20765%20Parkway%2C%20Gatlinburg%2C%20TN%2037738"
+   },
+   {
+    "t": "7:00p",
+    "what": "Home and down",
+    "why": "",
+    "addr": "",
+    "dest": ""
+   }
+  ],
+  "callouts": [
+   {
+    "h": "If you want someone else to cook",
+    "body": "<p><strong>Mama's Farmhouse</strong>, 208 Pickel St, Pigeon Forge <a class=\"nav\" href=\"https://www.google.com/maps/dir/?api=1&destination=Mama%27s%20Farmhouse%2C%20208%20Pickel%20St%2C%20Pigeon%20Forge%2C%20TN%2037863\" target=\"_blank\" rel=\"noopener\">Directions</a>. Family-style, all you can eat, a special Thanksgiving menu, open 11 to 9. The right call for this crew because food arrives in bowls immediately and nobody needs a menu. Reservations are encouraged and it fills up. Book it today as the backup even if you plan to cook. <strong>Ober Mountain</strong> runs a Thanksgiving Feast at the top, 11 to 5, which would fold the whole morning into one trip; reservations there too. <strong>Cracker Barrel</strong> on the Pigeon Forge Parkway serves its traditional plate from 11 with no reservation, and <strong>The Park Grill</strong> in Gatlinburg has a special menu 11:30 to 9. The Pigeon Forge trolley doesn't run on Thanksgiving, so whatever you pick, you're driving.</p>"
+   }
+  ]
+ },
+ "2026-11-27": {
+  "title": "Up the mountain, away from everyone",
+  "date": "Friday, Nov 27",
+  "tag": "Black Friday",
+  "tagcls": "hot",
+  "note": "The Parkway, the Island, Dollywood and the outlets will be the busiest they are all year. Do not go near any of it. Kuwohi Road closes Monday for the winter. This is the last chance.",
+  "slots": [
+   {
+    "t": "8:30a",
+    "what": "Newfound Gap Road south from Sugarlands",
+    "why": "Thirteen miles climbing to Newfound Gap at 5,046 feet, then seven miles of Kuwohi Road. Dress everyone for 35 degrees and wind regardless of what the cabin thermometer says. If the road is gated for ice, turn around; there's no second route.",
+    "addr": "US-441 south from Sugarlands",
+    "dest": "35.6079617%2C-83.4359155"
+   },
+   {
+    "t": "9:30a",
+    "what": "Kuwohi (Clingmans Dome)",
+    "why": "Half a mile paved and steep to the tower. Not a stroller walk. Snejana in the carrier, Slavik on shoulders for the second half. The highest point in Tennessee, and Cash can say he walked to it.",
+    "addr": "End of Kuwohi Rd, 7 mi off Newfound Gap",
+    "dest": "35.5562734%2C-83.495241"
+   },
+   {
+    "t": "10:45a",
+    "what": "Newfound Gap on the way down",
+    "why": "Stand on the state line. Restrooms here. Chimneys picnic area lower down if it's warm enough to sit outside.",
+    "addr": "Newfound Gap overlook, state line",
+    "dest": "35.6079617%2C-83.4359155"
+   },
+   {
+    "t": "12:30p",
+    "what": "Home, lunch, naps",
+    "why": "",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "3:30p",
+    "what": "Start the pack-out",
+    "why": "Pull the muddy gear onto the porch, run laundry, box what won't get used again. Saturday morning gets ugly otherwise.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "5:45p",
+    "what": "Shadrack's drive-through lights, Sevierville",
+    "why": "At Soaky Mountain Waterpark, $39.95 per car Friday, opens at 6, rain or shine. Kids stay in their car seats in pajamas with the radio synced to the lights. Forty minutes, then they're asleep before you're back. Sevierville traffic on Black Friday is the price. Leave early or skip it.",
+    "addr": "Soaky Mountain Waterpark, 175 Soaky Way, Sevierville",
+    "dest": "35.8911839%2C-83.5882943"
+   }
+  ],
+  "callouts": [
+   {
+    "h": "If the high road is closed",
+    "body": "<p><strong>Roaring Fork Motor Nature Trail</strong> is the fallback, and it also closes Monday. Turn at traffic light #8 onto Historic Nature Trail, five and a half miles one way, narrow and slow, past the Noah Ogle place and a few cabins. Ogle's is a hundred yards from the road and fine for all three. Grotto Falls is not a toddler walk. Then the Gatlinburg Trail from Sugarlands, two miles each way on gravel, flat, stroller-fine, with the river the whole way.</p>"
+   }
+  ]
+ },
+ "2026-11-28": {
+  "title": "Home",
+  "date": "Saturday, Nov 28",
+  "tag": "",
+  "tagcls": "",
+  "note": "",
+  "slots": [
+   {
+    "t": "7:00a",
+    "what": "Breakfast, load, sweep",
+    "why": "Check under every bed, the hot tub deck, and the loft. Loveys get left in cabins the same way they get left at beach houses. <span class=\"egg\" data-egg=\"4\">Bears</span> do not take them. Probably.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "8:30a ET",
+    "what": "Roll out through the park",
+    "why": "Little River Road to Townsend, US-321 to Lenoir City, I-75 south. Saturday after Thanksgiving is the second heaviest checkout day of the year on the Spur and TN-66. The park route misses all of it.",
+    "addr": "Little River Rd to Townsend Wye, then US-321",
+    "dest": "35.659615%2C-83.7077737"
+   },
+   {
+    "t": "11:15a ET",
+    "what": "Lunch in Athens or Cleveland",
+    "why": "",
+    "addr": "",
+    "dest": "35.4682235%2C-84.6500785"
+   },
+   {
+    "t": "11:45a CT",
+    "what": "Chattanooga, back on I-59. You just got an hour back",
+    "why": "",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "2:30p CT",
+    "what": "Home",
+    "why": "",
+    "addr": "",
+    "dest": ""
+   }
+  ],
+  "callouts": []
+ }
+}
