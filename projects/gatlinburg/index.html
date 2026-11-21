@@ -9,233 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-/* ============================================
-   mikeside.com — SMOKY MOUNTAIN variant
-   spruce dark · fog · ember · firefly
-   built on the Stage Left tokens, re-tinted for the ridge
-   ============================================ */
-:root{
-  --bg:#0b1411; --bg-soft:#10201a; --card:#13271f;
-  --text:#ece8dc; --muted:#9fb0a4;
-  --accent:#c4552f; --accent-soft:#e07a4f;   /* ember, campfire */
-  --jumpsuit:#f2c94c;                         /* firefly */
-  --gulf:#8fd0a6;                             /* fog on spruce */
-  --sand:#e6cfa3;                             /* cabin pine */
-  --mist:#5f8f87;
-  --border:#22372d; --radius:14px; --maxw:1080px;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  background:var(--bg) radial-gradient(ellipse 80% 40% at 50% -10%, rgba(95,143,135,.22), transparent 60%) no-repeat; color:var(--text);
-  font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  line-height:1.6; -webkit-font-smoothing:antialiased;
-}
-h1,h2,h3,.logo{font-family:"Fraunces",Georgia,serif}
-a{color:var(--accent-soft);text-decoration:none}
-a:hover{text-decoration:underline}
-:focus-visible{outline:2px solid var(--gulf);outline-offset:3px;border-radius:4px}
-.container{max-width:var(--maxw);margin:0 auto;padding:0 1.25rem}
-
-/* ---------- Nav ---------- */
-header{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 1.25rem}
-.nav .logo{font-weight:600;font-size:1.25rem;letter-spacing:-.01em;color:var(--text)}
-.nav .logo span{color:var(--accent-soft)}
-.nav ul{display:flex;gap:1.2rem;list-style:none;flex-wrap:wrap}
-.nav ul a{color:var(--muted);font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.09em;white-space:nowrap}
-.nav ul a:hover{color:var(--text);text-decoration:none}
-
-/* ---------- Hero ---------- */
-.hero{padding:3.5rem 0 2rem;position:relative;overflow:hidden}
-.hero > .container{position:relative;z-index:1}
-.ridgeband{position:relative;height:clamp(120px,18vw,220px);background:linear-gradient(180deg, var(--bg), #0e1b16);overflow:hidden;border-bottom:1px solid var(--border)}
-.ridges{position:absolute;left:0;right:0;bottom:-2px;width:100%;height:100%;pointer-events:none}
-.ridges svg{width:100%;height:100%;display:block}
-.mist{position:absolute;left:0;right:0;top:0;height:55%;background:linear-gradient(to bottom, rgba(95,143,135,.18), transparent);pointer-events:none}
-.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 20%, rgba(242,201,76,.10), transparent 30%);pointer-events:none}
-.firefly{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--jumpsuit);box-shadow:0 0 8px 2px rgba(242,201,76,.5);opacity:0;animation:fly 7s ease-in-out infinite;pointer-events:none}
-@keyframes fly{0%{opacity:0;transform:translate(0,0)}20%{opacity:.9}50%{opacity:.2;transform:translate(14px,-18px)}80%{opacity:.8;transform:translate(-10px,-30px)}100%{opacity:0;transform:translate(4px,-44px)}}
-.kicker{color:var(--gulf);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.22em}
-.hero h1{font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.05;margin:.6rem 0 .9rem;letter-spacing:-.02em}
-.hero h1 em{font-style:italic;color:var(--sand)}
-.hero p.lede{color:var(--muted);max-width:60ch;font-size:1.05rem}
-
-/* ---------- Facts strip ---------- */
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:2rem 0}
-.fact{background:var(--bg-soft);padding:1rem 1.1rem}
-.fact dt{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
-.fact dd{font-size:.95rem;font-weight:500}
-.fact dd small{display:block;color:var(--muted);font-weight:400;font-size:.8rem;margin-top:.15rem}
-
-/* ---------- Sections ---------- */
-section{padding:3rem 0;border-bottom:1px solid var(--border)}
-.eyebrow{font-family:"Fraunces",Georgia,serif;font-style:italic;color:var(--accent-soft);font-size:1rem;margin-bottom:.2rem}
-.eyebrow::before{content:"";display:inline-block;width:.9em;height:.9em;margin-right:.45em;vertical-align:-.1em;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e07a4f'><ellipse cx='12' cy='15.5' rx='5' ry='4.2'/><circle cx='6' cy='9.5' r='2'/><circle cx='10' cy='6.5' r='2'/><circle cx='14' cy='6.5' r='2'/><circle cx='18' cy='9.5' r='2'/></svg>") center/contain no-repeat;opacity:.9}
-section:nth-of-type(even){background:linear-gradient(180deg, transparent, rgba(95,143,135,.06) 50%, transparent)}
-section h2{font-size:clamp(1.6rem,4vw,2.2rem);letter-spacing:-.015em;margin-bottom:.5rem}
-section > .container > p.intro{color:var(--muted);max-width:68ch;margin-bottom:1.6rem}
-
-/* ---------- Callout ---------- */
-.callout{border-left:3px solid var(--accent);background:var(--bg-soft);border-radius:0 var(--radius) var(--radius) 0;padding:1.1rem 1.25rem;margin:1.5rem 0}
-.callout.water{border-left-color:var(--gulf)}
-.callout.sun{border-left-color:var(--jumpsuit)}
-.callout h3{font-size:1.05rem;margin-bottom:.35rem}
-.callout p{font-size:.94rem;color:var(--text)}
-.callout p + p{margin-top:.5rem}
-
-/* ---------- Timeline (drive + days) ---------- */
-.day{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.4rem 1.5rem;margin-bottom:1.1rem}
-.day-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.6rem .9rem;margin-bottom:.15rem}
-.day-head h3{font-size:1.3rem}
-.day-date{color:var(--muted);font-size:.85rem;letter-spacing:.04em}
-.tag{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:.2rem .5rem;border-radius:999px;border:1px solid var(--border);color:var(--muted)}
-.tag.hot{color:var(--jumpsuit);border-color:rgba(245,197,66,.4)}
-.tag.calm{color:var(--gulf);border-color:rgba(143,208,166,.4)}
-.tag.bear{color:var(--sand);border-color:rgba(230,207,163,.4)}
-.day-note{color:var(--muted);font-size:.9rem;margin-bottom:1rem}
-.slots{list-style:none;display:grid;gap:.1rem}
-.slot{display:grid;grid-template-columns:6.2rem 1fr;gap:1rem;padding:.6rem 0;border-top:1px solid var(--border)}
-.slot:first-child{border-top:0}
-.slot time{color:var(--gulf);font-variant-numeric:tabular-nums;font-weight:600;font-size:.85rem;padding-top:.12rem}
-.slot .what{font-weight:500}
-.slot .why{color:var(--muted);font-size:.875rem;margin-top:.15rem}
-.slot .addr{color:var(--sand);font-size:.8rem;margin-top:.1rem}
-a.nav{display:inline-block;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gulf);border:1px solid rgba(124,196,143,.4);border-radius:999px;padding:.08rem .5rem;margin-left:.35rem;vertical-align:middle;white-space:nowrap}
-a.nav:hover{text-decoration:none;border-color:var(--gulf);background:rgba(124,196,143,.1)}
-@media print{a.nav{display:none}}
-
-/* ---------- Packing ---------- */
-.pack-bar{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;background:var(--bg-soft);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.1rem;margin-bottom:1.5rem;position:sticky;top:64px;z-index:20}
-.pack-bar output{font-variant-numeric:tabular-nums;font-weight:600;color:var(--gulf)}
-.pack-bar .hint{color:var(--muted);font-size:.82rem;margin-right:auto}
-button.ghost{font:inherit;font-size:.82rem;font-weight:600;color:var(--text);background:transparent;border:1px solid var(--border);border-radius:999px;padding:.35rem .9rem;cursor:pointer}
-button.ghost:hover{border-color:var(--accent-soft);color:var(--accent-soft)}
-.pack-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.1rem}
-.pack-cat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem 1.3rem;break-inside:avoid}
-.pack-cat h3{font-size:1.1rem;margin-bottom:.15rem}
-.pack-cat .who{color:var(--muted);font-size:.8rem;margin-bottom:.8rem}
-.pack-cat ul{list-style:none;display:grid;gap:.12rem}
-.pack-cat li{border-top:1px solid var(--border)}
-.pack-cat li:first-child{border-top:0}
-.pack-cat label{display:grid;grid-template-columns:auto 1fr;gap:.65rem;align-items:start;padding:.42rem 0;cursor:pointer;font-size:.93rem}
-.pack-cat input{margin-top:.34rem;accent-color:var(--gulf);width:15px;height:15px;flex:none;cursor:pointer}
-.pack-cat label span em{display:block;font-style:normal;color:var(--muted);font-size:.8rem;line-height:1.45}
-.pack-cat input:checked + span{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--border)}
-.pack-cat input:checked + span em{text-decoration:none}
-.star{color:var(--jumpsuit)}
-
-/* ---------- Kid cards ---------- */
-.kids{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem}
-.kid{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem}
-.kid h3{font-size:1.2rem}
-.kid .age{color:var(--gulf);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:.7rem}
-.kid ul{list-style:none;display:grid;gap:.5rem;font-size:.92rem}
-.kid li{padding-left:1rem;position:relative;color:var(--text)}
-.kid li::before{content:"—";position:absolute;left:0;color:var(--muted)}
-
-/* ---------- Bench (rain plan) ---------- */
-.bench{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.1rem}
-.opt{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem}
-.opt h3{font-size:1.05rem;margin-bottom:.1rem}
-.opt .meta{color:var(--gulf);font-size:.8rem;margin-bottom:.5rem}
-.opt p{font-size:.9rem;color:var(--muted)}
-
-/* ---------- Numbers table ---------- */
-.numbers{width:100%;border-collapse:collapse;font-size:.92rem}
-.numbers th,.numbers td{text-align:left;padding:.7rem .6rem;border-bottom:1px solid var(--border);vertical-align:top}
-.numbers th{color:var(--muted);font-weight:600;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
-.numbers td:first-child{font-weight:500;white-space:nowrap}
-.numbers td small{display:block;color:var(--muted)}
-.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
-@media (max-width:640px){.numbers td:first-child{white-space:normal;min-width:7rem}.numbers{min-width:36rem}}
-
-/* ---------- Weather strip ---------- */
-.wx{background:var(--bg-soft);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.1rem;margin:0 0 1.5rem}
-.wx-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem;margin-bottom:.7rem}
-.wx-head h3{font-size:1.05rem}
-.wx-note{color:var(--muted);font-size:.8rem;margin-right:auto}
-.wx-link{font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
-.wx-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:.4rem}
-.wx-day{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.55rem .45rem;text-align:center;font-size:.8rem;line-height:1.35}
-.wx-day.today{border-color:var(--gulf)}
-.wx-day b{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.wx-day .t{font-weight:600;font-variant-numeric:tabular-nums}
-.wx-day .r{color:var(--muted);font-size:.72rem;font-variant-numeric:tabular-nums}
-.wx-day .snow{color:var(--jumpsuit)}
-@media (max-width:640px){.wx-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
-
-/* ---------- Today view ---------- */
-.today-bar{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-bottom:1.1rem}
-.today-bar .tag.now{color:var(--jumpsuit);border-color:rgba(245,197,66,.5)}
-.day.is-today{border-color:var(--gulf);box-shadow:0 0 0 1px var(--gulf) inset}
-.day.is-past.collapsed{display:none}
-.swap{margin-left:auto;font:inherit;font-size:.74rem;font-weight:600;color:var(--muted);background:transparent;border:1px solid var(--border);border-radius:999px;padding:.2rem .6rem;cursor:pointer;-webkit-appearance:none;appearance:none}
-.swap:hover{border-color:var(--accent-soft);color:var(--accent-soft)}
-.swap option{color:#000}
-.today-bar .swapped{color:var(--muted);font-size:.82rem}
-@media print{.swap,.today-bar{display:none}}
-
-/* ---------- PIN gate ---------- */
-body.locked > *:not(#gate){display:none}
-#gate{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:1.5rem;z-index:100}
-#gate[hidden]{display:none}
-.gate-box{width:100%;max-width:22rem;text-align:center}
-.gate-box .logo{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.4rem;display:block;margin-bottom:1.2rem}
-.gate-box .logo span{color:var(--accent-soft)}
-.gate-box h1{font-size:1.5rem;margin-bottom:.4rem}
-.gate-box p{color:var(--muted);font-size:.9rem;margin-bottom:1.2rem}
-.gate-box input{font:inherit;font-size:1.6rem;letter-spacing:.4em;text-align:center;width:100%;padding:.6rem;border-radius:12px;border:1px solid var(--border);background:var(--bg-soft);color:var(--text)}
-.gate-box input:focus{outline:2px solid var(--gulf);border-color:var(--gulf)}
-.gate-box button{margin-top:.9rem;font:inherit;font-weight:600;width:100%;padding:.7rem;border-radius:12px;border:0;background:var(--accent);color:#fff;cursor:pointer}
-.gate-box .err{color:var(--jumpsuit);font-size:.85rem;min-height:1.2em;margin-top:.6rem}
-#private .numbers td:first-child{color:var(--sand)}
-
-/* ---------- Bears ---------- */
-.paw-trail{position:absolute;left:14px;top:0;width:28px;pointer-events:none;z-index:5}
-.paw-trail i{position:absolute;left:0;width:22px;height:22px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%239fb0a4'><ellipse cx='12' cy='15.5' rx='5' ry='4.2'/><circle cx='6' cy='9.5' r='2'/><circle cx='10' cy='6.5' r='2'/><circle cx='14' cy='6.5' r='2'/><circle cx='18' cy='9.5' r='2'/></svg>") center/contain no-repeat;opacity:0;transition:opacity .6s}
-.paw-trail i.on{opacity:.35}
-.paw-trail i:nth-child(odd){transform:rotate(-14deg) translateX(6px)}
-.paw-trail i:nth-child(even){transform:rotate(12deg)}
-@media (max-width:1240px){.paw-trail{display:none}}
-.bear-walk{position:fixed;left:-160px;bottom:0;width:140px;height:90px;z-index:60;pointer-events:none;animation:walk 9s linear forwards}
-@keyframes walk{0%{left:-160px}100%{left:110%}}
-.bear-walk svg{width:100%;height:100%;animation:bob .5s ease-in-out infinite alternate}
-@keyframes bob{from{transform:translateY(0)}to{transform:translateY(-3px)}}
-.bear-peek{position:fixed;right:-10px;bottom:-110px;width:120px;height:100px;z-index:60;transition:bottom .7s cubic-bezier(.2,1.3,.4,1);pointer-events:none}
-.bear-peek.up{bottom:-8px}
-.egg{cursor:pointer;color:inherit;border-bottom:1px dotted transparent}
-.egg:hover{border-bottom-color:var(--sand)}
-.egg.found{color:var(--sand)}
-.bear-toast{position:fixed;left:50%;bottom:1.2rem;transform:translate(-50%,20px);background:var(--card);border:1px solid var(--border);border-left:3px solid var(--sand);border-radius:12px;padding:.8rem 1rem;max-width:min(92vw,34rem);font-size:.9rem;z-index:70;opacity:0;transition:all .35s;pointer-events:none}
-.bear-toast.show{opacity:1;transform:translate(-50%,0)}
-.bear-toast b{color:var(--sand)}
-.bear-count{position:fixed;right:1rem;top:4.4rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--bg-soft);border:1px solid var(--border);border-radius:999px;padding:.25rem .6rem;z-index:40;opacity:0;transition:opacity .4s}
-.bear-count.show{opacity:1}
-@media print{.paw-trail,.bear-walk,.bear-peek,.bear-toast,.bear-count,.firefly,.ridges,.mist{display:none}}
-@media (prefers-reduced-motion:reduce){.firefly,.bear-walk svg{animation:none}}
-
-footer{padding:2.5rem 0 3.5rem;color:var(--muted);font-size:.85rem}
-footer a{color:var(--muted)}
-
-@media (max-width:640px){
-  .slot{grid-template-columns:5rem 1fr;gap:.7rem}
-  .pack-bar{position:static}
-  .nav{flex-wrap:wrap;gap:.4rem .8rem}
-  .nav .logo{flex:none}
-  .nav ul{gap:.9rem;flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:.1rem;scrollbar-width:none}
-  .nav ul::-webkit-scrollbar{display:none}
-}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-@media print{
-  body{background:#fff;color:#000}
-  header,.pack-bar,footer,.hero p.lede{display:none}
-  .day,.pack-cat,.kid,.opt{border:1px solid #999;background:#fff;break-inside:avoid}
-  a{color:#000}
-  .slot time,.kicker,.opt .meta{color:#444}
-}
-</style>
+<link rel="stylesheet" href="site.css?v=3">
 </head>
 <body class="locked">
 
@@ -276,6 +50,7 @@ footer a{color:var(--muted)}
   <div class="container">
     <p class="kicker">Family trip &middot; Great Smoky Mountains, Tennessee</p>
     <h1>Thanksgiving week in <em>Gatlinburg</em></h1>
+    <p class="countdown" id="countdown" hidden></p>
     <p class="lede">Seven days in a cabin with a seven-year-old, a two-year-old and a one-year-old. Out early, nap hard, lights after dark, home by seven. Everything below is built around that rhythm and around the two days the whole town shows up.</p>
 
     <dl class="facts">
@@ -341,6 +116,7 @@ footer a{color:var(--muted)}
         <li class="slot"><time>5:30p ET</time><div><div class="what">Dinner in. Early</div><div class="why">Frozen pizza night. Everybody is wrecked and it is already dark.</div></div></li>
         <li class="slot"><time>7:00p ET</time><div><div class="what">Everyone down</div><div class="why">Pack-n-play in the darkest room, sound machines on, trash bags over any window facing the porch light. It is 6pm to their bodies, which helps this one night.</div></div></li>
       </ul>
+      <a class="day-link" href="day-0-sun.html">Open Sunday: map, photos, Plan B &rarr;</a>
     </div>
 
     <div class="callout water">
@@ -375,6 +151,7 @@ footer a{color:var(--muted)}
         <li class="slot"><time>5:00p</time><div><div class="what">Dinner in the park, then the lights come on</div><div class="why">Snow in the Grove runs in Wildwood Grove each evening with the characters. Glacier Ridge and Peppermint Valley are the light walks. Get through the Grove first, then Glacier Ridge on the way out.</div></div></li>
         <li class="slot"><time>6:45p</time><div><div class="what">Leave before the park does</div><div class="why">The 9pm close is for people without a one-year-old. Out by seven, home by 7:45, bed. Tomorrow is a recovery day on purpose.</div></div></li>
       </ul>
+      <a class="day-link" href="day-1-mon.html">Open Monday: map, photos, Plan B &rarr;</a>
       <div class="callout sun">
         <h3>Heights will decide Cash's day</h3>
         <p>No minimum: Dollywood Express, Village Carousel, Lemon Twist, Flying Elephants, Rockin' Roadway. Treetop Tower and Frogs and Fireflies need a 14+ companion under 42 and 36 inches. The Country Fair kiddie rides moved to a 36-inch minimum for 2026, so Slavik may be shut out of Busy Bees and Lucky Ducky. At <strong>42 inches</strong> Cash gets Blazing Fury, Sky Rider and the Waltzing Swinger. At <strong>48 inches</strong> he gets Thunderhead, Mystery Mine and Barnstormer. A seven-year-old is usually right around 48, so measure him at the cabin Sunday night and again at the park.</p>
@@ -394,6 +171,7 @@ footer a{color:var(--muted)}
         <li class="slot"><time>5:15p</time><div><div class="what">Lights come on</div><div class="why">Enchanted Christmas is the whole mountaintop lit up. Half an hour of walking it is plenty. Cliff Top has food if you'd rather eat up there than fight downtown.</div></div></li>
         <li class="slot"><time>6:15p</time><div><div class="what">Down and home</div><div class="why">The Chondola line down gets long after 6:30. Be in it by 6:15.</div></div></li>
       </ul>
+      <a class="day-link" href="day-2-tue.html">Open Tuesday: map, photos, Plan B &rarr;</a>
     </div>
 
     <div class="day" data-date="2026-11-25" data-plan="cades-cove">
@@ -408,6 +186,7 @@ footer a{color:var(--muted)}
         <li class="slot"><time>3:30p</time><div><div class="what">Thanksgiving grocery run <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Food%20City%2C%201219%20East%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="addr">1219 East Parkway</div><div class="why">Food City on East Parkway for tomorrow's dinner. Wednesday afternoon is the last sane time to do it. Food City runs holiday hours Thursday.</div></div></li>
         <li class="slot"><time>5:00p</time><div><div class="what">Optional: the Arts &amp; Crafts show <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Gatlinburg%20Convention%20Center%2C%20234%20Historic%20Nature%20Trail%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="addr">234 Historic Nature Trail</div><div class="why">Great Smoky Thanksgiving Arts &amp; Crafts Show at the Gatlinburg Convention Center, Nov 24 to 29. Free, indoor, warm, and an easy hour if the kids are restless. Skip it if they aren't.</div></div></li>
       </ul>
+      <a class="day-link" href="day-3-wed.html">Open Wednesday: map, photos, Plan B &rarr;</a>
       <div class="callout">
         <h3>Bears are real in the Cove in November</h3>
         <p>They are fattening up before denning and they are on the loop. Fifty yards minimum, nobody gets out of the car for a bear, and no food left out at the picnic area. If a bear jam forms, drive through it. You will see <span class="egg" data-egg="3">another one</span>.</p>
@@ -426,6 +205,7 @@ footer a{color:var(--muted)}
         <li class="slot"><time>5:30p</time><div><div class="what">Lights Over Gatlinburg from the SkyLift <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Gatlinburg%20SkyPark%2C%20765%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="why">765 Parkway, 15 minutes from the table. Included with SkyPark admission, runs nightly. Each chair holds three heartbeats and the baby counts, so you're two chairs. No strollers anywhere in the park. Snejana rides in the carrier on a lap. Skip this if dinner ran long. It's a bonus, not a plan.</div></div></li>
         <li class="slot"><time>7:00p</time><div><div class="what">Home and down</div></div></li>
       </ul>
+      <a class="day-link" href="day-4-thu.html">Open Thanksgiving: map, photos, Plan B &rarr;</a>
       <div class="callout sun">
         <h3>If you want someone else to cook</h3>
         <p><strong>Mama's Farmhouse</strong>, 208 Pickel St, Pigeon Forge <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Mama%27s%20Farmhouse%2C%20208%20Pickel%20St%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a>. Family-style, all you can eat, a special Thanksgiving menu, open 11 to 9. The right call for this crew because food arrives in bowls immediately and nobody needs a menu. Reservations are encouraged and it fills up. Book it today as the backup even if you plan to cook. <strong>Ober Mountain</strong> runs a Thanksgiving Feast at the top, 11 to 5, which would fold the whole morning into one trip; reservations there too. <strong>Cracker Barrel</strong> on the Pigeon Forge Parkway serves its traditional plate from 11 with no reservation, and <strong>The Park Grill</strong> in Gatlinburg has a special menu 11:30 to 9. The Pigeon Forge trolley doesn't run on Thanksgiving, so whatever you pick, you're driving.</p>
@@ -443,6 +223,7 @@ footer a{color:var(--muted)}
         <li class="slot"><time>3:30p</time><div><div class="what">Start the pack-out</div><div class="why">Pull the muddy gear onto the porch, run laundry, box what won't get used again. Saturday morning gets ugly otherwise.</div></div></li>
         <li class="slot"><time>5:45p</time><div><div class="what">Shadrack's drive-through lights, Sevierville <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.8911839%2C-83.5882943" target="_blank" rel="noopener">Directions</a></div><div class="addr">Soaky Mountain Waterpark, 175 Soaky Way, Sevierville</div><div class="why">At Soaky Mountain Waterpark, $39.95 per car Friday, opens at 6, rain or shine. Kids stay in their car seats in pajamas with the radio synced to the lights. Forty minutes, then they're asleep before you're back. Sevierville traffic on Black Friday is the price. Leave early or skip it.</div></div></li>
       </ul>
+      <a class="day-link" href="day-5-fri.html">Open Friday: map, photos, Plan B &rarr;</a>
       <div class="callout">
         <h3>If the high road is closed</h3>
         <p><strong>Roaring Fork Motor Nature Trail</strong> is the fallback, and it also closes Monday. Turn at traffic light #8 onto Historic Nature Trail, five and a half miles one way, narrow and slow, past the Noah Ogle place and a few cabins. Ogle's is a hundred yards from the road and fine for all three. Grotto Falls is not a toddler walk. Then the Gatlinburg Trail from Sugarlands, two miles each way on gravel, flat, stroller-fine, with the river the whole way.</p>
@@ -458,6 +239,7 @@ footer a{color:var(--muted)}
         <li class="slot"><time>11:45a CT</time><div><div class="what">Chattanooga, back on I-59. You just got an hour back</div></div></li>
         <li class="slot"><time>2:30p CT</time><div><div class="what">Home</div></div></li>
       </ul>
+      <a class="day-link" href="day-6-sat.html">Open Saturday: map, photos, Plan B &rarr;</a>
     </div>
   </div>
 </section>
@@ -742,291 +524,6 @@ footer a{color:var(--muted)}
   </div>
 </footer>
 
-<script>
-/* PIN gate. The private block is AES-GCM encrypted with a key derived from the PIN (PBKDF2).
-   A correct PIN decrypts it and unlocks the page; the PIN is remembered on this phone. */
-(function(){
-  var KEY = 'gatlinburg-2026-pin';
-  var gate = document.getElementById('gate'), form = document.getElementById('gate-form');
-  var input = document.getElementById('pin'), err = document.getElementById('gate-err');
-  var blob = JSON.parse(document.getElementById('private-blob').textContent);
-  var out = document.getElementById('private-body');
-  function b64(s){ var bin = atob(s), a = new Uint8Array(bin.length); for (var i=0;i<bin.length;i++) a[i] = bin.charCodeAt(i); return a; }
-  function unlock(html){
-    out.innerHTML = html;
-    document.body.classList.remove('locked');
-    gate.hidden = true;
-  }
-  function tryPin(pin){
-    if (!window.crypto || !crypto.subtle) return Promise.reject(new Error('nocrypto'));
-    var enc = new TextEncoder();
-    return crypto.subtle.importKey('raw', enc.encode(pin), 'PBKDF2', false, ['deriveKey']).then(function(km){
-      return crypto.subtle.deriveKey({name:'PBKDF2', salt: b64(blob.salt), iterations: blob.it, hash:'SHA-256'}, km, {name:'AES-GCM', length:256}, false, ['decrypt']);
-    }).then(function(key){
-      return crypto.subtle.decrypt({name:'AES-GCM', iv: b64(blob.iv)}, key, b64(blob.ct));
-    }).then(function(buf){ return new TextDecoder().decode(buf); });
-  }
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var pin = input.value.trim(); if (!pin) return;
-    err.textContent = '';
-    tryPin(pin).then(function(html){
-      try { localStorage.setItem(KEY, pin); } catch(x){}
-      unlock(html);
-    }).catch(function(e){
-      err.textContent = e.message === 'nocrypto' ? 'This browser cannot open the page. Use Safari or Chrome.' : 'Wrong PIN.';
-      input.value = ''; input.focus();
-    });
-  });
-  var saved = null; try { saved = localStorage.getItem(KEY); } catch(x){}
-  if (saved) { tryPin(saved).then(unlock).catch(function(){ try { localStorage.removeItem(KEY); } catch(x){} input.focus(); }); }
-  else { input.focus(); }
-})();
-
-/* Packing list: counter, clear, print. Ticks are remembered per phone (localStorage). */
-(function(){
-  var KEY = 'gatlinburg-2026-packing';
-  var boxes = [].slice.call(document.querySelectorAll('#grid input[type=checkbox]'));
-  var count = document.getElementById('count');
-  var total = document.getElementById('total');
-  total.textContent = boxes.length;
-  function label(b){ return b.parentNode.textContent.replace(/\s+/g,' ').trim(); }
-  function load(){ try { return JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e){ return {}; } }
-  function save(){
-    var o = {};
-    boxes.forEach(function(b){ if (b.checked) o[label(b)] = 1; });
-    try { localStorage.setItem(KEY, JSON.stringify(o)); } catch(e){}
-  }
-  function tally(){
-    var n = 0;
-    for (var i=0;i<boxes.length;i++){ if (boxes[i].checked) n++; }
-    count.textContent = n;
-  }
-  var saved = load();
-  boxes.forEach(function(b){ if (saved[label(b)]) b.checked = true; });
-  boxes.forEach(function(b){ b.addEventListener('change', function(){ tally(); save(); }); });
-  document.getElementById('clear').addEventListener('click', function(){
-    boxes.forEach(function(b){ b.checked = false; });
-    tally(); save();
-  });
-  document.getElementById('print').addEventListener('click', function(){ window.print(); });
-  tally();
-})();
-
-/* Today view: during the trip, mark today's card, collapse the days already done. */
-(function(){
-  var cards = [].slice.call(document.querySelectorAll('.day[data-date]'));
-  var bar = document.getElementById('today-bar');
-  var btn = document.getElementById('toggle-past');
-  var lbl = document.getElementById('today-label');
-  if (!cards.length || !bar) return;
-  cards = cards.filter(function(c){ return c.closest('#days'); });
-  // Today in Eastern time, as YYYY-MM-DD.
-  var today;
-  try { today = new Intl.DateTimeFormat('en-CA', {timeZone:'America/New_York', year:'numeric', month:'2-digit', day:'2-digit'}).format(new Date()); }
-  catch(e){ today = new Date().toISOString().slice(0,10); }
-  var first = cards[0].getAttribute('data-date'), last = cards[cards.length-1].getAttribute('data-date');
-  if (today < first || today > last) return;
-  var past = 0, todayCard = null;
-  cards.forEach(function(c){
-    var d = c.getAttribute('data-date');
-    if (d < today) { c.classList.add('is-past','collapsed'); past++; }
-    if (d === today) { c.classList.add('is-today'); todayCard = c; }
-  });
-  var names = {'2026-11-22':'Sunday','2026-11-23':'Monday','2026-11-24':'Tuesday','2026-11-25':'Wednesday','2026-11-26':'Thanksgiving','2026-11-27':'Friday','2026-11-28':'Saturday'};
-  lbl.textContent = 'Today: ' + (names[today] || today);
-  lbl.hidden = false;
-  if (past) btn.hidden = false;
-  var shown = false;
-  btn.addEventListener('click', function(){
-    shown = !shown;
-    cards.forEach(function(c){ if (c.classList.contains('is-past')) c.classList.toggle('collapsed', !shown); });
-    btn.textContent = shown ? 'Hide earlier days' : 'Show earlier days';
-  });
-  if (todayCard && !location.hash) {
-    setTimeout(function(){ todayCard.scrollIntoView({block:'start'}); window.scrollBy(0,-72); }, 50);
-  }
-})();
-
-/* Swap days: move a day's plan to another date. Remembered per phone. */
-(function(){
-  var KEY = 'gatlinburg-2026-days';
-  var cards = [].slice.call(document.querySelectorAll('#days .day[data-plan]'));
-  var reset = document.getElementById('reset-days');
-  var note = document.getElementById('swap-note');
-  if (cards.length < 2) return;
-  var short = {'2026-11-23':'Mon 23','2026-11-24':'Tue 24','2026-11-25':'Wed 25','2026-11-26':'Thu 26','2026-11-27':'Fri 27'};
-  function dateSpan(c){ return c.querySelector('.day-date'); }
-  function swap(a, b){
-    if (a === b) return;
-    var da = dateSpan(a).textContent, db = dateSpan(b).textContent;
-    var pa = a.getAttribute('data-plan'), pb = b.getAttribute('data-plan');
-    var ha = a.innerHTML, hb = b.innerHTML;
-    a.innerHTML = hb; b.innerHTML = ha;
-    dateSpan(a).textContent = da; dateSpan(b).textContent = db;
-    a.setAttribute('data-plan', pb); b.setAttribute('data-plan', pa);
-    [a, b].forEach(function(c){ [].slice.call(c.querySelectorAll('select.swap')).forEach(function(x){ x.parentNode.removeChild(x); }); });
-    wire(a); wire(b);
-  }
-  function byPlan(p){ for (var i=0;i<cards.length;i++){ if (cards[i].getAttribute('data-plan') === p) return cards[i]; } return null; }
-  function current(){ var o = {}; cards.forEach(function(c){ o[c.getAttribute('data-date')] = c.getAttribute('data-plan'); }); return o; }
-  var original = current();
-  function save(){ try { localStorage.setItem(KEY, JSON.stringify(current())); } catch(e){} refresh(); }
-  function refresh(){
-    var o = current(), changed = 0;
-    for (var d in o) if (o[d] !== original[d]) changed++;
-    reset.hidden = !changed;
-    note.textContent = changed ? 'Plan rearranged on this phone. Dates and forecast stay put; the day plans moved.' : 'Each day card has a swap menu. Swaps are remembered on this phone.';
-  }
-  function wire(c){
-    var head = c.querySelector('.day-head');
-    var sel = document.createElement('select');
-    sel.className = 'swap'; sel.setAttribute('aria-label', 'Swap this day with another');
-    var o0 = document.createElement('option'); o0.value = ''; o0.textContent = 'Swap with\u2026'; sel.appendChild(o0);
-    cards.forEach(function(other){
-      if (other === c) return;
-      var o = document.createElement('option'); o.value = other.getAttribute('data-date'); o.textContent = short[o.value] || o.value; sel.appendChild(o);
-    });
-    sel.addEventListener('change', function(){
-      var target = null; cards.forEach(function(x){ if (x.getAttribute('data-date') === sel.value) target = x; });
-      sel.value = '';
-      if (target) { swap(c, target); save(); }
-    });
-    head.appendChild(sel);
-  }
-  cards.forEach(wire);
-  var saved = null; try { saved = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch(e){}
-  if (saved) {
-    cards.forEach(function(c){
-      var want = saved[c.getAttribute('data-date')];
-      if (want && want !== c.getAttribute('data-plan')) { var holder = byPlan(want); if (holder) swap(c, holder); }
-    });
-  }
-  reset.addEventListener('click', function(){
-    cards.forEach(function(c){
-      var want = original[c.getAttribute('data-date')];
-      if (want !== c.getAttribute('data-plan')) { var holder = byPlan(want); if (holder) swap(c, holder); }
-    });
-    try { localStorage.removeItem(KEY); } catch(e){}
-    refresh();
-  });
-  refresh();
-})();
-
-/* Bears. Seven hidden in the copy, a trail of paws down the margin on big screens,
-   a walker if you type the word, a peeker if you poke the logo. */
-(function(){
-  var FACTS = {
-    1: 'Cades Cove has about two bears per square mile, the densest population in the park. Deer are the decoys.',
-    2: 'Smokies black bears are not always black. Cinnamon and even blond ones turn up, but here almost all are black.',
-    3: 'Around 1,900 black bears live in the park. Most of what you see in the Cove is the same few families.',
-    4: 'A bear can smell a granola bar through a closed car. Nothing edible sleeps on the deck. Not even the lovey.',
-    5: 'Bears can run 30 mph uphill. Nobody outruns one, so nobody tries. Fifty yards, back away, talk calmly.',
-    6: 'Cubs born in January weigh about half a pound, less than Snejana\'s hat. By Thanksgiving they\'re 40 pounds and still with mom.',
-    7: 'A fed bear is a dead bear. The park euthanizes bears that learn to get food from people. Pack it in, pack it out.'
-  };
-  var KEY = 'gatlinburg-2026-bears';
-  var found = {}; try { found = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e){}
-  var toast = document.getElementById('bear-toast'), count = document.getElementById('bear-count'), peek = document.getElementById('bear-peek');
-  var eggs = [].slice.call(document.querySelectorAll('.egg'));
-  var tmr;
-  function say(html, ms){ toast.innerHTML = html; toast.classList.add('show'); clearTimeout(tmr); tmr = setTimeout(function(){ toast.classList.remove('show'); }, ms || 6000); }
-  function save(){ try { localStorage.setItem(KEY, JSON.stringify(found)); } catch(e){} }
-  function tally(){
-    var n = 0; for (var k in found) if (k !== 'done') n++;
-    eggs.forEach(function(e){ if (found[e.getAttribute('data-egg')]) e.classList.add('found'); });
-    if (n) { count.textContent = 'Bears found ' + n + ' of 7'; count.classList.add('show'); }
-    if (n === 7 && !found.done) { found.done = 1; save(); setTimeout(function(){ say('<b>All seven.</b> You found every bear on this page. The real ones are in Cades Cove at 8am Wednesday. Tell Cash.', 9000); walk(); }, 1200); }
-  }
-  eggs.forEach(function(e){
-    e.setAttribute('title', 'There is a bear here');
-    e.addEventListener('click', function(ev){
-      ev.preventDefault();
-      var id = e.getAttribute('data-egg');
-      var first = !found[id];
-      found[id] = 1; save();
-      say('<b>' + (first ? 'Bear spotted.' : 'Same bear.') + '</b> ' + FACTS[id]);
-      tally();
-    });
-  });
-  tally();
-
-  function walk(){
-    if (document.querySelector('.bear-walk')) return;
-    var d = document.createElement('div'); d.className = 'bear-walk';
-    d.innerHTML = '<svg><use href="#bear-side"></use></svg>';
-    document.body.appendChild(d);
-    setTimeout(function(){ if (d.parentNode) d.parentNode.removeChild(d); }, 9500);
-  }
-  var typed = '';
-  document.addEventListener('keydown', function(e){
-    if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA')) return;
-    typed = (typed + (e.key || '')).slice(-4).toLowerCase();
-    if (typed === 'bear') { typed = ''; walk(); say('<b>Bear.</b> You typed it, you got it.'); }
-  });
-
-  var pokes = 0, pokeTmr;
-  var logo = document.querySelector('header .logo');
-  if (logo) logo.addEventListener('click', function(e){
-    pokes++; clearTimeout(pokeTmr); pokeTmr = setTimeout(function(){ pokes = 0; }, 1500);
-    e.preventDefault();
-    if (pokes >= 3) { pokes = 0; peek.classList.add('up'); say('<b>Hey.</b> Three pokes and the bear looks over the deck rail. Hot tub cover on?'); setTimeout(function(){ peek.classList.remove('up'); }, 4000); }
-    else if (pokes === 1) { setTimeout(function(){ if (pokes === 1) { pokes = 0; location.href = '/'; } }, 400); }
-  });
-
-  var trail = document.getElementById('paw-trail');
-  if (trail && window.innerWidth >= 1240) {
-    var H = Math.max(document.body.scrollHeight, 2000), n = Math.floor(H / 160);
-    for (var i = 0; i < n; i++) { var pw = document.createElement('i'); pw.style.top = (i * 160 + 120) + 'px'; trail.appendChild(pw); }
-    var paws = [].slice.call(trail.children);
-    trail.style.height = H + 'px';
-    function reveal(){ var y = window.scrollY + window.innerHeight * 0.8; paws.forEach(function(pp){ if (parseInt(pp.style.top, 10) < y) pp.classList.add('on'); }); }
-    window.addEventListener('scroll', reveal, {passive:true}); reveal();
-  }
-
-  var realTitle = document.title;
-  document.addEventListener('visibilitychange', function(){ document.title = document.hidden ? '\uD83D\uDC3B ' + realTitle : realTitle; });
-  if (window.console && console.log) console.log('%c\uD83D\uDC3B  You found the bear in the console. Type the word bear on the page for another one.', 'font-size:14px');
-})();
-
-/* Weather: Open-Meteo, no key. Town = cabin, Ridge = Kuwohi. Fails quietly offline. */
-(function(){
-  var box = document.getElementById('wx'), grid = document.getElementById('wx-grid'), note = document.getElementById('wx-note');
-  if (!box || !window.fetch) return;
-  var base = 'https://api.open-meteo.com/v1/forecast?temperature_unit=fahrenheit&precipitation_unit=inch&timezone=America%2FNew_York&forecast_days=10';
-  var town = base + '&latitude=35.714&longitude=-83.510&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,snowfall_sum';
-  var ridge = base + '&latitude=35.5628&longitude=-83.4985&elevation=2025&daily=temperature_2m_max,temperature_2m_min,snowfall_sum';
-  var START = '2026-11-22', END = '2026-11-28';
-  var dn = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-  var today;
-  try { today = new Intl.DateTimeFormat('en-CA', {timeZone:'America/New_York', year:'numeric', month:'2-digit', day:'2-digit'}).format(new Date()); } catch(e){ today = ''; }
-  function j(u){ return fetch(u).then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); }); }
-  Promise.all([j(town), j(ridge)]).then(function(res){
-    var t = res[0].daily, r = res[1].daily, html = '', shown = 0;
-    for (var i = 0; i < t.time.length; i++) {
-      var d = t.time[i];
-      if (d < START || d > END) continue;
-      var ri = r.time.indexOf(d);
-      var dow = dn[new Date(d + 'T12:00:00').getDay()];
-      var snowT = t.snowfall_sum[i] || 0, snowR = ri >= 0 ? (r.snowfall_sum[ri] || 0) : 0;
-      html += '<div class="wx-day' + (d === today ? ' today' : '') + '">'
-        + '<b>' + dow + ' ' + parseInt(d.slice(8),10) + '</b>'
-        + '<div class="t">' + Math.round(t.temperature_2m_max[i]) + '&deg; / ' + Math.round(t.temperature_2m_min[i]) + '&deg;</div>'
-        + '<div class="r">rain ' + (t.precipitation_probability_max[i] == null ? '?' : t.precipitation_probability_max[i] + '%') + '</div>'
-        + (ri >= 0 ? '<div class="r">ridge ' + Math.round(r.temperature_2m_max[ri]) + '&deg; / ' + Math.round(r.temperature_2m_min[ri]) + '&deg;</div>' : '')
-        + ((snowT > 0 || snowR > 0) ? '<div class="r snow">snow' + (snowR > 0 ? ' on ridge' : '') + '</div>' : '')
-        + '</div>';
-      shown++;
-    }
-    if (!shown) { note.textContent = 'Forecast reaches ten days out. Trip days appear here from Nov 13.'; }
-    grid.innerHTML = html;
-    box.hidden = false;
-  }).catch(function(){
-    note.textContent = 'Forecast unavailable right now. Weather.gov for Gatlinburg is the backup.';
-    grid.innerHTML = '';
-    box.hidden = false;
-  });
-})();
-</script>
+<script src="site.js?v=3"></script>
 </body>
 </html>
