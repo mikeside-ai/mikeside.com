@@ -4,14 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Dollywood — Monday, Nov 23 · Gatlinburg week</title>
+<meta name="theme-color" content="#0b1411">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Forge a knife, ride the wheel — Monday · Gatlinburg week</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-<link rel="stylesheet" href="site.css?v=3">
+<link rel="stylesheet" href="site.css?v=4">
 </head>
-<body class="locked day-page" data-date="2026-11-23">
+<body class="locked day-page" data-date="2026-11-23" data-page="2026-11-23">
 
 <div id="gate">
   <form class="gate-box" id="gate-form" autocomplete="off">
@@ -34,27 +39,28 @@
         <li><a href="day-2-tue.html">Tue 24 &rarr;</a></li>
         <li><a href="#plan">Plan</a></li>
         <li><a href="#map">Map</a></li>
+        <li><a href="trails.html">Trails</a></li>
         <li><a href="#journal">Journal</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<div class="banner" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Dollywood%20from%20the%20Dollywood%20Express%20-%208.jpg?width=1400')">
+<div class="banner" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Pigeon%20Forge%20Mill%20-%20October%202023%20-%20Sarah%20Stierch%2003.jpg?width=1400')">
   <div class="banner-shade"></div>
   <div class="container banner-text">
-    <p class="kicker">Day 1 · Dollywood</p>
-    <h1>Dollywood</h1>
-    <p class="banner-date">Monday, Nov 23 <span class="tag hot">Big day</span></p>
+    <p class="kicker">Day 1 · Old Mill and The Island</p>
+    <h1>Forge a knife, ride the wheel</h1>
+    <p class="banner-date">Monday, Nov 23 <span class="tag calm">Pigeon Forge</span></p>
   </div>
-  <span class="credit">Roc0ast3r · CC0</span>
+  <span class="credit">Sarah Stierch · CC BY 4.0</span>
 </div>
 
-<div class="chips container" aria-label="Days"><a class="chip" href="day-0-sun.html">Sun 22</a><a class="chip on" href="day-1-mon.html">Mon 23</a><a class="chip" href="day-2-tue.html">Tue 24</a><a class="chip" href="day-3-wed.html">Wed 25</a><a class="chip" href="day-4-thu.html">Thu 26</a><a class="chip" href="day-5-fri.html">Fri 27</a><a class="chip" href="day-6-sat.html">Sat 28</a></div>
+<div class="chips container" aria-label="Days"><a class="chip" href="day-0-sun.html">Sun 22</a><a class="chip on" href="day-1-mon.html">Mon 23</a><a class="chip" href="day-2-tue.html">Tue 24</a><a class="chip" href="day-3-wed.html">Wed 25</a><a class="chip" href="day-4-thu.html">Thu 26</a><a class="chip" href="day-5-fri.html">Fri 27</a><a class="chip" href="day-6-sat.html">Sat 28</a><a class="chip" href="bonus-dollywood.html">Bonus</a></div>
 
 <section class="daytop">
   <div class="container">
-    <p class="lede">The one big-ticket day, placed on the lightest day of the week on purpose. Wildwood Grove first, the train before lunch, Cash's coasters by wristband, lights on the way out.</p>
+    <p class="lede">Hammers in the morning, a wheel at dusk. Vlad and Cash each forge a knife at Iron Mountain while the little two walk the Old Mill square, then naps, then The Island for the carousel, the big wheel and the fountain show. Pigeon Forge at kid height, no gate fee anywhere.</p>
     <dl class="facts facts-day">
       <div class="fact"><dt>Forecast</dt><dd id="day-wx">Loading&hellip;<small id="day-wx-ridge"></small></dd></div>
       <div class="fact"><dt>Right now</dt><dd id="now-temp">&mdash;<small id="now-clock"></small></dd></div>
@@ -76,30 +82,32 @@
       </div>
     </div>
     <div class="plan" id="plan-a">
-      <p class="day-note">Monday before Thanksgiving is the lightest day the park will have all week. Park opens at 10. Be in the lot at 9:15. Parking is $25. Tickets: $94.99 adults, $84.99 for Cash. Slavik and Snejana are free. Buy online tonight, not at the gate.</p>
+      <p class="day-note">Everything today sits in two spots: the Old Mill square and The Island, three minutes apart. Iron Mountain opens at 9 and the forge sessions book up, so call (865) 365-4344 today and reserve two: a railroad spike knife for Vlad, a nail knife for Cash.</p>
       <ul class="slots" id="slots-a">
-        <li class="slot" data-lat="35.7887" data-lng="-83.53" data-stop="Park, tram to the gate, measure Cash"><time>9:15a</time><div><div class="what">Park, tram to the gate, measure Cash <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Dollywood%2C%202700%20Dollywood%20Parks%20Blvd%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></div><div class="addr">2700 Dollywood Parks Blvd, Pigeon Forge</div><div class="why">The measuring station on Showstreet gives him a wristband for the day. 42 inches opens Blazing Fury and Sky Rider. 48 opens the real coasters. Don't guess, measure.</div></div></li>
-        <li class="slot"><time>10:00a</time><div><div class="what">Straight to Wildwood Grove</div><div class="why">Back of the park, so go first while everyone else stops at the front. Frogs and Fireflies, Treetop Tower, the Great Tree Swing at 36 inches, and the splash-free Wildwood Creek playground. This is Slavik's whole park.</div></div></li>
-        <li class="slot"><time>11:30a</time><div><div class="what">Dollywood Express</div><div class="why">The steam train. No height minimum, twenty minutes sitting down, and the single best thing for Snejana. Ride it before lunch while she's still happy.</div></div></li>
-        <li class="slot"><time>12:15p</time><div><div class="what">Lunch, then the Village</div><div class="why">Carousel and Lemon Twist have no minimum. Santa is in the Imagination Playhouse near the train depot. Cash and one adult peel off for Blazing Fury and whatever his wristband allows. Use Parent Swap so nobody waits twice.</div></div></li>
-        <li class="slot"><time>2:30p</time><div><div class="what">Stroller nap loop</div><div class="why">Snejana and probably Slavik go down in the stroller. Walk slow through Craftsman's Valley. One adult takes Cash to the Country Fair rides, which are 36 inches and up.</div></div></li>
-        <li class="slot"><time>5:00p</time><div><div class="what">Dinner in the park, then the lights come on</div><div class="why">Snow in the Grove runs in Wildwood Grove each evening with the characters. Glacier Ridge and Peppermint Valley are the light walks. Get through the Grove first, then Glacier Ridge on the way out.</div></div></li>
-        <li class="slot"><time>6:45p</time><div><div class="what">Leave before the park does</div><div class="why">The 9pm close is for people without a one-year-old. Out by seven, home by 7:45, bed. Tomorrow is a recovery day on purpose.</div></div></li>
+        <li class="slot" data-lat="35.7887" data-lng="-83.5531" data-stop="Iron Mountain Metal Craft"><time>9:00a</time><div><div class="what">Iron Mountain Metal Craft <span class="rate" data-say="Kids as young as 8 forging with a patient smith; everyone says it&#x27;s the thing their kids talked about all the way home." title="Google rating, 551 reviews">&#9733; 4.7<small>551</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Iron%20Mountain%20Metal%20Craft%2C%20172%20Old%20Mill%20Ave%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></div><div class="addr">172 Old Mill Ave, Pigeon Forge</div><div class="why">Vlad hammers a railroad spike into a knife, about an hour, $85, ages 13 and up. Cash does the nail knife, ages 5 to 12, $20, with a smith at his elbow the whole time. Closed-toe shoes for both. A sheath is included; engraving is $10 extra and worth it for his.</div></div></li>
+        <li class="slot" data-lat="35.7885" data-lng="-83.554" data-stop="Allison, Slavik and Snejana: the Old Mill square"><time>9:15a</time><div><div class="what">Allison, Slavik and Snejana: the Old Mill square <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=The%20Old%20Mill%20%26%20General%20Store%2C%20175%20Old%20Mill%20Ave%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></div><div class="why">While the forge runs. The water wheel on the Little Pigeon River, ducks off the dam, the Old Mill General Store with the corn fritter samples, the candy kitchen. All flat, all stroller.</div></div></li>
+        <li class="slot" data-lat="35.7878" data-lng="-83.5516" data-stop="Patriot Park, next door"><time>10:45a</time><div><div class="what">Patriot Park, next door <span class="rate" data-say="Free parking behind the Old Mill, $3-a-person trolley to Dollywood all day, Winterfest light walk to The Island." title="Google rating, 3,575 reviews">&#9733; 4.6<small>4k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Patriot%20Park%2C%20236%20Old%20Mill%20Ave%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></div><div class="why">236 Old Mill Ave. Grass and a riverside path to burn off the forge adrenaline. Free parking here if the mill lot is full.</div></div></li>
+        <li class="slot" data-lat="35.7892" data-lng="-83.5538" data-stop="Lunch: Pottery House Café"><time>11:15a</time><div><div class="what">Lunch: Pottery House Café <span class="rate" data-say="Best meal of the trip for a lot of people. Fresh bread, chicken pot pie, 30-minute waits that nobody regrets." title="Google rating, 7,957 reviews">&#9733; 4.7<small>8k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=The%20Old%20Mill%20Pottery%20House%20Caf%C3%A9%2C%203341%20Old%20Mill%20St%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></div><div class="why">3341 Old Mill St, across the footbridge. Opens at 11; be at the door, the wait is 30 minutes by noon. Fresh bread, chicken pot pie, kids' mac. The Old Mill Restaurant next door is the bigger, slower alternative.</div></div></li>
+        <li class="slot"><time>12:45p</time><div><div class="what">Home, naps</div><div class="why">Twenty minutes on the Spur. Long nap. Tonight is late-ish.</div></div></li>
+        <li class="slot" data-lat="35.803" data-lng="-83.5704" data-stop="The Island in Pigeon Forge"><time>3:45p</time><div><div class="what">The Island in Pigeon Forge <span class="rate" data-say="Free parking, free to walk, fountain show every hour, carousel. The one place in Pigeon Forge everyone agrees on." title="Google rating, 64,810 reviews">&#9733; 4.7<small>65k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=The%20Island%20in%20Pigeon%20Forge%2C%20131%20The%20Island%20Dr%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></div><div class="addr">131 The Island Dr</div><div class="why">Free parking, free to walk in. The Flying Horse carousel, the Great Smoky Mountain Wheel ($18.99, $13.99 for Cash, ask about Snejana), Santa photos by the wheel, a mile of Winterfest lights. Ben and Jerry's. It is the easiest three hours in Pigeon Forge with three kids.</div></div></li>
+        <li class="slot"><time>5:30p</time><div><div class="what">Dinner at The Island</div><div class="why">Timberwood Grill or whatever has no line. Eat at 5:30; by 6:30 everything has a wait.</div></div></li>
+        <li class="slot"><time>6:00p</time><div><div class="what">Fountain show, then home</div><div class="why">The Winterfest fountain show runs at 6, 7, 8 and 9 in the courtyard with the three LED trees. Watch the 6 o'clock from a bench, then the Spur home. Bed by 7:30.</div></div></li>
       </ul>
-      <div class="callout sun"><h3>Heights will decide Cash's day</h3><p>No minimum: Dollywood Express, Village Carousel, Lemon Twist, Flying Elephants, Rockin' Roadway. Treetop Tower and Frogs and Fireflies need a 14+ companion under 42 and 36 inches. The Country Fair kiddie rides moved to a 36-inch minimum for 2026, so Slavik may be shut out of Busy Bees and Lucky Ducky. At <strong>42 inches</strong> Cash gets Blazing Fury, Sky Rider and the Waltzing Swinger. At <strong>48 inches</strong> he gets Thunderhead, Mystery Mine and Barnstormer. A seven-year-old is usually right around 48, so measure him at the cabin Sunday night and again at the park.</p></div>
+      <div class="callout sun"><h3>Who forges what</h3><p>Iron Mountain's rules: the railroad spike knife is <strong>13 and up</strong>, the horseshoe is 9 and up, the pony shoe is a smaller knife at $35, and the <strong>nail knife is 5 to 12</strong> at $20. Cash qualifies for the nail knife only; don't argue it up a tier, the smith won't. Slavik and Snejana watch from behind the rope or walk the square with Allison. Sessions take 15 minutes of your hammering plus the smith's finishing; plan an hour for both of you. Reviewers' consensus is that this is the thing their kids talked about all the way home.</p></div>
     </div>
     <div class="plan" id="plan-b" hidden>
-      <div class="callout water"><h3>Plan B: rain all day</h3><p>Steady rain in the forecast strip for Monday. Dollywood in a cold rain with a one-year-old is a bad trade for $300. Swap Dollywood to Tuesday or Wednesday on the hub and do this instead.</p></div>
+      <div class="callout water"><h3>Plan B: cold rain, keep everything indoors</h3><p>The forge is indoors and still happens. Swap the outdoor half for Pigeon Forge Snow, where Cash tubes and the little two watch from the warm side, and skip The Island until it clears.</p></div>
       <ul class="slots" id="slots-b">
-        <li class="slot"><time>9:00a</time><div><div class="what">Ripley's Aquarium of the Smokies <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Ripley%27s%20Aquarium%20of%20the%20Smokies%2C%2088%20River%20Rd%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="why">88 River Rd. Be there at opening. Penguins, the shark tunnel, touch tank for Cash. Two hours, all indoors, stroller fine. Garage next door.</div></div></li>
-        <li class="slot"><time>11:30a</time><div><div class="what">Home, lunch, naps</div></div></li>
-        <li class="slot"><time>3:30p</time><div><div class="what">Sugarlands Visitor Center museum <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6857204%2C-83.5367666" target="_blank" rel="noopener">Directions</a></div><div class="why">Free, warm, the stuffed bears, a ranger for Cash. Buy the weekly parking tag while you're there.</div></div></li>
-        <li class="slot"><time>5:30p</time><div><div class="what">Winterfest lights from the car <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7880%2C-83.5540" target="_blank" rel="noopener">Directions</a></div><div class="why">Pigeon Forge Parkway, five miles of lights, pajamas and hot chocolate. Costs nothing and nobody gets wet.</div></div></li>
+        <li class="slot"><time>9:00a</time><div><div class="what">Iron Mountain Metal Craft <span class="rate" data-say="Kids as young as 8 forging with a patient smith; everyone says it&#x27;s the thing their kids talked about all the way home." title="Google rating, 551 reviews">&#9733; 4.7<small>551</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Iron%20Mountain%20Metal%20Craft%2C%20172%20Old%20Mill%20Ave%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></div><div class="why">Same as Plan A. The forge doesn't care about rain.</div></div></li>
+        <li class="slot"><time>10:45a</time><div><div class="what">Pigeon Forge Snow <span class="rate" data-say="Tubing is fast and fun. The &#x27;snow play&#x27; room is a sheet of ice; skip that add-on for the little two." title="Google rating, 3,822 reviews">&#9733; 4.4<small>4k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Pigeon%20Forge%20Snow%2C%202533%20Teaster%20Ln%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></div><div class="why">2533 Teaster Ln, five minutes. Indoor tubing, $29.99 an hour, 38 inches and 3 years to ride, so Cash only. Reviewers say the separate 'snow play' room is a slab of ice, so skip that for Slavik; he watches the tubes from the lounge with hot chocolate.</div></div></li>
+        <li class="slot"><time>12:15p</time><div><div class="what">Lunch at the Old Mill, then naps <span class="rate" data-say="Best meal of the trip for a lot of people. Fresh bread, chicken pot pie, 30-minute waits that nobody regrets." title="Google rating, 7,957 reviews">&#9733; 4.7<small>8k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=The%20Old%20Mill%20Pottery%20House%20Caf%C3%A9%2C%203341%20Old%20Mill%20St%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></div><div class="why">Pottery House if the wait is short, Old Mill Restaurant if it isn't. Home by 1:15.</div></div></li>
+        <li class="slot"><time>4:00p</time><div><div class="what">WonderWorks Toddler Town, or the aquarium <span class="rate" data-say="Hands-on and loud. Great for Cash, chaotic for a two-year-old. Go at opening." title="Google rating, 11,004 reviews">&#9733; 4.3<small>11k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=WonderWorks%20Pigeon%20Forge%2C%20100%20Music%20Rd%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></div><div class="why">WonderWorks (100 Music Rd) has a soft-play toddler zone and the science floor for Cash; loud and busy, go knowing that. Ripley's Aquarium is the calmer indoor option if you haven't used it.</div></div></li>
+        <li class="slot"><time>6:00p</time><div><div class="what">Winterfest lights from the car on the way home <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7880%2C-83.5540" target="_blank" rel="noopener">Directions</a></div><div class="why">The Parkway, slow, in pajamas.</div></div></li>
       </ul>
     </div>
     <div class="bail">
-      <h3>Bail-out: Dollywood's Parent Swap and the train <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Dollywood%2C%202700%20Dollywood%20Parks%20Blvd%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></h3>
-      <p>If a kid melts down mid-park, the Dollywood Express is a twenty-minute sit-down that resets everybody. If it's the weather, the covered shows in the Village run all afternoon.</p>
+      <h3>Bail-out: The Old Mill General Store <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=The%20Old%20Mill%20%26%20General%20Store%2C%20175%20Old%20Mill%20Ave%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></h3>
+      <p>Right on the square, warm, candy counter, the water wheel outside the window. If the forge runs long or a kid is done, this is where the other adult waits with the little two.</p>
     </div>
   </div>
 </section>
@@ -109,7 +117,7 @@
     <p class="eyebrow">The ground</p>
     <h2>Map</h2>
     <p class="intro">Stops for the plan you have selected. The solid line is the road route; it is drawn live from OpenStreetMap, so it needs signal. Tap a marker for directions.</p>
-    <div id="leaflet" class="map" data-route='[]' data-route-b='[]'></div>
+    <div id="leaflet" class="map" data-route='[[35.7887, -83.5531, "Iron Mountain Metal Craft"], [35.7878, -83.5516, "Patriot Park, next door"], [35.803, -83.5704, "The Island in Pigeon Forge"]]' data-route-b='[[35.7887, -83.5531], [35.808, -83.5729], [35.7892, -83.5538], [35.8233, -83.5787]]'></div>
   </div>
 </section>
 
@@ -118,9 +126,10 @@
     <p class="eyebrow">What it looks like</p>
     <h2>The places</h2>
     <div class="strip">
-        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Dollywood%20Express%20No.%2070%20aka%20%22Cinderella%22%20-%20June%202023.jpg?width=800" alt=""><figcaption>Jeremy Thompson · CC BY 2.0</figcaption></figure>
-        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Dollywood%20sign%20-%20October%202023%20-%20Sarah%20Stierch.jpg?width=800" alt=""><figcaption>Sarah Stierch · CC BY 4.0</figcaption></figure>
-        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Thunderhead%20%28Dollywood%29%2002.JPG?width=800" alt=""><figcaption>Coasterman1234 · CC BY-SA 3.0</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/MJK49036%20Pigeon%20Forge%20Mill.jpg?width=800" alt=""><figcaption>Martin Kraft · CC BY-SA 4.0</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Old%20Mill%20Dam.%20%282021%29.jpg?width=800" alt=""><figcaption>Stch2022 · CC BY-SA 4.0</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Margaritaville%20Island%20Hotel%20-%20April%202026%20-%20Sarah%20Stierch%2002.jpg?width=800" alt=""><figcaption>Sarah Stierch · CC0</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pigeon%20Forge%20-%20October%202023%20-%20Sarah%20Stierch.jpg?width=800" alt=""><figcaption>Sarah Stierch · CC BY 4.0</figcaption></figure>
     </div>
   </div>
 </section>
@@ -131,9 +140,9 @@
     <h2>Today, each of them</h2>
     <div class="kid">
       <ul>
-        <li>Cash: measured, wristbanded, and paired with one adult for the 42-inch rides. Blazing Fury is his big one.</li>
-        <li>Slavik: Wildwood Grove is his park. Great Tree Swing at 36 inches if he clears it, Frogs and Fireflies with an adult.</li>
-        <li>Snejana: the train, the carousel, the stroller nap loop through Craftsman's Valley. Out by 6:45 whatever is happening.</li>
+        <li>Cash forges a real knife today. It is the trip for him. Closed-toe shoes, sleeves, and he listens to the smith, not to you.</li>
+        <li>Slavik gets ducks, a water wheel, a carousel and a fountain that dances. That is a complete day for a two-year-old; he does not need the wheel.</li>
+        <li>Snejana rides the carousel on a lap and the big wheel if they allow infants (ask). Carrier for the square, stroller for The Island.</li>
       </ul>
     </div>
   </div>
@@ -168,8 +177,16 @@
   <symbol id="bear-side" viewBox="0 0 140 90"><g fill="#2b1d14"><ellipse cx="62" cy="50" rx="44" ry="26"/><circle cx="108" cy="36" r="18"/><circle cx="98" cy="22" r="6"/><circle cx="118" cy="22" r="6"/><circle cx="20" cy="50" r="12"/><rect x="30" y="62" width="12" height="26" rx="5"/><rect x="52" y="64" width="12" height="24" rx="5"/><rect x="78" y="64" width="12" height="24" rx="5"/><rect x="96" y="60" width="12" height="28" rx="5"/></g><g fill="#6b4a33"><ellipse cx="122" cy="42" rx="9" ry="6"/></g><circle cx="114" cy="33" r="2.5" fill="#0b1411"/><circle cx="129" cy="41" r="3" fill="#0b1411"/></symbol>
 </svg>
 
+<nav class="tabbar" aria-label="Quick links">
+  <a href="index.html"><span>&#8962;</span>Hub</a>
+  <a href="day-0-sun.html"><span>&larr;</span>Sun 22</a>
+  <a href="#plan"><span>&#9776;</span>Plan</a>
+  <a href="#map"><span>&#9673;</span>Map</a>
+  <a href="day-2-tue.html"><span>&rarr;</span>Tue 24</a>
+</nav>
+
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="site.js?v=3"></script>
-<script src="day.js?v=3"></script>
+<script src="site.js?v=4"></script>
+<script src="day.js?v=4"></script>
 </body>
 </html>
