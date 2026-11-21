@@ -241,7 +241,7 @@ def page(date):
 </nav>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="site.js?v=7"></script>
+<script src="site.js?v=8"></script>
 <script src="day.js?v=7"></script>
 <script src="photos.js?v=1" defer></script>
 </body>
@@ -399,7 +399,7 @@ def trails_page():
 </nav>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="site.js?v=7"></script>
+<script src="site.js?v=8"></script>
 <script src="day.js?v=7"></script>
 <script src="photos.js?v=1" defer></script>
 </body>
@@ -543,7 +543,7 @@ def packing_page():
   <a href="index.html#numbers"><span>&#9742;</span>Numbers</a>
 </nav>
 
-<script src="site.js?v=7"></script>
+<script src="site.js?v=8"></script>
 <script src="packing.js?v=1"></script>
 </body>
 </html>
