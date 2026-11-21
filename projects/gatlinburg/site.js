@@ -313,3 +313,77 @@ var GATE_BLOB = {"it":250000,"salt":"pmTZbFhpZmKf+pYKEYmnkw==","iv":"yJlbLp04Xcm
     toast.classList.add('show'); clearTimeout(tmr); tmr = setTimeout(function(){ toast.classList.remove('show'); }, 7000);
   });
 })();
+
+/* Themes: spruce (default), light, nps, gatlinburg. Remembered per phone. */
+(function(){
+  var KEY = 'gatlinburg-2026-theme';
+  var THEMES = [['spruce','Smoky night','#0b1411'],['light','Daylight','#f4efe4'],['nps','National Park brochure','#3a5a40'],['gatlinburg','Gatlinburg after dark','#ff4d6d']];
+  var cur = 'spruce'; try { cur = localStorage.getItem(KEY) || 'spruce'; } catch(e){}
+  function apply(t){ cur = t; document.body.removeAttribute('data-theme'); if (t === 'spruce') document.documentElement.removeAttribute('data-theme'); else document.documentElement.setAttribute('data-theme', t);
+    var m = document.querySelector('meta[name=theme-color]'); if (m) m.setAttribute('content', t === 'light' ? '#f4efe4' : t === 'nps' ? '#1a1a1a' : t === 'gatlinburg' ? '#17100c' : '#0b1411');
+    try { localStorage.setItem(KEY, t); } catch(e){}
+    [].slice.call(document.querySelectorAll('.theme-menu button[data-t]')).forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-t') === t); });
+  }
+  apply(cur);
+  var nav = document.querySelector('header .nav'); if (!nav) return;
+  var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'theme-btn'; btn.title = 'Theme'; btn.setAttribute('aria-label', 'Change theme'); btn.innerHTML = '&#9680;';
+  var inner = nav.querySelector('nav'); if (inner) nav.insertBefore(btn, inner); else nav.appendChild(btn);
+  var menu = document.createElement('div'); menu.className = 'theme-menu'; menu.hidden = true;
+  menu.innerHTML = THEMES.map(function(t){ return '<button type="button" data-t="' + t[0] + '"><span class="sw" style="background:' + t[2] + '"></span>' + t[1] + '</button>'; }).join('') + '<hr><button type="button" id="theme-install">Add to home screen&hellip;</button>';
+  document.body.appendChild(menu);
+  btn.addEventListener('click', function(e){ e.stopPropagation(); menu.hidden = !menu.hidden; apply(cur); });
+  document.addEventListener('click', function(e){ if (!menu.contains(e.target)) menu.hidden = true; });
+  menu.addEventListener('click', function(e){ var b = e.target.closest('button[data-t]'); if (b) { apply(b.getAttribute('data-t')); menu.hidden = true; } });
+  document.getElementById('theme-install').addEventListener('click', function(){ menu.hidden = true; if (window.__showInstall) window.__showInstall(true); });
+})();
+
+/* Install as an app: Chrome/Android get the real prompt, iPhone gets the two-step instruction. */
+(function(){
+  var KEY = 'gatlinburg-2026-install-dismissed';
+  var deferred = null;
+  var standalone = window.matchMedia && window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  var ios = /iphone|ipad|ipod/i.test(navigator.userAgent) && !window.MSStream;
+  var bar = document.createElement('div'); bar.className = 'install-bar'; bar.hidden = true;
+  bar.innerHTML = '<img src="icon-192.png" alt="" onerror="this.style.display=\'none\'"><div><b>Put this on your home screen</b><span id="install-how">Opens full screen like an app, works from the lock screen.</span></div><div class="act"><button type="button" id="install-later">Later</button><button type="button" class="go" id="install-go">Install</button></div>';
+  document.body.appendChild(bar);
+  var how = document.getElementById('install-how'), go = document.getElementById('install-go');
+  function show(force){
+    if (standalone) { if (force) { how.textContent = 'Already installed. You are running it as an app.'; go.hidden = true; bar.hidden = false; } return; }
+    var dismissed = false; try { dismissed = !!localStorage.getItem(KEY); } catch(e){}
+    if (dismissed && !force) return;
+    if (deferred) { how.textContent = 'Opens full screen like an app, with its own icon.'; go.hidden = false; go.textContent = 'Install'; }
+    else if (ios) { how.innerHTML = 'In Safari: tap <b>Share</b> (the box with the arrow), then <b>Add to Home Screen</b>.'; go.hidden = true; }
+    else { how.innerHTML = 'In your browser menu choose <b>Add to Home screen</b> or <b>Install app</b>.'; go.hidden = true; }
+    bar.hidden = false;
+  }
+  window.__showInstall = show;
+  window.addEventListener('beforeinstallprompt', function(e){ e.preventDefault(); deferred = e; if (!document.body.classList.contains('locked')) setTimeout(function(){ show(false); }, 4000); });
+  document.addEventListener('gatlinburg:unlock', function(){ setTimeout(function(){ show(false); }, 6000); });
+  go.addEventListener('click', function(){ if (!deferred) return; deferred.prompt(); deferred.userChoice.then(function(){ deferred = null; bar.hidden = true; }); });
+  document.getElementById('install-later').addEventListener('click', function(){ bar.hidden = true; try { localStorage.setItem(KEY, '1'); } catch(e){} });
+})();
+
+/* Floating navigation: back to top, and on day pages previous/next day plus swipe between days. */
+(function(){
+  var nav = document.createElement('div'); nav.className = 'float-nav';
+  var prev = document.querySelector('header nav a[href^="day-"][href$=".html"]:not(.chip)');
+  var links = [].slice.call(document.querySelectorAll('header nav ul a'));
+  var prevA = null, nextA = null;
+  links.forEach(function(a){ var t = a.textContent; if (/^←|^←/.test(t.trim())) prevA = a; if (/→$|→$/.test(t.trim())) nextA = a; });
+  var html = '';
+  if (prevA) html += '<a href="' + prevA.getAttribute('href') + '" title="Previous day" aria-label="Previous day">&larr;</a>';
+  if (nextA) html += '<a href="' + nextA.getAttribute('href') + '" title="Next day" aria-label="Next day">&rarr;</a>';
+  html += '<button type="button" class="top" title="Back to top" aria-label="Back to top">&uarr;</button>';
+  nav.innerHTML = html; document.body.appendChild(nav);
+  nav.querySelector('.top').addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+  function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 600); }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  // swipe between days
+  if (prevA || nextA) {
+    var x0 = null, y0 = null, t0 = 0;
+    document.addEventListener('touchstart', function(e){ if (e.target.closest('.map, .wx-grid, .chips, .nav ul, select, textarea')) { x0 = null; return; } var t = e.touches[0]; x0 = t.clientX; y0 = t.clientY; t0 = Date.now(); }, {passive:true});
+    document.addEventListener('touchend', function(e){ if (x0 === null) return; var t = e.changedTouches[0]; var dx = t.clientX - x0, dy = t.clientY - y0;
+      if (Date.now() - t0 < 600 && Math.abs(dx) > 90 && Math.abs(dy) < 60) { if (dx < 0 && nextA) location.href = nextA.getAttribute('href'); if (dx > 0 && prevA) location.href = prevA.getAttribute('href'); } x0 = null; }, {passive:true});
+    document.addEventListener('keydown', function(e){ if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return; if (e.key === 'ArrowRight' && nextA) location.href = nextA.getAttribute('href'); if (e.key === 'ArrowLeft' && prevA) location.href = prevA.getAttribute('href'); });
+  }
+})();
