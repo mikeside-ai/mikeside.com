@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Thanksgiving — Thanksgiving, Nov 26 · Gatlinburg week</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="site.css?v=3">
+</head>
+<body class="locked day-page" data-date="2026-11-26">
+
+<div id="gate">
+  <form class="gate-box" id="gate-form" autocomplete="off">
+    <span class="logo">mike<span>side</span></span>
+    <h1>Gatlinburg week</h1>
+    <p>Family page. Enter the PIN to open it.</p>
+    <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" aria-label="PIN" autofocus>
+    <button type="submit">Open</button>
+    <div class="err" id="gate-err"></div>
+  </form>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="/">mike<span>side</span></a>
+    <nav aria-label="Trip pages">
+      <ul>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="day-3-wed.html">&larr; Wed 25</a></li>
+        <li><a href="day-5-fri.html">Fri 27 &rarr;</a></li>
+        <li><a href="#plan">Plan</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#journal">Journal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="banner" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Ober%20Gatlinburg.jpg?width=1400')">
+  <div class="banner-shade"></div>
+  <div class="container banner-text">
+    <p class="kicker">Day 4 · Thanksgiving</p>
+    <h1>Thanksgiving</h1>
+    <p class="banner-date">Thursday, Nov 26 <span class="tag calm">Holiday</span></p>
+  </div>
+  <span class="credit">Chris Hagerman · CC BY-SA 3.0</span>
+</div>
+
+<div class="chips container" aria-label="Days"><a class="chip" href="day-0-sun.html">Sun 22</a><a class="chip" href="day-1-mon.html">Mon 23</a><a class="chip" href="day-2-tue.html">Tue 24</a><a class="chip" href="day-3-wed.html">Wed 25</a><a class="chip on" href="day-4-thu.html">Thu 26</a><a class="chip" href="day-5-fri.html">Fri 27</a><a class="chip" href="day-6-sat.html">Sat 28</a></div>
+
+<section class="daytop">
+  <div class="container">
+    <p class="lede">Dollywood is closed and half the town is at a buffet. Up the tram in the morning for the bears and the ice, the big meal at the cabin at four, and the chairlift lights only if everyone is still standing.</p>
+    <dl class="facts facts-day">
+      <div class="fact"><dt>Forecast</dt><dd id="day-wx">Loading&hellip;<small id="day-wx-ridge"></small></dd></div>
+      <div class="fact"><dt>Right now</dt><dd id="now-temp">&mdash;<small id="now-clock"></small></dd></div>
+      <div class="fact"><dt>Daylight</dt><dd id="daylight">7:30a &rarr; 5:25p<small id="dark-in"></small></dd></div>
+      <div class="fact nap"><dt>Nap clock</dt><dd><span id="nap-text">Not started</span><small><button type="button" class="ghost" id="nap-btn">Start nap</button></small></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="plan">
+  <div class="container">
+    <p class="eyebrow">The plan</p>
+    <div class="plan-head">
+      <h2 id="plan-title">Plan A</h2>
+      <div class="plan-toggle" role="tablist">
+        <button type="button" class="pt on" data-plan="a" role="tab">Plan A</button>
+        <button type="button" class="pt" data-plan="b" role="tab">Plan B</button>
+        <button type="button" class="ghost" id="copy-plan">Copy as text</button>
+      </div>
+    </div>
+    <div class="plan" id="plan-a">
+      <p class="day-note">Dollywood is closed and most of the town is at a buffet. Ober in the morning, the big meal at the cabin at four, and the chairlift lights if everyone is still standing.</p>
+      <ul class="slots" id="slots-a">
+        <li class="slot" data-lat="35.7096" data-lng="-83.5177" data-stop="Ober Mountain tram from downtown"><time>9:45a</time><div><div class="what">Ober Mountain tram from downtown <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Ober%20Mountain%20Tramway%2C%201001%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="why">Tram base at 1001 Parkway. $29 round trip for ages 5 and up, Slavik and Snejana ride free. Strollers fold and come aboard. Opening hours vary by day in early season, so check the night before.</div></div></li>
+        <li class="slot"><time>10:30a</time><div><div class="what">Wildlife Habitat first</div><div class="why">Black <span class="egg" data-egg="2">bears</span>, otters and raccoons behind glass. The one thing up here all three can do, and the bears are most active in the morning.</div></div></li>
+        <li class="slot"><time>11:15a</time><div><div class="what">Cash: ice skating, then tubing</div><div class="why">Skating is in the Fun Pass. Snow tubing is $29 and up, and at seven he rides alone, so he has to be 42 inches. Slavik can't tube at all until he's three, and that's December. One adult with Cash, one adult with the little two in the lodge watching the skaters.</div></div></li>
+        <li class="slot"><time>12:45p</time><div><div class="what">Tram down, home for naps</div><div class="why">Snack lunch on the way. Everyone down by 1:30.</div></div></li>
+        <li class="slot"><time>4:00p</time><div><div class="what">Thanksgiving dinner at the cabin</div><div class="why">A turkey breast, not a turkey. Cabin ovens are small and unreliable. Sides from Food City Wednesday. If you'd rather not cook, the backup is below, and it needs booking before you leave Birmingham.</div></div></li>
+        <li class="slot" data-lat="35.7116" data-lng="-83.516" data-stop="Lights Over Gatlinburg from the SkyLift"><time>5:30p</time><div><div class="what">Lights Over Gatlinburg from the SkyLift <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Gatlinburg%20SkyPark%2C%20765%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="why">765 Parkway, 15 minutes from the table. Included with SkyPark admission, runs nightly. Each chair holds three heartbeats and the baby counts, so you're two chairs. No strollers anywhere in the park. Snejana rides in the carrier on a lap. Skip this if dinner ran long. It's a bonus, not a plan.</div></div></li>
+        <li class="slot"><time>7:00p</time><div><div class="what">Home and down</div></div></li>
+      </ul>
+      <div class="callout sun"><h3>If you want someone else to cook</h3><p><strong>Mama's Farmhouse</strong>, 208 Pickel St, Pigeon Forge <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Mama%27s%20Farmhouse%2C%20208%20Pickel%20St%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a>. Family-style, all you can eat, a special Thanksgiving menu, open 11 to 9. The right call for this crew because food arrives in bowls immediately and nobody needs a menu. Reservations are encouraged and it fills up. Book it today as the backup even if you plan to cook. <strong>Ober Mountain</strong> runs a Thanksgiving Feast at the top, 11 to 5, which would fold the whole morning into one trip; reservations there too. <strong>Cracker Barrel</strong> on the Pigeon Forge Parkway serves its traditional plate from 11 with no reservation, and <strong>The Park Grill</strong> in Gatlinburg has a special menu 11:30 to 9. The Pigeon Forge trolley doesn't run on Thanksgiving, so whatever you pick, you're driving.</p></div>
+    </div>
+    <div class="plan" id="plan-b" hidden>
+      <div class="callout water"><h3>Plan B: nobody cooks</h3><p>The cabin oven is a toy, or the morning ran long, or you'd just rather not. The reservation at Mama's Farmhouse is the backup; book it before you leave Birmingham.</p></div>
+      <ul class="slots" id="slots-b">
+        <li class="slot"><time>9:45a</time><div><div class="what">Ober Mountain tram from downtown <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Ober%20Mountain%20Tramway%2C%201001%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="why">Same morning as Plan A: bears, otters, skating for Cash.</div></div></li>
+        <li class="slot"><time>12:30p</time><div><div class="what">Home, naps</div><div class="why">Short ones. Everyone up by 2:15.</div></div></li>
+        <li class="slot"><time>3:00p</time><div><div class="what">Mama's Farmhouse, Pigeon Forge <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Mama%27s%20Farmhouse%2C%20208%20Pickel%20St%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></div><div class="why">208 Pickel St. Family style, all you can eat, turkey and the fixings arrive in bowls before anyone can complain. Open 11 to 9. Reservations encouraged, so this slot assumes you booked.</div></div></li>
+        <li class="slot"><time>5:00p</time><div><div class="what">Winterfest lights on the way home <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7880%2C-83.5540" target="_blank" rel="noopener">Directions</a></div><div class="why">You're already on the Pigeon Forge Parkway. Drive it slow in the dark, then the Spur home. Nobody needs to get out of the car.</div></div></li>
+      </ul>
+    </div>
+    <div class="bail">
+      <h3>Bail-out: Cracker Barrel, Pigeon Forge <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Cracker%20Barrel%2C%202285%20Parkway%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></h3>
+      <p>If the reservation falls through or you decide at two o'clock that you want someone else to cook, Cracker Barrel on the Parkway serves the Thanksgiving plate from 11 with no reservation. It will have a wait. It will also have a kids' menu and a fire.</p>
+    </div>
+  </div>
+</section>
+
+<section id="map">
+  <div class="container">
+    <p class="eyebrow">The ground</p>
+    <h2>Map</h2>
+    <p class="intro">Stops for the plan you have selected. The solid line is the road route; it is drawn live from OpenStreetMap, so it needs signal. Tap a marker for directions.</p>
+    <div id="leaflet" class="map" data-route='[]' data-route-b='[[35.7096, -83.5177], [35.7827, -83.556], [35.788, -83.554]]'></div>
+  </div>
+</section>
+
+<section id="photos">
+  <div class="container">
+    <p class="eyebrow">What it looks like</p>
+    <h2>The places</h2>
+    <div class="strip">
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Black%20bear%20sitting%20upright%20at%20Great%20Smoky%20Mountains%20National%20Park%2C%20Tennessee%20and%20North%20Carolina%20%28d846aeb0-01e0-4bb5-801c-d6bb26d13f85%29.jpg?width=800" alt=""><figcaption>NPS · Public domain</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/SkyBridge%20at%20Gatlingburg%20SkyPark%20-%202.jpg?width=800" alt=""><figcaption>APK · CC BY 4.0</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Gatlinburg%20Space%20Needle%20and%20moon%20-%20October%202023%20-%20Sarah%20Stierch.jpg?width=800" alt=""><figcaption>Sarah Stierch · CC BY 4.0</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="kids">
+  <div class="container">
+    <p class="eyebrow">Three cubs</p>
+    <h2>Today, each of them</h2>
+    <div class="kid">
+      <ul>
+        <li>Cash: skating with an adult, tubing alone only if he's 42 inches. Secured shoes, waterproof gloves.</li>
+        <li>Slavik: no tubing until he's three. Bears, the rink from the rail, hot chocolate in the lodge. That's a full morning for him.</li>
+        <li>Snejana: the tram and the bears. Carrier on the SkyLift tonight if you go; she's a heartbeat, so two chairs.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="journal">
+  <div class="container">
+    <p class="eyebrow">Trip log</p>
+    <h2>What actually happened</h2>
+    <p class="intro">Notes stay on this phone. A line a day is plenty; it's what you'll read next November.</p>
+    <textarea id="journal-text" rows="6" placeholder="Who saw the first bear, what the kids ate, what you'd change."></textarea>
+    <div class="journal-bar"><span id="journal-saved"></span><button type="button" class="ghost" id="journal-copy">Copy</button></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="pager">
+      <a href="day-3-wed.html">&larr; Wednesday: Cades Cove</a>
+      <a href="index.html">Hub</a>
+      <a href="day-5-fri.html">Friday: Up the mountain, away from everyone &rarr;</a>
+    </div>
+    <p>Photos are from Wikimedia Commons under the licenses shown. Hours, prices and park roads change with the weather; check the hub's road status link each morning.</p>
+  </div>
+</footer>
+
+<div class="bear-toast" id="bear-toast" role="status"></div>
+<div class="bear-peek" id="bear-peek" aria-hidden="true">
+  <svg viewBox="0 0 120 100"><g fill="#2b1d14"><ellipse cx="60" cy="78" rx="46" ry="30"/><circle cx="60" cy="44" r="30"/><circle cx="36" cy="22" r="11"/><circle cx="84" cy="22" r="11"/></g><g fill="#6b4a33"><circle cx="36" cy="22" r="5"/><circle cx="84" cy="22" r="5"/><ellipse cx="60" cy="56" rx="14" ry="10"/></g><g fill="#0b1411"><circle cx="48" cy="40" r="3.5"/><circle cx="72" cy="40" r="3.5"/><ellipse cx="60" cy="52" rx="6" ry="4"/></g><circle cx="49.5" cy="38.5" r="1.2" fill="#fff"/><circle cx="73.5" cy="38.5" r="1.2" fill="#fff"/></svg>
+</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="bear-side" viewBox="0 0 140 90"><g fill="#2b1d14"><ellipse cx="62" cy="50" rx="44" ry="26"/><circle cx="108" cy="36" r="18"/><circle cx="98" cy="22" r="6"/><circle cx="118" cy="22" r="6"/><circle cx="20" cy="50" r="12"/><rect x="30" y="62" width="12" height="26" rx="5"/><rect x="52" y="64" width="12" height="24" rx="5"/><rect x="78" y="64" width="12" height="24" rx="5"/><rect x="96" y="60" width="12" height="28" rx="5"/></g><g fill="#6b4a33"><ellipse cx="122" cy="42" rx="9" ry="6"/></g><circle cx="114" cy="33" r="2.5" fill="#0b1411"/><circle cx="129" cy="41" r="3" fill="#0b1411"/></symbol>
+</svg>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="site.js?v=3"></script>
+<script src="day.js?v=3"></script>
+</body>
+</html>
