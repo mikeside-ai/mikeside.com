@@ -58,7 +58,7 @@
    {
     "t": "3:30p ET",
     "what": "Kill time until check-in",
-    "why": "Mynatt Park on Asbury Lane is a real playground with a creek, five minutes from downtown. Don't sit in the car.",
+    "why": "Mynatt Park on Airport Rd, five minutes from downtown. Creek, picnic tables, clean restrooms. Reviewers note there's no playground; the creek is the playground. Don't sit in the car.",
     "addr": "Mynatt Park, Asbury Ln",
     "dest": "35.7015895%2C-83.5149127"
    },
@@ -87,66 +87,67 @@
   "callouts": []
  },
  "2026-11-23": {
-  "title": "Dollywood",
+  "title": "Forge a knife, ride the wheel",
   "date": "Monday, Nov 23",
-  "tag": "Big day",
-  "tagcls": "hot",
-  "note": "Monday before Thanksgiving is the lightest day the park will have all week. Park opens at 10. Be in the lot at 9:15. Parking is $25. Tickets: $94.99 adults, $84.99 for Cash. Slavik and Snejana are free. Buy online tonight, not at the gate.",
+  "tag": "Pigeon Forge",
+  "tagcls": "calm",
+  "note": "Everything today sits in two spots: the Old Mill square and The Island, three minutes apart. Iron Mountain opens at 9 and the forge sessions book up, so call (865) 365-4344 today and reserve two: a railroad spike knife for Vlad, a nail knife for Cash.",
   "slots": [
    {
+    "t": "9:00a",
+    "what": "Iron Mountain Metal Craft",
+    "addr": "172 Old Mill Ave, Pigeon Forge",
+    "why": "Vlad hammers a railroad spike into a knife, about an hour, $85, ages 13 and up. Cash does the nail knife, ages 5 to 12, $20, with a smith at his elbow the whole time. Closed-toe shoes for both. A sheath is included; engraving is $10 extra and worth it for his.",
+    "dest": "Iron Mountain Metal Craft, 172 Old Mill Ave, Pigeon Forge, TN 37863"
+   },
+   {
     "t": "9:15a",
-    "what": "Park, tram to the gate, measure Cash",
-    "why": "The measuring station on Showstreet gives him a wristband for the day. 42 inches opens Blazing Fury and Sky Rider. 48 opens the real coasters. Don't guess, measure.",
-    "addr": "2700 Dollywood Parks Blvd, Pigeon Forge",
-    "dest": "Dollywood%2C%202700%20Dollywood%20Parks%20Blvd%2C%20Pigeon%20Forge%2C%20TN%2037863"
+    "what": "Allison, Slavik and Snejana: the Old Mill square",
+    "why": "While the forge runs. The water wheel on the Little Pigeon River, ducks off the dam, the Old Mill General Store with the corn fritter samples, the candy kitchen. All flat, all stroller.",
+    "dest": "The Old Mill & General Store, 175 Old Mill Ave, Pigeon Forge, TN 37863"
    },
    {
-    "t": "10:00a",
-    "what": "Straight to Wildwood Grove",
-    "why": "Back of the park, so go first while everyone else stops at the front. Frogs and Fireflies, Treetop Tower, the Great Tree Swing at 36 inches, and the splash-free Wildwood Creek playground. This is Slavik's whole park.",
-    "addr": "",
+    "t": "10:45a",
+    "what": "Patriot Park, next door",
+    "why": "236 Old Mill Ave. Grass and a riverside path to burn off the forge adrenaline. Free parking here if the mill lot is full.",
+    "dest": "Patriot Park, 236 Old Mill Ave, Pigeon Forge, TN 37863"
+   },
+   {
+    "t": "11:15a",
+    "what": "Lunch: Pottery House Caf\u00e9",
+    "why": "3341 Old Mill St, across the footbridge. Opens at 11; be at the door, the wait is 30 minutes by noon. Fresh bread, chicken pot pie, kids' mac. The Old Mill Restaurant next door is the bigger, slower alternative.",
+    "dest": "The Old Mill Pottery House Caf\u00e9, 3341 Old Mill St, Pigeon Forge, TN 37863"
+   },
+   {
+    "t": "12:45p",
+    "what": "Home, naps",
+    "why": "Twenty minutes on the Spur. Long nap. Tonight is late-ish.",
     "dest": ""
    },
    {
-    "t": "11:30a",
-    "what": "Dollywood Express",
-    "why": "The steam train. No height minimum, twenty minutes sitting down, and the single best thing for Snejana. Ride it before lunch while she's still happy.",
-    "addr": "",
+    "t": "3:45p",
+    "what": "The Island in Pigeon Forge",
+    "addr": "131 The Island Dr",
+    "why": "Free parking, free to walk in. The Flying Horse carousel, the Great Smoky Mountain Wheel ($18.99, $13.99 for Cash, ask about Snejana), Santa photos by the wheel, a mile of Winterfest lights. Ben and Jerry's. It is the easiest three hours in Pigeon Forge with three kids.",
+    "dest": "The Island in Pigeon Forge, 131 The Island Dr, Pigeon Forge, TN 37863"
+   },
+   {
+    "t": "5:30p",
+    "what": "Dinner at The Island",
+    "why": "Timberwood Grill or whatever has no line. Eat at 5:30; by 6:30 everything has a wait.",
     "dest": ""
    },
    {
-    "t": "12:15p",
-    "what": "Lunch, then the Village",
-    "why": "Carousel and Lemon Twist have no minimum. Santa is in the Imagination Playhouse near the train depot. Cash and one adult peel off for Blazing Fury and whatever his wristband allows. Use Parent Swap so nobody waits twice.",
-    "addr": "",
-    "dest": ""
-   },
-   {
-    "t": "2:30p",
-    "what": "Stroller nap loop",
-    "why": "Snejana and probably Slavik go down in the stroller. Walk slow through Craftsman's Valley. One adult takes Cash to the Country Fair rides, which are 36 inches and up.",
-    "addr": "",
-    "dest": ""
-   },
-   {
-    "t": "5:00p",
-    "what": "Dinner in the park, then the lights come on",
-    "why": "Snow in the Grove runs in Wildwood Grove each evening with the characters. Glacier Ridge and Peppermint Valley are the light walks. Get through the Grove first, then Glacier Ridge on the way out.",
-    "addr": "",
-    "dest": ""
-   },
-   {
-    "t": "6:45p",
-    "what": "Leave before the park does",
-    "why": "The 9pm close is for people without a one-year-old. Out by seven, home by 7:45, bed. Tomorrow is a recovery day on purpose.",
-    "addr": "",
+    "t": "6:00p",
+    "what": "Fountain show, then home",
+    "why": "The Winterfest fountain show runs at 6, 7, 8 and 9 in the courtyard with the three LED trees. Watch the 6 o'clock from a bench, then the Spur home. Bed by 7:30.",
     "dest": ""
    }
   ],
   "callouts": [
    {
-    "h": "Heights will decide Cash's day",
-    "body": "<p>No minimum: Dollywood Express, Village Carousel, Lemon Twist, Flying Elephants, Rockin' Roadway. Treetop Tower and Frogs and Fireflies need a 14+ companion under 42 and 36 inches. The Country Fair kiddie rides moved to a 36-inch minimum for 2026, so Slavik may be shut out of Busy Bees and Lucky Ducky. At <strong>42 inches</strong> Cash gets Blazing Fury, Sky Rider and the Waltzing Swinger. At <strong>48 inches</strong> he gets Thunderhead, Mystery Mine and Barnstormer. A seven-year-old is usually right around 48, so measure him at the cabin Sunday night and again at the park.</p>"
+    "h": "Who forges what",
+    "body": "<p>Iron Mountain's rules: the railroad spike knife is <strong>13 and up</strong>, the horseshoe is 9 and up, the pony shoe is a smaller knife at $35, and the <strong>nail knife is 5 to 12</strong> at $20. Cash qualifies for the nail knife only; don't argue it up a tier, the smith won't. Slavik and Snejana watch from behind the rope or walk the square with Allison. Sessions take 15 minutes of your hammering plus the smith's finishing; plan an hour for both of you. Reviewers' consensus is that this is the thing their kids talked about all the way home.</p>"
    }
   ]
  },
@@ -445,5 +446,69 @@
    }
   ],
   "callouts": []
+ },
+ "bonus": {
+  "title": "Dollywood",
+  "date": "Bonus \u00b7 any day",
+  "tag": "Bonus day",
+  "tagcls": "bear",
+  "note": "Not on the calendar on purpose. If a day dawns clear, everyone slept, and you want it, swap it in for Monday, Tuesday or Wednesday from the hub. It is closed Thursday and mobbed Friday and Saturday. Park opens at 10, be in the lot at 9:15. Parking $25. $94.99 adults, $84.99 for Cash through Nov 25, the little two free. Buy online the night before.",
+  "slots": [
+   {
+    "t": "9:15a",
+    "what": "Park, tram to the gate, measure Cash",
+    "why": "The measuring station on Showstreet gives him a wristband for the day. 42 inches opens Blazing Fury and Sky Rider. 48 opens the real coasters. Don't guess, measure.",
+    "addr": "2700 Dollywood Parks Blvd, Pigeon Forge",
+    "dest": "Dollywood%2C%202700%20Dollywood%20Parks%20Blvd%2C%20Pigeon%20Forge%2C%20TN%2037863"
+   },
+   {
+    "t": "10:00a",
+    "what": "Straight to Wildwood Grove",
+    "why": "Back of the park, so go first while everyone else stops at the front. Frogs and Fireflies, Treetop Tower, the Great Tree Swing at 36 inches, and the splash-free Wildwood Creek playground. This is Slavik's whole park.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "11:30a",
+    "what": "Dollywood Express",
+    "why": "The steam train. No height minimum, twenty minutes sitting down, and the single best thing for Snejana. Ride it before lunch while she's still happy.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "12:15p",
+    "what": "Lunch, then the Village",
+    "why": "Carousel and Lemon Twist have no minimum. Santa is in the Imagination Playhouse near the train depot. Cash and one adult peel off for Blazing Fury and whatever his wristband allows. Use Parent Swap so nobody waits twice.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "2:30p",
+    "what": "Stroller nap loop",
+    "why": "Snejana and probably Slavik go down in the stroller. Walk slow through Craftsman's Valley. One adult takes Cash to the Country Fair rides, which are 36 inches and up.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "5:00p",
+    "what": "Dinner in the park, then the lights come on",
+    "why": "Snow in the Grove runs in Wildwood Grove each evening with the characters. Glacier Ridge and Peppermint Valley are the light walks. Get through the Grove first, then Glacier Ridge on the way out.",
+    "addr": "",
+    "dest": ""
+   },
+   {
+    "t": "6:45p",
+    "what": "Leave before the park does",
+    "why": "The 9pm close is for people without a one-year-old. Out by seven, home by 7:45, bed. Tomorrow is a recovery day on purpose.",
+    "addr": "",
+    "dest": ""
+   }
+  ],
+  "callouts": [
+   {
+    "h": "Heights will decide Cash's day",
+    "body": "<p>No minimum: Dollywood Express, Village Carousel, Lemon Twist, Flying Elephants, Rockin' Roadway. Treetop Tower and Frogs and Fireflies need a 14+ companion under 42 and 36 inches. The Country Fair kiddie rides moved to a 36-inch minimum for 2026, so Slavik may be shut out of Busy Bees and Lucky Ducky. At <strong>42 inches</strong> Cash gets Blazing Fury, Sky Rider and the Waltzing Swinger. At <strong>48 inches</strong> he gets Thunderhead, Mystery Mine and Barnstormer. A seven-year-old is usually right around 48, so measure him at the cabin Sunday night and again at the park.</p>"
+   }
+  ]
  }
 }
