@@ -149,10 +149,27 @@
       });
     }
     addStops('slots-a', layers.a);
-    [].slice.call(document.querySelectorAll('.trail[data-lat]')).forEach(function(t){
+    var trailMarkers = {};
+    [].slice.call(document.querySelectorAll('.trail[data-lat]')).forEach(function(t, i){
       var lat = +t.getAttribute('data-lat'), lng = +t.getAttribute('data-lng'), nav = t.querySelector('a.nav');
-      L.marker([lat, lng], {icon: icon}).addTo(layers.a).bindPopup('<b>' + t.getAttribute('data-name') + '</b>' + (nav ? '<br><a href="' + nav.href + '" target="_blank" rel="noopener">Directions</a>' : ''));
+      if (!t.id) t.id = 'spot-' + (i + 1);
+      var num = L.divIcon({className:'pin num', html:'<span>' + (i + 1) + '</span>', iconSize:[26,26], iconAnchor:[13,13], popupAnchor:[0,-14]});
+      var m = L.marker([lat, lng], {icon: num}).addTo(layers.a);
+      m.bindPopup('<b>' + (i + 1) + '. ' + t.getAttribute('data-name') + '</b><br><a href="#' + t.id + '" class="popup-jump">Read about this spot &darr;</a>' + (nav ? ' &middot; <a href="' + nav.href + '" target="_blank" rel="noopener">Directions</a>' : ''));
+      trailMarkers[t.id] = m;
       bounds.push([lat, lng]);
+      // number badge on the card, and a "show on map" link that opens this pin
+      var h = t.querySelector('h3');
+      if (h && !h.querySelector('.spot-num')) {
+        var b = document.createElement('span'); b.className = 'spot-num'; b.textContent = i + 1; h.insertBefore(b, h.firstChild);
+        var show = document.createElement('a'); show.className = 'nav show-map'; show.href = '#map'; show.textContent = 'On the map';
+        show.addEventListener('click', function(e){ e.preventDefault(); document.getElementById('map').scrollIntoView({behavior:'smooth', block:'center'}); setTimeout(function(){ map.invalidateSize(); map.setView([lat, lng], Math.max(map.getZoom(), 13)); m.openPopup(); }, 450); });
+        h.appendChild(show);
+      }
+    });
+    map.on('popupopen', function(e){
+      var a = e.popup.getElement() && e.popup.getElement().querySelector('.popup-jump');
+      if (a) a.addEventListener('click', function(ev){ ev.preventDefault(); var el = document.querySelector(a.getAttribute('href')); if (el) { el.scrollIntoView({behavior:'smooth', block:'start'}); el.classList.add('flash'); setTimeout(function(){ el.classList.remove('flash'); }, 1600); } });
     });
     function fit(){ if (bounds.length) map.fitBounds(bounds, {padding:[30,30], maxZoom:13}); else map.setView([35.7, -83.52], 11); }
     fit();
