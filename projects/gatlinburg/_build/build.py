@@ -84,7 +84,7 @@ def page(date):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-<link rel="stylesheet" href="site.css?v=7">
+<link rel="stylesheet" href="site.css?v=8">
 <script>try{{var t=localStorage.getItem("gatlinburg-2026-theme");if(t&&t!=="spruce")document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
 </head>
 <body class="locked day-page" data-date="{date if date != 'bonus' else ''}" data-page="{date}">
@@ -127,7 +127,7 @@ def page(date):
   <span class="credit">{credit(d['banner'])}</span>
 </div>
 
-<div class="chips container" aria-label="Days">{chips}<a class="chip" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a></div>
+<div class="chips container" aria-label="Days">{chips}<a class="chip" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip" href="cabin.html">Cabin</a></div>
 
 <section class="daytop">
   <div class="container">
@@ -241,7 +241,7 @@ def page(date):
 </nav>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="site.js?v=6"></script>
+<script src="site.js?v=7"></script>
 <script src="day.js?v=7"></script>
 <script src="photos.js?v=1" defer></script>
 </body>
@@ -299,7 +299,7 @@ def trails_page():
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-<link rel="stylesheet" href="site.css?v=7">
+<link rel="stylesheet" href="site.css?v=8">
 <script>try{{var t=localStorage.getItem("gatlinburg-2026-theme");if(t&&t!=="spruce")document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
 </head>
 <body class="locked day-page trails-page" data-page="trails">
@@ -339,7 +339,7 @@ def trails_page():
   <span class="credit">{credit('Little River Road - October 2025 - Sarah Stierch.jpg')}</span>
 </div>
 
-<div class="chips container" aria-label="Days">{chips}<a class="chip on" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a></div>
+<div class="chips container" aria-label="Days">{chips}<a class="chip on" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip" href="cabin.html">Cabin</a></div>
 
 <section class="daytop">
   <div class="container">
@@ -399,7 +399,7 @@ def trails_page():
 </nav>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="site.js?v=6"></script>
+<script src="site.js?v=7"></script>
 <script src="day.js?v=7"></script>
 <script src="photos.js?v=1" defer></script>
 </body>
@@ -451,7 +451,7 @@ def packing_page():
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=7">
+<link rel="stylesheet" href="site.css?v=8">
 <script>try{{var t=localStorage.getItem("gatlinburg-2026-theme");if(t&&t!=="spruce")document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
 </head>
 <body class="locked day-page packing-page" data-page="packing">
@@ -491,7 +491,7 @@ def packing_page():
   <span class="credit">{credit('Little River Road - October 2025 - Sarah Stierch.jpg')}</span>
 </div>
 
-<div class="chips container" aria-label="Pages">{chips}<a class="chip" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip on" href="packing.html">Packing</a></div>
+<div class="chips container" aria-label="Pages">{chips}<a class="chip" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip" href="cabin.html">Cabin</a><a class="chip on" href="packing.html">Packing</a></div>
 
 <section id="list">
   <div class="container">
@@ -543,7 +543,7 @@ def packing_page():
   <a href="index.html#numbers"><span>&#9742;</span>Numbers</a>
 </nav>
 
-<script src="site.js?v=6"></script>
+<script src="site.js?v=7"></script>
 <script src="packing.js?v=1"></script>
 </body>
 </html>
