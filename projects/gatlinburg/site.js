@@ -45,6 +45,7 @@ var GATE_BLOB = {"it":250000,"salt":"pmTZbFhpZmKf+pYKEYmnkw==","iv":"yJlbLp04Xcm
 
 /* Packing list: counter, clear, print. Ticks are remembered per phone (localStorage). */
 (function(){
+  if (document.body.classList.contains('packing-page')) return;
   var KEY = 'gatlinburg-2026-packing';
   var boxes = [].slice.call(document.querySelectorAll('#grid input[type=checkbox]'));
   var count = document.getElementById('count');
@@ -386,4 +387,14 @@ var GATE_BLOB = {"it":250000,"salt":"pmTZbFhpZmKf+pYKEYmnkw==","iv":"yJlbLp04Xcm
       if (Date.now() - t0 < 600 && Math.abs(dx) > 90 && Math.abs(dy) < 60) { if (dx < 0 && nextA) location.href = nextA.getAttribute('href'); if (dx > 0 && prevA) location.href = prevA.getAttribute('href'); } x0 = null; }, {passive:true});
     document.addEventListener('keydown', function(e){ if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return; if (e.key === 'ArrowRight' && nextA) location.href = nextA.getAttribute('href'); if (e.key === 'ArrowLeft' && prevA) location.href = prevA.getAttribute('href'); });
   }
+})();
+
+/* Hub: live count from the shared packing list. */
+(function(){
+  var done = document.getElementById('pack-done'), total = document.getElementById('pack-total');
+  if (!done || !window.fetch) return;
+  fetch('https://mikeside-publish-production.up.railway.app/state/packing', {cache:'no-store'}).then(function(r){ return r.json(); }).then(function(d){
+    var n = 0, items = 0; Object.keys(d.data || {}).forEach(function(k){ var it = d.data[k]; if (!it || it.gone) return; if (k.indexOf('x-') === 0) items++; if (it.c) n++; });
+    done.textContent = n; total.textContent = 66 + items;
+  }).catch(function(){ done.textContent = '?'; });
 })();
