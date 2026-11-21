@@ -212,7 +212,8 @@ footer a{color:var(--muted)}
   .pack-bar{position:static}
   .nav{flex-wrap:wrap;gap:.4rem .8rem}
   .nav .logo{flex:none}
-  .nav ul{gap:.9rem;flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:.1rem;scrollbar-width:none}
+  .nav ul{gap:.9rem;flex-wrap:nowrap;overflow-x:auto;width:100%;min-width:0;flex:1 1 100%;padding-bottom:.1rem;scrollbar-width:none}
+  .nav{overflow:hidden}
   .nav ul::-webkit-scrollbar{display:none}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
@@ -279,3 +280,83 @@ footer a{color:var(--muted)}
 .countdown{color:var(--jumpsuit);font-weight:600;font-size:.9rem;margin-top:.6rem}
 @media (max-width:640px){.leg{padding-left:5rem}.banner-text{padding-top:2rem}}
 @media print{.map,.chips,.plan-toggle,#journal,.nap{display:none}.banner{min-height:0;background:none}.banner-shade{display:none}.banner h1{text-shadow:none}}
+
+/* ============ Ratings, card photos, bonus ============ */
+.rate{display:inline-flex;align-items:baseline;gap:.25rem;font-size:.7rem;font-weight:600;color:var(--jumpsuit);background:rgba(242,201,76,.1);border:1px solid rgba(242,201,76,.35);border-radius:999px;padding:.08rem .5rem;margin-left:.35rem;vertical-align:middle;white-space:nowrap;cursor:pointer}
+.rate small{color:var(--muted);font-weight:500;font-size:.66rem}
+.rate:hover{background:rgba(242,201,76,.18)}
+.numbers td .rate{margin-left:.4rem}
+.day{position:relative}
+.day-photo{display:block;float:right;width:116px;height:84px;margin:0 0 .6rem 1rem;border-radius:10px;background-size:cover;background-position:center;border:1px solid var(--border);box-shadow:0 2px 10px rgba(0,0,0,.35)}
+.day-photo:hover{outline:2px solid var(--gulf)}
+.day .slots{clear:both}
+.day[data-date="bonus"]{border-style:dashed;border-color:rgba(230,207,163,.45)}
+.day[data-date="bonus"] .day-date{color:var(--sand)}
+.hub-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.6rem;margin:1.2rem 0 .4rem}
+.hub-strip figure{margin:0;border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--card)}
+.hub-strip img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.hub-strip figcaption{font-size:.62rem;color:var(--muted);padding:.3rem .5rem}
+@media (max-width:640px){.day-photo{width:92px;height:68px;margin-left:.7rem}}
+@media print{.day-photo,.hub-strip{display:none}}
+
+/* ============ Mobile pass ============ */
+html{-webkit-text-size-adjust:100%}
+a,button,select,label,.rate,.chip{touch-action:manipulation;-webkit-tap-highlight-color:rgba(143,208,166,.18)}
+.tabbar{display:none}
+.map-hint{position:absolute;left:50%;bottom:2.4rem;transform:translateX(-50%);z-index:500;font:inherit;font-size:.78rem;font-weight:600;color:var(--bg);background:var(--gulf);border:0;border-radius:999px;padding:.45rem .9rem;box-shadow:0 2px 10px rgba(0,0,0,.4)}
+@media (max-width:760px){
+  body{padding-bottom:calc(3.9rem + env(safe-area-inset-bottom))}
+  .tabbar{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;z-index:80;background:rgba(11,20,17,.94);backdrop-filter:blur(10px);border-top:1px solid var(--border);padding:.35rem 0 calc(.35rem + env(safe-area-inset-bottom))}
+  .tabbar a{display:flex;flex-direction:column;align-items:center;gap:.1rem;font-size:.62rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:.2rem 0;min-height:44px;justify-content:center}
+  .tabbar a span{font-size:1.1rem;line-height:1;color:var(--gulf)}
+  .tabbar a:active{color:var(--text)}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .fact{padding:.8rem .9rem}
+  .fact dd{font-size:.9rem}
+  .wx-grid{display:flex;overflow-x:auto;gap:.45rem;scroll-snap-type:x mandatory;padding-bottom:.3rem;scrollbar-width:none}
+  .wx-grid::-webkit-scrollbar{display:none}
+  .wx-day{flex:0 0 31%;scroll-snap-align:start}
+  a.nav{font-size:.72rem;padding:.3rem .65rem;margin:.25rem .35rem .1rem 0}
+  .rate{font-size:.74rem;padding:.22rem .55rem;margin:.25rem .3rem .1rem 0}
+  .slot .what{line-height:1.4}
+  .pack-cat label{padding:.6rem 0;font-size:.98rem}
+  .pack-cat input{width:20px;height:20px;margin-top:.2rem}
+  .swap{font-size:.8rem;padding:.4rem .75rem}
+  .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:.4rem}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:0 0 auto;padding:.45rem .85rem;font-size:.78rem}
+  .pt{padding:.55rem 1rem}
+  button.ghost{padding:.5rem 1rem;font-size:.88rem}
+  .day{padding:1.1rem 1rem}
+  .plan{padding:1.1rem 1rem}
+  .day-head h3{font-size:1.2rem}
+  .map{height:62vw;min-height:280px}
+  .bear-toast{bottom:calc(4.3rem + env(safe-area-inset-bottom))}
+  .bear-peek{bottom:-110px}
+  .bear-peek.up{bottom:calc(3.6rem + env(safe-area-inset-bottom) - 8px)}
+  .bear-walk{bottom:calc(3.6rem + env(safe-area-inset-bottom))}
+  footer{padding-bottom:2rem}
+  .hub-strip{grid-template-columns:repeat(2,1fr)}
+  .strip{grid-template-columns:repeat(2,1fr)}
+  section{padding:2.2rem 0}
+  .day-page section{padding:1.8rem 0}
+}
+@media (display-mode: standalone){header{padding-top:env(safe-area-inset-top)}}
+
+/* ============ Trails ============ */
+.trails{display:grid;gap:1rem}
+.trail{display:grid;grid-template-columns:220px 1fr;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.trail-photo{position:relative;background-size:cover;background-position:center;min-height:170px}
+.trail-photo .credit{position:absolute;left:.4rem;bottom:.3rem;font-size:.58rem;color:rgba(236,232,220,.7);background:rgba(11,20,17,.5);padding:.1rem .35rem;border-radius:4px}
+.trail-body{padding:1.1rem 1.2rem}
+.trail-body h3{font-size:1.15rem;display:flex;flex-wrap:wrap;align-items:center;gap:.3rem}
+.trail-body .meta{color:var(--gulf);font-size:.8rem;margin:.2rem 0 .7rem}
+.trail-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:.4rem .8rem;margin-bottom:.7rem}
+.trail-facts dt{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.trail-facts dd{font-size:.86rem}
+.kidscore{font-size:.78rem;color:var(--muted);margin-bottom:.5rem}
+.kidscore span{color:var(--jumpsuit);letter-spacing:.15em;margin-left:.3rem}
+.kidscore span i{color:var(--border);font-style:normal}
+.trail-body p{font-size:.92rem}
+.trail-body .when{color:var(--sand);font-size:.82rem;margin-top:.5rem}
+@media (max-width:760px){.trail{grid-template-columns:1fr}.trail-photo{min-height:150px}}
