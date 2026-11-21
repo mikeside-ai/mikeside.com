@@ -81,7 +81,7 @@ var GATE_BLOB = {"it":250000,"salt":"pmTZbFhpZmKf+pYKEYmnkw==","iv":"yJlbLp04Xcm
   var btn = document.getElementById('toggle-past');
   var lbl = document.getElementById('today-label');
   if (!cards.length || !bar) return;
-  cards = cards.filter(function(c){ return c.closest('#days'); });
+  cards = cards.filter(function(c){ return c.closest('#days') && /^\d{4}-/.test(c.getAttribute('data-date')); });
   // Today in Eastern time, as YYYY-MM-DD.
   var today;
   try { today = new Intl.DateTimeFormat('en-CA', {timeZone:'America/New_York', year:'numeric', month:'2-digit', day:'2-digit'}).format(new Date()); }
@@ -116,7 +116,7 @@ var GATE_BLOB = {"it":250000,"salt":"pmTZbFhpZmKf+pYKEYmnkw==","iv":"yJlbLp04Xcm
   var reset = document.getElementById('reset-days');
   var note = document.getElementById('swap-note');
   if (cards.length < 2) return;
-  var short = {'2026-11-23':'Mon 23','2026-11-24':'Tue 24','2026-11-25':'Wed 25','2026-11-26':'Thu 26','2026-11-27':'Fri 27'};
+  var short = {'2026-11-23':'Mon 23','2026-11-24':'Tue 24','2026-11-25':'Wed 25','2026-11-26':'Thu 26','2026-11-27':'Fri 27','bonus':'Bonus day'};
   function dateSpan(c){ return c.querySelector('.day-date'); }
   function swap(a, b){
     if (a === b) return;
@@ -299,4 +299,17 @@ var GATE_BLOB = {"it":250000,"salt":"pmTZbFhpZmKf+pYKEYmnkw==","iv":"yJlbLp04Xcm
   else if (now <= end) el.textContent = 'Day ' + (Math.round((now - start) / 86400000) + 1) + ' of 7.';
   else return;
   el.hidden = false;
+})();
+
+/* Rating pills: tap for what reviewers keep saying. */
+(function(){
+  var toast = document.getElementById('bear-toast'); if (!toast) return;
+  var tmr;
+  document.addEventListener('click', function(e){
+    var r = e.target.closest && e.target.closest('.rate'); if (!r) return;
+    e.preventDefault();
+    var sm = r.querySelector('small'); var n = sm ? sm.textContent : ''; var stars = r.childNodes[0] ? r.childNodes[0].textContent.trim() : r.textContent;
+    toast.innerHTML = '<b>' + stars + ' on Google' + (n ? ', ' + n + ' reviews' : '') + '.</b> ' + (r.getAttribute('data-say') || '');
+    toast.classList.add('show'); clearTimeout(tmr); tmr = setTimeout(function(){ toast.classList.remove('show'); }, 7000);
+  });
 })();
