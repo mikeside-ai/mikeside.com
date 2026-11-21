@@ -2,8 +2,9 @@
    Plan A/B toggle, Leaflet map with live road routing, drive-time badges,
    nap clock, journal, copy-as-text. Everything degrades quietly offline. */
 (function(){
-  var DATE = document.body.getAttribute('data-date');
-  if (!DATE) return;
+  var DATE = document.body.getAttribute('data-date') || '';
+  var PAGE = document.body.getAttribute('data-page') || DATE;
+  if (!PAGE) return;
   var TZ = 'America/New_York';
   function fmtET(d, opts){ try { return new Intl.DateTimeFormat('en-US', Object.assign({timeZone: TZ}, opts)).format(d); } catch(e){ return ''; } }
   function todayET(){ try { return new Intl.DateTimeFormat('en-CA', {timeZone: TZ, year:'numeric', month:'2-digit', day:'2-digit'}).format(new Date()); } catch(e){ return new Date().toISOString().slice(0,10); } }
@@ -12,6 +13,7 @@
   (function(){
     var el = document.getElementById('day-wx'), ridgeEl = document.getElementById('day-wx-ridge');
     if (!el || !window.fetch) return;
+    if (!DATE) { el.textContent = 'Pick a day to see its forecast'; var nt = document.getElementById('now-temp'); return; }
     var base = 'https://api.open-meteo.com/v1/forecast?temperature_unit=fahrenheit&precipitation_unit=inch&timezone=America%2FNew_York&forecast_days=10';
     var town = base + '&latitude=35.714&longitude=-83.510&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,snowfall_sum&current=temperature_2m,weather_code,wind_speed_10m';
     var ridge = base + '&latitude=35.5628&longitude=-83.4985&elevation=2025&daily=temperature_2m_max,temperature_2m_min,snowfall_sum';
@@ -75,7 +77,7 @@
   /* ---- Plan A / B ---- */
   var plan = 'a';
   (function(){
-    var KEY = 'gatlinburg-2026-plan-' + DATE;
+    var KEY = 'gatlinburg-2026-plan-' + PAGE;
     var btns = [].slice.call(document.querySelectorAll('.plan-toggle .pt')), a = document.getElementById('plan-a'), b = document.getElementById('plan-b'), title = document.getElementById('plan-title');
     if (!btns.length) return;
     function show(p){
@@ -112,7 +114,7 @@
   (function(){
     var ta = document.getElementById('journal-text'), saved = document.getElementById('journal-saved'), copy = document.getElementById('journal-copy');
     if (!ta) return;
-    var KEY = 'gatlinburg-2026-journal-' + DATE;
+    var KEY = 'gatlinburg-2026-journal-' + PAGE;
     try { ta.value = localStorage.getItem(KEY) || ''; } catch(e){}
     var t;
     ta.addEventListener('input', function(){ clearTimeout(t); t = setTimeout(function(){ try { localStorage.setItem(KEY, ta.value); saved.textContent = 'Saved on this phone'; } catch(e){ saved.textContent = 'Could not save'; } }, 400); });
@@ -125,7 +127,13 @@
     var el = document.getElementById('leaflet'); if (!el || !window.L) return;
     var routeA = [], routeB = [];
     try { routeA = JSON.parse(el.getAttribute('data-route') || '[]'); routeB = JSON.parse(el.getAttribute('data-route-b') || '[]'); } catch(e){}
-    var map = L.map(el, {scrollWheelZoom:false, zoomControl:true});
+    var mobile = window.matchMedia && window.matchMedia('(max-width: 760px)').matches;
+    var map = L.map(el, {scrollWheelZoom:false, zoomControl:true, dragging: !mobile, tap: !mobile});
+    if (mobile) {
+      var hint = document.createElement('button'); hint.type = 'button'; hint.className = 'map-hint'; hint.textContent = 'Tap to move the map';
+      el.appendChild(hint);
+      hint.addEventListener('click', function(){ map.dragging.enable(); if (map.tap) map.tap.enable(); hint.remove(); });
+    }
     L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {attribution:'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, SRTM &middot; style &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (CC-BY-SA)', maxZoom:17, subdomains:'abc'}).addTo(map);
     var icon = L.divIcon({className:'pin', html:'<span></span>', iconSize:[18,18], iconAnchor:[9,9], popupAnchor:[0,-10]});
     var cabin = L.divIcon({className:'pin cabin', html:'<span></span>', iconSize:[18,18], iconAnchor:[9,9]});
@@ -141,6 +149,11 @@
       });
     }
     addStops('slots-a', layers.a);
+    [].slice.call(document.querySelectorAll('.trail[data-lat]')).forEach(function(t){
+      var lat = +t.getAttribute('data-lat'), lng = +t.getAttribute('data-lng'), nav = t.querySelector('a.nav');
+      L.marker([lat, lng], {icon: icon}).addTo(layers.a).bindPopup('<b>' + t.getAttribute('data-name') + '</b>' + (nav ? '<br><a href="' + nav.href + '" target="_blank" rel="noopener">Directions</a>' : ''));
+      bounds.push([lat, lng]);
+    });
     function fit(){ if (bounds.length) map.fitBounds(bounds, {padding:[30,30], maxZoom:13}); else map.setView([35.7, -83.52], 11); }
     fit();
     var cache = {};
