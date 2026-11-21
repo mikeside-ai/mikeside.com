@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b1411">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Dollywood — Bonus day · Gatlinburg week</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="site.css?v=4">
+</head>
+<body class="locked day-page" data-date="" data-page="bonus">
+
+<div id="gate">
+  <form class="gate-box" id="gate-form" autocomplete="off">
+    <span class="logo">mike<span>side</span></span>
+    <h1>Gatlinburg week</h1>
+    <p>Family page. Enter the PIN to open it.</p>
+    <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" aria-label="PIN" autofocus>
+    <button type="submit">Open</button>
+    <div class="err" id="gate-err"></div>
+  </form>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="/">mike<span>side</span></a>
+    <nav aria-label="Trip pages">
+      <ul>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="day-6-sat.html">&larr; Sat 28</a></li>
+        
+        <li><a href="#plan">Plan</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="trails.html">Trails</a></li>
+        <li><a href="#journal">Journal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="banner" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Dollywood%20from%20the%20Dollywood%20Express%20-%208.jpg?width=1400')">
+  <div class="banner-shade"></div>
+  <div class="container banner-text">
+    <p class="kicker">Bonus · Dollywood, if the week allows</p>
+    <h1>Dollywood</h1>
+    <p class="banner-date">Bonus · any day <span class="tag bear">Bonus day</span></p>
+  </div>
+  <span class="credit">Roc0ast3r · CC0</span>
+</div>
+
+<div class="chips container" aria-label="Days"><a class="chip" href="day-0-sun.html">Sun 22</a><a class="chip" href="day-1-mon.html">Mon 23</a><a class="chip" href="day-2-tue.html">Tue 24</a><a class="chip" href="day-3-wed.html">Wed 25</a><a class="chip" href="day-4-thu.html">Thu 26</a><a class="chip" href="day-5-fri.html">Fri 27</a><a class="chip" href="day-6-sat.html">Sat 28</a><a class="chip on" href="bonus-dollywood.html">Bonus</a></div>
+
+<section class="daytop">
+  <div class="container">
+    <p class="lede">The big-ticket day, kept on the bench. Three kids under eight and a $300 gate is a bet on weather and sleep, so it only goes on the calendar if both are good. Wildwood Grove first, the train before lunch, Cash's coasters by wristband, lights on the way out.</p>
+    <dl class="facts facts-day">
+      <div class="fact"><dt>Forecast</dt><dd id="day-wx">Loading&hellip;<small id="day-wx-ridge"></small></dd></div>
+      <div class="fact"><dt>Right now</dt><dd id="now-temp">&mdash;<small id="now-clock"></small></dd></div>
+      <div class="fact"><dt>Daylight</dt><dd id="daylight">7:30a &rarr; 5:25p<small id="dark-in"></small></dd></div>
+      <div class="fact nap"><dt>Nap clock</dt><dd><span id="nap-text">Not started</span><small><button type="button" class="ghost" id="nap-btn">Start nap</button></small></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="plan">
+  <div class="container">
+    <p class="eyebrow">The plan</p>
+    <div class="plan-head">
+      <h2 id="plan-title">Plan A</h2>
+      <div class="plan-toggle" role="tablist">
+        <button type="button" class="pt on" data-plan="a" role="tab">Plan A</button>
+        <button type="button" class="pt" data-plan="b" role="tab">Plan B</button>
+        <button type="button" class="ghost" id="copy-plan">Copy as text</button>
+      </div>
+    </div>
+    <div class="plan" id="plan-a">
+      <p class="day-note">Not on the calendar on purpose. If a day dawns clear, everyone slept, and you want it, swap it in for Monday, Tuesday or Wednesday from the hub. It is closed Thursday and mobbed Friday and Saturday. Park opens at 10, be in the lot at 9:15. Parking $25. $94.99 adults, $84.99 for Cash through Nov 25, the little two free. Buy online the night before.</p>
+      <ul class="slots" id="slots-a">
+        <li class="slot" data-lat="35.7887" data-lng="-83.53" data-stop="Park, tram to the gate, measure Cash"><time>9:15a</time><div><div class="what">Park, tram to the gate, measure Cash <span class="rate" data-say="Clean, well run, great food (the cinnamon bread). Go mid-week; weekends and holidays get long lines." title="Google rating, 61,408 reviews">&#9733; 4.6<small>61k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Dollywood%2C%202700%20Dollywood%20Parks%20Blvd%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></div><div class="addr">2700 Dollywood Parks Blvd, Pigeon Forge</div><div class="why">The measuring station on Showstreet gives him a wristband for the day. 42 inches opens Blazing Fury and Sky Rider. 48 opens the real coasters. Don't guess, measure.</div></div></li>
+        <li class="slot"><time>10:00a</time><div><div class="what">Straight to Wildwood Grove</div><div class="why">Back of the park, so go first while everyone else stops at the front. Frogs and Fireflies, Treetop Tower, the Great Tree Swing at 36 inches, and the splash-free Wildwood Creek playground. This is Slavik's whole park.</div></div></li>
+        <li class="slot"><time>11:30a</time><div><div class="what">Dollywood Express <span class="rate" data-say="Clean, well run, great food (the cinnamon bread). Go mid-week; weekends and holidays get long lines." title="Google rating, 61,408 reviews">&#9733; 4.6<small>61k</small></span></div><div class="why">The steam train. No height minimum, twenty minutes sitting down, and the single best thing for Snejana. Ride it before lunch while she's still happy.</div></div></li>
+        <li class="slot"><time>12:15p</time><div><div class="what">Lunch, then the Village</div><div class="why">Carousel and Lemon Twist have no minimum. Santa is in the Imagination Playhouse near the train depot. Cash and one adult peel off for Blazing Fury and whatever his wristband allows. Use Parent Swap so nobody waits twice.</div></div></li>
+        <li class="slot"><time>2:30p</time><div><div class="what">Stroller nap loop</div><div class="why">Snejana and probably Slavik go down in the stroller. Walk slow through Craftsman's Valley. One adult takes Cash to the Country Fair rides, which are 36 inches and up.</div></div></li>
+        <li class="slot"><time>5:00p</time><div><div class="what">Dinner in the park, then the lights come on</div><div class="why">Snow in the Grove runs in Wildwood Grove each evening with the characters. Glacier Ridge and Peppermint Valley are the light walks. Get through the Grove first, then Glacier Ridge on the way out.</div></div></li>
+        <li class="slot"><time>6:45p</time><div><div class="what">Leave before the park does</div><div class="why">The 9pm close is for people without a one-year-old. Out by seven, home by 7:45, bed. Tomorrow is a recovery day on purpose.</div></div></li>
+      </ul>
+      <div class="callout sun"><h3>Heights will decide Cash's day</h3><p>No minimum: Dollywood Express, Village Carousel, Lemon Twist, Flying Elephants, Rockin' Roadway. Treetop Tower and Frogs and Fireflies need a 14+ companion under 42 and 36 inches. The Country Fair kiddie rides moved to a 36-inch minimum for 2026, so Slavik may be shut out of Busy Bees and Lucky Ducky. At <strong>42 inches</strong> Cash gets Blazing Fury, Sky Rider and the Waltzing Swinger. At <strong>48 inches</strong> he gets Thunderhead, Mystery Mine and Barnstormer. A seven-year-old is usually right around 48, so measure him at the cabin Sunday night and again at the park.</p></div>
+    </div>
+    <div class="plan" id="plan-b" hidden>
+      <div class="callout water"><h3>Plan B: Dollywood on the cheap side</h3><p>Same park, less money and less walking. Park free at Patriot Park behind the Old Mill and ride the trolley to the gate for $3 a person instead of paying $25 to park, then do only the Grove, the train and the lights.</p></div>
+      <ul class="slots" id="slots-b">
+        <li class="slot"><time>9:00a</time><div><div class="what">Patriot Park, free parking <span class="rate" data-say="Free parking behind the Old Mill, $3-a-person trolley to Dollywood all day, Winterfest light walk to The Island." title="Google rating, 3,575 reviews">&#9733; 4.6<small>4k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Patriot%20Park%2C%20236%20Old%20Mill%20Ave%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></div><div class="why">236 Old Mill Ave. The Pigeon Forge trolley to Dollywood runs from the transit center here, $3 a person all day. Reviewers call it the trick nobody tells you.</div></div></li>
+        <li class="slot"><time>10:00a</time><div><div class="what">Wildwood Grove, then the train <span class="rate" data-say="Clean, well run, great food (the cinnamon bread). Go mid-week; weekends and holidays get long lines." title="Google rating, 61,408 reviews">&#9733; 4.6<small>61k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Dollywood%2C%202700%20Dollywood%20Parks%20Blvd%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></div><div class="why">Back of the park first, train before lunch, same as Plan A.</div></div></li>
+        <li class="slot"><time>1:00p</time><div><div class="what">Trolley back, naps at the cabin</div><div class="why">Leave with the little two asleep in the stroller and come back at dusk with the Good-Any-Day ticket, or call it a day.</div></div></li>
+        <li class="slot"><time>5:00p</time><div><div class="what">Back for the lights, or Winterfest from the car <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7880%2C-83.5540" target="_blank" rel="noopener">Directions</a></div><div class="why">If nobody wants to go back in, the Pigeon Forge Parkway lights are free and the kids are already in car seats.</div></div></li>
+      </ul>
+    </div>
+    <div class="bail">
+      <h3>Bail-out: The Dollywood Express <span class="rate" data-say="Clean, well run, great food (the cinnamon bread). Go mid-week; weekends and holidays get long lines." title="Google rating, 61,408 reviews">&#9733; 4.6<small>61k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Dollywood%2C%202700%20Dollywood%20Parks%20Blvd%2C%20Pigeon%20Forge%2C%20TN%2037863" target="_blank" rel="noopener">Directions</a></h3>
+      <p>If a kid melts down mid-park, the steam train is a twenty-minute sit-down that resets everybody. If it's the weather, the covered shows in the Village run all afternoon, and the ticket is good any day if you bought Good-Any-Day.</p>
+    </div>
+  </div>
+</section>
+
+<section id="map">
+  <div class="container">
+    <p class="eyebrow">The ground</p>
+    <h2>Map</h2>
+    <p class="intro">Stops for the plan you have selected. The solid line is the road route; it is drawn live from OpenStreetMap, so it needs signal. Tap a marker for directions.</p>
+    <div id="leaflet" class="map" data-route='[]' data-route-b='[[35.7878, -83.5516], [35.7951, -83.5312]]'></div>
+  </div>
+</section>
+
+<section id="photos">
+  <div class="container">
+    <p class="eyebrow">What it looks like</p>
+    <h2>The places</h2>
+    <div class="strip">
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Dollywood%20Express%20No.%2070%20aka%20%22Cinderella%22%20-%20June%202023.jpg?width=800" alt=""><figcaption>Jeremy Thompson · CC BY 2.0</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Dollywood%20sign%20-%20October%202023%20-%20Sarah%20Stierch.jpg?width=800" alt=""><figcaption>Sarah Stierch · CC BY 4.0</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Dollywood%20Express%20192%20Wildwood%20Grove.jpg?width=800" alt=""><figcaption>Trirrfan9101 · CC BY-SA 4.0</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Thunderhead%20%28Dollywood%29%2002.JPG?width=800" alt=""><figcaption>Coasterman1234 · CC BY-SA 3.0</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Dollywood%20from%20the%20Dollywood%20Express%20-%209.jpg?width=800" alt=""><figcaption>Roc0ast3r · CC0</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="kids">
+  <div class="container">
+    <p class="eyebrow">Three cubs</p>
+    <h2>Today, each of them</h2>
+    <div class="kid">
+      <ul>
+        <li>Cash: measured, wristbanded, and paired with one adult for the 42-inch rides. Blazing Fury is his big one.</li>
+        <li>Slavik: Wildwood Grove is his park. Great Tree Swing at 36 inches if he clears it, Frogs and Fireflies with an adult.</li>
+        <li>Snejana: the train, the carousel, the stroller nap loop through Craftsman's Valley. Out by 6:45 whatever is happening.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="journal">
+  <div class="container">
+    <p class="eyebrow">Trip log</p>
+    <h2>What actually happened</h2>
+    <p class="intro">Notes stay on this phone. A line a day is plenty; it's what you'll read next November.</p>
+    <textarea id="journal-text" rows="6" placeholder="Who saw the first bear, what the kids ate, what you'd change."></textarea>
+    <div class="journal-bar"><span id="journal-saved"></span><button type="button" class="ghost" id="journal-copy">Copy</button></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="pager">
+      <a href="day-6-sat.html">&larr; Saturday: Home</a>
+      <a href="index.html">Hub</a>
+      <span></span>
+    </div>
+    <p>Photos are from Wikimedia Commons under the licenses shown. Hours, prices and park roads change with the weather; check the hub's road status link each morning.</p>
+  </div>
+</footer>
+
+<div class="bear-toast" id="bear-toast" role="status"></div>
+<div class="bear-peek" id="bear-peek" aria-hidden="true">
+  <svg viewBox="0 0 120 100"><g fill="#2b1d14"><ellipse cx="60" cy="78" rx="46" ry="30"/><circle cx="60" cy="44" r="30"/><circle cx="36" cy="22" r="11"/><circle cx="84" cy="22" r="11"/></g><g fill="#6b4a33"><circle cx="36" cy="22" r="5"/><circle cx="84" cy="22" r="5"/><ellipse cx="60" cy="56" rx="14" ry="10"/></g><g fill="#0b1411"><circle cx="48" cy="40" r="3.5"/><circle cx="72" cy="40" r="3.5"/><ellipse cx="60" cy="52" rx="6" ry="4"/></g><circle cx="49.5" cy="38.5" r="1.2" fill="#fff"/><circle cx="73.5" cy="38.5" r="1.2" fill="#fff"/></svg>
+</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="bear-side" viewBox="0 0 140 90"><g fill="#2b1d14"><ellipse cx="62" cy="50" rx="44" ry="26"/><circle cx="108" cy="36" r="18"/><circle cx="98" cy="22" r="6"/><circle cx="118" cy="22" r="6"/><circle cx="20" cy="50" r="12"/><rect x="30" y="62" width="12" height="26" rx="5"/><rect x="52" y="64" width="12" height="24" rx="5"/><rect x="78" y="64" width="12" height="24" rx="5"/><rect x="96" y="60" width="12" height="28" rx="5"/></g><g fill="#6b4a33"><ellipse cx="122" cy="42" rx="9" ry="6"/></g><circle cx="114" cy="33" r="2.5" fill="#0b1411"/><circle cx="129" cy="41" r="3" fill="#0b1411"/></symbol>
+</svg>
+
+<nav class="tabbar" aria-label="Quick links">
+  <a href="index.html"><span>&#8962;</span>Hub</a>
+  <a href="day-6-sat.html"><span>&larr;</span>Sat 28</a>
+  <a href="#plan"><span>&#9776;</span>Plan</a>
+  <a href="#map"><span>&#9673;</span>Map</a>
+  <a href="trails.html"><span>&#9650;</span>Trails</a>
+</nav>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="site.js?v=4"></script>
+<script src="day.js?v=4"></script>
+</body>
+</html>
