@@ -7,20 +7,18 @@
 <meta name="theme-color" content="#0b1411">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <title>Trout fishing · Gatlinburg week</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-<link rel="stylesheet" href="site.css?v=7">
+<link rel="stylesheet" href="site.css?v=4">
 </head>
 <body class="locked day-page trails-page" data-page="fishing">
 
 <div id="gate">
   <form class="gate-box" id="gate-form" autocomplete="off">
-    <span class="logo"><span class="logo-mark big" aria-hidden="true">&#x1F43B;</span></span>
+    <span class="logo">mike<span>side</span></span>
     <h1>Gatlinburg week</h1>
     <p>Family page. Enter the PIN to open it.</p>
     <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" aria-label="PIN" autofocus>
@@ -31,7 +29,7 @@
 
 <header>
   <div class="container nav">
-    <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">&#x1F43B;</span>Gatlinburg <span>week</span></a>
+    <a class="logo" href="/">mike<span>side</span></a>
     <nav aria-label="Trip pages">
       <ul>
         <li><a href="index.html">Hub</a></li>
@@ -101,15 +99,6 @@
   </div>
 </section>
 
-<section id="map">
-  <div class="container">
-    <p class="eyebrow">Where it is</p>
-    <h2>Map</h2>
-    <p class="intro">Numbered pins match the spots below. Tap a pin, then &ldquo;Read about this spot&rdquo; to jump to it; tap &ldquo;On the map&rdquo; on any spot to come back here. Pins also give directions.</p>
-    <div id="leaflet" class="map" data-route="[]" data-route-b="[]"></div>
-  </div>
-</section>
-
 <section id="spots">
   <div class="container">
     <p class="eyebrow">The water</p>
@@ -120,7 +109,7 @@
         <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Rainbow%20Trout%202528.jpg?width=480')"><span class="credit">Chris Light · CC BY-SA 4.0</span></div>
         <div class="trail-body">
           <h3>Herbert Holt Park <span class="rate" data-say="Kids 12 and under only on the park stretch. Reviewers' kids caught rainbows on small single-hook spinners. Bears wander through at dusk and one stole a fish." title="Google rating, 708 reviews">&#9733; 4.7<small>708</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7256476%2C-83.5129832" target="_blank" rel="noopener">Directions</a></h3>
-          <p class="meta">North end of town, off the Spur &middot; 10 min from the cabin</p>
+          <p class="meta">North end of town, off the Spur &middot; 2 min from the cabin</p>
           <dl class="trail-facts">
             <div><dt>Water</dt><dd>West Prong, stocked</dd></div>
             <div><dt>Who</dt><dd>Kids only inside the park; adults just upstream</dd></div>
@@ -131,7 +120,7 @@
           </dl>
           <p class="kidscore" title="Our score for knees over sixty and kids under seven">Knees and kids score <span>&#9679;&#9679;&#9679;&#9679;&#9679;<i></i></span></p>
           <p>The city trout farm is here, so this is the most reliably fishy water in town. The stretch from the park entrance bridge downstream to the Bypass bridge is for ages 12 and under, two fish each, no license. Cash and Slavik fish it with a grandparent standing behind them, and Snejana has a playground. Upstream of the entrance bridge is general water where the grandparents can fish with their own license. Walk past the raceways and look at the fish being raised.</p>
-          <p class="when">Best slot: Friday or Saturday morning, the day after stocking</p>
+          <p class="when">Best slot: Friday morning, the day after stocking. It's two minutes away, so any spare hour works</p>
         </div>
       </div>
 
@@ -139,7 +128,7 @@
         <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Small%20cascade%20in%20river%20at%20Chimneys%20Picnic%20Area%20%28291d14fb-1dd8-b71c-0750-5bb0c39a671a%29.jpg?width=480')"><span class="credit">NPS · Public domain</span></div>
         <div class="trail-body">
           <h3>West Prong through downtown <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=River%20Road%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></h3>
-          <p class="meta">River Road, behind the Parkway &middot; 10 min from the cabin, or walk from the trolley</p>
+          <p class="meta">River Road, behind the Parkway &middot; 5 min from the cabin, or walk from the trolley</p>
           <dl class="trail-facts">
             <div><dt>Water</dt><dd>West Prong, stocked</dd></div>
             <div><dt>Who</dt><dd>Anyone with a town permit</dd></div>
@@ -327,6 +316,14 @@
   </div>
 </section>
 
+<section id="map">
+  <div class="container">
+    <p class="eyebrow">Where it is</p>
+    <h2>Map</h2>
+    <p class="intro">Tap a pin for directions. Town water is the cluster at the top; park water runs south and west along the roads; the trout farm is the lone pin up to the northeast.</p>
+    <div id="leaflet" class="map" data-route="[]" data-route-b="[]"></div>
+  </div>
+</section>
 
 <footer>
   <div class="container">
@@ -348,8 +345,8 @@
 </nav>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="site.js?v=6"></script>
-<script src="day.js?v=7"></script>
+<script src="site.js?v=4"></script>
+<script src="day.js?v=4"></script>
 <script src="photos.js?v=1" defer></script>
 </body>
 </html>
