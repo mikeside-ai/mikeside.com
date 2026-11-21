@@ -7,18 +7,20 @@
 <meta name="theme-color" content="#0b1411">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <title>Trout fishing · Gatlinburg week</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-<link rel="stylesheet" href="site.css?v=4">
+<link rel="stylesheet" href="site.css?v=7">
 </head>
 <body class="locked day-page trails-page" data-page="fishing">
 
 <div id="gate">
   <form class="gate-box" id="gate-form" autocomplete="off">
-    <span class="logo">mike<span>side</span></span>
+    <span class="logo"><span class="logo-mark big" aria-hidden="true">&#x1F43B;</span></span>
     <h1>Gatlinburg week</h1>
     <p>Family page. Enter the PIN to open it.</p>
     <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" aria-label="PIN" autofocus>
@@ -29,7 +31,7 @@
 
 <header>
   <div class="container nav">
-    <a class="logo" href="/">mike<span>side</span></a>
+    <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">&#x1F43B;</span>Gatlinburg <span>week</span></a>
     <nav aria-label="Trip pages">
       <ul>
         <li><a href="index.html">Hub</a></li>
@@ -96,6 +98,15 @@
       </tbody>
     </table></div>
     <p class="intro">Do not move or stack rocks in the park; it is illegal and it kills the bugs the trout eat. Do not dump fish guts near a campsite. On Dec 1 the town goes catch-and-release, but we are gone by then.</p>
+  </div>
+</section>
+
+<section id="map">
+  <div class="container">
+    <p class="eyebrow">Where it is</p>
+    <h2>Map</h2>
+    <p class="intro">Numbered pins match the spots below. Tap a pin, then &ldquo;Read about this spot&rdquo; to jump to it; tap &ldquo;On the map&rdquo; on any spot to come back here. Town water is the cluster at the top; park water runs south and west; the trout farm is the lone pin to the northeast.</p>
+    <div id="leaflet" class="map" data-route="[]" data-route-b="[]"></div>
   </div>
 </section>
 
@@ -316,15 +327,6 @@
   </div>
 </section>
 
-<section id="map">
-  <div class="container">
-    <p class="eyebrow">Where it is</p>
-    <h2>Map</h2>
-    <p class="intro">Tap a pin for directions. Town water is the cluster at the top; park water runs south and west along the roads; the trout farm is the lone pin up to the northeast.</p>
-    <div id="leaflet" class="map" data-route="[]" data-route-b="[]"></div>
-  </div>
-</section>
-
 <footer>
   <div class="container">
     <div class="pager"><a href="trails.html">&larr; Trails</a><span></span><a href="index.html">Hub &rarr;</a></div>
@@ -345,8 +347,8 @@
 </nav>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="site.js?v=4"></script>
-<script src="day.js?v=4"></script>
+<script src="site.js?v=6"></script>
+<script src="day.js?v=7"></script>
 <script src="photos.js?v=1" defer></script>
 </body>
 </html>
