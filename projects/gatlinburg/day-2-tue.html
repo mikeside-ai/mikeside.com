@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Easy morning, Anakeesta at dusk — Tuesday, Nov 24 · Gatlinburg week</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="site.css?v=3">
+</head>
+<body class="locked day-page" data-date="2026-11-24">
+
+<div id="gate">
+  <form class="gate-box" id="gate-form" autocomplete="off">
+    <span class="logo">mike<span>side</span></span>
+    <h1>Gatlinburg week</h1>
+    <p>Family page. Enter the PIN to open it.</p>
+    <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" aria-label="PIN" autofocus>
+    <button type="submit">Open</button>
+    <div class="err" id="gate-err"></div>
+  </form>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="/">mike<span>side</span></a>
+    <nav aria-label="Trip pages">
+      <ul>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="day-1-mon.html">&larr; Mon 23</a></li>
+        <li><a href="day-3-wed.html">Wed 25 &rarr;</a></li>
+        <li><a href="#plan">Plan</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#journal">Journal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="banner" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Anakeesta%20-%20October%202023%20-%20Sarah%20Stierch.jpg?width=1400')">
+  <div class="banner-shade"></div>
+  <div class="container banner-text">
+    <p class="kicker">Day 2 · Easy morning, Anakeesta at dusk</p>
+    <h1>Easy morning, Anakeesta at dusk</h1>
+    <p class="banner-date">Tuesday, Nov 24 <span class="tag calm">Recovery</span></p>
+  </div>
+  <span class="credit">Sarah Stierch · CC BY 4.0</span>
+</div>
+
+<div class="chips container" aria-label="Days"><a class="chip" href="day-0-sun.html">Sun 22</a><a class="chip" href="day-1-mon.html">Mon 23</a><a class="chip on" href="day-2-tue.html">Tue 24</a><a class="chip" href="day-3-wed.html">Wed 25</a><a class="chip" href="day-4-thu.html">Thu 26</a><a class="chip" href="day-5-fri.html">Fri 27</a><a class="chip" href="day-6-sat.html">Sat 28</a></div>
+
+<section class="daytop">
+  <div class="container">
+    <p class="lede">Recovery day. Two short flat walks in the park before eleven, the long nap, then the gondola up to the lights with the stroller in the cabin.</p>
+    <dl class="facts facts-day">
+      <div class="fact"><dt>Forecast</dt><dd id="day-wx">Loading&hellip;<small id="day-wx-ridge"></small></dd></div>
+      <div class="fact"><dt>Right now</dt><dd id="now-temp">&mdash;<small id="now-clock"></small></dd></div>
+      <div class="fact"><dt>Daylight</dt><dd id="daylight">7:30a &rarr; 5:25p<small id="dark-in"></small></dd></div>
+      <div class="fact nap"><dt>Nap clock</dt><dd><span id="nap-text">Not started</span><small><button type="button" class="ghost" id="nap-btn">Start nap</button></small></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="plan">
+  <div class="container">
+    <p class="eyebrow">The plan</p>
+    <div class="plan-head">
+      <h2 id="plan-title">Plan A</h2>
+      <div class="plan-toggle" role="tablist">
+        <button type="button" class="pt on" data-plan="a" role="tab">Plan A</button>
+        <button type="button" class="pt" data-plan="b" role="tab">Plan B</button>
+        <button type="button" class="ghost" id="copy-plan">Copy as text</button>
+      </div>
+    </div>
+    <div class="plan" id="plan-a">
+      <p class="day-note">Nobody drives far today. Short walk in the park, long nap, then the mountaintop for the lights.</p>
+      <ul class="slots" id="slots-a">
+        <li class="slot" data-lat="35.6857" data-lng="-83.5368" data-stop="Sugarlands Visitor Center"><time>9:00a</time><div><div class="what">Sugarlands Visitor Center <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6857204%2C-83.5367666" target="_blank" rel="noopener">Directions</a></div><div class="addr">1420 Fighting Creek Gap Rd (US-441)</div><div class="why">Two miles south of town on US-441. Buy the <strong>$15 weekly parking tag</strong> here and put it on the dash. Free museum inside with the stuffed animals, which buys you twenty minutes if it's cold.</div></div></li>
+        <li class="slot" data-lat="35.6857" data-lng="-83.5368" data-stop="Cataract Falls"><time>9:30a</time><div><div class="what">Cataract Falls <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6857204%2C-83.5367666" target="_blank" rel="noopener">Directions</a></div><div class="addr">Starts behind the visitor center</div><div class="why">The trail starts behind the visitor center. Under half a mile, flat, dirt. The shortest walk to a waterfall in the park. Cash walks, Slavik walks most of it, Snejana rides in the carrier.</div></div></li>
+        <li class="slot" data-lat="35.6796" data-lng="-83.5313" data-stop="Sugarlands Valley Nature Trail"><time>10:15a</time><div><div class="what">Sugarlands Valley Nature Trail <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6795863%2C-83.5312772" target="_blank" rel="noopener">Directions</a></div><div class="addr">Newfound Gap Rd, 0.3 mi south of the visitor center</div><div class="why">Half a mile, fully paved, flat. The one trail in the park where the stroller actually works. Creek, old chimney, done by eleven.</div></div></li>
+        <li class="slot"><time>11:30a</time><div><div class="what">Home, lunch, naps</div><div class="why">Protect this. Tonight runs late.</div></div></li>
+        <li class="slot" data-lat="35.7142" data-lng="-83.5104" data-stop="Park downtown, Chondola to Anakeesta"><time>3:15p</time><div><div class="what">Park downtown, Chondola to Anakeesta <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7141604%2C-83.5103516" target="_blank" rel="noopener">Directions</a></div><div class="addr">Anakeesta base: 576 Parkway. Garage: McMahan, traffic light #3</div><div class="why">Base is at 576 Parkway. Use the McMahan garage at traffic light #3 or the garage across from the aquarium. The gondola cabins fit a stroller, so bring it up. Adults $34.99, Cash $22.99, the little two free. Buy online.</div></div></li>
+        <li class="slot"><time>3:45p</time><div><div class="what">Treehouse play area and Vista Gardens in daylight</div><div class="why">The Treehouse Adventure play structure is the toddler payoff. Treetop Skywalk is included but no strollers and no carrying, so one adult does it with Cash while the other stays at the playground.</div></div></li>
+        <li class="slot"><time>5:15p</time><div><div class="what">Lights come on</div><div class="why">Enchanted Christmas is the whole mountaintop lit up. Half an hour of walking it is plenty. Cliff Top has food if you'd rather eat up there than fight downtown.</div></div></li>
+        <li class="slot"><time>6:15p</time><div><div class="what">Down and home</div><div class="why">The Chondola line down gets long after 6:30. Be in it by 6:15.</div></div></li>
+      </ul>
+
+    </div>
+    <div class="plan" id="plan-b" hidden>
+      <div class="callout water"><h3>Plan B: cold soaking rain</h3><p>Anakeesta runs in rain but the whole mountaintop is outdoors and the Skywalk closes in wind. Below 45 and wet, do this.</p></div>
+      <ul class="slots" id="slots-b">
+        <li class="slot"><time>9:30a</time><div><div class="what">Ripley's Aquarium of the Smokies <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Ripley%27s%20Aquarium%20of%20the%20Smokies%2C%2088%20River%20Rd%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="why">If you did not use it Monday. Otherwise the Arts and Crafts show at the convention center opens today.</div></div></li>
+        <li class="slot"><time>12:00p</time><div><div class="what">Home, lunch, naps</div></div></li>
+        <li class="slot"><time>3:30p</time><div><div class="what">Great Smoky Thanksgiving Arts &amp; Crafts Show <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Gatlinburg%20Convention%20Center%2C%20234%20Historic%20Nature%20Trail%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="why">Convention center, 234 Historic Nature Trail. Free, indoor, wide aisles. An easy hour.</div></div></li>
+        <li class="slot"><time>5:30p</time><div><div class="what">SkyPark lights if it clears, cabin movie if not <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Gatlinburg%20SkyPark%2C%20765%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="why">The chairlift runs in light rain. Carrier for Snejana, two chairs. Otherwise popcorn and bed.</div></div></li>
+      </ul>
+    </div>
+    <div class="bail">
+      <h3>Bail-out: The Chondola down <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Anakeesta%2C%20576%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></h3>
+      <p>Anakeesta's gondola runs continuously. If someone is done, one adult rides down with them and the other stays with the rest. The lodge at the base has restrooms and a coffee counter.</p>
+    </div>
+  </div>
+</section>
+
+<section id="map">
+  <div class="container">
+    <p class="eyebrow">The ground</p>
+    <h2>Map</h2>
+    <p class="intro">Stops for the plan you have selected. The solid line is the road route; it is drawn live from OpenStreetMap, so it needs signal. Tap a marker for directions.</p>
+    <div id="leaflet" class="map" data-route='[[35.6857, -83.5368, "Sugarlands Visitor Center"], [35.6796, -83.5313, "Sugarlands Valley Nature Trail"], [35.7142, -83.5104, "Park downtown, Chondola to Anakeesta"]]' data-route-b='[]'></div>
+  </div>
+</section>
+
+<section id="photos">
+  <div class="container">
+    <p class="eyebrow">What it looks like</p>
+    <h2>The places</h2>
+    <div class="strip">
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cataract-falls-gsmnp1.jpg?width=800" alt=""><figcaption>Brian Stansberry · CC BY 3.0</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sugarlands%20Visitor%20Center%2C%20March%202018--Andrea%20Walton%20%2840383946274%29.jpg?width=800" alt=""><figcaption>NPS / Andrea Walton · Public domain</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/GSM%20Parkway%20US%20441%20Gatlinburg%20at%20night.jpg?width=800" alt=""><figcaption>Bneu2013 · CC BY 4.0</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="kids">
+  <div class="container">
+    <p class="eyebrow">Three cubs</p>
+    <h2>Today, each of them</h2>
+    <div class="kid">
+      <ul>
+        <li>Cash does the Treetop Skywalk with one adult. No carrying, so it's him and a grown-up only.</li>
+        <li>Slavik owns the Treehouse play structure. Harness on near the Chondola platform.</li>
+        <li>Snejana rides the gondola in the stroller, then the carrier. Mittens. Hands checked every half hour up there.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="journal">
+  <div class="container">
+    <p class="eyebrow">Trip log</p>
+    <h2>What actually happened</h2>
+    <p class="intro">Notes stay on this phone. A line a day is plenty; it's what you'll read next November.</p>
+    <textarea id="journal-text" rows="6" placeholder="Who saw the first bear, what the kids ate, what you'd change."></textarea>
+    <div class="journal-bar"><span id="journal-saved"></span><button type="button" class="ghost" id="journal-copy">Copy</button></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="pager">
+      <a href="day-1-mon.html">&larr; Monday: Dollywood</a>
+      <a href="index.html">Hub</a>
+      <a href="day-3-wed.html">Wednesday: Cades Cove &rarr;</a>
+    </div>
+    <p>Photos are from Wikimedia Commons under the licenses shown. Hours, prices and park roads change with the weather; check the hub's road status link each morning.</p>
+  </div>
+</footer>
+
+<div class="bear-toast" id="bear-toast" role="status"></div>
+<div class="bear-peek" id="bear-peek" aria-hidden="true">
+  <svg viewBox="0 0 120 100"><g fill="#2b1d14"><ellipse cx="60" cy="78" rx="46" ry="30"/><circle cx="60" cy="44" r="30"/><circle cx="36" cy="22" r="11"/><circle cx="84" cy="22" r="11"/></g><g fill="#6b4a33"><circle cx="36" cy="22" r="5"/><circle cx="84" cy="22" r="5"/><ellipse cx="60" cy="56" rx="14" ry="10"/></g><g fill="#0b1411"><circle cx="48" cy="40" r="3.5"/><circle cx="72" cy="40" r="3.5"/><ellipse cx="60" cy="52" rx="6" ry="4"/></g><circle cx="49.5" cy="38.5" r="1.2" fill="#fff"/><circle cx="73.5" cy="38.5" r="1.2" fill="#fff"/></svg>
+</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="bear-side" viewBox="0 0 140 90"><g fill="#2b1d14"><ellipse cx="62" cy="50" rx="44" ry="26"/><circle cx="108" cy="36" r="18"/><circle cx="98" cy="22" r="6"/><circle cx="118" cy="22" r="6"/><circle cx="20" cy="50" r="12"/><rect x="30" y="62" width="12" height="26" rx="5"/><rect x="52" y="64" width="12" height="24" rx="5"/><rect x="78" y="64" width="12" height="24" rx="5"/><rect x="96" y="60" width="12" height="28" rx="5"/></g><g fill="#6b4a33"><ellipse cx="122" cy="42" rx="9" ry="6"/></g><circle cx="114" cy="33" r="2.5" fill="#0b1411"/><circle cx="129" cy="41" r="3" fill="#0b1411"/></symbol>
+</svg>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="site.js?v=3"></script>
+<script src="day.js?v=3"></script>
+</body>
+</html>
