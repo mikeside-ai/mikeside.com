@@ -356,6 +356,7 @@ var GATE_BLOB = {"it":250000,"salt":"pmTZbFhpZmKf+pYKEYmnkw==","iv":"yJlbLp04Xcm
     else if (ios) { how.innerHTML = 'In Safari: tap <b>Share</b> (the box with the arrow), then <b>Add to Home Screen</b>.'; go.hidden = true; }
     else { how.innerHTML = 'In your browser menu choose <b>Add to Home screen</b> or <b>Install app</b>.'; go.hidden = true; }
     bar.hidden = false;
+    if (!force) { try { localStorage.setItem(KEY, '1'); } catch(e){} }
   }
   window.__showInstall = show;
   window.addEventListener('beforeinstallprompt', function(e){ e.preventDefault(); deferred = e; if (!document.body.classList.contains('locked')) setTimeout(function(){ show(false); }, 4000); });
