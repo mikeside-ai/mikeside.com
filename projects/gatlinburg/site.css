@@ -459,7 +459,8 @@ header{background:var(--header,rgba(11,20,17,.9))}
 .theme-menu button.on{color:var(--gulf)}
 .theme-menu .sw{width:14px;height:14px;border-radius:50%;border:1px solid rgba(0,0,0,.3);flex:none}
 .theme-menu hr{border:0;border-top:1px solid var(--border);margin:.3rem 0}
-.install-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(4.4rem + env(safe-area-inset-bottom));z-index:85;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:.7rem .9rem;max-width:min(92vw,30rem);font-size:.88rem;box-shadow:0 8px 24px rgba(0,0,0,.4);display:flex;gap:.7rem;align-items:center}
+.install-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(4.4rem + env(safe-area-inset-bottom));z-index:85;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:.7rem .9rem;width:min(92vw,30rem);font-size:.88rem;box-shadow:0 8px 24px rgba(0,0,0,.4);display:flex;flex-wrap:wrap;gap:.6rem .7rem;align-items:center}
+.install-bar > div:not(.act){flex:1 1 12rem;min-width:0}
 .install-bar[hidden]{display:none}
 .install-bar img{width:36px;height:36px;border-radius:9px;flex:none}
 .install-bar b{display:block}
@@ -474,3 +475,25 @@ header{background:var(--header,rgba(11,20,17,.9))}
 .float-nav.scrolled .top{display:flex}
 @media (min-width:761px){.float-nav{bottom:1.2rem}}
 @media print{.theme-btn,.theme-menu,.install-bar,.float-nav{display:none}}
+
+/* ============ Shared packing page ============ */
+.sync{color:var(--muted)}.sync.ok{color:var(--gulf)}.sync.off{color:var(--jumpsuit)}
+.pack-cat h3 .cat-count{font-family:"Inter",sans-serif;font-size:.7rem;color:var(--muted);font-weight:600;margin-left:.4rem;vertical-align:middle}
+.pack-cat.done h3{color:var(--gulf)}
+.pack-cat label span small.by{display:block;font-size:.68rem;color:var(--gulf);font-style:normal;margin-top:.1rem}
+.pack-cat li{position:relative}
+.pack-cat .rm{position:absolute;right:0;top:.35rem;font:inherit;font-size:1rem;line-height:1;background:transparent;border:0;color:var(--muted);cursor:pointer;padding:.2rem .4rem}
+.pack-cat .rm:hover{color:var(--accent-soft)}
+.add-form{display:grid;grid-template-columns:1fr auto auto;gap:.5rem;max-width:40rem}
+.add-form input,.add-form select{font:inherit;font-size:.95rem;color:var(--text);background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.65rem .8rem;min-width:0}
+.add-form input:focus,.add-form select:focus{outline:2px solid var(--gulf);border-color:var(--gulf)}
+.add-form .go{font:inherit;font-weight:600;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:.65rem 1rem;cursor:pointer}
+@media (max-width:640px){.add-form{grid-template-columns:1fr}.pack-bar{position:static}}
+.pack-card{display:flex;justify-content:space-between;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem 1.4rem;text-decoration:none;color:var(--text)}
+.pack-card:hover{border-color:var(--gulf);text-decoration:none}
+.pack-progress{font-family:"Fraunces",Georgia,serif;font-size:1.3rem}
+.pack-progress output{color:var(--gulf);font-weight:600}
+.pack-open{font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gulf)}
+
+.day-head h3 a{color:inherit}
+.day-head h3 a:hover{color:var(--gulf);text-decoration:none}
