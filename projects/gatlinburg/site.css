@@ -497,3 +497,10 @@ header{background:var(--header,rgba(11,20,17,.9))}
 
 .day-head h3 a{color:inherit}
 .day-head h3 a:hover{color:var(--gulf);text-decoration:none}
+
+/* ============ Bear logo ============ */
+.logo-mark{display:inline-flex;align-items:center;justify-content:center;width:1.9rem;height:1.9rem;border-radius:.55rem;margin-right:.45rem;vertical-align:-.45rem;font-size:1.15rem;line-height:1;background:linear-gradient(180deg,#1b3a4a,#0b1411);position:relative;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+.logo-mark::after{content:"";position:absolute;left:0;right:0;bottom:0;height:38%;background:linear-gradient(180deg,transparent,#2a5a4e 40%,#0f221b);clip-path:polygon(0 60%,15% 35%,30% 55%,48% 20%,62% 45%,78% 15%,100% 40%,100% 100%,0 100%)}
+.logo-mark.big{width:4.4rem;height:4.4rem;border-radius:1.2rem;font-size:2.6rem;margin:0 0 .4rem;vertical-align:baseline;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+.nav .logo{display:inline-flex;align-items:center}
+.nav .logo span:not(.logo-mark){color:var(--accent-soft);margin-left:.3rem}
