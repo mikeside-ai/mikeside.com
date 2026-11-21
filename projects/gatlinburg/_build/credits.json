@@ -1,1 +1,230 @@
-{"Dollywood Express No. 70 aka \"Cinderella\" - June 2023.jpg": {"lic": "CC BY 2.0", "artist": "Jeremy Thompson"}, "Dollywood from the Dollywood Express - 8.jpg": {"lic": "CC0", "artist": "Roc0ast3r"}, "Dollywood sign - October 2023 - Sarah Stierch.jpg": {"lic": "CC BY 4.0", "artist": "Sarah Stierch"}, "I75S TN 2.jpg": {"lic": "CC BY-SA 4.0", "artist": "Geomaster"}, "Little-river-townsend-y.jpg": {"lic": "CC BY 3.0", "artist": "Brian Stansberry"}, "Little River Road - October 2025 - Sarah Stierch.jpg": {"lic": "CC0", "artist": "Sarah Stierch"}, "Sugarlands Visitor Center--Warren Bielenberg (28323974619).jpg": {"lic": "Public domain", "artist": "NPS / Warren Bielenberg"}, "Thunderhead (Dollywood) 02.JPG": {"lic": "CC BY-SA 3.0", "artist": "Coasterman1234"}, "Anakeesta - October 2023 - Sarah Stierch.jpg": {"lic": "CC BY 4.0", "artist": "Sarah Stierch"}, "Cades-cove-turkeys-tn1.jpg": {"lic": "CC BY 3.0", "artist": "Brian Stansberry"}, "Cades Cove - October 2023 - Sarah Stierch 01.jpg": {"lic": "CC BY 4.0", "artist": "Sarah Stierch"}, "Cataract-falls-gsmnp1.jpg": {"lic": "CC BY 3.0", "artist": "Brian Stansberry"}, "GSM Parkway US 441 Gatlinburg at night.jpg": {"lic": "CC BY 4.0", "artist": "Bneu2013"}, "John Oliver Cabin P9070481.jpg": {"lic": "CC BY-SA 4.0", "artist": "Chris Light"}, "Sugarlands Visitor Center, March 2018--Andrea Walton (40383946274).jpg": {"lic": "Public domain", "artist": "NPS / Andrea Walton"}, "White-Tailed Deer Grazing At Cades Cove.jpg": {"lic": "CC BY-SA 4.0", "artist": "Nancy J. Olds"}, "Black bear sitting upright at Great Smoky Mountains National Park, Tennessee and North Carolina (d846aeb0-01e0-4bb5-801c-d6bb26d13f85).jpg": {"lic": "Public domain", "artist": "NPS"}, "Black bears in Great Smoky Mountains National Park (2653304831).jpg": {"lic": "CC BY-SA 2.0", "artist": "Mark Ordonez"}, "Gatlinburg Space Needle and moon - October 2023 - Sarah Stierch.jpg": {"lic": "CC BY 4.0", "artist": "Sarah Stierch"}, "Newfound Gap - October 2023 - Sarah Stierch 02.jpg": {"lic": "CC BY 4.0", "artist": "Sarah Stierch"}, "Newfound Gap Road - Great Smoky Mountains National Park, TN.jpg": {"lic": "Public domain", "artist": "Phil Varney"}, "Ober Gatlinburg.jpg": {"lic": "CC BY-SA 3.0", "artist": "Chris Hagerman"}, "Observation Tower in Fog, Clingmans Dome (Kuwahi), Great Smoky Mountains National Park, Swain County, NC.jpg": {"lic": "CC BY-SA 2.0", "artist": "w_lemay"}, "SkyBridge at Gatlingburg SkyPark - 2.jpg": {"lic": "CC BY 4.0", "artist": "APK"}, "Black bear cubs climbing.JPG": {"lic": "CC BY-SA 3.0", "artist": "Clayoquot"}, "Cades Cove - October 2023 - Sarah Stierch 05.jpg": {"lic": "CC BY 4.0", "artist": "Sarah Stierch"}, "Great Smoky Mountains National Park - Clingmans Dome Road - Fog (10172652945).jpg": {"lic": "CC BY 2.0", "artist": "Jared"}, "Great Smoky Mountains National Park in Autumn.jpg": {"lic": "Public domain", "artist": "Benjiho"}, "Mount LeConte viewed from Carlos Campbell Overlook, May 2017.jpg": {"lic": "CC0", "artist": "Thomson200"}, "Roaring Fork Motor Nature Trail - March 2024 - Sarah Stierch 03.jpg": {"lic": "CC BY 4.0", "artist": "Sarah Stierch"}, "Snow and Rime Ice on Trees in the Smoky Mountains.JPG": {"lic": "CC BY-SA 4.0", "artist": "Jrmichae"}}
+{
+ "Dollywood Express No. 70 aka \"Cinderella\" - June 2023.jpg": {
+  "lic": "CC BY 2.0",
+  "artist": "Jeremy Thompson"
+ },
+ "Dollywood from the Dollywood Express - 8.jpg": {
+  "lic": "CC0",
+  "artist": "Roc0ast3r"
+ },
+ "Dollywood sign - October 2023 - Sarah Stierch.jpg": {
+  "lic": "CC BY 4.0",
+  "artist": "Sarah Stierch"
+ },
+ "I75S TN 2.jpg": {
+  "lic": "CC BY-SA 4.0",
+  "artist": "Geomaster"
+ },
+ "Little-river-townsend-y.jpg": {
+  "lic": "CC BY 3.0",
+  "artist": "Brian Stansberry"
+ },
+ "Little River Road - October 2025 - Sarah Stierch.jpg": {
+  "lic": "CC0",
+  "artist": "Sarah Stierch"
+ },
+ "Sugarlands Visitor Center--Warren Bielenberg (28323974619).jpg": {
+  "lic": "Public domain",
+  "artist": "NPS / Warren Bielenberg"
+ },
+ "Thunderhead (Dollywood) 02.JPG": {
+  "lic": "CC BY-SA 3.0",
+  "artist": "Coasterman1234"
+ },
+ "Anakeesta - October 2023 - Sarah Stierch.jpg": {
+  "lic": "CC BY 4.0",
+  "artist": "Sarah Stierch"
+ },
+ "Cades-cove-turkeys-tn1.jpg": {
+  "lic": "CC BY 3.0",
+  "artist": "Brian Stansberry"
+ },
+ "Cades Cove - October 2023 - Sarah Stierch 01.jpg": {
+  "lic": "CC BY 4.0",
+  "artist": "Sarah Stierch"
+ },
+ "Cataract-falls-gsmnp1.jpg": {
+  "lic": "CC BY 3.0",
+  "artist": "Brian Stansberry"
+ },
+ "GSM Parkway US 441 Gatlinburg at night.jpg": {
+  "lic": "CC BY 4.0",
+  "artist": "Bneu2013"
+ },
+ "John Oliver Cabin P9070481.jpg": {
+  "lic": "CC BY-SA 4.0",
+  "artist": "Chris Light"
+ },
+ "Sugarlands Visitor Center, March 2018--Andrea Walton (40383946274).jpg": {
+  "lic": "Public domain",
+  "artist": "NPS / Andrea Walton"
+ },
+ "White-Tailed Deer Grazing At Cades Cove.jpg": {
+  "lic": "CC BY-SA 4.0",
+  "artist": "Nancy J. Olds"
+ },
+ "Black bear sitting upright at Great Smoky Mountains National Park, Tennessee and North Carolina (d846aeb0-01e0-4bb5-801c-d6bb26d13f85).jpg": {
+  "lic": "Public domain",
+  "artist": "NPS"
+ },
+ "Black bears in Great Smoky Mountains National Park (2653304831).jpg": {
+  "lic": "CC BY-SA 2.0",
+  "artist": "Mark Ordonez"
+ },
+ "Gatlinburg Space Needle and moon - October 2023 - Sarah Stierch.jpg": {
+  "lic": "CC BY 4.0",
+  "artist": "Sarah Stierch"
+ },
+ "Newfound Gap - October 2023 - Sarah Stierch 02.jpg": {
+  "lic": "CC BY 4.0",
+  "artist": "Sarah Stierch"
+ },
+ "Newfound Gap Road - Great Smoky Mountains National Park, TN.jpg": {
+  "lic": "Public domain",
+  "artist": "Phil Varney"
+ },
+ "Ober Gatlinburg.jpg": {
+  "lic": "CC BY-SA 3.0",
+  "artist": "Chris Hagerman"
+ },
+ "Observation Tower in Fog, Clingmans Dome (Kuwahi), Great Smoky Mountains National Park, Swain County, NC.jpg": {
+  "lic": "CC BY-SA 2.0",
+  "artist": "w_lemay"
+ },
+ "SkyBridge at Gatlingburg SkyPark - 2.jpg": {
+  "lic": "CC BY 4.0",
+  "artist": "APK"
+ },
+ "Black bear cubs climbing.JPG": {
+  "lic": "CC BY-SA 3.0",
+  "artist": "Clayoquot"
+ },
+ "Cades Cove - October 2023 - Sarah Stierch 05.jpg": {
+  "lic": "CC BY 4.0",
+  "artist": "Sarah Stierch"
+ },
+ "Great Smoky Mountains National Park - Clingmans Dome Road - Fog (10172652945).jpg": {
+  "lic": "CC BY 2.0",
+  "artist": "Jared"
+ },
+ "Great Smoky Mountains National Park in Autumn.jpg": {
+  "lic": "Public domain",
+  "artist": "Benjiho"
+ },
+ "Mount LeConte viewed from Carlos Campbell Overlook, May 2017.jpg": {
+  "lic": "CC0",
+  "artist": "Thomson200"
+ },
+ "Roaring Fork Motor Nature Trail - March 2024 - Sarah Stierch 03.jpg": {
+  "lic": "CC BY 4.0",
+  "artist": "Sarah Stierch"
+ },
+ "Snow and Rime Ice on Trees in the Smoky Mountains.JPG": {
+  "lic": "CC BY-SA 4.0",
+  "artist": "Jrmichae"
+ },
+ "Pigeon Forge Mill - October 2023 - Sarah Stierch 03.jpg": {
+  "lic": "CC BY 4.0",
+  "artist": "Sarah Stierch"
+ },
+ "MJK49036 Pigeon Forge Mill.jpg": {
+  "lic": "CC BY-SA 4.0",
+  "artist": "Martin Kraft"
+ },
+ "Old Mill Dam. (2021).jpg": {
+  "lic": "CC BY-SA 4.0",
+  "artist": "Stch2022"
+ },
+ "Margaritaville Island Hotel - April 2026 - Sarah Stierch 02.jpg": {
+  "lic": "CC0",
+  "artist": "Sarah Stierch"
+ },
+ "Pigeon Forge - October 2023 - Sarah Stierch.jpg": {
+  "lic": "CC BY 4.0",
+  "artist": "Sarah Stierch"
+ },
+ "Dollywood Express 192 Wildwood Grove.jpg": {
+  "lic": "CC BY-SA 4.0",
+  "artist": "Trirrfan9101"
+ },
+ "Dollywood from the Dollywood Express - 9.jpg": {
+  "lic": "CC0",
+  "artist": "Roc0ast3r"
+ },
+ "Female Black Bear in Cades Cove.jpg": {
+  "lic": "CC BY-SA 4.0",
+  "artist": "ZachN 0421"
+ },
+ "Bear in Cherry Tree - Flickr - Kevin Crosby.jpg": {
+  "lic": "CC BY-SA 4.0",
+  "artist": "Kevin Crosby"
+ },
+ "Black Bear Cubs Frolicking In The Tall Grass.jpg": {
+  "lic": "CC BY-SA 4.0",
+  "artist": "Nancy J. Olds"
+ },
+ "Elk in Meadow, Cataloochee, NC (31780399217).jpg": {
+  "lic": "CC0",
+  "artist": "Warren LeMay"
+ },
+ "Heavy snowfall in Gatlinburg, TN.jpg": {
+  "lic": "CC BY-SA 4.0",
+  "artist": "GatewayPolitics"
+ },
+ "Chimney Tops viewed from Chimney Tops overlook, May 2017.jpg": {
+  "lic": "CC0",
+  "artist": "Thomson200"
+ },
+ "Cades Cove - Methodist Church.jpg": {
+  "lic": "CC BY-SA 4.0",
+  "artist": "P. Hughes"
+ },
+ "Alum Cave Trail 1.jpg": {
+  "lic": "CC BY 4.0",
+  "artist": "Andrew Heneen"
+ },
+ "Cades Cove - October 2023 - Sarah Stierch 03.jpg": {
+  "lic": "CC BY 4.0",
+  "artist": "Sarah Stierch"
+ },
+ "Newfound Gap - October 2023 - Sarah Stierch 05.jpg": {
+  "lic": "CC BY 4.0",
+  "artist": "Sarah Stierch"
+ },
+ "Clingmans Dome Road in snow 06 April 2024 01.jpg": {
+  "lic": "CC BY 4.0",
+  "artist": "Wikimedia Commons"
+ },
+ "Sugarlands Visitor Center, May 2018--Andrea Walton (29111144268).jpg": {
+  "lic": "Public domain",
+  "artist": "NPS / Andrea Walton"
+ },
+ "Laurel Falls Kaldari.jpg": {
+  "lic": "Public domain",
+  "artist": "Kaldari"
+ },
+ "Grotto-falls-gsmnp1.jpg": {
+  "lic": "CC BY 3.0",
+  "artist": "Brian Stansberry"
+ },
+ "Snow on the trail to Cataract Falls, January 2018--Andrea Walton (40083637642).jpg": {
+  "lic": "Public domain",
+  "artist": "NPS / Andrea Walton"
+ },
+ "Aquarium of the Smokies 2006.jpg": {
+  "lic": "CC BY 2.0",
+  "artist": "Wikimedia Commons"
+ },
+ "Downtown Gatlinburg, Tennessee.JPG": {
+  "lic": "CC BY-SA 3.0",
+  "artist": "Wikimedia Commons"
+ },
+ "White-tailed Deer (51629450511).jpg": {
+  "lic": "CC BY 4.0",
+  "artist": "Wikimedia Commons"
+ },
+ "SkyBridge at Gatlingburg SkyPark - 3.jpg": {
+  "lic": "CC BY 4.0",
+  "artist": "APK"
+ }
+}
