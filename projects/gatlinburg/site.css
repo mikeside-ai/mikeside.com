@@ -211,7 +211,7 @@ footer a{color:var(--muted)}
   .slot{grid-template-columns:5rem 1fr;gap:.7rem}
   .pack-bar{position:static}
   .nav{flex-wrap:wrap;gap:.4rem .8rem}
-  .nav .logo{flex:none}
+  .nav .logo{flex:none;margin-right:auto}
   .nav ul{gap:.9rem;flex-wrap:nowrap;overflow-x:auto;width:100%;min-width:0;flex:1 1 100%;padding-bottom:.1rem;scrollbar-width:none}
   .nav{overflow:hidden}
   .nav ul::-webkit-scrollbar{display:none}
@@ -368,3 +368,109 @@ a,button,select,label,.rate,.chip{touch-action:manipulation;-webkit-tap-highligh
 .shots figcaption{font-size:.56rem;color:var(--muted);padding:.15rem .4rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .trail .shots{grid-template-columns:repeat(3,1fr);max-width:none}
 @media print{.shots{display:none}}
+
+/* ============ Themes ============ */
+/* Default is the spruce-dark Smoky variant above. Each theme overrides the tokens plus the few hard-coded surfaces. */
+header{background:var(--header,rgba(11,20,17,.9))}
+.gate-box input,.pt,.swap,button.ghost{color:var(--text)}
+.ridges path:nth-child(1){fill:var(--ridge1,#1a3a30)}
+.ridges path:nth-child(2){fill:var(--ridge2,#132c24)}
+.ridges path:nth-child(3),.ridges g{fill:var(--ridge3,#0f221b)}
+.ridgeband{background:var(--ridgebg,linear-gradient(180deg, var(--bg), #0e1b16))}
+.banner-shade{background:var(--shade,linear-gradient(to top, rgba(11,20,17,.96) 0%, rgba(11,20,17,.55) 45%, rgba(11,20,17,.15) 100%))}
+.tabbar{background:var(--header,rgba(11,20,17,.94))}
+
+[data-theme="light"]{
+  --bg:#f4efe4; --bg-soft:#ebe4d3; --card:#fffaf0; --text:#1d2a24; --muted:#5f6d65;
+  --accent:#b4472a; --accent-soft:#9c3a20; --jumpsuit:#9a6a00; --gulf:#2f7d4f; --sand:#7d5a2c; --mist:#8fb3aa; --border:#d8cfbb;
+  --header:rgba(244,239,228,.92); --ridge1:#b9cfc2; --ridge2:#9fbcae; --ridge3:#7fa394; --ridgebg:linear-gradient(180deg,#f4efe4,#e5ead9);
+  --shade:linear-gradient(to top, rgba(29,42,36,.92) 0%, rgba(29,42,36,.5) 45%, rgba(29,42,36,.1) 100%);
+  background-image:none;
+}
+[data-theme="light"] .banner h1,[data-theme="light"] .banner-date,[data-theme="light"] .banner .kicker{color:#fff}
+[data-theme="light"] .banner-date{color:#f1e3c6}
+[data-theme="light"] .rate{background:rgba(154,106,0,.1);border-color:rgba(154,106,0,.35)}
+[data-theme="light"] .tag.hot{color:#9a6a00;border-color:rgba(154,106,0,.4)}
+[data-theme="light"] .day-head .tag.bear{color:#7d5a2c}
+[data-theme="light"] .firefly{display:none}
+[data-theme="light"] .gate-box button{color:#fff}
+[data-theme="light"] .leaflet-bar a{background:#fff!important;color:#222!important}
+[data-theme="light"] .leaflet-popup-content-wrapper,[data-theme="light"] .leaflet-popup-tip{background:#fff;color:#222}
+[data-theme="light"] .wx-day.today{border-color:var(--gulf)}
+[data-theme="light"] .bear-toast{box-shadow:0 6px 20px rgba(0,0,0,.15)}
+
+/* National Park Service brochure: black band, cream page, forest green and rust */
+[data-theme="nps"]{
+  --bg:#f3eddf; --bg-soft:#e9e1cc; --card:#fbf7ec; --text:#211d18; --muted:#66584a;
+  --accent:#8c3b1b; --accent-soft:#7a3115; --jumpsuit:#b07a10; --gulf:#3a5a40; --sand:#7a5a30; --mist:#9fb59b; --border:#d2c6a9;
+  --header:#1a1a1a; --ridge1:#c9c3a7; --ridge2:#8da37f; --ridge3:#3a5a40; --ridgebg:linear-gradient(180deg,#f3eddf,#e4e2cf);
+  --shade:linear-gradient(to top, rgba(26,26,26,.94) 0%, rgba(26,26,26,.5) 45%, rgba(26,26,26,.1) 100%);
+  background-image:none;
+}
+[data-theme="nps"] header,[data-theme="nps"] .tabbar{border-color:#000}
+[data-theme="nps"] .nav .logo,[data-theme="nps"] .nav ul a{color:#fff}
+[data-theme="nps"] .nav .logo span{color:#e8c36a}
+[data-theme="nps"] .tabbar a{color:#ddd}
+[data-theme="nps"] .tabbar a span{color:#e8c36a}
+[data-theme="nps"] h1,[data-theme="nps"] h2,[data-theme="nps"] h3{font-family:"Fraunces",Georgia,serif}
+[data-theme="nps"] .eyebrow{color:#8c3b1b}
+[data-theme="nps"] .kicker{color:#3a5a40;border-bottom:2px solid #1a1a1a;display:inline-block;padding-bottom:.2rem}
+[data-theme="nps"] .banner h1,[data-theme="nps"] .banner-date,[data-theme="nps"] .banner .kicker{color:#fff;border-color:#fff}
+[data-theme="nps"] .hero h1 em{color:#8c3b1b}
+[data-theme="nps"] .firefly{display:none}
+[data-theme="nps"] .gate-box button{background:#1a1a1a;color:#fff}
+[data-theme="nps"] .pt.on,[data-theme="nps"] .chip.on{background:#3a5a40;color:#fff;border-color:#3a5a40}
+[data-theme="nps"] .rate{background:rgba(176,122,16,.12);border-color:rgba(176,122,16,.4)}
+[data-theme="nps"] .leaflet-bar a{background:#fff!important;color:#222!important}
+[data-theme="nps"] .leaflet-popup-content-wrapper,[data-theme="nps"] .leaflet-popup-tip{background:#fff;color:#222}
+[data-theme="nps"] .callout{border-left-width:6px}
+[data-theme="nps"] .day,[data-theme="nps"] .plan,[data-theme="nps"] .pack-cat,[data-theme="nps"] .kid,[data-theme="nps"] .opt{box-shadow:0 1px 0 #d2c6a9}
+
+/* Gatlinburg: Parkway after dark. Walnut cabin wood, marquee yellow, neon pink and sky blue */
+[data-theme="gatlinburg"]{
+  --bg:#17100c; --bg-soft:#22180f; --card:#2a1d13; --text:#f6ecdc; --muted:#b9a088;
+  --accent:#ff4d6d; --accent-soft:#ff7a90; --jumpsuit:#ffd166; --gulf:#6fd6ff; --sand:#f4c67a; --mist:#7a4a7a; --border:#3b2a1c;
+  --header:rgba(23,16,12,.92); --ridge1:#4a2a3c; --ridge2:#2e1b2c; --ridge3:#1b1218; --ridgebg:linear-gradient(180deg,#17100c,#241424);
+  --shade:linear-gradient(to top, rgba(23,16,12,.96) 0%, rgba(23,16,12,.55) 45%, rgba(23,16,12,.15) 100%);
+  background-image:radial-gradient(ellipse 70% 35% at 50% -5%, rgba(255,77,109,.18), transparent 60%);
+}
+[data-theme="gatlinburg"] .hero h1 em{color:#ffd166;text-shadow:0 0 18px rgba(255,209,102,.45)}
+[data-theme="gatlinburg"] .nav .logo span{color:#ff4d6d;text-shadow:0 0 10px rgba(255,77,109,.6)}
+[data-theme="gatlinburg"] .kicker{color:#6fd6ff;text-shadow:0 0 8px rgba(111,214,255,.5)}
+[data-theme="gatlinburg"] .eyebrow{color:#ff7a90}
+[data-theme="gatlinburg"] .tag.hot{color:#ffd166;border-color:rgba(255,209,102,.5);box-shadow:0 0 8px rgba(255,209,102,.25)}
+[data-theme="gatlinburg"] .tag.calm{color:#6fd6ff;border-color:rgba(111,214,255,.5)}
+[data-theme="gatlinburg"] .firefly{background:#ff4d6d;box-shadow:0 0 10px 3px rgba(255,77,109,.5)}
+[data-theme="gatlinburg"] .firefly:nth-child(even){background:#6fd6ff;box-shadow:0 0 10px 3px rgba(111,214,255,.5)}
+[data-theme="gatlinburg"] .gate-box button{background:#ff4d6d;box-shadow:0 0 16px rgba(255,77,109,.5)}
+[data-theme="gatlinburg"] .pt.on,[data-theme="gatlinburg"] .chip.on{background:#ffd166;color:#17100c;border-color:#ffd166}
+[data-theme="gatlinburg"] .wx-day.today{border-color:#ffd166;box-shadow:0 0 10px rgba(255,209,102,.3)}
+[data-theme="gatlinburg"] .tabbar{border-top:1px solid #3b2a1c;box-shadow:0 -1px 0 rgba(255,77,109,.35)}
+[data-theme="gatlinburg"] .tabbar a span{color:#ffd166}
+[data-theme="gatlinburg"] .day-head h3,[data-theme="gatlinburg"] .banner h1{text-shadow:0 0 14px rgba(255,209,102,.15)}
+
+/* ---- theme picker + install + float nav ---- */
+.theme-btn{font:inherit;font-size:1rem;line-height:1;background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:999px;width:2.1rem;height:2.1rem;cursor:pointer;flex:none}
+.theme-btn:hover{color:var(--text);border-color:var(--mist)}
+.theme-menu{position:fixed;top:3.6rem;right:.8rem;z-index:90;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:.4rem;display:grid;gap:.2rem;min-width:13rem;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.theme-menu[hidden]{display:none}
+.theme-menu button{font:inherit;font-size:.88rem;text-align:left;background:transparent;border:0;color:var(--text);padding:.55rem .7rem;border-radius:8px;cursor:pointer;display:flex;align-items:center;gap:.6rem}
+.theme-menu button:hover{background:var(--bg-soft)}
+.theme-menu button.on{color:var(--gulf)}
+.theme-menu .sw{width:14px;height:14px;border-radius:50%;border:1px solid rgba(0,0,0,.3);flex:none}
+.theme-menu hr{border:0;border-top:1px solid var(--border);margin:.3rem 0}
+.install-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(4.4rem + env(safe-area-inset-bottom));z-index:85;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:.7rem .9rem;max-width:min(92vw,30rem);font-size:.88rem;box-shadow:0 8px 24px rgba(0,0,0,.4);display:flex;gap:.7rem;align-items:center}
+.install-bar[hidden]{display:none}
+.install-bar img{width:36px;height:36px;border-radius:9px;flex:none}
+.install-bar b{display:block}
+.install-bar .act{margin-left:auto;display:flex;gap:.4rem;flex:none}
+.install-bar button{font:inherit;font-size:.82rem;font-weight:600;border-radius:999px;padding:.4rem .8rem;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--muted)}
+.install-bar button.go{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (min-width:761px){.install-bar{bottom:1.2rem}}
+.float-nav{position:fixed;right:.8rem;bottom:calc(4.6rem + env(safe-area-inset-bottom));z-index:70;display:grid;gap:.4rem}
+.float-nav a,.float-nav button{width:2.6rem;height:2.6rem;border-radius:50%;background:var(--card);border:1px solid var(--border);color:var(--text);display:flex;align-items:center;justify-content:center;font-size:1.05rem;box-shadow:0 4px 14px rgba(0,0,0,.35);cursor:pointer;text-decoration:none;opacity:.92}
+.float-nav a:hover,.float-nav button:hover{border-color:var(--gulf);text-decoration:none}
+.float-nav .top{display:none}
+.float-nav.scrolled .top{display:flex}
+@media (min-width:761px){.float-nav{bottom:1.2rem}}
+@media print{.theme-btn,.theme-menu,.install-bar,.float-nav{display:none}}
