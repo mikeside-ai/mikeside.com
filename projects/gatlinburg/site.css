@@ -504,3 +504,9 @@ header{background:var(--header,rgba(11,20,17,.9))}
 .logo-mark.big{width:4.4rem;height:4.4rem;border-radius:1.2rem;font-size:2.6rem;margin:0 0 .4rem;vertical-align:baseline;box-shadow:0 8px 24px rgba(0,0,0,.45)}
 .nav .logo{display:inline-flex;align-items:center}
 .nav .logo span:not(.logo-mark){color:var(--accent-soft);margin-left:.3rem}
+
+/* ============ Numbered spot pins ============ */
+.pin.num span{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font:600 .78rem/1 "Inter",sans-serif;border:2px solid var(--bg);box-shadow:0 0 0 2px var(--accent)}
+.spot-num{display:inline-flex;align-items:center;justify-content:center;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--accent);color:#fff;font:600 .8rem/1 "Inter",sans-serif;margin-right:.5rem;flex:none}
+.trail.flash{outline:2px solid var(--gulf);outline-offset:3px;transition:outline-color .6s}
+.leaflet-popup-content a.popup-jump{font-weight:600}
