@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b1411">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Packing list · Gatlinburg week</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=6">
+<script>try{var t=localStorage.getItem("gatlinburg-2026-theme");if(t&&t!=="spruce")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+</head>
+<body class="locked day-page packing-page" data-page="packing">
+
+<div id="gate">
+  <form class="gate-box" id="gate-form" autocomplete="off">
+    <span class="logo">mike<span>side</span></span>
+    <h1>Gatlinburg week</h1>
+    <p>Family page. Enter the PIN to open it.</p>
+    <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" aria-label="PIN" autofocus>
+    <button type="submit">Open</button>
+    <div class="err" id="gate-err"></div>
+  </form>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="/">mike<span>side</span></a>
+    <nav aria-label="Trip pages">
+      <ul>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="#grid">List</a></li>
+        <li><a href="#add">Add</a></li>
+        <li><a href="trails.html">Trails</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="banner" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Little%20River%20Road%20-%20October%202025%20-%20Sarah%20Stierch.jpg?width=1400')">
+  <div class="banner-shade"></div>
+  <div class="container banner-text">
+    <p class="kicker">One list, every phone</p>
+    <h1>Packing list</h1>
+    <p class="banner-date">Tick it on any phone and it's ticked on all of them. Shows who packed what.</p>
+  </div>
+  <span class="credit">Sarah Stierch · CC0</span>
+</div>
+
+<div class="chips container" aria-label="Pages"><a class="chip" href="day-0-sun.html">Sun 22</a><a class="chip" href="day-1-mon.html">Mon 23</a><a class="chip" href="day-2-tue.html">Tue 24</a><a class="chip" href="day-3-wed.html">Wed 25</a><a class="chip" href="day-4-thu.html">Thu 26</a><a class="chip" href="day-5-fri.html">Fri 27</a><a class="chip" href="day-6-sat.html">Sat 28</a><a class="chip" href="bonus-dollywood.html">Bonus</a><a class="chip" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip on" href="packing.html">Packing</a></div>
+
+<section id="list">
+  <div class="container">
+    <p class="eyebrow">Pack-out</p>
+    <h2>Tick as you load</h2>
+    <p class="intro"><span class="star">&#9733;</span> marks the things that are hard or expensive to replace once you're up there. The list is shared: Allison ticks the baby bag, you tick the car, and both phones show both. Add anything missing at the bottom.</p>
+
+    <div class="pack-bar">
+      <span class="hint">Packed <output id="count">0</output> of <span id="total">0</span> &middot; <span id="sync-status" class="sync">Loading&hellip;</span></span>
+      <button class="ghost" type="button" id="name-btn">Who's packing?</button>
+      <button class="ghost" type="button" id="clear">Untick all</button>
+      <button class="ghost" type="button" id="print">Print</button>
+    </div>
+
+    <div class="pack-grid" id="grid">
+      <div class="pack-cat" data-cat="cold-kit">
+        <h3>Cold kit <span class="cat-count"></span></h3>
+        <p class="who">Mornings near 40, the ridge near freezing</p>
+        <ul>
+          <li data-id="cold-kit-fleece-or-puffer-for-all-five"><label><input type="checkbox"><span><span class="star">&#9733;</span> Fleece or puffer for all five<em>Layers, not one big coat. Mornings start at 40 and the car hits 70.</em><small class="by"></small></span></label></li>
+          <li data-id="cold-kit-hats-and-gloves-two-pairs-per-kid"><label><input type="checkbox"><span>Hats and gloves, two pairs per kid<em>The first pair gets wet at Cataract Falls by 9:45.</em><small class="by"></small></span></label></li>
+          <li data-id="cold-kit-rain-shells-and-a-stroller-rain-cover"><label><input type="checkbox"><span>Rain shells and a stroller rain cover<em>One day in three. Umbrellas don't work with a carrier.</em><small class="by"></small></span></label></li>
+          <li data-id="cold-kit-boots-or-closed-shoes-that-can-get-muddy"><label><input type="checkbox"><span>Boots or closed shoes that can get muddy, all three kids<em>Cades Cove and the Grove are mud in November. Tubing requires secured shoes.</em><small class="by"></small></span></label></li>
+          <li data-id="cold-kit-wool-socks-three-pairs-per-person"><label><input type="checkbox"><span>Wool socks, three pairs per person<small class="by"></small></span></label></li>
+          <li data-id="cold-kit-hand-warmers-a-dozen"><label><input type="checkbox"><span>Hand warmers, a dozen<em>Pockets at the top of Kuwohi and on the chairlift.</em><small class="by"></small></span></label></li>
+          <li data-id="cold-kit-soft-structured-carrier"><label><input type="checkbox"><span><span class="star">&#9733;</span> Soft structured carrier<em>SkyPark, the Skywalk, Kuwohi and Cataract Falls all ban or defeat strollers. Snejana lives in this.</em><small class="by"></small></span></label></li>
+          <li data-id="cold-kit-stroller-with-a-bunting-or-blanket-clips"><label><input type="checkbox"><span>Stroller with a bunting or blanket clips<em>Dollywood, Anakeesta, the aquarium, Sugarlands paved trail, Cable Mill.</em><small class="by"></small></span></label></li>
+          <li data-id="cold-kit-small-daypack-with-the-blowout-kit-and-s"><label><input type="checkbox"><span>Small daypack with the blowout kit and snacks<em>Lives in the car, goes on every walk.</em><small class="by"></small></span></label></li>
+          <li data-id="cold-kit-thermos-hot-chocolate-packets"><label><input type="checkbox"><span>Thermos, hot chocolate packets<small class="by"></small></span></label></li>
+          <li data-id="cold-kit-headlamps-two"><label><input type="checkbox"><span>Headlamps, two<em>It's dark at 5:25 and cabin driveways have no lights.</em><small class="by"></small></span></label></li>
+        </ul>
+      </div>
+      <div class="pack-cat" data-cat="snejana">
+        <h3>Snejana <span class="cat-count"></span></h3>
+        <p class="who">1 year old. The packing list is mostly hers</p>
+        <ul>
+          <li data-id="snejana-pack-n-play-two-fitted-sheets"><label><input type="checkbox"><span><span class="star">&#9733;</span> Pack-n-play + two fitted sheets<em>Confirm the cabin doesn't have one before you leave it.</em><small class="by"></small></span></label></li>
+          <li data-id="snejana-sound-machine-2"><label><input type="checkbox"><span><span class="star">&#9733;</span> Sound machine &times;2<em>One for her, one for Slavik. Cabins creak and the heat pump cycles all night.</em><small class="by"></small></span></label></li>
+          <li data-id="snejana-black-trash-bags-painter-s-tape"><label><input type="checkbox"><span>Black trash bags + painter's tape<em>Blackout for any room. Cabin porch lights are on all night.</em><small class="by"></small></span></label></li>
+          <li data-id="snejana-baby-monitor"><label><input type="checkbox"><span>Baby monitor<small class="by"></small></span></label></li>
+          <li data-id="snejana-fleece-sleep-sack-two"><label><input type="checkbox"><span>Fleece sleep sack, two<em>Cabin bedrooms get cold. No loose blankets.</em><small class="by"></small></span></label></li>
+          <li data-id="snejana-diapers-8-day-days-30-spare"><label><input type="checkbox"><span>Diapers: 8/day &times; days + 30 spare<em>Food City stocks them but you don't want that errand on night one.</em><small class="by"></small></span></label></li>
+          <li data-id="snejana-two-packs-wipes-diaper-cream-changing-pa"><label><input type="checkbox"><span>Two packs wipes, diaper cream, changing pad, scented bags<small class="by"></small></span></label></li>
+          <li data-id="snejana-bottles-or-cups-milk-plan-bottle-brush-d"><label><input type="checkbox"><span>Bottles or cups, milk plan, bottle brush, dish soap<small class="by"></small></span></label></li>
+          <li data-id="snejana-snacks-and-food-for-six-days-bibs-spoons"><label><input type="checkbox"><span>Snacks and food for six days, bibs, spoons, two sippy cups<small class="by"></small></span></label></li>
+          <li data-id="snejana-portable-high-chair-or-clip-on-seat"><label><input type="checkbox"><span>Portable high chair or clip-on seat<em>Check the cabin listing first.</em><small class="by"></small></span></label></li>
+          <li data-id="snejana-lovey-teethers-three-books"><label><input type="checkbox"><span>Lovey, teethers, three books<small class="by"></small></span></label></li>
+          <li data-id="snejana-warm-hat-with-chin-strap-and-mittens-tha"><label><input type="checkbox"><span>Warm hat with chin strap and mittens that stay on<em>She counts as a heartbeat on the SkyLift. Hands get cold fast up there.</em><small class="by"></small></span></label></li>
+        </ul>
+      </div>
+      <div class="pack-cat" data-cat="slavik">
+        <h3>Slavik <span class="cat-count"></span></h3>
+        <p class="who">2, three in December. The flight risk</p>
+        <ul>
+          <li data-id="slavik-diapers-or-pull-ups-plus-travel-potty-if"><label><input type="checkbox"><span>Diapers or pull-ups, plus travel potty if he's training<em>Keep the potty in the car. You'll need it on Little River Road.</em><small class="by"></small></span></label></li>
+          <li data-id="slavik-lovey-and-blanket"><label><input type="checkbox"><span><span class="star">&#9733;</span> Lovey and blanket<em>Pack it yourself. Don't let it ride loose.</em><small class="by"></small></span></label></li>
+          <li data-id="slavik-four-extra-outfits-beyond-your-count"><label><input type="checkbox"><span>Four extra outfits beyond your count<em>Mud, creek, snow at Ober.</em><small class="by"></small></span></label></li>
+          <li data-id="slavik-waterproof-mittens-and-a-hat-he-ll-actua"><label><input type="checkbox"><span>Waterproof mittens and a hat he'll actually keep on<small class="by"></small></span></label></li>
+          <li data-id="slavik-familiar-cup-and-plate"><label><input type="checkbox"><span>Familiar cup and plate<em>Meals go better with his own stuff.</em><small class="by"></small></span></label></li>
+          <li data-id="slavik-sticker-books-chunky-crayons-one-new-sma"><label><input type="checkbox"><span>Sticker books, chunky crayons, one new small toy held in reserve<em>For the Cades Cove loop.</em><small class="by"></small></span></label></li>
+          <li data-id="slavik-toddler-harness-or-wrist-leash"><label><input type="checkbox"><span>Toddler harness or wrist leash<em>Decks, the Chondola platform, the SkyPark deck. This is the trip for it.</em><small class="by"></small></span></label></li>
+        </ul>
+      </div>
+      <div class="pack-cat" data-cat="cash">
+        <h3>Cash <span class="cat-count"></span></h3>
+        <p class="who">7. Old enough to be useful</p>
+        <ul>
+          <li data-id="cash-measured-height-written-on-a-card-in-you"><label><input type="checkbox"><span>Measured height written on a card in your wallet<em>Dollywood 42 and 48, Ober tubing 42. Decides his whole week.</em><small class="by"></small></span></label></li>
+          <li data-id="cash-waterproof-gloves-for-tubing-and-the-ska"><label><input type="checkbox"><span>Waterproof gloves for tubing and the skating rink<small class="by"></small></span></label></li>
+          <li data-id="cash-binoculars-cheap-ones"><label><input type="checkbox"><span>Binoculars, cheap ones<em>Deer and turkeys in the Cove. His job. <span class="egg" data-egg="5">Bear</span> spotting is everybody's job.</em><small class="by"></small></span></label></li>
+          <li data-id="cash-headlamp"><label><input type="checkbox"><span>Headlamp<em>His job at the cabin after dark.</em><small class="by"></small></span></label></li>
+          <li data-id="cash-small-notebook"><label><input type="checkbox"><span>Small notebook<em>Count the deer, count the bears, write down the highest point in Tennessee.</em><small class="by"></small></span></label></li>
+          <li data-id="cash-tablet-headphones-downloaded-shows"><label><input type="checkbox"><span>Tablet, headphones, downloaded shows<em>Download before you leave. The park has no signal at all.</em><small class="by"></small></span></label></li>
+          <li data-id="cash-uno-a-deck-of-cards-one-chapter-book"><label><input type="checkbox"><span>Uno, a deck of cards, one chapter book<small class="by"></small></span></label></li>
+        </ul>
+      </div>
+      <div class="pack-cat" data-cat="the-car">
+        <h3>The car <span class="cat-count"></span></h3>
+        <p class="who">Reachable from the front seat</p>
+        <ul>
+          <li data-id="the-car-car-seats-installed-and-checked-saturday"><label><input type="checkbox"><span>Car seats installed and checked Saturday night<small class="by"></small></span></label></li>
+          <li data-id="the-car-blowout-bag-full-change-of-clothes-for-a"><label><input type="checkbox"><span><span class="star">&#9733;</span> Blowout bag: full change of clothes for all three + two towels<em>Where you can grab it without unloading the trunk.</em><small class="by"></small></span></label></li>
+          <li data-id="the-car-puke-bags-paper-towels-a-hanging-trash-b"><label><input type="checkbox"><span>Puke bags, paper towels, a hanging trash bag<em>Little River Road and Newfound Gap Road are 50 miles of curves between them. Kids' Dramamine if anyone's prone.</em><small class="by"></small></span></label></li>
+          <li data-id="the-car-snack-bin-cold-water-spill-proof-cups"><label><input type="checkbox"><span>Snack bin, cold water, spill-proof cups<small class="by"></small></span></label></li>
+          <li data-id="the-car-window-shades-2-small-pillows-and-blanke"><label><input type="checkbox"><span>Window shades &times;2, small pillows and blankets<small class="by"></small></span></label></li>
+          <li data-id="the-car-car-chargers-multi-port-one-long-cable"><label><input type="checkbox"><span>Car chargers, multi-port, one long cable<small class="by"></small></span></label></li>
+          <li data-id="the-car-offline-maps-for-sevier-county-and-the-p"><label><input type="checkbox"><span><span class="star">&#9733;</span> Offline maps for Sevier County and the park, cabin directions saved as a note<em>No signal from the Townsend Wye to Sugarlands and none on Kuwohi Road. Download the whole area.</em><small class="by"></small></span></label></li>
+          <li data-id="the-car-ice-scraper-a-blanket-in-the-trunk-a-hal"><label><input type="checkbox"><span>Ice scraper, a blanket in the trunk, a half tank minimum going up the mountain<small class="by"></small></span></label></li>
+          <li data-id="the-car-park-parking-tag-on-the-dash-once-you-bu"><label><input type="checkbox"><span>Park parking tag on the dash once you buy it Tuesday<small class="by"></small></span></label></li>
+        </ul>
+      </div>
+      <div class="pack-cat" data-cat="medicine-bag">
+        <h3>Medicine bag <span class="cat-count"></span></h3>
+        <p class="who">Assume you'll need two of these</p>
+        <ul>
+          <li data-id="medicine-b-children-s-tylenol-and-motrin-infant-and"><label><input type="checkbox"><span>Children's Tylenol and Motrin, infant and kid dosing<em>With the syringe. Write the doses on tape on the box.</em><small class="by"></small></span></label></li>
+          <li data-id="medicine-b-kids-antihistamine-hydrocortisone-cream"><label><input type="checkbox"><span>Kids' antihistamine, hydrocortisone cream<small class="by"></small></span></label></li>
+          <li data-id="medicine-b-saline-nasal-aspirator-humidifier-if-the"><label><input type="checkbox"><span>Saline, nasal aspirator, humidifier if there's room<em>Cabin heat dries everyone out and the one-year-old gets the cold first.</em><small class="by"></small></span></label></li>
+          <li data-id="medicine-b-lip-balm-and-a-thick-face-cream-for-all-"><label><input type="checkbox"><span>Lip balm and a thick face cream for all three<em>Wind on the chairlift and the ridge chaps faces in an hour.</em><small class="by"></small></span></label></li>
+          <li data-id="medicine-b-tweezers-band-aids-antibiotic-ointment-g"><label><input type="checkbox"><span>Tweezers, band-aids, antibiotic ointment, gauze<small class="by"></small></span></label></li>
+          <li data-id="medicine-b-thermometer-gas-drops"><label><input type="checkbox"><span>Thermometer, gas drops<small class="by"></small></span></label></li>
+          <li data-id="medicine-b-electrolyte-packets-or-pedialyte"><label><input type="checkbox"><span>Electrolyte packets or Pedialyte<small class="by"></small></span></label></li>
+          <li data-id="medicine-b-any-prescriptions-plus-a-photo-of-each-l"><label><input type="checkbox"><span>Any prescriptions, plus a photo of each label<small class="by"></small></span></label></li>
+          <li data-id="medicine-b-insurance-cards-pediatrician-s-number"><label><input type="checkbox"><span>Insurance cards, pediatrician's number<em>Nearest ER is 30 minutes away in Sevierville. See the numbers.</em><small class="by"></small></span></label></li>
+        </ul>
+      </div>
+      <div class="pack-cat" data-cat="cabin-and-safety">
+        <h3>Cabin and safety <span class="cat-count"></span></h3>
+        <p class="who">Cabins are never childproofed</p>
+        <ul>
+          <li data-id="cabin-and--portable-pressure-baby-gate-maybe-two"><label><input type="checkbox"><span><span class="star">&#9733;</span> Portable pressure baby gate, maybe two<em>Three stories of open stairs. Bring them even if the listing claims gates.</em><small class="by"></small></span></label></li>
+          <li data-id="cabin-and--ratchet-strap-or-luggage-lock-for-the-ho"><label><input type="checkbox"><span><span class="star">&#9733;</span> Ratchet strap or luggage lock for the hot tub cover<em>Cabin covers have clips that a two-year-old can open. Yours shouldn't.</em><small class="by"></small></span></label></li>
+          <li data-id="cabin-and--door-alarms-3"><label><input type="checkbox"><span>Door alarms &times;3<em>Every door onto a deck.</em><small class="by"></small></span></label></li>
+          <li data-id="cabin-and--outlet-covers-10-cabinet-latches-corner-"><label><input type="checkbox"><span>Outlet covers &times;10, cabinet latches, corner guards<em>Cabin coffee tables are all sharp log corners.</em><small class="by"></small></span></label></li>
+          <li data-id="cabin-and--fireplace-screen-or-a-plan-to-not-use-it"><label><input type="checkbox"><span>Fireplace screen or a plan to not use it<em>Gas fireplaces have glass fronts that stay hot for an hour.</em><small class="by"></small></span></label></li>
+          <li data-id="cabin-and--two-nightlights"><label><input type="checkbox"><span>Two nightlights<small class="by"></small></span></label></li>
+          <li data-id="cabin-and--laundry-pods-dryer-sheets-extra-trash-ba"><label><input type="checkbox"><span>Laundry pods, dryer sheets, extra trash bags<small class="by"></small></span></label></li>
+          <li data-id="cabin-and--coffee-and-filters-salt-pepper-olive-oil"><label><input type="checkbox"><span>Coffee and filters, salt, pepper, olive oil, foil, a roasting pan<em>Cabin kitchens run bare and Thanksgiving dinner is on you.</em><small class="by"></small></span></label></li>
+          <li data-id="cabin-and--ziplocs-paper-towels-dish-soap"><label><input type="checkbox"><span>Ziplocs, paper towels, dish soap<small class="by"></small></span></label></li>
+          <li data-id="cabin-and--power-strip-extra-phone-chargers"><label><input type="checkbox"><span>Power strip, extra phone chargers<small class="by"></small></span></label></li>
+          <li data-id="cabin-and--reusable-water-bottles-one-per-person"><label><input type="checkbox"><span>Reusable water bottles, one per person<small class="by"></small></span></label></li>
+        </ul>
+      </div>
+      <div class="pack-cat" data-cat="extra">
+        <h3>Added on the way <span class="cat-count"></span></h3>
+        <p class="who">Things somebody thought of after the list was made</p>
+        <ul></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="add">
+  <div class="container">
+    <p class="eyebrow">Forgot something?</p>
+    <h2>Add an item</h2>
+    <form class="add-form" id="add-form">
+      <input id="add-name" type="text" maxlength="80" placeholder="Slavik's rain boots" aria-label="Item" required>
+      <select id="add-cat" aria-label="Category"><option value="cold-kit">Cold kit</option><option value="snejana">Snejana</option><option value="slavik">Slavik</option><option value="cash">Cash</option><option value="the-car">The car</option><option value="medicine-bag">Medicine bag</option><option value="cabin-and-safety">Cabin and safety</option><option value="extra" selected>Added on the way</option></select>
+      <button type="submit" class="go">Add for everyone</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="pager"><a href="index.html">&larr; Hub</a><span></span><a href="day-0-sun.html">Sunday's drive &rarr;</a></div>
+    <p>Ticks are stored on the trip's own server and shared with everyone who has the PIN. If a phone is offline, its ticks wait and sync when signal returns.</p>
+  </div>
+</footer>
+
+<div class="bear-toast" id="bear-toast" role="status"></div>
+<div class="bear-peek" id="bear-peek" aria-hidden="true"><svg viewBox="0 0 120 100"><g fill="#2b1d14"><ellipse cx="60" cy="78" rx="46" ry="30"/><circle cx="60" cy="44" r="30"/><circle cx="36" cy="22" r="11"/><circle cx="84" cy="22" r="11"/></g><g fill="#6b4a33"><circle cx="36" cy="22" r="5"/><circle cx="84" cy="22" r="5"/><ellipse cx="60" cy="56" rx="14" ry="10"/></g><g fill="#0b1411"><circle cx="48" cy="40" r="3.5"/><circle cx="72" cy="40" r="3.5"/><ellipse cx="60" cy="52" rx="6" ry="4"/></g></svg></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="bear-side" viewBox="0 0 140 90"><g fill="#2b1d14"><ellipse cx="62" cy="50" rx="44" ry="26"/><circle cx="108" cy="36" r="18"/><circle cx="98" cy="22" r="6"/><circle cx="118" cy="22" r="6"/><circle cx="20" cy="50" r="12"/><rect x="30" y="62" width="12" height="26" rx="5"/><rect x="52" y="64" width="12" height="24" rx="5"/><rect x="78" y="64" width="12" height="24" rx="5"/><rect x="96" y="60" width="12" height="28" rx="5"/></g><g fill="#6b4a33"><ellipse cx="122" cy="42" rx="9" ry="6"/></g><circle cx="114" cy="33" r="2.5" fill="#0b1411"/><circle cx="129" cy="41" r="3" fill="#0b1411"/></symbol></svg>
+
+<nav class="tabbar" aria-label="Quick links">
+  <a href="index.html"><span>&#8962;</span>Hub</a>
+  <a href="#grid"><span>&#9745;</span>List</a>
+  <a href="#add"><span>&#43;</span>Add</a>
+  <a href="trails.html"><span>&#9650;</span>Trails</a>
+  <a href="index.html#numbers"><span>&#9742;</span>Numbers</a>
+</nav>
+
+<script src="site.js?v=6"></script>
+<script src="packing.js?v=1"></script>
+</body>
+</html>
