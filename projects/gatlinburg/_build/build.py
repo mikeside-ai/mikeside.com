@@ -10,8 +10,20 @@ ROOT = os.path.dirname(HERE)
 days = json.load(open(os.path.join(HERE, 'days.json')))
 planA = json.load(open(os.path.join(HERE, 'planA.json')))
 credits = json.load(open(os.path.join(HERE, 'credits.json')))
+ratings = {k: v for k, v in json.load(open(os.path.join(HERE, 'ratings.json'))).items() if not k.startswith('_')}
 
-order = sorted(days.keys())
+order = sorted(k for k in days.keys() if k != 'bonus') + (['bonus'] if 'bonus' in days else [])
+
+def rate_html(text):
+    """A Google-rating pill if a known place name appears in the text (what + dest)."""
+    t = html.unescape(re.sub('<[^>]+>', '', text)).lower()
+    best = None
+    for name, r in ratings.items():
+        key = name.lower().replace('the ', '')
+        if key in t and (best is None or len(name) > len(best[0])): best = (name, r)
+    if not best: return ''
+    name, r = best
+    return ' <span class="rate" data-say="%s" title="Google rating, %s reviews">&#9733; %s<small>%s</small></span>' % (html.escape(r['say'], quote=True), '{:,}'.format(r['n']), r['r'], ('{:,}'.format(r['n']) if r['n'] < 1000 else str(round(r['n']/1000)) + 'k'))
 
 def mapsdir(dest):
     if not dest: return ''
@@ -30,10 +42,11 @@ def slot_html(s, coords=None, idx=None):
     nav = ' <a class="nav" href="%s" target="_blank" rel="noopener">Directions</a>' % mapsdir(dest) if dest else ''
     addr = '<div class="addr">%s</div>' % s['addr'] if s.get('addr') else ''
     why = '<div class="why">%s</div>' % s['why'] if s.get('why') else ''
+    rate = rate_html(s['what'] + ' ' + (s.get('addr') or '') + ' ' + urllib.parse.unquote(dest))
     attrs = ''
     if coords is not None and s['what'] in coords:
         attrs = ' data-lat="%s" data-lng="%s" data-stop="%s"' % (coords[s['what']][0], coords[s['what']][1], html.escape(re.sub('<[^>]+>', '', s['what'])))
-    return '<li class="slot"%s><time>%s</time><div><div class="what">%s%s</div>%s%s</div></li>' % (attrs, s['t'], s['what'], nav, addr, why)
+    return '<li class="slot"%s><time>%s</time><div><div class="what">%s%s%s</div>%s%s</div></li>' % (attrs, s['t'], s['what'], rate, nav, addr, why)
 
 def page(date):
     d = days[date]; a = planA[date]
@@ -56,14 +69,19 @@ def page(date):
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>{html.escape(title_plain)} — {d['name']}, {a['date'].split(', ')[-1]} · Gatlinburg week</title>
+<meta name="theme-color" content="#0b1411">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>{html.escape(title_plain)} — {d['name']} · Gatlinburg week</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-<link rel="stylesheet" href="site.css?v=3">
+<link rel="stylesheet" href="site.css?v=4">
 </head>
-<body class="locked day-page" data-date="{date}">
+<body class="locked day-page" data-date="{date if date != 'bonus' else ''}" data-page="{date}">
 
 <div id="gate">
   <form class="gate-box" id="gate-form" autocomplete="off">
@@ -86,6 +104,7 @@ def page(date):
         {('<li><a href="%s">%s &rarr;</a></li>' % (next_['file'], next_['short'])) if next_ else ''}
         <li><a href="#plan">Plan</a></li>
         <li><a href="#map">Map</a></li>
+        <li><a href="trails.html">Trails</a></li>
         <li><a href="#journal">Journal</a></li>
       </ul>
     </nav>
@@ -141,7 +160,7 @@ def page(date):
       </ul>
     </div>
     <div class="bail">
-      <h3>Bail-out: {d['bail']['name']} <a class="nav" href="{mapsdir(d['bail']['dest'])}" target="_blank" rel="noopener">Directions</a></h3>
+      <h3>Bail-out: {d['bail']['name']}{rate_html(d['bail']['name'] + ' ' + d['bail']['dest'])} <a class="nav" href="{mapsdir(d['bail']['dest'])}" target="_blank" rel="noopener">Directions</a></h3>
       <p>{d['bail']['why']}</p>
     </div>
   </div>
@@ -207,14 +226,175 @@ def page(date):
   <symbol id="bear-side" viewBox="0 0 140 90"><g fill="#2b1d14"><ellipse cx="62" cy="50" rx="44" ry="26"/><circle cx="108" cy="36" r="18"/><circle cx="98" cy="22" r="6"/><circle cx="118" cy="22" r="6"/><circle cx="20" cy="50" r="12"/><rect x="30" y="62" width="12" height="26" rx="5"/><rect x="52" y="64" width="12" height="24" rx="5"/><rect x="78" y="64" width="12" height="24" rx="5"/><rect x="96" y="60" width="12" height="28" rx="5"/></g><g fill="#6b4a33"><ellipse cx="122" cy="42" rx="9" ry="6"/></g><circle cx="114" cy="33" r="2.5" fill="#0b1411"/><circle cx="129" cy="41" r="3" fill="#0b1411"/></symbol>
 </svg>
 
+<nav class="tabbar" aria-label="Quick links">
+  <a href="index.html"><span>&#8962;</span>Hub</a>
+  {('<a href="%s"><span>&larr;</span>%s</a>' % (prev_['file'], prev_['short'])) if prev_ else '<a href="trails.html"><span>&#9650;</span>Trails</a>'}
+  <a href="#plan"><span>&#9776;</span>Plan</a>
+  <a href="#map"><span>&#9673;</span>Map</a>
+  {('<a href="%s"><span>&rarr;</span>%s</a>' % (next_['file'], next_['short'])) if next_ else '<a href="trails.html"><span>&#9650;</span>Trails</a>'}
+</nav>
+
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="site.js?v=3"></script>
-<script src="day.js?v=3"></script>
+<script src="site.js?v=4"></script>
+<script src="day.js?v=4"></script>
 </body>
 </html>
 '''
 
-for date in order:
-    out = os.path.join(ROOT, days[date]['file'])
-    open(out, 'w').write(page(date))
-    print('wrote', days[date]['file'])
+if __name__ == '__main__':
+    for date in order:
+        out = os.path.join(ROOT, days[date]['file'])
+        open(out, 'w').write(page(date))
+        print('wrote', days[date]['file'])
+
+
+# ---------------- Trails page ----------------
+def trails_page():
+    T = json.load(open(os.path.join(HERE, 'trails.json')))
+    chips = ''.join('<a class="chip" href="%s">%s</a>' % (days[k]['file'], days[k]['short']) for k in order)
+    cards = []
+    pins = []
+    for t in T['trails']:
+        kid = '&#9679;' * t['kid'] + '<i>' + '&#9679;' * (5 - t['kid']) + '</i>'
+        g = rate_html(t['g']) if t.get('g') else ''
+        cards.append(f'''      <div class="trail" data-lat="{t['lat']}" data-lng="{t['lng']}" data-name="{html.escape(t['name'], quote=True)}">
+        <div class="trail-photo" style="background-image:url('{commons(t['photo'], 480)}')"><span class="credit">{credit(t['photo'])}</span></div>
+        <div class="trail-body">
+          <h3>{t['name']}{g} <a class="nav" href="{mapsdir(t['dest'])}" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">{t['area']} &middot; {t['drive']} from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Round trip</dt><dd>{t['rt']}</dd></div>
+            <div><dt>Climb</dt><dd>{t['gain']}</dd></div>
+            <div><dt>Time</dt><dd>{t['time']}</dd></div>
+            <div><dt>Underfoot</dt><dd>{t['surface']}</dd></div>
+            <div><dt>Stroller</dt><dd>{t['stroller']}</dd></div>
+            <div><dt>Restrooms</dt><dd>{t['restroom']}</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for ages 1 to 7 and grandparents">Kid and grandparent score <span>{kid}</span></p>
+          <p>{t['why']}</p>
+          <p class="when">Best slot: {t['day']}</p>
+        </div>
+      </div>''')
+    skip = '\n'.join('        <tr><td>%s</td><td>%s</td></tr>' % (a, b) for a, b in T['not_this_trip'])
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b1411">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Trails the kids can do · Gatlinburg week</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="site.css?v=4">
+</head>
+<body class="locked day-page trails-page" data-page="trails">
+
+<div id="gate">
+  <form class="gate-box" id="gate-form" autocomplete="off">
+    <span class="logo">mike<span>side</span></span>
+    <h1>Gatlinburg week</h1>
+    <p>Family page. Enter the PIN to open it.</p>
+    <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" aria-label="PIN" autofocus>
+    <button type="submit">Open</button>
+    <div class="err" id="gate-err"></div>
+  </form>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="/">mike<span>side</span></a>
+    <nav aria-label="Trip pages">
+      <ul>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="#list">Trails</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#skip">Not this trip</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="banner" style="background-image:url('{commons('Little River Road - October 2025 - Sarah Stierch.jpg', 1400)}')">
+  <div class="banner-shade"></div>
+  <div class="container banner-text">
+    <p class="kicker">Walks, not hikes</p>
+    <h1>Trails the whole crew can do</h1>
+    <p class="banner-date">Under five miles round trip, no sustained steep grades, for ages one to seven and knees over sixty</p>
+  </div>
+  <span class="credit">{credit('Little River Road - October 2025 - Sarah Stierch.jpg')}</span>
+</div>
+
+<div class="chips container" aria-label="Days">{chips}<a class="chip on" href="trails.html">Trails</a></div>
+
+<section class="daytop">
+  <div class="container">
+    <p class="lede">Every walk here was chosen with the slowest person in mind. The kid-and-grandparent score is ours: five dots means a two-year-old walks most of it and nobody's knees complain; two dots means it's worth it but somebody will be carried or will want to stop. Every one of these needs the $15 weekly parking tag on the dash. Pack the carrier; the stroller only works where it says so.</p>
+  </div>
+</section>
+
+<section id="list">
+  <div class="container">
+    <p class="eyebrow">The list</p>
+    <h2>Thirteen walks, easiest first</h2>
+    <div class="trails">
+{chr(10).join(cards)}
+    </div>
+  </div>
+</section>
+
+<section id="map">
+  <div class="container">
+    <p class="eyebrow">Where they are</p>
+    <h2>Map</h2>
+    <p class="intro">Tap a pin for the name and directions. The cabin side of the park is the top half; Cades Cove and Tremont are left; Kuwohi and Oconaluftee are down the middle.</p>
+    <div id="leaflet" class="map" data-route="[]" data-route-b="[]"></div>
+  </div>
+</section>
+
+<section id="skip">
+  <div class="container">
+    <p class="eyebrow">The bench</p>
+    <h2>Famous, and not this trip</h2>
+    <div class="table-wrap"><table class="numbers">
+      <thead><tr><th>Trail</th><th>Why not</th></tr></thead>
+      <tbody>
+{skip}
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="pager"><a href="index.html">&larr; Hub</a><span></span><a href="day-2-tue.html">Tuesday's walks &rarr;</a></div>
+    <p>Distances and climbs are from park signage and trail guides and rounded. Photos from Wikimedia Commons under the licenses shown.</p>
+  </div>
+</footer>
+
+<div class="bear-toast" id="bear-toast" role="status"></div>
+<div class="bear-peek" id="bear-peek" aria-hidden="true"><svg viewBox="0 0 120 100"><g fill="#2b1d14"><ellipse cx="60" cy="78" rx="46" ry="30"/><circle cx="60" cy="44" r="30"/><circle cx="36" cy="22" r="11"/><circle cx="84" cy="22" r="11"/></g><g fill="#6b4a33"><circle cx="36" cy="22" r="5"/><circle cx="84" cy="22" r="5"/><ellipse cx="60" cy="56" rx="14" ry="10"/></g><g fill="#0b1411"><circle cx="48" cy="40" r="3.5"/><circle cx="72" cy="40" r="3.5"/><ellipse cx="60" cy="52" rx="6" ry="4"/></g></svg></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="bear-side" viewBox="0 0 140 90"><g fill="#2b1d14"><ellipse cx="62" cy="50" rx="44" ry="26"/><circle cx="108" cy="36" r="18"/><circle cx="98" cy="22" r="6"/><circle cx="118" cy="22" r="6"/><circle cx="20" cy="50" r="12"/><rect x="30" y="62" width="12" height="26" rx="5"/><rect x="52" y="64" width="12" height="24" rx="5"/><rect x="78" y="64" width="12" height="24" rx="5"/><rect x="96" y="60" width="12" height="28" rx="5"/></g><g fill="#6b4a33"><ellipse cx="122" cy="42" rx="9" ry="6"/></g><circle cx="114" cy="33" r="2.5" fill="#0b1411"/><circle cx="129" cy="41" r="3" fill="#0b1411"/></symbol></svg>
+
+<nav class="tabbar" aria-label="Quick links">
+  <a href="index.html"><span>&#8962;</span>Hub</a>
+  <a href="#list"><span>&#9650;</span>Trails</a>
+  <a href="#map"><span>&#9673;</span>Map</a>
+  <a href="index.html#packing"><span>&#9745;</span>Pack</a>
+  <a href="index.html#numbers"><span>&#9742;</span>Numbers</a>
+</nav>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="site.js?v=4"></script>
+<script src="day.js?v=4"></script>
+</body>
+</html>
+'''
+
+if __name__ == '__main__':
+    open(os.path.join(ROOT, 'trails.html'), 'w').write(trails_page())
+    print('wrote trails.html')
