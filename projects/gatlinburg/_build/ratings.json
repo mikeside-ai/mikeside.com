@@ -1,0 +1,173 @@
+{
+ "_note": "Google Maps star ratings and review counts, pulled 2026-11-20. 'say' is a one-line read of what reviewers keep repeating. Keys match stop names in the hub and day pages.",
+ "Iron Mountain Metal Craft": {
+  "r": 4.7,
+  "n": 551,
+  "say": "Kids as young as 8 forging with a patient smith; everyone says it's the thing their kids talked about all the way home."
+ },
+ "Pigeon Forge Snow": {
+  "r": 4.4,
+  "n": 3822,
+  "say": "Tubing is fast and fun. The 'snow play' room is a sheet of ice; skip that add-on for the little two."
+ },
+ "The Island in Pigeon Forge": {
+  "r": 4.7,
+  "n": 64810,
+  "say": "Free parking, free to walk, fountain show every hour, carousel. The one place in Pigeon Forge everyone agrees on."
+ },
+ "Ripley's Aquarium of the Smokies": {
+  "r": 4.6,
+  "n": 45262,
+  "say": "Shark tunnel, penguins, a two-level indoor playground. The consensus best rainy-day pick in town."
+ },
+ "Anakeesta": {
+  "r": 4.2,
+  "n": 17538,
+  "say": "Views and lights are loved; the knocks are price and the add-ons. Treat the base ticket as the whole visit."
+ },
+ "Ober Mountain": {
+  "r": 4.1,
+  "n": 13354,
+  "say": "Tram and views praised, pricing per activity grumbled about. Buy the one bundle that fits, not tickets one by one."
+ },
+ "Gatlinburg SkyPark": {
+  "r": 4.6,
+  "n": 15550,
+  "say": "The chairlift and the lit bridge at night are the highlights. Weather-dependent; people who went on clear nights loved it."
+ },
+ "Dollywood": {
+  "r": 4.6,
+  "n": 61408,
+  "say": "Clean, well run, great food (the cinnamon bread). Go mid-week; weekends and holidays get long lines."
+ },
+ "Cades Cove": {
+  "r": 4.7,
+  "n": 4185,
+  "say": "Deer, turkeys and bears nearly every visit. Go early; by mid-morning the loop backs up for hours."
+ },
+ "Kuwohi Observation Deck": {
+  "r": 4.8,
+  "n": 3737,
+  "say": "The view is the best in the park. The half-mile ramp is steep, and the lot fills; early is the whole trick."
+ },
+ "Sugarlands Visitor Center": {
+  "r": 4.7,
+  "n": 2490,
+  "say": "Rangers are the asset. Lends all-terrain wheelchairs. Buy the parking tag inside."
+ },
+ "Cataract Falls": {
+  "r": 4.6,
+  "n": 2350,
+  "say": "Short, flat, pretty. Reviewers are unanimous: do not bring the stroller, the roots eat wheels. One saw a bear in the lot."
+ },
+ "Mama's Farmhouse": {
+  "r": 4.3,
+  "n": 10353,
+  "say": "Family-style food in bowls, biscuits and peach butter. Service is the variable; the holiday will be slammed."
+ },
+ "The Old Mill Pottery House Caf\u00e9": {
+  "r": 4.7,
+  "n": 7957,
+  "say": "Best meal of the trip for a lot of people. Fresh bread, chicken pot pie, 30-minute waits that nobody regrets."
+ },
+ "The Old Mill Restaurant": {
+  "r": 4.6,
+  "n": 34222,
+  "say": "Huge portions, corn chowder and fritters. Expect a wait; the general store next door is the waiting room."
+ },
+ "Shadrack's Christmas Wonderland": {
+  "r": 4.6,
+  "n": 781,
+  "say": "Lights synced to the radio, animals and cocoa at the end. Drive slow with headlights off."
+ },
+ "Mynatt Park": {
+  "r": 4.7,
+  "n": 878,
+  "say": "Creek, picnic tables, clean restrooms. Reviewers note there's no playground; the creek is the playground."
+ },
+ "Roaring Fork Motor Nature Trail": {
+  "r": 4.8,
+  "n": 2818,
+  "say": "Gorgeous and slow. Narrow road, no parking at the popular stops, bears sighted often. Budget two hours."
+ },
+ "Gatlinburg Trail": {
+  "r": 4.6,
+  "n": 10,
+  "say": "Flat gravel along the river from Sugarlands, one of two dog-friendly trails. Easy with a stroller."
+ },
+ "Patriot Park": {
+  "r": 4.6,
+  "n": 3575,
+  "say": "Free parking behind the Old Mill, $3-a-person trolley to Dollywood all day, Winterfest light walk to The Island."
+ },
+ "Gatlinburg Convention Center": {
+  "r": 4.6,
+  "n": 2234,
+  "say": "Spacious, clean, parking next door. The craft shows here get consistently warm reviews."
+ },
+ "Cracker Barrel": {
+  "r": 4.4,
+  "n": 5807,
+  "say": "Reliable, kid-proof, and busy. Holiday waits are real."
+ },
+ "The Park Grill": {
+  "r": 4.5,
+  "n": 5375,
+  "say": "Salad bar people rave about, rocking chairs on the porch for the wait. Pricier than the Parkway average."
+ },
+ "WonderWorks Pigeon Forge": {
+  "r": 4.3,
+  "n": 11004,
+  "say": "Hands-on and loud. Great for Cash, chaotic for a two-year-old. Go at opening."
+ },
+ "Rainforest Adventures Zoo": {
+  "r": 4.5,
+  "n": 4864,
+  "say": "Toddler-height exhibits, fifty friendly goats to feed, come-and-go wristbands. About $22. Reviewers with little kids love it."
+ },
+ "Gatlinburg Space Needle": {
+  "r": 4.4,
+  "n": 2876,
+  "say": "The view is good, the tower feels run down, and it's pricey for what it is. Under-4s are free."
+ },
+ "John Oliver Cabin": {
+  "r": 4.8,
+  "n": 283,
+  "say": "First stop on the loop, short walk, best in morning light. No restrooms until Cable Mill."
+ },
+ "Food City": {
+  "r": 4.4,
+  "n": 9391,
+  "say": "Well stocked, open 6am to midnight. Thanksgiving Day closes at 3pm."
+ },
+ "Middle Prong Trail": {
+  "r": 4.6,
+  "n": 5,
+  "say": "Wide, gentle, cascades early. 'Good with children' is the recurring line. Parking is tight."
+ },
+ "Elkmont Nature Trailhead": {
+  "r": 4.8,
+  "n": 115,
+  "say": "Short creekside loop. Reviewers name it for young children and the elderly in the same sentence."
+ },
+ "Porters Creek Trail Trailhead": {
+  "r": 4.7,
+  "n": 195,
+  "say": "Locals' favorite. Easy first mile to the farm site, moderate climb beyond with footlog bridges."
+ },
+ "Metcalf Bottoms Trail Trailhead": {
+  "r": 4.8,
+  "n": 125,
+  "say": "Rolling and rooty to a one-room schoolhouse. The picnic area and shallow river get as much love as the trail."
+ },
+ "Cove Hardwood Nature Trail Trailhead": {
+  "r": 4.7,
+  "n": 24,
+  "say": "Old-growth giants on a short loop with one real hill. Usually empty. Grab the 50-cent guide."
+ },
+ "Oconaluftee River Trail Trailhead": {
+  "r": 4.8,
+  "n": 431,
+  "say": "Flat, benches, river access, and elk crossing the trail some mornings. Big lot across the road."
+ }
+}
