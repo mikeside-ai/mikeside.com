@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b1411">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Trout fishing · Gatlinburg week</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="site.css?v=4">
+</head>
+<body class="locked day-page trails-page" data-page="fishing">
+
+<div id="gate">
+  <form class="gate-box" id="gate-form" autocomplete="off">
+    <span class="logo">mike<span>side</span></span>
+    <h1>Gatlinburg week</h1>
+    <p>Family page. Enter the PIN to open it.</p>
+    <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" aria-label="PIN" autofocus>
+    <button type="submit">Open</button>
+    <div class="err" id="gate-err"></div>
+  </form>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="/">mike<span>side</span></a>
+    <nav aria-label="Trip pages">
+      <ul>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="#papers">Licenses</a></li>
+        <li><a href="#spots">Spots</a></li>
+        <li><a href="#how">Late November</a></li>
+        <li><a href="#map">Map</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="banner" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/West%20Prong%20of%20the%20Little%20Pigeon%20River%20at%20Chimneys%20Picnic%20Area.JPG?width=1400')">
+  <div class="banner-shade"></div>
+  <div class="container banner-text">
+    <p class="kicker">For the grandparents</p>
+    <h1>Trout fishing</h1>
+    <p class="banner-date">Wild trout in the park, stocked rainbows in town, and one place that guarantees a fish. All within 45 minutes of the cabin.</p>
+  </div>
+  <span class="credit">Blinutne · CC BY-SA 3.0</span>
+</div>
+
+<div class="chips container" aria-label="Days"><a class="chip" href="day-0-sun.html">Sun 22</a><a class="chip" href="day-1-mon.html">Mon 23</a><a class="chip" href="day-2-tue.html">Tue 24</a><a class="chip" href="day-3-wed.html">Wed 25</a><a class="chip" href="day-4-thu.html">Thu 26</a><a class="chip" href="day-5-fri.html">Fri 27</a><a class="chip" href="day-6-sat.html">Sat 28</a><a class="chip" href="bonus-dollywood.html">Bonus</a><a class="chip" href="trails.html">Trails</a><a class="chip on" href="fishing.html">Fishing</a></div>
+
+<section class="daytop">
+  <div class="container">
+    <p class="lede">Two kinds of water, ten minutes apart. The national park has wild trout, artificial lures only, and no stocking. The city of Gatlinburg stocks rainbows every Thursday from its own trout farm and lets you use bait and keep five. Late November is cold-water fishing: the fish are there, they are just slow. Fish the warm middle of the day and go to town water if the goal is dinner.</p>
+    <p class="lede">The short version. Buy licenses online tonight. Park water for a quiet morning and scenery. Town water or the trout farm when you want to actually catch something. No fishing anywhere in town on Thursday, which this week is Thanksgiving anyway.</p>
+  </div>
+</section>
+
+<section id="papers">
+  <div class="container">
+    <p class="eyebrow">Paperwork</p>
+    <h2>Licenses, bought from the couch</h2>
+    <p class="intro">Everything is sold at <a href="https://www.gooutdoorstennessee.com" target="_blank" rel="noopener">GoOutdoorsTennessee.com</a> or the TWRA On The Go app. You need a Social Security number to buy. Screenshot the license; cell service in the park is thin. Kids 12 and under fish free anywhere. There is no senior discount for out-of-state anglers, so over-65 pays the same as anyone.</p>
+    <div class="table-wrap"><table class="numbers">
+      <thead><tr><th>Where you want to fish</th><th>What to buy (non-resident)</th><th>About</th></tr></thead>
+      <tbody>
+        <tr><td>National park only</td><td>3-Day Fishing, All Species (Type 078)</td><td>$40. No trout stamp needed in the park.</td></tr>
+        <tr><td>Park plus town, whole week</td><td>10-Day Fishing, All Species (Type 080) plus Gatlinburg 3-Day Trout Permit (Type 096)</td><td>$61 + $9. The best deal if they fish more than two days.</td></tr>
+        <tr><td>Town only, one day</td><td>Gatlinburg 1-Day Trout License (Type 097)</td><td>$11. Stands alone, nothing else needed. Not valid in the park.</td></tr>
+        <tr><td>Town add-on, one day</td><td>Gatlinburg Trout Daily Permit (Type 099)</td><td>$3 on top of a state license.</td></tr>
+        <tr><td>Kids 12 and under</td><td>Nothing</td><td>Free in the park and in town, including the kids-only streams.</td></tr>
+      </tbody>
+    </table></div>
+    <p class="intro">Tennessee residents with a driver's license have a cheaper menu, including a senior license at 65. Prices above are TWRA's posted fees and skip the small processing charge. Town permits are also sold at Gatlinburg City Hall on East Parkway and the Spur Welcome Center.</p>
+  </div>
+</section>
+
+<section id="rules">
+  <div class="container">
+    <p class="eyebrow">Rules</p>
+    <h2>Park water versus town water</h2>
+    <div class="table-wrap"><table class="numbers">
+      <thead><tr><th></th><th>National park</th><th>Gatlinburg city streams</th></tr></thead>
+      <tbody>
+        <tr><td>Fish</td><td>Wild rainbows, browns, native brookies. Never stocked.</td><td>Stocked rainbows, 350 to 500 lb every Thursday.</td></tr>
+        <tr><td>Hours</td><td>Half hour before sunrise to half hour after sunset.</td><td>Same. Closed every Thursday for stocking.</td></tr>
+        <tr><td>Tackle</td><td>Artificial flies and lures only. One hand-held rod. Single hook, no trebles.</td><td>Any bait through Nov 30: worms, corn, PowerBait. One rod, single hook.</td></tr>
+        <tr><td>Keep</td><td>5 trout a day, 7 inches minimum.</td><td>5 trout a day, no size limit. Kids' streams 2.</td></tr>
+        <tr><td>Kids' water</td><td>None, kids fish with the adults.</td><td>Three stretches are kids-only, 12 and under. No adult may fish them.</td></tr>
+        <tr><td>Parking</td><td>Park tag, $5 a day or $15 a week, any visitor center.</td><td>City lots, or free at Herbert Holt and Mynatt parks.</td></tr>
+      </tbody>
+    </table></div>
+    <p class="intro">Do not move or stack rocks in the park; it is illegal and it kills the bugs the trout eat. Do not dump fish guts near a campsite. On Dec 1 the town goes catch-and-release, but we are gone by then.</p>
+  </div>
+</section>
+
+<section id="spots">
+  <div class="container">
+    <p class="eyebrow">The water</p>
+    <h2>Nine spots, easiest access first</h2>
+    <div class="trails">
+
+      <div class="trail" data-lat="35.7256" data-lng="-83.5130" data-name="Herbert Holt Park" data-q="Herbert Holt Park Gatlinburg">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Rainbow%20Trout%202528.jpg?width=480')"><span class="credit">Chris Light · CC BY-SA 4.0</span></div>
+        <div class="trail-body">
+          <h3>Herbert Holt Park <span class="rate" data-say="Kids 12 and under only on the park stretch. Reviewers' kids caught rainbows on small single-hook spinners. Bears wander through at dusk and one stole a fish." title="Google rating, 708 reviews">&#9733; 4.7<small>708</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7256476%2C-83.5129832" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">North end of town, off the Spur &middot; 10 min from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Water</dt><dd>West Prong, stocked</dd></div>
+            <div><dt>Who</dt><dd>Kids only inside the park; adults just upstream</dd></div>
+            <div><dt>Walk</dt><dd>None, river is beside the lot</dd></div>
+            <div><dt>Footing</dt><dd>Flat bank, easy wading</dd></div>
+            <div><dt>Bait</dt><dd>Yes, through Nov 30</dd></div>
+            <div><dt>Restrooms</dt><dd>Yes, and a playground</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for knees over sixty and kids under seven">Knees and kids score <span>&#9679;&#9679;&#9679;&#9679;&#9679;<i></i></span></p>
+          <p>The city trout farm is here, so this is the most reliably fishy water in town. The stretch from the park entrance bridge downstream to the Bypass bridge is for ages 12 and under, two fish each, no license. Cash and Slavik fish it with a grandparent standing behind them, and Snejana has a playground. Upstream of the entrance bridge is general water where the grandparents can fish with their own license. Walk past the raceways and look at the fish being raised.</p>
+          <p class="when">Best slot: Friday or Saturday morning, the day after stocking</p>
+        </div>
+      </div>
+
+      <div class="trail" data-lat="35.7120" data-lng="-83.5140" data-name="West Prong through downtown" data-q="River Road Gatlinburg">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Small%20cascade%20in%20river%20at%20Chimneys%20Picnic%20Area%20%28291d14fb-1dd8-b71c-0750-5bb0c39a671a%29.jpg?width=480')"><span class="credit">NPS · Public domain</span></div>
+        <div class="trail-body">
+          <h3>West Prong through downtown <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=River%20Road%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">River Road, behind the Parkway &middot; 10 min from the cabin, or walk from the trolley</p>
+          <dl class="trail-facts">
+            <div><dt>Water</dt><dd>West Prong, stocked</dd></div>
+            <div><dt>Who</dt><dd>Anyone with a town permit</dd></div>
+            <div><dt>Walk</dt><dd>Steps down from the sidewalk in places</dd></div>
+            <div><dt>Footing</dt><dd>Rocky, use the staff</dd></div>
+            <div><dt>Bait</dt><dd>Yes, through Nov 30</dd></div>
+            <div><dt>Restrooms</dt><dd>Any shop or the welcome center</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for knees over sixty and kids under seven">Knees and kids score <span>&#9679;&#9679;&#9679;&#9679;<i>&#9679;</i></span></p>
+          <p>The same stocked river runs the length of town between the Parkway and River Road. It looks urban and it fishes well, especially the pools under the bridges and the quiet stretch upstream of the Ripley's aquarium. Easy to pair with the family being in town. Park in a city lot or ride the trolley in. Casting under a bridge with pancakes across the street is a very Gatlinburg morning.</p>
+          <p class="when">Best slot: Any morning except Thursday, while the rest of us are at Anakeesta or the shops</p>
+        </div>
+      </div>
+
+      <div class="trail" data-lat="35.7016" data-lng="-83.5149" data-name="Mynatt Park, LeConte Creek" data-q="Mynatt Park Gatlinburg">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Brook%20Trout--NPS%20Photo%20%2850086152233%29.jpg?width=480')"><span class="credit">NPS · Public domain</span></div>
+        <div class="trail-body">
+          <h3>Mynatt Park, LeConte Creek <span class="rate" data-say="Clean, well kept neighborhood park on the creek with restrooms and picnic tables. No playground. Kids wade here all summer." title="Google rating, 878 reviews">&#9733; 4.7<small>878</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7015895%2C-83.5149127" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Airport Rd, on the way to Roaring Fork &middot; 8 min from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Water</dt><dd>LeConte Creek, stocked</dd></div>
+            <div><dt>Who</dt><dd>Kids only above Painters Branch</dd></div>
+            <div><dt>Walk</dt><dd>None</dd></div>
+            <div><dt>Footing</dt><dd>Small creek, shallow</dd></div>
+            <div><dt>Bait</dt><dd>Yes, through Nov 30</dd></div>
+            <div><dt>Restrooms</dt><dd>Yes</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for knees over sixty and kids under seven">Knees and kids score <span>&#9679;&#9679;&#9679;&#9679;&#9679;<i></i></span></p>
+          <p>The quieter kids' stream. LeConte Creek from Painters Branch up to the park boundary is 12 and under, and this park sits right on it. Small water, small fish, no crowds, and the creek is shallow enough that a seven-year-old can stand in it in boots. The stretch below Painters Branch is general water for the adults.</p>
+          <p class="when">Best slot: Tuesday or Wednesday afternoon, an hour before dark</p>
+        </div>
+      </div>
+
+      <div class="trail" data-lat="35.6796" data-lng="-83.5313" data-name="West Prong at Sugarlands" data-q="Sugarlands Visitor Center">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Sugarlands%20Visitor%20Center%2C%20May%202018--Andrea%20Walton%20%2829111144268%29.jpg?width=480')"><span class="credit">NPS / Andrea Walton · Public domain</span></div>
+        <div class="trail-body">
+          <h3>West Prong at Sugarlands <span class="rate" data-say="Rangers are the asset. Lends all-terrain wheelchairs. Buy the parking tag inside." title="Google rating, 2,490 reviews">&#9733; 4.7<small>2k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6795863%2C-83.5312772" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Newfound Gap Rd, first mile inside the park &middot; 5 min from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Water</dt><dd>West Prong, wild</dd></div>
+            <div><dt>Who</dt><dd>State license, park rules</dd></div>
+            <div><dt>Walk</dt><dd>Paved nature trail or the gravel Gatlinburg Trail</dd></div>
+            <div><dt>Footing</dt><dd>Best in the park for a cautious wader</dd></div>
+            <div><dt>Bait</dt><dd>No. Flies or single-hook lures</dd></div>
+            <div><dt>Restrooms</dt><dd>Visitor center</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for knees over sixty and kids under seven">Knees and kids score <span>&#9679;&#9679;&#9679;&#9679;<i>&#9679;</i></span></p>
+          <p>The lowest, gentlest mile of the park's best-known trout river, with a paved loop along it. Riffles and pools, not boulders. Wild rainbows, with a few browns in the bigger pools. Fish the Sugarlands Valley Nature Trail stretch, or walk the Gatlinburg Trail and drop in anywhere. Tuesday the family is walking this exact trail, so the grandparents can fish while the kids walk.</p>
+          <p class="when">Best slot: Tuesday late morning, alongside the Sugarlands walks</p>
+        </div>
+      </div>
+
+      <div class="trail" data-lat="35.6367" data-lng="-83.4895" data-name="Chimneys Picnic Area" data-q="Chimneys Picnic Area Great Smoky Mountains">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/West%20Prong%20of%20the%20Little%20Pigeon%20River%20at%20Chimneys%20Picnic%20Area.JPG?width=480')"><span class="credit">Blinutne · CC BY-SA 3.0</span></div>
+        <div class="trail-body">
+          <h3>Chimneys Picnic Area <span class="rate" data-say="The prettiest picnic spot in the park. Real restrooms with running water. Big boulders and plunge pools right beside the tables." title="Google rating, 1,530 reviews">&#9733; 4.9<small>2k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6366902%2C-83.4895222" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Newfound Gap Rd, 7 mi inside the park &middot; 15 min from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Water</dt><dd>West Prong, wild</dd></div>
+            <div><dt>Who</dt><dd>State license, park rules</dd></div>
+            <div><dt>Walk</dt><dd>Tables are on the bank</dd></div>
+            <div><dt>Footing</dt><dd>Car-sized boulders, fish from shore</dd></div>
+            <div><dt>Bait</dt><dd>No</dd></div>
+            <div><dt>Restrooms</dt><dd>Yes, flush</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for knees over sixty and kids under seven">Knees and kids score <span>&#9679;&#9679;&#9679;<i>&#9679;&#9679;</i></span></p>
+          <p>Postcard water: plunge pools between boulders the size of cars, and picnic tables within sight of the rod. Fish it from the rocks rather than wading, because the pools are deep and the rocks are slick. Dap a nymph into the pockets. Good place for a grandparent to fish while everyone else eats lunch, and the drive up Newfound Gap continues from here.</p>
+          <p class="when">Best slot: Friday on the way up to Kuwohi</p>
+        </div>
+      </div>
+
+      <div class="trail" data-lat="35.6577" data-lng="-83.5835" data-name="Little River at Elkmont" data-q="Elkmont Campground Great Smoky Mountains">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Little%20River%20%26%20boulders%20of%20Thunderhead%20Sandstone%20%28Neoproterozoic%3B%20Great%20Smoky%20Mountains%2C%20Tennessee%2C%20USA%29%204%20%2836472145863%29.jpg?width=480')"><span class="credit">James St. John · CC BY 2.0</span></div>
+        <div class="trail-body">
+          <h3>Little River at Elkmont <span class="rate" data-say="Campground on the river. Reviewers fish and wade from the Little River Trail, and warn that the rocks are very slippery." title="Google rating, 562 reviews">&#9733; 4.6<small>562</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6577006%2C-83.5835055" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Elkmont, off Little River Rd &middot; 20 min from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Water</dt><dd>Little River, wild</dd></div>
+            <div><dt>Who</dt><dd>State license, park rules</dd></div>
+            <div><dt>Walk</dt><dd>Little River Trail, flat old road, as far as you like</dd></div>
+            <div><dt>Footing</dt><dd>Easy trail, slick rocks at the water</dd></div>
+            <div><dt>Bait</dt><dd>No</dd></div>
+            <div><dt>Restrooms</dt><dd>Campground, may be closed for the season</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for knees over sixty and kids under seven">Knees and kids score <span>&#9679;&#9679;&#9679;&#9679;<i>&#9679;</i></span></p>
+          <p>The most fished stream in the park, and the one with the biggest browns, which are spawning right now. The Little River Trail is a flat gravel road along the water, so a grandparent can walk ten minutes, pick a pool, and have it alone on a November weekday. Stay out of the clean, pale gravel patches at the tails of pools; those are brown trout nests. The Elkmont Nature Trail on the trails page is the same trailhead, so this pairs with a family walk.</p>
+          <p class="when">Best slot: Wednesday on the way back from Cades Cove, or any quiet morning</p>
+        </div>
+      </div>
+
+      <div class="trail" data-lat="35.6799" data-lng="-83.6489" data-name="Metcalf Bottoms and The Sinks" data-q="Metcalf Bottoms Picnic Area">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Stream%20at%20Metcalf%20Bottoms%20Picnic%20Area%2C%20May%202008--Erica%20Walton%20%2840124011142%29.jpg?width=480')"><span class="credit">NPS / Erica Walton · Public domain</span></div>
+        <div class="trail-body">
+          <h3>Metcalf Bottoms and The Sinks <span class="rate" data-say="Big open picnic area with many ways down to the river and restrooms. Shallow enough to wade with little ones in summer." title="Google rating, 719 reviews">&#9733; 4.8<small>719</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6798742%2C-83.648943" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Little River Rd, halfway to Townsend &middot; 30 min from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Water</dt><dd>Little River, wild</dd></div>
+            <div><dt>Who</dt><dd>State license, park rules</dd></div>
+            <div><dt>Walk</dt><dd>None, pull-offs along the road</dd></div>
+            <div><dt>Footing</dt><dd>Wide, shallow flats at Metcalf. Keep well back from The Sinks.</dd></div>
+            <div><dt>Bait</dt><dd>No</dd></div>
+            <div><dt>Restrooms</dt><dd>Metcalf Bottoms</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for knees over sixty and kids under seven">Knees and kids score <span>&#9679;&#9679;&#9679;&#9679;<i>&#9679;</i></span></p>
+          <p>Little River Road follows the river for miles with pull-offs every few hundred yards, so you can fish a run, drive two minutes, and fish another. Metcalf Bottoms is the wide, gentle stretch with the easiest wading in the park. The Sinks, a mile upstream, is the famous waterfall pool. People drown there most years; fish the runs above and below it, never the pool.</p>
+          <p class="when">Best slot: Sunday afternoon on the drive in, if there is light left</p>
+        </div>
+      </div>
+
+      <div class="trail" data-lat="35.7119" data-lng="-83.3837" data-name="Greenbrier, Middle Prong" data-q="Greenbrier Picnic Area Great Smoky Mountains">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Middle-fork-of-pigeon-river2.jpg?width=480')"><span class="credit">Brian Stansberry · CC BY 2.5</span></div>
+        <div class="trail-body">
+          <h3>Greenbrier, Middle Prong <span class="rate" data-say="Quiet entrance on a potholed gravel road. Many pull-offs with short paths to the water. Popular with bears too." title="Google rating, 186 reviews">&#9733; 4.8<small>186</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.711881%2C-83.383731" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Off US 321 east of town &middot; 20 min from the cabin</p>
+          <dl class="trail-facts">
+            <div><dt>Water</dt><dd>Middle Prong Little Pigeon, wild</dd></div>
+            <div><dt>Who</dt><dd>State license, park rules</dd></div>
+            <div><dt>Walk</dt><dd>Short muddy paths from the pull-offs</dd></div>
+            <div><dt>Footing</dt><dd>Rocky, moderate</dd></div>
+            <div><dt>Bait</dt><dd>No</dd></div>
+            <div><dt>Restrooms</dt><dd>Picnic area</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for knees over sixty and kids under seven">Knees and kids score <span>&#9679;&#9679;&#9679;<i>&#9679;&#9679;</i></span></p>
+          <p>The least visited entrance on our side of the park and the one serious local anglers name first. Bigger water than the West Prong, good rainbows, few people. The gravel road in is slow and rough, so take the SUV. This is the pick if a grandparent wants a real morning of fishing with nobody else around.</p>
+          <p class="when">Best slot: Monday morning while the family does the knife shop in Pigeon Forge</p>
+        </div>
+      </div>
+
+      <div class="trail" data-lat="35.9076" data-lng="-83.3562" data-name="English Mountain Trout Farm" data-q="English Mountain Trout Farm Sevierville">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Rainbow%20Trout%202528.jpg?width=480')"><span class="credit">Chris Light · CC BY-SA 4.0</span></div>
+        <div class="trail-body">
+          <h3>English Mountain Trout Farm <span class="rate" data-say="Catch your lunch on a bamboo pole, they clean and cook it three ways. Six-year-olds land fish in minutes. Gem mining while you wait. Call for Thanksgiving-week hours." title="Google rating, 1,620 reviews">&#9733; 4.6<small>2k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=291%20Blowing%20Cave%20Rd%2C%20Sevierville%2C%20TN%2037876" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Blowing Cave Rd, Sevierville &middot; 40 min from the cabin &middot; 865-429-5553</p>
+          <dl class="trail-facts">
+            <div><dt>Water</dt><dd>Stocked ponds</dd></div>
+            <div><dt>Who</dt><dd>Everyone. No license at all.</dd></div>
+            <div><dt>Walk</dt><dd>None</dd></div>
+            <div><dt>Footing</dt><dd>Flat bank</dd></div>
+            <div><dt>Cost</dt><dd>Pay per fish caught, plus cooking</dd></div>
+            <div><dt>Hours</dt><dd>Mon to Sat from 11. Closed Sunday. Short day Thursday.</dd></div>
+          </dl>
+          <p class="kidscore" title="Our score for knees over sixty and kids under seven">Knees and kids score <span>&#9679;&#9679;&#9679;&#9679;&#9679;<i></i></span></p>
+          <p>The guarantee. Bamboo poles and corn, fish in minutes, and the kitchen fries, blackens or lemon-peppers your catch while you wait. No license, no cold wading, every kid catches one. This is the place to bring all seven of us if the grandparents want to share the fishing instead of escaping it, and it doubles as lunch. Every fish you hook you buy, so set a number before the kids start.</p>
+          <p class="when">Best slot: Monday or Wednesday lunch, or Friday if Kuwohi is rained out</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="container">
+    <p class="eyebrow">Late November</p>
+    <h2>How to catch one in cold water</h2>
+    <p class="intro">Water is in the 40s. Trout stop chasing and sit deep in the slow water, eating what drifts to their nose. Three things matter more than anything: fish between about 11 and 3 when the water is warmest, get the lure down to the bottom, and move slowly.</p>
+    <div class="table-wrap"><table class="numbers">
+      <thead><tr><th>Setup</th><th>Park water</th><th>Town water</th></tr></thead>
+      <tbody>
+        <tr><td>Fly rod</td><td>Two bead-head nymphs under a small indicator, size 16 to 18: Pheasant Tail, Hare's Ear, a small black stonefly. Short upstream casts, high rod, no slack. Forget dry flies this week.</td><td>Same nymphs work. An egg pattern or a San Juan Worm is deadly on stocked fish.</td></tr>
+        <tr><td>Spinning rod</td><td>Small inline spinner, 1/16 oz, with the treble swapped for a single hook. Panther Martin or Rooster Tail. Cast up, retrieve slow and deep.</td><td>The same, or just a size 10 single hook, a split shot, and a worm, a kernel of corn, or PowerBait on the bottom of a slow pool.</td></tr>
+        <tr><td>Line</td><td>4 lb or 5X. The water is gin clear.</td><td>4 to 6 lb.</td></tr>
+        <tr><td>Where in the stream</td><td>Deep, slow pools and the soft water behind boulders. Not the fast riffles.</td><td>Bridge pools and anywhere the current slows.</td></tr>
+      </tbody>
+    </table></div>
+    <h3>Safety, which in November means cold</h3>
+    <p>Drowning is the second cause of death in the park and the water is numbing. Nobody wades above the knee. Felt or studded boots and a wading staff are not optional for anyone over sixty on these rocks. Fish from the bank wherever a pool can be reached from the bank. Layers, a dry change of clothes in the car, and a thermos. If someone goes in, the trip is over for the day; get them into the car with the heater on. The park dispatch number is 865-436-1294 and the nearest ER is LeConte in Sevierville, on the hub.</p>
+    <h3>The stocking rhythm</h3>
+    <p>Town fish go in on Thursday. By the following Wednesday most of them have been caught or have moved. So town water fishes best Friday and Saturday, worst Tuesday and Wednesday. This week Thursday is Thanksgiving and the town is closed to fishing anyway; the park is open and empty that morning if someone wants two hours before dinner.</p>
+  </div>
+</section>
+
+<section id="shops">
+  <div class="container">
+    <p class="eyebrow">Help</p>
+    <h2>Shops and guides</h2>
+    <div class="table-wrap"><table class="numbers">
+      <thead><tr><th>Shop</th><th>Where</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>The Smoky Mountain Angler <span class="rate" data-say="Reviewers' favorite thing they did in the Smokies. Half-day wade trips for families, ten minutes from the shop, beginners welcome and catching fish. Sells single-hook lures for the kids' streams." title="Google rating, 426 reviews">&#9733; 4.7<small>426</small></span></td><td>469 Brookside Village Way, Gatlinburg<br>865-436-8746<br><a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=469%20Brookside%20Village%20Way%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></td><td>The town fly shop, 5 minutes from the cabin. Open daily, Sunday from 10:30. Flies, bait, lures, waders, local advice, and half-day guided wade trips. A guided half day on day one would turn the rest of the week from guessing into fishing.</td></tr>
+        <tr><td>Little River Outfitters <span class="rate" data-say="The best fly shop in the Smokies by reputation. Patient with beginners, draws spots on the map for you. Closed Thanksgiving Day." title="Google rating, 276 reviews">&#9733; 4.9<small>276</small></span></td><td>106 Town Square Dr, Townsend<br>865-448-9459<br><a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=106%20Town%20Square%20Dr%2C%20Townsend%2C%20TN%2037882" target="_blank" rel="noopener">Directions</a></td><td>Worth the stop on Wednesday coming out of Cades Cove. They will tell you what is working on Little River that day. Closed Thursday this week.</td></tr>
+        <tr><td>Gatlinburg Trout Farm</td><td>Herbert Holt Park<br>865-436-7549</td><td>The city hatchery. Call to ask whether they stocked this week and where.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<section id="map">
+  <div class="container">
+    <p class="eyebrow">Where it is</p>
+    <h2>Map</h2>
+    <p class="intro">Tap a pin for directions. Town water is the cluster at the top; park water runs south and west along the roads; the trout farm is the lone pin up to the northeast.</p>
+    <div id="leaflet" class="map" data-route="[]" data-route-b="[]"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="pager"><a href="trails.html">&larr; Trails</a><span></span><a href="index.html">Hub &rarr;</a></div>
+    <p>Rules and prices from the National Park Service, the City of Gatlinburg and TWRA, checked Nov 21, 2026. Ratings from Google. Photos from Wikimedia Commons under the licenses shown.</p>
+  </div>
+</footer>
+
+<div class="bear-toast" id="bear-toast" role="status"></div>
+<div class="bear-peek" id="bear-peek" aria-hidden="true"><svg viewBox="0 0 120 100"><g fill="#2b1d14"><ellipse cx="60" cy="78" rx="46" ry="30"/><circle cx="60" cy="44" r="30"/><circle cx="36" cy="22" r="11"/><circle cx="84" cy="22" r="11"/></g><g fill="#6b4a33"><circle cx="36" cy="22" r="5"/><circle cx="84" cy="22" r="5"/><ellipse cx="60" cy="56" rx="14" ry="10"/></g><g fill="#0b1411"><circle cx="48" cy="40" r="3.5"/><circle cx="72" cy="40" r="3.5"/><ellipse cx="60" cy="52" rx="6" ry="4"/></g></svg></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="bear-side" viewBox="0 0 140 90"><g fill="#2b1d14"><ellipse cx="62" cy="50" rx="44" ry="26"/><circle cx="108" cy="36" r="18"/><circle cx="98" cy="22" r="6"/><circle cx="118" cy="22" r="6"/><circle cx="20" cy="50" r="12"/><rect x="30" y="62" width="12" height="26" rx="5"/><rect x="52" y="64" width="12" height="24" rx="5"/><rect x="78" y="64" width="12" height="24" rx="5"/><rect x="96" y="60" width="12" height="28" rx="5"/></g><g fill="#6b4a33"><ellipse cx="122" cy="42" rx="9" ry="6"/></g><circle cx="114" cy="33" r="2.5" fill="#0b1411"/><circle cx="129" cy="41" r="3" fill="#0b1411"/></symbol></svg>
+
+<nav class="tabbar" aria-label="Quick links">
+  <a href="index.html"><span>&#8962;</span>Hub</a>
+  <a href="#spots"><span>&#9673;</span>Spots</a>
+  <a href="#papers"><span>&#9745;</span>Licenses</a>
+  <a href="#map"><span>&#9650;</span>Map</a>
+  <a href="index.html#numbers"><span>&#9742;</span>Numbers</a>
+</nav>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="site.js?v=4"></script>
+<script src="day.js?v=4"></script>
+<script src="photos.js?v=1" defer></script>
+</body>
+</html>
