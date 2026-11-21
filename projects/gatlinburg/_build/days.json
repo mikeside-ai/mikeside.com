@@ -3,7 +3,7 @@
   "file": "day-0-sun.html",
   "short": "Sun 22",
   "name": "Sunday",
-  "kicker": "Day 0 \u00b7 The drive",
+  "kicker": "Day 0 · The drive",
   "banner": "Little River Road - October 2025 - Sarah Stierch.jpg",
   "strip": [
    "Little-river-townsend-y.jpg",
@@ -129,7 +129,7 @@
   "file": "day-1-mon.html",
   "short": "Mon 23",
   "name": "Monday",
-  "kicker": "Day 1 \u00b7 Old Mill and The Island",
+  "kicker": "Day 1 · Old Mill and The Island",
   "banner": "Pigeon Forge Mill - October 2023 - Sarah Stierch 03.jpg",
   "strip": [
    "MJK49036 Pigeon Forge Mill.jpg",
@@ -151,7 +151,7 @@
     35.7878,
     -83.5516
    ],
-   "Lunch: Pottery House Caf\u00e9": [
+   "Lunch: Pottery House Café": [
     35.7892,
     -83.5538
    ],
@@ -185,7 +185,7 @@
      "t": "12:15p",
      "what": "Lunch at the Old Mill, then naps",
      "why": "Pottery House if the wait is short, Old Mill Restaurant if it isn't. Home by 1:15.",
-     "dest": "The Old Mill Pottery House Caf\u00e9, 3341 Old Mill St, Pigeon Forge, TN 37863"
+     "dest": "The Old Mill Pottery House Café, 3341 Old Mill St, Pigeon Forge, TN 37863"
     },
     {
      "t": "4:00p",
@@ -234,7 +234,7 @@
   "file": "day-2-tue.html",
   "short": "Tue 24",
   "name": "Tuesday",
-  "kicker": "Day 2 \u00b7 Easy morning, Anakeesta at dusk",
+  "kicker": "Day 2 · Easy morning, Anakeesta at dusk",
   "banner": "Anakeesta - October 2023 - Sarah Stierch.jpg",
   "strip": [
    "Cataract-falls-gsmnp1.jpg",
@@ -314,7 +314,7 @@
   "file": "day-3-wed.html",
   "short": "Wed 25",
   "name": "Wednesday",
-  "kicker": "Day 3 \u00b7 Cades Cove",
+  "kicker": "Day 3 · Cades Cove",
   "banner": "Cades Cove - October 2023 - Sarah Stierch 01.jpg",
   "strip": [
    "John Oliver Cabin P9070481.jpg",
@@ -417,7 +417,7 @@
   "file": "day-4-thu.html",
   "short": "Thu 26",
   "name": "Thanksgiving",
-  "kicker": "Day 4 \u00b7 Thanksgiving",
+  "kicker": "Day 4 · Thanksgiving",
   "banner": "Ober Gatlinburg.jpg",
   "strip": [
    "Black bear sitting upright at Great Smoky Mountains National Park, Tennessee and North Carolina (d846aeb0-01e0-4bb5-801c-d6bb26d13f85).jpg",
@@ -427,7 +427,7 @@
    "Aquarium of the Smokies 2006.jpg",
    "Elk in Meadow, Cataloochee, NC (31780399217).jpg"
   ],
-  "lede": "Dollywood is closed and half the town is at a buffet. Up the tram in the morning for the bears and the ice, the big meal at the cabin at four, and the chairlift lights only if everyone is still standing.",
+  "lede": "Dollywood is closed and half the town is at a buffet. Up the tram in the morning for the bears, the tubing hill and the ice, the big meal at the cabin at four, and the chairlift lights only if everyone is still standing.",
   "coords": {
    "Ober Mountain tram from downtown": [
     35.7096,
@@ -436,6 +436,10 @@
    "Lights Over Gatlinburg from the SkyLift": [
     35.7116,
     -83.516
+   ],
+   "Snow tubing: Cash plus one adult": [
+    35.7096,
+    -83.5177
    ]
   },
   "route": [],
@@ -446,7 +450,7 @@
     {
      "t": "9:45a",
      "what": "Ober Mountain tram from downtown",
-     "why": "Same morning as Plan A: bears, otters, skating for Cash.",
+     "why": "Same morning as Plan A: bears, tubing for Cash and one adult, skating if there's time.",
      "dest": "Ober Mountain Tramway, 1001 Parkway, Gatlinburg, TN 37738"
     },
     {
@@ -489,8 +493,8 @@
    "dest": "Cracker Barrel, 2285 Parkway, Pigeon Forge, TN 37863"
   },
   "kids": [
-   "Cash: skating with an adult, tubing alone only if he's 42 inches. Secured shoes, waterproof gloves.",
-   "Slavik: no tubing until he's three. Bears, the rink from the rail, hot chocolate in the lodge. That's a full morning for him.",
+   "Cash: tubing is his big one this week. Rides alone at seven, must be 42 inches, unlimited runs 11 to 5. Secured shoes, waterproof gloves, a dry change in the car. Skating after only if he wants it.",
+   "Slavik: no tubing until he's three, and that's December. Bears, the rink from the rail, hot chocolate in the lodge. That's a full morning for him.",
    "Snejana: the tram and the bears. Carrier on the SkyLift tonight if you go; she's a heartbeat, so two chairs."
   ]
  },
@@ -498,7 +502,7 @@
   "file": "day-5-fri.html",
   "short": "Fri 27",
   "name": "Friday",
-  "kicker": "Day 5 \u00b7 Up the mountain",
+  "kicker": "Day 5 · Up the mountain",
   "banner": "Newfound Gap Road - Great Smoky Mountains National Park, TN.jpg",
   "strip": [
    "Observation Tower in Fog, Clingmans Dome (Kuwahi), Great Smoky Mountains National Park, Swain County, NC.jpg",
@@ -592,7 +596,7 @@
   "file": "day-6-sat.html",
   "short": "Sat 28",
   "name": "Saturday",
-  "kicker": "Day 6 \u00b7 Home",
+  "kicker": "Day 6 · Home",
   "banner": "Great Smoky Mountains National Park in Autumn.jpg",
   "strip": [
    "Mount LeConte viewed from Carlos Campbell Overlook, May 2017.jpg",
@@ -694,7 +698,7 @@
   "file": "bonus-dollywood.html",
   "short": "Bonus",
   "name": "Bonus day",
-  "kicker": "Bonus \u00b7 Dollywood, if the week allows",
+  "kicker": "Bonus · Dollywood, if the week allows",
   "banner": "Dollywood from the Dollywood Express - 8.jpg",
   "strip": [
    "Dollywood Express No. 70 aka \"Cinderella\" - June 2023.jpg",
