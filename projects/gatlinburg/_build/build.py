@@ -82,7 +82,7 @@ def page(date):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-<link rel="stylesheet" href="site.css?v=5">
+<link rel="stylesheet" href="site.css?v=6">
 <script>try{{var t=localStorage.getItem("gatlinburg-2026-theme");if(t&&t!=="spruce")document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
 </head>
 <body class="locked day-page" data-date="{date if date != 'bonus' else ''}" data-page="{date}">
@@ -239,8 +239,8 @@ def page(date):
 </nav>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="site.js?v=5"></script>
-<script src="day.js?v=5"></script>
+<script src="site.js?v=6"></script>
+<script src="day.js?v=6"></script>
 <script src="photos.js?v=1" defer></script>
 </body>
 </html>
@@ -295,7 +295,7 @@ def trails_page():
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-<link rel="stylesheet" href="site.css?v=5">
+<link rel="stylesheet" href="site.css?v=6">
 <script>try{{var t=localStorage.getItem("gatlinburg-2026-theme");if(t&&t!=="spruce")document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
 </head>
 <body class="locked day-page trails-page" data-page="trails">
@@ -395,8 +395,8 @@ def trails_page():
 </nav>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="site.js?v=5"></script>
-<script src="day.js?v=5"></script>
+<script src="site.js?v=6"></script>
+<script src="day.js?v=6"></script>
 <script src="photos.js?v=1" defer></script>
 </body>
 </html>
@@ -405,3 +405,144 @@ def trails_page():
 if __name__ == '__main__':
     open(os.path.join(ROOT, 'trails.html'), 'w').write(trails_page())
     print('wrote trails.html')
+
+
+# ---------------- Packing page (shared list) ----------------
+def packing_page():
+    P = json.load(open(os.path.join(HERE, 'packing.json')))
+    chips = ''.join('<a class="chip" href="%s">%s</a>' % (days[k]['file'], days[k]['short']) for k in order)
+    cats = []
+    opts = []
+    for c in P['categories']:
+        slug = re.sub(r'[^a-z0-9]+', '-', c['name'].lower()).strip('-')
+        opts.append('<option value="%s">%s</option>' % (slug, c['name']))
+        items = '\n'.join('          <li data-id="%s"><label><input type="checkbox"><span>%s%s%s<small class="by"></small></span></label></li>' % (
+            it['id'], '<span class="star">&#9733;</span> ' if it['star'] else '', it['name'], ('<em>%s</em>' % it['why']) if it['why'] else '') for it in c['items'])
+        cats.append('''      <div class="pack-cat" data-cat="%s">
+        <h3>%s <span class="cat-count"></span></h3>
+        <p class="who">%s</p>
+        <ul>
+%s
+        </ul>
+      </div>''' % (slug, c['name'], c['who'], items))
+    cats.append('''      <div class="pack-cat" data-cat="extra">
+        <h3>Added on the way <span class="cat-count"></span></h3>
+        <p class="who">Things somebody thought of after the list was made</p>
+        <ul></ul>
+      </div>''')
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b1411">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Packing list · Gatlinburg week</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=6">
+<script>try{{var t=localStorage.getItem("gatlinburg-2026-theme");if(t&&t!=="spruce")document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
+</head>
+<body class="locked day-page packing-page" data-page="packing">
+
+<div id="gate">
+  <form class="gate-box" id="gate-form" autocomplete="off">
+    <span class="logo">mike<span>side</span></span>
+    <h1>Gatlinburg week</h1>
+    <p>Family page. Enter the PIN to open it.</p>
+    <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" aria-label="PIN" autofocus>
+    <button type="submit">Open</button>
+    <div class="err" id="gate-err"></div>
+  </form>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="/">mike<span>side</span></a>
+    <nav aria-label="Trip pages">
+      <ul>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="#grid">List</a></li>
+        <li><a href="#add">Add</a></li>
+        <li><a href="trails.html">Trails</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="banner" style="background-image:url('{commons('Little River Road - October 2025 - Sarah Stierch.jpg', 1400)}')">
+  <div class="banner-shade"></div>
+  <div class="container banner-text">
+    <p class="kicker">One list, every phone</p>
+    <h1>Packing list</h1>
+    <p class="banner-date">Tick it on any phone and it's ticked on all of them. Shows who packed what.</p>
+  </div>
+  <span class="credit">{credit('Little River Road - October 2025 - Sarah Stierch.jpg')}</span>
+</div>
+
+<div class="chips container" aria-label="Pages">{chips}<a class="chip" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip on" href="packing.html">Packing</a></div>
+
+<section id="list">
+  <div class="container">
+    <p class="eyebrow">Pack-out</p>
+    <h2>Tick as you load</h2>
+    <p class="intro"><span class="star">&#9733;</span> marks the things that are hard or expensive to replace once you're up there. The list is shared: Allison ticks the baby bag, you tick the car, and both phones show both. Add anything missing at the bottom.</p>
+
+    <div class="pack-bar">
+      <span class="hint">Packed <output id="count">0</output> of <span id="total">0</span> &middot; <span id="sync-status" class="sync">Loading&hellip;</span></span>
+      <button class="ghost" type="button" id="name-btn">Who's packing?</button>
+      <button class="ghost" type="button" id="clear">Untick all</button>
+      <button class="ghost" type="button" id="print">Print</button>
+    </div>
+
+    <div class="pack-grid" id="grid">
+{chr(10).join(cats)}
+    </div>
+  </div>
+</section>
+
+<section id="add">
+  <div class="container">
+    <p class="eyebrow">Forgot something?</p>
+    <h2>Add an item</h2>
+    <form class="add-form" id="add-form">
+      <input id="add-name" type="text" maxlength="80" placeholder="Slavik's rain boots" aria-label="Item" required>
+      <select id="add-cat" aria-label="Category">{''.join(opts)}<option value="extra" selected>Added on the way</option></select>
+      <button type="submit" class="go">Add for everyone</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="pager"><a href="index.html">&larr; Hub</a><span></span><a href="day-0-sun.html">Sunday's drive &rarr;</a></div>
+    <p>Ticks are stored on the trip's own server and shared with everyone who has the PIN. If a phone is offline, its ticks wait and sync when signal returns.</p>
+  </div>
+</footer>
+
+<div class="bear-toast" id="bear-toast" role="status"></div>
+<div class="bear-peek" id="bear-peek" aria-hidden="true"><svg viewBox="0 0 120 100"><g fill="#2b1d14"><ellipse cx="60" cy="78" rx="46" ry="30"/><circle cx="60" cy="44" r="30"/><circle cx="36" cy="22" r="11"/><circle cx="84" cy="22" r="11"/></g><g fill="#6b4a33"><circle cx="36" cy="22" r="5"/><circle cx="84" cy="22" r="5"/><ellipse cx="60" cy="56" rx="14" ry="10"/></g><g fill="#0b1411"><circle cx="48" cy="40" r="3.5"/><circle cx="72" cy="40" r="3.5"/><ellipse cx="60" cy="52" rx="6" ry="4"/></g></svg></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="bear-side" viewBox="0 0 140 90"><g fill="#2b1d14"><ellipse cx="62" cy="50" rx="44" ry="26"/><circle cx="108" cy="36" r="18"/><circle cx="98" cy="22" r="6"/><circle cx="118" cy="22" r="6"/><circle cx="20" cy="50" r="12"/><rect x="30" y="62" width="12" height="26" rx="5"/><rect x="52" y="64" width="12" height="24" rx="5"/><rect x="78" y="64" width="12" height="24" rx="5"/><rect x="96" y="60" width="12" height="28" rx="5"/></g><g fill="#6b4a33"><ellipse cx="122" cy="42" rx="9" ry="6"/></g><circle cx="114" cy="33" r="2.5" fill="#0b1411"/><circle cx="129" cy="41" r="3" fill="#0b1411"/></symbol></svg>
+
+<nav class="tabbar" aria-label="Quick links">
+  <a href="index.html"><span>&#8962;</span>Hub</a>
+  <a href="#grid"><span>&#9745;</span>List</a>
+  <a href="#add"><span>&#43;</span>Add</a>
+  <a href="trails.html"><span>&#9650;</span>Trails</a>
+  <a href="index.html#numbers"><span>&#9742;</span>Numbers</a>
+</nav>
+
+<script src="site.js?v=6"></script>
+<script src="packing.js?v=1"></script>
+</body>
+</html>
+'''
+
+if __name__ == '__main__':
+    open(os.path.join(ROOT, 'packing.html'), 'w').write(packing_page())
+    print('wrote packing.html')
