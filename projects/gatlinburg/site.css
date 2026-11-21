@@ -510,3 +510,14 @@ header{background:var(--header,rgba(11,20,17,.9))}
 .spot-num{display:inline-flex;align-items:center;justify-content:center;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--accent);color:#fff;font:600 .8rem/1 "Inter",sans-serif;margin-right:.5rem;flex:none}
 .trail.flash{outline:2px solid var(--gulf);outline-offset:3px;transition:outline-color .6s}
 .leaflet-popup-content a.popup-jump{font-weight:600}
+
+/* Cabin page: sweep and checkout lists */
+.sweep{list-style:none;margin:1rem 0 0;padding:0;max-width:44rem}
+.sweep li{border-top:1px solid var(--border)}
+.sweep li:first-child{border-top:0}
+.sweep label{display:grid;grid-template-columns:auto 1fr;gap:.7rem;align-items:start;padding:.55rem 0;cursor:pointer;font-size:.95rem}
+.sweep input{margin-top:.3rem;accent-color:var(--gulf);width:17px;height:17px;cursor:pointer}
+.sweep label span em{display:block;font-style:normal;color:var(--muted);font-size:.8rem;line-height:1.45;margin-top:.1rem}
+.sweep input:checked + span{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--border)}
+.sweep input:checked + span em{text-decoration:none}
+.sweep-done{color:var(--gulf);font-size:.85rem;font-weight:600;margin:.6rem 0 0;min-height:1.2em}
