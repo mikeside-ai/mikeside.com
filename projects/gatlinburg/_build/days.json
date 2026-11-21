@@ -437,7 +437,7 @@
     35.7116,
     -83.516
    ],
-   "Snow tubing: Cash plus one adult": [
+   "Snow tubing: Cash, Slavik and one adult": [
     35.7096,
     -83.5177
    ]
@@ -450,7 +450,7 @@
     {
      "t": "9:45a",
      "what": "Ober Mountain tram from downtown",
-     "why": "Same morning as Plan A: bears, tubing for Cash and one adult, skating if there's time.",
+     "why": "Same morning as Plan A: bears, tubing for the boys with one adult, skating if there's time.",
      "dest": "Ober Mountain Tramway, 1001 Parkway, Gatlinburg, TN 37738"
     },
     {
@@ -493,8 +493,8 @@
    "dest": "Cracker Barrel, 2285 Parkway, Pigeon Forge, TN 37863"
   },
   "kids": [
-   "Cash: tubing is his big one this week. Rides alone at seven, must be 42 inches, unlimited runs 11 to 5. Secured shoes, waterproof gloves, a dry change in the car. Skating after only if he wants it.",
-   "Slavik: no tubing until he's three, and that's December. Bears, the rink from the rail, hot chocolate in the lodge. That's a full morning for him.",
+   "Cash: tubing is his big one this week. Rides alone at seven, must be 42 inches, unlimited runs 11 to 5. Secured shoes, waterproof gloves, a dry change in the car.",
+   "Slavik: tubes on an adult's lap, one person steers, he holds on. Little-kid ticket, about $3. Hot chocolate in the lodge after. If he's done after three runs, he's done.",
    "Snejana: the tram and the bears. Carrier on the SkyLift tonight if you go; she's a heartbeat, so two chairs."
   ]
  },
