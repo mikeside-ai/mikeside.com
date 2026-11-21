@@ -1,157 +1,765 @@
 {
  "2026-11-22": {
-  "file": "day-0-sun.html", "short": "Sun 22", "name": "Sunday",
-  "kicker": "Day 0 · The drive",
+  "file": "day-0-sun.html",
+  "short": "Sun 22",
+  "name": "Sunday",
+  "kicker": "Day 0 \u00b7 The drive",
   "banner": "Little River Road - October 2025 - Sarah Stierch.jpg",
-  "strip": ["Little-river-townsend-y.jpg", "I75S TN 2.jpg", "Sugarlands Visitor Center--Warren Bielenberg (28323974619).jpg"],
+  "strip": [
+   "Little-river-townsend-y.jpg",
+   "I75S TN 2.jpg",
+   "Sugarlands Visitor Center--Warren Bielenberg (28323974619).jpg",
+   "Sugarlands Visitor Center, May 2018--Andrea Walton (29111144268).jpg",
+   "Heavy snowfall in Gatlinburg, TN.jpg"
+  ],
   "lede": "Five and a quarter hours of driving, an hour lost to the clock, three stops, and a park road at the end instead of the Parkway. Leave at seven and you are in the cabin with groceries by four.",
-  "coords": {"Pull out": [33.5207, -86.8025], "Fort Payne, first stretch": [34.4335, -85.7399], "Chattanooga, onto I-75 north": [35.0043, -85.1585], "Athens or Sweetwater, real stop": [35.4682, -84.6501], "Exit 81, Lenoir City. US-321 east": [35.7845, -84.2615], "Into the park at the Townsend Wye": [35.6596, -83.7078], "Food City, 1219 East Parkway": [35.7216, -83.4872], "Kill time until check-in": [35.7016, -83.5149]},
-  "route": ["Pull out", "Fort Payne, first stretch", "Chattanooga, onto I-75 north", "Athens or Sweetwater, real stop", "Exit 81, Lenoir City. US-321 east", "Into the park at the Townsend Wye", "Food City, 1219 East Parkway"],
+  "coords": {
+   "Pull out": [
+    33.5207,
+    -86.8025
+   ],
+   "Fort Payne, first stretch": [
+    34.4335,
+    -85.7399
+   ],
+   "Chattanooga, onto I-75 north": [
+    35.0043,
+    -85.1585
+   ],
+   "Athens or Sweetwater, real stop": [
+    35.4682,
+    -84.6501
+   ],
+   "Exit 81, Lenoir City. US-321 east": [
+    35.7845,
+    -84.2615
+   ],
+   "Into the park at the Townsend Wye": [
+    35.6596,
+    -83.7078
+   ],
+   "Food City, 1219 East Parkway": [
+    35.7216,
+    -83.4872
+   ],
+   "Kill time until check-in": [
+    35.7016,
+    -83.5149
+   ]
+  },
+  "route": [
+   "Pull out",
+   "Fort Payne, first stretch",
+   "Chattanooga, onto I-75 north",
+   "Athens or Sweetwater, real stop",
+   "Exit 81, Lenoir City. US-321 east",
+   "Into the park at the Townsend Wye",
+   "Food City, 1219 East Parkway"
+  ],
   "planB": {
    "title": "Plan B: Wears Valley instead of the park road",
    "when": "Anyone carsick, Little River Road closed, or you are running late and want four lanes as long as possible.",
    "slots": [
-    {"t": "12:15p ET", "what": "Exit 81, Lenoir City. US-321 east", "why": "Same as Plan A through Maryville to Townsend.", "dest": "35.7845,-84.2615"},
-    {"t": "1:20p ET", "what": "Townsend, stay on US-321", "why": "Do not turn into the park. US-321 becomes Wears Valley Road and climbs over the ridge. Gentler curves, four miles shorter, and cell signal the whole way.", "dest": "35.6760,-83.7520"},
-    {"t": "1:50p ET", "what": "Kroger, 220 Wears Valley Rd", "why": "Right where Wears Valley Road meets Pigeon Forge. Do the full stock-up here instead of Food City.", "dest": "Kroger, 220 Wears Valley Rd, Pigeon Forge, TN 37863"},
-    {"t": "2:45p ET", "what": "Parkway south to the Spur", "why": "Traffic light #3 in Pigeon Forge. On a holiday Sunday budget 45 minutes for the next 12 miles. Take the Gatlinburg Bypass off the Spur to skip downtown entirely.", "dest": "35.7420,-83.5210"},
-    {"t": "3:30p ET", "what": "Mynatt Park until check-in", "why": "Same stall as Plan A. Playground, creek, bathrooms.", "dest": "35.7016,-83.5149"}
+    {
+     "t": "12:15p ET",
+     "what": "Exit 81, Lenoir City. US-321 east",
+     "why": "Same as Plan A through Maryville to Townsend.",
+     "dest": "35.7845,-84.2615"
+    },
+    {
+     "t": "1:20p ET",
+     "what": "Townsend, stay on US-321",
+     "why": "Do not turn into the park. US-321 becomes Wears Valley Road and climbs over the ridge. Gentler curves, four miles shorter, and cell signal the whole way.",
+     "dest": "35.6760,-83.7520"
+    },
+    {
+     "t": "1:50p ET",
+     "what": "Kroger, 220 Wears Valley Rd",
+     "why": "Right where Wears Valley Road meets Pigeon Forge. Do the full stock-up here instead of Food City.",
+     "dest": "Kroger, 220 Wears Valley Rd, Pigeon Forge, TN 37863"
+    },
+    {
+     "t": "2:45p ET",
+     "what": "Parkway south to the Spur",
+     "why": "Traffic light #3 in Pigeon Forge. On a holiday Sunday budget 45 minutes for the next 12 miles. Take the Gatlinburg Bypass off the Spur to skip downtown entirely.",
+     "dest": "35.7420,-83.5210"
+    },
+    {
+     "t": "3:30p ET",
+     "what": "Mynatt Park until check-in",
+     "why": "Same stall as Plan A. Playground, creek, bathrooms.",
+     "dest": "35.7016,-83.5149"
+    }
    ],
-   "routeB": [[35.7845, -84.2615], [35.6760, -83.7520], [35.7827, -83.5760], [35.7420, -83.5210], [35.7016, -83.5149]]
+   "routeB": [
+    [
+     35.7845,
+     -84.2615
+    ],
+    [
+     35.676,
+     -83.752
+    ],
+    [
+     35.7827,
+     -83.576
+    ],
+    [
+     35.742,
+     -83.521
+    ],
+    [
+     35.7016,
+     -83.5149
+    ]
+   ]
   },
-  "bail": {"name": "Pilot Travel Center, exit 81", "why": "If the car or a kid falls apart between Chattanooga and Townsend, this is the big clean stop with a real restroom block and hot food. Everything after it is two-lane.", "dest": "Pilot Travel Center, Lenoir City, TN"},
-  "kids": ["Cash gets the window and the job of calling out the state line and the time change.", "Slavik rides in pajamas until Fort Payne. Potty in the car, not at the stop.", "Snejana sleeps the first leg. The Athens stop is her real feed; do not rush it."]
+  "bail": {
+   "name": "Pilot Travel Center, exit 81",
+   "why": "If the car or a kid falls apart between Chattanooga and Townsend, this is the big clean stop with a real restroom block and hot food. Everything after it is two-lane.",
+   "dest": "Pilot Travel Center, Lenoir City, TN"
+  },
+  "kids": [
+   "Cash gets the window and the job of calling out the state line and the time change.",
+   "Slavik rides in pajamas until Fort Payne. Potty in the car, not at the stop.",
+   "Snejana sleeps the first leg. The Athens stop is her real feed; do not rush it."
+  ]
  },
  "2026-11-23": {
-  "file": "day-1-mon.html", "short": "Mon 23", "name": "Monday",
-  "kicker": "Day 1 · Dollywood",
-  "banner": "Dollywood from the Dollywood Express - 8.jpg",
-  "strip": ["Dollywood Express No. 70 aka \"Cinderella\" - June 2023.jpg", "Dollywood sign - October 2023 - Sarah Stierch.jpg", "Thunderhead (Dollywood) 02.JPG"],
-  "lede": "The one big-ticket day, placed on the lightest day of the week on purpose. Wildwood Grove first, the train before lunch, Cash's coasters by wristband, lights on the way out.",
-  "coords": {"Park, tram to the gate, measure Cash": [35.7887, -83.5300]},
-  "route": [],
-  "planB": {
-   "title": "Plan B: rain all day",
-   "when": "Steady rain in the forecast strip for Monday. Dollywood in a cold rain with a one-year-old is a bad trade for $300. Swap Dollywood to Tuesday or Wednesday on the hub and do this instead.",
-   "slots": [
-    {"t": "9:00a", "what": "Ripley's Aquarium of the Smokies", "why": "88 River Rd. Be there at opening. Penguins, the shark tunnel, touch tank for Cash. Two hours, all indoors, stroller fine. Garage next door.", "dest": "Ripley's Aquarium of the Smokies, 88 River Rd, Gatlinburg, TN 37738"},
-    {"t": "11:30a", "what": "Home, lunch, naps", "why": "", "dest": ""},
-    {"t": "3:30p", "what": "Sugarlands Visitor Center museum", "why": "Free, warm, the stuffed bears, a ranger for Cash. Buy the weekly parking tag while you're there.", "dest": "35.6857204,-83.5367666"},
-    {"t": "5:30p", "what": "Winterfest lights from the car", "why": "Pigeon Forge Parkway, five miles of lights, pajamas and hot chocolate. Costs nothing and nobody gets wet.", "dest": "35.7880,-83.5540"}
+  "file": "day-1-mon.html",
+  "short": "Mon 23",
+  "name": "Monday",
+  "kicker": "Day 1 \u00b7 Old Mill and The Island",
+  "banner": "Pigeon Forge Mill - October 2023 - Sarah Stierch 03.jpg",
+  "strip": [
+   "MJK49036 Pigeon Forge Mill.jpg",
+   "Old Mill Dam. (2021).jpg",
+   "Margaritaville Island Hotel - April 2026 - Sarah Stierch 02.jpg",
+   "Pigeon Forge - October 2023 - Sarah Stierch.jpg"
+  ],
+  "lede": "Hammers in the morning, a wheel at dusk. Vlad and Cash each forge a knife at Iron Mountain while the little two walk the Old Mill square, then naps, then The Island for the carousel, the big wheel and the fountain show. Pigeon Forge at kid height, no gate fee anywhere.",
+  "coords": {
+   "Iron Mountain Metal Craft": [
+    35.7887,
+    -83.5531
    ],
-   "routeB": []
+   "Allison, Slavik and Snejana: the Old Mill square": [
+    35.7885,
+    -83.554
+   ],
+   "Patriot Park, next door": [
+    35.7878,
+    -83.5516
+   ],
+   "Lunch: Pottery House Caf\u00e9": [
+    35.7892,
+    -83.5538
+   ],
+   "The Island in Pigeon Forge": [
+    35.803,
+    -83.5704
+   ]
   },
-  "bail": {"name": "Dollywood's Parent Swap and the train", "why": "If a kid melts down mid-park, the Dollywood Express is a twenty-minute sit-down that resets everybody. If it's the weather, the covered shows in the Village run all afternoon.", "dest": "Dollywood, 2700 Dollywood Parks Blvd, Pigeon Forge, TN 37863"},
-  "kids": ["Cash: measured, wristbanded, and paired with one adult for the 42-inch rides. Blazing Fury is his big one.", "Slavik: Wildwood Grove is his park. Great Tree Swing at 36 inches if he clears it, Frogs and Fireflies with an adult.", "Snejana: the train, the carousel, the stroller nap loop through Craftsman's Valley. Out by 6:45 whatever is happening."]
+  "route": [
+   "Iron Mountain Metal Craft",
+   "Patriot Park, next door",
+   "The Island in Pigeon Forge"
+  ],
+  "planB": {
+   "title": "Plan B: cold rain, keep everything indoors",
+   "when": "The forge is indoors and still happens. Swap the outdoor half for Pigeon Forge Snow, where Cash tubes and the little two watch from the warm side, and skip The Island until it clears.",
+   "slots": [
+    {
+     "t": "9:00a",
+     "what": "Iron Mountain Metal Craft",
+     "why": "Same as Plan A. The forge doesn't care about rain.",
+     "dest": "Iron Mountain Metal Craft, 172 Old Mill Ave, Pigeon Forge, TN 37863"
+    },
+    {
+     "t": "10:45a",
+     "what": "Pigeon Forge Snow",
+     "why": "2533 Teaster Ln, five minutes. Indoor tubing, $29.99 an hour, 38 inches and 3 years to ride, so Cash only. Reviewers say the separate 'snow play' room is a slab of ice, so skip that for Slavik; he watches the tubes from the lounge with hot chocolate.",
+     "dest": "Pigeon Forge Snow, 2533 Teaster Ln, Pigeon Forge, TN 37863"
+    },
+    {
+     "t": "12:15p",
+     "what": "Lunch at the Old Mill, then naps",
+     "why": "Pottery House if the wait is short, Old Mill Restaurant if it isn't. Home by 1:15.",
+     "dest": "The Old Mill Pottery House Caf\u00e9, 3341 Old Mill St, Pigeon Forge, TN 37863"
+    },
+    {
+     "t": "4:00p",
+     "what": "WonderWorks Toddler Town, or the aquarium",
+     "why": "WonderWorks (100 Music Rd) has a soft-play toddler zone and the science floor for Cash; loud and busy, go knowing that. Ripley's Aquarium is the calmer indoor option if you haven't used it.",
+     "dest": "WonderWorks Pigeon Forge, 100 Music Rd, Pigeon Forge, TN 37863"
+    },
+    {
+     "t": "6:00p",
+     "what": "Winterfest lights from the car on the way home",
+     "why": "The Parkway, slow, in pajamas.",
+     "dest": "35.7880,-83.5540"
+    }
+   ],
+   "routeB": [
+    [
+     35.7887,
+     -83.5531
+    ],
+    [
+     35.808,
+     -83.5729
+    ],
+    [
+     35.7892,
+     -83.5538
+    ],
+    [
+     35.8233,
+     -83.5787
+    ]
+   ]
+  },
+  "bail": {
+   "name": "The Old Mill General Store",
+   "why": "Right on the square, warm, candy counter, the water wheel outside the window. If the forge runs long or a kid is done, this is where the other adult waits with the little two.",
+   "dest": "The Old Mill & General Store, 175 Old Mill Ave, Pigeon Forge, TN 37863"
+  },
+  "kids": [
+   "Cash forges a real knife today. It is the trip for him. Closed-toe shoes, sleeves, and he listens to the smith, not to you.",
+   "Slavik gets ducks, a water wheel, a carousel and a fountain that dances. That is a complete day for a two-year-old; he does not need the wheel.",
+   "Snejana rides the carousel on a lap and the big wheel if they allow infants (ask). Carrier for the square, stroller for The Island."
+  ]
  },
  "2026-11-24": {
-  "file": "day-2-tue.html", "short": "Tue 24", "name": "Tuesday",
-  "kicker": "Day 2 · Easy morning, Anakeesta at dusk",
+  "file": "day-2-tue.html",
+  "short": "Tue 24",
+  "name": "Tuesday",
+  "kicker": "Day 2 \u00b7 Easy morning, Anakeesta at dusk",
   "banner": "Anakeesta - October 2023 - Sarah Stierch.jpg",
-  "strip": ["Cataract-falls-gsmnp1.jpg", "Sugarlands Visitor Center, March 2018--Andrea Walton (40383946274).jpg", "GSM Parkway US 441 Gatlinburg at night.jpg"],
+  "strip": [
+   "Cataract-falls-gsmnp1.jpg",
+   "Sugarlands Visitor Center, March 2018--Andrea Walton (40383946274).jpg",
+   "GSM Parkway US 441 Gatlinburg at night.jpg",
+   "SkyBridge at Gatlingburg SkyPark - 3.jpg",
+   "Snow on the trail to Cataract Falls, January 2018--Andrea Walton (40083637642).jpg",
+   "Downtown Gatlinburg, Tennessee.JPG"
+  ],
   "lede": "Recovery day. Two short flat walks in the park before eleven, the long nap, then the gondola up to the lights with the stroller in the cabin.",
-  "coords": {"Sugarlands Visitor Center": [35.6857, -83.5368], "Cataract Falls": [35.6857, -83.5368], "Sugarlands Valley Nature Trail": [35.6796, -83.5313], "Park downtown, Chondola to Anakeesta": [35.7142, -83.5104]},
-  "route": ["Sugarlands Visitor Center", "Sugarlands Valley Nature Trail", "Park downtown, Chondola to Anakeesta"],
+  "coords": {
+   "Sugarlands Visitor Center": [
+    35.6857,
+    -83.5368
+   ],
+   "Cataract Falls": [
+    35.6857,
+    -83.5368
+   ],
+   "Sugarlands Valley Nature Trail": [
+    35.6796,
+    -83.5313
+   ],
+   "Park downtown, Chondola to Anakeesta": [
+    35.7142,
+    -83.5104
+   ]
+  },
+  "route": [
+   "Sugarlands Visitor Center",
+   "Sugarlands Valley Nature Trail",
+   "Park downtown, Chondola to Anakeesta"
+  ],
   "planB": {
    "title": "Plan B: cold soaking rain",
    "when": "Anakeesta runs in rain but the whole mountaintop is outdoors and the Skywalk closes in wind. Below 45 and wet, do this.",
    "slots": [
-    {"t": "9:30a", "what": "Ripley's Aquarium of the Smokies", "why": "If you did not use it Monday. Otherwise the Arts and Crafts show at the convention center opens today.", "dest": "Ripley's Aquarium of the Smokies, 88 River Rd, Gatlinburg, TN 37738"},
-    {"t": "12:00p", "what": "Home, lunch, naps", "why": "", "dest": ""},
-    {"t": "3:30p", "what": "Great Smoky Thanksgiving Arts &amp; Crafts Show", "why": "Convention center, 234 Historic Nature Trail. Free, indoor, wide aisles. An easy hour.", "dest": "Gatlinburg Convention Center, 234 Historic Nature Trail, Gatlinburg, TN 37738"},
-    {"t": "5:30p", "what": "SkyPark lights if it clears, cabin movie if not", "why": "The chairlift runs in light rain. Carrier for Snejana, two chairs. Otherwise popcorn and bed.", "dest": "Gatlinburg SkyPark, 765 Parkway, Gatlinburg, TN 37738"}
+    {
+     "t": "9:30a",
+     "what": "Ripley's Aquarium of the Smokies",
+     "why": "If you did not use it Monday. Otherwise the Arts and Crafts show at the convention center opens today.",
+     "dest": "Ripley's Aquarium of the Smokies, 88 River Rd, Gatlinburg, TN 37738"
+    },
+    {
+     "t": "12:00p",
+     "what": "Home, lunch, naps",
+     "why": "",
+     "dest": ""
+    },
+    {
+     "t": "3:30p",
+     "what": "Great Smoky Thanksgiving Arts &amp; Crafts Show",
+     "why": "Convention center, 234 Historic Nature Trail. Free, indoor, wide aisles. An easy hour.",
+     "dest": "Gatlinburg Convention Center, 234 Historic Nature Trail, Gatlinburg, TN 37738"
+    },
+    {
+     "t": "5:30p",
+     "what": "SkyPark lights if it clears, cabin movie if not",
+     "why": "The chairlift runs in light rain. Carrier for Snejana, two chairs. Otherwise popcorn and bed.",
+     "dest": "Gatlinburg SkyPark, 765 Parkway, Gatlinburg, TN 37738"
+    }
    ],
    "routeB": []
   },
-  "bail": {"name": "The Chondola down", "why": "Anakeesta's gondola runs continuously. If someone is done, one adult rides down with them and the other stays with the rest. The lodge at the base has restrooms and a coffee counter.", "dest": "Anakeesta, 576 Parkway, Gatlinburg, TN 37738"},
-  "kids": ["Cash does the Treetop Skywalk with one adult. No carrying, so it's him and a grown-up only.", "Slavik owns the Treehouse play structure. Harness on near the Chondola platform.", "Snejana rides the gondola in the stroller, then the carrier. Mittens. Hands checked every half hour up there."]
+  "bail": {
+   "name": "The Chondola down",
+   "why": "Anakeesta's gondola runs continuously. If someone is done, one adult rides down with them and the other stays with the rest. The lodge at the base has restrooms and a coffee counter.",
+   "dest": "Anakeesta, 576 Parkway, Gatlinburg, TN 37738"
+  },
+  "kids": [
+   "Cash does the Treetop Skywalk with one adult. No carrying, so it's him and a grown-up only.",
+   "Slavik owns the Treehouse play structure. Harness on near the Chondola platform.",
+   "Snejana rides the gondola in the stroller, then the carrier. Mittens. Hands checked every half hour up there."
+  ]
  },
  "2026-11-25": {
-  "file": "day-3-wed.html", "short": "Wed 25", "name": "Wednesday",
-  "kicker": "Day 3 · Cades Cove",
+  "file": "day-3-wed.html",
+  "short": "Wed 25",
+  "name": "Wednesday",
+  "kicker": "Day 3 \u00b7 Cades Cove",
   "banner": "Cades Cove - October 2023 - Sarah Stierch 01.jpg",
-  "strip": ["John Oliver Cabin P9070481.jpg", "White-Tailed Deer Grazing At Cades Cove.jpg", "Cades-cove-turkeys-tn1.jpg", "Black bears in Great Smoky Mountains National Park (2653304831).jpg"],
+  "strip": [
+   "John Oliver Cabin P9070481.jpg",
+   "White-Tailed Deer Grazing At Cades Cove.jpg",
+   "Cades-cove-turkeys-tn1.jpg",
+   "Black bears in Great Smoky Mountains National Park (2653304831).jpg",
+   "Female Black Bear in Cades Cove.jpg",
+   "Cades Cove - Methodist Church.jpg",
+   "Cades Cove - October 2023 - Sarah Stierch 03.jpg"
+  ],
   "lede": "The valley with the deer, the turkeys, the old cabins and, in November, the bears fattening up before they den. Early or not at all: leave at 7:15 and the loop is yours, leave at nine and you crawl.",
-  "coords": {"Roll out, breakfast in the car": [35.6034, -83.7759], "Start the loop": [35.6098, -83.7952], "Cable Mill area, halfway round": [35.5850, -83.8431], "Finish the loop, head home": [35.6799, -83.6489], "Thanksgiving grocery run": [35.7216, -83.4872], "Optional: the Arts &amp; Crafts show": [35.7120, -83.5064]},
-  "route": ["Roll out, breakfast in the car", "Start the loop", "Cable Mill area, halfway round", "Finish the loop, head home"],
+  "coords": {
+   "Roll out, breakfast in the car": [
+    35.6034,
+    -83.7759
+   ],
+   "Start the loop": [
+    35.6098,
+    -83.7952
+   ],
+   "Cable Mill area, halfway round": [
+    35.585,
+    -83.8431
+   ],
+   "Finish the loop, head home": [
+    35.6799,
+    -83.6489
+   ],
+   "Thanksgiving grocery run": [
+    35.7216,
+    -83.4872
+   ],
+   "Optional: the Arts &amp; Crafts show": [
+    35.712,
+    -83.5064
+   ]
+  },
+  "route": [
+   "Roll out, breakfast in the car",
+   "Start the loop",
+   "Cable Mill area, halfway round",
+   "Finish the loop, head home"
+  ],
   "planB": {
    "title": "Plan B: Little River Road closed, or sleet",
    "when": "Check the park road status link on the hub before you leave. Ice closes Little River Road and the Cove loop with no notice. If it's shut, stay on the Gatlinburg side.",
    "slots": [
-    {"t": "8:30a", "what": "Roaring Fork Motor Nature Trail", "why": "Turn at traffic light #8 onto Historic Nature Trail. Five and a half one-way miles, old cabins, the Noah Ogle place a hundred yards from the road. Closes for winter Monday, so this is its last week too.", "dest": "35.7055,-83.4930"},
-    {"t": "10:30a", "what": "Gatlinburg Trail from Sugarlands", "why": "Two miles each way on gravel along the river, flat, stroller fine. Turn around whenever.", "dest": "35.6857204,-83.5367666"},
-    {"t": "12:30p", "what": "Home, lunch, naps", "why": "", "dest": ""},
-    {"t": "3:30p", "what": "Thanksgiving grocery run", "why": "Food City, same as Plan A. This does not move.", "dest": "Food City, 1219 East Parkway, Gatlinburg, TN 37738"}
+    {
+     "t": "8:30a",
+     "what": "Roaring Fork Motor Nature Trail",
+     "why": "Turn at traffic light #8 onto Historic Nature Trail. Five and a half one-way miles, old cabins, the Noah Ogle place a hundred yards from the road. Closes for winter Monday, so this is its last week too.",
+     "dest": "35.7055,-83.4930"
+    },
+    {
+     "t": "10:30a",
+     "what": "Gatlinburg Trail from Sugarlands",
+     "why": "Two miles each way on gravel along the river, flat, stroller fine. Turn around whenever.",
+     "dest": "35.6857204,-83.5367666"
+    },
+    {
+     "t": "12:30p",
+     "what": "Home, lunch, naps",
+     "why": "",
+     "dest": ""
+    },
+    {
+     "t": "3:30p",
+     "what": "Thanksgiving grocery run",
+     "why": "Food City, same as Plan A. This does not move.",
+     "dest": "Food City, 1219 East Parkway, Gatlinburg, TN 37738"
+    }
    ],
-   "routeB": [[35.7116, -83.5160], [35.7055, -83.4930], [35.6857, -83.5368]]
+   "routeB": [
+    [
+     35.7116,
+     -83.516
+    ],
+    [
+     35.7055,
+     -83.493
+    ],
+    [
+     35.6857,
+     -83.5368
+    ]
+   ]
   },
-  "bail": {"name": "Cades Cove Visitor Center at Cable Mill", "why": "Halfway round the loop. Real restrooms, a ranger, a covered porch. If the loop is jammed or a kid is done, this is where you regroup, and the back half of the loop is faster than the front.", "dest": "35.5849718,-83.8431004"},
-  "kids": ["Cash has the binoculars and the deer count. First bear spotted is his to call.", "Slavik gets out at John Oliver and Cable Mill only. Everywhere else he stays buckled; the loop has no shoulders.", "Snejana sleeps the drive out. The Cable Mill stop is her change-and-feed."]
+  "bail": {
+   "name": "Cades Cove Visitor Center at Cable Mill",
+   "why": "Halfway round the loop. Real restrooms, a ranger, a covered porch. If the loop is jammed or a kid is done, this is where you regroup, and the back half of the loop is faster than the front.",
+   "dest": "35.5849718,-83.8431004"
+  },
+  "kids": [
+   "Cash has the binoculars and the deer count. First bear spotted is his to call.",
+   "Slavik gets out at John Oliver and Cable Mill only. Everywhere else he stays buckled; the loop has no shoulders.",
+   "Snejana sleeps the drive out. The Cable Mill stop is her change-and-feed."
+  ]
  },
  "2026-11-26": {
-  "file": "day-4-thu.html", "short": "Thu 26", "name": "Thanksgiving",
-  "kicker": "Day 4 · Thanksgiving",
+  "file": "day-4-thu.html",
+  "short": "Thu 26",
+  "name": "Thanksgiving",
+  "kicker": "Day 4 \u00b7 Thanksgiving",
   "banner": "Ober Gatlinburg.jpg",
-  "strip": ["Black bear sitting upright at Great Smoky Mountains National Park, Tennessee and North Carolina (d846aeb0-01e0-4bb5-801c-d6bb26d13f85).jpg", "SkyBridge at Gatlingburg SkyPark - 2.jpg", "Gatlinburg Space Needle and moon - October 2023 - Sarah Stierch.jpg"],
+  "strip": [
+   "Black bear sitting upright at Great Smoky Mountains National Park, Tennessee and North Carolina (d846aeb0-01e0-4bb5-801c-d6bb26d13f85).jpg",
+   "SkyBridge at Gatlingburg SkyPark - 2.jpg",
+   "Gatlinburg Space Needle and moon - October 2023 - Sarah Stierch.jpg",
+   "Black Bear Cubs Frolicking In The Tall Grass.jpg",
+   "Aquarium of the Smokies 2006.jpg",
+   "Elk in Meadow, Cataloochee, NC (31780399217).jpg"
+  ],
   "lede": "Dollywood is closed and half the town is at a buffet. Up the tram in the morning for the bears and the ice, the big meal at the cabin at four, and the chairlift lights only if everyone is still standing.",
-  "coords": {"Ober Mountain tram from downtown": [35.7096, -83.5177], "Lights Over Gatlinburg from the SkyLift": [35.7116, -83.5160]},
+  "coords": {
+   "Ober Mountain tram from downtown": [
+    35.7096,
+    -83.5177
+   ],
+   "Lights Over Gatlinburg from the SkyLift": [
+    35.7116,
+    -83.516
+   ]
+  },
   "route": [],
   "planB": {
    "title": "Plan B: nobody cooks",
    "when": "The cabin oven is a toy, or the morning ran long, or you'd just rather not. The reservation at Mama's Farmhouse is the backup; book it before you leave Birmingham.",
    "slots": [
-    {"t": "9:45a", "what": "Ober Mountain tram from downtown", "why": "Same morning as Plan A: bears, otters, skating for Cash.", "dest": "Ober Mountain Tramway, 1001 Parkway, Gatlinburg, TN 37738"},
-    {"t": "12:30p", "what": "Home, naps", "why": "Short ones. Everyone up by 2:15.", "dest": ""},
-    {"t": "3:00p", "what": "Mama's Farmhouse, Pigeon Forge", "why": "208 Pickel St. Family style, all you can eat, turkey and the fixings arrive in bowls before anyone can complain. Open 11 to 9. Reservations encouraged, so this slot assumes you booked.", "dest": "Mama's Farmhouse, 208 Pickel St, Pigeon Forge, TN 37863"},
-    {"t": "5:00p", "what": "Winterfest lights on the way home", "why": "You're already on the Pigeon Forge Parkway. Drive it slow in the dark, then the Spur home. Nobody needs to get out of the car.", "dest": "35.7880,-83.5540"}
+    {
+     "t": "9:45a",
+     "what": "Ober Mountain tram from downtown",
+     "why": "Same morning as Plan A: bears, otters, skating for Cash.",
+     "dest": "Ober Mountain Tramway, 1001 Parkway, Gatlinburg, TN 37738"
+    },
+    {
+     "t": "12:30p",
+     "what": "Home, naps",
+     "why": "Short ones. Everyone up by 2:15.",
+     "dest": ""
+    },
+    {
+     "t": "3:00p",
+     "what": "Mama's Farmhouse, Pigeon Forge",
+     "why": "208 Pickel St. Family style, all you can eat, turkey and the fixings arrive in bowls before anyone can complain. Open 11 to 9. Reservations encouraged, so this slot assumes you booked.",
+     "dest": "Mama's Farmhouse, 208 Pickel St, Pigeon Forge, TN 37863"
+    },
+    {
+     "t": "5:00p",
+     "what": "Winterfest lights on the way home",
+     "why": "You're already on the Pigeon Forge Parkway. Drive it slow in the dark, then the Spur home. Nobody needs to get out of the car.",
+     "dest": "35.7880,-83.5540"
+    }
    ],
-   "routeB": [[35.7096, -83.5177], [35.7827, -83.5560], [35.7880, -83.5540]]
+   "routeB": [
+    [
+     35.7096,
+     -83.5177
+    ],
+    [
+     35.7827,
+     -83.556
+    ],
+    [
+     35.788,
+     -83.554
+    ]
+   ]
   },
-  "bail": {"name": "Cracker Barrel, Pigeon Forge", "why": "If the reservation falls through or you decide at two o'clock that you want someone else to cook, Cracker Barrel on the Parkway serves the Thanksgiving plate from 11 with no reservation. It will have a wait. It will also have a kids' menu and a fire.", "dest": "Cracker Barrel, 2285 Parkway, Pigeon Forge, TN 37863"},
-  "kids": ["Cash: skating with an adult, tubing alone only if he's 42 inches. Secured shoes, waterproof gloves.", "Slavik: no tubing until he's three. Bears, the rink from the rail, hot chocolate in the lodge. That's a full morning for him.", "Snejana: the tram and the bears. Carrier on the SkyLift tonight if you go; she's a heartbeat, so two chairs."]
+  "bail": {
+   "name": "Cracker Barrel, Pigeon Forge",
+   "why": "If the reservation falls through or you decide at two o'clock that you want someone else to cook, Cracker Barrel on the Parkway serves the Thanksgiving plate from 11 with no reservation. It will have a wait. It will also have a kids' menu and a fire.",
+   "dest": "Cracker Barrel, 2285 Parkway, Pigeon Forge, TN 37863"
+  },
+  "kids": [
+   "Cash: skating with an adult, tubing alone only if he's 42 inches. Secured shoes, waterproof gloves.",
+   "Slavik: no tubing until he's three. Bears, the rink from the rail, hot chocolate in the lodge. That's a full morning for him.",
+   "Snejana: the tram and the bears. Carrier on the SkyLift tonight if you go; she's a heartbeat, so two chairs."
+  ]
  },
  "2026-11-27": {
-  "file": "day-5-fri.html", "short": "Fri 27", "name": "Friday",
-  "kicker": "Day 5 · Up the mountain",
+  "file": "day-5-fri.html",
+  "short": "Fri 27",
+  "name": "Friday",
+  "kicker": "Day 5 \u00b7 Up the mountain",
   "banner": "Newfound Gap Road - Great Smoky Mountains National Park, TN.jpg",
-  "strip": ["Observation Tower in Fog, Clingmans Dome (Kuwahi), Great Smoky Mountains National Park, Swain County, NC.jpg", "Newfound Gap - October 2023 - Sarah Stierch 02.jpg", "Roaring Fork Motor Nature Trail - March 2024 - Sarah Stierch 03.jpg", "Great Smoky Mountains National Park - Clingmans Dome Road - Fog (10172652945).jpg"],
+  "strip": [
+   "Observation Tower in Fog, Clingmans Dome (Kuwahi), Great Smoky Mountains National Park, Swain County, NC.jpg",
+   "Newfound Gap - October 2023 - Sarah Stierch 02.jpg",
+   "Roaring Fork Motor Nature Trail - March 2024 - Sarah Stierch 03.jpg",
+   "Great Smoky Mountains National Park - Clingmans Dome Road - Fog (10172652945).jpg",
+   "Newfound Gap - October 2023 - Sarah Stierch 05.jpg",
+   "Chimney Tops viewed from Chimney Tops overlook, May 2017.jpg",
+   "Alum Cave Trail 1.jpg"
+  ],
   "lede": "Black Friday. Every parking lot on the Parkway is full by ten. You go the other direction: 13 miles up Newfound Gap Road, 7 more to Kuwohi on its last weekend open, and back down for naps while the town fights over outlet parking.",
-  "coords": {"Newfound Gap Road south from Sugarlands": [35.6080, -83.4359], "Kuwohi (Clingmans Dome)": [35.5563, -83.4952], "Newfound Gap on the way down": [35.6080, -83.4359], "Shadrack's drive-through lights, Sevierville": [35.8912, -83.5883]},
-  "route": ["Newfound Gap Road south from Sugarlands", "Kuwohi (Clingmans Dome)", "Newfound Gap on the way down"],
+  "coords": {
+   "Newfound Gap Road south from Sugarlands": [
+    35.608,
+    -83.4359
+   ],
+   "Kuwohi (Clingmans Dome)": [
+    35.5563,
+    -83.4952
+   ],
+   "Newfound Gap on the way down": [
+    35.608,
+    -83.4359
+   ],
+   "Shadrack's drive-through lights, Sevierville": [
+    35.8912,
+    -83.5883
+   ]
+  },
+  "route": [
+   "Newfound Gap Road south from Sugarlands",
+   "Kuwohi (Clingmans Dome)",
+   "Newfound Gap on the way down"
+  ],
   "planB": {
    "title": "Plan B: the high road is gated",
    "when": "Newfound Gap Road closes for ice with no warning, and Kuwohi Road closes with it. The sign is at Sugarlands. If it's shut, don't wait it out; turn around and do this.",
    "slots": [
-    {"t": "8:45a", "what": "Roaring Fork Motor Nature Trail", "why": "Traffic light #8, Historic Nature Trail, then the one-way loop. The Noah Ogle place is a hundred yards from the road and fine for all three. Grotto Falls is not a toddler walk. Closes Monday, so this is its last weekend too.", "dest": "35.7055,-83.4930"},
-    {"t": "10:30a", "what": "Gatlinburg Trail from Sugarlands", "why": "Two miles of flat gravel along the river. Stroller works. Turn around whenever.", "dest": "35.6857204,-83.5367666"},
-    {"t": "12:30p", "what": "Home, lunch, naps", "why": "", "dest": ""},
-    {"t": "5:45p", "what": "Shadrack's drive-through lights", "why": "Same as Plan A. Kids in car seats, pajamas, radio synced. $39.95 a car on Friday. Leave by 5:15 for the Sevierville traffic.", "dest": "35.8911839,-83.5882943"}
+    {
+     "t": "8:45a",
+     "what": "Roaring Fork Motor Nature Trail",
+     "why": "Traffic light #8, Historic Nature Trail, then the one-way loop. The Noah Ogle place is a hundred yards from the road and fine for all three. Grotto Falls is not a toddler walk. Closes Monday, so this is its last weekend too.",
+     "dest": "35.7055,-83.4930"
+    },
+    {
+     "t": "10:30a",
+     "what": "Gatlinburg Trail from Sugarlands",
+     "why": "Two miles of flat gravel along the river. Stroller works. Turn around whenever.",
+     "dest": "35.6857204,-83.5367666"
+    },
+    {
+     "t": "12:30p",
+     "what": "Home, lunch, naps",
+     "why": "",
+     "dest": ""
+    },
+    {
+     "t": "5:45p",
+     "what": "Shadrack's drive-through lights",
+     "why": "Same as Plan A. Kids in car seats, pajamas, radio synced. $39.95 a car on Friday. Leave by 5:15 for the Sevierville traffic.",
+     "dest": "35.8911839,-83.5882943"
+    }
    ],
-   "routeB": [[35.7116, -83.5160], [35.7055, -83.4930], [35.6857, -83.5368]]
+   "routeB": [
+    [
+     35.7116,
+     -83.516
+    ],
+    [
+     35.7055,
+     -83.493
+    ],
+    [
+     35.6857,
+     -83.5368
+    ]
+   ]
   },
-  "bail": {"name": "Sugarlands Visitor Center", "why": "Bottom of the mountain, on the way home from either plan. Warm, free, restrooms, the museum. If the summit was too cold for the baby or the road was too much for the two-year-old's stomach, this is where the day recovers.", "dest": "35.6857204,-83.5367666"},
-  "kids": ["Cash walks the half mile to the tower and says he walked to the top of Tennessee. He will remember this one.", "Slavik rides shoulders for the second half of the Kuwohi ramp. Mittens that stay on; it is 20 degrees colder than the cabin.", "Snejana in the carrier under a coat. Ten minutes at the top, not thirty. Check her hands at the car."]
+  "bail": {
+   "name": "Sugarlands Visitor Center",
+   "why": "Bottom of the mountain, on the way home from either plan. Warm, free, restrooms, the museum. If the summit was too cold for the baby or the road was too much for the two-year-old's stomach, this is where the day recovers.",
+   "dest": "35.6857204,-83.5367666"
+  },
+  "kids": [
+   "Cash walks the half mile to the tower and says he walked to the top of Tennessee. He will remember this one.",
+   "Slavik rides shoulders for the second half of the Kuwohi ramp. Mittens that stay on; it is 20 degrees colder than the cabin.",
+   "Snejana in the carrier under a coat. Ten minutes at the top, not thirty. Check her hands at the car."
+  ]
  },
  "2026-11-28": {
-  "file": "day-6-sat.html", "short": "Sat 28", "name": "Saturday",
-  "kicker": "Day 6 · Home",
+  "file": "day-6-sat.html",
+  "short": "Sat 28",
+  "name": "Saturday",
+  "kicker": "Day 6 \u00b7 Home",
   "banner": "Great Smoky Mountains National Park in Autumn.jpg",
-  "strip": ["Mount LeConte viewed from Carlos Campbell Overlook, May 2017.jpg", "Snow and Rime Ice on Trees in the Smoky Mountains.JPG", "Cades Cove - October 2023 - Sarah Stierch 05.jpg"],
+  "strip": [
+   "Mount LeConte viewed from Carlos Campbell Overlook, May 2017.jpg",
+   "Snow and Rime Ice on Trees in the Smoky Mountains.JPG",
+   "Cades Cove - October 2023 - Sarah Stierch 05.jpg",
+   "Bear in Cherry Tree - Flickr - Kevin Crosby.jpg",
+   "White-tailed Deer (51629450511).jpg",
+   "Little-river-townsend-y.jpg"
+  ],
   "lede": "Out through the park the way you came in, which misses the worst checkout traffic of the year on the Spur and TN-66. An hour comes back at Chattanooga. Home by mid-afternoon.",
-  "coords": {"Roll out through the park": [35.6596, -83.7078], "Lunch in Athens or Cleveland": [35.4682, -84.6501], "Chattanooga, back on I-59. You just got an hour back": [35.0043, -85.1585], "Home": [33.5207, -86.8025]},
-  "route": ["Roll out through the park", "Lunch in Athens or Cleveland", "Chattanooga, back on I-59. You just got an hour back", "Home"],
+  "coords": {
+   "Roll out through the park": [
+    35.6596,
+    -83.7078
+   ],
+   "Lunch in Athens or Cleveland": [
+    35.4682,
+    -84.6501
+   ],
+   "Chattanooga, back on I-59. You just got an hour back": [
+    35.0043,
+    -85.1585
+   ],
+   "Home": [
+    33.5207,
+    -86.8025
+   ]
+  },
+  "route": [
+   "Roll out through the park",
+   "Lunch in Athens or Cleveland",
+   "Chattanooga, back on I-59. You just got an hour back",
+   "Home"
+  ],
   "planB": {
    "title": "Plan B: ice on Little River Road",
    "when": "A hard freeze overnight can close Little River Road or make it a bad idea with kids in the car. Then you take the four-lane way out and accept the traffic.",
    "slots": [
-    {"t": "8:30a ET", "what": "The Spur to Pigeon Forge, Parkway north", "why": "Gatlinburg Bypass off the Spur if downtown is moving slowly. Then the Pigeon Forge Parkway all the way through.", "dest": "35.7420,-83.5210"},
-    {"t": "9:15a ET", "what": "TN-66 north to I-40 at exit 407", "why": "This is the stretch everyone warns about. On the Saturday after Thanksgiving it can be an hour for ten miles. Leaving before 8:30 is the only trick.", "dest": "35.9500,-83.5900"},
-    {"t": "10:00a ET", "what": "I-40 west, I-75 south", "why": "Through Knoxville. Lunch at Athens or Cleveland as planned.", "dest": "35.4682,-84.6501"},
-    {"t": "2:45p CT", "what": "Home", "why": "About 20 minutes longer than Plan A on a clear day. Longer if 66 is bad.", "dest": ""}
+    {
+     "t": "8:30a ET",
+     "what": "The Spur to Pigeon Forge, Parkway north",
+     "why": "Gatlinburg Bypass off the Spur if downtown is moving slowly. Then the Pigeon Forge Parkway all the way through.",
+     "dest": "35.7420,-83.5210"
+    },
+    {
+     "t": "9:15a ET",
+     "what": "TN-66 north to I-40 at exit 407",
+     "why": "This is the stretch everyone warns about. On the Saturday after Thanksgiving it can be an hour for ten miles. Leaving before 8:30 is the only trick.",
+     "dest": "35.9500,-83.5900"
+    },
+    {
+     "t": "10:00a ET",
+     "what": "I-40 west, I-75 south",
+     "why": "Through Knoxville. Lunch at Athens or Cleveland as planned.",
+     "dest": "35.4682,-84.6501"
+    },
+    {
+     "t": "2:45p CT",
+     "what": "Home",
+     "why": "About 20 minutes longer than Plan A on a clear day. Longer if 66 is bad.",
+     "dest": ""
+    }
    ],
-   "routeB": [[35.7116, -83.5160], [35.7420, -83.5210], [35.9500, -83.5900], [35.4682, -84.6501], [33.5207, -86.8025]]
+   "routeB": [
+    [
+     35.7116,
+     -83.516
+    ],
+    [
+     35.742,
+     -83.521
+    ],
+    [
+     35.95,
+     -83.59
+    ],
+    [
+     35.4682,
+     -84.6501
+    ],
+    [
+     33.5207,
+     -86.8025
+    ]
+   ]
   },
-  "bail": {"name": "Townsend, if the car won't take Little River Road", "why": "If anyone is sick before the Wye, Townsend has gas, a pharmacy and a quiet park on the river. Regroup there, then US-321 to Maryville is all easy road.", "dest": "35.6596,-83.7078"},
-  "kids": ["Cash does the final sweep of the cabin for loveys and calls the time change at Chattanooga.", "Slavik's lovey rides in your lap, not loose. Potty at Townsend, not on the road.", "Snejana sleeps Little River Road if you leave right after breakfast. Athens is her real stop."]
+  "bail": {
+   "name": "Townsend, if the car won't take Little River Road",
+   "why": "If anyone is sick before the Wye, Townsend has gas, a pharmacy and a quiet park on the river. Regroup there, then US-321 to Maryville is all easy road.",
+   "dest": "35.6596,-83.7078"
+  },
+  "kids": [
+   "Cash does the final sweep of the cabin for loveys and calls the time change at Chattanooga.",
+   "Slavik's lovey rides in your lap, not loose. Potty at Townsend, not on the road.",
+   "Snejana sleeps Little River Road if you leave right after breakfast. Athens is her real stop."
+  ]
+ },
+ "bonus": {
+  "file": "bonus-dollywood.html",
+  "short": "Bonus",
+  "name": "Bonus day",
+  "kicker": "Bonus \u00b7 Dollywood, if the week allows",
+  "banner": "Dollywood from the Dollywood Express - 8.jpg",
+  "strip": [
+   "Dollywood Express No. 70 aka \"Cinderella\" - June 2023.jpg",
+   "Dollywood sign - October 2023 - Sarah Stierch.jpg",
+   "Dollywood Express 192 Wildwood Grove.jpg",
+   "Thunderhead (Dollywood) 02.JPG",
+   "Dollywood from the Dollywood Express - 9.jpg"
+  ],
+  "lede": "The big-ticket day, kept on the bench. Three kids under eight and a $300 gate is a bet on weather and sleep, so it only goes on the calendar if both are good. Wildwood Grove first, the train before lunch, Cash's coasters by wristband, lights on the way out.",
+  "coords": {
+   "Park, tram to the gate, measure Cash": [
+    35.7887,
+    -83.53
+   ]
+  },
+  "route": [],
+  "planB": {
+   "title": "Plan B: Dollywood on the cheap side",
+   "when": "Same park, less money and less walking. Park free at Patriot Park behind the Old Mill and ride the trolley to the gate for $3 a person instead of paying $25 to park, then do only the Grove, the train and the lights.",
+   "slots": [
+    {
+     "t": "9:00a",
+     "what": "Patriot Park, free parking",
+     "why": "236 Old Mill Ave. The Pigeon Forge trolley to Dollywood runs from the transit center here, $3 a person all day. Reviewers call it the trick nobody tells you.",
+     "dest": "Patriot Park, 236 Old Mill Ave, Pigeon Forge, TN 37863"
+    },
+    {
+     "t": "10:00a",
+     "what": "Wildwood Grove, then the train",
+     "why": "Back of the park first, train before lunch, same as Plan A.",
+     "dest": "Dollywood, 2700 Dollywood Parks Blvd, Pigeon Forge, TN 37863"
+    },
+    {
+     "t": "1:00p",
+     "what": "Trolley back, naps at the cabin",
+     "why": "Leave with the little two asleep in the stroller and come back at dusk with the Good-Any-Day ticket, or call it a day.",
+     "dest": ""
+    },
+    {
+     "t": "5:00p",
+     "what": "Back for the lights, or Winterfest from the car",
+     "why": "If nobody wants to go back in, the Pigeon Forge Parkway lights are free and the kids are already in car seats.",
+     "dest": "35.7880,-83.5540"
+    }
+   ],
+   "routeB": [
+    [
+     35.7878,
+     -83.5516
+    ],
+    [
+     35.7951,
+     -83.5312
+    ]
+   ]
+  },
+  "bail": {
+   "name": "The Dollywood Express",
+   "why": "If a kid melts down mid-park, the steam train is a twenty-minute sit-down that resets everybody. If it's the weather, the covered shows in the Village run all afternoon, and the ticket is good any day if you bought Good-Any-Day.",
+   "dest": "Dollywood, 2700 Dollywood Parks Blvd, Pigeon Forge, TN 37863"
+  },
+  "kids": [
+   "Cash: measured, wristbanded, and paired with one adult for the 42-inch rides. Blazing Fury is his big one.",
+   "Slavik: Wildwood Grove is his park. Great Tree Swing at 36 inches if he clears it, Frogs and Fireflies with an adult.",
+   "Snejana: the train, the carousel, the stroller nap loop through Craftsman's Valley. Out by 6:45 whatever is happening."
+  ]
  }
 }
