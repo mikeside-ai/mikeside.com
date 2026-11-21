@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Home — Saturday, Nov 28 · Gatlinburg week</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="site.css?v=3">
+</head>
+<body class="locked day-page" data-date="2026-11-28">
+
+<div id="gate">
+  <form class="gate-box" id="gate-form" autocomplete="off">
+    <span class="logo">mike<span>side</span></span>
+    <h1>Gatlinburg week</h1>
+    <p>Family page. Enter the PIN to open it.</p>
+    <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" aria-label="PIN" autofocus>
+    <button type="submit">Open</button>
+    <div class="err" id="gate-err"></div>
+  </form>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="/">mike<span>side</span></a>
+    <nav aria-label="Trip pages">
+      <ul>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="day-5-fri.html">&larr; Fri 27</a></li>
+        
+        <li><a href="#plan">Plan</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#journal">Journal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="banner" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Great%20Smoky%20Mountains%20National%20Park%20in%20Autumn.jpg?width=1400')">
+  <div class="banner-shade"></div>
+  <div class="container banner-text">
+    <p class="kicker">Day 6 · Home</p>
+    <h1>Home</h1>
+    <p class="banner-date">Saturday, Nov 28 </p>
+  </div>
+  <span class="credit">Benjiho · Public domain</span>
+</div>
+
+<div class="chips container" aria-label="Days"><a class="chip" href="day-0-sun.html">Sun 22</a><a class="chip" href="day-1-mon.html">Mon 23</a><a class="chip" href="day-2-tue.html">Tue 24</a><a class="chip" href="day-3-wed.html">Wed 25</a><a class="chip" href="day-4-thu.html">Thu 26</a><a class="chip" href="day-5-fri.html">Fri 27</a><a class="chip on" href="day-6-sat.html">Sat 28</a></div>
+
+<section class="daytop">
+  <div class="container">
+    <p class="lede">Out through the park the way you came in, which misses the worst checkout traffic of the year on the Spur and TN-66. An hour comes back at Chattanooga. Home by mid-afternoon.</p>
+    <dl class="facts facts-day">
+      <div class="fact"><dt>Forecast</dt><dd id="day-wx">Loading&hellip;<small id="day-wx-ridge"></small></dd></div>
+      <div class="fact"><dt>Right now</dt><dd id="now-temp">&mdash;<small id="now-clock"></small></dd></div>
+      <div class="fact"><dt>Daylight</dt><dd id="daylight">7:30a &rarr; 5:25p<small id="dark-in"></small></dd></div>
+      <div class="fact nap"><dt>Nap clock</dt><dd><span id="nap-text">Not started</span><small><button type="button" class="ghost" id="nap-btn">Start nap</button></small></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="plan">
+  <div class="container">
+    <p class="eyebrow">The plan</p>
+    <div class="plan-head">
+      <h2 id="plan-title">Plan A</h2>
+      <div class="plan-toggle" role="tablist">
+        <button type="button" class="pt on" data-plan="a" role="tab">Plan A</button>
+        <button type="button" class="pt" data-plan="b" role="tab">Plan B</button>
+        <button type="button" class="ghost" id="copy-plan">Copy as text</button>
+      </div>
+    </div>
+    <div class="plan" id="plan-a">
+      
+      <ul class="slots" id="slots-a">
+        <li class="slot"><time>7:00a</time><div><div class="what">Breakfast, load, sweep</div><div class="why">Check under every bed, the hot tub deck, and the loft. Loveys get left in cabins the same way they get left at beach houses. <span class="egg" data-egg="4">Bears</span> do not take them. Probably.</div></div></li>
+        <li class="slot" data-lat="35.6596" data-lng="-83.7078" data-stop="Roll out through the park"><time>8:30a ET</time><div><div class="what">Roll out through the park <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.659615%2C-83.7077737" target="_blank" rel="noopener">Directions</a></div><div class="addr">Little River Rd to Townsend Wye, then US-321</div><div class="why">Little River Road to Townsend, US-321 to Lenoir City, I-75 south. Saturday after Thanksgiving is the second heaviest checkout day of the year on the Spur and TN-66. The park route misses all of it.</div></div></li>
+        <li class="slot" data-lat="35.4682" data-lng="-84.6501" data-stop="Lunch in Athens or Cleveland"><time>11:15a ET</time><div><div class="what">Lunch in Athens or Cleveland <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.4682235%2C-84.6500785" target="_blank" rel="noopener">Directions</a></div></div></li>
+        <li class="slot" data-lat="35.0043" data-lng="-85.1585" data-stop="Chattanooga, back on I-59. You just got an hour back"><time>11:45a CT</time><div><div class="what">Chattanooga, back on I-59. You just got an hour back</div></div></li>
+        <li class="slot" data-lat="33.5207" data-lng="-86.8025" data-stop="Home"><time>2:30p CT</time><div><div class="what">Home</div></div></li>
+      </ul>
+
+    </div>
+    <div class="plan" id="plan-b" hidden>
+      <div class="callout water"><h3>Plan B: ice on Little River Road</h3><p>A hard freeze overnight can close Little River Road or make it a bad idea with kids in the car. Then you take the four-lane way out and accept the traffic.</p></div>
+      <ul class="slots" id="slots-b">
+        <li class="slot"><time>8:30a ET</time><div><div class="what">The Spur to Pigeon Forge, Parkway north <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7420%2C-83.5210" target="_blank" rel="noopener">Directions</a></div><div class="why">Gatlinburg Bypass off the Spur if downtown is moving slowly. Then the Pigeon Forge Parkway all the way through.</div></div></li>
+        <li class="slot"><time>9:15a ET</time><div><div class="what">TN-66 north to I-40 at exit 407 <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.9500%2C-83.5900" target="_blank" rel="noopener">Directions</a></div><div class="why">This is the stretch everyone warns about. On the Saturday after Thanksgiving it can be an hour for ten miles. Leaving before 8:30 is the only trick.</div></div></li>
+        <li class="slot"><time>10:00a ET</time><div><div class="what">I-40 west, I-75 south <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.4682%2C-84.6501" target="_blank" rel="noopener">Directions</a></div><div class="why">Through Knoxville. Lunch at Athens or Cleveland as planned.</div></div></li>
+        <li class="slot"><time>2:45p CT</time><div><div class="what">Home</div><div class="why">About 20 minutes longer than Plan A on a clear day. Longer if 66 is bad.</div></div></li>
+      </ul>
+    </div>
+    <div class="bail">
+      <h3>Bail-out: Townsend, if the car won't take Little River Road <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6596%2C-83.7078" target="_blank" rel="noopener">Directions</a></h3>
+      <p>If anyone is sick before the Wye, Townsend has gas, a pharmacy and a quiet park on the river. Regroup there, then US-321 to Maryville is all easy road.</p>
+    </div>
+  </div>
+</section>
+
+<section id="map">
+  <div class="container">
+    <p class="eyebrow">The ground</p>
+    <h2>Map</h2>
+    <p class="intro">Stops for the plan you have selected. The solid line is the road route; it is drawn live from OpenStreetMap, so it needs signal. Tap a marker for directions.</p>
+    <div id="leaflet" class="map" data-route='[[35.6596, -83.7078, "Roll out through the park"], [35.4682, -84.6501, "Lunch in Athens or Cleveland"], [35.0043, -85.1585, "Chattanooga, back on I-59. You just got an hour back"], [33.5207, -86.8025, "Home"]]' data-route-b='[[35.7116, -83.516], [35.742, -83.521], [35.95, -83.59], [35.4682, -84.6501], [33.5207, -86.8025]]'></div>
+  </div>
+</section>
+
+<section id="photos">
+  <div class="container">
+    <p class="eyebrow">What it looks like</p>
+    <h2>The places</h2>
+    <div class="strip">
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20LeConte%20viewed%20from%20Carlos%20Campbell%20Overlook%2C%20May%202017.jpg?width=800" alt=""><figcaption>Thomson200 · CC0</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Snow%20and%20Rime%20Ice%20on%20Trees%20in%20the%20Smoky%20Mountains.JPG?width=800" alt=""><figcaption>Jrmichae · CC BY-SA 4.0</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cades%20Cove%20-%20October%202023%20-%20Sarah%20Stierch%2005.jpg?width=800" alt=""><figcaption>Sarah Stierch · CC BY 4.0</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="kids">
+  <div class="container">
+    <p class="eyebrow">Three cubs</p>
+    <h2>Today, each of them</h2>
+    <div class="kid">
+      <ul>
+        <li>Cash does the final sweep of the cabin for loveys and calls the time change at Chattanooga.</li>
+        <li>Slavik's lovey rides in your lap, not loose. Potty at Townsend, not on the road.</li>
+        <li>Snejana sleeps Little River Road if you leave right after breakfast. Athens is her real stop.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="journal">
+  <div class="container">
+    <p class="eyebrow">Trip log</p>
+    <h2>What actually happened</h2>
+    <p class="intro">Notes stay on this phone. A line a day is plenty; it's what you'll read next November.</p>
+    <textarea id="journal-text" rows="6" placeholder="Who saw the first bear, what the kids ate, what you'd change."></textarea>
+    <div class="journal-bar"><span id="journal-saved"></span><button type="button" class="ghost" id="journal-copy">Copy</button></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="pager">
+      <a href="day-5-fri.html">&larr; Friday: Up the mountain, away from everyone</a>
+      <a href="index.html">Hub</a>
+      <span></span>
+    </div>
+    <p>Photos are from Wikimedia Commons under the licenses shown. Hours, prices and park roads change with the weather; check the hub's road status link each morning.</p>
+  </div>
+</footer>
+
+<div class="bear-toast" id="bear-toast" role="status"></div>
+<div class="bear-peek" id="bear-peek" aria-hidden="true">
+  <svg viewBox="0 0 120 100"><g fill="#2b1d14"><ellipse cx="60" cy="78" rx="46" ry="30"/><circle cx="60" cy="44" r="30"/><circle cx="36" cy="22" r="11"/><circle cx="84" cy="22" r="11"/></g><g fill="#6b4a33"><circle cx="36" cy="22" r="5"/><circle cx="84" cy="22" r="5"/><ellipse cx="60" cy="56" rx="14" ry="10"/></g><g fill="#0b1411"><circle cx="48" cy="40" r="3.5"/><circle cx="72" cy="40" r="3.5"/><ellipse cx="60" cy="52" rx="6" ry="4"/></g><circle cx="49.5" cy="38.5" r="1.2" fill="#fff"/><circle cx="73.5" cy="38.5" r="1.2" fill="#fff"/></svg>
+</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="bear-side" viewBox="0 0 140 90"><g fill="#2b1d14"><ellipse cx="62" cy="50" rx="44" ry="26"/><circle cx="108" cy="36" r="18"/><circle cx="98" cy="22" r="6"/><circle cx="118" cy="22" r="6"/><circle cx="20" cy="50" r="12"/><rect x="30" y="62" width="12" height="26" rx="5"/><rect x="52" y="64" width="12" height="24" rx="5"/><rect x="78" y="64" width="12" height="24" rx="5"/><rect x="96" y="60" width="12" height="28" rx="5"/></g><g fill="#6b4a33"><ellipse cx="122" cy="42" rx="9" ry="6"/></g><circle cx="114" cy="33" r="2.5" fill="#0b1411"/><circle cx="129" cy="41" r="3" fill="#0b1411"/></symbol>
+</svg>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="site.js?v=3"></script>
+<script src="day.js?v=3"></script>
+</body>
+</html>
