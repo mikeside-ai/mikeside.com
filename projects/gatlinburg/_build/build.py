@@ -125,7 +125,7 @@ def page(date):
   <span class="credit">{credit(d['banner'])}</span>
 </div>
 
-<div class="chips container" aria-label="Days">{chips}</div>
+<div class="chips container" aria-label="Days">{chips}<a class="chip" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a></div>
 
 <section class="daytop">
   <div class="container">
@@ -335,7 +335,7 @@ def trails_page():
   <span class="credit">{credit('Little River Road - October 2025 - Sarah Stierch.jpg')}</span>
 </div>
 
-<div class="chips container" aria-label="Days">{chips}<a class="chip on" href="trails.html">Trails</a></div>
+<div class="chips container" aria-label="Days">{chips}<a class="chip on" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a></div>
 
 <section class="daytop">
   <div class="container">
