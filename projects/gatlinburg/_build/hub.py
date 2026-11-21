@@ -19,8 +19,8 @@ def card(key):
     slots = '\n'.join('        ' + build.slot_html(x) for x in a['slots'])
     callouts = '\n'.join('      <div class="callout sun">\n        <h3>%s</h3>%s\n      </div>' % (c['h'], c['body']) for c in a['callouts'])
     note = '      <p class="day-note">%s</p>\n' % a['note'] if a.get('note') else ''
-    return ('<div class="day" data-date="%s"%s>\n      %s<div class="day-head"><h3>%s</h3><span class="day-date">%s</span>%s</div>\n%s      <ul class="slots">\n%s\n      </ul>\n      <a class="day-link" href="%s">Open %s: map, photos, Plan B &rarr;</a>\n%s\n    </div>\n'
-            % (date, plan_attr, photo, a['title'], a['date'], tag, note, slots, d['file'], d['name'], callouts)).replace('\n\n    </div>', '\n    </div>')
+    return ('<div class="day" data-date="%s"%s>\n      %s<div class="day-head"><h3><a href="%s">%s</a></h3><span class="day-date">%s</span>%s</div>\n%s      <ul class="slots">\n%s\n      </ul>\n      <a class="day-link" href="%s">Open %s: map, photos, Plan B &rarr;</a>\n%s\n    </div>\n'
+            % (date, plan_attr, photo, d['file'], a['title'], a['date'], tag, note, slots, d['file'], d['name'], callouts)).replace('\n\n    </div>', '\n    </div>')
 
 n = 0
 for key in build.order:
