@@ -4,14 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Cades Cove — Wednesday, Nov 25 · Gatlinburg week</title>
+<meta name="theme-color" content="#0b1411">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Cades Cove — Wednesday · Gatlinburg week</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-<link rel="stylesheet" href="site.css?v=3">
+<link rel="stylesheet" href="site.css?v=4">
 </head>
-<body class="locked day-page" data-date="2026-11-25">
+<body class="locked day-page" data-date="2026-11-25" data-page="2026-11-25">
 
 <div id="gate">
   <form class="gate-box" id="gate-form" autocomplete="off">
@@ -34,6 +39,7 @@
         <li><a href="day-4-thu.html">Thu 26 &rarr;</a></li>
         <li><a href="#plan">Plan</a></li>
         <li><a href="#map">Map</a></li>
+        <li><a href="trails.html">Trails</a></li>
         <li><a href="#journal">Journal</a></li>
       </ul>
     </nav>
@@ -50,7 +56,7 @@
   <span class="credit">Sarah Stierch · CC BY 4.0</span>
 </div>
 
-<div class="chips container" aria-label="Days"><a class="chip" href="day-0-sun.html">Sun 22</a><a class="chip" href="day-1-mon.html">Mon 23</a><a class="chip" href="day-2-tue.html">Tue 24</a><a class="chip on" href="day-3-wed.html">Wed 25</a><a class="chip" href="day-4-thu.html">Thu 26</a><a class="chip" href="day-5-fri.html">Fri 27</a><a class="chip" href="day-6-sat.html">Sat 28</a></div>
+<div class="chips container" aria-label="Days"><a class="chip" href="day-0-sun.html">Sun 22</a><a class="chip" href="day-1-mon.html">Mon 23</a><a class="chip" href="day-2-tue.html">Tue 24</a><a class="chip on" href="day-3-wed.html">Wed 25</a><a class="chip" href="day-4-thu.html">Thu 26</a><a class="chip" href="day-5-fri.html">Fri 27</a><a class="chip" href="day-6-sat.html">Sat 28</a><a class="chip" href="bonus-dollywood.html">Bonus</a></div>
 
 <section class="daytop">
   <div class="container">
@@ -78,27 +84,27 @@
     <div class="plan" id="plan-a">
       <p class="day-note">The 11-mile loop through the valley with the deer, turkeys, old churches and sometimes a bear. An hour-plus each way from the cabin on Little River Road, so you leave early and you are back for naps.</p>
       <ul class="slots" id="slots-a">
-        <li class="slot" data-lat="35.6034" data-lng="-83.7759" data-stop="Roll out, breakfast in the car"><time>7:15a</time><div><div class="what">Roll out, breakfast in the car <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6034301%2C-83.7759481" target="_blank" rel="noopener">Directions</a></div><div class="addr">Cades Cove Loop Rd via Little River Rd and Laurel Creek Rd</div><div class="why">Little River Road from Sugarlands. Wildlife is out at this hour and the loop is empty. Leave at nine and you crawl behind forty cars.</div></div></li>
+        <li class="slot" data-lat="35.6034" data-lng="-83.7759" data-stop="Roll out, breakfast in the car"><time>7:15a</time><div><div class="what">Roll out, breakfast in the car <span class="rate" data-say="Deer, turkeys and bears nearly every visit. Go early; by mid-morning the loop backs up for hours." title="Google rating, 4,185 reviews">&#9733; 4.7<small>4k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6034301%2C-83.7759481" target="_blank" rel="noopener">Directions</a></div><div class="addr">Cades Cove Loop Rd via Little River Rd and Laurel Creek Rd</div><div class="why">Little River Road from Sugarlands. Wildlife is out at this hour and the loop is empty. Leave at nine and you crawl behind forty cars.</div></div></li>
         <li class="slot" data-lat="35.6098" data-lng="-83.7952" data-stop="Start the loop"><time>8:30a</time><div><div class="what">Start the loop <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.609788%2C-83.7951775" target="_blank" rel="noopener">Directions</a></div><div class="why">One way, 20 mph, pull-offs everywhere. Get out at John Oliver Cabin, half a mile flat from the road. Cash counts <span class="egg" data-egg="1">deer</span>.</div></div></li>
-        <li class="slot" data-lat="35.585" data-lng="-83.8431" data-stop="Cable Mill area, halfway round"><time>10:00a</time><div><div class="what">Cable Mill area, halfway round <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.5849718%2C-83.8431004" target="_blank" rel="noopener">Directions</a></div><div class="addr">Cades Cove Visitor Center, Cable Mill</div><div class="why">Visitor center, restrooms, a working grist mill and barns on flat gravel. Stroller works here. Thirty minutes of running around, then back in the car.</div></div></li>
+        <li class="slot" data-lat="35.585" data-lng="-83.8431" data-stop="Cable Mill area, halfway round"><time>10:00a</time><div><div class="what">Cable Mill area, halfway round <span class="rate" data-say="Deer, turkeys and bears nearly every visit. Go early; by mid-morning the loop backs up for hours." title="Google rating, 4,185 reviews">&#9733; 4.7<small>4k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.5849718%2C-83.8431004" target="_blank" rel="noopener">Directions</a></div><div class="addr">Cades Cove Visitor Center, Cable Mill</div><div class="why">Visitor center, restrooms, a working grist mill and barns on flat gravel. Stroller works here. Thirty minutes of running around, then back in the car.</div></div></li>
         <li class="slot" data-lat="35.6799" data-lng="-83.6489" data-stop="Finish the loop, head home"><time>11:15a</time><div><div class="what">Finish the loop, head home <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6798742%2C-83.648943" target="_blank" rel="noopener">Directions</a></div><div class="addr">Metcalf Bottoms picnic area, Little River Rd</div><div class="why">Lunch in the car or at the Metcalf Bottoms picnic area on the way back if it's warm enough.</div></div></li>
         <li class="slot"><time>1:00p</time><div><div class="what">Home, naps</div><div class="why">Long nap. Everyone, including adults.</div></div></li>
-        <li class="slot" data-lat="35.7216" data-lng="-83.4872" data-stop="Thanksgiving grocery run"><time>3:30p</time><div><div class="what">Thanksgiving grocery run <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Food%20City%2C%201219%20East%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="addr">1219 East Parkway</div><div class="why">Food City on East Parkway for tomorrow's dinner. Wednesday afternoon is the last sane time to do it. Food City runs holiday hours Thursday.</div></div></li>
-        <li class="slot" data-lat="35.712" data-lng="-83.5064" data-stop="Optional: the Arts &amp;amp; Crafts show"><time>5:00p</time><div><div class="what">Optional: the Arts &amp; Crafts show <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Gatlinburg%20Convention%20Center%2C%20234%20Historic%20Nature%20Trail%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="addr">234 Historic Nature Trail</div><div class="why">Great Smoky Thanksgiving Arts &amp; Crafts Show at the Gatlinburg Convention Center, Nov 24 to 29. Free, indoor, warm, and an easy hour if the kids are restless. Skip it if they aren't.</div></div></li>
+        <li class="slot" data-lat="35.7216" data-lng="-83.4872" data-stop="Thanksgiving grocery run"><time>3:30p</time><div><div class="what">Thanksgiving grocery run <span class="rate" data-say="Well stocked, open 6am to midnight. Thanksgiving Day closes at 3pm." title="Google rating, 9,391 reviews">&#9733; 4.4<small>9k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Food%20City%2C%201219%20East%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="addr">1219 East Parkway</div><div class="why">Food City on East Parkway for tomorrow's dinner. Wednesday afternoon is the last sane time to do it. Food City runs holiday hours Thursday.</div></div></li>
+        <li class="slot" data-lat="35.712" data-lng="-83.5064" data-stop="Optional: the Arts &amp;amp; Crafts show"><time>5:00p</time><div><div class="what">Optional: the Arts &amp; Crafts show <span class="rate" data-say="Spacious, clean, parking next door. The craft shows here get consistently warm reviews." title="Google rating, 2,234 reviews">&#9733; 4.6<small>2k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Gatlinburg%20Convention%20Center%2C%20234%20Historic%20Nature%20Trail%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="addr">234 Historic Nature Trail</div><div class="why">Great Smoky Thanksgiving Arts &amp; Crafts Show at the Gatlinburg Convention Center, Nov 24 to 29. Free, indoor, warm, and an easy hour if the kids are restless. Skip it if they aren't.</div></div></li>
       </ul>
       <div class="callout sun"><h3>Bears are real in the Cove in November</h3><p>They are fattening up before denning and they are on the loop. Fifty yards minimum, nobody gets out of the car for a bear, and no food left out at the picnic area. If a bear jam forms, drive through it. You will see <span class="egg" data-egg="3">another one</span>.</p></div>
     </div>
     <div class="plan" id="plan-b" hidden>
       <div class="callout water"><h3>Plan B: Little River Road closed, or sleet</h3><p>Check the park road status link on the hub before you leave. Ice closes Little River Road and the Cove loop with no notice. If it's shut, stay on the Gatlinburg side.</p></div>
       <ul class="slots" id="slots-b">
-        <li class="slot"><time>8:30a</time><div><div class="what">Roaring Fork Motor Nature Trail <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7055%2C-83.4930" target="_blank" rel="noopener">Directions</a></div><div class="why">Turn at traffic light #8 onto Historic Nature Trail. Five and a half one-way miles, old cabins, the Noah Ogle place a hundred yards from the road. Closes for winter Monday, so this is its last week too.</div></div></li>
-        <li class="slot"><time>10:30a</time><div><div class="what">Gatlinburg Trail from Sugarlands <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6857204%2C-83.5367666" target="_blank" rel="noopener">Directions</a></div><div class="why">Two miles each way on gravel along the river, flat, stroller fine. Turn around whenever.</div></div></li>
+        <li class="slot"><time>8:30a</time><div><div class="what">Roaring Fork Motor Nature Trail <span class="rate" data-say="Gorgeous and slow. Narrow road, no parking at the popular stops, bears sighted often. Budget two hours." title="Google rating, 2,818 reviews">&#9733; 4.8<small>3k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.7055%2C-83.4930" target="_blank" rel="noopener">Directions</a></div><div class="why">Turn at traffic light #8 onto Historic Nature Trail. Five and a half one-way miles, old cabins, the Noah Ogle place a hundred yards from the road. Closes for winter Monday, so this is its last week too.</div></div></li>
+        <li class="slot"><time>10:30a</time><div><div class="what">Gatlinburg Trail from Sugarlands <span class="rate" data-say="Flat gravel along the river from Sugarlands, one of two dog-friendly trails. Easy with a stroller." title="Google rating, 10 reviews">&#9733; 4.6<small>10</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.6857204%2C-83.5367666" target="_blank" rel="noopener">Directions</a></div><div class="why">Two miles each way on gravel along the river, flat, stroller fine. Turn around whenever.</div></div></li>
         <li class="slot"><time>12:30p</time><div><div class="what">Home, lunch, naps</div></div></li>
-        <li class="slot"><time>3:30p</time><div><div class="what">Thanksgiving grocery run <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Food%20City%2C%201219%20East%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="why">Food City, same as Plan A. This does not move.</div></div></li>
+        <li class="slot"><time>3:30p</time><div><div class="what">Thanksgiving grocery run <span class="rate" data-say="Well stocked, open 6am to midnight. Thanksgiving Day closes at 3pm." title="Google rating, 9,391 reviews">&#9733; 4.4<small>9k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Food%20City%2C%201219%20East%20Parkway%2C%20Gatlinburg%2C%20TN%2037738" target="_blank" rel="noopener">Directions</a></div><div class="why">Food City, same as Plan A. This does not move.</div></div></li>
       </ul>
     </div>
     <div class="bail">
-      <h3>Bail-out: Cades Cove Visitor Center at Cable Mill <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.5849718%2C-83.8431004" target="_blank" rel="noopener">Directions</a></h3>
+      <h3>Bail-out: Cades Cove Visitor Center at Cable Mill <span class="rate" data-say="Deer, turkeys and bears nearly every visit. Go early; by mid-morning the loop backs up for hours." title="Google rating, 4,185 reviews">&#9733; 4.7<small>4k</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=35.5849718%2C-83.8431004" target="_blank" rel="noopener">Directions</a></h3>
       <p>Halfway round the loop. Real restrooms, a ranger, a covered porch. If the loop is jammed or a kid is done, this is where you regroup, and the back half of the loop is faster than the front.</p>
     </div>
   </div>
@@ -122,6 +128,9 @@
         <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/White-Tailed%20Deer%20Grazing%20At%20Cades%20Cove.jpg?width=800" alt=""><figcaption>Nancy J. Olds · CC BY-SA 4.0</figcaption></figure>
         <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cades-cove-turkeys-tn1.jpg?width=800" alt=""><figcaption>Brian Stansberry · CC BY 3.0</figcaption></figure>
         <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Black%20bears%20in%20Great%20Smoky%20Mountains%20National%20Park%20%282653304831%29.jpg?width=800" alt=""><figcaption>Mark Ordonez · CC BY-SA 2.0</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Female%20Black%20Bear%20in%20Cades%20Cove.jpg?width=800" alt=""><figcaption>ZachN 0421 · CC BY-SA 4.0</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cades%20Cove%20-%20Methodist%20Church.jpg?width=800" alt=""><figcaption>P. Hughes · CC BY-SA 4.0</figcaption></figure>
+        <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cades%20Cove%20-%20October%202023%20-%20Sarah%20Stierch%2003.jpg?width=800" alt=""><figcaption>Sarah Stierch · CC BY 4.0</figcaption></figure>
     </div>
   </div>
 </section>
@@ -169,8 +178,16 @@
   <symbol id="bear-side" viewBox="0 0 140 90"><g fill="#2b1d14"><ellipse cx="62" cy="50" rx="44" ry="26"/><circle cx="108" cy="36" r="18"/><circle cx="98" cy="22" r="6"/><circle cx="118" cy="22" r="6"/><circle cx="20" cy="50" r="12"/><rect x="30" y="62" width="12" height="26" rx="5"/><rect x="52" y="64" width="12" height="24" rx="5"/><rect x="78" y="64" width="12" height="24" rx="5"/><rect x="96" y="60" width="12" height="28" rx="5"/></g><g fill="#6b4a33"><ellipse cx="122" cy="42" rx="9" ry="6"/></g><circle cx="114" cy="33" r="2.5" fill="#0b1411"/><circle cx="129" cy="41" r="3" fill="#0b1411"/></symbol>
 </svg>
 
+<nav class="tabbar" aria-label="Quick links">
+  <a href="index.html"><span>&#8962;</span>Hub</a>
+  <a href="day-2-tue.html"><span>&larr;</span>Tue 24</a>
+  <a href="#plan"><span>&#9776;</span>Plan</a>
+  <a href="#map"><span>&#9673;</span>Map</a>
+  <a href="day-4-thu.html"><span>&rarr;</span>Thu 26</a>
+</nav>
+
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="site.js?v=3"></script>
-<script src="day.js?v=3"></script>
+<script src="site.js?v=4"></script>
+<script src="day.js?v=4"></script>
 </body>
 </html>
