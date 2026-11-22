@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b1411">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<title>Bears · Gatlinburg week</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="site.css?v=12">
+</head>
+<body class="locked day-page trails-page" data-page="bears">
+
+<div id="gate">
+  <form class="gate-box" id="gate-form" autocomplete="off">
+    <span class="logo"><span class="logo-mark big" aria-hidden="true">&#x1F43B;</span></span>
+    <h1>Gatlinburg week</h1>
+    <p>Family page. Enter the PIN to open it.</p>
+    <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" aria-label="PIN" autofocus>
+    <button type="submit">Open</button>
+    <div class="err" id="gate-err"></div>
+  </form>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">&#x1F43B;</span>Gatlinburg <span>week</span></a>
+    <nav aria-label="Trip pages">
+      <ul>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="#spots">Spots</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#log">Log</a></li>
+        <li><a href="#rules">Rules</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="banner" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Black%20bear%20sitting%20upright%20at%20Great%20Smoky%20Mountains%20National%20Park%2C%20Tennessee%20and%20North%20Carolina%20%28d846aeb0-01e0-4bb5-801c-d6bb26d13f85%29.jpg?width=1400')">
+  <div class="banner-shade"></div>
+  <div class="container banner-text">
+    <p class="kicker">About 1,900 of them</p>
+    <h1>Bears</h1>
+    <p class="banner-date">Where to look, when to look, what to do when you find one, and a shared log so the whole family keeps score.</p>
+  </div>
+  <span class="credit">NPS · Public domain</span>
+</div>
+
+<div class="chips container" aria-label="Days"><a class="chip" href="day-0-sun.html">Sun 22</a><a class="chip" href="day-1-mon.html">Mon 23</a><a class="chip" href="day-2-tue.html">Tue 24</a><a class="chip" href="day-3-wed.html">Wed 25</a><a class="chip" href="day-4-thu.html">Thu 26</a><a class="chip" href="day-5-fri.html">Fri 27</a><a class="chip" href="day-6-sat.html">Sat 28</a><a class="chip" href="bonus-dollywood.html">Bonus</a><a class="chip" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip" href="cabin.html">Cabin</a><a class="chip on" href="bears.html">Bears</a></div>
+
+<section class="daytop">
+  <div class="container">
+    <p class="lede">The Smokies hold roughly two black bears per square mile, the densest population in the East, and late November is the tail end of their eating season. They're out at dawn and dusk stuffing themselves on the last acorns and walnuts before they den in December, and a warm week like this one keeps them out longer. So the odds are real, they're best early and late, and they're best from the car. Below: nine places ranked by our odds, a map, the rules that keep a sighting a good story, and a <a href="#log">log</a> that every phone shares.</p>
+  </div>
+</section>
+
+<section id="spots">
+  <div class="container">
+    <p class="eyebrow">Where</p>
+    <h2>Nine places, best odds first</h2>
+    <p class="intro">Numbered to match the map. Five of them are already on the week's plan, so most of this is knowing where to look on drives you're taking anyway.</p>
+    <div class="trails">
+      <div class="trail" data-lat="35.6065" data-lng="-83.7743" data-name="Cades Cove Loop" data-q="Cades Cove Loop Road, Townsend, TN">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Female%20Black%20Bear%20in%20Cades%20Cove.jpg?width=480')"><span class="credit">ZachN 0421 · CC BY-SA 4.0</span></div>
+        <div class="trail-body">
+          <h3>Cades Cove Loop <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Cades%20Cove%20Loop%20Road%2C%20Townsend%2C%20TN" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Wednesday on the plan &middot; about an hour each way</p>
+          <dl class="trail-facts"><div><dt>When</dt><dd>First hour after the gate opens, or the last before dark</dd></div><div><dt>Where</dt><dd>Sparks Lane, Hyatt Lane, the fields past Cable Mill, the walnut and cherry trees along the loop</dd></div><div><dt>From the car</dt><dd>Yes. The car is your blind</dd></div><div><dt>Stroller</dt><dd>Fine on the paved pull-offs; not needed</dd></div></dl>
+          <p class="kidscore" title="Our odds, late November, dawn or dusk">Bear odds <span>&#9679;&#9679;&#9679;&#9679;&#9679;</span></p>
+          <p>The best odds in the park, and it's already on the agenda. In November the bears are eating everything left on the trees and the ground, so look up into the big walnuts and cherries along the loop as much as across the fields. A row of stopped cars with people out of them is a bear jam: pull fully off, stay by the car, and don't walk toward it. Cash counts <span class="egg" data-egg="1">bears</span> and deer; whoever's driving watches the road, not the field.</p>
+          <p class="when">Best slot: the 7:15 departure that's already on Wednesday. The last loop before dark is nearly as good and the cove is empty</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.688" data-lng="-83.487" data-name="Roaring Fork Motor Nature Trail" data-q="Roaring Fork Motor Nature Trail, Gatlinburg, TN">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Roaring%20Fork%20Motor%20Nature%20Trail%20-%20March%202024%20-%20Sarah%20Stierch%2003.jpg?width=480')"><span class="credit">Sarah Stierch · CC BY 4.0</span></div>
+        <div class="trail-body">
+          <h3>Roaring Fork Motor Nature Trail <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Roaring%20Fork%20Motor%20Nature%20Trail%2C%20Gatlinburg%2C%20TN" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Traffic light #8, turn up Historic Nature Trail &middot; 10 min from the cabin</p>
+          <dl class="trail-facts"><div><dt>When</dt><dd>Dusk, the last hour the road is open</dd></div><div><dt>Where</dt><dd>Creek crossings, the Ogle place, the Ephraim Bales cabin</dd></div><div><dt>From the car</dt><dd>Yes, one way, 10 mph, pull-offs</dd></div><div><dt>Closes</dt><dd>Nov 30 for the winter, so this is the last week</dd></div></dl>
+          <p class="kidscore" title="Our odds, late November, dawn or dusk">Bear odds <span>&#9679;&#9679;&#9679;&#9679;<i></i></span></p>
+          <p>The in-town answer. Five and a half slow one-way miles through old-growth woods and creek bottoms ten minutes from the cabin, and reviewers' bear reports here run all fall. It closes for the season the day after you leave. Put the littles in pajamas and run it as the after-dinner drive on any evening that's dry; you're back at the cabin forty minutes later with two kids asleep.</p>
+          <p class="when">Best slot: Tuesday or Friday at 4:15, so you're out before the 5:25 dark. Also Wednesday's Plan B</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.7118" data-lng="-83.5148" data-name="Ober Mountain Wildlife Encounter" data-q="Ober Mountain, Gatlinburg, TN">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Ober%20Gatlinburg.jpg?width=480')"><span class="credit">Chris Hagerman · CC BY-SA 3.0</span></div>
+        <div class="trail-body">
+          <h3>Ober Mountain Wildlife Encounter <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Ober%20Mountain%2C%20Gatlinburg%2C%20TN" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Thursday on the plan &middot; up the tram from the Parkway</p>
+          <dl class="trail-facts"><div><dt>When</dt><dd>Any time the tram runs</dd></div><div><dt>Where</dt><dd>The bear habitat at the top, next to the tubing hill</dd></div><div><dt>Guaranteed</dt><dd>Yes. These bears live here</dd></div><div><dt>Kids</dt><dd>Fence-high viewing, stroller fine</dd></div></dl>
+          <p class="kidscore" title="Our odds, late November, dawn or dusk">Bear odds <span>&#9679;&#9679;&#9679;&#9679;&#9679;</span></p>
+          <p>The sure thing, and it's already Thanksgiving morning. Resident black bears in a habitat at the top of the tram, close enough that Snejana can see one, with the tubing hill and the coaster beside it. It's the only entry on this page where the bear is a certainty, and for a one- and a two-year-old it may be the one that lands. Everything else here is a maybe at dawn.</p>
+          <p class="when">Best slot: Thursday 10:30, before tubing, while the bears are fed and awake</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.7083" data-lng="-83.386" data-name="Greenbrier" data-q="Greenbrier Entrance, Great Smoky Mountains National Park">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Black%20bears%20in%20Great%20Smoky%20Mountains%20National%20Park%20%282653304831%29.jpg?width=480')"><span class="credit">Mark Ordonez · CC BY-SA 2.0</span></div>
+        <div class="trail-body">
+          <h3>Greenbrier <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Greenbrier%20Entrance%2C%20Great%20Smoky%20Mountains%20National%20Park" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">US-321 east of town &middot; 20 min from the cabin</p>
+          <dl class="trail-facts"><div><dt>When</dt><dd>Early morning</dd></div><div><dt>Where</dt><dd>The gravel road along the Middle Prong, the picnic area, Porters Creek road</dd></div><div><dt>From the car</dt><dd>Mostly. Windows down, slow</dd></div><div><dt>Stroller</dt><dd>Gravel; carrier better</dd></div></dl>
+          <p class="kidscore" title="Our odds, late November, dawn or dusk">Bear odds <span>&#9679;&#9679;&#9679;<i></i><i></i></span></p>
+          <p>The quiet entrance the fishing page also likes. A gravel road follows the river for miles with almost nobody on it, and bears use it as a path the same way you do. Lower odds than the cove, better odds of having the bear to yourselves. Pairs with a grandparent fishing morning.</p>
+          <p class="when">Best slot: a spare morning, 8 to 10, if the grandparents want to fish the Middle Prong</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.6567" data-lng="-83.5808" data-name="Elkmont and Little River Road" data-q="Elkmont Campground, Gatlinburg, TN">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Little%20River%20Road%20-%20October%202025%20-%20Sarah%20Stierch.jpg?width=480')"><span class="credit">Sarah Stierch · CC0</span></div>
+        <div class="trail-body">
+          <h3>Elkmont and Little River Road <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Elkmont%20Campground%2C%20Gatlinburg%2C%20TN" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">On the way to Cades Cove &middot; 20 min from the cabin</p>
+          <dl class="trail-facts"><div><dt>When</dt><dd>Dawn and dusk, both directions</dd></div><div><dt>Where</dt><dd>Pull-offs along Little River Road, the Elkmont campground loop, the old cottages</dd></div><div><dt>From the car</dt><dd>Yes</dd></div><div><dt>Note</dt><dd>Campground is closed for winter; the road in is open</dd></div></dl>
+          <p class="kidscore" title="Our odds, late November, dawn or dusk">Bear odds <span>&#9679;&#9679;&#9679;<i></i><i></i></span></p>
+          <p>You drive this road twice on Wednesday and twice more on the way in and out, so it's free odds. Slow down through the cove hardwoods between Sugarlands and Metcalf Bottoms and watch the river side. The Elkmont spur is a five-minute detour; bears walk the empty campground loop in the off-season.</p>
+          <p class="when">Best slot: the Wednesday drive out at 7:15 and the drive back after naps</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.636" data-lng="-83.495" data-name="Chimneys and Newfound Gap Road" data-q="Chimneys Picnic Area, Gatlinburg, TN">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Chimney%20Tops%20viewed%20from%20Chimney%20Tops%20overlook,%20May%202017.jpg?width=480')"><span class="credit">Thomson200 · CC0</span></div>
+        <div class="trail-body">
+          <h3>Chimneys and Newfound Gap Road <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Chimneys%20Picnic%20Area%2C%20Gatlinburg%2C%20TN" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Friday on the plan, on the way to Kuwohi &middot; 20 min from the cabin</p>
+          <dl class="trail-facts"><div><dt>When</dt><dd>Morning, on the way up</dd></div><div><dt>Where</dt><dd>Pull-offs between Sugarlands and the Chimneys, the picnic area if the gate is open</dd></div><div><dt>From the car</dt><dd>Yes</dd></div><div><dt>Note</dt><dd>Above the Chimneys it gets too high and cold for bears in late November</dd></div></dl>
+          <p class="kidscore" title="Our odds, late November, dawn or dusk">Bear odds <span>&#9679;&#9679;<i></i><i></i><i></i></span></p>
+          <p>The road up to Newfound Gap is bear country for its first eight miles, then it climbs out of it. Watch the river side and the oak slopes on the way up Friday; the pull-offs are wide and the picnic area, when open, is a classic spot. By Kuwohi you're looking for ravens, not bears.</p>
+          <p class="when">Best slot: Friday on the way up, 8 to 9, before the sun's on the road</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.6861" data-lng="-83.5369" data-name="Gatlinburg Trail from Sugarlands" data-q="Sugarlands Visitor Center">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Sugarlands%20Visitor%20Center--Warren%20Bielenberg%20%2828323974619%29.jpg?width=480')"><span class="credit">NPS / Warren Bielenberg · Public domain</span></div>
+        <div class="trail-body">
+          <h3>Gatlinburg Trail from Sugarlands <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Sugarlands%20Visitor%20Center" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Tuesday on the plan &middot; 10 min from the cabin</p>
+          <dl class="trail-facts"><div><dt>When</dt><dd>First light</dd></div><div><dt>Where</dt><dd>The river side of the trail, the old homesite chimneys</dd></div><div><dt>On foot</dt><dd>Flat gravel, two miles each way, stroller fine</dd></div><div><dt>Note</dt><dd>The one trail in the park that allows dogs, so bears keep their distance in the daytime</dd></div></dl>
+          <p class="kidscore" title="Our odds, late November, dawn or dusk">Bear odds <span>&#9679;&#9679;<i></i><i></i><i></i></span></p>
+          <p>A river corridor straight out of town. Bears cross it at dawn before the dog walkers arrive, then make themselves scarce. Low odds on a walk, but it's the walk you're already doing Tuesday, and the rangers at the visitor center post the week's sightings on a board inside. Ask them where the bears have been.</p>
+          <p class="when">Best slot: ask at the Sugarlands desk Tuesday morning, then decide</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.6997" data-lng="-83.5085" data-name="Mynatt Park and the edge of town" data-q="Mynatt Park, Gatlinburg, TN">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Black%20bear%20cubs%20climbing.JPG?width=480')"><span class="credit">Clayoquot · CC BY-SA 3.0</span></div>
+        <div class="trail-body">
+          <h3>Mynatt Park and the edge of town <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Mynatt%20Park%2C%20Gatlinburg%2C%20TN" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Off the Parkway at the south end &middot; 5 min from the cabin</p>
+          <dl class="trail-facts"><div><dt>When</dt><dd>Dusk</dd></div><div><dt>Where</dt><dd>The creek through the park, Ski Mountain Road, the first mile of the Spur</dd></div><div><dt>From the car</dt><dd>Yes, or the playground with an adult watching the creek</dd></div><div><dt>Note</dt><dd>Town bears are the bold ones. Trash rules matter here</dd></div></dl>
+          <p class="kidscore" title="Our odds, late November, dawn or dusk">Bear odds <span>&#9679;&#9679;&#9679;<i></i><i></i></span></p>
+          <p>Gatlinburg has a town bear population that lives on the ridges between the cabins, and the places they show are the creek corridors and the roads at dusk: Mynatt Park, Ski Mountain Road up to Ober, the Spur toward Pigeon Forge, and Herbert Holt Park, where fishing reviewers report one most weeks. These are the bears that have learned about trash and open car doors, so admire them from the car and keep the rules from the <a href="cabin.html#bears">cabin page</a>.</p>
+          <p class="when">Best slot: a dusk drive home from downtown, up Ski Mountain Road and back</p>
+        </div>
+      </div>
+      <div class="trail">
+        <div class="trail-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Black%20Bear%20Cubs%20Frolicking%20In%20The%20Tall%20Grass.jpg?width=480')"><span class="credit">Nancy J. Olds · CC BY-SA 4.0</span></div>
+        <div class="trail-body">
+          <h3><span class="spot-num">9</span>The cabin deck</h3>
+          <p class="meta">Home &middot; 0 min</p>
+          <dl class="trail-facts"><div><dt>When</dt><dd>Dusk and after dark</dd></div><div><dt>Where</dt><dd>The yard, the driveway, the trash can</dd></div><div><dt>From</dt><dd>Inside, through the glass</dd></div><div><dt>Rule</dt><dd>Trash inside, cars locked, nobody on the deck alone</dd></div></dl>
+          <p class="kidscore" title="Our odds, late November, dawn or dusk">Bear odds <span>&#9679;&#9679;&#9679;<i></i><i></i></span></p>
+          <p>Reviewers see bears from this porch most weeks. That's a sighting for the log and a reason the cabin page has a whole section on them: if one is in the yard, everyone comes inside, door shut, and you watch it from the window until it leaves. Cash's job is the trash lid. Don't photograph it from the deck, photograph it from the glass.</p>
+          <p class="when">Best slot: whenever. Log it, with the time, so the family knows when this one comes through</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="map">
+  <div class="container">
+    <p class="eyebrow">Where it is</p>
+    <h2>Map</h2>
+    <p class="intro">Numbered pins match the spots above. Tap a pin, then &ldquo;Read about this spot&rdquo; to jump to it; tap &ldquo;On the map&rdquo; on any spot to come back here. The cabin isn't pinned on purpose.</p>
+    <div id="leaflet" class="map" data-route="[]" data-route-b="[]"></div>
+  </div>
+</section>
+
+<section id="log">
+  <div class="container">
+    <p class="eyebrow">Keeping score</p>
+    <h2>Bear log <span class="log-total"><output id="log-count">0</output> seen</span></h2>
+    <p class="intro">Shared across every phone with the PIN. Log it where you saw it and what it was doing; the kids will want the count on Saturday.</p>
+    <form class="log-form" id="log-form">
+      <input id="log-where" type="text" maxlength="60" placeholder="Where (Cades Cove, Sparks Lane)" aria-label="Where" required>
+      <select id="log-n" aria-label="How many"><option value="1">1 bear</option><option value="2">2 bears</option><option value="3">3 bears</option><option value="4">4 bears</option><option value="5">5 bears</option></select>
+      <input id="log-note" type="text" maxlength="160" placeholder="What it was doing (optional)" aria-label="Note">
+      <button type="submit" class="go">Log it</button>
+    </form>
+    <p class="sync" id="log-status">Loading&hellip;</p>
+    <ul class="log-list" id="log-list"></ul>
+  </div>
+</section>
+
+<section id="rules">
+  <div class="container">
+    <p class="eyebrow">So it stays a good story</p>
+    <h2>The rules</h2>
+    <div class="table-wrap">
+    <table class="numbers">
+      <tbody>
+        <tr><td>50 yards</td><td>Half a football field. Getting closer than that on purpose is illegal in the park, and if the bear changes what it's doing because of you, you're too close whatever the distance.</td></tr>
+        <tr><td>Stay in the car</td><td>For a roadside bear the car is the perfect blind. Windows down, engine on, pull fully off the road. Nobody gets out, and nobody opens a door on the bear's side.</td></tr>
+        <tr><td>Never feed, never leave food</td><td>A fed bear becomes a bold bear and is often destroyed. Fines start at thousands of dollars. That includes the snack Slavik dropped at the picnic table.</td></tr>
+        <tr><td>Kids up</td><td>On a trail, the two littles go in carriers and Cash walks between adults the moment a bear is seen. Group up, look big, talk in a normal voice.</td></tr>
+        <tr><td>Don't run</td><td>Back away slowly, the way you came. Running starts a chase, and a bear is faster than anyone in this family, uphill or down.</td></tr>
+        <tr><td>If it keeps coming</td><td>Shout, wave arms, throw rocks, make yourselves bigger and louder together. Black bears that approach are almost always after food, not you. If one attacks, fight back; don't play dead.</td></tr>
+        <tr><td>Bear jams</td><td>A line of stopped cars on the loop is a bear. Don't pass, don't honk, don't walk up. Watch from where you are.</td></tr>
+        <tr><td>Report</td><td>A bear that comes into a picnic area or campsite, or follows people, gets reported to a ranger or at Sugarlands. In town, call the police non-emergency line, or the host for the cabin.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="intro">Not this trip: Cataloochee is two hours each way and is the elk valley, not a bear spot. Laurel Falls is closed to 2027. Nothing on this page needs a hike longer than the ones on the <a href="trails.html">trails page</a>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="pager"><a href="cabin.html">&larr; Cabin</a><span></span><a href="index.html">Hub &rarr;</a></div>
+    <p>Bear population, distance rule and safety guidance from the National Park Service. Road closures checked Nov 21, 2026. Photos from Wikimedia Commons and the NPS under the licenses shown.</p>
+  </div>
+</footer>
+
+<div class="bear-toast" id="bear-toast" role="status"></div>
+<div class="bear-peek" id="bear-peek" aria-hidden="true"><svg viewBox="0 0 120 100"><g fill="#2b1d14"><ellipse cx="60" cy="78" rx="46" ry="30"/><circle cx="60" cy="44" r="30"/><circle cx="36" cy="22" r="11"/><circle cx="84" cy="22" r="11"/></g><g fill="#6b4a33"><circle cx="36" cy="22" r="5"/><circle cx="84" cy="22" r="5"/><ellipse cx="60" cy="56" rx="14" ry="10"/></g><g fill="#0b1411"><circle cx="48" cy="40" r="3.5"/><circle cx="72" cy="40" r="3.5"/><ellipse cx="60" cy="52" rx="6" ry="4"/></g></svg></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="bear-side" viewBox="0 0 140 90"><g fill="#2b1d14"><ellipse cx="62" cy="50" rx="44" ry="26"/><circle cx="108" cy="36" r="18"/><circle cx="98" cy="22" r="6"/><circle cx="118" cy="22" r="6"/><circle cx="20" cy="50" r="12"/><rect x="30" y="62" width="12" height="26" rx="5"/><rect x="52" y="64" width="12" height="24" rx="5"/><rect x="78" y="64" width="12" height="24" rx="5"/><rect x="96" y="60" width="12" height="28" rx="5"/></g><g fill="#6b4a33"><ellipse cx="122" cy="42" rx="9" ry="6"/></g><circle cx="114" cy="33" r="2.5" fill="#0b1411"/><circle cx="129" cy="41" r="3" fill="#0b1411"/></symbol></svg>
+
+<nav class="tabbar" aria-label="Quick links">
+  <a href="index.html"><span>&#8962;</span>Hub</a>
+  <a href="#spots"><span>&#9673;</span>Spots</a>
+  <a href="#map"><span>&#9650;</span>Map</a>
+  <a href="#log"><span>&#x1F43B;</span>Log</a>
+  <a href="#rules"><span>&#9888;</span>Rules</a>
+</nav>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="site.js?v=10"></script>
+<script src="day.js?v=7"></script>
+<script src="photos.js?v=1" defer></script>
+<script src="bears.js?v=1"></script>
+</body>
+</html>
