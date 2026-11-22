@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=8">
+<link rel="stylesheet" href="site.css?v=9">
 <script>try{var t=localStorage.getItem("gatlinburg-2026-theme");if(t&&t!=="spruce")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 </head>
 <body class="locked day-page packing-page" data-page="packing">
@@ -63,6 +63,8 @@
     <h2>Tick as you load</h2>
     <p class="intro"><span class="star">&#9733;</span> marks the things that are hard or expensive to replace once you're up there. The list is shared: Allison ticks the baby bag, you tick the car, and both phones show both. Add anything missing at the bottom.</p>
 
+    <nav class="jumps" aria-label="Lists"><a class="jump" href="#cat-cold-kit" data-jump="cold-kit">Cold kit <b class="jump-count">0/11</b></a><a class="jump" href="#cat-vlad" data-jump="vlad">Vlad <b class="jump-count">0/12</b></a><a class="jump" href="#cat-allison" data-jump="allison">Allison <b class="jump-count">0/12</b></a><a class="jump" href="#cat-snejana" data-jump="snejana">Snejana <b class="jump-count">0/12</b></a><a class="jump" href="#cat-slavik" data-jump="slavik">Slavik <b class="jump-count">0/7</b></a><a class="jump" href="#cat-cash" data-jump="cash">Cash <b class="jump-count">0/7</b></a><a class="jump" href="#cat-the-car" data-jump="the-car">The car <b class="jump-count">0/9</b></a><a class="jump" href="#cat-medicine-bag" data-jump="medicine-bag">Medicine bag <b class="jump-count">0/9</b></a><a class="jump" href="#cat-cabin-and-safety" data-jump="cabin-and-safety">Cabin and safety <b class="jump-count">0/11</b></a><a class="jump" href="#cat-extra" data-jump="extra">Added <b class="jump-count">0/0</b></a></nav>
+
     <div class="pack-bar">
       <span class="hint">Packed <output id="count">0</output> of <span id="total">0</span> &middot; <span id="sync-status" class="sync">Loading&hellip;</span></span>
       <button class="ghost" type="button" id="name-btn">Who's packing?</button>
@@ -71,7 +73,7 @@
     </div>
 
     <div class="pack-grid" id="grid">
-      <div class="pack-cat" data-cat="cold-kit">
+      <div class="pack-cat" id="cat-cold-kit" data-cat="cold-kit">
         <h3>Cold kit <span class="cat-count"></span></h3>
         <p class="who">Mornings near 40, the ridge near freezing</p>
         <ul>
@@ -88,7 +90,7 @@
           <li data-id="cold-kit-headlamps-two"><label><input type="checkbox"><span>Headlamps, two<em>It's dark at 5:25 and cabin driveways have no lights.</em><small class="by"></small></span></label></li>
         </ul>
       </div>
-      <div class="pack-cat" data-cat="vlad">
+      <div class="pack-cat" id="cat-vlad" data-cat="vlad">
         <h3>Vlad <span class="cat-count"></span></h3>
         <p class="who">40. Driver, forge, turkey breast</p>
         <ul>
@@ -106,7 +108,7 @@
           <li data-id="vlad-cooler-for-the-drive-up"><label><input type="checkbox"><span>Cooler for the drive up<em>Food City is the last stop before the cabin; the cold stuff rides home in it Saturday.</em><small class="by"></small></span></label></li>
         </ul>
       </div>
-      <div class="pack-cat" data-cat="allison">
+      <div class="pack-cat" id="cat-allison" data-cat="allison">
         <h3>Allison <span class="cat-count"></span></h3>
         <p class="who">38. The one who notices things</p>
         <ul>
@@ -124,7 +126,7 @@
           <li data-id="allison-hair-ties-and-wool-socks-extra-of-both"><label><input type="checkbox"><span>Hair ties and wool socks, extra of both<em>Hair ties vanish, socks get wet at Cataract Falls.</em><small class="by"></small></span></label></li>
         </ul>
       </div>
-      <div class="pack-cat" data-cat="snejana">
+      <div class="pack-cat" id="cat-snejana" data-cat="snejana">
         <h3>Snejana <span class="cat-count"></span></h3>
         <p class="who">1 year old. The packing list is mostly hers</p>
         <ul>
@@ -142,7 +144,7 @@
           <li data-id="snejana-warm-hat-with-chin-strap-and-mittens-tha"><label><input type="checkbox"><span>Warm hat with chin strap and mittens that stay on<em>She counts as a heartbeat on the SkyLift. Hands get cold fast up there.</em><small class="by"></small></span></label></li>
         </ul>
       </div>
-      <div class="pack-cat" data-cat="slavik">
+      <div class="pack-cat" id="cat-slavik" data-cat="slavik">
         <h3>Slavik <span class="cat-count"></span></h3>
         <p class="who">2, three in December. The flight risk</p>
         <ul>
@@ -155,7 +157,7 @@
           <li data-id="slavik-toddler-harness-or-wrist-leash"><label><input type="checkbox"><span>Toddler harness or wrist leash<em>Decks, the Chondola platform, the SkyPark deck. This is the trip for it.</em><small class="by"></small></span></label></li>
         </ul>
       </div>
-      <div class="pack-cat" data-cat="cash">
+      <div class="pack-cat" id="cat-cash" data-cat="cash">
         <h3>Cash <span class="cat-count"></span></h3>
         <p class="who">7. Old enough to be useful</p>
         <ul>
@@ -168,7 +170,7 @@
           <li data-id="cash-uno-a-deck-of-cards-one-chapter-book"><label><input type="checkbox"><span>Uno, a deck of cards, one chapter book<small class="by"></small></span></label></li>
         </ul>
       </div>
-      <div class="pack-cat" data-cat="the-car">
+      <div class="pack-cat" id="cat-the-car" data-cat="the-car">
         <h3>The car <span class="cat-count"></span></h3>
         <p class="who">Reachable from the front seat</p>
         <ul>
@@ -183,7 +185,7 @@
           <li data-id="the-car-park-parking-tag-on-the-dash-once-you-bu"><label><input type="checkbox"><span>Park parking tag on the dash once you buy it Tuesday<small class="by"></small></span></label></li>
         </ul>
       </div>
-      <div class="pack-cat" data-cat="medicine-bag">
+      <div class="pack-cat" id="cat-medicine-bag" data-cat="medicine-bag">
         <h3>Medicine bag <span class="cat-count"></span></h3>
         <p class="who">Assume you'll need two of these</p>
         <ul>
@@ -198,7 +200,7 @@
           <li data-id="medicine-b-insurance-cards-pediatrician-s-number"><label><input type="checkbox"><span>Insurance cards, pediatrician's number<em>Nearest ER is 30 minutes away in Sevierville. See the numbers.</em><small class="by"></small></span></label></li>
         </ul>
       </div>
-      <div class="pack-cat" data-cat="cabin-and-safety">
+      <div class="pack-cat" id="cat-cabin-and-safety" data-cat="cabin-and-safety">
         <h3>Cabin and safety <span class="cat-count"></span></h3>
         <p class="who">Cabins are never childproofed</p>
         <ul>
@@ -215,7 +217,7 @@
           <li data-id="cabin-and--reusable-water-bottles-one-per-person"><label><input type="checkbox"><span>Reusable water bottles, one per person<small class="by"></small></span></label></li>
         </ul>
       </div>
-      <div class="pack-cat" data-cat="extra">
+      <div class="pack-cat" id="cat-extra" data-cat="extra">
         <h3>Added on the way <span class="cat-count"></span></h3>
         <p class="who">Things somebody thought of after the list was made</p>
         <ul></ul>
@@ -256,6 +258,6 @@
 </nav>
 
 <script src="site.js?v=9"></script>
-<script src="packing.js?v=1"></script>
+<script src="packing.js?v=2"></script>
 </body>
 </html>
