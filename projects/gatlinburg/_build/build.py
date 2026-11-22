@@ -84,7 +84,7 @@ def page(date):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-<link rel="stylesheet" href="site.css?v=8">
+<link rel="stylesheet" href="site.css?v=9">
 <script>try{{var t=localStorage.getItem("gatlinburg-2026-theme");if(t&&t!=="spruce")document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
 </head>
 <body class="locked day-page" data-date="{date if date != 'bonus' else ''}" data-page="{date}">
@@ -299,7 +299,7 @@ def trails_page():
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-<link rel="stylesheet" href="site.css?v=8">
+<link rel="stylesheet" href="site.css?v=9">
 <script>try{{var t=localStorage.getItem("gatlinburg-2026-theme");if(t&&t!=="spruce")document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
 </head>
 <body class="locked day-page trails-page" data-page="trails">
@@ -417,19 +417,22 @@ def packing_page():
     chips = ''.join('<a class="chip" href="%s">%s</a>' % (days[k]['file'], days[k]['short']) for k in order)
     cats = []
     opts = []
+    jumps = []
     for c in P['categories']:
         slug = re.sub(r'[^a-z0-9]+', '-', c['name'].lower()).strip('-')
         opts.append('<option value="%s">%s</option>' % (slug, c['name']))
+        jumps.append('<a class="jump" href="#cat-%s" data-jump="%s">%s <b class="jump-count">0/%d</b></a>' % (slug, slug, c['name'], len(c['items'])))
         items = '\n'.join('          <li data-id="%s"><label><input type="checkbox"><span>%s%s%s<small class="by"></small></span></label></li>' % (
             it['id'], '<span class="star">&#9733;</span> ' if it['star'] else '', it['name'], ('<em>%s</em>' % it['why']) if it['why'] else '') for it in c['items'])
-        cats.append('''      <div class="pack-cat" data-cat="%s">
+        cats.append('''      <div class="pack-cat" id="cat-%s" data-cat="%s">
         <h3>%s <span class="cat-count"></span></h3>
         <p class="who">%s</p>
         <ul>
 %s
         </ul>
-      </div>''' % (slug, c['name'], c['who'], items))
-    cats.append('''      <div class="pack-cat" data-cat="extra">
+      </div>''' % (slug, slug, c['name'], c['who'], items))
+    jumps.append('<a class="jump" href="#cat-extra" data-jump="extra">Added <b class="jump-count">0/0</b></a>')
+    cats.append('''      <div class="pack-cat" id="cat-extra" data-cat="extra">
         <h3>Added on the way <span class="cat-count"></span></h3>
         <p class="who">Things somebody thought of after the list was made</p>
         <ul></ul>
@@ -451,7 +454,7 @@ def packing_page():
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=8">
+<link rel="stylesheet" href="site.css?v=9">
 <script>try{{var t=localStorage.getItem("gatlinburg-2026-theme");if(t&&t!=="spruce")document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
 </head>
 <body class="locked day-page packing-page" data-page="packing">
@@ -499,6 +502,8 @@ def packing_page():
     <h2>Tick as you load</h2>
     <p class="intro"><span class="star">&#9733;</span> marks the things that are hard or expensive to replace once you're up there. The list is shared: Allison ticks the baby bag, you tick the car, and both phones show both. Add anything missing at the bottom.</p>
 
+    <nav class="jumps" aria-label="Lists">{''.join(jumps)}</nav>
+
     <div class="pack-bar">
       <span class="hint">Packed <output id="count">0</output> of <span id="total">0</span> &middot; <span id="sync-status" class="sync">Loading&hellip;</span></span>
       <button class="ghost" type="button" id="name-btn">Who's packing?</button>
@@ -544,7 +549,7 @@ def packing_page():
 </nav>
 
 <script src="site.js?v=9"></script>
-<script src="packing.js?v=1"></script>
+<script src="packing.js?v=2"></script>
 </body>
 </html>
 '''
