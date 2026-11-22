@@ -521,3 +521,12 @@ header{background:var(--header,rgba(11,20,17,.9))}
 .sweep input:checked + span{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--border)}
 .sweep input:checked + span em{text-decoration:none}
 .sweep-done{color:var(--gulf);font-size:.85rem;font-weight:600;margin:.6rem 0 0;min-height:1.2em}
+
+/* Packing page: jump buttons per list, with live counts */
+.jumps{display:flex;flex-wrap:wrap;gap:.45rem;margin:0 0 1rem}
+.jump{display:inline-flex;align-items:center;gap:.45rem;padding:.5rem .8rem;border:1px solid var(--border);border-radius:999px;background:var(--card);color:var(--text);text-decoration:none;font-size:.85rem;font-weight:600;min-height:40px}
+.jump b{font-family:"Inter",sans-serif;font-variant-numeric:tabular-nums;font-size:.72rem;font-weight:600;color:var(--gulf);background:var(--bg-soft);border-radius:999px;padding:.12rem .5rem}
+.jump.done{border-color:var(--gulf)}
+.jump.done b{background:var(--gulf);color:var(--bg)}
+.pack-cat[id]{scroll-margin-top:84px}
+@media (max-width:640px){.jumps{gap:.35rem}.jump{padding:.45rem .7rem;font-size:.8rem}}
