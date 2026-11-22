@@ -340,6 +340,18 @@ var GATE_BLOB = {"it":250000,"salt":"s8VU0iHwV5RWRNF+dbx0bg==","iv":"TTY7TrXBvtN
   var nav = document.querySelector('header .nav'); if (!nav) return;
   var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'theme-btn'; btn.title = 'Theme'; btn.setAttribute('aria-label', 'Change theme'); btn.innerHTML = '&#9680;';
   var inner = nav.querySelector('nav'); if (inner) nav.insertBefore(btn, inner); else nav.appendChild(btn);
+  /* Back and refresh, for the home-screen app where the browser's own buttons are gone. */
+  var appnav = document.createElement('div'); appnav.className = 'app-nav';
+  appnav.innerHTML = '<button type="button" class="app-btn" id="app-back" title="Back" aria-label="Back">&#8592;</button><button type="button" class="app-btn" id="app-refresh" title="Refresh" aria-label="Refresh">&#8635;</button>';
+  nav.insertBefore(appnav, btn);
+  appnav.querySelector('#app-back').addEventListener('click', function(){
+    var same = document.referrer && document.referrer.indexOf(location.origin + '/projects/gatlinburg') === 0;
+    if (history.length > 1 && same) history.back(); else location.href = 'index.html';
+  });
+  appnav.querySelector('#app-refresh').addEventListener('click', function(){
+    var b = this; b.classList.add('spin');
+    var u = new URL(location.href); u.searchParams.set('r', Date.now()); location.replace(u.toString());
+  });
   var menu = document.createElement('div'); menu.className = 'theme-menu'; menu.hidden = true;
   menu.innerHTML = THEMES.map(function(t){ return '<button type="button" data-t="' + t[0] + '"><span class="sw" style="background:' + t[2] + '"></span>' + t[1] + '</button>'; }).join('') + '<hr><button type="button" id="theme-install">Add to home screen&hellip;</button>';
   document.body.appendChild(menu);
