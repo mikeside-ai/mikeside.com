@@ -39,6 +39,8 @@
       var all = cat.querySelectorAll("li[data-id]"), done = cat.querySelectorAll("li[data-id] input:checked");
       var tag = cat.querySelector(".cat-count"); if (tag) tag.textContent = done.length + "/" + all.length;
       cat.classList.toggle("done", all.length && done.length === all.length);
+      var jump = document.querySelector('.jump[data-jump="' + cat.getAttribute("data-cat") + '"]');
+      if (jump) { jump.querySelector(".jump-count").textContent = done.length + "/" + all.length; jump.classList.toggle("done", all.length && done.length === all.length); }
     });
   }
   function ago(t){ var m = Math.round((Date.now() - t) / 60000); if (m < 1) return "just now"; if (m < 60) return m + "m ago"; var h = Math.round(m / 60); if (h < 24) return h + "h ago"; return Math.round(h / 24) + "d ago"; }
