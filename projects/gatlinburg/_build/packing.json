@@ -73,6 +73,162 @@
    ]
   },
   {
+   "name": "Vlad",
+   "who": "40. Driver, forge, turkey breast",
+   "items": [
+    {
+     "name": "Cotton long sleeves and jeans for Monday",
+     "why": "Iron Mountain Metal Craft: sparks melt synthetics, so no fleece or puffer at the anvil. Closed-toe shoes, and tie the hair back if Cash is watching from your hip.",
+     "star": true,
+     "id": "vlad-cotton-long-sleeves-and-jeans-for-monday"
+    },
+    {
+     "name": "Boots with grip, plus cabin shoes",
+     "why": "Cades Cove mud, Kuwohi ice, and a driveway that frosts. Slip-ons for the trash run so the boots stay by the door.",
+     "star": false,
+     "id": "vlad-boots-with-grip-plus-cabin-shoes"
+    },
+    {
+     "name": "Base layer, fleece, shell, beanie, gloves",
+     "why": "The Kuwohi ramp is 20 degrees colder than the cabin and windy. Layers come off in the car.",
+     "star": false,
+     "id": "vlad-base-layer-fleece-shell-beanie-gloves"
+    },
+    {
+     "name": "Swim trunks",
+     "why": "Hot tub, adults and Cash only, before dark.",
+     "star": false,
+     "id": "vlad-swim-trunks"
+    },
+    {
+     "name": "Offline maps downloaded and the door code screenshotted",
+     "why": "Do it at the Athens stop. There is no signal from Townsend to the cabin.",
+     "star": true,
+     "id": "vlad-offline-maps-downloaded-and-the-door-cod"
+    },
+    {
+     "name": "Battery pack, car charger, phone mount",
+     "why": "Navigation all week, photos all week, and the trolley app on foot downtown.",
+     "star": false,
+     "id": "vlad-battery-pack-car-charger-phone-mount"
+    },
+    {
+     "name": "Instant-read thermometer and a real carving knife",
+     "why": "Cabin knives are dull and cabin ovens lie. The turkey breast comes out at 165 and no earlier.",
+     "star": true,
+     "id": "vlad-instant-read-thermometer-and-a-real-carv"
+    },
+    {
+     "name": "Confirmations saved offline: Anakeesta, Iron Mountain, Mama's Farmhouse, parking tag",
+     "why": "One screenshot folder. Gatlinburg signal is fine; the park has none.",
+     "star": false,
+     "id": "vlad-confirmations-saved-offline-anakeesta-ir"
+    },
+    {
+     "name": "Zip ties, duct tape, a small multitool",
+     "why": "Hot tub cover strap, gate that will not quite fit, stroller clip that breaks. Something always does.",
+     "star": false,
+     "id": "vlad-zip-ties-duct-tape-a-small-multitool"
+    },
+    {
+     "name": "Your daily stuff, a week plus two days",
+     "why": "Pharmacies in town close early on Thanksgiving week.",
+     "star": false,
+     "id": "vlad-your-daily-stuff-a-week-plus-two-days"
+    },
+    {
+     "name": "Sunglasses and sunscreen",
+     "why": "November sun at 6,600 feet off snow is real. Kuwohi and the SkyLift.",
+     "star": false,
+     "id": "vlad-sunglasses-and-sunscreen"
+    },
+    {
+     "name": "Cooler for the drive up",
+     "why": "Food City is the last stop before the cabin; the cold stuff rides home in it Saturday.",
+     "star": false,
+     "id": "vlad-cooler-for-the-drive-up"
+    }
+   ]
+  },
+  {
+   "name": "Allison",
+   "who": "38. The one who notices things",
+   "items": [
+    {
+     "name": "Base layer, fleece, shell, beanie, gloves",
+     "why": "Same rule as everyone: layers, not one big coat. Mornings at 40, the ridge below freezing.",
+     "star": false,
+     "id": "allison-base-layer-fleece-shell-beanie-gloves"
+    },
+    {
+     "name": "Boots with grip, and warm slippers for the cabin",
+     "why": "Hillside cabins have cold floors and a frosty driveway. Slippers mean the boots stay by the door.",
+     "star": false,
+     "id": "allison-boots-with-grip-and-warm-slippers-for-th"
+    },
+    {
+     "name": "Swimsuit and a robe",
+     "why": "The walk from the deck door to the hot tub is the cold part. Hot tub is before dark.",
+     "star": false,
+     "id": "allison-swimsuit-and-a-robe"
+    },
+    {
+     "name": "Comfortable shoes for the long walking days",
+     "why": "Dollywood, Anakeesta, the Parkway. Ten thousand steps with a kid on your hip.",
+     "star": false,
+     "id": "allison-comfortable-shoes-for-the-long-walking-d"
+    },
+    {
+     "name": "Daypack of your own",
+     "why": "Yours, not the diaper bag: water, lip balm, phone, the snack nobody else knows about.",
+     "star": false,
+     "id": "allison-daypack-of-your-own"
+    },
+    {
+     "name": "Lip balm, hand lotion, hand warmers",
+     "why": "Mountain air in November is dry and the chairlift is cold. Hand warmers in every pocket.",
+     "star": false,
+     "id": "allison-lip-balm-hand-lotion-hand-warmers"
+    },
+    {
+     "name": "Your daily stuff, a week plus two days",
+     "why": "Pharmacies in town close early on Thanksgiving week.",
+     "star": false,
+     "id": "allison-your-daily-stuff-a-week-plus-two-days"
+    },
+    {
+     "name": "Laundry pods and a mesh bag for small things",
+     "why": "The cabin has a washer and dryer. One load Tuesday night resets the kid clothes.",
+     "star": true,
+     "id": "allison-laundry-pods-and-a-mesh-bag-for-small-th"
+    },
+    {
+     "name": "The Thanksgiving shopping list, on paper",
+     "why": "Food City on Wednesday, with one adult shopping and one walking the kids. Paper beats a phone with a toddler on it.",
+     "star": true,
+     "id": "allison-the-thanksgiving-shopping-list-on-paper"
+    },
+    {
+     "name": "Something for the nap hours",
+     "why": "Book, downloaded shows, headphones. 12:30 to 2:30 every day is yours if you plan for it.",
+     "star": false,
+     "id": "allison-something-for-the-nap-hours"
+    },
+    {
+     "name": "Sunglasses and sunscreen",
+     "why": "Kuwohi, the SkyLift and the SkyBridge are all in full sun when it is out.",
+     "star": false,
+     "id": "allison-sunglasses-and-sunscreen"
+    },
+    {
+     "name": "Hair ties and wool socks, extra of both",
+     "why": "Hair ties vanish, socks get wet at Cataract Falls.",
+     "star": false,
+     "id": "allison-hair-ties-and-wool-socks-extra-of-both"
+    }
+   ]
+  },
+  {
    "name": "Snejana",
    "who": "1 year old. The packing list is mostly hers",
    "items": [
