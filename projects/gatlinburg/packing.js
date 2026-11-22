@@ -14,12 +14,35 @@
   var dirty = false, saving = false, online = true;
 
   function say(t, cls){ if (!status) return; status.textContent = t; status.className = "sync " + (cls || ""); }
-  function who(){
-    if (me) return me;
-    var n = window.prompt("Who's packing? First name, so the list can show who ticked what.");
-    if (n) { me = n.trim().slice(0, 20); try { localStorage.setItem(NAME_KEY, me); } catch(e){} }
-    return me || "someone";
+  function who(){ return me || "someone"; }
+  /* Who's packing: a picker sheet instead of a text prompt. Picks are remembered per phone. */
+  var NAMES = ["Vlad", "Allison", "Grandma", "Grandpa"];
+  var sheet = null, pending = null;
+  function setMe(n){
+    me = (n || "").trim().slice(0, 20);
+    try { if (me) localStorage.setItem(NAME_KEY, me); else localStorage.removeItem(NAME_KEY); } catch(e){}
+    var nb = document.getElementById("name-btn"); if (nb) nb.textContent = me ? "Packing as " + me : "Who's packing?";
   }
+  function askWho(then){
+    pending = then || null;
+    if (!sheet) {
+      sheet = document.createElement("div"); sheet.className = "who-sheet"; sheet.hidden = true;
+      sheet.innerHTML = '<div class="who-box"><p class="who-title">Who\'s packing?</p><p class="who-sub">So the list can show who ticked what.</p><div class="who-grid">' +
+        NAMES.map(function(n){ return '<button type="button" data-n="' + n + '">' + n + '</button>'; }).join('') +
+        '</div><form class="who-other"><input type="text" maxlength="20" placeholder="Someone else" aria-label="Name"><button type="submit">Use</button></form><button type="button" class="who-cancel">Cancel</button></div>';
+      document.body.appendChild(sheet);
+      sheet.addEventListener("click", function(e){
+        var b = e.target.closest("button[data-n]");
+        if (b) { pick(b.getAttribute("data-n")); return; }
+        if (e.target.closest(".who-cancel") || e.target === sheet) { close(); if (pending) { var p = pending; pending = null; p(false); } }
+      });
+      sheet.querySelector(".who-other").addEventListener("submit", function(e){ e.preventDefault(); var v = sheet.querySelector("input").value.trim(); if (v) pick(v); });
+    }
+    [].slice.call(sheet.querySelectorAll("button[data-n]")).forEach(function(b){ b.classList.toggle("on", b.getAttribute("data-n") === me); });
+    sheet.hidden = false;
+  }
+  function pick(n){ setMe(n); close(); if (pending) { var p = pending; pending = null; p(true); } }
+  function close(){ if (sheet) sheet.hidden = true; }
 
   // ---- render ----
   function itemEl(id, name, why, star, custom){
@@ -93,7 +116,9 @@
   grid.addEventListener("change", function(e){
     var box = e.target; if (box.type !== "checkbox") return;
     var li = box.closest("li[data-id]"); if (!li) return;
-    set(li.getAttribute("data-id"), { c: box.checked ? 1 : 0, by: box.checked ? who() : "" });
+    var id = li.getAttribute("data-id");
+    if (box.checked && !me) { box.checked = false; askWho(function(ok){ if (ok) { box.checked = true; set(id, { c: 1, by: who() }); } }); return; }
+    set(id, { c: box.checked ? 1 : 0, by: box.checked ? who() : "" });
   });
   grid.addEventListener("click", function(e){
     var rm = e.target.closest(".rm"); if (!rm) return;
@@ -106,6 +131,7 @@
     e.preventDefault();
     var name = document.getElementById("add-name").value.trim(); var cat = document.getElementById("add-cat").value;
     if (!name) return;
+    if (!me) { askWho(function(ok){ if (ok) addForm.requestSubmit ? addForm.requestSubmit() : addForm.dispatchEvent(new Event("submit", {cancelable:true})); }); return; }
     var id = "x-" + Date.now().toString(36);
     doc.data[id] = { name: name.replace(/[<>]/g, ""), cat: cat, c: 0, by: who(), at: Date.now() };
     dirty = true; persistLocal(); renderCustom(); paint(); push();
@@ -120,7 +146,7 @@
   });
   var print = document.getElementById("print"); if (print) print.addEventListener("click", function(){ window.print(); });
   var nameBtn = document.getElementById("name-btn");
-  if (nameBtn) { nameBtn.textContent = me ? "Packing as " + me : "Who's packing?"; nameBtn.addEventListener("click", function(){ me = ""; try { localStorage.removeItem(NAME_KEY); } catch(e){} who(); nameBtn.textContent = me ? "Packing as " + me : "Who's packing?"; }); }
+  if (nameBtn) { nameBtn.textContent = me ? "Packing as " + me : "Who's packing?"; nameBtn.addEventListener("click", function(){ askWho(null); }); }
 
   renderCustom(); paint(); say("Loading the shared list…");
   pull(); setInterval(pull, 12000);
