@@ -84,7 +84,7 @@ def page(date):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-<link rel="stylesheet" href="site.css?v=11">
+<link rel="stylesheet" href="site.css?v=12">
 <script>try{{var t=localStorage.getItem("gatlinburg-2026-theme");if(t&&t!=="spruce")document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
 </head>
 <body class="locked day-page" data-date="{date if date != 'bonus' else ''}" data-page="{date}">
@@ -127,7 +127,7 @@ def page(date):
   <span class="credit">{credit(d['banner'])}</span>
 </div>
 
-<div class="chips container" aria-label="Days">{chips}<a class="chip" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip" href="cabin.html">Cabin</a></div>
+<div class="chips container" aria-label="Days">{chips}<a class="chip" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip" href="cabin.html">Cabin</a><a class="chip" href="bears.html">Bears</a></div>
 
 <section class="daytop">
   <div class="container">
@@ -299,7 +299,7 @@ def trails_page():
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-<link rel="stylesheet" href="site.css?v=11">
+<link rel="stylesheet" href="site.css?v=12">
 <script>try{{var t=localStorage.getItem("gatlinburg-2026-theme");if(t&&t!=="spruce")document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
 </head>
 <body class="locked day-page trails-page" data-page="trails">
@@ -339,7 +339,7 @@ def trails_page():
   <span class="credit">{credit('Little River Road - October 2025 - Sarah Stierch.jpg')}</span>
 </div>
 
-<div class="chips container" aria-label="Days">{chips}<a class="chip on" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip" href="cabin.html">Cabin</a></div>
+<div class="chips container" aria-label="Days">{chips}<a class="chip on" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip" href="cabin.html">Cabin</a><a class="chip" href="bears.html">Bears</a></div>
 
 <section class="daytop">
   <div class="container">
@@ -454,7 +454,7 @@ def packing_page():
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=11">
+<link rel="stylesheet" href="site.css?v=12">
 <script>try{{var t=localStorage.getItem("gatlinburg-2026-theme");if(t&&t!=="spruce")document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
 </head>
 <body class="locked day-page packing-page" data-page="packing">
@@ -494,7 +494,7 @@ def packing_page():
   <span class="credit">{credit('Little River Road - October 2025 - Sarah Stierch.jpg')}</span>
 </div>
 
-<div class="chips container" aria-label="Pages">{chips}<a class="chip" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip" href="cabin.html">Cabin</a><a class="chip on" href="packing.html">Packing</a></div>
+<div class="chips container" aria-label="Pages">{chips}<a class="chip" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip" href="cabin.html">Cabin</a><a class="chip" href="bears.html">Bears</a><a class="chip on" href="packing.html">Packing</a></div>
 
 <section id="list">
   <div class="container">
