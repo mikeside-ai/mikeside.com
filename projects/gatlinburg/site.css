@@ -530,3 +530,13 @@ header{background:var(--header,rgba(11,20,17,.9))}
 .jump.done b{background:var(--gulf);color:var(--bg)}
 .pack-cat[id]{scroll-margin-top:84px}
 @media (max-width:640px){.jumps{gap:.35rem}.jump{padding:.45rem .7rem;font-size:.8rem}}
+
+/* Back and refresh buttons in the header. Always on phones and in the installed app; hidden on desktop browsers. */
+.app-nav{display:none;gap:.35rem;flex:none}
+.app-btn{font:inherit;font-size:1.05rem;line-height:1;background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:999px;width:2.1rem;height:2.1rem;cursor:pointer;flex:none;display:inline-flex;align-items:center;justify-content:center}
+.app-btn:hover{color:var(--text);border-color:var(--mist)}
+.app-btn.spin{animation:appspin .8s linear infinite}
+@keyframes appspin{to{transform:rotate(360deg)}}
+@media (max-width:640px){.app-nav{display:flex}}
+@media (display-mode:standalone){.app-nav{display:flex}}
+@media print{.app-nav{display:none}}
