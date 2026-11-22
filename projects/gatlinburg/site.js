@@ -407,6 +407,6 @@ var GATE_BLOB = {"it":250000,"salt":"s8VU0iHwV5RWRNF+dbx0bg==","iv":"TTY7TrXBvtN
   if (!done || !window.fetch) return;
   fetch('https://mikeside-publish-production.up.railway.app/state/packing', {cache:'no-store'}).then(function(r){ return r.json(); }).then(function(d){
     var n = 0, items = 0; Object.keys(d.data || {}).forEach(function(k){ var it = d.data[k]; if (!it || it.gone) return; if (k.indexOf('x-') === 0) items++; if (it.c) n++; });
-    done.textContent = n; total.textContent = 66 + items;
+    done.textContent = n; total.textContent = 90 + items;
   }).catch(function(){ done.textContent = '?'; });
 })();
