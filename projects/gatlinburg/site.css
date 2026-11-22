@@ -540,3 +540,18 @@ header{background:var(--header,rgba(11,20,17,.9))}
 @media (max-width:640px){.app-nav{display:flex}}
 @media (display-mode:standalone){.app-nav{display:flex}}
 @media print{.app-nav{display:none}}
+
+/* Who's packing picker */
+.who-sheet{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.55);display:flex;align-items:flex-end;justify-content:center;padding:1rem}
+.who-sheet[hidden]{display:none}
+.who-box{width:100%;max-width:26rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.1rem 1rem;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.who-title{font-family:"Fraunces",serif;font-size:1.25rem;margin:0}
+.who-sub{color:var(--muted);font-size:.85rem;margin:.2rem 0 .9rem}
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.who-grid button{font:inherit;font-weight:600;font-size:1rem;padding:.8rem;border-radius:12px;border:1px solid var(--border);background:var(--bg-soft);color:var(--text);cursor:pointer;min-height:48px}
+.who-grid button.on{border-color:var(--gulf);color:var(--gulf)}
+.who-other{display:grid;grid-template-columns:1fr auto;gap:.5rem;margin-top:.6rem}
+.who-other input{font:inherit;padding:.65rem .8rem;border-radius:12px;border:1px solid var(--border);background:var(--bg);color:var(--text);min-width:0}
+.who-other button{font:inherit;font-weight:600;padding:.65rem 1rem;border-radius:12px;border:1px solid var(--border);background:var(--bg-soft);color:var(--text);cursor:pointer}
+.who-cancel{display:block;width:100%;margin-top:.6rem;font:inherit;font-size:.85rem;background:transparent;border:0;color:var(--muted);cursor:pointer;padding:.5rem}
+@media (min-width:641px){.who-sheet{align-items:center}}
