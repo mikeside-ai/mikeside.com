@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b1411">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<title>Mountain coasters · Gatlinburg week</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="site.css?v=12">
+</head>
+<body class="locked day-page trails-page" data-page="coasters">
+
+<div id="gate">
+  <form class="gate-box" id="gate-form" autocomplete="off">
+    <span class="logo"><span class="logo-mark big" aria-hidden="true">&#x1F43B;</span></span>
+    <h1>Gatlinburg week</h1>
+    <p>Family page. Enter the PIN to open it.</p>
+    <input id="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" aria-label="PIN" autofocus>
+    <button type="submit">Open</button>
+    <div class="err" id="gate-err"></div>
+  </form>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">&#x1F43B;</span>Gatlinburg <span>week</span></a>
+    <nav aria-label="Trip pages">
+      <ul>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="#picks">Picks</a></li>
+        <li><a href="#all">All of them</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#rules">Rules</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="banner" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Ober%20Gatlinburg.jpg?width=1400')">
+  <div class="banner-shade"></div>
+  <div class="container banner-text">
+    <p class="kicker">Eleven tracks, one seven-year-old</p>
+    <h1>Mountain coasters</h1>
+    <p class="banner-date">Every alpine coaster within 35 minutes of the cabin, what each one costs, who can ride it, and the three worth the drive.</p>
+  </div>
+  <span class="credit">Chris Hagerman · CC BY-SA 3.0</span>
+</div>
+
+<div class="chips container" aria-label="Days"><a class="chip" href="day-0-sun.html">Sun 22</a><a class="chip" href="day-1-mon.html">Mon 23</a><a class="chip" href="day-2-tue.html">Tue 24</a><a class="chip" href="day-3-wed.html">Wed 25</a><a class="chip" href="day-4-thu.html">Thu 26</a><a class="chip" href="day-5-fri.html">Fri 27</a><a class="chip" href="day-6-sat.html">Sat 28</a><a class="chip" href="bonus-dollywood.html">Bonus</a><a class="chip" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip" href="cabin.html">Cabin</a><a class="chip" href="bears.html">Bears</a><a class="chip on" href="coasters.html">Coasters</a></div>
+
+<section class="daytop">
+  <div class="container">
+    <p class="lede">Gatlinburg, Pigeon Forge and Sevierville have more mountain coasters than anywhere in the country: a sled on a rail, you work the brakes, a lift hill up and a run down through the trees. Two of them are already on the plan (Ober on Thursday, Anakeesta on Tuesday) and a third sits beside Monday's stop at The Island. This page is the rest of the field, ranked for this crew, because the rules decide who rides and the differences between tracks are bigger than the brochures admit.</p>
+    <div class="callout water">
+      <h3>Who can ride, this week</h3>
+      <p><strong>Cash</strong> rides every one of them as the front passenger with an adult driving; at seven he's over the 38-inch passenger line everywhere and under the 54 to 56 inches needed to drive. He can't ride alone anywhere this trip. <strong>Slavik</strong> is the problem: nearly every coaster's rule is age 3 <em>and</em> 38 inches, and he's two until December 28. He's past the height, but the rule is the rule, so plan on him feeding goats or riding the carousel while Cash rides, and treat any coaster that lets him on as a bonus, not a promise. Ober's note on Thursday has been changed to say so. <strong>Snejana</strong> doesn't ride. Rail Runner at Anakeesta has a 230-pound combined weight cap that rules out most adult-and-kid pairs; everything else is 375 pounds, 330 in rain.</p>
+    </div>
+  </div>
+</section>
+
+<section id="picks">
+  <div class="container">
+    <p class="eyebrow">If you ride three</p>
+    <h2>Our picks</h2>
+    <div class="table-wrap">
+    <table class="numbers">
+      <thead><tr><th>Pick</th><th>Why</th><th>When</th></tr></thead>
+      <tbody>
+        <tr><td>Goats on the Roof + Smoky Mountain Alpine</td><td>Two minutes apart on Wears Valley Road. The Alpine Coaster is the best-reviewed track in the Smokies and Goats is the crowd favorite with a single uninterrupted run, and the littles get goats to feed while Cash rides. One stop, two coasters, everyone gets something.</td><td>A Wears Valley afternoon, or the Plan B drive home Saturday</td></tr>
+        <tr><td>Lost Mine</td><td>Already beside Monday's stop at The Island. Nine minutes long, mine-themed with a tunnel, no change to the plan.</td><td>Monday 3:30</td></tr>
+        <tr><td>Pigeon Forge Racing Coaster</td><td>The only one where you race: two lanes side by side, you and Cash against Allison. Top rated, Cash rides free with you, and it's the closest Pigeon Forge track to Gatlinburg.</td><td>Monday on the way home, lights until 10</td></tr>
+        <tr><td>Keep: Tennessee Flyer</td><td>Not the best track but you're already at the top of the tram Thursday, and the view is unmatched. Closed if it rains or freezes.</td><td>Thursday 12:15, as planned</td></tr>
+        <tr><td>Skip: Rail Runner</td><td>Worst reviews here, a 230 lb combined cap, long holiday lines. If you ride at Anakeesta Tuesday, make it Hellbender, and only with a short line.</td><td>&mdash;</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section id="all">
+  <div class="container">
+    <p class="eyebrow">The field</p>
+    <h2>All of them, best fit first</h2>
+    <p class="intro">Numbered to match the map. Prices are what riders paid this fall and change by day and bundle; the rules are from each operator. The Cash score is how well a seven-year-old passenger does there, with the littles' options counted.</p>
+    <div class="trails">
+      <div class="trail" data-lat="35.7934" data-lng="-83.5965" data-name="Smoky Mountain Alpine Coaster" data-q="Smoky Mountain Alpine Coaster, 867 Wears Valley Rd, Pigeon Forge">
+        <div class="trail-body">
+          <h3>Smoky Mountain Alpine Coaster <span class="rate" data-say="The most-reviewed coaster in the Smokies. Reviewers call it long, smooth, well run, and the best at night; a 3-year-old rode it happily. Second ride offered at half price." title="Google rating, 16,661 reviews">&#9733; 4.7<small>16,661</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Smoky%20Mountain%20Alpine%20Coaster%2C%20867%20Wears%20Valley%20Rd%2C%20Pigeon%20Forge" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">867 Wears Valley Rd, Pigeon Forge &middot; 30 min from the cabin, on the Wears Valley Plan B route</p>
+          <dl class="trail-facts"><div><dt>Track</dt><dd>About a mile, 7 to 8 minutes</dd></div><div><dt>Speed</dt><dd>27 mph, you brake</dd></div><div><dt>Rules</dt><dd>Driver 56&quot; and 16+; passenger 38&quot;</dd></div><div><dt>Price</dt><dd>About $17; re-ride about $10</dd></div><div><dt>Rain</dt><dd>Runs, with shields; lower weight limit</dd></div><div><dt>Hours</dt><dd>10 to 10, later Fri and Sat</dd></div></dl>
+          <p class="kidscore" title="Our fit for Cash as a passenger, 1 to 5">Cash fit <span>&#9679;&#9679;&#9679;&#9679;&#9679;</span></p>
+          <p class="why">The big one. A mile of track into the woods above Wears Valley, a long pull up and a real run down, and the best reviews of any coaster in the area by a wide margin. Cash rides in front of one of you. The same road has Goats on the Roof two minutes further on, so a Wears Valley afternoon gets both.</p>
+          <p class="when">Best slot: a Wears Valley afternoon, 2 to 4, which is also the Plan B drive home on Saturday</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.7894" data-lng="-83.6122" data-name="Goat Coaster at Goats on the Roof" data-q="Goats on the Roof, 1341 Wears Valley Rd, Pigeon Forge">
+        <div class="trail-body">
+          <h3>Goat Coaster at Goats on the Roof <span class="rate" data-say="Reviewers who have ridden every coaster in the area keep naming this one the favorite: one long lift, then an uninterrupted run with music and lights at night, and real goats to feed at the bottom. Cheapest of the lot." title="Google rating, 6,747 reviews">&#9733; 4.7<small>6,747</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Goats%20on%20the%20Roof%2C%201341%20Wears%20Valley%20Rd%2C%20Pigeon%20Forge" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">1341 Wears Valley Rd, Pigeon Forge &middot; 32 min from the cabin</p>
+          <dl class="trail-facts"><div><dt>Track</dt><dd>4,875 ft, about 7 minutes</dd></div><div><dt>Speed</dt><dd>30 mph</dd></div><div><dt>Rules</dt><dd>Driver 54&quot; and 16+; passenger age 3</dd></div><div><dt>Price</dt><dd>About $12 to $15 plus tax</dd></div><div><dt>Rain</dt><dd>Runs</dd></div><div><dt>Hours</dt><dd>9 to 10</dd></div></dl>
+          <p class="kidscore" title="Our fit for Cash as a passenger, 1 to 5">Cash fit <span>&#9679;&#9679;&#9679;&#9679;&#9679;</span></p>
+          <p class="why">Our pick for the whole crew. The coaster is a single long climb and then one continuous downhill with no mid-ride lifts, which is what a seven-year-old wants, and while you and Cash ride, Allison has Slavik and Snejana feeding goats that stand on a roof, with a $3 cup of feed and a dinosaur mini-golf course behind them. It's the one coaster stop where the two littles get something too.</p>
+          <p class="when">Best slot: pair it with the Alpine Coaster next door; late afternoon into the lights</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.7963" data-lng="-83.5444" data-name="Rocky Top Mountain Coaster" data-q="Rocky Top Mountain Coaster, 2940 Veterans Blvd, Pigeon Forge">
+        <div class="trail-body">
+          <h3>Rocky Top Mountain Coaster <span class="rate" data-say="Longest in the area: three miles with tunnels, 360s and four lift hills, nine minutes. Reviewers love the night lights; a few find the mid-ride lifts break the flow. Receipt gets a $10 re-ride any time that day." title="Google rating, 6,609 reviews">&#9733; 4.7<small>6,609</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Rocky%20Top%20Mountain%20Coaster%2C%202940%20Veterans%20Blvd%2C%20Pigeon%20Forge" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">2940 Veterans Blvd, Pigeon Forge &middot; 25 min from the cabin, five from The Island</p>
+          <dl class="trail-facts"><div><dt>Track</dt><dd>Over 15,000 ft, 9 minutes</dd></div><div><dt>Speed</dt><dd>30 mph</dd></div><div><dt>Rules</dt><dd>Driver 56&quot; and 16+; passenger 38&quot; and age 3</dd></div><div><dt>Price</dt><dd>About $16 to $18; re-ride $10</dd></div><div><dt>Rain</dt><dd>Runs; 330 lb limit when wet</dd></div><div><dt>Hours</dt><dd>10 to 10, 11 Fri and Sat</dd></div></dl>
+          <p class="kidscore" title="Our fit for Cash as a passenger, 1 to 5">Cash fit <span>&#9679;&#9679;&#9679;&#9679;<i></i></span></p>
+          <p class="why">The longest ride on the list by a lot, with tunnels and surprises and four separate lift hills. Nine minutes is a long time in a coaster for a seven-year-old and that is a plus, not a minus. The lifts slow the pace, so it feels more like a ride than a run. Five minutes from The Island, which puts it inside Monday.</p>
+          <p class="when">Best slot: Monday after The Island, if the knife forge didn't eat the afternoon</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.809" data-lng="-83.5742" data-name="Lost Mine Mountain Coaster" data-q="Lost Mine Mountain Coaster, 2509 Teaster Ln, Pigeon Forge">
+        <div class="trail-body">
+          <h3>Lost Mine Mountain Coaster <span class="rate" data-say="Mine-themed, 5,400 feet, over nine minutes, with a mini-golf course attached. Reviewers rate the staff and the theming; the golf course has no shade, which doesn't matter in November." title="Google rating, 1,466 reviews">&#9733; 4.7<small>1,466</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Lost%20Mine%20Mountain%20Coaster%2C%202509%20Teaster%20Ln%2C%20Pigeon%20Forge" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">2509 Teaster Ln, Pigeon Forge &middot; next to The Island, 25 min from the cabin</p>
+          <dl class="trail-facts"><div><dt>Track</dt><dd>5,400 ft, over 9 minutes</dd></div><div><dt>Speed</dt><dd>30+ mph</dd></div><div><dt>Rules</dt><dd>Driver 54&quot;; passenger 38&quot; and age 3</dd></div><div><dt>Price</dt><dd>About $18; golf bundle</dd></div><div><dt>Rain</dt><dd>Runs; 330 lb wet</dd></div><div><dt>Hours</dt><dd>10 to 10</dd></div></dl>
+          <p class="kidscore" title="Our fit for Cash as a passenger, 1 to 5">Cash fit <span>&#9679;&#9679;&#9679;&#9679;<i></i></span></p>
+          <p class="why">The one that's already on Monday's map. It sits on Teaster Lane beside The Island, so it's a ten-minute detour from the carousel and the fountains, mine-themed with a tunnel, and over nine minutes long. If you only ride one coaster this week without changing the plan, this is it.</p>
+          <p class="when">Best slot: Monday, 3:30, between The Island and the drive home</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.773" data-lng="-83.5392" data-name="Pigeon Forge Racing Coaster" data-q="Pigeon Forge Racing Coaster, 115 Conner Heights Rd, Pigeon Forge">
+        <div class="trail-body">
+          <h3>Pigeon Forge Racing Coaster <span class="rate" data-say="Highest rated in the area: two parallel tracks that race side by side, the first of its kind in the country, with ride photos and video. The one complaint is the price, around $25 a rider. Ages 3 to 6 ride free with an adult." title="Google rating, 3,409 reviews">&#9733; 4.9<small>3,409</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Pigeon%20Forge%20Racing%20Coaster%2C%20115%20Conner%20Heights%20Rd%2C%20Pigeon%20Forge" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">115 Conner Heights Rd, Pigeon Forge &middot; south end of the Parkway, 20 min from the cabin</p>
+          <dl class="trail-facts"><div><dt>Track</dt><dd>Two side-by-side lanes</dd></div><div><dt>Speed</dt><dd>30 mph</dd></div><div><dt>Rules</dt><dd>Driver 56&quot;; passenger 38&quot; and age 3; driver 16+</dd></div><div><dt>Price</dt><dd>About $25; ages 3 to 6 free with an adult</dd></div><div><dt>Rain</dt><dd>Runs, with shields</dd></div><div><dt>Hours</dt><dd>10 to 10</dd></div></dl>
+          <p class="kidscore" title="Our fit for Cash as a passenger, 1 to 5">Cash fit <span>&#9679;&#9679;&#9679;&#9679;&#9679;</span></p>
+          <p class="why">The new one, opened 2025, and the only one where the two of you can race: Vlad and Cash in one lane, Allison in the other, side by side down the hill. It's the most expensive single ride in town, but Cash is free with you, and the race is the thing he'll talk about on the drive home. Closest Pigeon Forge coaster to Gatlinburg.</p>
+          <p class="when">Best slot: Monday on the way back to Gatlinburg, or any dry evening; the lights are on until 10</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.72" data-lng="-83.5099" data-name="Moonshine Mountain Coaster" data-q="Moonshine Mountain Coaster, 306 Parkway, Gatlinburg">
+        <div class="trail-body">
+          <h3>Moonshine Mountain Coaster <span class="rate" data-say="The downtown Gatlinburg coaster (it used to be the Gatlinburg Mountain Coaster). Fast, friendly staff, photos and video of your ride, and a $10 re-ride if you keep your ticket. Stairs to the loading area." title="Google rating, 6,835 reviews">&#9733; 4.6<small>6,835</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Moonshine%20Mountain%20Coaster%2C%20306%20Parkway%2C%20Gatlinburg" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">306 Parkway, Gatlinburg &middot; 5 min from the cabin, walkable from downtown</p>
+          <dl class="trail-facts"><div><dt>Track</dt><dd>Over 3,000 ft, 5 minutes</dd></div><div><dt>Speed</dt><dd>30 mph</dd></div><div><dt>Rules</dt><dd>Driver 56&quot; and 16+; passenger 38&quot; and age 3</dd></div><div><dt>Price</dt><dd>About $17; re-ride $10</dd></div><div><dt>Rain</dt><dd>Runs; 330 lb wet</dd></div><div><dt>Hours</dt><dd>10 to 10, 11 Fri and Sat</dd></div></dl>
+          <p class="kidscore" title="Our fit for Cash as a passenger, 1 to 5">Cash fit <span>&#9679;&#9679;&#9679;&#9679;<i></i></span></p>
+          <p class="why">The closest to the cabin and the easiest to drop into: five minutes away, free parking, open until ten. Shorter than the Pigeon Forge rides but a proper fast run, and it's the one to use on an evening when Cash has earned something and the littles are already asleep with a grandparent.</p>
+          <p class="when">Best slot: any evening after bedtime for the littles; you and Cash, 20 minutes door to door</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.7173" data-lng="-83.5111" data-name="Ripley's Mountain Coaster" data-q="Ripley's Mountain Coaster, 386 Parkway, Gatlinburg">
+        <div class="trail-body">
+          <h3>Ripley's Mountain Coaster <span class="rate" data-say="Formerly Rowdy Bear Mountain, now Ripley's. Fast with good turns and the best deal is the Ripley's combo pass. Reviewers warn you must use the lockers; loose items get you pulled from the line." title="Google rating, 3,360 reviews">&#9733; 4.5<small>3,360</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Ripley's%20Mountain%20Coaster%2C%20386%20Parkway%2C%20Gatlinburg" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">386 Parkway, Gatlinburg &middot; 5 min from the cabin, next to the aquarium end of town</p>
+          <dl class="trail-facts"><div><dt>Track</dt><dd>3,100 ft, 5 minutes</dd></div><div><dt>Speed</dt><dd>35 mph</dd></div><div><dt>Rules</dt><dd>Driver 54&quot; and age 10; ages 3 to 9 at 38&quot; with a 16+</dd></div><div><dt>Price</dt><dd>About $25 for two rides; combos with the aquarium</dd></div><div><dt>Rain</dt><dd>Runs; 330 lb wet</dd></div><div><dt>Hours</dt><dd>10 to 10</dd></div></dl>
+          <p class="kidscore" title="Our fit for Cash as a passenger, 1 to 5">Cash fit <span>&#9679;&#9679;&#9679;<i></i><i></i></span></p>
+          <p class="why">The fastest track in Gatlinburg and part of the Ripley's family, so if you're buying aquarium tickets anyway the combo makes it nearly free. Otherwise it's a shorter, pricier version of Moonshine three blocks away. Lockers are mandatory for phones and hats.</p>
+          <p class="when">Best slot: bundled with the aquarium on a rain day</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.7021" data-lng="-83.5576" data-name="Tennessee Flyer at Ober Mountain" data-q="Ober Mountain, 1339 Ski Mountain Rd, Gatlinburg">
+        <div class="trail-body">
+          <h3>Tennessee Flyer at Ober Mountain <span class="rate" data-say="Highest-elevation coaster east of the Mississippi and the one already on Thursday. Reviewers call it rougher and shorter than the Pigeon Forge coasters, one ride per ticket, and the ticket process confusing. Does not run in rain or ice." title="Google rating, 82 reviews">&#9733; 3.7<small>82</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Ober%20Mountain%2C%201339%20Ski%20Mountain%20Rd%2C%20Gatlinburg" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Top of the tram, beside the tubing hill &middot; Thursday on the plan</p>
+          <dl class="trail-facts"><div><dt>Track</dt><dd>3,750 ft, 5.5 minutes</dd></div><div><dt>Speed</dt><dd>25 mph</dd></div><div><dt>Rules</dt><dd>Driver age 9 and 36&quot;, tandem driver 18+; passenger age 3</dd></div><div><dt>Price</dt><dd>$18 a ride, or the Adventure Pass</dd></div><div><dt>Rain</dt><dd>Closed in rain and ice</dd></div><div><dt>Hours</dt><dd>10 to 6</dd></div></dl>
+          <p class="kidscore" title="Our fit for Cash as a passenger, 1 to 5">Cash fit <span>&#9679;&#9679;&#9679;<i></i><i></i></span></p>
+          <p class="why">It's on Thursday because you're already up there for the bears and the tubing hill, and the view from the top is the best of any coaster here. It is not the best coaster: a different builder than the rest, bumpier, shorter, and one ride per ticket. Buy the coaster at the main ticket window with the tram, not at the coaster, where there's a second line. If it's raining or frozen Thursday morning it's closed and the tubing hill is the fallback.</p>
+          <p class="when">Best slot: Thursday 12:15, as planned, weather permitting</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.7093" data-lng="-83.5058" data-name="Rail Runner and Hellbender at Anakeesta" data-q="Anakeesta, 576 Parkway, Gatlinburg">
+        <div class="trail-body">
+          <h3>Rail Runner and Hellbender at Anakeesta <span class="rate" data-say="Two add-ons inside Anakeesta, priced on top of admission. Rail Runner is a single-rail coaster reviewers call rough, with a 230 lb combined weight cap and long waits. Hellbender is the newer, longer tandem coaster with a 375 lb limit." title="Google rating, 310 reviews">&#9733; 4.0<small>310</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Anakeesta%2C%20576%20Parkway%2C%20Gatlinburg" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">Inside Anakeesta, 576 Parkway &middot; Tuesday on the plan</p>
+          <dl class="trail-facts"><div><dt>Track</dt><dd>Rail Runner 2,600 ft; Hellbender 3,350 ft</dd></div><div><dt>Speed</dt><dd>25 to 30 mph</dd></div><div><dt>Rules</dt><dd>Rail Runner tandem under 230 lb combined; Hellbender passenger 38 to 48&quot;, driver 54&quot;</dd></div><div><dt>Price</dt><dd>About $15 to $19 each on top of admission</dd></div><div><dt>Rain</dt><dd>Hellbender runs; Rail Runner closes</dd></div><div><dt>Hours</dt><dd>Anakeesta hours</dd></div></dl>
+          <p class="kidscore" title="Our fit for Cash as a passenger, 1 to 5">Cash fit <span>&#9679;&#9679;<i></i><i></i><i></i></span></p>
+          <p class="why">You're at Anakeesta Tuesday at dusk for the lights. Hellbender is the one to consider, not Rail Runner: Rail Runner's 230-pound combined limit rules out most adult-plus-kid pairs and the reviews are the worst on this page. Hellbender gives two runs per ticket and runs in rain. Both have real lines on a holiday week, and the lines are what eats a toddler's evening.</p>
+          <p class="when">Best slot: Tuesday only if the line is under 20 minutes; otherwise skip and ride Monday's</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.8337" data-lng="-83.5743" data-name="Wild Stallion at SkyLand Ranch" data-q="The Wild Stallion Mountain Coaster, 1620 Parkway, Sevierville">
+        <div class="trail-body">
+          <h3>Wild Stallion at SkyLand Ranch <span class="rate" data-say="A mile and a quarter and 35 mph, the fastest in the area, with staff reviewers name individually. Sister property to Rocky Top; a combo covers two rides at each. A 3-year-old rode it twice. Re-ride about $10." title="Google rating, 543 reviews">&#9733; 4.7<small>543</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=The%20Wild%20Stallion%20Mountain%20Coaster%2C%201620%20Parkway%2C%20Sevierville" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">1620 Parkway, Sevierville &middot; 35 min from the cabin, the far end of the strip</p>
+          <dl class="trail-facts"><div><dt>Track</dt><dd>6,600 ft, 8+ minutes</dd></div><div><dt>Speed</dt><dd>35 mph</dd></div><div><dt>Rules</dt><dd>Driver 54&quot;; passenger 38&quot; and age 3</dd></div><div><dt>Price</dt><dd>About $19; re-ride $10; combo with Rocky Top</dd></div><div><dt>Rain</dt><dd>Runs</dd></div><div><dt>Hours</dt><dd>10 to 11</dd></div></dl>
+          <p class="kidscore" title="Our fit for Cash as a passenger, 1 to 5">Cash fit <span>&#9679;&#9679;&#9679;&#9679;<i></i></span></p>
+          <p class="why">The fastest and one of the longest, on a working ranch with a hayride and a Highland cow for the littles, and no ranch admission needed for the coaster alone. It's the furthest from the cabin, on the Sevierville end of the Parkway, so it's a Dollywood-day or bonus-day coaster rather than a Gatlinburg one.</p>
+          <p class="when">Best slot: only if the bonus day goes to Dollywood; it's ten minutes from the gate</p>
+        </div>
+      </div>
+      <div class="trail" data-lat="35.8191" data-lng="-83.5767" data-name="Rowdy Bear's Funpark" data-q="Rowdy Bear's Funpark, 2155 Parkway, Pigeon Forge">
+        <div class="trail-body">
+          <h3>Rowdy Bear's Funpark <span class="rate" data-say="A small fun park with an Avalanche snow coaster, a ski-lift shootout coaster with laser targets, and a tubing hill, sold by the hour. Reviewers say lines move slowly and the park needs upkeep; the $60 combo with Rocky Top and Wild Stallion is the value." title="Google rating, 2,101 reviews">&#9733; 4.3<small>2,101</small></span> <a class="nav" href="https://www.google.com/maps/dir/?api=1&destination=Rowdy%20Bear's%20Funpark%2C%202155%20Parkway%2C%20Pigeon%20Forge" target="_blank" rel="noopener">Directions</a></h3>
+          <p class="meta">2155 Parkway, Pigeon Forge &middot; 30 min from the cabin</p>
+          <dl class="trail-facts"><div><dt>Track</dt><dd>Avalanche coaster, short</dd></div><div><dt>Speed</dt><dd>Fast for its size</dd></div><div><dt>Rules</dt><dd>Avalanche: 51&quot; alone, 40 to 50&quot; with an adult</dd></div><div><dt>Price</dt><dd>Timed wristband; combo about $60 with two coasters</dd></div><div><dt>Rain</dt><dd>Mostly runs</dd></div><div><dt>Hours</dt><dd>10 to 8</dd></div></dl>
+          <p class="kidscore" title="Our fit for Cash as a passenger, 1 to 5">Cash fit <span>&#9679;&#9679;<i></i><i></i><i></i></span></p>
+          <p class="why">Not a destination coaster, more a carnival with two small ones and a laser-shooting chairlift ride that Cash would enjoy. On a timed wristband with holiday lines it's a poor deal. Listed so nobody wonders.</p>
+          <p class="when">Best slot: skip unless the combo pass is already in hand</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="map">
+  <div class="container">
+    <p class="eyebrow">Where they are</p>
+    <h2>Map</h2>
+    <p class="intro">Numbered pins match the list. Tap a pin, then &ldquo;Read about this spot&rdquo; to jump to it; tap &ldquo;On the map&rdquo; on any card to come back here. The two Gatlinburg tracks are five minutes from the cabin; Wears Valley Road is thirty; Sevierville is thirty-five.</p>
+    <div id="leaflet" class="map" data-route="[]" data-route-b="[]"></div>
+  </div>
+</section>
+
+<section id="rules">
+  <div class="container">
+    <p class="eyebrow">Before you buy</p>
+    <h2>The rules that bite</h2>
+    <div class="table-wrap">
+    <table class="numbers">
+      <tbody>
+        <tr><td>Passenger line</td><td>38 inches and age 3 nearly everywhere. Height alone isn't enough; staff ask the age.</td></tr>
+        <tr><td>Driver line</td><td>54 to 56 inches and usually 16+. Cash drives nothing this trip, so every ride is a two-seater with one of you.</td></tr>
+        <tr><td>Weight</td><td>375 lb combined dry, 330 lb in rain, on the Wiegand tracks. Ober is 300. Rail Runner is 230.</td></tr>
+        <tr><td>Rain</td><td>Most run in rain with shields and the lower weight cap. Ober's Flyer and Rail Runner close. Everything closes for lightning and ice, and most give a rain check good for a year.</td></tr>
+        <tr><td>Re-rides</td><td>Keep the ticket or receipt. Nearly every track sells a same-day second ride for about $10, which is where the value is.</td></tr>
+        <tr><td>Lockers and hats</td><td>No loose phones, hats or hoods. Ripley's pulls you from the line for it; others are looser. Zip pockets.</td></tr>
+        <tr><td>Night</td><td>All of them light the track after dark and it's a different ride. Dark is 5:25, so a 6pm coaster is a night ride with a bedtime.</td></tr>
+        <tr><td>Cold</td><td>Thirty mph at 40 degrees is a wind chill in the twenties. Gloves, a hat that stays on under the hood, and the fleece zipped. Ten minutes on the lift hill is the cold part.</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="pager"><a href="bears.html">&larr; Bears</a><span></span><a href="index.html">Hub &rarr;</a></div>
+    <p>Rules from each operator; prices from riders' reviews this fall and the operators' pages, so treat them as about right. Ratings from Google, Nov 23, 2026. Photo from Wikimedia Commons under the license shown.</p>
+  </div>
+</footer>
+
+<div class="bear-toast" id="bear-toast" role="status"></div>
+<div class="bear-peek" id="bear-peek" aria-hidden="true"><svg viewBox="0 0 120 100"><g fill="#2b1d14"><ellipse cx="60" cy="78" rx="46" ry="30"/><circle cx="60" cy="44" r="30"/><circle cx="36" cy="22" r="11"/><circle cx="84" cy="22" r="11"/></g><g fill="#6b4a33"><circle cx="36" cy="22" r="5"/><circle cx="84" cy="22" r="5"/><ellipse cx="60" cy="56" rx="14" ry="10"/></g><g fill="#0b1411"><circle cx="48" cy="40" r="3.5"/><circle cx="72" cy="40" r="3.5"/><ellipse cx="60" cy="52" rx="6" ry="4"/></g></svg></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="bear-side" viewBox="0 0 140 90"><g fill="#2b1d14"><ellipse cx="62" cy="50" rx="44" ry="26"/><circle cx="108" cy="36" r="18"/><circle cx="98" cy="22" r="6"/><circle cx="118" cy="22" r="6"/><circle cx="20" cy="50" r="12"/><rect x="30" y="62" width="12" height="26" rx="5"/><rect x="52" y="64" width="12" height="24" rx="5"/><rect x="78" y="64" width="12" height="24" rx="5"/><rect x="96" y="60" width="12" height="28" rx="5"/></g><g fill="#6b4a33"><ellipse cx="122" cy="42" rx="9" ry="6"/></g><circle cx="114" cy="33" r="2.5" fill="#0b1411"/><circle cx="129" cy="41" r="3" fill="#0b1411"/></symbol></svg>
+
+<nav class="tabbar" aria-label="Quick links">
+  <a href="index.html"><span>&#8962;</span>Hub</a>
+  <a href="#picks"><span>&#9733;</span>Picks</a>
+  <a href="#all"><span>&#9673;</span>All 12</a>
+  <a href="#map"><span>&#9650;</span>Map</a>
+  <a href="#rules"><span>&#9888;</span>Rules</a>
+</nav>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="site.js?v=10"></script>
+<script src="day.js?v=7"></script>
+<script src="photos.js?v=1" defer></script>
+</body>
+</html>
