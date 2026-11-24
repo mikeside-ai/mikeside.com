@@ -127,7 +127,7 @@ def page(date):
   <span class="credit">{credit(d['banner'])}</span>
 </div>
 
-<div class="chips container" aria-label="Days">{chips}<a class="chip" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip" href="cabin.html">Cabin</a><a class="chip" href="bears.html">Bears</a></div>
+<div class="chips container" aria-label="Days">{chips}<a class="chip" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip" href="cabin.html">Cabin</a><a class="chip" href="bears.html">Bears</a><a class="chip" href="coasters.html">Coasters</a></div>
 
 <section class="daytop">
   <div class="container">
@@ -339,7 +339,7 @@ def trails_page():
   <span class="credit">{credit('Little River Road - October 2025 - Sarah Stierch.jpg')}</span>
 </div>
 
-<div class="chips container" aria-label="Days">{chips}<a class="chip on" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip" href="cabin.html">Cabin</a><a class="chip" href="bears.html">Bears</a></div>
+<div class="chips container" aria-label="Days">{chips}<a class="chip on" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip" href="cabin.html">Cabin</a><a class="chip" href="bears.html">Bears</a><a class="chip" href="coasters.html">Coasters</a></div>
 
 <section class="daytop">
   <div class="container">
@@ -494,7 +494,7 @@ def packing_page():
   <span class="credit">{credit('Little River Road - October 2025 - Sarah Stierch.jpg')}</span>
 </div>
 
-<div class="chips container" aria-label="Pages">{chips}<a class="chip" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip" href="cabin.html">Cabin</a><a class="chip" href="bears.html">Bears</a><a class="chip on" href="packing.html">Packing</a></div>
+<div class="chips container" aria-label="Pages">{chips}<a class="chip" href="trails.html">Trails</a><a class="chip" href="fishing.html">Fishing</a><a class="chip" href="cabin.html">Cabin</a><a class="chip" href="bears.html">Bears</a><a class="chip" href="coasters.html">Coasters</a><a class="chip on" href="packing.html">Packing</a></div>
 
 <section id="list">
   <div class="container">
